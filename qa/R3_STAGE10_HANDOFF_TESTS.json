@@ -1308,7 +1308,7 @@
       "evidence": [],
       "executed": true,
       "id": "STAGE10-HANDOFF-EARLIER-STAGES-01",
-      "name": "Stages 1-9 keep the replay/next-stage CTA and never enter the Stage 10 ending handoff",
+      "name": "Stages 1-9 start the next Stage through the primary CTA while retaining replay and never entering the Stage 10 ending handoff",
       "passed": true
     }
   ]

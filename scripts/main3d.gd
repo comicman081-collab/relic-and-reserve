@@ -1646,6 +1646,17 @@ func make_tutorial_guidance_rail(public_state: Dictionary) -> PanelContainer:
 	return rail
 
 
+func tutorial_public_state_for_screen() -> Dictionary:
+	var public_state := GameState.tutorial_public_state()
+	# Before the dossier exists, the first authored step needs one plain-language
+	# bridge from the campaign list to the highlighted case-start button. The
+	# underlying public state and authoritative step sequence remain unchanged.
+	if bool(public_state.get("visible", false)) and screen == "campaign" and int(public_state.get("step", 0)) == 1:
+		public_state.title = bilingual("START THE FIRST CASE", "첫 사건 시작")
+		public_state.text = bilingual("Open the first case below to begin your investigation.", "아래 첫 사건의 시작 버튼을 눌러 조사를 시작하세요.")
+	return public_state
+
+
 func tutorial_control_is_actionable(control: Control) -> bool:
 	if control == null or not control.is_visible_in_tree():
 		return false
@@ -1677,6 +1688,12 @@ func tutorial_target_patterns(public_state: Dictionary) -> Array[String]:
 	if patterns.has("CaseEvidence_*"):
 		patterns.erase("CaseEvidence_*")
 		patterns.push_front("CaseEvidence_*")
+	if int(public_state.get("step", 0)) == 1 and screen == "campaign":
+		var pending_case_id := GameState.current_stage_first_pending_case()
+		if not pending_case_id.is_empty():
+			var first_case_pattern := "Case_%s" % pending_case_id.validate_node_name()
+			patterns.erase(first_case_pattern)
+			patterns.push_front(first_case_pattern)
 	if int(public_state.get("step", 0)) == 4:
 		var required_tools: Array = GameState.repair_requirements(selected).get("requiredTools", []) if not selected.is_empty() else []
 		var tool_ready := required_tools.is_empty() or required_tools.has(GameState.selected_tool)
@@ -1768,6 +1785,8 @@ func screen_shell(title_value: String, world_mode: String = "workshop") -> VBoxC
 	clear_ui()
 	play_bgm_for_screen(screen)
 	set_world_mode(world_mode)
+	tutorial_guidance_state = tutorial_public_state_for_screen()
+	var tutorial_active := bool(tutorial_guidance_state.get("visible", false))
 	var background := ColorRect.new()
 	background.color = Color(0.035, 0.045, 0.055, 0.90)
 	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -1781,14 +1800,22 @@ func screen_shell(title_value: String, world_mode: String = "workshop") -> VBoxC
 	ui.add_child(header)
 	var title_label := make_label(title_value, 28, Color("#e3c681"))
 	title_label.position = Vector2.ZERO
-	title_label.size = Vector2(780, 52)
+	title_label.size = Vector2(650, 52)
 	header.add_child(title_label)
 	var header_stats := make_label("DAY %d   ¤ %d   REP %d   GRADE %d" % [GameState.day, GameState.money, GameState.reputation, int(GameState.campaign_state.workshopGrade)], 15)
-	header_stats.position = Vector2(790, 4)
-	header_stats.size = Vector2(434, 42)
+	header_stats.position = Vector2(660 if tutorial_active else 790, 4)
+	header_stats.size = Vector2(350 if tutorial_active else 434, 42)
 	header_stats.autowrap_mode = TextServer.AUTOWRAP_OFF
 	header_stats.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	header.add_child(header_stats)
+	if tutorial_active:
+		var skip_button := make_button(bilingual("SKIP GUIDE", "튜토리얼 건너뛰기"), skip_tutorial_from_ui, "TutorialSkipButton")
+		skip_button.position = Vector2(1030, 4)
+		skip_button.size = Vector2(188, 42)
+		skip_button.custom_minimum_size = Vector2.ZERO
+		skip_button.clip_text = true
+		skip_button.tooltip_text = bilingual("Skip the guide and remember this choice for future NEW GAME sessions.", "튜토리얼을 건너뛰며 다음 새 게임부터도 이 선택을 기억합니다.")
+		header.add_child(skip_button)
 
 	var margin := MarginContainer.new()
 	margin.name = "ContentMargin"
@@ -1804,7 +1831,6 @@ func screen_shell(title_value: String, world_mode: String = "workshop") -> VBoxC
 	body.add_theme_constant_override("separation", 10)
 	margin.add_child(body)
 	content_root = body
-	tutorial_guidance_state = GameState.tutorial_public_state()
 	var current_tutorial_serial := tutorial_render_serial
 	if bool(tutorial_guidance_state.get("visible", false)):
 		body.add_child(make_tutorial_guidance_rail(tutorial_guidance_state))
@@ -2227,7 +2253,7 @@ func show_title() -> void:
 	var subtitle := make_label(text_for("TITLE_SUBTITLE"), 18)
 	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	center.add_child(subtitle)
-	center.add_child(make_button(text_for("NEW_GAME"), show_stage_select, "NewGameButton"))
+	center.add_child(make_button(text_for("NEW_GAME"), start_progression_game_from_ui, "NewGameButton"))
 	var continue_button := make_button(text_for("CONTINUE"), continue_from_ui, "ContinueButton")
 	center.add_child(continue_button)
 	center.add_child(make_button(text_for("LANGUAGE"), toggle_language, "TitleLanguageButton"))
@@ -2477,11 +2503,11 @@ func make_stage_clear_card(public_summary: Dictionary, replay_feedback: Dictiona
 
 func show_stage_select() -> void:
 	screen = "stage_select"
-	var body := screen_shell(bilingual("NEW GAME — CHOOSE A STAGE", "새 게임 — 스테이지 선택"))
+	var body := screen_shell(bilingual("STAGE PROGRESS — REPLAY CLEARED", "스테이지 진행 — 클리어 재도전"))
 	var profile: Dictionary = GameState.player_profile
 	var highest := int(profile.get("highestUnlockedStage", 1))
 	var cleared: Array = profile.get("clearedStages", [])
-	var summary := make_label(bilingual("Cleared stages stay replayable. Difficulty rises by about 7% each stage.", "클리어한 스테이지는 다시 선택할 수 있으며, 난이도는 단계마다 약 7% 상승합니다."), 15, Color("#b7c4c8"))
+	var summary := make_label(bilingual("NEW GAME advances to the first uncleared Stage. This screen is for cleared-stage replay.", "새 게임은 첫 미클리어 스테이지로 진행합니다. 이 화면은 클리어 스테이지 재도전용입니다."), 15, Color("#b7c4c8"))
 	summary.max_lines_visible = 2
 	body.add_child(summary)
 	var grid := GridContainer.new()
@@ -2525,6 +2551,15 @@ func replay_tutorial_guidance_from_ui() -> void:
 		return
 	show_campaign()
 	status.text = bilingual("Stage 1 guidance is active again.", "스테이지 1 안내를 다시 시작했습니다.")
+
+
+func skip_tutorial_from_ui() -> void:
+	var result: Dictionary = GameState.skip_tutorial_guidance()
+	if not bool(result.get("ok", false)):
+		status.text = bilingual("The guide could not be skipped right now.", "지금은 튜토리얼을 건너뛸 수 없습니다.")
+		return
+	refresh_current_screen()
+	status.text = bilingual("Guide skipped. You can replay it from Stage Select.", "튜토리얼을 건너뛰었습니다. 스테이지 선택에서 다시 볼 수 있습니다.")
 
 
 func start_stage_from_ui(stage_id: int) -> void:
@@ -4970,7 +5005,18 @@ func show_campaign() -> void:
 		if GameState.current_stage == 10 and not String(GameState.campaign_state.get("currentEnding", "")).is_empty():
 			body.add_child(make_case_icon_button("support", bilingual("VIEW ENDING", "엔딩 보기"), view_stage_ending_from_ui, "StageClearViewEnding", Vector2(0, 58)))
 		else:
-			body.add_child(make_case_icon_button("support", bilingual("CHOOSE NEXT OR REPLAY", "다음 스테이지 또는 재도전"), acknowledge_stage_clear_then_select, "CampaignStageSelect", Vector2(0, 58)))
+			var clear_actions := HBoxContainer.new()
+			clear_actions.name = "StageClearActions"
+			clear_actions.add_theme_constant_override("separation", 8)
+			var next_button := make_case_icon_button("support", bilingual("NEXT STAGE", "다음 스테이지"), acknowledge_stage_clear_then_start_next, "CampaignStageSelect", Vector2(0, 58))
+			next_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			next_button.tooltip_text = bilingual("A stage must be cleared before the next one becomes available.", "스테이지를 클리어해야 다음 스테이지로 진행할 수 있습니다.")
+			clear_actions.add_child(next_button)
+			var replay_button := make_case_icon_button("briefing", bilingual("REPLAY CLEARED", "클리어 스테이지 재도전"), acknowledge_stage_clear_then_select, "CampaignStageReplaySelect", Vector2(0, 58))
+			replay_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			replay_button.tooltip_text = bilingual("Replay a cleared stage without changing progression.", "진행도를 바꾸지 않고 클리어한 스테이지를 다시 플레이합니다.")
+			clear_actions.add_child(replay_button)
+			body.add_child(clear_actions)
 		return
 	if current_act == "EPILOGUE" or not String(GameState.campaign_state.get("currentEnding", "")).is_empty():
 		show_ending()
@@ -5010,6 +5056,28 @@ func acknowledge_stage_clear_then_select() -> void:
 		status.text = bilingual("The Stage result could not be saved.", "스테이지 결과 확인을 저장하지 못했습니다.")
 		return
 	show_stage_select()
+
+
+func acknowledge_stage_clear_then_start_next() -> void:
+	var result: Dictionary = GameState.acknowledge_stage_clear()
+	if not bool(result.get("ok", false)):
+		status.text = bilingual("The Stage result could not be saved.", "스테이지 결과 확인을 저장하지 못했습니다.")
+		return
+	start_progression_game_from_ui()
+
+
+func start_progression_game_from_ui() -> void:
+	var result: Dictionary = GameState.new_game_progression()
+	if not bool(result.get("ok", false)):
+		show_stage_select()
+		status.text = bilingual("The next Stage could not be started.", "다음 스테이지를 시작하지 못했습니다.")
+		return
+	market_character_state = "WELCOME"
+	market_character_dialogue = ""
+	market_character_fact = ""
+	market_active_lot_id = ""
+	show_campaign()
+	status.text = "%s %d · ×%.2f" % [bilingual("STAGE STARTED", "스테이지 시작"), int(result.get("stage", GameState.current_stage)), float(result.get("difficultyMultiplier", 1.0))]
 
 
 func view_stage_ending_from_ui() -> void:
@@ -5496,13 +5564,13 @@ func toggle_postgame_credits() -> void:
 func postgame_new_game_from_ui() -> void:
 	postgame_credits_visible = false
 	final_lot_page = 0
-	var result: Dictionary = GameState.new_game(1)
+	var result: Dictionary = GameState.new_game_progression()
 	if not bool(result.get("ok", false)):
 		show_stage_select()
 		status.text = bilingual("A new run could not be started.", "새 게임을 시작하지 못했습니다.")
 		return
 	show_campaign()
-	status.text = bilingual("A new Stage 1 run has begun.", "새 스테이지 1 게임을 시작했습니다.")
+	status.text = "%s %d" % [bilingual("The next Stage has begun.", "다음 스테이지를 시작했습니다."), int(result.get("stage", GameState.current_stage))]
 
 
 func show_postgame() -> void:

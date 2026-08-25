@@ -199,6 +199,31 @@ func run() -> void:
 		and tutorial_done_state.get("targets", ["unexpected"]).is_empty()
 	record("STAGE-TUTORIAL-01", "Stage 1 exposes six localized presentation-safe steps and accepts only the next event idempotently", tutorial_contract_ok and tutorial_public_failures.is_empty() and tutorial_sequence_failures.is_empty() and tutorial_done_safe, {"contract": tutorial_contract_ok, "publicFailures": tutorial_public_failures, "sequenceFailures": tutorial_sequence_failures, "done": tutorial_done_state})
 
+	gs.reset_tutorial_guidance()
+	var skip_start: Dictionary = gs.new_game(1)
+	var skip_result: Dictionary = gs.skip_tutorial_guidance()
+	var skip_public: Dictionary = gs.tutorial_public_state()
+	var skip_new_game: Dictionary = gs.new_game(1)
+	var skip_contract_ok: bool = bool(skip_start.get("ok", false)) \
+		and bool(skip_result.get("ok", false)) \
+		and String(skip_result.get("code", "")) == "TUTORIAL_SKIPPED" \
+		and skip_result.get("completedSteps", []) == tutorial_step_ids \
+		and not bool(skip_public.get("visible", true)) \
+		and gs.player_profile.get("tutorialCompletedSteps", []) == tutorial_step_ids \
+		and bool(skip_new_game.get("ok", false)) \
+		and not bool(gs.tutorial_public_state().get("visible", true))
+	record("STAGE-TUTORIAL-04", "Active Stage 1 guidance can be skipped once, persists the preference, and remains hidden on later NEW GAME sessions", skip_contract_ok, {"start": skip_start, "skip": skip_result, "publicAfterSkip": skip_public, "newGame": skip_new_game, "profile": gs.player_profile.get("tutorialCompletedSteps", [])})
+
+	gs.player_profile = {"schema_version": 1, "highestUnlockedStage": 3, "clearedStages": [1, 2], "stageBest": {"1": 80.0, "2": 82.0}, "tutorialCompletedSteps": tutorial_step_ids}
+	gs.reset_game()
+	var progression_start: Dictionary = gs.new_game_progression()
+	var progression_ok: bool = gs.next_progression_stage() == 3 and bool(progression_start.get("ok", false)) and int(progression_start.get("stage", 0)) == 3
+	gs.stage_run_state.status = "CLEARED"
+	gs.stage_run_state.stageClearAcknowledged = true
+	gs.player_profile = {"schema_version": 1, "highestUnlockedStage": 10, "clearedStages": range(1, 10), "stageBest": {}, "tutorialCompletedSteps": tutorial_step_ids}
+	var final_progression_ok: bool = gs.next_progression_stage() == 10
+	record("STAGE-PROGRESSION-01", "NEW GAME progression starts the first uncleared stage while cleared stages remain replayable", progression_ok and final_progression_ok, {"nextStage": 3, "started": progression_start, "finalNextStage": gs.next_progression_stage()})
+
 	var complete_profile: Dictionary = gs.profile_payload()
 	var completed_new_game: Dictionary = gs.new_game(1)
 	var full_persists_new_game: bool = bool(completed_new_game.get("ok", false)) \

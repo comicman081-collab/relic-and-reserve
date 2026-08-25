@@ -1,7 +1,7 @@
 {
   "suite": "R3 audit-only human session harness",
   "status": "FIXTURE_PASS_NOT_HUMAN_EVIDENCE",
-  "generatedAt": "2026-08-25T11:45:12Z",
+  "generatedAt": "2026-08-25T12:44:28Z",
   "input": "D:\\AI 종합 폴더\\Games\\유물경매 게임\\RELIC_AND_RESERVE_R3\\qa\\human_sessions\\fixture_public_schema.jsonl",
   "recordsRead": 5,
   "sessions": [

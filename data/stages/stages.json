@@ -4,7 +4,8 @@
     "stageCount": 10,
     "difficultyGrowthRate": 0.07,
     "difficultyFormula": "pow(1.07, stage_id - 1)",
-    "replayPolicy": "new_game_selectable_after_clear",
+    "replayPolicy": "cleared_stage_replay_only",
+    "progressionPolicy": "CLEAR_CURRENT_STAGE_BEFORE_NEXT_STAGE",
     "highestClearedStagePersists": true,
     "clearedStagesRemainReplayable": true,
     "finalStageEvent": "GRAND_RESERVE"
@@ -28,6 +29,7 @@
     "stage_id": 1,
     "max_steps": 6,
     "replay_policy": "EXPLICIT_HELP_RESET",
+    "skip_policy": "PERSIST_COMPLETION_FROM_ACTIVE_STAGE1_RUN",
     "steps": [
       {
         "step_id": "INVESTIGATE",

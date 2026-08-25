@@ -286,11 +286,21 @@ func run() -> void:
 	await settle_ui()
 	var replay_state: Dictionary = gs.tutorial_public_state()
 	var replayed_without_fake_completion: bool = bool(replay_state.get("visible", false)) and int(replay_state.get("step", 0)) == 1 and gs.current_stage == 1 and gs.player_profile.get("tutorialCompletedSteps", []).is_empty()
+	var replay_skip_buttons: Array = main.find_children("TutorialSkipButton", "Button", true, false)
+	var replay_header: Control = main.find_child("Header", true, false)
+	var replay_skip_rect := (replay_skip_buttons[0] as Control).get_global_rect() if replay_skip_buttons.size() == 1 else Rect2()
+	var replay_header_rect := replay_header.get_global_rect() if replay_header != null else Rect2()
+	var replay_skip_layout: bool = replay_skip_buttons.size() == 1 \
+		and (replay_skip_buttons[0] as Button).text == "튜토리얼 건너뛰기" \
+		and replay_skip_rect.position.x >= 1000.0 \
+		and replay_skip_rect.end.x <= 1246.0 \
+		and replay_skip_rect.position.y >= replay_header_rect.position.y \
+		and replay_skip_rect.end.y <= replay_header_rect.end.y
 	record(
 		"MVP-TUTORIAL-UI-03",
-		"Guidance hides after 6/6 and the single compact replay-help action restarts Stage 1 without skip or Next controls mutating authoritative progress",
-		hidden_after_completion and replay_buttons.size() == 1 and no_authority_buttons and replayed_without_fake_completion,
-		{"hiddenAfterSix": hidden_after_completion, "replayButtons": replay_buttons.size(), "noSkipNext": no_authority_buttons, "replayState": replay_state, "completedAfterReplay": gs.player_profile.get("tutorialCompletedSteps", [])}
+		"Guidance hides after 6/6, replay-help restarts Stage 1, and the active guide exposes a compact upper-right skip action",
+		hidden_after_completion and replay_buttons.size() == 1 and no_authority_buttons and replayed_without_fake_completion and replay_skip_layout,
+		{"hiddenAfterSix": hidden_after_completion, "replayButtons": replay_buttons.size(), "noSkipNextOnStageSelect": no_authority_buttons, "replayState": replay_state, "skipButtons": replay_skip_buttons.size(), "skipRect": [replay_skip_rect.position.x, replay_skip_rect.position.y, replay_skip_rect.size.x, replay_skip_rect.size.y], "skipLayout": replay_skip_layout, "completedAfterReplay": gs.player_profile.get("tutorialCompletedSteps", [])}
 	)
 
 	gs.language = "en"

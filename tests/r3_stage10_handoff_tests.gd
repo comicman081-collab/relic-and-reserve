@@ -576,12 +576,13 @@ func run() -> void:
 		}
 	)
 
-	# Stages 1-9 retain their next-stage/replay handoff. Their CTA acknowledges
-	# the clear and routes to stage select; it must never expose the ending CTA.
+	# Stages 1-9 retain their next-stage/replay handoff. Their primary CTA
+	# acknowledges the clear and starts the next uncleared stage; replay remains
+	# available as a secondary route and the ending CTA stays Stage-10-only.
 	gs.persistence_enabled = false
-	gs.player_profile = fully_unlocked_profile(gs)
 	var earlier_stage_failures: Array = []
 	for stage_id in range(1, 10):
+		gs.player_profile = {"schema_version": 1, "highestUnlockedStage": stage_id, "clearedStages": range(1, stage_id), "stageBest": {}}
 		var started: Dictionary = gs.new_game(stage_id)
 		satisfy_stage_cases(gs, registry, stage_id)
 		var cleared: Dictionary = gs.complete_stage(stage_id, float(stage_id * 10))
@@ -599,9 +600,10 @@ func run() -> void:
 		if next_button is Button:
 			(next_button as Button).pressed.emit()
 			await settle_ui(4)
-		var after_route_ok := bool(gs.stage_run_state.get("stageClearAcknowledged", false)) \
-			and not bool(gs.stage_clear_pending()) \
-			and String(main.screen) == "stage_select"
+		var after_route_ok: bool = not bool(gs.stage_clear_pending()) \
+			and String(main.screen) == "campaign" \
+			and gs.current_stage == stage_id + 1 \
+			and String(gs.stage_run_state.get("status", "")) == "RUNNING"
 		if not before_route_ok or not after_route_ok:
 			earlier_stage_failures.append({
 				"stage": stage_id,
@@ -614,7 +616,7 @@ func run() -> void:
 			})
 	record(
 		"STAGE10-HANDOFF-EARLIER-STAGES-01",
-		"Stages 1-9 keep the replay/next-stage CTA and never enter the Stage 10 ending handoff",
+		"Stages 1-9 start the next Stage through the primary CTA while retaining replay and never entering the Stage 10 ending handoff",
 		earlier_stage_failures.is_empty(),
 		earlier_stage_failures
 	)

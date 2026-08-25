@@ -14,6 +14,13 @@ Click panels and buttons. Drag during inspection to orbit the artifact. Escape r
 ## Build
 `BUILD_WINDOWS.sh` attempts a Windows Desktop export when templates are available.
 
+## Play / Download
+Web: https://comicman081-collab.github.io/relic-and-reserve/
+
+Windows: see the latest GitHub Release for the user-only R3 MVP build. Start a
+New Game to enter the next uncleared Stage; cleared Stages can be replayed from
+the progress screen.
+
 ## Layout
 `scenes/` contains the canonical scene; `scripts/` contains state and UI; `data/` is data-driven content; `assets/` contains procedural originals; `tools/` contains generators, validators, and simulations; `qa/` contains reports.
 

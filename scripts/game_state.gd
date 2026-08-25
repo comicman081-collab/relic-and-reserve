@@ -1033,6 +1033,22 @@ func new_game(stage_id: int = 1) -> Dictionary:
 	return start_stage(stage_id)
 
 
+func next_progression_stage() -> int:
+	# NEW GAME follows the stage ladder. Cleared stages remain replayable from
+	# the dedicated progress screen, but progression itself advances only to
+	# the first uncleared stage.
+	var cleared_value: Variant = player_profile.get("clearedStages", [])
+	var cleared: Array = cleared_value if cleared_value is Array else []
+	for stage_id in range(1, 11):
+		if not cleared.has(stage_id):
+			return stage_id
+	return 1
+
+
+func new_game_progression() -> Dictionary:
+	return new_game(next_progression_stage())
+
+
 func can_select_stage(stage_id: int) -> bool:
 	if RuntimeRegistry.get_stage_definition(stage_id).is_empty():
 		return false
@@ -1387,6 +1403,51 @@ func reset_tutorial_guidance() -> bool:
 			save_profile()
 		profile_changed.emit()
 	return changed
+
+
+func skip_tutorial_guidance() -> Dictionary:
+	# Skipping is a player-facing preference, not a gameplay shortcut. Mark the
+	# authored Stage 1 guidance prefix complete in the active run, then mirror it
+	# to the persistent profile so later NEW GAME sessions stay concise.
+	if gameplay_mutation_locked():
+		last_action_error = "PENDING_AUCTION_LOCKED"
+		return {"ok": false, "code": last_action_error}
+	if not _tutorial_is_active():
+		return {
+			"ok": true,
+			"code": "ALREADY_SKIPPED",
+			"completedSteps": _normalized_tutorial_completed_steps(player_profile.get("tutorialCompletedSteps", []))
+		}
+	var completed_steps: Array = []
+	for step_value: Variant in _tutorial_steps():
+		if step_value is Dictionary:
+			var step_id := String(step_value.get("step_id", ""))
+			if not step_id.is_empty():
+				completed_steps.append(step_id)
+	var previous_run_steps: Array = stage_run_state.get("tutorialCompletedSteps", []).duplicate()
+	var previous_profile := player_profile.duplicate(true)
+	stage_run_state.tutorialCompletedSteps = completed_steps.duplicate()
+	if not save_game():
+		stage_run_state.tutorialCompletedSteps = previous_run_steps
+		return {"ok": false, "code": "PERSISTENCE_FAILED", "stage": current_stage}
+	var updated := player_profile.duplicate(true)
+	normalize_profile_dictionary(updated)
+	updated.tutorialCompletedSteps = completed_steps.duplicate()
+	player_profile = updated
+	if not save_profile():
+		player_profile = previous_profile
+		stage_run_state.tutorialCompletedSteps = previous_run_steps
+		save_game()
+		save_profile()
+		return {"ok": false, "code": "PERSISTENCE_FAILED", "stage": current_stage}
+	profile_changed.emit()
+	stage_changed.emit()
+	return {
+		"ok": true,
+		"code": "TUTORIAL_SKIPPED",
+		"completedSteps": completed_steps.duplicate(),
+		"stage": current_stage
+	}
 
 
 func current_stage_first_pending_case() -> String:

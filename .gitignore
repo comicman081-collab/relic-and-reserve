@@ -12,6 +12,7 @@ qa/**/*.log
 
 # Generated build/release outputs (Windows binaries are kept outside the source repo)
 builds/
+/dist/
 *.exe
 *.pck
 

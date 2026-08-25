@@ -345,7 +345,7 @@
       "evidence": {
         "completedAfterReplay": [],
         "hiddenAfterSix": true,
-        "noSkipNext": true,
+        "noSkipNextOnStageSelect": true,
         "replayButtons": 1,
         "replayState": {
           "icon": "clue_generic",
@@ -359,11 +359,19 @@
           "title": "단서 하나 조사",
           "total": 6,
           "visible": true
-        }
+        },
+        "skipButtons": 1,
+        "skipLayout": true,
+        "skipRect": [
+          1058.0,
+          22.0,
+          188.0,
+          42.0
+        ]
       },
       "executed": true,
       "id": "MVP-TUTORIAL-UI-03",
-      "name": "Guidance hides after 6/6 and the single compact replay-help action restarts Stage 1 without skip or Next controls mutating authoritative progress",
+      "name": "Guidance hides after 6/6, replay-help restarts Stage 1, and the active guide exposes a compact upper-right skip action",
       "passed": true
     },
     {

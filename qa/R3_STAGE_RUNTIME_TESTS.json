@@ -1,7 +1,7 @@
 {
-  "executed": 43,
+  "executed": 45,
   "failed": 0,
-  "passed": 43,
+  "passed": 45,
   "skipped": 0,
   "suite": "R3 ten-stage runtime and persistent profile",
   "tests": [
@@ -59,6 +59,73 @@
       "executed": true,
       "id": "STAGE-TUTORIAL-01",
       "name": "Stage 1 exposes six localized presentation-safe steps and accepts only the next event idempotently",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "newGame": {
+          "code": "OK",
+          "difficultyMultiplier": 1.0,
+          "ok": true,
+          "stage": 1
+        },
+        "profile": [
+          "INVESTIGATE",
+          "CITE",
+          "REPORT",
+          "REPAIR",
+          "LIST",
+          "AUCTION"
+        ],
+        "publicAfterSkip": {
+          "icon": "",
+          "step": 6,
+          "target": "",
+          "targets": [],
+          "text": "",
+          "title": "",
+          "total": 6,
+          "visible": false
+        },
+        "skip": {
+          "code": "TUTORIAL_SKIPPED",
+          "completedSteps": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT",
+            "REPAIR",
+            "LIST",
+            "AUCTION"
+          ],
+          "ok": true,
+          "stage": 1
+        },
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.0,
+          "ok": true,
+          "stage": 1
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TUTORIAL-04",
+      "name": "Active Stage 1 guidance can be skipped once, persists the preference, and remains hidden on later NEW GAME sessions",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "finalNextStage": 10,
+        "nextStage": 3,
+        "started": {
+          "code": "OK",
+          "difficultyMultiplier": 1.1449,
+          "ok": true,
+          "stage": 3
+        }
+      },
+      "executed": true,
+      "id": "STAGE-PROGRESSION-01",
+      "name": "NEW GAME progression starts the first uncleared stage while cleared stages remain replayable",
       "passed": true
     },
     {
