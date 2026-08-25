@@ -1,0 +1,321 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage3-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "telephone_trace",
+  "act_id": "ACT_1",
+  "title": {
+    "en": "A Voice in Bakelite",
+    "ko": "베이클라이트 속 목소리"
+  },
+  "briefing": {
+    "en": "An Orchard table telephone carries a convincing early Bakelite shell but a bright cord, fuse, and terminal hardware. The family calls every part original; another buyer calls it a later reproduction. Trace the shell and the safety intervention separately before describing the set.",
+    "ko": "오처드 탁상 전화기에는 설득력 있는 초기 베이클라이트 외피와 반짝이는 전선, 퓨즈, 단자 철물이 함께 있다. 가족은 모든 부품이 원형이라고 하고 다른 구매자는 후대 복제품이라고 주장한다. 전화기를 설명하기 전에 외피의 이력과 안전 개입을 따로 추적하라."
+  },
+  "central_question": {
+    "en": "Is the telephone untouched, a genuine set with a modern safety repair, or a later reproduction assembled from mixed parts?",
+    "ko": "이 전화기는 손대지 않은 원형인가, 현대 안전 수리가 있는 진품인가, 아니면 여러 부품으로 만든 후대 복제품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, estates, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 저택과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report authenticates the Orchard body and discloses the later safety wiring without mislabelling the entire telephone.",
+    "ko": "보고서는 오처드 몸체를 진품으로 확인하고 전화기 전체를 잘못 규정하지 않으면서 후대 안전 배선을 고지한다."
+  },
+  "failure": {
+    "en": "The telephone remains in the case file while Noah reviews the difference between object identity and later electrical safety work.",
+    "ko": "전화기는 사건 기록에 남고, 노아와 함께 물건의 정체성과 후대 전기 안전 작업의 차이를 다시 검토한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 3 campaign desk.",
+      "ko": "스테이지 3 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "energize_before_terminal_capture",
+        "source_ref": "src.telephone_trace.artifact.terminal_safety_repair",
+        "warning": {
+          "en": "Energizing the set before recording the terminal block can heat or shift the modern safety joint.",
+          "ko": "단자대를 기록하기 전에 전원을 넣으면 현대 안전 접합부가 달아오르거나 움직일 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A report that confuses a safety repair with the object's identity is reviewed with Noah.",
+        "ko": "안전 수리와 물건의 정체성을 혼동한 보고서는 노아와 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_015",
+    "legacy_story_artifact_id": "story_artifact_08",
+    "display_name": {
+      "en": "Orchard Table Telephone OT-114",
+      "ko": "오처드 탁상 전화기 OT-114"
+    },
+    "authoring_truth_hypothesis_id": "hyp.telephone_trace.genuine_modern_safety_repair",
+    "player_prompt": {
+      "en": "Separate the shell, terminal hardware, and documented safety work before testing the telephone.",
+      "ko": "전화기를 시험하기 전에 외피, 단자 철물과 기록된 안전 작업을 구분하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.telephone_trace.untouched_original",
+      "label": {"en": "Untouched original", "ko": "손대지 않은 원형"},
+      "claim": {
+        "en": "The shell, cord, fuse, and terminal hardware all remain from Orchard's original production.",
+        "ko": "외피, 전선, 퓨즈와 단자 철물이 모두 오처드 출고 당시 그대로 남아 있다."
+      }
+    },
+    {
+      "id": "hyp.telephone_trace.genuine_modern_safety_repair",
+      "label": {"en": "Genuine with modern safety repair", "ko": "현대 안전 수리가 있는 진품"},
+      "claim": {
+        "en": "The early Orchard telephone is genuine, but its power lead and terminal protection were replaced in a documented modern safety intervention.",
+        "ko": "초기 오처드 전화기는 진품이지만 전원선과 단자 보호 부품은 기록이 남은 현대 안전 작업에서 교체되었다."
+      }
+    },
+    {
+      "id": "hyp.telephone_trace.later_parts_reproduction",
+      "label": {"en": "Later-parts reproduction", "ko": "후대 부품 복제품"},
+      "claim": {
+        "en": "A later assembler combined a reproduction shell and mixed hardware, then attached an old-style Orchard identity.",
+        "ko": "후대 조립자가 복제 외피와 여러 철물을 합친 뒤 오래된 오처드식 정체성을 붙였다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.telephone_trace.artifact.shell_material_serial",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_015",
+      "reliability": "HIGH",
+      "label": {"en": "Bakelite shell and serial", "ko": "베이클라이트 외피와 일련번호"},
+      "text": {
+        "en": "A calibrated material scan finds the dark shell's filler and phenolic response consistent across protected and exposed areas. The moulded OT-114 serial sits beneath age cracking rather than above it, and the handset cradle wear follows the same long use pattern.",
+        "ko": "보정된 재료 스캔에서 짙은 외피의 충전재와 페놀 반응이 가려진 곳과 노출된 곳에서 일치한다. 성형된 OT-114 일련번호는 노화 균열 위가 아니라 아래에 있고, 송수화기 받침의 마모도 같은 장기 사용 양상을 따른다."
+      },
+      "unlock": {"action": "inspect", "target": "bakelite_shell", "requires": ["material_scanner"]},
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Use one calibrated pass on the protected rim; repeated scanning can warm the brittle filler.",
+          "ko": "가려진 테두리에 보정된 스캔을 한 번만 실시하라. 반복 스캔은 취약한 충전재를 달굴 수 있다."
+        }
+      },
+      "independence": {"group": "shell_material_identity", "depends_on": []},
+      "citation_id": "cite.telephone_trace.artifact.shell_material_serial"
+    },
+    {
+      "source_ref": "src.telephone_trace.artifact.terminal_safety_repair",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_015",
+      "reliability": "HIGH",
+      "label": {"en": "Terminal-block safety repair", "ko": "단자대 안전 수리"},
+      "text": {
+        "en": "Before power is applied, the opened base shows a modern strain relief, insulated crimp, and inline fuse mounted through older holes. Oxidized witness marks preserve the outline of the removed cloth lead, while the original induction coil and stamped chassis remain undisturbed.",
+        "ko": "전원을 넣기 전 바닥을 열어 보니 현대식 변형 방지 고정부, 절연 압착 단자와 인라인 퓨즈가 오래된 구멍을 이용해 장착되어 있다. 산화된 접촉 흔적에는 제거된 천 피복 전선의 윤곽이 남고, 원래 유도 코일과 타각 섀시는 손대지 않았다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "terminal_block",
+        "requires": ["src.telephone_trace.artifact.shell_material_serial", "precision_screwdriver"]
+      },
+      "risk": {
+        "destroyed_by": ["energize_before_terminal_capture"],
+        "player_warning": {
+          "en": "Photograph the cold terminal block before moving a screw or applying power; heat can erase the contact outline.",
+          "ko": "나사를 움직이거나 전원을 넣기 전에 차가운 단자대를 촬영하라. 열은 접촉 윤곽을 지울 수 있다."
+        }
+      },
+      "independence": {
+        "group": "internal_electrical_sequence",
+        "depends_on": ["src.telephone_trace.artifact.shell_material_serial"]
+      },
+      "citation_id": "cite.telephone_trace.artifact.terminal_safety_repair"
+    },
+    {
+      "source_ref": "src.telephone_trace.document.safety_repair_log",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_15",
+      "document_id": "doc.telephone_trace.safety_repair_log",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Orchard OT-114 safety repair log", "ko": "오처드 OT-114 안전 수리 기록"},
+      "text": {
+        "en": "The fictional 1986 workshop log records Orchard telephone OT-114 by moulded shell number. It lists replacement of the perished cloth power lead, addition of an inline fuse and insulated crimp, and retention of the original chassis, coil, bell, and handset.",
+        "ko": "가상의 1986년 공방 기록은 성형 외피 번호로 오처드 전화기 OT-114를 특정한다. 삭은 천 피복 전원선 교체, 인라인 퓨즈와 절연 압착 단자 추가, 원래 섀시·코일·종·송수화기 유지가 기록되어 있다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "document_15",
+        "requires": ["src.telephone_trace.artifact.shell_material_serial"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "modern_safety_record",
+        "depends_on": ["src.telephone_trace.artifact.shell_material_serial"]
+      },
+      "citation_id": "cite.telephone_trace.document.safety_repair_log"
+    },
+    {
+      "source_ref": "src.telephone_trace.document.estate_inventory",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_16",
+      "document_id": "doc.telephone_trace.estate_inventory_ot114",
+      "reliability": "MEDIUM",
+      "label": {"en": "Vale estate telephone inventory", "ko": "베일 저택 전화기 목록"},
+      "text": {
+        "en": "The fictional 1954 inventory lists black Orchard desk telephone OT-114 with a frayed cloth lead and the same chipped rear foot visible today. A 1986 margin note sends that numbered set for an electrical-safety refit and records its return.",
+        "ko": "가상의 1954년 목록은 닳은 천 피복 전선과 현재도 보이는 뒤쪽 발의 깨짐을 가진 검은 오처드 탁상 전화기 OT-114를 적는다. 1986년 여백 메모에는 같은 번호의 전화기를 전기 안전 개수에 보냈다가 돌려받았다고 기록한다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "document_16",
+        "requires": ["src.telephone_trace.document.safety_repair_log"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "estate_object_continuity",
+        "depends_on": ["src.telephone_trace.document.safety_repair_log"]
+      },
+      "citation_id": "cite.telephone_trace.document.estate_inventory"
+    },
+    {
+      "source_ref": "src.telephone_trace.npc.noah_archive_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "noah_stern",
+      "npc_id": "noah_stern",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Noah Stern's archive context", "ko": "노아 스턴의 기록 맥락"},
+      "text": {
+        "en": "Noah says the two records entered the archive from different custodians and agree on the moulded number and damaged rear foot. He cautions that this supports continuity of the body, while the physical terminal block must establish what was replaced.",
+        "ko": "노아는 두 기록이 서로 다른 보관자에게서 기록관으로 들어왔고 성형 번호와 뒤쪽 발 손상에 관해 일치한다고 말한다. 다만 이는 몸체의 연속성을 뒷받침할 뿐, 무엇이 교체되었는지는 실물 단자대가 밝혀야 한다고 선을 긋는다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "noah_stern",
+        "requires": ["src.telephone_trace.document.safety_repair_log", "src.telephone_trace.document.estate_inventory"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "archive_custody_context",
+        "depends_on": ["src.telephone_trace.document.safety_repair_log", "src.telephone_trace.document.estate_inventory"]
+      },
+      "citation_id": "cite.telephone_trace.npc.noah_archive_context"
+    },
+    {
+      "source_ref": "src.telephone_trace.reference.orchard_wiring_guide",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "history_15",
+      "reference_id": "ref.orchard.ot100_wiring_and_retrofit",
+      "reliability": "HIGH",
+      "label": {"en": "Orchard OT-100 wiring guide", "ko": "오처드 OT-100 배선 지침"},
+      "text": {
+        "en": "The fictional Orchard guide matches the shell filler, coil layout, and OT-100 moulded numbering to early production. Its later safety appendix specifies the same fused lead and insulated crimp found in OT-114, while reproduction shells use a different filler and printed serial plate.",
+        "ko": "가상의 오처드 지침은 외피 충전재, 코일 배치와 OT-100 성형 번호를 초기 생산품과 연결한다. 후대 안전 부록은 OT-114에서 확인한 퓨즈 전선과 절연 압착 단자를 명시하고, 복제품 외피에는 다른 충전재와 인쇄 일련번호판을 사용한다고 적는다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": ["src.telephone_trace.artifact.terminal_safety_repair", "reference_database"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "independent_orchard_reference",
+        "depends_on": ["src.telephone_trace.artifact.terminal_safety_repair"]
+      },
+      "citation_id": "cite.telephone_trace.reference.orchard_wiring_guide"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.telephone_trace.artifact.shell_material_serial",
+      "source_ref": "src.telephone_trace.artifact.shell_material_serial",
+      "label": {"en": "Object scan: shell and OT-114 serial", "ko": "실물 스캔: 외피와 OT-114 번호"},
+      "locator": {"en": "Material record A-1, protected shell rim", "ko": "재료 기록 A-1, 가려진 외피 테두리"}
+    },
+    {
+      "id": "cite.telephone_trace.artifact.terminal_safety_repair",
+      "source_ref": "src.telephone_trace.artifact.terminal_safety_repair",
+      "label": {"en": "Object record: terminal safety work", "ko": "실물 기록: 단자 안전 작업"},
+      "locator": {"en": "Cold macro record A-2, terminal block", "ko": "무전원 확대 기록 A-2, 단자대"}
+    },
+    {
+      "id": "cite.telephone_trace.document.safety_repair_log",
+      "source_ref": "src.telephone_trace.document.safety_repair_log",
+      "label": {"en": "OT-114 safety repair log", "ko": "OT-114 안전 수리 기록"},
+      "locator": {"en": "Case document D-15, 1986 work line", "ko": "사건 문서 D-15, 1986년 작업 항목"}
+    },
+    {
+      "id": "cite.telephone_trace.document.estate_inventory",
+      "source_ref": "src.telephone_trace.document.estate_inventory",
+      "label": {"en": "Vale estate inventory OT-114", "ko": "베일 저택 목록 OT-114"},
+      "locator": {"en": "Case document D-16, 1954 entry and 1986 note", "ko": "사건 문서 D-16, 1954년 항목과 1986년 메모"}
+    },
+    {
+      "id": "cite.telephone_trace.npc.noah_archive_context",
+      "source_ref": "src.telephone_trace.npc.noah_archive_context",
+      "label": {"en": "Interview with Noah Stern", "ko": "노아 스턴 면담"},
+      "locator": {"en": "Archive interview N-1", "ko": "기록관 면담 N-1"}
+    },
+    {
+      "id": "cite.telephone_trace.reference.orchard_wiring_guide",
+      "source_ref": "src.telephone_trace.reference.orchard_wiring_guide",
+      "label": {"en": "Orchard OT-100 wiring guide", "ko": "오처드 OT-100 배선 지침"},
+      "locator": {"en": "Fictional maker archive H-15, wiring plate 4", "ko": "가상 제작사 기록 H-15, 배선 도판 4"}
+    }
+  ],
+  "evidence_links": [
+    {"id": "link.telephone.shell_supports_original", "source_ref": "src.telephone_trace.artifact.shell_material_serial", "hypothesis_id": "hyp.telephone_trace.untouched_original", "relation": "SUPPORT", "weight": 0.55, "independence_group": "shell_material_identity", "citation_id": "cite.telephone_trace.artifact.shell_material_serial"},
+    {"id": "link.telephone.shell_supports_safety", "source_ref": "src.telephone_trace.artifact.shell_material_serial", "hypothesis_id": "hyp.telephone_trace.genuine_modern_safety_repair", "relation": "SUPPORT", "weight": 0.75, "independence_group": "shell_material_identity", "citation_id": "cite.telephone_trace.artifact.shell_material_serial"},
+    {"id": "link.telephone.shell_refutes_reproduction", "source_ref": "src.telephone_trace.artifact.shell_material_serial", "hypothesis_id": "hyp.telephone_trace.later_parts_reproduction", "relation": "REFUTE", "weight": 0.7, "independence_group": "shell_material_identity", "citation_id": "cite.telephone_trace.artifact.shell_material_serial"},
+    {"id": "link.telephone.terminal_supports_safety", "source_ref": "src.telephone_trace.artifact.terminal_safety_repair", "hypothesis_id": "hyp.telephone_trace.genuine_modern_safety_repair", "relation": "SUPPORT", "weight": 0.95, "independence_group": "internal_electrical_sequence", "citation_id": "cite.telephone_trace.artifact.terminal_safety_repair"},
+    {"id": "link.telephone.terminal_refutes_original", "source_ref": "src.telephone_trace.artifact.terminal_safety_repair", "hypothesis_id": "hyp.telephone_trace.untouched_original", "relation": "REFUTE", "weight": 0.9, "independence_group": "internal_electrical_sequence", "citation_id": "cite.telephone_trace.artifact.terminal_safety_repair"},
+    {"id": "link.telephone.terminal_refutes_reproduction", "source_ref": "src.telephone_trace.artifact.terminal_safety_repair", "hypothesis_id": "hyp.telephone_trace.later_parts_reproduction", "relation": "REFUTE", "weight": 0.65, "independence_group": "internal_electrical_sequence", "citation_id": "cite.telephone_trace.artifact.terminal_safety_repair"},
+    {"id": "link.telephone.log_supports_safety", "source_ref": "src.telephone_trace.document.safety_repair_log", "hypothesis_id": "hyp.telephone_trace.genuine_modern_safety_repair", "relation": "SUPPORT", "weight": 0.95, "independence_group": "modern_safety_record", "citation_id": "cite.telephone_trace.document.safety_repair_log"},
+    {"id": "link.telephone.log_refutes_original", "source_ref": "src.telephone_trace.document.safety_repair_log", "hypothesis_id": "hyp.telephone_trace.untouched_original", "relation": "REFUTE", "weight": 0.85, "independence_group": "modern_safety_record", "citation_id": "cite.telephone_trace.document.safety_repair_log"},
+    {"id": "link.telephone.log_refutes_reproduction", "source_ref": "src.telephone_trace.document.safety_repair_log", "hypothesis_id": "hyp.telephone_trace.later_parts_reproduction", "relation": "REFUTE", "weight": 0.75, "independence_group": "modern_safety_record", "citation_id": "cite.telephone_trace.document.safety_repair_log"},
+    {"id": "link.telephone.inventory_supports_safety", "source_ref": "src.telephone_trace.document.estate_inventory", "hypothesis_id": "hyp.telephone_trace.genuine_modern_safety_repair", "relation": "SUPPORT", "weight": 0.7, "independence_group": "estate_object_continuity", "citation_id": "cite.telephone_trace.document.estate_inventory"},
+    {"id": "link.telephone.inventory_refutes_reproduction", "source_ref": "src.telephone_trace.document.estate_inventory", "hypothesis_id": "hyp.telephone_trace.later_parts_reproduction", "relation": "REFUTE", "weight": 0.65, "independence_group": "estate_object_continuity", "citation_id": "cite.telephone_trace.document.estate_inventory"},
+    {"id": "link.telephone.noah_supports_safety", "source_ref": "src.telephone_trace.npc.noah_archive_context", "hypothesis_id": "hyp.telephone_trace.genuine_modern_safety_repair", "relation": "SUPPORT", "weight": 0.5, "independence_group": "archive_custody_context", "citation_id": "cite.telephone_trace.npc.noah_archive_context"},
+    {"id": "link.telephone.noah_refutes_reproduction", "source_ref": "src.telephone_trace.npc.noah_archive_context", "hypothesis_id": "hyp.telephone_trace.later_parts_reproduction", "relation": "REFUTE", "weight": 0.45, "independence_group": "archive_custody_context", "citation_id": "cite.telephone_trace.npc.noah_archive_context"},
+    {"id": "link.telephone.reference_supports_safety", "source_ref": "src.telephone_trace.reference.orchard_wiring_guide", "hypothesis_id": "hyp.telephone_trace.genuine_modern_safety_repair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "independent_orchard_reference", "citation_id": "cite.telephone_trace.reference.orchard_wiring_guide"},
+    {"id": "link.telephone.reference_refutes_original", "source_ref": "src.telephone_trace.reference.orchard_wiring_guide", "hypothesis_id": "hyp.telephone_trace.untouched_original", "relation": "REFUTE", "weight": 0.75, "independence_group": "independent_orchard_reference", "citation_id": "cite.telephone_trace.reference.orchard_wiring_guide"},
+    {"id": "link.telephone.reference_refutes_reproduction", "source_ref": "src.telephone_trace.reference.orchard_wiring_guide", "hypothesis_id": "hyp.telephone_trace.later_parts_reproduction", "relation": "REFUTE", "weight": 0.8, "independence_group": "independent_orchard_reference", "citation_id": "cite.telephone_trace.reference.orchard_wiring_guide"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.telephone_trace.genuine_modern_safety_repair",
+    "required_source_refs": [
+      "src.telephone_trace.artifact.shell_material_serial",
+      "src.telephone_trace.artifact.terminal_safety_repair",
+      "src.telephone_trace.document.safety_repair_log",
+      "src.telephone_trace.reference.orchard_wiring_guide"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings from four independent groups. Authenticate the early body, identify the modern safety work, and reject both an untouched claim and a whole-object reproduction claim.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 초기 몸체를 진품으로 확인하고 현대 안전 작업을 밝히며 원형 주장과 전체 복제품 주장을 모두 배제하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "minimum_citations": 2},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

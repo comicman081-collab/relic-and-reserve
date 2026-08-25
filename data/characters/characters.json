@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 1,
+  "portraitViewBox": "0 0 256 320",
+  "stageVariantSelector": "EARLY:1-3|MID:4-7|LATE:8-10",
+  "expressionGeometry": {
+    "referenceDisplay": "220x250",
+    "svgToReferenceScale": 0.78125,
+    "NEUTRAL": {"browShiftSvg": 0, "eyeHeightShiftSvg": 0, "mouthCornerShiftSvg": 0, "changedAxes": []},
+    "POSITIVE": {"browShiftSvg": -5, "eyeHeightShiftSvg": -3, "mouthCornerShiftSvg": -5, "changedAxes": ["brow", "eye", "mouth"]},
+    "NEGATIVE": {"browShiftSvg": 5, "eyeHeightShiftSvg": -3, "mouthCornerShiftSvg": 5, "changedAxes": ["brow", "eye", "mouth"]}
+  },
+  "profiles": [
+    {
+      "characterId": "auctioneer",
+      "runtimeIdentity": "recurring_auctioneer",
+      "role": "AUCTIONEER",
+      "displayName": {"ko": "경매 진행원", "en": "Auctioneer"},
+      "accessibilityLabel": {"ko": "자두색 연미복과 금빛 망치 핀을 단 경매 진행원", "en": "Auctioneer in a plum tailcoat with a gold gavel pin"},
+      "portraitAssetId": "res://assets/ui/portraits/auctioneer.svg",
+      "personality": {"ko": "침착하고 박자감 있는 진행자", "en": "Calm, rhythmical master of ceremonies"},
+      "basePalette": ["#542D57", "#7B3B70", "#E8B84A"],
+      "signatureAccessory": {"key": "gavel_pin", "ko": "금빛 망치 핀", "en": "gold gavel pin"},
+      "visualSignature": {"faceShape": "tapered_oval", "hairShape": "high_swept_wave", "torsoSilhouette": "split_tailcoat", "signatureProp": "hand_gavel"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "level_brow_flat_mouth", "moodAccent": "#E8B84A", "stateLabel": {"ko": "차분함", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "raised_brow_smile", "moodAccent": "#7BC8A4", "stateLabel": {"ko": "기쁨", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "pinched_brow_frown", "moodAccent": "#E57972", "stateLabel": {"ko": "아쉬움", "en": "negative"}}
+      },
+      "cueSetId": "AUCTIONEER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E8B84A", "accessoryVariant": {"ko": "작은 종", "en": "small bell"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#68B8A8", "accessoryVariant": {"ko": "번호 리본", "en": "lot-number ribbon"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#D97986", "accessoryVariant": {"ko": "예비 망치", "en": "reserve gavel"}}
+      }
+    },
+    {
+      "characterId": "shopkeeper",
+      "runtimeIdentity": "recurring_artifact_merchant",
+      "role": "SHOPKEEPER",
+      "displayName": {"ko": "유물 상점 주인", "en": "Relic Shopkeeper"},
+      "accessibilityLabel": {"ko": "황토색 앞치마와 확대경, 재고 주머니를 지닌 상점 주인", "en": "Shopkeeper with an ochre apron, loupe and inventory pouch"},
+      "portraitAssetId": "res://assets/ui/portraits/shopkeeper.svg",
+      "personality": {"ko": "다정하지만 꼼꼼한 물건 감별사", "en": "Warm but meticulous stock appraiser"},
+      "basePalette": ["#43675A", "#F2C369", "#72523E"],
+      "signatureAccessory": {"key": "loupe_pouch", "ko": "확대경과 재고 주머니", "en": "loupe and inventory pouch"},
+      "visualSignature": {"faceShape": "soft_kite", "hairShape": "tousled_crown", "torsoSilhouette": "wide_apron", "signatureProp": "hanging_loupe"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "soft_brow_flat_mouth", "moodAccent": "#E4A642", "stateLabel": {"ko": "살펴봄", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "arched_brow_smile", "moodAccent": "#73BBA0", "stateLabel": {"ko": "만족", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "tilted_brow_frown", "moodAccent": "#D9786A", "stateLabel": {"ko": "곤란", "en": "negative"}}
+      },
+      "cueSetId": "SHOPKEEPER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#F2C369", "accessoryVariant": {"ko": "가격표 끈", "en": "price-tag cord"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#69B7A6", "accessoryVariant": {"ko": "재고 열쇠", "en": "stockroom key"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#C96C62", "accessoryVariant": {"ko": "감정 배지", "en": "appraisal badge"}}
+      }
+    },
+    {
+      "characterId": "bidder_01",
+      "runtimeIdentity": "bidder_01",
+      "role": "BIDDER",
+      "displayName": {"ko": "개인 수집가", "en": "Private Collector"},
+      "accessibilityLabel": {"ko": "버건디 코트와 단안경, 카메오 상자를 든 개인 수집가", "en": "Private collector in burgundy with a monocle and cameo case"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_01.svg",
+      "personality": {"ko": "희귀한 사연에 마음이 움직이는 낭만가", "en": "A romantic drawn to rare stories"},
+      "basePalette": ["#691F3A", "#9B3651", "#D9A85F"],
+      "signatureAccessory": {"key": "cameo_case", "ko": "카메오 상자", "en": "cameo case"},
+      "visualSignature": {"faceShape": "heart_taper", "hairShape": "high_wave", "torsoSilhouette": "double_breasted_coat", "signatureProp": "monocle_cameo"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "poised_brow_flat_mouth", "moodAccent": "#D9A85F", "stateLabel": {"ko": "관찰", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "lifted_brow_smile", "moodAccent": "#7FC5A4", "stateLabel": {"ko": "흥미", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "narrow_brow_frown", "moodAccent": "#DD747A", "stateLabel": {"ko": "실망", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#D9A85F", "accessoryVariant": {"ko": "작은 카메오", "en": "small cameo"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#72B6A5", "accessoryVariant": {"ko": "수집표 리본", "en": "collection ribbon"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#D47A91", "accessoryVariant": {"ko": "진주 체인", "en": "pearl chain"}}
+      }
+    },
+    {
+      "characterId": "bidder_02",
+      "runtimeIdentity": "bidder_02",
+      "role": "BIDDER",
+      "displayName": {"ko": "전문 딜러", "en": "Professional Dealer"},
+      "accessibilityLabel": {"ko": "에메랄드 라펠과 장부, 연필을 든 전문 딜러", "en": "Professional dealer with emerald lapels, ledger and pencil"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_02.svg",
+      "personality": {"ko": "숫자와 회전율을 빠르게 계산하는 실무가", "en": "A practical trader who calculates turnover quickly"},
+      "basePalette": ["#263B39", "#277D61", "#F0C34E"],
+      "signatureAccessory": {"key": "ledger_pencil", "ko": "장부와 연필", "en": "ledger and pencil"},
+      "visualSignature": {"faceShape": "long_diamond", "hairShape": "sleek_bob", "torsoSilhouette": "narrow_lapel_suit", "signatureProp": "open_ledger"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "measured_brow_flat_mouth", "moodAccent": "#F0C34E", "stateLabel": {"ko": "계산", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "quick_brow_smile", "moodAccent": "#72C29C", "stateLabel": {"ko": "확신", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "creased_brow_frown", "moodAccent": "#DA7468", "stateLabel": {"ko": "손절", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#F0C34E", "accessoryVariant": {"ko": "짧은 연필", "en": "short pencil"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#5FB3A0", "accessoryVariant": {"ko": "거래 전표", "en": "trade slip"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#D06C7C", "accessoryVariant": {"ko": "금장 장부끈", "en": "gilt ledger strap"}}
+      }
+    },
+    {
+      "characterId": "bidder_03",
+      "runtimeIdentity": "bidder_03",
+      "role": "BIDDER",
+      "displayName": {"ko": "박물관 구매 담당자", "en": "Museum Buyer"},
+      "accessibilityLabel": {"ko": "남색 정장과 박물관 기둥 핀, 전시 폴더를 든 구매 담당자", "en": "Museum buyer in navy with a column pin and exhibit folder"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_03.svg",
+      "personality": {"ko": "공공 가치와 출처를 우선하는 신중한 구매자", "en": "A careful buyer prioritizing provenance and public value"},
+      "basePalette": ["#203B61", "#315986", "#E8C461"],
+      "signatureAccessory": {"key": "column_pin_folder", "ko": "기둥 핀과 전시 폴더", "en": "column pin and exhibit folder"},
+      "visualSignature": {"faceShape": "square_softened", "hairShape": "tidy_crop", "torsoSilhouette": "formal_navy_suit", "signatureProp": "museum_folder"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "formal_brow_flat_mouth", "moodAccent": "#E8C461", "stateLabel": {"ko": "검토", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "open_brow_smile", "moodAccent": "#75BFA2", "stateLabel": {"ko": "승인", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "firm_brow_frown", "moodAccent": "#D66F72", "stateLabel": {"ko": "보류", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E8C461", "accessoryVariant": {"ko": "임시 전시표", "en": "temporary exhibit tag"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#67B3A5", "accessoryVariant": {"ko": "소장품 번호", "en": "accession number"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#CB7285", "accessoryVariant": {"ko": "위원회 인장", "en": "committee seal"}}
+      }
+    },
+    {
+      "characterId": "bidder_04",
+      "runtimeIdentity": "bidder_04",
+      "role": "BIDDER",
+      "displayName": {"ko": "인테리어 장식가", "en": "Interior Decorator"},
+      "accessibilityLabel": {"ko": "라일락 스카프와 색상 견본을 든 각진 머리의 장식가", "en": "Angular-haired decorator with a lilac scarf and color swatches"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_04.svg",
+      "personality": {"ko": "색과 실루엣의 조화를 먼저 보는 감각파", "en": "A visual thinker led by color and silhouette"},
+      "basePalette": ["#553E68", "#A873BC", "#54B6A5"],
+      "signatureAccessory": {"key": "color_swatches", "ko": "부채꼴 색상 견본", "en": "fan of color swatches"},
+      "visualSignature": {"faceShape": "heart_point", "hairShape": "angular_asymmetry", "torsoSilhouette": "scarf_drape", "signatureProp": "swatch_fan"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "angled_brow_flat_mouth", "moodAccent": "#A873BC", "stateLabel": {"ko": "구상", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "bright_brow_smile", "moodAccent": "#54B6A5", "stateLabel": {"ko": "영감", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "skew_brow_frown", "moodAccent": "#EA6C6C", "stateLabel": {"ko": "불일치", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#A873BC", "accessoryVariant": {"ko": "파스텔 견본", "en": "pastel swatches"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#54B6A5", "accessoryVariant": {"ko": "황동 자", "en": "brass ruler"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#E37682", "accessoryVariant": {"ko": "직물 매듭", "en": "fabric knot"}}
+      }
+    },
+    {
+      "characterId": "bidder_05",
+      "runtimeIdentity": "bidder_05",
+      "role": "BIDDER",
+      "displayName": {"ko": "기계 애호가", "en": "Mechanical Enthusiast"},
+      "accessibilityLabel": {"ko": "황동 고글과 렌치, 걷어 올린 소매를 한 기계 애호가", "en": "Mechanical enthusiast with brass goggles, wrench and rolled sleeves"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_05.svg",
+      "personality": {"ko": "움직이는 부품 앞에서 눈이 반짝이는 수리광", "en": "A tinkerer delighted by moving parts"},
+      "basePalette": ["#3D6170", "#5D8390", "#E5B754"],
+      "signatureAccessory": {"key": "goggles_wrench", "ko": "황동 고글과 렌치", "en": "brass goggles and wrench"},
+      "visualSignature": {"faceShape": "broad_round_square", "hairShape": "gear_spikes", "torsoSilhouette": "rolled_work_sleeves", "signatureProp": "open_wrench"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "focused_brow_flat_mouth", "moodAccent": "#E5B754", "stateLabel": {"ko": "분해 관찰", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "spark_brow_grin", "moodAccent": "#71C3A0", "stateLabel": {"ko": "신남", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "knit_brow_frown", "moodAccent": "#DA7468", "stateLabel": {"ko": "고장 의심", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E5B754", "accessoryVariant": {"ko": "작은 너트", "en": "small nut"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#58B1A2", "accessoryVariant": {"ko": "기름병", "en": "oil vial"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#D36F78", "accessoryVariant": {"ko": "정밀 캘리퍼", "en": "precision caliper"}}
+      }
+    },
+    {
+      "characterId": "bidder_06",
+      "runtimeIdentity": "bidder_06",
+      "role": "BIDDER",
+      "displayName": {"ko": "시세 투기상", "en": "Speculator"},
+      "accessibilityLabel": {"ko": "날카로운 앞머리와 숯빛 재킷, 동전 핀을 단 투기상", "en": "Sharp-fringed speculator in charcoal with a coin pin"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_06.svg",
+      "personality": {"ko": "시세의 틈을 빠르게 포착하는 승부사", "en": "A risk-taker quick to spot market gaps"},
+      "basePalette": ["#303039", "#52515B", "#E6B84E"],
+      "signatureAccessory": {"key": "coin_pin", "ko": "동전 핀과 튕기는 동전", "en": "coin pin and flipping coin"},
+      "visualSignature": {"faceShape": "sharp_chin", "hairShape": "blade_fringe", "torsoSilhouette": "charcoal_v_jacket", "signatureProp": "flipping_coin"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "narrow_brow_flat_mouth", "moodAccent": "#E6B84E", "stateLabel": {"ko": "저울질", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "cocked_brow_smirk", "moodAccent": "#70BE9F", "stateLabel": {"ko": "승산", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "hard_brow_frown", "moodAccent": "#D96C6C", "stateLabel": {"ko": "철수", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E6B84E", "accessoryVariant": {"ko": "구리 동전", "en": "copper coin"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#68B4A6", "accessoryVariant": {"ko": "시세표 클립", "en": "price-sheet clip"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#CF6C7B", "accessoryVariant": {"ko": "은빛 토큰", "en": "silver token"}}
+      }
+    },
+    {
+      "characterId": "bidder_07",
+      "runtimeIdentity": "bidder_07",
+      "role": "BIDDER",
+      "displayName": {"ko": "역사가", "en": "Historian"},
+      "accessibilityLabel": {"ko": "부드러운 곱슬머리와 세피아 가디건, 두루마리 넥타이를 한 역사가", "en": "Historian with soft curls, sepia cardigan and scroll tie"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_07.svg",
+      "personality": {"ko": "작은 흔적에서도 시대의 맥락을 찾는 이야기꾼", "en": "A storyteller finding context in tiny traces"},
+      "basePalette": ["#71533B", "#9A7752", "#C98F4A"],
+      "signatureAccessory": {"key": "scroll_tie", "ko": "두루마리 넥타이와 필사본", "en": "scroll tie and manuscript"},
+      "visualSignature": {"faceShape": "soft_round", "hairShape": "cloud_curls", "torsoSilhouette": "buttoned_cardigan", "signatureProp": "rolled_manuscript"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "gentle_brow_flat_mouth", "moodAccent": "#C98F4A", "stateLabel": {"ko": "고찰", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "round_brow_smile", "moodAccent": "#75BA9B", "stateLabel": {"ko": "발견", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "sad_brow_frown", "moodAccent": "#D7786E", "stateLabel": {"ko": "맥락 단절", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#C98F4A", "accessoryVariant": {"ko": "메모 끈", "en": "note cord"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#65AE9E", "accessoryVariant": {"ko": "연대표 표식", "en": "timeline marker"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#C96E82", "accessoryVariant": {"ko": "고문서 봉인", "en": "archive seal"}}
+      }
+    },
+    {
+      "characterId": "bidder_08",
+      "runtimeIdentity": "bidder_08",
+      "role": "BIDDER",
+      "displayName": {"ko": "복원품 수집가", "en": "Restoration Collector"},
+      "accessibilityLabel": {"ko": "상투머리와 청록 앞치마, 보존용 붓을 든 복원품 수집가", "en": "Restoration collector with a bun, teal apron and conservation brush"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_08.svg",
+      "personality": {"ko": "정성스러운 손길과 되살릴 가능성을 높이 사는 수집가", "en": "A collector valuing careful restoration potential"},
+      "basePalette": ["#376E69", "#79C1B5", "#E8C05D"],
+      "signatureAccessory": {"key": "conservation_brush", "ko": "보존용 붓", "en": "conservation brush"},
+      "visualSignature": {"faceShape": "rounded_trapezoid", "hairShape": "high_bun_swoop", "torsoSilhouette": "conservation_apron", "signatureProp": "fine_brush"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "careful_brow_flat_mouth", "moodAccent": "#E8C05D", "stateLabel": {"ko": "점검", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "soft_brow_smile", "moodAccent": "#69BFA5", "stateLabel": {"ko": "회복 기대", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "worried_brow_frown", "moodAccent": "#D87970", "stateLabel": {"ko": "손상 우려", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E8C05D", "accessoryVariant": {"ko": "면봉 통", "en": "swab case"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#5EB5A8", "accessoryVariant": {"ko": "안료 표본", "en": "pigment sample"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#D06E7E", "accessoryVariant": {"ko": "미세 붓집", "en": "fine-brush roll"}}
+      }
+    },
+    {
+      "characterId": "bidder_09",
+      "runtimeIdentity": "bidder_09",
+      "role": "BIDDER",
+      "displayName": {"ko": "기록 보존관", "en": "Archive Curator"},
+      "accessibilityLabel": {"ko": "둥근 안경과 올리브색 조끼, 기록 리본을 지닌 보존관", "en": "Archive curator with round glasses, olive vest and archive ribbon"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_09.svg",
+      "personality": {"ko": "목록과 보관 이력을 빈틈없이 확인하는 기록가", "en": "A record keeper who verifies every catalog trail"},
+      "basePalette": ["#5C6840", "#7F8A55", "#A8584A"],
+      "signatureAccessory": {"key": "archive_ribbon", "ko": "기록 리본과 카드", "en": "archive ribbon and card"},
+      "visualSignature": {"faceShape": "compact_oval", "hairShape": "blunt_archive_bob", "torsoSilhouette": "olive_waistcoat", "signatureProp": "ribboned_archive_card"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "bookish_brow_flat_mouth", "moodAccent": "#D1AA56", "stateLabel": {"ko": "대조", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "relaxed_brow_smile", "moodAccent": "#6CB89B", "stateLabel": {"ko": "일치", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "creased_brow_frown", "moodAccent": "#CC6A67", "stateLabel": {"ko": "기록 누락", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#D1AA56", "accessoryVariant": {"ko": "면 라벨", "en": "cotton label"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#64AC9A", "accessoryVariant": {"ko": "색인 탭", "en": "index tab"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#C76D7A", "accessoryVariant": {"ko": "보존 등급표", "en": "preservation grade tag"}}
+      }
+    },
+    {
+      "characterId": "bidder_10",
+      "runtimeIdentity": "bidder_10",
+      "role": "BIDDER",
+      "displayName": {"ko": "유산 중개인", "en": "Estate Broker"},
+      "accessibilityLabel": {"ko": "옆가르마와 녹슨 주황 코트, 열쇠 고리를 든 유산 중개인", "en": "Estate broker with side-parted hair, rust coat and key ring"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_10.svg",
+      "personality": {"ko": "가문의 물건과 거래 조건에 능숙한 중개자", "en": "A broker fluent in estates and transaction terms"},
+      "basePalette": ["#87442E", "#B45F3E", "#E8C45E"],
+      "signatureAccessory": {"key": "key_ring", "ko": "유산 열쇠 고리", "en": "estate key ring"},
+      "visualSignature": {"faceShape": "clean_oval", "hairShape": "precise_side_part", "torsoSilhouette": "rust_overcoat", "signatureProp": "ring_of_keys"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "business_brow_flat_mouth", "moodAccent": "#E8C45E", "stateLabel": {"ko": "조건 확인", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "assured_brow_smile", "moodAccent": "#71BCA1", "stateLabel": {"ko": "합의", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "closed_brow_frown", "moodAccent": "#D36D68", "stateLabel": {"ko": "결렬", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E8C45E", "accessoryVariant": {"ko": "작은 열쇠", "en": "small key"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#63AE9D", "accessoryVariant": {"ko": "매물표", "en": "estate tag"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#CA6B7C", "accessoryVariant": {"ko": "금고 열쇠", "en": "vault key"}}
+      }
+    },
+    {
+      "characterId": "bidder_11",
+      "runtimeIdentity": "bidder_11",
+      "role": "BIDDER",
+      "displayName": {"ko": "디자인 연구자", "en": "Design Scholar"},
+      "accessibilityLabel": {"ko": "비대칭 안경과 남색 칼라, 기하 브로치를 단 디자인 연구자", "en": "Design scholar with asymmetric glasses, indigo collar and geometry brooch"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_11.svg",
+      "personality": {"ko": "형태의 원리와 시대별 미감을 분석하는 연구자", "en": "A scholar analyzing form and period aesthetics"},
+      "basePalette": ["#34365F", "#555A96", "#E2B958"],
+      "signatureAccessory": {"key": "geometry_brooch", "ko": "기하 브로치", "en": "geometry brooch"},
+      "visualSignature": {"faceShape": "asymmetric_diamond", "hairShape": "split_crop", "torsoSilhouette": "indigo_geometric_collar", "signatureProp": "shape_sampler"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "analytical_brow_flat_mouth", "moodAccent": "#E2B958", "stateLabel": {"ko": "분석", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "curious_brow_smile", "moodAccent": "#6DB7A0", "stateLabel": {"ko": "통찰", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "offset_brow_frown", "moodAccent": "#D46C78", "stateLabel": {"ko": "모순", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E2B958", "accessoryVariant": {"ko": "원형 견본", "en": "circle sample"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#63AEA1", "accessoryVariant": {"ko": "비례 자", "en": "proportion ruler"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#CB6D86", "accessoryVariant": {"ko": "다면체 핀", "en": "polyhedron pin"}}
+      }
+    },
+    {
+      "characterId": "bidder_12",
+      "runtimeIdentity": "bidder_12",
+      "role": "BIDDER",
+      "displayName": {"ko": "시계공", "en": "Clockmaker"},
+      "accessibilityLabel": {"ko": "말린 콧수염과 파란 작업복, 톱니 확대경을 지닌 시계공", "en": "Clockmaker with curled moustache, blue work coat and gear loupe"},
+      "portraitAssetId": "res://assets/ui/portraits/bidder_12.svg",
+      "personality": {"ko": "정밀한 구조와 오래된 기계음을 사랑하는 장인", "en": "An artisan devoted to precise mechanisms"},
+      "basePalette": ["#345D7D", "#4F82A6", "#D6A342"],
+      "signatureAccessory": {"key": "gear_loupe", "ko": "톱니 확대경", "en": "gear loupe"},
+      "visualSignature": {"faceShape": "rounded_rectangle", "hairShape": "three_clock_curls", "torsoSilhouette": "blue_work_coat", "signatureProp": "brass_gear_loupe"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "precise_brow_moustache_rest", "moodAccent": "#D6A342", "stateLabel": {"ko": "조정", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "raised_brow_moustache_smile", "moodAccent": "#70BCA0", "stateLabel": {"ko": "정확", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "pinched_brow_moustache_frown", "moodAccent": "#D56E68", "stateLabel": {"ko": "오차", "en": "negative"}}
+      },
+      "cueSetId": "BIDDER",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#D6A342", "accessoryVariant": {"ko": "작은 톱니", "en": "small gear"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#61AE9F", "accessoryVariant": {"ko": "태엽 열쇠", "en": "winding key"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#CB6D7C", "accessoryVariant": {"ko": "정밀 태엽", "en": "precision spring"}}
+      }
+    },
+    {
+      "characterId": "event_courier",
+      "runtimeIdentity": "delivery_storage_events",
+      "role": "EVENT",
+      "displayName": {"ko": "유물 배송원", "en": "Relic Courier"},
+      "accessibilityLabel": {"ko": "산호색 모자와 소포 끈, 꼬리표 클립보드를 든 배송원", "en": "Courier with coral cap, parcel strap and tag clipboard"},
+      "portraitAssetId": "res://assets/ui/portraits/event_courier.svg",
+      "personality": {"ko": "빠르고 솔직하게 물류 소식을 전하는 배송원", "en": "A brisk, candid bearer of delivery news"},
+      "basePalette": ["#46737B", "#E66F5C", "#E5CF9B"],
+      "signatureAccessory": {"key": "tag_clipboard", "ko": "꼬리표 클립보드", "en": "tag clipboard"},
+      "visualSignature": {"faceShape": "freckled_kite", "hairShape": "cap_tucked_crop", "torsoSilhouette": "diagonal_parcel_strap", "signatureProp": "tag_clipboard"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "alert_brow_flat_mouth", "moodAccent": "#E5CF9B", "stateLabel": {"ko": "전달", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "high_brow_smile", "moodAccent": "#68BEA1", "stateLabel": {"ko": "안전 배송", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "worried_brow_frown", "moodAccent": "#D76561", "stateLabel": {"ko": "배송 문제", "en": "negative"}}
+      },
+      "cueSetId": "EVENT",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E5CF9B", "accessoryVariant": {"ko": "종이 꼬리표", "en": "paper tag"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#60B3A4", "accessoryVariant": {"ko": "경로 배지", "en": "route badge"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#D56E7A", "accessoryVariant": {"ko": "취급주의 인장", "en": "fragile seal"}}
+      }
+    },
+    {
+      "characterId": "event_patron",
+      "runtimeIdentity": "estate_collector_commission_events",
+      "role": "EVENT",
+      "displayName": {"ko": "의뢰 후원자", "en": "Commission Patron"},
+      "accessibilityLabel": {"ko": "장미색 케이프와 봉인된 의뢰 카드를 든 후원자", "en": "Patron with a rose capelet and sealed request card"},
+      "portraitAssetId": "res://assets/ui/portraits/event_patron.svg",
+      "personality": {"ko": "예의를 갖추되 원하는 바가 분명한 의뢰인", "en": "A courteous patron with clear expectations"},
+      "basePalette": ["#734250", "#D77E98", "#EAC667"],
+      "signatureAccessory": {"key": "sealed_request", "ko": "봉인된 의뢰 카드", "en": "sealed request card"},
+      "visualSignature": {"faceShape": "rose_oval", "hairShape": "braided_crown", "torsoSilhouette": "rounded_capelet", "signatureProp": "wax_sealed_card"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "composed_brow_flat_mouth", "moodAccent": "#EAC667", "stateLabel": {"ko": "의뢰", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "gracious_brow_smile", "moodAccent": "#75BFA0", "stateLabel": {"ko": "흡족", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "disappointed_brow_frown", "moodAccent": "#D66F79", "stateLabel": {"ko": "유감", "en": "negative"}}
+      },
+      "cueSetId": "EVENT",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#EAC667", "accessoryVariant": {"ko": "초기 봉인", "en": "simple seal"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#68B5A2", "accessoryVariant": {"ko": "가문 리본", "en": "house ribbon"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#CF7185", "accessoryVariant": {"ko": "금박 의뢰장", "en": "gilt request"}}
+      }
+    },
+    {
+      "characterId": "event_curator",
+      "runtimeIdentity": "museum_provenance_integrity_events",
+      "role": "EVENT",
+      "displayName": {"ko": "순회 큐레이터", "en": "Visiting Curator"},
+      "accessibilityLabel": {"ko": "청록 재킷과 흰 장갑, 기록 카드를 든 순회 큐레이터", "en": "Visiting curator in turquoise with white gloves and an archive card"},
+      "portraitAssetId": "res://assets/ui/portraits/event_curator.svg",
+      "personality": {"ko": "출처와 보존 원칙을 단호하게 지키는 전문가", "en": "An expert firm about provenance and preservation"},
+      "basePalette": ["#267A77", "#42A9A3", "#F4F3E8"],
+      "signatureAccessory": {"key": "white_glove_card", "ko": "흰 장갑과 기록 카드", "en": "white gloves and archive card"},
+      "visualSignature": {"faceShape": "tall_soft_diamond", "hairShape": "looped_side_braids", "torsoSilhouette": "turquoise_notch_jacket", "signatureProp": "gloved_archive_card"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "scholarly_brow_flat_mouth", "moodAccent": "#E3C25C", "stateLabel": {"ko": "감정", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "calm_brow_smile", "moodAccent": "#68BEA1", "stateLabel": {"ko": "인정", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "strict_brow_frown", "moodAccent": "#D66865", "stateLabel": {"ko": "경고", "en": "negative"}}
+      },
+      "cueSetId": "EVENT",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#E3C25C", "accessoryVariant": {"ko": "면 장갑", "en": "cotton gloves"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#58B1A5", "accessoryVariant": {"ko": "출처 탭", "en": "provenance tab"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#CD6B7B", "accessoryVariant": {"ko": "위원회 카드", "en": "committee card"}}
+      }
+    },
+    {
+      "characterId": "event_reporter",
+      "runtimeIdentity": "market_trend_weather_events",
+      "role": "EVENT",
+      "displayName": {"ko": "시장 소식통", "en": "Market Reporter"},
+      "accessibilityLabel": {"ko": "호박색 베레모와 메모 카드, 작은 확성기 핀을 단 시장 소식통", "en": "Market reporter with amber beret, note card and tiny megaphone pin"},
+      "portraitAssetId": "res://assets/ui/portraits/event_reporter.svg",
+      "personality": {"ko": "시장의 변화를 경쾌하게 요약하는 소식통", "en": "A lively reporter who distills market shifts"},
+      "basePalette": ["#62536D", "#D79B32", "#F2E3BB"],
+      "signatureAccessory": {"key": "megaphone_pin", "ko": "작은 확성기 핀과 메모 카드", "en": "tiny megaphone pin and note card"},
+      "visualSignature": {"faceShape": "bright_hex_oval", "hairShape": "choppy_beret_bob", "torsoSilhouette": "press_vest", "signatureProp": "note_card_megaphone"},
+      "expressionMetadata": {
+        "NEUTRAL": {"geometryOverlay": "ready_brow_flat_mouth", "moodAccent": "#D79B32", "stateLabel": {"ko": "속보", "en": "neutral"}},
+        "POSITIVE": {"geometryOverlay": "lively_brow_smile", "moodAccent": "#6BBBA0", "stateLabel": {"ko": "호재", "en": "positive"}},
+        "NEGATIVE": {"geometryOverlay": "urgent_brow_frown", "moodAccent": "#D76B67", "stateLabel": {"ko": "악재", "en": "negative"}}
+      },
+      "cueSetId": "EVENT",
+      "stageVariants": {
+        "EARLY": {"stageRange": [1, 3], "accentColor": "#D79B32", "accessoryVariant": {"ko": "짧은 속보", "en": "brief bulletin"}},
+        "MID": {"stageRange": [4, 7], "accentColor": "#5FAFA0", "accessoryVariant": {"ko": "시장 그래프", "en": "market graph"}},
+        "LATE": {"stageRange": [8, 10], "accentColor": "#CE6E7E", "accessoryVariant": {"ko": "특집 배지", "en": "feature badge"}}
+      }
+    }
+  ],
+  "cueSets": {
+    "AUCTIONEER": {
+      "INTRO": {"expression": "NEUTRAL", "dialogueKey": "character.auctioneer.intro", "dialogue": {"ko": "경매를 시작합니다.", "en": "The auction begins."}},
+      "CALL": {"expression": "NEUTRAL", "dialogueKey": "character.auctioneer.call", "dialogue": {"ko": "다음 호가를 부릅니다.", "en": "Calling the next bid."}},
+      "SOLD": {"expression": "POSITIVE", "dialogueKey": "character.auctioneer.sold", "dialogue": {"ko": "낙찰되었습니다!", "en": "Sold!"}},
+      "NO_SALE": {"expression": "NEGATIVE", "dialogueKey": "character.auctioneer.no_sale", "dialogue": {"ko": "예약가에 닿지 못해 유찰입니다.", "en": "The reserve was not met. No sale."}}
+    },
+    "BIDDER": {
+      "WATCH": {"expression": "NEUTRAL", "dialogueKey": "character.bidder.watch", "dialogue": {"ko": "상태를 살핍니다.", "en": "Checking the condition."}},
+      "BID": {"expression": "POSITIVE", "dialogueKey": "character.bidder.bid", "dialogue": {"ko": "이 가격에 참여하죠.", "en": "I will join at this price."}},
+      "DROPOUT": {"expression": "NEGATIVE", "dialogueKey": "character.bidder.dropout", "dialogue": {"ko": "이번에는 물러납니다.", "en": "I will step back this time."}},
+      "WON": {"expression": "POSITIVE", "dialogueKey": "character.bidder.won", "dialogue": {"ko": "좋은 유물을 얻었군요.", "en": "A fine relic to bring home."}}
+    },
+    "SHOPKEEPER": {
+      "WELCOME": {"expression": "NEUTRAL", "dialogueKey": "character.shopkeeper.welcome", "dialogue": {"ko": "천천히 둘러보세요.", "en": "Take your time looking."}},
+      "OFFER": {"expression": "NEUTRAL", "dialogueKey": "character.shopkeeper.offer", "dialogue": {"ko": "이 유물은 어떠신가요?", "en": "How about this relic?"}},
+      "PURCHASE_OK": {"expression": "POSITIVE", "dialogueKey": "character.shopkeeper.purchase_ok", "dialogue": {"ko": "좋은 선택이에요.", "en": "A fine choice."}},
+      "PURCHASE_FAIL": {"expression": "NEGATIVE", "dialogueKey": "character.shopkeeper.purchase_fail", "dialogue": {"ko": "지금은 거래할 수 없어요.", "en": "We cannot trade this one now."}}
+    },
+    "EVENT": {
+      "REQUEST": {"expression": "NEUTRAL", "dialogueKey": "character.event.request", "dialogue": {"ko": "새 소식이 도착했어요.", "en": "New word has arrived."}},
+      "REACTION_POS": {"expression": "POSITIVE", "dialogueKey": "character.event.reaction_pos", "dialogue": {"ko": "좋은 변화가 생겼어요!", "en": "That brings a welcome change!"}},
+      "REACTION_NEG": {"expression": "NEGATIVE", "dialogueKey": "character.event.reaction_neg", "dialogue": {"ko": "주의가 필요한 소식이에요.", "en": "This news needs attention."}}
+    }
+  },
+  "eventEffectFamilies": [
+    {"familyId": "DELIVERY_STORAGE", "characterId": "event_courier", "semanticSignals": ["delivery", "storage", "freight", "crate", "parts"], "typicalEffectTypes": ["market_slots", "storage_damage", "restoration_discount"]},
+    {"familyId": "ESTATE_COLLECTOR_COMMISSION", "characterId": "event_patron", "semanticSignals": ["estate", "collector", "commission", "offer", "bequest", "insurance"], "typicalEffectTypes": ["money", "commission_credit", "auction_fee_discount"]},
+    {"familyId": "MUSEUM_PROVENANCE_INTEGRITY", "characterId": "event_curator", "semanticSignals": ["museum", "provenance", "integrity", "inspection", "mislabelled"], "typicalEffectTypes": ["museum_trust", "integrity_warning", "clue_bonus", "inspection_bonus", "reputation", "acquisition_discount"]},
+    {"familyId": "MARKET_TREND_DAILY", "characterId": "event_reporter", "semanticSignals": ["market", "trend", "auction", "fair", "catalog"], "typicalEffectTypes": ["market_modifier", "rarity_bonus", "listing_bonus", "bidder_reach"]}
+  ],
+  "eventCharacterMap": [
+    {"eventId": "event_01", "effectType": "money", "familyId": "ESTATE_COLLECTOR_COMMISSION", "characterId": "event_patron", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_01.request", "reactionDialogueKey": "event.event_01.result"},
+    {"eventId": "event_02", "effectType": "market_slots", "familyId": "DELIVERY_STORAGE", "characterId": "event_courier", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_02.request", "reactionDialogueKey": "event.event_02.result"},
+    {"eventId": "event_03", "effectType": "commission_credit", "familyId": "ESTATE_COLLECTOR_COMMISSION", "characterId": "event_patron", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_03.request", "reactionDialogueKey": "event.event_03.result"},
+    {"eventId": "event_04", "effectType": "museum_trust", "familyId": "MUSEUM_PROVENANCE_INTEGRITY", "characterId": "event_curator", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_04.request", "reactionDialogueKey": "event.event_04.result"},
+    {"eventId": "event_05", "effectType": "integrity_warning", "familyId": "MUSEUM_PROVENANCE_INTEGRITY", "characterId": "event_curator", "outcomePolarity": "NEGATIVE", "requestDialogueKey": "event.event_05.request", "reactionDialogueKey": "event.event_05.result"},
+    {"eventId": "event_06", "effectType": "market_modifier", "familyId": "MARKET_TREND_DAILY", "characterId": "event_reporter", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_06.request", "reactionDialogueKey": "event.event_06.result"},
+    {"eventId": "event_07", "effectType": "market_modifier", "familyId": "MARKET_TREND_DAILY", "characterId": "event_reporter", "outcomePolarity": "NEGATIVE", "requestDialogueKey": "event.event_07.request", "reactionDialogueKey": "event.event_07.result"},
+    {"eventId": "event_08", "effectType": "storage_damage", "familyId": "DELIVERY_STORAGE", "characterId": "event_courier", "outcomePolarity": "NEGATIVE", "requestDialogueKey": "event.event_08.request", "reactionDialogueKey": "event.event_08.result"},
+    {"eventId": "event_09", "effectType": "rarity_bonus", "familyId": "MARKET_TREND_DAILY", "characterId": "event_reporter", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_09.request", "reactionDialogueKey": "event.event_09.result"},
+    {"eventId": "event_10", "effectType": "money", "familyId": "ESTATE_COLLECTOR_COMMISSION", "characterId": "event_patron", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_10.request", "reactionDialogueKey": "event.event_10.result"},
+    {"eventId": "event_11", "effectType": "clue_bonus", "familyId": "MUSEUM_PROVENANCE_INTEGRITY", "characterId": "event_curator", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_11.request", "reactionDialogueKey": "event.event_11.result"},
+    {"eventId": "event_12", "effectType": "restoration_discount", "familyId": "DELIVERY_STORAGE", "characterId": "event_courier", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_12.request", "reactionDialogueKey": "event.event_12.result"},
+    {"eventId": "event_13", "effectType": "market_slots", "familyId": "ESTATE_COLLECTOR_COMMISSION", "characterId": "event_patron", "outcomePolarity": "NEGATIVE", "requestDialogueKey": "event.event_13.request", "reactionDialogueKey": "event.event_13.result"},
+    {"eventId": "event_14", "effectType": "auction_fee_discount", "familyId": "ESTATE_COLLECTOR_COMMISSION", "characterId": "event_patron", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_14.request", "reactionDialogueKey": "event.event_14.result"},
+    {"eventId": "event_15", "effectType": "storage_damage", "familyId": "DELIVERY_STORAGE", "characterId": "event_courier", "outcomePolarity": "NEGATIVE", "requestDialogueKey": "event.event_15.request", "reactionDialogueKey": "event.event_15.result"},
+    {"eventId": "event_16", "effectType": "inspection_bonus", "familyId": "MUSEUM_PROVENANCE_INTEGRITY", "characterId": "event_curator", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_16.request", "reactionDialogueKey": "event.event_16.result"},
+    {"eventId": "event_17", "effectType": "acquisition_discount", "familyId": "MUSEUM_PROVENANCE_INTEGRITY", "characterId": "event_curator", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_17.request", "reactionDialogueKey": "event.event_17.result"},
+    {"eventId": "event_18", "effectType": "reputation", "familyId": "MUSEUM_PROVENANCE_INTEGRITY", "characterId": "event_curator", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_18.request", "reactionDialogueKey": "event.event_18.result"},
+    {"eventId": "event_19", "effectType": "listing_bonus", "familyId": "MARKET_TREND_DAILY", "characterId": "event_reporter", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_19.request", "reactionDialogueKey": "event.event_19.result"},
+    {"eventId": "event_20", "effectType": "bidder_reach", "familyId": "MARKET_TREND_DAILY", "characterId": "event_reporter", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_20.request", "reactionDialogueKey": "event.event_20.result"},
+    {"eventId": "event_21", "effectType": "market_slots", "familyId": "DELIVERY_STORAGE", "characterId": "event_courier", "outcomePolarity": "NEGATIVE", "requestDialogueKey": "event.event_21.request", "reactionDialogueKey": "event.event_21.result"},
+    {"eventId": "event_22", "effectType": "market_modifier", "familyId": "MARKET_TREND_DAILY", "characterId": "event_reporter", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_22.request", "reactionDialogueKey": "event.event_22.result"},
+    {"eventId": "event_23", "effectType": "money", "familyId": "ESTATE_COLLECTOR_COMMISSION", "characterId": "event_patron", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_23.request", "reactionDialogueKey": "event.event_23.result"},
+    {"eventId": "event_24", "effectType": "money", "familyId": "ESTATE_COLLECTOR_COMMISSION", "characterId": "event_patron", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_24.request", "reactionDialogueKey": "event.event_24.result"},
+    {"eventId": "event_25", "effectType": "listing_bonus", "familyId": "MARKET_TREND_DAILY", "characterId": "event_reporter", "outcomePolarity": "POSITIVE", "requestDialogueKey": "event.event_25.request", "reactionDialogueKey": "event.event_25.result"}
+  ]
+}

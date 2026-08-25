@@ -1,0 +1,1558 @@
+{
+  "executed": 12,
+  "expectedCount": 12,
+  "failed": 0,
+  "passed": 12,
+  "skipped": 0,
+  "suite": "R3 Stage 7 Authored Cases",
+  "tests": [
+    {
+      "evidence": {
+        "authoredCount": 22,
+        "authoredErrors": [],
+        "caseOrder": [
+          "shadow_optic",
+          "composite_prototype"
+        ],
+        "difficulty": 1.500730351849,
+        "fallbackCount": 0,
+        "introduced": [
+          "artifact_073",
+          "artifact_074"
+        ],
+        "lockHashesExact": true,
+        "lockedCases": [
+          "shadow_optic",
+          "composite_prototype"
+        ],
+        "missingMethods": [],
+        "stageErrors": []
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-DATA-01",
+      "name": "Stage 7 resolves two hash-locked authored cases in exact order at the canonical multiplier with zero fallback while later authored stages remain registered",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseIdHits": {
+          "composite_prototype": {
+            "gameState": false,
+            "main3d": false
+          },
+          "shadow_optic": {
+            "gameState": false,
+            "main3d": false
+          }
+        },
+        "runtimeExact": true,
+        "saveMutation0": true
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-GENERIC-02",
+      "name": "Both Stage 7 cases use generic read-only registry and gameplay paths",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "composite_prototype": {
+          "authoredSpec": "artifact_059",
+          "canonical": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+          "case": {
+            "act": "ACT_4",
+            "documentIds": [
+              "document_09",
+              "document_10"
+            ],
+            "id": "composite_prototype",
+            "npcId": "noah_stern",
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "recoveryOutcome": "reviewed_with_mentor",
+            "rewardSpecId": "artifact_059",
+            "rewards": {
+              "historicalIntegrity": 1.0,
+              "mastery": 3.0,
+              "money": 318.0,
+              "museumTrust": 1.0,
+              "reputation": 2.0
+            },
+            "storyArtifactId": "story_artifact_20",
+            "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Composite Prototype.",
+            "title": "The Composite Prototype"
+          },
+          "ok": true,
+          "storyBaseSpec": "artifact_059"
+        },
+        "shadow_optic": {
+          "authoredSpec": "artifact_057",
+          "canonical": "hyp.shadow_optic.later_reproduction_using_period_style",
+          "case": {
+            "act": "ACT_4",
+            "documentIds": [
+              "document_07",
+              "document_08"
+            ],
+            "id": "shadow_optic",
+            "npcId": "victor_hale",
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "recoveryOutcome": "reviewed_with_mentor",
+            "rewardSpecId": "artifact_057",
+            "rewards": {
+              "historicalIntegrity": 1.0,
+              "mastery": 3.0,
+              "money": 306.0,
+              "museumTrust": 1.0,
+              "reputation": 2.0
+            },
+            "storyArtifactId": "story_artifact_19",
+            "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Optic.",
+            "title": "Shadow Mark: Optic"
+          },
+          "ok": true,
+          "storyBaseSpec": "artifact_057"
+        }
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-CAMPAIGN-03",
+      "name": "Stage 7 keeps exact ACT 4, NPC, document, reward, story and corrected 057/059 artifact bindings",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": {
+          "master_chronometer": {
+            "authored": true,
+            "case": {
+              "act": "ACT_5",
+              "documentIds": [
+                "document_11",
+                "document_12"
+              ],
+              "id": "master_chronometer",
+              "npcId": "mara_venn",
+              "outcomes": [
+                "masterful",
+                "credible",
+                "mistaken",
+                "reviewed_with_mentor"
+              ],
+              "recoveryOutcome": "reviewed_with_mentor",
+              "rewardSpecId": "artifact_061",
+              "rewards": {
+                "historicalIntegrity": 1.0,
+                "mastery": 7.0,
+                "money": 330.0,
+                "museumTrust": 3.0,
+                "reputation": 4.0
+              },
+              "storyArtifactId": "story_artifact_21",
+              "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Master Work: Chronometer.",
+              "title": "Master Work: Chronometer"
+            },
+            "ok": true
+          },
+          "master_optical": {
+            "authored": true,
+            "case": {
+              "act": "ACT_5",
+              "documentIds": [
+                "document_13",
+                "document_14"
+              ],
+              "id": "master_optical",
+              "npcId": "victor_hale",
+              "outcomes": [
+                "masterful",
+                "credible",
+                "mistaken",
+                "reviewed_with_mentor"
+              ],
+              "recoveryOutcome": "reviewed_with_mentor",
+              "rewardSpecId": "artifact_075",
+              "rewards": {
+                "historicalIntegrity": 1.0,
+                "mastery": 7.0,
+                "money": 342.0,
+                "museumTrust": 3.0,
+                "reputation": 4.0
+              },
+              "storyArtifactId": "story_artifact_22",
+              "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Master Work: Optical Engine.",
+              "title": "Master Work: Optical Engine"
+            },
+            "ok": true
+          }
+        },
+        "stage": {
+          "case_ids": [
+            "master_chronometer",
+            "master_optical"
+          ],
+          "completion_contract": {
+            "case_scope": "ALL_STAGE_CASES",
+            "completion_label": {
+              "en": "Complete every case at the first master bench.",
+              "ko": "첫 장인 작업대의 모든 사건을 완료하세요."
+            },
+            "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+            "performance_affects_unlock": false,
+            "unlock_on_completion": true
+          },
+          "difficulty_multiplier": 1.60578147647843,
+          "includes_grand_reserve": false,
+          "introduced_artifact_ids": [
+            "artifact_075",
+            "artifact_076"
+          ],
+          "performance_target": {
+            "advice_label": {
+              "en": "Plan the least invasive effective intervention.",
+              "ko": "효과가 있으면서 가장 덜 침습적인 수리를 계획해 보세요."
+            },
+            "failure_label": {
+              "en": "The target was missed without relocking the route.",
+              "ko": "목표 미달로 진행 경로가 다시 잠기지는 않습니다."
+            },
+            "goal_label": {
+              "en": "Balance precision and conservation.",
+              "ko": "정밀함과 보존을 균형 있게 다루세요."
+            },
+            "grade_thresholds": [
+              {
+                "grade_id": "DEVELOPING",
+                "min_score": 0.0
+              },
+              {
+                "grade_id": "TARGET",
+                "min_score": 62.0
+              },
+              {
+                "grade_id": "EXPERT",
+                "min_score": 78.0
+              },
+              {
+                "grade_id": "MASTER",
+                "min_score": 95.0
+              }
+            ],
+            "metric_id": "public_stage_score",
+            "operator": "GTE",
+            "target_score": 62.0
+          },
+          "stage_id": 8.0,
+          "title": {
+            "en": "Master's Bench I",
+            "ko": "장인의 작업대 I"
+          }
+        }
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-STAGE8-04",
+      "name": "Stage 8 resolves exactly master_chronometer then master_optical with fresh authored bindings and preserved ACT 5 rewards",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "composite_prototype": {
+          "groups": [
+            "component_mass_mismatch",
+            "modern_adapter_network",
+            "composite_archive_chain",
+            "composite_reserve_catalog",
+            "noah_prototype_account",
+            "independent_measuring_standard"
+          ],
+          "ids": [
+            "src.composite_prototype.artifact.mixed_period_components",
+            "src.composite_prototype.artifact.modern_adapter_construction",
+            "src.composite_prototype.document.archive_custody_record",
+            "src.composite_prototype.document.reserve_catalog_entry",
+            "src.composite_prototype.npc.noah_prototype_context",
+            "src.composite_prototype.reference.period_measuring_standard"
+          ],
+          "kinds": [
+            "ARTIFACT",
+            "ARTIFACT",
+            "DOCUMENT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "npcExpression": "concerned",
+          "ok": true,
+          "required": [
+            "src.composite_prototype.artifact.mixed_period_components",
+            "src.composite_prototype.artifact.modern_adapter_construction",
+            "src.composite_prototype.document.archive_custody_record",
+            "src.composite_prototype.reference.period_measuring_standard"
+          ],
+          "rules": [
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 4,
+              "minimum_independent_groups": 4,
+              "minimum_net_support": 4,
+              "outcome_id": "masterful",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 3,
+              "minimum_independent_groups": 3,
+              "minimum_net_support": 3,
+              "outcome_id": "credible",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "INCORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "mistaken",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "ANY",
+              "fallback": true,
+              "minimum_citations": 0,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "reviewed_with_mentor",
+              "requires_all_required_sources": false
+            }
+          ]
+        },
+        "shadow_optic": {
+          "groups": [
+            "modern_optic_materials",
+            "replica_adhesive_sequence",
+            "optic_archive_chain",
+            "model156_serial_reference",
+            "victor_optic_account",
+            "independent_telescope_standard"
+          ],
+          "ids": [
+            "src.shadow_optic.artifact.period_mismatch_materials",
+            "src.shadow_optic.artifact.uv_replica_adhesive",
+            "src.shadow_optic.document.archive_custody_record",
+            "src.shadow_optic.document.serial_reference_leaf",
+            "src.shadow_optic.npc.victor_shadow_mark_context",
+            "src.shadow_optic.reference.period_telescope_standard"
+          ],
+          "kinds": [
+            "ARTIFACT",
+            "ARTIFACT",
+            "DOCUMENT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "npcExpression": "neutral",
+          "ok": true,
+          "required": [
+            "src.shadow_optic.artifact.period_mismatch_materials",
+            "src.shadow_optic.artifact.uv_replica_adhesive",
+            "src.shadow_optic.document.archive_custody_record",
+            "src.shadow_optic.reference.period_telescope_standard"
+          ],
+          "rules": [
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 4,
+              "minimum_independent_groups": 4,
+              "minimum_net_support": 4,
+              "outcome_id": "masterful",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 3,
+              "minimum_independent_groups": 3,
+              "minimum_net_support": 3,
+              "outcome_id": "credible",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "INCORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "mistaken",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "ANY",
+              "fallback": true,
+              "minimum_citations": 0,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "reviewed_with_mentor",
+              "requires_all_required_sources": false
+            }
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-SOURCES-05",
+      "name": "Each Stage 7 graph has exact A2/D2/NPC1/REF1 sources, six groups and an ordered four-step outcome ladder",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "composite_prototype": {
+          "inventoryCount": 1,
+          "ok": true,
+          "pressureMutation0": true,
+          "repeatSame": true,
+          "spec": "artifact_059",
+          "story": "story_artifact_20",
+          "truth": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+          "uid": "case_composite_prototype"
+        },
+        "shadow_optic": {
+          "inventoryCount": 1,
+          "ok": true,
+          "pressureMutation0": true,
+          "repeatSame": true,
+          "spec": "artifact_057",
+          "story": "story_artifact_19",
+          "truth": "hyp.shadow_optic.later_reproduction_using_period_style",
+          "uid": "case_shadow_optic"
+        }
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-ISSUANCE-06",
+      "name": "Fresh Stage 7 issuance is exactly optic 057 and composite 059 with stable one-per-case UIDs",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "aggregate": {
+          "HIGH": 2,
+          "LOW": 2,
+          "NONE": 8
+        },
+        "cases": {
+          "composite_prototype": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "ok": true,
+            "runtime": [
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.composite_prototype.artifact.mixed_period_components",
+                  "ok": true,
+                  "sourceId": "component_mass_mismatch"
+                },
+                "expectedPenalty": 1.500730351849,
+                "id": "src.composite_prototype.artifact.mixed_period_components",
+                "level": "LOW",
+                "ok": true,
+                "penalty": 1.500730351849,
+                "tools": [
+                  "precision_scale"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "precision_scale"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              },
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.composite_prototype.artifact.modern_adapter_construction",
+                  "ok": true,
+                  "sourceId": "modern_adapter_network"
+                },
+                "expectedPenalty": 4.502191055547,
+                "id": "src.composite_prototype.artifact.modern_adapter_construction",
+                "level": "HIGH",
+                "ok": true,
+                "penalty": 4.502191055547,
+                "tools": [
+                  "repair_toolkit"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "repair_toolkit"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ],
+            "tools": {
+              "src.composite_prototype.artifact.mixed_period_components": {
+                "level": "LOW",
+                "tools": [
+                  "precision_scale"
+                ]
+              },
+              "src.composite_prototype.artifact.modern_adapter_construction": {
+                "level": "HIGH",
+                "tools": [
+                  "repair_toolkit"
+                ]
+              }
+            }
+          },
+          "shadow_optic": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "ok": true,
+            "runtime": [
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.shadow_optic.artifact.period_mismatch_materials",
+                  "ok": true,
+                  "sourceId": "modern_optic_materials"
+                },
+                "expectedPenalty": 1.500730351849,
+                "id": "src.shadow_optic.artifact.period_mismatch_materials",
+                "level": "LOW",
+                "ok": true,
+                "penalty": 1.500730351849,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              },
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.shadow_optic.artifact.uv_replica_adhesive",
+                  "ok": true,
+                  "sourceId": "replica_adhesive_sequence"
+                },
+                "expectedPenalty": 4.502191055547,
+                "id": "src.shadow_optic.artifact.uv_replica_adhesive",
+                "level": "HIGH",
+                "ok": true,
+                "penalty": 4.502191055547,
+                "tools": [
+                  "uv_lamp"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "uv_lamp"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ],
+            "tools": {
+              "src.shadow_optic.artifact.period_mismatch_materials": {
+                "level": "LOW",
+                "tools": [
+                  "material_scanner"
+                ]
+              },
+              "src.shadow_optic.artifact.uv_replica_adhesive": {
+                "level": "HIGH",
+                "tools": [
+                  "uv_lamp"
+                ]
+              }
+            }
+          }
+        },
+        "weightedTotal": 12.005842814792
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-RISK-07",
+      "name": "Each Stage 7 case exposes NONE4/LOW1/HIGH1 with distinct tool gates and exactly one 1.500730351849 pressure multiplier",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "composite_prototype": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.composite_prototype.document.archive_custody_record",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "composite_archive_chain"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.composite_prototype.document.archive_custody_record",
+            "ok": true,
+            "sourceId": "composite_archive_chain"
+          },
+          "knownClues": [
+            "PROVENANCE"
+          ],
+          "ok": true,
+          "tagged": [
+            {
+              "citation": {
+                "allowed": true,
+                "id": "cite.composite_prototype.document.archive_custody_record",
+                "label": {
+                  "en": "Recent archive custody record",
+                  "ko": "최근 보관 소장 기록"
+                }
+              },
+              "discover_action_id": "read_document",
+              "id": "src.composite_prototype.document.archive_custody_record",
+              "independence_key": "composite_archive_chain",
+              "presentation": {
+                "citation_locator": {
+                  "en": "Archive sheet 09, signed transfers",
+                  "ko": "보관 문서 09, 서명된 이관 항목"
+                },
+                "npc_portrait": {},
+                "short_observation": {
+                  "en": "The signed chain starts after the composite already existed.",
+                  "ko": "서명된 소장 경로가 복합 조립 이후에 시작된다."
+                },
+                "source_display_name": {
+                  "en": "Recent archive custody record",
+                  "ko": "최근 보관 소장 기록"
+                },
+                "unlock_action_label": {
+                  "en": "Read custody record",
+                  "ko": "소장 기록 읽기"
+                },
+                "unlock_target_label": {
+                  "en": "Signed archive transfers",
+                  "ko": "서명된 보관 이관"
+                }
+              },
+              "public_clue_id": "PROVENANCE",
+              "relations": [
+                {
+                  "hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+                  "stance": "SUPPORT",
+                  "strength": 2
+                }
+              ],
+              "reliability": "HIGH",
+              "risk": {
+                "level": "NONE",
+                "warning": {
+                  "en": "",
+                  "ko": ""
+                }
+              },
+              "source": {
+                "entry_id": "src.composite_prototype.document.archive_custody_record",
+                "kind": "DOCUMENT",
+                "ref_id": "document_09"
+              },
+              "text": {
+                "en": "Fictional Archive Record 09 first describes the complete composite in a recent unverified donation, then follows it through signed storage transfers. It proves custody only from that intake and contains no workshop entry or earlier owner; this is the case's sole provenance record.",
+                "ko": "가상 보관 기록 09는 최근의 미검증 기증에서 완성된 복합 기구를 처음 적고 이후 서명된 보관 이관을 잇는다. 이 기록은 그 입고 시점 이후의 소장만 증명하고 공방 입고나 이전 소유자는 담지 않으며, 이것이 이 사건의 유일한 소장 이력 기록이다."
+              },
+              "unlock": {
+                "requires_all": [],
+                "requires_tools": []
+              }
+            }
+          ]
+        },
+        "shadow_optic": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.shadow_optic.document.archive_custody_record",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "optic_archive_chain"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.shadow_optic.document.archive_custody_record",
+            "ok": true,
+            "sourceId": "optic_archive_chain"
+          },
+          "knownClues": [
+            "PROVENANCE"
+          ],
+          "ok": true,
+          "tagged": [
+            {
+              "citation": {
+                "allowed": true,
+                "id": "cite.shadow_optic.document.archive_custody_record",
+                "label": {
+                  "en": "Teaching collection record",
+                  "ko": "교육용 소장 기록"
+                }
+              },
+              "discover_action_id": "read_document",
+              "id": "src.shadow_optic.document.archive_custody_record",
+              "independence_key": "optic_archive_chain",
+              "presentation": {
+                "citation_locator": {
+                  "en": "Archive sheet 19, signed transfers",
+                  "ko": "보관 문서 19, 서명된 이관 항목"
+                },
+                "npc_portrait": {},
+                "short_observation": {
+                  "en": "The signed chain begins with a later teaching copy.",
+                  "ko": "서명된 소장 경로가 후대 교육용 복제품에서 시작된다."
+                },
+                "source_display_name": {
+                  "en": "Teaching collection record",
+                  "ko": "교육용 소장 기록"
+                },
+                "unlock_action_label": {
+                  "en": "Read custody record",
+                  "ko": "소장 기록 읽기"
+                },
+                "unlock_target_label": {
+                  "en": "Signed collection entries",
+                  "ko": "서명된 소장 항목"
+                }
+              },
+              "public_clue_id": "PROVENANCE",
+              "relations": [
+                {
+                  "hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style",
+                  "stance": "SUPPORT",
+                  "strength": 2
+                }
+              ],
+              "reliability": "HIGH",
+              "risk": {
+                "level": "NONE",
+                "warning": {
+                  "en": "",
+                  "ko": ""
+                }
+              },
+              "source": {
+                "entry_id": "src.shadow_optic.document.archive_custody_record",
+                "kind": "DOCUMENT",
+                "ref_id": "document_19"
+              },
+              "text": {
+                "en": "Fictional Archive Record 19 first lists the telescope as a teaching copy acquired in 1968, then follows it through signed transfers to the Hale collection. The chain is continuous from that entry but never places the object in a Quillmark workshop; this is the case's sole provenance record.",
+                "ko": "가상 보관 기록 19는 망원경을 1968년에 취득한 교육용 복제품으로 처음 적고, 이후 헤일 소장품까지 서명된 이관을 잇는다. 그 시점부터 소장 경로는 연속되지만 퀼마크 공방에 있었던 적은 없으며, 이것이 이 사건의 유일한 소장 이력 기록이다."
+              },
+              "unlock": {
+                "requires_all": [],
+                "requires_tools": []
+              }
+            }
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-PROVENANCE-08",
+      "name": "Each Stage 7 case has one sole high-reliability, risk-free DOCUMENT provenance bridge that commits once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "composite_prototype": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.composite_prototype.artifact.mixed_period_components",
+              "src.composite_prototype.artifact.modern_adapter_construction",
+              "src.composite_prototype.document.archive_custody_record"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.composite_prototype.artifact.mixed_period_components",
+            "src.composite_prototype.document.archive_custody_record",
+            "src.composite_prototype.artifact.modern_adapter_construction",
+            "src.composite_prototype.document.reserve_catalog_entry",
+            "src.composite_prototype.npc.noah_prototype_context",
+            "src.composite_prototype.reference.period_measuring_standard"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.composite_prototype.artifact.mixed_period_components",
+              "src.composite_prototype.artifact.modern_adapter_construction",
+              "src.composite_prototype.document.archive_custody_record",
+              "src.composite_prototype.reference.period_measuring_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.composite_prototype.artifact.mixed_period_components"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.composite_prototype.artifact.mixed_period_components",
+              "src.composite_prototype.artifact.modern_adapter_construction"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.composite_prototype.genuine_experimental_prototype",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "mutation0": true,
+          "ok": true,
+          "required": [
+            "src.composite_prototype.artifact.mixed_period_components",
+            "src.composite_prototype.artifact.modern_adapter_construction",
+            "src.composite_prototype.document.archive_custody_record",
+            "src.composite_prototype.reference.period_measuring_standard"
+          ],
+          "wrong": "hyp.composite_prototype.genuine_experimental_prototype"
+        },
+        "shadow_optic": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.shadow_optic.artifact.period_mismatch_materials",
+              "src.shadow_optic.artifact.uv_replica_adhesive",
+              "src.shadow_optic.document.archive_custody_record"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_optic.later_reproduction_using_period_style",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.shadow_optic.artifact.period_mismatch_materials",
+            "src.shadow_optic.document.archive_custody_record",
+            "src.shadow_optic.artifact.uv_replica_adhesive",
+            "src.shadow_optic.document.serial_reference_leaf",
+            "src.shadow_optic.npc.victor_shadow_mark_context",
+            "src.shadow_optic.reference.period_telescope_standard"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.shadow_optic.artifact.period_mismatch_materials",
+              "src.shadow_optic.artifact.uv_replica_adhesive",
+              "src.shadow_optic.document.archive_custody_record",
+              "src.shadow_optic.reference.period_telescope_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_optic.later_reproduction_using_period_style",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.shadow_optic.artifact.period_mismatch_materials"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_optic.later_reproduction_using_period_style",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.shadow_optic.artifact.period_mismatch_materials",
+              "src.shadow_optic.artifact.uv_replica_adhesive"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.shadow_optic.genuine_period_optic",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "mutation0": true,
+          "ok": true,
+          "required": [
+            "src.shadow_optic.artifact.period_mismatch_materials",
+            "src.shadow_optic.artifact.uv_replica_adhesive",
+            "src.shadow_optic.document.archive_custody_record",
+            "src.shadow_optic.reference.period_telescope_standard"
+          ],
+          "wrong": "hyp.shadow_optic.genuine_period_optic"
+        }
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-OUTCOMES-09",
+      "name": "Both Stage 7 public evaluators execute mentor, credible, masterful and mistaken in order while empty reports fail closed",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifacts": {
+          "composite_prototype": {
+            "actual": {
+              "acquisitionPrice": 496,
+              "artifactSpecId": "artifact_057",
+              "authenticityTruth": "FORGERY",
+              "caseId": "composite_prototype",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.77,
+              "damageInstances": [
+                "GRIME",
+                "BROKEN_PART",
+                "DENT"
+              ],
+              "estimatedValue": 1174,
+              "evidence": [
+                {
+                  "clueType": "composite_prototype:legacy",
+                  "confidenceWeight": 0.47,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 64.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "composite_prototype:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.75,
+                "disclosure": "LIKELY",
+                "reserve": 289,
+                "starting": 223
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 3,
+              "partStates": {},
+              "playerHypothesis": "FORGERY",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 61.5,
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 970701,
+              "sold": false,
+              "storyArtifactId": "story_artifact_20",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_composite_prototype",
+              "zoom": 1.0
+            },
+            "expected": {
+              "acquisitionPrice": 496,
+              "artifactSpecId": "artifact_057",
+              "authenticityTruth": "FORGERY",
+              "caseId": "composite_prototype",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.77,
+              "damageInstances": [
+                "GRIME",
+                "BROKEN_PART",
+                "DENT"
+              ],
+              "estimatedValue": 1174,
+              "evidence": [
+                {
+                  "clueType": "composite_prototype:legacy",
+                  "confidenceWeight": 0.47,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 64.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "composite_prototype:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.75,
+                "disclosure": "LIKELY",
+                "reserve": 289,
+                "starting": 223
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 3,
+              "partStates": {},
+              "playerHypothesis": "FORGERY",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 61.5,
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 970701,
+              "sold": false,
+              "storyArtifactId": "story_artifact_20",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_composite_prototype",
+              "zoom": 1.0
+            },
+            "ledgerExact": true,
+            "ok": true
+          },
+          "shadow_optic": {
+            "actual": {
+              "acquisitionPrice": 732,
+              "artifactSpecId": "artifact_051",
+              "authenticityTruth": "REPRODUCTION",
+              "caseId": "shadow_optic",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.77,
+              "damageInstances": [
+                "CRACK",
+                "RUST",
+                "DENT"
+              ],
+              "estimatedValue": 1060,
+              "evidence": [
+                {
+                  "clueType": "shadow_optic:legacy",
+                  "confidenceWeight": 0.47,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 63.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "shadow_optic:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.75,
+                "disclosure": "LIKELY",
+                "reserve": 289,
+                "starting": 223
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 3,
+              "partStates": {},
+              "playerHypothesis": "REPRODUCTION",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 60.5,
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 970700,
+              "sold": false,
+              "storyArtifactId": "story_artifact_19",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_shadow_optic",
+              "zoom": 1.0
+            },
+            "expected": {
+              "acquisitionPrice": 732,
+              "artifactSpecId": "artifact_051",
+              "authenticityTruth": "REPRODUCTION",
+              "caseId": "shadow_optic",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.77,
+              "damageInstances": [
+                "CRACK",
+                "RUST",
+                "DENT"
+              ],
+              "estimatedValue": 1060,
+              "evidence": [
+                {
+                  "clueType": "shadow_optic:legacy",
+                  "confidenceWeight": 0.47,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 63.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "shadow_optic:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.75,
+                "disclosure": "LIKELY",
+                "reserve": 289,
+                "starting": 223
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 3,
+              "partStates": {},
+              "playerHypothesis": "REPRODUCTION",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 60.5,
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 970700,
+              "sold": false,
+              "storyArtifactId": "story_artifact_19",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_shadow_optic",
+              "zoom": 1.0
+            },
+            "ledgerExact": true,
+            "ok": true
+          }
+        },
+        "duplicates": {
+          "composite_prototype": {
+            "inventoryCount": 2,
+            "mutation0": true,
+            "ok": true,
+            "returnedSpec": "artifact_057",
+            "returnedStory": "story_artifact_20",
+            "returnedUid": "case_composite_prototype"
+          },
+          "shadow_optic": {
+            "inventoryCount": 2,
+            "mutation0": true,
+            "ok": true,
+            "returnedSpec": "artifact_051",
+            "returnedStory": "story_artifact_19",
+            "returnedUid": "case_shadow_optic"
+          }
+        },
+        "validation": {
+          "code": "OK",
+          "ok": true
+        }
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-LEGACY-10",
+      "name": "Legacy story19+051 and story20+057 artifacts, mutable fields and ledgers remain exact with zero duplicate issuance",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": {
+          "composite_prototype": {
+            "actual": {
+              "citedEvidenceIds": [
+                "src.composite_prototype.artifact.mixed_period_components",
+                "src.composite_prototype.artifact.modern_adapter_construction"
+              ],
+              "discoveredEvidenceIds": [
+                "src.composite_prototype.artifact.modern_adapter_construction",
+                "src.composite_prototype.artifact.mixed_period_components"
+              ],
+              "migrationSentinel": {
+                "case": "composite_prototype",
+                "keep": [
+                  7,
+                  0,
+                  7
+                ]
+              },
+              "resolutionResult": {},
+              "resolved": false,
+              "selectedHypothesisId": ""
+            },
+            "expectedCited": [
+              "src.composite_prototype.artifact.mixed_period_components",
+              "src.composite_prototype.artifact.modern_adapter_construction"
+            ],
+            "expectedDiscovered": [
+              "src.composite_prototype.artifact.modern_adapter_construction",
+              "src.composite_prototype.artifact.mixed_period_components"
+            ],
+            "ok": true,
+            "subsetExact": true
+          },
+          "shadow_optic": {
+            "actual": {
+              "citedEvidenceIds": [
+                "src.shadow_optic.artifact.period_mismatch_materials",
+                "src.shadow_optic.artifact.uv_replica_adhesive"
+              ],
+              "discoveredEvidenceIds": [
+                "src.shadow_optic.artifact.uv_replica_adhesive",
+                "src.shadow_optic.artifact.period_mismatch_materials"
+              ],
+              "migrationSentinel": {
+                "case": "shadow_optic",
+                "keep": [
+                  7,
+                  0,
+                  7
+                ]
+              },
+              "resolutionResult": {},
+              "resolved": false,
+              "selectedHypothesisId": ""
+            },
+            "expectedCited": [
+              "src.shadow_optic.artifact.period_mismatch_materials",
+              "src.shadow_optic.artifact.uv_replica_adhesive"
+            ],
+            "expectedDiscovered": [
+              "src.shadow_optic.artifact.uv_replica_adhesive",
+              "src.shadow_optic.artifact.period_mismatch_materials"
+            ],
+            "ok": true,
+            "subsetExact": true
+          }
+        },
+        "idempotent": true,
+        "profileMutation0": true,
+        "protectedMutation0": true
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-SCOPE-11",
+      "name": "Unresolved Stage 7 state canonicalization is exact, idempotent, and changes no economy, RNG, artifact, ledger, auction, tutorial, telemetry or profile authority",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "auctionHistory": [
+          {
+            "artifactId": "case_shadow_music_box_historical",
+            "result": {
+              "hammer": 914,
+              "net": 846,
+              "reserve_met": true,
+              "sale_status": "SOLD",
+              "sentinel": "receipt-exact",
+              "transactionId": "stage7-historical-sale"
+            }
+          }
+        ],
+        "caseState": {
+          "citedEvidenceIds": [
+            "shadow_music_box:material"
+          ],
+          "discoveredEvidenceIds": [
+            "shadow_music_box:material",
+            "shadow_music_box:provenance"
+          ],
+          "migrationSentinel": {
+            "keep": [
+              1,
+              9,
+              6
+            ],
+            "resolved": true
+          },
+          "resolutionResult": {
+            "historicalReceipt": "keep-exact",
+            "outcome": "credible"
+          },
+          "resolved": true,
+          "selectedHypothesisId": "GENUINE_WITH_MODERN_REPAIR"
+        },
+        "ledger": {
+          "artifactUid": "case_shadow_music_box_historical",
+          "disposition": "SOLD",
+          "issued": true,
+          "migrationSentinel": "sale-ledger-exact",
+          "publicAppraisalSnapshot": 810,
+          "publicConditionSnapshot": {
+            "historicalIntegrity": 66.0
+          },
+          "saleTransactionId": "stage7-historical-sale"
+        },
+        "stage8Mutation0": true,
+        "transactions": [
+          {
+            "amount": 846,
+            "day": 9,
+            "id": "stage7-historical-sale",
+            "instanceId": "case_shadow_music_box_historical",
+            "sentinel": "transaction-exact",
+            "type": "sale"
+          }
+        ]
+      },
+      "executed": true,
+      "id": "S7-AUTHORED-HISTORY-12",
+      "name": "Resolved Stage 6 history, SOLD ledger, receipts and all Stage 8 definitions remain semantically exact",
+      "passed": true
+    }
+  ]
+}

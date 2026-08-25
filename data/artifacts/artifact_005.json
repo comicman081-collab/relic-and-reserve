@@ -1,0 +1,58 @@
+{
+  "id": "artifact_005",
+  "displayName": "Eldermere Music Box E",
+  "category": "mechanical_instruments",
+  "baseModel": "model_05.obj",
+  "maker": "maker_05",
+  "modelName": "Model 104",
+  "era": "1932-1944",
+  "materialSet": [
+    "material_05",
+    "material_08"
+  ],
+  "rarity": "common",
+  "baseValue": 186,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH",
+    "PAINT_LOSS"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.6000000000000001
+  },
+  "collectorTags": [
+    "mechanical_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_005"
+}

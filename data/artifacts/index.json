@@ -1,0 +1,3404 @@
+[
+  {
+    "id": "artifact_001",
+    "displayName": "Aurelian Mechanical Clock A",
+    "category": "mechanical_instruments",
+    "baseModel": "model_01.obj",
+    "maker": "maker_01",
+    "modelName": "Model 100",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_01",
+      "material_04"
+    ],
+    "rarity": "common",
+    "baseValue": 110,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "repairProfile": {
+      "requiredTools": [
+        "precision_screwdriver"
+      ],
+      "repairableDamages": [
+        "CRACK"
+      ],
+      "interventionTradeoff": {
+        "en": "Stabilizing the cracked bridge protects the movement, but over-tightening can disturb evidence around the period replacement screw.",
+        "ko": "갈라진 브리지를 고정하면 무브먼트를 보호하지만, 과도하게 조이면 당시 교체 나사 주변의 증거가 흐트러질 수 있습니다."
+      }
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_001"
+  },
+  {
+    "id": "artifact_002",
+    "displayName": "Brasswell Pocket Watch B",
+    "category": "mechanical_instruments",
+    "baseModel": "model_02.obj",
+    "maker": "maker_02",
+    "modelName": "Model 101",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_02",
+      "material_05"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 129,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_002"
+  },
+  {
+    "id": "artifact_003",
+    "displayName": "Cindervale Film Camera C",
+    "category": "optical_devices",
+    "baseModel": "model_03.obj",
+    "maker": "maker_03",
+    "modelName": "Model 102",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_03",
+      "material_06"
+    ],
+    "rarity": "rare",
+    "baseValue": 148,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_003"
+  },
+  {
+    "id": "artifact_004",
+    "displayName": "Dovetail Vintage Radio D",
+    "category": "vintage_audio",
+    "baseModel": "model_04.obj",
+    "maker": "maker_04",
+    "modelName": "Model 103",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_04",
+      "material_07"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 167,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "vintage_audio",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_004"
+  },
+  {
+    "id": "artifact_005",
+    "displayName": "Eldermere Music Box E",
+    "category": "mechanical_instruments",
+    "baseModel": "model_05.obj",
+    "maker": "maker_05",
+    "modelName": "Model 104",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_05",
+      "material_08"
+    ],
+    "rarity": "common",
+    "baseValue": 186,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_005"
+  },
+  {
+    "id": "artifact_006",
+    "displayName": "Fallow Binoculars F",
+    "category": "optical_devices",
+    "baseModel": "model_06.obj",
+    "maker": "maker_06",
+    "modelName": "Model 105",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_06",
+      "material_09"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 205,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_006"
+  },
+  {
+    "id": "artifact_007",
+    "displayName": "Gildspire Desk Lamp G",
+    "category": "decorative_objects",
+    "baseModel": "model_07.obj",
+    "maker": "maker_07",
+    "modelName": "Model 106",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_07",
+      "material_10"
+    ],
+    "rarity": "rare",
+    "baseValue": 224,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "decorative_objects",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_007"
+  },
+  {
+    "id": "artifact_008",
+    "displayName": "Hearthline Typewriter H",
+    "category": "office_machines",
+    "baseModel": "model_08.obj",
+    "maker": "maker_08",
+    "modelName": "Model 107",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_08",
+      "material_11"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 243,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "office_machines",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_008"
+  },
+  {
+    "id": "artifact_009",
+    "displayName": "Iver Ceramic Vase I",
+    "category": "ceramics",
+    "baseModel": "model_09.obj",
+    "maker": "maker_09",
+    "modelName": "Model 108",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_09",
+      "material_12"
+    ],
+    "rarity": "common",
+    "baseValue": 262,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "ceramics",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_009"
+  },
+  {
+    "id": "artifact_010",
+    "displayName": "Juniper Mechanical Toy J",
+    "category": "mechanical_instruments",
+    "baseModel": "model_10.obj",
+    "maker": "maker_10",
+    "modelName": "Model 109",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_10",
+      "material_13"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 281,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_010"
+  },
+  {
+    "id": "artifact_011",
+    "displayName": "Kestrel Compass K",
+    "category": "scientific_instruments",
+    "baseModel": "model_11.obj",
+    "maker": "maker_11",
+    "modelName": "Model 110",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_11",
+      "material_14"
+    ],
+    "rarity": "rare",
+    "baseValue": 300,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_011"
+  },
+  {
+    "id": "artifact_012",
+    "displayName": "Lattice Record Player L",
+    "category": "vintage_audio",
+    "baseModel": "model_12.obj",
+    "maker": "maker_12",
+    "modelName": "Model 111",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_12",
+      "material_15"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 319,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "vintage_audio",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_012"
+  },
+  {
+    "id": "artifact_013",
+    "displayName": "Marrow Scientific Instrument M",
+    "category": "scientific_instruments",
+    "baseModel": "model_13.obj",
+    "maker": "maker_13",
+    "modelName": "Model 112",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_13",
+      "material_01"
+    ],
+    "rarity": "common",
+    "baseValue": 338,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_013"
+  },
+  {
+    "id": "artifact_014",
+    "displayName": "Nightingale Vintage Fan N",
+    "category": "mechanical_instruments",
+    "baseModel": "model_14.obj",
+    "maker": "maker_14",
+    "modelName": "Model 113",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_14",
+      "material_02"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 357,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_014"
+  },
+  {
+    "id": "artifact_015",
+    "displayName": "Orchard Table Telephone O",
+    "category": "telephony",
+    "baseModel": "model_15.obj",
+    "maker": "maker_15",
+    "modelName": "Model 114",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_15",
+      "material_03"
+    ],
+    "rarity": "rare",
+    "baseValue": 376,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "telephony",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_015"
+  },
+  {
+    "id": "artifact_016",
+    "displayName": "Peregrine Jewelry Box P",
+    "category": "decorative_objects",
+    "baseModel": "model_01.obj",
+    "maker": "maker_16",
+    "modelName": "Model 115",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_01",
+      "material_04"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 395,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "decorative_objects",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_016"
+  },
+  {
+    "id": "artifact_017",
+    "displayName": "Quillmark Portable Recorder Q",
+    "category": "vintage_audio",
+    "baseModel": "model_02.obj",
+    "maker": "maker_17",
+    "modelName": "Model 116",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_02",
+      "material_05"
+    ],
+    "rarity": "common",
+    "baseValue": 414,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "vintage_audio",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_017"
+  },
+  {
+    "id": "artifact_018",
+    "displayName": "Rook Slide Projector R",
+    "category": "optical_devices",
+    "baseModel": "model_03.obj",
+    "maker": "maker_18",
+    "modelName": "Model 117",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_03",
+      "material_06"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 433,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_018"
+  },
+  {
+    "id": "artifact_019",
+    "displayName": "Solenne Decorative Sculpture S",
+    "category": "decorative_objects",
+    "baseModel": "model_04.obj",
+    "maker": "maker_19",
+    "modelName": "Model 118",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_04",
+      "material_07"
+    ],
+    "rarity": "rare",
+    "baseValue": 452,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "decorative_objects",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_019"
+  },
+  {
+    "id": "artifact_020",
+    "displayName": "Tarnwell Precision Gauge T",
+    "category": "scientific_instruments",
+    "baseModel": "model_05.obj",
+    "maker": "maker_20",
+    "modelName": "Model 119",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_05",
+      "material_08"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 471,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_020"
+  },
+  {
+    "id": "artifact_021",
+    "displayName": "Aurelian Barometer U",
+    "category": "scientific_instruments",
+    "baseModel": "model_06.obj",
+    "maker": "maker_01",
+    "modelName": "Model 120",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_06",
+      "material_09"
+    ],
+    "rarity": "common",
+    "baseValue": 490,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_021"
+  },
+  {
+    "id": "artifact_022",
+    "displayName": "Brasswell Table Microscope V",
+    "category": "scientific_instruments",
+    "baseModel": "model_07.obj",
+    "maker": "maker_02",
+    "modelName": "Model 121",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_07",
+      "material_10"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 509,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_022"
+  },
+  {
+    "id": "artifact_023",
+    "displayName": "Cindervale Vintage Scale W",
+    "category": "scientific_instruments",
+    "baseModel": "model_08.obj",
+    "maker": "maker_03",
+    "modelName": "Model 122",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_08",
+      "material_11"
+    ],
+    "rarity": "rare",
+    "baseValue": 528,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_023"
+  },
+  {
+    "id": "artifact_024",
+    "displayName": "Dovetail Mechanical Counter X",
+    "category": "office_machines",
+    "baseModel": "model_09.obj",
+    "maker": "maker_04",
+    "modelName": "Model 123",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_09",
+      "material_12"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 547,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "office_machines",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_024"
+  },
+  {
+    "id": "artifact_025",
+    "displayName": "Eldermere Desk Calculator Y",
+    "category": "office_machines",
+    "baseModel": "model_10.obj",
+    "maker": "maker_05",
+    "modelName": "Model 124",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_10",
+      "material_13"
+    ],
+    "rarity": "common",
+    "baseValue": 566,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "office_machines",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_025"
+  },
+  {
+    "id": "artifact_026",
+    "displayName": "Fallow Small Safe Z",
+    "category": "mechanical_instruments",
+    "baseModel": "model_11.obj",
+    "maker": "maker_06",
+    "modelName": "Model 125",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_11",
+      "material_14"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 585,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_026"
+  },
+  {
+    "id": "artifact_027",
+    "displayName": "Gildspire Telescope A",
+    "category": "optical_devices",
+    "baseModel": "model_12.obj",
+    "maker": "maker_07",
+    "modelName": "Model 126",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_12",
+      "material_15"
+    ],
+    "rarity": "rare",
+    "baseValue": 604,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_027"
+  },
+  {
+    "id": "artifact_028",
+    "displayName": "Hearthline Writing Instrument Set B",
+    "category": "office_machines",
+    "baseModel": "model_13.obj",
+    "maker": "maker_08",
+    "modelName": "Model 127",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_13",
+      "material_01"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 623,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "office_machines",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_028"
+  },
+  {
+    "id": "artifact_029",
+    "displayName": "Iver Measuring Instrument C",
+    "category": "scientific_instruments",
+    "baseModel": "model_14.obj",
+    "maker": "maker_09",
+    "modelName": "Model 128",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_14",
+      "material_02"
+    ],
+    "rarity": "common",
+    "baseValue": 642,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_029"
+  },
+  {
+    "id": "artifact_030",
+    "displayName": "Juniper Small Optical Device D",
+    "category": "optical_devices",
+    "baseModel": "model_15.obj",
+    "maker": "maker_10",
+    "modelName": "Model 129",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_15",
+      "material_03"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 661,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_030"
+  },
+  {
+    "id": "artifact_031",
+    "displayName": "Kestrel Mechanical Clock E",
+    "category": "mechanical_instruments",
+    "baseModel": "model_01.obj",
+    "maker": "maker_11",
+    "modelName": "Model 130",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_01",
+      "material_04"
+    ],
+    "rarity": "rare",
+    "baseValue": 680,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_031"
+  },
+  {
+    "id": "artifact_032",
+    "displayName": "Lattice Pocket Watch F",
+    "category": "mechanical_instruments",
+    "baseModel": "model_02.obj",
+    "maker": "maker_12",
+    "modelName": "Model 131",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_02",
+      "material_05"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 699,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_032"
+  },
+  {
+    "id": "artifact_033",
+    "displayName": "Marrow Film Camera G",
+    "category": "optical_devices",
+    "baseModel": "model_03.obj",
+    "maker": "maker_13",
+    "modelName": "Model 132",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_03",
+      "material_06"
+    ],
+    "rarity": "common",
+    "baseValue": 718,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_033"
+  },
+  {
+    "id": "artifact_034",
+    "displayName": "Nightingale Vintage Radio H",
+    "category": "vintage_audio",
+    "baseModel": "model_04.obj",
+    "maker": "maker_14",
+    "modelName": "Model 133",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_04",
+      "material_07"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 737,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "vintage_audio",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_034"
+  },
+  {
+    "id": "artifact_035",
+    "displayName": "Orchard Music Box I",
+    "category": "mechanical_instruments",
+    "baseModel": "model_05.obj",
+    "maker": "maker_15",
+    "modelName": "Model 134",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_05",
+      "material_08"
+    ],
+    "rarity": "rare",
+    "baseValue": 756,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_035"
+  },
+  {
+    "id": "artifact_036",
+    "displayName": "Peregrine Binoculars J",
+    "category": "optical_devices",
+    "baseModel": "model_06.obj",
+    "maker": "maker_16",
+    "modelName": "Model 135",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_06",
+      "material_09"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 775,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_036"
+  },
+  {
+    "id": "artifact_037",
+    "displayName": "Quillmark Desk Lamp K",
+    "category": "decorative_objects",
+    "baseModel": "model_07.obj",
+    "maker": "maker_17",
+    "modelName": "Model 136",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_07",
+      "material_10"
+    ],
+    "rarity": "common",
+    "baseValue": 794,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "decorative_objects",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_037"
+  },
+  {
+    "id": "artifact_038",
+    "displayName": "Rook Typewriter L",
+    "category": "office_machines",
+    "baseModel": "model_08.obj",
+    "maker": "maker_18",
+    "modelName": "Model 137",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_08",
+      "material_11"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 813,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "office_machines",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_038"
+  },
+  {
+    "id": "artifact_039",
+    "displayName": "Solenne Ceramic Vase M",
+    "category": "ceramics",
+    "baseModel": "model_09.obj",
+    "maker": "maker_19",
+    "modelName": "Model 138",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_09",
+      "material_12"
+    ],
+    "rarity": "rare",
+    "baseValue": 832,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "ceramics",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_039"
+  },
+  {
+    "id": "artifact_040",
+    "displayName": "Tarnwell Mechanical Toy N",
+    "category": "mechanical_instruments",
+    "baseModel": "model_10.obj",
+    "maker": "maker_20",
+    "modelName": "Model 139",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_10",
+      "material_13"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 851,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_040"
+  },
+  {
+    "id": "artifact_041",
+    "displayName": "Aurelian Compass O",
+    "category": "scientific_instruments",
+    "baseModel": "model_11.obj",
+    "maker": "maker_01",
+    "modelName": "Model 140",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_11",
+      "material_14"
+    ],
+    "rarity": "common",
+    "baseValue": 870,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_041"
+  },
+  {
+    "id": "artifact_042",
+    "displayName": "Brasswell Record Player P",
+    "category": "vintage_audio",
+    "baseModel": "model_12.obj",
+    "maker": "maker_02",
+    "modelName": "Model 141",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_12",
+      "material_15"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 889,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "vintage_audio",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_042"
+  },
+  {
+    "id": "artifact_043",
+    "displayName": "Cindervale Scientific Instrument Q",
+    "category": "scientific_instruments",
+    "baseModel": "model_13.obj",
+    "maker": "maker_03",
+    "modelName": "Model 142",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_13",
+      "material_01"
+    ],
+    "rarity": "rare",
+    "baseValue": 908,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_043"
+  },
+  {
+    "id": "artifact_044",
+    "displayName": "Dovetail Vintage Fan R",
+    "category": "mechanical_instruments",
+    "baseModel": "model_14.obj",
+    "maker": "maker_04",
+    "modelName": "Model 143",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_14",
+      "material_02"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 927,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_044"
+  },
+  {
+    "id": "artifact_045",
+    "displayName": "Eldermere Table Telephone S",
+    "category": "telephony",
+    "baseModel": "model_15.obj",
+    "maker": "maker_05",
+    "modelName": "Model 144",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_15",
+      "material_03"
+    ],
+    "rarity": "common",
+    "baseValue": 946,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "telephony",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_045"
+  },
+  {
+    "id": "artifact_046",
+    "displayName": "Fallow Jewelry Box T",
+    "category": "decorative_objects",
+    "baseModel": "model_01.obj",
+    "maker": "maker_06",
+    "modelName": "Model 145",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_01",
+      "material_04"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 965,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "decorative_objects",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_046"
+  },
+  {
+    "id": "artifact_047",
+    "displayName": "Gildspire Portable Recorder U",
+    "category": "vintage_audio",
+    "baseModel": "model_02.obj",
+    "maker": "maker_07",
+    "modelName": "Model 146",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_02",
+      "material_05"
+    ],
+    "rarity": "rare",
+    "baseValue": 984,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "vintage_audio",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_047"
+  },
+  {
+    "id": "artifact_048",
+    "displayName": "Hearthline Slide Projector V",
+    "category": "optical_devices",
+    "baseModel": "model_03.obj",
+    "maker": "maker_08",
+    "modelName": "Model 147",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_03",
+      "material_06"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 1003,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_048"
+  },
+  {
+    "id": "artifact_049",
+    "displayName": "Iver Decorative Sculpture W",
+    "category": "decorative_objects",
+    "baseModel": "model_04.obj",
+    "maker": "maker_09",
+    "modelName": "Model 148",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_04",
+      "material_07"
+    ],
+    "rarity": "common",
+    "baseValue": 1022,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "decorative_objects",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_049"
+  },
+  {
+    "id": "artifact_050",
+    "displayName": "Juniper Precision Gauge X",
+    "category": "scientific_instruments",
+    "baseModel": "model_05.obj",
+    "maker": "maker_10",
+    "modelName": "Model 149",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_05",
+      "material_08"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 1041,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_050"
+  },
+  {
+    "id": "artifact_051",
+    "displayName": "Kestrel Barometer Y",
+    "category": "scientific_instruments",
+    "baseModel": "model_06.obj",
+    "maker": "maker_11",
+    "modelName": "Model 150",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_06",
+      "material_09"
+    ],
+    "rarity": "rare",
+    "baseValue": 1060,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_051"
+  },
+  {
+    "id": "artifact_052",
+    "displayName": "Lattice Table Microscope Z",
+    "category": "scientific_instruments",
+    "baseModel": "model_07.obj",
+    "maker": "maker_12",
+    "modelName": "Model 151",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_07",
+      "material_10"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 1079,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_052"
+  },
+  {
+    "id": "artifact_053",
+    "displayName": "Marrow Vintage Scale A",
+    "category": "scientific_instruments",
+    "baseModel": "model_08.obj",
+    "maker": "maker_13",
+    "modelName": "Model 152",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_08",
+      "material_11"
+    ],
+    "rarity": "common",
+    "baseValue": 1098,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_053"
+  },
+  {
+    "id": "artifact_054",
+    "displayName": "Nightingale Mechanical Counter B",
+    "category": "office_machines",
+    "baseModel": "model_09.obj",
+    "maker": "maker_14",
+    "modelName": "Model 153",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_09",
+      "material_12"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 1117,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "office_machines",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_054"
+  },
+  {
+    "id": "artifact_055",
+    "displayName": "Orchard Desk Calculator C",
+    "category": "office_machines",
+    "baseModel": "model_10.obj",
+    "maker": "maker_15",
+    "modelName": "Model 154",
+    "era": "1900-1912",
+    "materialSet": [
+      "material_10",
+      "material_13"
+    ],
+    "rarity": "rare",
+    "baseValue": 1136,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "office_machines",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_055"
+  },
+  {
+    "id": "artifact_056",
+    "displayName": "Peregrine Small Safe D",
+    "category": "mechanical_instruments",
+    "baseModel": "model_11.obj",
+    "maker": "maker_16",
+    "modelName": "Model 155",
+    "era": "1908-1920",
+    "materialSet": [
+      "material_11",
+      "material_14"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 1155,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.2
+    },
+    "collectorTags": [
+      "mechanical_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_056"
+  },
+  {
+    "id": "artifact_057",
+    "displayName": "Quillmark Telescope E",
+    "category": "optical_devices",
+    "baseModel": "model_12.obj",
+    "maker": "maker_17",
+    "modelName": "Model 156",
+    "era": "1916-1928",
+    "materialSet": [
+      "material_12",
+      "material_15"
+    ],
+    "rarity": "common",
+    "baseValue": 1174,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.30000000000000004
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_057"
+  },
+  {
+    "id": "artifact_058",
+    "displayName": "Rook Writing Instrument Set F",
+    "category": "office_machines",
+    "baseModel": "model_13.obj",
+    "maker": "maker_18",
+    "modelName": "Model 157",
+    "era": "1924-1936",
+    "materialSet": [
+      "material_13",
+      "material_01"
+    ],
+    "rarity": "uncommon",
+    "baseValue": 1193,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH"
+    ],
+    "possibleFaults": [
+      "MECHANICAL_WEAR",
+      "MISSING_PART",
+      "CRACK"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.4
+    },
+    "collectorTags": [
+      "office_machines",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_058"
+  },
+  {
+    "id": "artifact_059",
+    "displayName": "Solenne Measuring Instrument G",
+    "category": "scientific_instruments",
+    "baseModel": "model_14.obj",
+    "maker": "maker_19",
+    "modelName": "Model 158",
+    "era": "1932-1944",
+    "materialSet": [
+      "material_14",
+      "material_02"
+    ],
+    "rarity": "rare",
+    "baseValue": 1212,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.5
+    },
+    "collectorTags": [
+      "scientific_instruments",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_059"
+  },
+  {
+    "id": "artifact_060",
+    "displayName": "Tarnwell Small Optical Device H",
+    "category": "optical_devices",
+    "baseModel": "model_15.obj",
+    "maker": "maker_20",
+    "modelName": "Model 159",
+    "era": "1940-1952",
+    "materialSet": [
+      "material_15",
+      "material_03"
+    ],
+    "rarity": "very_rare",
+    "baseValue": 1231,
+    "compatibleDamages": [
+      "DUST",
+      "GRIME",
+      "RUST",
+      "SCRATCH",
+      "DENT",
+      "CRACK",
+      "BROKEN_PART",
+      "MISSING_PART",
+      "MECHANICAL_WEAR",
+      "WATER_DAMAGE",
+      "TARNISH",
+      "PAINT_LOSS",
+      "FADING"
+    ],
+    "possibleFaults": [
+      "DUST",
+      "GRIME",
+      "TARNISH"
+    ],
+    "possibleClues": [
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "MATERIAL",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "WEAR_PATTERN",
+      "LABEL",
+      "PATINA",
+      "REPAIR_TRACE",
+      "PROVENANCE",
+      "TOOL_MARK"
+    ],
+    "restorationProfile": {
+      "cleaning": 0.7,
+      "repair": 0.6,
+      "patinaRisk": 0.6000000000000001
+    },
+    "collectorTags": [
+      "optical_devices",
+      "period",
+      "workshop"
+    ],
+    "visualVariant": "variant_060"
+  }
+]

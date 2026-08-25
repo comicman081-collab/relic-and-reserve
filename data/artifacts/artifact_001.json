@@ -1,0 +1,66 @@
+{
+  "id": "artifact_001",
+  "displayName": "Aurelian Mechanical Clock A",
+  "category": "mechanical_instruments",
+  "baseModel": "model_01.obj",
+  "maker": "maker_01",
+  "modelName": "Model 100",
+  "era": "1900-1912",
+  "materialSet": [
+    "material_01",
+    "material_04"
+  ],
+  "rarity": "common",
+  "baseValue": 110,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.2
+  },
+  "repairProfile": {
+    "requiredTools": [
+      "precision_screwdriver"
+    ],
+    "repairableDamages": [
+      "CRACK"
+    ],
+    "interventionTradeoff": {
+      "en": "Stabilizing the cracked bridge protects the movement, but over-tightening can disturb evidence around the period replacement screw.",
+      "ko": "갈라진 브리지를 고정하면 무브먼트를 보호하지만, 과도하게 조이면 당시 교체 나사 주변의 증거가 흐트러질 수 있습니다."
+    }
+  },
+  "collectorTags": [
+    "mechanical_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_001"
+}

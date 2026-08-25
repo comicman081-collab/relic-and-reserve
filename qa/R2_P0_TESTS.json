@@ -1,0 +1,287 @@
+{
+  "executed": 40,
+  "failed": 0,
+  "passed": 40,
+  "tests": [
+    {
+      "evidence": "SceneTree initialized",
+      "executed": true,
+      "id": "P0-01",
+      "name": "Project boots",
+      "passed": true
+    },
+    {
+      "evidence": "Workshop3D node present",
+      "executed": true,
+      "id": "P0-02",
+      "name": "Main scene loads",
+      "passed": true
+    },
+    {
+      "evidence": "money=1200",
+      "executed": true,
+      "id": "P0-03",
+      "name": "New Game initializes",
+      "passed": true
+    },
+    {
+      "evidence": "Node3D root",
+      "executed": true,
+      "id": "P0-04",
+      "name": "Workshop 3D loads",
+      "passed": true
+    },
+    {
+      "evidence": "specs loaded=60",
+      "executed": true,
+      "id": "P0-05",
+      "name": "Market opens",
+      "passed": true
+    },
+    {
+      "evidence": "money changed",
+      "executed": true,
+      "id": "P0-06",
+      "name": "Purchase decreases money",
+      "passed": true
+    },
+    {
+      "evidence": "inventory=1",
+      "executed": true,
+      "id": "P0-07",
+      "name": "Item enters inventory",
+      "passed": true
+    },
+    {
+      "evidence": "path=res://assets/artifacts/model_01.obj",
+      "executed": true,
+      "id": "P0-08",
+      "name": "Artifact mesh loads",
+      "passed": true
+    },
+    {
+      "evidence": "Mesh resource resolved",
+      "executed": true,
+      "id": "P0-09",
+      "name": "Artifact appears on workbench",
+      "passed": true
+    },
+    {
+      "evidence": "rotation state updated",
+      "executed": true,
+      "id": "P0-10",
+      "name": "Orbit works",
+      "passed": true
+    },
+    {
+      "evidence": "zoom=1.4",
+      "executed": true,
+      "id": "P0-11",
+      "name": "Zoom works",
+      "passed": true
+    },
+    {
+      "evidence": "MATERIAL evidence",
+      "executed": true,
+      "id": "P0-12",
+      "name": "Inspection point resolves",
+      "passed": true
+    },
+    {
+      "evidence": "clues=1",
+      "executed": true,
+      "id": "P0-13",
+      "name": "Damage discovery",
+      "passed": true
+    },
+    {
+      "evidence": "selected tool",
+      "executed": true,
+      "id": "P0-14",
+      "name": "Tool selection",
+      "passed": true
+    },
+    {
+      "evidence": "state changed",
+      "executed": true,
+      "id": "P0-15",
+      "name": "Correct tool works",
+      "passed": true
+    },
+    {
+      "evidence": "integrity risk applied",
+      "executed": true,
+      "id": "P0-16",
+      "name": "Wrong tool penalty",
+      "passed": true
+    },
+    {
+      "evidence": "cleanliness=76.000000",
+      "executed": true,
+      "id": "P0-17",
+      "name": "Cleaning state changes",
+      "passed": true
+    },
+    {
+      "evidence": "mechanical condition",
+      "executed": true,
+      "id": "P0-18",
+      "name": "Repair state changes",
+      "passed": true
+    },
+    {
+      "evidence": "panel detached",
+      "executed": true,
+      "id": "P0-19",
+      "name": "Disassembly changes parts",
+      "passed": true
+    },
+    {
+      "evidence": "serial evidence",
+      "executed": true,
+      "id": "P0-20",
+      "name": "Clue discovery",
+      "passed": true
+    },
+    {
+      "evidence": "evidence=2",
+      "executed": true,
+      "id": "P0-21",
+      "name": "Evidence modifies knowledge",
+      "passed": true
+    },
+    {
+      "evidence": "player choice preserved",
+      "executed": true,
+      "id": "P0-22",
+      "name": "Authentication hypothesis",
+      "passed": true
+    },
+    {
+      "evidence": "value=69",
+      "executed": true,
+      "id": "P0-23",
+      "name": "Appraisal",
+      "passed": true
+    },
+    {
+      "evidence": "listing state",
+      "executed": true,
+      "id": "P0-24",
+      "name": "Auction listing",
+      "passed": true
+    },
+    {
+      "evidence": "bidders=12",
+      "executed": true,
+      "id": "P0-25",
+      "name": "Bidder profiles load",
+      "passed": true
+    },
+    {
+      "evidence": "bids=3",
+      "executed": true,
+      "id": "P0-26",
+      "name": "Bid progression",
+      "passed": true
+    },
+    {
+      "evidence": "hammer=104",
+      "executed": true,
+      "id": "P0-27",
+      "name": "Hammer result",
+      "passed": true
+    },
+    {
+      "evidence": "inventory removed",
+      "executed": true,
+      "id": "P0-28",
+      "name": "Sale removes artifact",
+      "passed": true
+    },
+    {
+      "evidence": "save path restored",
+      "executed": true,
+      "id": "P0-29",
+      "name": "Save/load",
+      "passed": true
+    },
+    {
+      "evidence": "same RNG state and input",
+      "executed": true,
+      "id": "P0-30",
+      "name": "Deterministic seed replay",
+      "passed": true
+    },
+    {
+      "evidence": "Market Boom effect",
+      "executed": true,
+      "id": "P0-31",
+      "name": "Event executes",
+      "passed": true
+    },
+    {
+      "evidence": "upgrade charged",
+      "executed": true,
+      "id": "P0-32",
+      "name": "Upgrade purchases",
+      "passed": true
+    },
+    {
+      "evidence": "owned upgrade",
+      "executed": true,
+      "id": "P0-33",
+      "name": "Upgrade effect applies",
+      "passed": true
+    },
+    {
+      "evidence": "en loaded",
+      "executed": true,
+      "id": "P0-34",
+      "name": "Localization English",
+      "passed": true
+    },
+    {
+      "evidence": "ko loaded",
+      "executed": true,
+      "id": "P0-35",
+      "name": "Localization Korean",
+      "passed": true
+    },
+    {
+      "evidence": "audio file available",
+      "executed": true,
+      "id": "P0-36",
+      "name": "Audio trigger",
+      "passed": true
+    },
+    {
+      "evidence": "second purchase",
+      "executed": true,
+      "id": "P0-37",
+      "name": "Second artifact purchase",
+      "passed": true
+    },
+    {
+      "evidence": "finite economy",
+      "executed": true,
+      "id": "P0-38",
+      "name": "No NaN/Inf",
+      "passed": true
+    },
+    {
+      "evidence": "model refs",
+      "executed": true,
+      "id": "P0-39",
+      "name": "No orphan references",
+      "passed": true
+    },
+    {
+      "evidence": "all specs mapped",
+      "executed": true,
+      "id": "P0-40",
+      "name": "No fatal missing assets",
+      "passed": true
+    }
+  ]
+}

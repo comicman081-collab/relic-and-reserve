@@ -1,0 +1,277 @@
+[
+  {
+    "id": "upgrade_01",
+    "name": "Storage Expansion",
+    "cost": 100,
+    "category": "capacity",
+    "description": "storage capacity: 2",
+    "effect": {
+      "type": "storage_capacity",
+      "value": 2
+    }
+  },
+  {
+    "id": "upgrade_02",
+    "name": "Better Lighting",
+    "cost": 185,
+    "category": "inspection",
+    "description": "inspection confidence: 0.04",
+    "effect": {
+      "type": "inspection_confidence",
+      "value": 0.04
+    }
+  },
+  {
+    "id": "upgrade_03",
+    "name": "Advanced Scanner",
+    "cost": 270,
+    "category": "restoration",
+    "description": "clue quality: 0.05",
+    "effect": {
+      "type": "clue_quality",
+      "value": 0.05
+    }
+  },
+  {
+    "id": "upgrade_04",
+    "name": "Precision Tool Kit",
+    "cost": 355,
+    "category": "auction",
+    "description": "tool risk reduction: 0.12",
+    "effect": {
+      "type": "tool_risk_reduction",
+      "value": 0.12
+    }
+  },
+  {
+    "id": "upgrade_05",
+    "name": "Photo Studio",
+    "cost": 440,
+    "category": "network",
+    "description": "listing bonus: 0.06",
+    "effect": {
+      "type": "listing_bonus",
+      "value": 0.06
+    }
+  },
+  {
+    "id": "upgrade_06",
+    "name": "Auction Terminal",
+    "cost": 525,
+    "category": "capacity",
+    "description": "auction fee reduction: 0.02",
+    "effect": {
+      "type": "auction_fee_reduction",
+      "value": 0.02
+    }
+  },
+  {
+    "id": "upgrade_07",
+    "name": "Extra Workbench",
+    "cost": 610,
+    "category": "inspection",
+    "description": "workbench slots: 1",
+    "effect": {
+      "type": "workbench_slots",
+      "value": 1
+    }
+  },
+  {
+    "id": "upgrade_08",
+    "name": "Display Cabinet",
+    "cost": 695,
+    "category": "restoration",
+    "description": "display bonus: 0.03",
+    "effect": {
+      "type": "display_bonus",
+      "value": 0.03
+    }
+  },
+  {
+    "id": "upgrade_09",
+    "name": "Parts Cabinet",
+    "cost": 780,
+    "category": "auction",
+    "description": "restoration cost reduction: 0.08",
+    "effect": {
+      "type": "restoration_cost_reduction",
+      "value": 0.08
+    }
+  },
+  {
+    "id": "upgrade_10",
+    "name": "Restoration Station",
+    "cost": 865,
+    "category": "network",
+    "description": "repair efficiency: 0.1",
+    "effect": {
+      "type": "repair_efficiency",
+      "value": 0.1
+    }
+  },
+  {
+    "id": "upgrade_11",
+    "name": "Reference Library",
+    "cost": 950,
+    "category": "capacity",
+    "description": "appraisal precision: 0.08",
+    "effect": {
+      "type": "appraisal_precision",
+      "value": 0.08
+    }
+  },
+  {
+    "id": "upgrade_12",
+    "name": "Insurance",
+    "cost": 1035,
+    "category": "inspection",
+    "description": "event mitigation: 0.15",
+    "effect": {
+      "type": "event_mitigation",
+      "value": 0.15
+    }
+  },
+  {
+    "id": "upgrade_13",
+    "name": "Faster Delivery",
+    "cost": 1120,
+    "category": "restoration",
+    "description": "market slots: 1",
+    "effect": {
+      "type": "market_slots",
+      "value": 1
+    }
+  },
+  {
+    "id": "upgrade_14",
+    "name": "Improved Packaging",
+    "cost": 1205,
+    "category": "auction",
+    "description": "transport discount: 0.1",
+    "effect": {
+      "type": "transport_discount",
+      "value": 0.1
+    }
+  },
+  {
+    "id": "upgrade_15",
+    "name": "Reputation Signage",
+    "cost": 1290,
+    "category": "network",
+    "description": "reputation bonus: 2",
+    "effect": {
+      "type": "reputation_bonus",
+      "value": 2
+    }
+  },
+  {
+    "id": "upgrade_16",
+    "name": "Climate Cabinet",
+    "cost": 1375,
+    "category": "capacity",
+    "description": "damage prevention: 0.12",
+    "effect": {
+      "type": "damage_prevention",
+      "value": 0.12
+    }
+  },
+  {
+    "id": "upgrade_17",
+    "name": "Specialist Desk",
+    "cost": 1460,
+    "category": "inspection",
+    "description": "mastery gain: 0.1",
+    "effect": {
+      "type": "mastery_gain",
+      "value": 0.1
+    }
+  },
+  {
+    "id": "upgrade_18",
+    "name": "Secure Archive",
+    "cost": 1545,
+    "category": "restoration",
+    "description": "provenance confidence: 0.06",
+    "effect": {
+      "type": "provenance_confidence",
+      "value": 0.06
+    }
+  },
+  {
+    "id": "upgrade_19",
+    "name": "Market Almanac",
+    "cost": 1630,
+    "category": "auction",
+    "description": "market forecast: 1",
+    "effect": {
+      "type": "market_forecast",
+      "value": 1
+    }
+  },
+  {
+    "id": "upgrade_20",
+    "name": "Secondhand Network",
+    "cost": 1715,
+    "category": "network",
+    "description": "bidder reach: 1",
+    "effect": {
+      "type": "bidder_reach",
+      "value": 1
+    }
+  },
+  {
+    "id": "upgrade_21",
+    "name": "Museum Liaison",
+    "cost": 1800,
+    "category": "capacity",
+    "description": "museum trust bonus: 3",
+    "effect": {
+      "type": "museum_trust_bonus",
+      "value": 3
+    }
+  },
+  {
+    "id": "upgrade_22",
+    "name": "Rare Parts Locker",
+    "cost": 1885,
+    "category": "inspection",
+    "description": "repair risk reduction: 0.08",
+    "effect": {
+      "type": "repair_risk_reduction",
+      "value": 0.08
+    }
+  },
+  {
+    "id": "upgrade_23",
+    "name": "Premium Camera",
+    "cost": 1970,
+    "category": "restoration",
+    "description": "listing bonus: 0.08",
+    "effect": {
+      "type": "listing_bonus",
+      "value": 0.08
+    }
+  },
+  {
+    "id": "upgrade_24",
+    "name": "Conservation Hood",
+    "cost": 2055,
+    "category": "auction",
+    "description": "integrity protection: 0.12",
+    "effect": {
+      "type": "integrity_protection",
+      "value": 0.12
+    }
+  },
+  {
+    "id": "upgrade_25",
+    "name": "Staff Assistant",
+    "cost": 2140,
+    "category": "network",
+    "description": "workflow efficiency: 0.1",
+    "effect": {
+      "type": "workflow_efficiency",
+      "value": 0.1
+    }
+  }
+]

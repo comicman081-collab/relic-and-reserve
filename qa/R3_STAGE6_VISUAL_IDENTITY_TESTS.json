@@ -1,0 +1,424 @@
+{
+  "executed": 12,
+  "expectedCount": 12,
+  "failed": 0,
+  "passed": 12,
+  "skipped": 0,
+  "suite": "R3 Stage 6B Visual Identity",
+  "tests": [
+    {
+      "evidence": {
+        "failures": [],
+        "fixturesChecked": 7,
+        "topKeys": [
+          "detail",
+          "materialPath",
+          "meshPath",
+          "metallic",
+          "palette",
+          "recipe",
+          "roughness",
+          "scale",
+          "specId",
+          "trim"
+        ]
+      },
+      "executed": true,
+      "id": "S6B-INSTANCE-DTO-WHITELIST-01",
+      "name": "Every Stage 6 instance fixture exposes the exact ten-key public render DTO and exact nested allowlists",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "freshDtoRestored": true,
+        "privacyFailures": [],
+        "rawRegistryMutation": false
+      },
+      "executed": true,
+      "id": "S6B-INSTANCE-DTO-ISOLATION-02",
+      "name": "Instance DTOs are deep copies with mutation zero and expose no private truth, economy, auction, clue, rarity, reserve or price token",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "freshGauge": {
+          "loadable": true,
+          "mesh": "res://assets/artifacts/gauge.obj",
+          "recipe": "GAUGE"
+        },
+        "freshMusic": {
+          "loadable": true,
+          "mesh": "res://assets/artifacts/music_box.obj",
+          "recipe": "MUSIC_BOX"
+        }
+      },
+      "executed": true,
+      "id": "S6B-FRESH-PAIR-MAPPING-03",
+      "name": "Fresh story 16 plus Artifact 050 maps only to GAUGE/gauge.obj and fresh story 18 plus Artifact 035 maps only to MUSIC_BOX/music_box.obj",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "crossContamination": 0,
+        "failures": [],
+        "rows": [
+          {
+            "fixture": "legacyMusic18x050",
+            "mesh": "res://assets/artifacts/model_05.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          },
+          {
+            "fixture": "unrelatedGaugeStoryWith035",
+            "mesh": "res://assets/artifacts/model_05.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          },
+          {
+            "fixture": "unrelatedClockStoryWith050",
+            "mesh": "res://assets/artifacts/model_05.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          },
+          {
+            "fixture": "specOnly035",
+            "mesh": "res://assets/artifacts/model_05.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          },
+          {
+            "fixture": "specOnly050",
+            "mesh": "res://assets/artifacts/model_05.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          }
+        ]
+      },
+      "executed": true,
+      "id": "S6B-LEGACY-DEFAULT-ISOLATION-04",
+      "name": "Legacy story 18 plus Artifact 050 and unrelated/spec-only 035/050 remain DEFAULT on canonical model_05 with cross-contamination zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "missingRecipe": {
+          "diagnostic": true,
+          "emptyDto": true,
+          "exit": 0,
+          "markerFound": true
+        },
+        "unknownRecipe": {
+          "diagnostic": true,
+          "emptyDto": true,
+          "exit": 0,
+          "markerFound": true
+        }
+      },
+      "executed": true,
+      "id": "S6B-REQUIRED-PAIR-FAIL-CLOSED-05",
+      "name": "A required story/spec pair with an unknown or missing recipe returns an empty DTO instead of silently using DEFAULT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "expected": {
+          "compass": 0,
+          "genericTrim": 0,
+          "hub": 1,
+          "musicBox": 0,
+          "needle": 1,
+          "plate": 1,
+          "seal": 1,
+          "ticks": 13,
+          "typewriter": 0
+        },
+        "liveMeshPath": "res://assets/artifacts/gauge.obj",
+        "nodes": {
+          "compass": 0,
+          "genericTrim": 0,
+          "hub": 1,
+          "musicBox": 0,
+          "needle": 1,
+          "plate": 1,
+          "seal": 1,
+          "ticks": 13,
+          "typewriter": 0
+        }
+      },
+      "executed": true,
+      "id": "S6B-GAUGE-RENDERER-06",
+      "name": "Main.tscn renders the fresh gauge with thirteen ticks, needle, hub, plate and seal and no generic trim, typewriter, compass or music-box residue",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "expected": {
+          "comb": 1,
+          "compass": 0,
+          "cylinder": 1,
+          "gauge": 0,
+          "genericTrim": 0,
+          "inlay": 1,
+          "key": 1,
+          "pins": 8,
+          "stem": 1,
+          "teeth": 7,
+          "typewriter": 0
+        },
+        "liveMeshPath": "res://assets/artifacts/music_box.obj",
+        "nodes": {
+          "comb": 1,
+          "compass": 0,
+          "cylinder": 1,
+          "gauge": 0,
+          "genericTrim": 0,
+          "inlay": 1,
+          "key": 1,
+          "pins": 8,
+          "stem": 1,
+          "teeth": 7,
+          "typewriter": 0
+        }
+      },
+      "executed": true,
+      "id": "S6B-MUSIC-BOX-RENDERER-07",
+      "name": "Main.tscn renders the fresh music box with pinned cylinder, comb, seven teeth, winding stem/key and inlay and no generic trim, typewriter, compass or gauge residue",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": [],
+        "portraits": [
+          {
+            "npc": "hana_mire",
+            "passed": true,
+            "publicRegistryPath": "res://assets/portraits/hana_mire_concerned.svg",
+            "rawRegistryPath": "res://assets/portraits/hana_mire_concerned.svg",
+            "twoCompleteEyes": true
+          },
+          {
+            "npc": "mara_venn",
+            "passed": true,
+            "publicRegistryPath": "res://assets/portraits/mara_venn_concerned.svg",
+            "rawRegistryPath": "res://assets/portraits/mara_venn_concerned.svg",
+            "twoCompleteEyes": true
+          },
+          {
+            "npc": "iris_bell",
+            "passed": true,
+            "publicRegistryPath": "res://assets/portraits/iris_bell_concerned.svg",
+            "rawRegistryPath": "res://assets/portraits/iris_bell_concerned.svg",
+            "twoCompleteEyes": true
+          }
+        ]
+      },
+      "executed": true,
+      "id": "S6B-PORTRAIT-SVG-V2-08",
+      "name": "Hana, Mara and Iris resolve through explicit registry mappings to local SVG V2 busts with two complete sclera/iris/pupil/highlight eyes",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": 0,
+        "portraits": [
+          {
+            "assetPath": "res://assets/portraits/hana_mire_concerned.svg",
+            "hairZoneColors": 774,
+            "importedSourceMd5": "f375545c3c9a76b88cd59d78322b1fc1",
+            "leftEye": {
+              "chromatic": 1002,
+              "dark": 55,
+              "passed": true,
+              "white": 220
+            },
+            "outfitPropZoneColors": 1136,
+            "passed": true,
+            "rightEye": {
+              "chromatic": 1002,
+              "dark": 55,
+              "passed": true,
+              "white": 220
+            },
+            "sourceImportMatch": true,
+            "sourceMd5": "f375545c3c9a76b88cd59d78322b1fc1",
+            "texturePath": "res://assets/portraits/hana_mire_concerned.svg",
+            "textureSize": [
+              256,
+              320
+            ],
+            "uniqueColors": 1052
+          },
+          {
+            "assetPath": "res://assets/portraits/mara_venn_concerned.svg",
+            "hairZoneColors": 992,
+            "importedSourceMd5": "4ab7e3e677f8c1660b73aaaff0976488",
+            "leftEye": {
+              "chromatic": 301,
+              "dark": 54,
+              "passed": true,
+              "white": 251
+            },
+            "outfitPropZoneColors": 1246,
+            "passed": true,
+            "rightEye": {
+              "chromatic": 282,
+              "dark": 54,
+              "passed": true,
+              "white": 251
+            },
+            "sourceImportMatch": true,
+            "sourceMd5": "4ab7e3e677f8c1660b73aaaff0976488",
+            "texturePath": "res://assets/portraits/mara_venn_concerned.svg",
+            "textureSize": [
+              256,
+              320
+            ],
+            "uniqueColors": 1093
+          },
+          {
+            "assetPath": "res://assets/portraits/iris_bell_concerned.svg",
+            "hairZoneColors": 1000,
+            "importedSourceMd5": "4c33c20e546cea1332c105069f641a7a",
+            "leftEye": {
+              "chromatic": 962,
+              "dark": 55,
+              "passed": true,
+              "white": 225
+            },
+            "outfitPropZoneColors": 1394,
+            "passed": true,
+            "rightEye": {
+              "chromatic": 966,
+              "dark": 55,
+              "passed": true,
+              "white": 225
+            },
+            "sourceImportMatch": true,
+            "sourceMd5": "4c33c20e546cea1332c105069f641a7a",
+            "texturePath": "res://assets/portraits/iris_bell_concerned.svg",
+            "textureSize": [
+              256,
+              320
+            ],
+            "uniqueColors": 1167
+          }
+        ],
+        "staleGenericImportAllowed": false
+      },
+      "executed": true,
+      "id": "S6B-PORTRAIT-IMPORTED-PIXELS-09",
+      "name": "Each loaded portrait texture matches the current source import and contains two pixel-visible white, chromatic and dark eye systems plus detailed hair/outfit/prop color zones",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": [
+          {
+            "artifactCreated": true,
+            "case": "shadow_gauge",
+            "discoveredCount": 6,
+            "genericFallbackCount": 0,
+            "hasTexture": true,
+            "lockedFallbackCount": 0,
+            "minimumSize": [
+              96.0,
+              120.0
+            ],
+            "npc": "hana_mire",
+            "npcDiscovered": true,
+            "npcPath": "res://assets/portraits/hana_mire_concerned.svg",
+            "passed": true,
+            "portraitCount": 1,
+            "texturePath": "res://assets/portraits/hana_mire_concerned.svg"
+          },
+          {
+            "artifactCreated": true,
+            "case": "shadow_clock",
+            "discoveredCount": 6,
+            "genericFallbackCount": 0,
+            "hasTexture": true,
+            "lockedFallbackCount": 0,
+            "minimumSize": [
+              96.0,
+              120.0
+            ],
+            "npc": "mara_venn",
+            "npcDiscovered": true,
+            "npcPath": "res://assets/portraits/mara_venn_concerned.svg",
+            "passed": true,
+            "portraitCount": 1,
+            "texturePath": "res://assets/portraits/mara_venn_concerned.svg"
+          },
+          {
+            "artifactCreated": true,
+            "case": "shadow_music_box",
+            "discoveredCount": 6,
+            "genericFallbackCount": 0,
+            "hasTexture": true,
+            "lockedFallbackCount": 0,
+            "minimumSize": [
+              96.0,
+              120.0
+            ],
+            "npc": "iris_bell",
+            "npcDiscovered": true,
+            "npcPath": "res://assets/portraits/iris_bell_concerned.svg",
+            "passed": true,
+            "portraitCount": 1,
+            "texturePath": "res://assets/portraits/iris_bell_concerned.svg"
+          }
+        ],
+        "failures": 0
+      },
+      "executed": true,
+      "id": "S6B-PORTRAIT-DOSSIER-10",
+      "name": "Each Stage 6 authored NPC source is discovered and renders one textured CaseNpcSourcePortrait at least 96 by 120 with generic fallback zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "equal035": true,
+        "equal050": true,
+        "registry035Type": "String",
+        "registry050Type": "String",
+        "schemaChangeAttempted": false,
+        "stored035Type": "String",
+        "stored050Type": "String"
+      },
+      "executed": true,
+      "id": "S6B-VISUAL-SIGNATURE-CONTAINMENT-11",
+      "name": "The legacy visual_signature and newly stored signatures for both reused specs remain unchanged String values",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "allowlist": [
+          "ASTRONOMICAL_REGULATOR",
+          "CHRONOMETER",
+          "COMPOSITE",
+          "DEFAULT",
+          "GAUGE",
+          "MICROSCOPE",
+          "MUSIC_BOX",
+          "OPTIC",
+          "SEXTANT",
+          "SIGNAL_LANTERN",
+          "SPECTROSCOPE",
+          "TYPEWRITER_CIPHER",
+          "WIRE_RECORDER"
+        ],
+        "catalogSize": 80,
+        "counts": {
+          "DEFAULT": 78,
+          "SEXTANT": 1,
+          "TYPEWRITER_CIPHER": 1
+        },
+        "failures": []
+      },
+      "executed": true,
+      "id": "S6B-SPEC-ONLY-DISTRIBUTION-12",
+      "name": "The eighty-spec distribution remains seventy-eight DEFAULT, one cipher and one sextant while the pair-only recipe allowlist includes later visual identities",
+      "passed": true
+    }
+  ]
+}

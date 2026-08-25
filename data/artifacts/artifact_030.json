@@ -1,0 +1,59 @@
+{
+  "id": "artifact_030",
+  "displayName": "Juniper Small Optical Device D",
+  "category": "optical_devices",
+  "baseModel": "model_15.obj",
+  "maker": "maker_10",
+  "modelName": "Model 129",
+  "era": "1940-1952",
+  "materialSet": [
+    "material_15",
+    "material_03"
+  ],
+  "rarity": "uncommon",
+  "baseValue": 661,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH",
+    "PAINT_LOSS",
+    "FADING"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.6000000000000001
+  },
+  "collectorTags": [
+    "optical_devices",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_030"
+}

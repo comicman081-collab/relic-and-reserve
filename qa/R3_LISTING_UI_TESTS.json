@@ -1,0 +1,192 @@
+{
+  "executed": 4,
+  "failed": 0,
+  "passed": 4,
+  "skipped": 0,
+  "suite": "R3 Two-Step Listing UI",
+  "tests": [
+    {
+      "evidence": {
+        "appraisal": 64,
+        "badges": 3,
+        "buttons": [
+          "빠른 판매\n시작 ¤32 · 예약 ¤38",
+          "균형 판매\n시작 ¤38 · 예약 ¤46",
+          "높은 목표\n시작 ¤43 · 예약 ¤52"
+        ],
+        "expected": {
+          "balanced": {
+            "reserve": 46,
+            "starting": 38
+          },
+          "fast": {
+            "reserve": 38,
+            "starting": 32
+          },
+          "high": {
+            "reserve": 52,
+            "starting": 43
+          }
+        }
+      },
+      "executed": true,
+      "id": "MVP-LISTING-UI-01",
+      "name": "Step 1 shows exactly three illustrated fixed-ratio price cards and only public condition, investigation and provenance badges",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "disclosures": [
+          "단정적 주장\n과장 위험",
+          "유력한 주장\n균형",
+          "제한적 주장\n과소공개 · 관심 저하"
+        ],
+        "expectedDisclosures": [
+          "단정적 주장\n과장 위험",
+          "유력한 주장\n균형",
+          "제한적 주장\n과소공개 · 관심 저하"
+        ],
+        "initialConfirmDisabled": true,
+        "misleadingEvidenceLabelsHidden": true,
+        "rawCalibrationHidden": true,
+        "summary": "가치 평가 — 출품과 정보 공개\nDAY 1   ¤ 1200   REP 12   GRADE 1\nAurelian Mechanical Clock A\n선택한 가설: 복제품\n증거 신뢰도: 92%\n추정 가치: ¤64\n공개 근거 · 근거 보통\n2 / 2 · 주장 강도 선택\n상태 양호\n출처 불확실\n공개 불균형\n최종 출품\n빠른 판매 · 시작 ¤32 · 예약 ¤38 · 단정적 주장 · 과장 위험\n출품 선택을 확인할 준비가 되었습니다.\n선택됨 · 단정적 주장\n과장 위험\n유력한 주장\n균형\n제한적 주장\n과소공개 · 관심 저하\n← 가격 변경\n출품 확정\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어\n",
+        "support": {
+          "band": "MEDIUM",
+          "risk": "UNDERCLAIM"
+        },
+        "supportCopy": "공개 근거 · 근거 보통"
+      },
+      "executed": true,
+      "id": "MVP-LISTING-UI-02",
+      "name": "Step 2 separates one public support band from three claim-strength choices, gives each a calibrated risk hint, and keeps one final confirmation action",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "appraisal": 64,
+        "fastCertain": {
+          "listing": {
+            "confidence": 0.92,
+            "disclosure": "CERTAIN",
+            "publicAppraisal": 64,
+            "reserve": 38,
+            "starting": 32
+          },
+          "result": {
+            "bids": [
+              45,
+              58
+            ],
+            "hammer": 58,
+            "reasons": [
+              "CONDITION_GOOD"
+            ],
+            "reserveMet": true
+          }
+        },
+        "fastUncertain": {
+          "listing": {
+            "confidence": 0.92,
+            "disclosure": "UNCERTAIN",
+            "publicAppraisal": 64,
+            "reserve": 38,
+            "starting": 32
+          },
+          "result": {
+            "bids": [
+              45,
+              58,
+              72,
+              86
+            ],
+            "hammer": 86,
+            "reasons": [
+              "CONDITION_GOOD"
+            ],
+            "reserveMet": true
+          }
+        },
+        "highCertain": {
+          "listing": {
+            "confidence": 0.92,
+            "disclosure": "CERTAIN",
+            "publicAppraisal": 64,
+            "reserve": 52,
+            "starting": 43
+          },
+          "result": {
+            "bids": [
+              56,
+              70
+            ],
+            "hammer": 70,
+            "reasons": [
+              "CONDITION_GOOD"
+            ],
+            "reserveMet": true
+          }
+        },
+        "sameUniqueId": "listing_ui_same_seed"
+      },
+      "executed": true,
+      "id": "MVP-LISTING-UI-03",
+      "name": "Confirmation freezes the appraisal shown on the price cards, passes exact preset prices and disclosure to GameState, and produces visible auction changes for FAST versus HIGH and CERTAIN versus UNCERTAIN",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "action": "HammerButton",
+        "bidCountTile": "0",
+        "cue": {
+          "amount": 0,
+          "bidderId": "bidder_11",
+          "dropoutReason": "BUDGET",
+          "index": 3,
+          "isFinal": true,
+          "phase": "NO_SALE",
+          "reasonTags": [
+            {
+              "category": "PRICE",
+              "code": "RESERVE_TOO_HIGH",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_UNCERTAIN",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "total": 4,
+          "visibleBids": []
+        },
+        "fact": "최저가 미달 / 유찰  ·  수수료 ¤0  ·  정산액 ¤0",
+        "opening": 999999,
+        "openingTile": "¤999999",
+        "primary": {
+          "amount": 0,
+          "phase": "NO_SALE",
+          "positive": false,
+          "terminal": true,
+          "text": "최저가 미달 / 유찰 · 공개 입찰 없음"
+        },
+        "primaryAction": true,
+        "primaryState": true,
+        "primaryText": "최저가 미달 / 유찰 · 공개 입찰 없음",
+        "result": {
+          "bids": [],
+          "hammer": 0,
+          "reasons": [
+            "RESERVE_TOO_HIGH",
+            "PROVENANCE_UNCERTAIN"
+          ],
+          "reserveMet": false
+        },
+        "winner": ""
+      },
+      "executed": true,
+      "id": "MVP-LISTING-UI-04",
+      "name": "A no-bid auction preserves the opening term and renders its authoritative no-sale amount through the primary state and action",
+      "passed": true
+    }
+  ]
+}

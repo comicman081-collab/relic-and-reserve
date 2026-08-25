@@ -1,0 +1,160 @@
+{
+  "executed": 5,
+  "failed": 0,
+  "passed": 5,
+  "skipped": 0,
+  "suite": "R3 Authored Stage Pressure Runtime",
+  "tests": [
+    {
+      "evidence": {
+        "prerequisite": {
+          "appliedRiskPenalty": 0.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.collector_promise.artifact.period_body_identity",
+          "ok": true,
+          "riskLevel": "NONE",
+          "sourceId": "physical_barometer_identity"
+        },
+        "riskEvidence": {
+          "appliedPenalty": 1.31079601,
+          "caseId": "collector_promise",
+          "duplicateCode": "ALREADY_DISCOVERED",
+          "evidenceId": "src.collector_promise.artifact.modern_capsule_repair",
+          "expectedPenalty": 1.31079601,
+          "integrityDelta": 1.31079601,
+          "passed": true,
+          "publicSafe": true,
+          "riskLevel": "LOW",
+          "telemetryDelta": 1.31079601,
+          "warningLocalized": true
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-PRESSURE-STAGE5-01",
+      "name": "Collector repair trace discloses LOW risk before action and applies the Stage 5 penalty exactly once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "prerequisite": {
+          "appliedRiskPenalty": 0.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.three_cameras.artifact.received_camera_body",
+          "ok": true,
+          "riskLevel": "NONE",
+          "sourceId": "single_physical_intake"
+        },
+        "riskEvidence": {
+          "appliedPenalty": 1.31079601,
+          "caseId": "three_cameras",
+          "duplicateCode": "ALREADY_DISCOVERED",
+          "evidenceId": "src.three_cameras.artifact.copied_repair_surface",
+          "expectedPenalty": 1.31079601,
+          "integrityDelta": 1.31079601,
+          "passed": true,
+          "publicSafe": true,
+          "riskLevel": "LOW",
+          "telemetryDelta": 1.31079601,
+          "warningLocalized": true
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-PRESSURE-STAGE5-02",
+      "name": "Three Cameras repair trace keeps the second sparse Stage 5 LOW-risk route public and exactly once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "appliedPenalty": 1.83845921242015,
+        "caseId": "master_camera",
+        "duplicateCode": "ALREADY_DISCOVERED",
+        "evidenceId": "master_camera:construction_method",
+        "expectedPenalty": 1.83845921242015,
+        "integrityDelta": 1.83845921242016,
+        "passed": true,
+        "publicSafe": true,
+        "riskLevel": "LOW",
+        "telemetryDelta": 1.83845921242015,
+        "warningLocalized": true
+      },
+      "executed": true,
+      "id": "AUTHORED-PRESSURE-STAGE10-01",
+      "name": "Prototype Camera construction discloses LOW risk and consumes the Stage 10 multiplier once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "material": {
+          "appliedPenalty": 1.83845921242015,
+          "caseId": "master_mechanism",
+          "duplicateCode": "ALREADY_DISCOVERED",
+          "evidenceId": "master_mechanism:material",
+          "expectedPenalty": 1.83845921242015,
+          "integrityDelta": 1.83845921242016,
+          "passed": true,
+          "publicSafe": true,
+          "riskLevel": "LOW",
+          "telemetryDelta": 1.83845921242015,
+          "warningLocalized": true
+        },
+        "mechanism": {
+          "appliedPenalty": 5.51537763726046,
+          "caseId": "master_mechanism",
+          "duplicateCode": "ALREADY_DISCOVERED",
+          "evidenceId": "master_mechanism:mechanism",
+          "expectedPenalty": 5.51537763726046,
+          "integrityDelta": 5.51537763726047,
+          "passed": true,
+          "publicSafe": true,
+          "riskLevel": "HIGH",
+          "telemetryDelta": 5.51537763726047,
+          "warningLocalized": true
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-PRESSURE-STAGE10-02",
+      "name": "Decorative Mechanism exposes one LOW and one HIGH choice while each consequence and telemetry event commits once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "stage10Intersection": [],
+        "stage10Risk": {
+          "HIGH": 1,
+          "LOW": 2,
+          "NONE": 5
+        },
+        "stage5Intersection": [],
+        "stage5Risk": {
+          "HIGH": 0,
+          "LOW": 2,
+          "NONE": 8
+        },
+        "toolRoutes": {
+          "artifact_069": [
+            "precision_screwdriver",
+            "reference_database"
+          ],
+          "artifact_070": [
+            "cleaning_cloth",
+            "precision_scale",
+            "repair_toolkit"
+          ],
+          "artifact_079": [
+            "material_scanner",
+            "uv_lamp"
+          ],
+          "artifact_080": [
+            "precision_scale",
+            "precision_screwdriver",
+            "reference_database"
+          ]
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-PRESSURE-CONTENT-01",
+      "name": "Sparse risk counts and same-stage repair-tool routes remain exact and disjoint",
+      "passed": true
+    }
+  ]
+}

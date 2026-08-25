@@ -1,0 +1,232 @@
+{
+  "executed": 14,
+  "failed": 0,
+  "passed": 14,
+  "skipped": 0,
+  "suite": "R3 Illustrated Case UI",
+  "tests": [
+    {
+      "evidence": {
+        "actual": [
+          "artifact",
+          "briefing",
+          "citation",
+          "clue_generic",
+          "core_question",
+          "document",
+          "hypothesis",
+          "locked",
+          "npc",
+          "objective",
+          "reference",
+          "refute",
+          "report",
+          "risk",
+          "support",
+          "tool"
+        ],
+        "expected": [
+          "artifact",
+          "briefing",
+          "citation",
+          "clue_generic",
+          "core_question",
+          "document",
+          "hypothesis",
+          "locked",
+          "npc",
+          "objective",
+          "reference",
+          "refute",
+          "report",
+          "risk",
+          "support",
+          "tool"
+        ],
+        "texturesLoad": true
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-01",
+      "name": "Exactly sixteen coherent case pictogram resources exist and import as textures",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "bodyLeaked": false,
+        "cards": 5,
+        "tileCharacters": 141,
+        "tiles": 4
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-02",
+      "name": "Artifact identity plus three compact illustrated overview tiles and two-column collapsed clue cards replace body-heavy copy",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "action": true,
+        "afterSelect": 0,
+        "before": 0,
+        "riskVisible": true
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-03",
+      "name": "Selecting a clue reveals its risk before a separate investigation action mutates state",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actionTarget": "물어보기 · 인물",
+        "bodyHidden": true,
+        "lockIcon": true,
+        "meta": "잠김",
+        "noInternalIds": true,
+        "title": "물어보기 · 인물"
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-04",
+      "name": "Locked clue detail exposes only localized action and public target with a lock icon, never source kind, prerequisite ids, tools or hidden body",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": "src.prologue.npc.mara_statement",
+        "before": "src.prologue.npc.mara_statement",
+        "focus": true,
+        "screen": "case_dossier",
+        "tooltips": true
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-05",
+      "name": "Clue selection survives locale refresh and cards retain keyboard focus and explanatory tooltips",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citation": "REFUTE · Rear-plate screw mismatch  ×",
+        "independenceDots": 1,
+        "relationIcons": 3
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-06",
+      "name": "Full selected detail preserves support/refute semantics and report citation cards show an independent-source count",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "fullDetailPresent": true,
+        "unbounded": []
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-07",
+      "name": "Visible explanatory paragraphs are capped to two lines while full clue text remains available in chunks",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "expected": "소금기에 검게 변한 베젤에는 정비 흔적이 고르게 남았지만, 푸른 나사 하나만 유난히 마모가 없다.",
+        "summary": "소금기에 검게 변한 베젤에는 정비 흔적이 고르게 남았지만, 푸른 나사 하나…",
+        "tile": true,
+        "tooltip": "소금기에 검게 변한 베젤에는 정비 흔적이 고르게 남았지만, 푸른 나사 하나만 유난히 마모가 없다."
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-08",
+      "name": "Expansion inspection observations render as a compact localized illustrated clue tile with full text in its tooltip",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "status": "장착: 정밀 드라이버"
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-09",
+      "name": "Tool activation status uses a localized player-facing name instead of an internal identifier",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "damage": [],
+        "friendlyClues": true,
+        "friendlyVisual": true,
+        "hint": "수리 · 권장 도구 중 하나를 사용",
+        "noRawTokens": true,
+        "selectedTool": "precision_screwdriver",
+        "status": "수리를 마쳤습니다.",
+        "tools": [
+          "정밀 드라이버\n사용 가능",
+          "광택 패드\n사용 가능"
+        ],
+        "tradeoff": true
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-10",
+      "name": "Expansion repair requirements render trade-off plus data-driven localized choices, and any one recommended tool completes repair without a mismatch penalty",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "checks": {
+          "campaignLocation": true,
+          "ending": true,
+          "grandReserve": true,
+          "inventory": true,
+          "investigation": true,
+          "market": true,
+          "postgame": true,
+          "report": true,
+          "workshop": true
+        },
+        "ending": "엔딩 — 리저브의 거장\nDAY 1   ¤ 1200   REP 12   GRADE 1\n리저브의 거장\n근거와 보존, 판매가 균형을 이뤘습니다. 리저브는 완성된 솜씨를 기억합니다.\n조사\n0\n보완 필요\n보존\n—\n기록 없음\n판매\n—\n기록 없음\n검증 출품작\n낙찰 · ¤100\n예약가 충족\n\n계속 — 포스트게임\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어",
+        "finalLot": "그랜드 리저브 — 최종 유물 세 점\nDAY 1   ¤ 1200   REP 12   GRADE 1\n선택 0 / 3\nMeridian Tide Chronograph\n¤1280 · 정밀 시계\n근거 준비\n보존 양호\n준비된 서로 다른 유물 3점을 고르세요.\n\n선택\n그랜드 리저브 경매 시작\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어",
+        "investigationStatus": "조사 불가 — 단서 조건을 먼저 충족하세요",
+        "postgame": "엔드리스 공방 — 끝없는 공방\nDAY 1   ¤ 1200   REP 12   GRADE 1\n리저브의 거장\n고급 시장, 희귀 의뢰, 정기 리저브 경매, 수집 완성, 숙련도 진행을 계속 이용할 수 있습니다.\n클리어 0 / 10 · 최고 0 · 결말 1 / 5\n???\n잠김\n리저브의 거장\n해금\n???\n잠김\n???\n잠김\n???\n잠김\n\n스테이지 선택\n새 게임\n크레딧\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어",
+        "reportStatus": "증거가 더 필요하거나 명확한 가설을 선택해야 합니다. — 가설을 먼저 선택하세요"
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-11",
+      "name": "Workshop, market, inventory, case failures, Grand Reserve, ending, and gallery expose localized player labels with no raw runtime tokens",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "en": {
+          "observation": "Beneath the dust, three rear-plate screws are brass. The upper-right screw is blued steel and its slot was filed by hand. A dark oxidation ring continues beneath its head, showing that it was installed long ago rather than during a recent rebuild.",
+          "title": "Rear-plate screw mismatch"
+        },
+        "evidenceIdHidden": "src.prologue.artifact.backplate_screws",
+        "ko": {
+          "observation": "먼지 아래에서 후면판 나사 세 개는 황동으로 확인된다. 오른쪽 위 나사만 청색 열처리 강철이며 홈은 손으로 다듬었다. 나사 머리 아래까지 짙은 산화 고리가 이어져 있어 최근 재조립 때가 아니라 오래전에 장착되었음을 보여 준다.",
+          "title": "후면판 나사의 불일치"
+        }
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-13",
+      "name": "Authentication localizes authored-v2 observation dictionaries and resolves source evidence IDs to authored public titles in Korean and English",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "en": "Strong support",
+        "fixtureFailures": [],
+        "ko": "강한 입증",
+        "rawHidden": true,
+        "substantiationId": "STRONG"
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-14",
+      "name": "Resolved dossier verdict localizes all three substantiation results in Korean and English without exposing runtime enums",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifact070Covered": true,
+        "artifactCount": 20,
+        "failures": []
+      },
+      "executed": true,
+      "id": "MVP-ILLUSTRATED-12",
+      "name": "All twenty expansion artifacts can repair every authored fault with any one recommended tool, including non-legacy damage families",
+      "passed": true
+    }
+  ]
+}

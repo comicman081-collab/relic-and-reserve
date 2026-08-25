@@ -1,0 +1,57 @@
+{
+  "id": "artifact_046",
+  "displayName": "Fallow Jewelry Box T",
+  "category": "decorative_objects",
+  "baseModel": "model_01.obj",
+  "maker": "maker_06",
+  "modelName": "Model 145",
+  "era": "1924-1936",
+  "materialSet": [
+    "material_01",
+    "material_04"
+  ],
+  "rarity": "uncommon",
+  "baseValue": 965,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.2
+  },
+  "collectorTags": [
+    "decorative_objects",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_046"
+}

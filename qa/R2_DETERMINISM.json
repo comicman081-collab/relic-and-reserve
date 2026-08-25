@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "evidence": "P0-30 replayed identical RNG state and artifact input",
+  "comparison": "authenticityTruth and damageInstances structured equality"
+}

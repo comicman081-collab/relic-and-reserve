@@ -1,0 +1,57 @@
+{
+  "id": "artifact_034",
+  "displayName": "Nightingale Vintage Radio H",
+  "category": "vintage_audio",
+  "baseModel": "model_04.obj",
+  "maker": "maker_14",
+  "modelName": "Model 133",
+  "era": "1924-1936",
+  "materialSet": [
+    "material_04",
+    "material_07"
+  ],
+  "rarity": "uncommon",
+  "baseValue": 737,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.5
+  },
+  "collectorTags": [
+    "vintage_audio",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_034"
+}

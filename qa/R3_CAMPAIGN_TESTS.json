@@ -1,0 +1,665 @@
+{
+  "executed": 23,
+  "failed": 0,
+  "passed": 23,
+  "skipped": 0,
+  "suite": "R3 campaign",
+  "tests": [
+    {
+      "evidence": {
+        "act1": 8,
+        "act4": 6,
+        "act5": 6,
+        "documents": 30,
+        "environments": 9,
+        "npcs": 8,
+        "storyArtifacts": 26
+      },
+      "executed": true,
+      "id": "CAMP-DATA-01",
+      "name": "Campaign content minimums are connected",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "histories": 40,
+        "makers": 20,
+        "materials": 30,
+        "periods": 20
+      },
+      "executed": true,
+      "id": "CAMP-DATA-02",
+      "name": "Fictional reference database meets minimums",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "CAMP-ASSET-01",
+      "name": "NPC expression and buyer portraits exist",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "conditions": [
+          {
+            "metric": "reputation",
+            "op": ">=",
+            "value": 10
+          },
+          {
+            "conditions": [
+              {
+                "metric": "museumTrust",
+                "op": ">",
+                "value": 99
+              },
+              {
+                "condition": {
+                  "metric": "epilogue_seen",
+                  "op": "==",
+                  "value": true
+                },
+                "op": "not"
+              }
+            ],
+            "op": "any"
+          }
+        ],
+        "op": "all"
+      },
+      "executed": true,
+      "id": "CAMP-COND-01",
+      "name": "Generic condition evaluator supports AND/OR/NOT/comparison",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "ethics_after": 52,
+        "ethics_before": 60,
+        "reputation": 8
+      },
+      "executed": true,
+      "id": "CAMP-ETHICS-01",
+      "name": "Misleading certainty has price/trust/ethics consequence",
+      "passed": true
+    },
+    {
+      "evidence": "PROLOGUE",
+      "executed": true,
+      "id": "CAMP-START-01",
+      "name": "Campaign starts in Prologue",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "act": "ACT_1",
+        "sales": 1
+      },
+      "executed": true,
+      "id": "CAMP-PROLOGUE-01",
+      "name": "Prologue completes through inspect/auth/list/live sale APIs",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "outcome": "mistaken",
+        "result": {
+          "citedEvidenceIds": [
+            "silent_radio:material",
+            "silent_radio:serial_pattern"
+          ],
+          "code": "OK",
+          "conclusionAccurate": false,
+          "hypothesisId": "REPRODUCTION",
+          "independentSourceCount": 0,
+          "netScore": 0,
+          "ok": true,
+          "outcome": "mistaken",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 0
+        }
+      },
+      "executed": true,
+      "id": "CAMP-RECOVERY-01",
+      "name": "Bad/reviewed case outcome retains progression route",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "act": "ACT_2",
+        "grade": 2
+      },
+      "executed": true,
+      "id": "CAMP-ACT1-01",
+      "name": "Eight Act 1 cases unlock Act 2 and Workshop Grade II",
+      "passed": true
+    },
+    {
+      "evidence": "ACT_3",
+      "executed": true,
+      "id": "CAMP-ACT2-01",
+      "name": "Provenance cases unlock Act 3",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "act": "ACT_3",
+        "cases": 12,
+        "inventory": 1
+      },
+      "executed": true,
+      "id": "CAMP-SAVE-01",
+      "name": "Campaign save/load preserves an act boundary",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "act": "ACT_4",
+        "trust_after": 25,
+        "trust_before": 21
+      },
+      "executed": true,
+      "id": "CAMP-ACT3-01",
+      "name": "Collector cases change relationship trust and unlock Act 4",
+      "passed": true
+    },
+    {
+      "evidence": "ACT_5",
+      "executed": true,
+      "id": "CAMP-ACT4-01",
+      "name": "Five connected shadow cases plus composite climax unlock Act 5",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "act": "POSTGAME",
+        "ending": "ENDING_S",
+        "grand_reserve": {
+          "code": "OK",
+          "ending": "ENDING_S",
+          "ok": true,
+          "results": [
+            {
+              "artifact": {
+                "artifactSpecId": "artifact_004",
+                "category": "vintage_audio",
+                "damageInstances": [
+                  "DUST",
+                  "RUST",
+                  "SCRATCH"
+                ],
+                "displayName": "Dovetail Vintage Radio D",
+                "instanceId": "case_silent_radio",
+                "partStates": {
+                  "body": true,
+                  "mechanism": true,
+                  "panel": true
+                },
+                "specId": "artifact_004",
+                "uniqueId": "case_silent_radio",
+                "visualSignature": {}
+              },
+              "auction": {
+                "bids": [
+                  {
+                    "amount": 111,
+                    "bidderId": "bidder_04"
+                  }
+                ],
+                "dropouts": [
+                  {
+                    "bidderId": "bidder_03",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_05",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_06",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_07",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_08",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_09",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_10",
+                    "reason": "VALUE"
+                  }
+                ],
+                "fee": 0,
+                "hammer": 111,
+                "net": 0,
+                "opening": 96,
+                "participants": [
+                  {
+                    "id": "bidder_03"
+                  },
+                  {
+                    "id": "bidder_04"
+                  },
+                  {
+                    "id": "bidder_05"
+                  },
+                  {
+                    "id": "bidder_06"
+                  },
+                  {
+                    "id": "bidder_07"
+                  },
+                  {
+                    "id": "bidder_08"
+                  },
+                  {
+                    "id": "bidder_09"
+                  },
+                  {
+                    "id": "bidder_10"
+                  }
+                ],
+                "publicFingerprint": "AUC-1834749378",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "reserve": 116,
+                "reserve_met": false,
+                "sale_status": "NO_SALE",
+                "transactionId": "auction_1_715798209_19",
+                "winnerId": "bidder_04"
+              }
+            },
+            {
+              "artifact": {
+                "artifactSpecId": "artifact_061",
+                "category": "horological_instruments",
+                "damageInstances": [
+                  "DUST",
+                  "RUST",
+                  "SCRATCH"
+                ],
+                "displayName": "Meridian Tide Chronograph",
+                "instanceId": "case_master_chronometer",
+                "partStates": {},
+                "specId": "artifact_061",
+                "uniqueId": "case_master_chronometer",
+                "visualSignature": {}
+              },
+              "auction": {
+                "bids": [],
+                "dropouts": [
+                  {
+                    "bidderId": "bidder_03",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_04",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_05",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_06",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_07",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_08",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_09",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_10",
+                    "reason": "VALUE"
+                  }
+                ],
+                "fee": 0,
+                "hammer": 0,
+                "net": 0,
+                "opening": 742,
+                "participants": [
+                  {
+                    "id": "bidder_03"
+                  },
+                  {
+                    "id": "bidder_04"
+                  },
+                  {
+                    "id": "bidder_05"
+                  },
+                  {
+                    "id": "bidder_06"
+                  },
+                  {
+                    "id": "bidder_07"
+                  },
+                  {
+                    "id": "bidder_08"
+                  },
+                  {
+                    "id": "bidder_09"
+                  },
+                  {
+                    "id": "bidder_10"
+                  }
+                ],
+                "publicFingerprint": "AUC-1119841501",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "reserve": 896,
+                "reserve_met": false,
+                "sale_status": "NO_SALE",
+                "transactionId": "auction_1_996027754_20",
+                "winnerId": ""
+              }
+            },
+            {
+              "artifact": {
+                "artifactSpecId": "artifact_075",
+                "category": "microscopy_instruments",
+                "damageInstances": [
+                  "DUST",
+                  "RUST",
+                  "SCRATCH"
+                ],
+                "displayName": "Velvet Entomology Microscope",
+                "instanceId": "case_master_optical",
+                "partStates": {},
+                "specId": "artifact_075",
+                "uniqueId": "case_master_optical",
+                "visualSignature": {}
+              },
+              "auction": {
+                "bids": [
+                  {
+                    "amount": 1606,
+                    "bidderId": "bidder_11"
+                  },
+                  {
+                    "amount": 1687,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 1768,
+                    "bidderId": "bidder_11"
+                  },
+                  {
+                    "amount": 1856,
+                    "bidderId": "bidder_12"
+                  }
+                ],
+                "dropouts": [
+                  {
+                    "bidderId": "bidder_01",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_02",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_03",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_04",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_05",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_06",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_11",
+                    "reason": "VALUE"
+                  }
+                ],
+                "fee": 222,
+                "hammer": 1856,
+                "net": 1634,
+                "opening": 1531,
+                "participants": [
+                  {
+                    "id": "bidder_11"
+                  },
+                  {
+                    "id": "bidder_12"
+                  },
+                  {
+                    "id": "bidder_01"
+                  },
+                  {
+                    "id": "bidder_02"
+                  },
+                  {
+                    "id": "bidder_03"
+                  },
+                  {
+                    "id": "bidder_04"
+                  },
+                  {
+                    "id": "bidder_05"
+                  },
+                  {
+                    "id": "bidder_06"
+                  }
+                ],
+                "publicFingerprint": "AUC-2024403618",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "reserve": 1847,
+                "reserve_met": true,
+                "sale_status": "SOLD",
+                "transactionId": "auction_1_1885316311_21",
+                "winnerId": "bidder_12"
+              }
+            }
+          ],
+          "score": {
+            "authentication": 96.1538461538462,
+            "authenticationAccuracy": 0.961538461538462,
+            "balancedScore": 88.9807081807082,
+            "collectionQuality": 100.0,
+            "collectorReputation": 100.0,
+            "collectorTrust": 49,
+            "ethics": 80,
+            "financial": 51.7111111111111,
+            "grandReserveRevenue": 1967,
+            "integrity": 75.0,
+            "museumTrust": 100.0,
+            "restoration": 100.0
+          }
+        },
+        "transitions": 26
+      },
+      "executed": true,
+      "id": "CAMP-FAST-01",
+      "name": "Fast-forward uses public case transitions and reaches postgame",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "grade": 5,
+        "mastery": 124
+      },
+      "executed": true,
+      "id": "CAMP-ACT5-01",
+      "name": "Six master restorations produce Grade V and mastery",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "case_silent_radio",
+        "case_master_chronometer",
+        "case_master_optical"
+      ],
+      "executed": true,
+      "id": "CAMP-GR-01",
+      "name": "Grand Reserve invitation and three distinct owned selections persist",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "bidder_failures": [],
+        "results": 3
+      },
+      "executed": true,
+      "id": "CAMP-GR-02",
+      "name": "Three Grand Reserve lots use real auction AI with at least 8 bidders",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authentication": 96.1538461538462,
+        "authenticationAccuracy": 0.961538461538462,
+        "balancedScore": 88.9807081807082,
+        "collectionQuality": 100.0,
+        "collectorReputation": 100.0,
+        "collectorTrust": 49,
+        "ethics": 80,
+        "financial": 51.7111111111111,
+        "grandReserveRevenue": 1967,
+        "integrity": 75.0,
+        "museumTrust": 100.0,
+        "restoration": 100.0
+      },
+      "executed": true,
+      "id": "CAMP-GR-03",
+      "name": "Final score stores every required component",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "ending": "ENDING_S",
+        "postgame": true
+      },
+      "executed": true,
+      "id": "CAMP-END-01",
+      "name": "Ending, epilogue acknowledgement, and postgame are connected",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "ending": "ENDING_S",
+        "selected": [
+          "case_silent_radio",
+          "case_master_chronometer",
+          "case_master_optical"
+        ]
+      },
+      "executed": true,
+      "id": "CAMP-SAVE-02",
+      "name": "Campaign save/load preserves final selection, ending, and postgame",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "hall_nodes": 31
+      },
+      "executed": true,
+      "id": "CAMP-VIS-01",
+      "name": "Grand Reserve is a distinct real 3D environment",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "visible_modules": 4
+      },
+      "executed": true,
+      "id": "CAMP-VIS-02",
+      "name": "Workshop Grade V visibly enables persistent modules",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "actual": "ENDING_D",
+          "executed": true,
+          "expected": "ENDING_D",
+          "id": "ENDING-01",
+          "passed": true
+        },
+        {
+          "actual": "ENDING_S",
+          "executed": true,
+          "expected": "ENDING_S",
+          "id": "ENDING-02",
+          "passed": true
+        },
+        {
+          "actual": "ENDING_A",
+          "executed": true,
+          "expected": "ENDING_A",
+          "id": "ENDING-03",
+          "passed": true
+        },
+        {
+          "actual": "ENDING_B",
+          "executed": true,
+          "expected": "ENDING_B",
+          "id": "ENDING-04",
+          "passed": true
+        },
+        {
+          "actual": "ENDING_C",
+          "executed": true,
+          "expected": "ENDING_C",
+          "id": "ENDING-05",
+          "passed": true
+        }
+      ],
+      "executed": true,
+      "id": "CAMP-END-02",
+      "name": "All five endings and precedence are force-constructible through runtime evaluator",
+      "passed": true
+    }
+  ]
+}

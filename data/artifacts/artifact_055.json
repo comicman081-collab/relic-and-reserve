@@ -1,0 +1,54 @@
+{
+  "id": "artifact_055",
+  "displayName": "Orchard Desk Calculator C",
+  "category": "office_machines",
+  "baseModel": "model_10.obj",
+  "maker": "maker_15",
+  "modelName": "Model 154",
+  "era": "1900-1912",
+  "materialSet": [
+    "material_10",
+    "material_13"
+  ],
+  "rarity": "rare",
+  "baseValue": 1136,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.6000000000000001
+  },
+  "collectorTags": [
+    "office_machines",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_055"
+}

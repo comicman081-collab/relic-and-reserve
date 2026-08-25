@@ -1,0 +1,6 @@
+{
+  "transactions": 1000,
+  "median_profit": 105.5,
+  "loss_frequency": 0.264,
+  "bankruptcy_frequency": 0.0
+}

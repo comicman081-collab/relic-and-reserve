@@ -1,0 +1,18 @@
+{
+  "buttonCallbackScreen": "stage_select",
+  "clickStream": "res://audio/ui_click.wav",
+  "commissionCardRect": "[P: (42.0, 90.0), S: (570.0, 148.0)]",
+  "commissionStatusRect": "[P: (52.0, 186.0), S: (550.0, 17.0)]",
+  "commissionTitleRect": "[P: (101.0, 107.0), S: (422.0, 23.0)]",
+  "failed": 0,
+  "failures": [],
+  "musicRoots": {
+    "bgm": "res://audio/bgm/relic_reserve_bgm",
+    "endings": "res://audio/endings/relic_reserve_endings",
+    "title": "res://audio/title/relic_reserve_title"
+  },
+  "passed": true,
+  "sourceUnusedTitleRestored": true,
+  "sourceUsedTitleAbsent": true,
+  "suite": "R3 Audio/Layout Smoke"
+}

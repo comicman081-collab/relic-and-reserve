@@ -1,0 +1,56 @@
+{
+  "id": "artifact_039",
+  "displayName": "Solenne Ceramic Vase M",
+  "category": "ceramics",
+  "baseModel": "model_09.obj",
+  "maker": "maker_19",
+  "modelName": "Model 138",
+  "era": "1916-1928",
+  "materialSet": [
+    "material_09",
+    "material_12"
+  ],
+  "rarity": "rare",
+  "baseValue": 832,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.5
+  },
+  "collectorTags": [
+    "ceramics",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_039"
+}

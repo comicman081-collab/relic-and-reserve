@@ -1,0 +1,29 @@
+{
+  "generated": [
+    "assets/workshop_props/catalog_stand.obj",
+    "assets/workshop_props/computer_terminal.obj",
+    "assets/workshop_props/delivery_cart.obj",
+    "assets/workshop_props/desk.obj",
+    "assets/workshop_props/desk_lamp.obj",
+    "assets/workshop_props/display_cabinet.obj",
+    "assets/workshop_props/drawer_unit.obj",
+    "assets/workshop_props/floor_lamp.obj",
+    "assets/workshop_props/inspection_lamp.obj",
+    "assets/workshop_props/inspection_mat.obj",
+    "assets/workshop_props/magnifier_stand.obj",
+    "assets/workshop_props/packaging_box.obj",
+    "assets/workshop_props/padded_case.obj",
+    "assets/workshop_props/parts_tray.obj",
+    "assets/workshop_props/photo_backdrop.obj",
+    "assets/workshop_props/shelf.obj",
+    "assets/workshop_props/stool.obj",
+    "assets/workshop_props/storage_bin.obj",
+    "assets/workshop_props/storage_crate.obj",
+    "assets/workshop_props/tool_cabinet.obj",
+    "assets/workshop_props/tool_rack.obj",
+    "assets/workshop_props/tripod.obj",
+    "assets/workshop_props/waste_bin.obj",
+    "assets/workshop_props/workbench.obj"
+  ],
+  "backend": "procedural_obj_fallback"
+}

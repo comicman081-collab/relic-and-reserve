@@ -1,0 +1,583 @@
+{
+  "executed": 8,
+  "failed": 0,
+  "frozenDesignInputs": [
+    "pow(1.07, stage-1)",
+    "auction coefficients",
+    "bidder AI",
+    "listing presets"
+  ],
+  "humanGate": "REQUIRED",
+  "humanObserved": false,
+  "humanPass": false,
+  "passed": 8,
+  "rows": [
+    {
+      "artifactSpec": "artifact_061",
+      "auction": {
+        "actionHint": "KEEP_CITATION",
+        "finalPhase": "SOLD",
+        "finalVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 1200   REP 12   GRADE 1\nGUIDE 1/6\nInspect one clue\nCheck the risk, then record one clue.\nMeridian Tide Chronograph\nSOLD · ¤1918\nSOLD\n7 / 7\nOPEN\n¤1\nRESERVE\n¤1\nBIDS\n52\nRECENT CALLS\nClockmaker  ·  ¤1666\nEstate Broker  ·  ¤1744\nDesign Scholar  ·  ¤1828\nClockmaker  ·  ¤1918\nSOLD  ·  FEE ¤230  ·  NET ¤1688\nEARLY 1 · small gear\nClockmaker\nBidder\nWINNING BIDDER\nA fine relic to bring home.\nWINNING BIDDER\nKEY REACTION\nProvenance strong\nEARLY 1 · small bell\nAuctioneer\nAuction host\nSOLD\nSold!\nRESULT READY\nAuction cue advanced.\nHAMMER & RECORD RESULT\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "hierarchyPresent": true,
+        "initialVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 1200   REP 12   GRADE 1\nGUIDE 1/6\nInspect one clue\nCheck the risk, then record one clue.\nMeridian Tide Chronograph\nCURRENT BID · ¤1\nLOT ENTRY\n1 / 7\nOPEN\n¤1\nRESERVE\n¤1\nBIDS\n52\nRECENT CALLS\nWaiting for the first public bid.\nLOT ENTRY · Follow the public call.\nEARLY 1 · swab case\nRestoration Collector\nBidder\nWATCHING\nChecking the condition.\nWATCHING THE LOT\nEARLY 1 · small bell\nAuctioneer\nAuction host\nINTRODUCTION\nThe auction begins.\nLOT READY\n\nNEXT CUE\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "maxInflightChipCount": 2,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "BID",
+          "BID",
+          "BID",
+          "DROPOUT",
+          "SOLD"
+        ],
+        "primaryStateText": "SOLD · ¤1918",
+        "rawPrivateFieldsHidden": true,
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reasonTagsValid": true,
+        "saleStatus": "SOLD",
+        "terminalChipCount": 1,
+        "terminalCode": "PROVENANCE_STRONG",
+        "terminalLabel": "Provenance strong",
+        "terminalLabelPresent": true,
+        "terminalReason": {
+          "category": "PROVENANCE",
+          "code": "PROVENANCE_STRONG",
+          "polarity": "POSITIVE"
+        }
+      },
+      "fixture": "sold",
+      "humanObserved": false,
+      "humanPass": false,
+      "listing": {
+        "chipCount": 3,
+        "labels": [
+          "Good condition",
+          "Provenance strong",
+          "Disclosure mismatch"
+        ],
+        "publicSummaryPresent": true,
+        "rawPrivateFieldsHidden": true,
+        "visibleCopy": "APPRAISAL — LISTING & DISCLOSURE\nDAY 1   ¤ 1200   REP 12   GRADE 1\nGUIDE 1/6\nInspect one clue\nCheck the risk, then record one clue.\nMeridian Tide Chronograph\nYour hypothesis: GENUINE WITH MODERN REPAIR\nEvidence confidence: 92%\nEstimated value: ¤1606\nPUBLIC SUPPORT · Support sufficient\n2 / 2 · CHOOSE CLAIM STRENGTH\nGood condition\nProvenance strong\nDisclosure mismatch\nFINAL LISTING\nBALANCED · START ¤963 · RESERVE ¤1156 · L…\nListing choice ready to confirm.\nDefinite claim\nBalanced\nSELECTED · Likely claim\nUnder-disclosure · lower interest\nLimited claim\nUnder-disclosure · lower interest\n← CHANGE PRICE\nCONFIRM LISTING\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어"
+      },
+      "passed": true,
+      "requiresHumanCausalQuestions": [
+        "Why did the bidder enter or drop?",
+        "What was the biggest reason for SOLD/NO_SALE?",
+        "What will you change next: investigation, repair, disclosure, or price?"
+      ],
+      "stage": 1,
+      "stageSetup": {
+        "actualStage": 1,
+        "difficulty": 1.0,
+        "started": true
+      }
+    },
+    {
+      "artifactSpec": "artifact_061",
+      "auction": {
+        "actionHint": "PRICE_OR_DISCLOSURE",
+        "finalPhase": "NO_SALE",
+        "finalVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 1200   REP 12   GRADE 1\nGUIDE 1/6\nInspect one clue\nCheck the risk, then record one clue.\nMeridian Tide Chronograph\nRESERVE NOT MET / NO SALE · NO PUBLIC BID\nNO SALE\n4 / 4\nOPEN\n¤999999\nRESERVE\n¤1000000\nBIDS\n0\nRECENT CALLS\nWaiting for the first public bid.\nRESERVE NOT MET / NO SALE  ·  FEE ¤0  ·  NET ¤0\nEARLY 1 · copper coin\nSpeculator\nBidder\nDROPPED OUT\nI will step back this time.\nRESERVE NOT MET\nKEY REACTION\nHigh reserve\nEARLY 1 · small bell\nAuctioneer\nAuction host\nNO SALE\nThe reserve was not met. No sale.\nRESULT READY\nAuction cue advanced.\nHAMMER & RECORD RESULT\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "hierarchyPresent": true,
+        "initialVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 1200   REP 12   GRADE 1\nGUIDE 1/6\nInspect one clue\nCheck the risk, then record one clue.\nMeridian Tide Chronograph\nCURRENT BID · ¤999999\nLOT ENTRY\n1 / 4\nOPEN\n¤999999\nRESERVE\n¤1000000\nBIDS\n0\nRECENT CALLS\nWaiting for the first public bid.\nLOT ENTRY · Follow the public call.\nEARLY 1 · small cameo\nPrivate Collector\nBidder\nWATCHING\nChecking the condition.\nWATCHING THE LOT\nEARLY 1 · small bell\nAuctioneer\nAuction host\nINTRODUCTION\nThe auction begins.\nLOT READY\n\nNEXT CUE\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "maxInflightChipCount": 2,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "DROPOUT",
+          "NO_SALE"
+        ],
+        "primaryStateText": "RESERVE NOT MET / NO SALE · NO PUBLIC BID",
+        "rawPrivateFieldsHidden": true,
+        "reasonTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          },
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_UNCERTAIN",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "reasonTagsValid": true,
+        "saleStatus": "NO_SALE",
+        "terminalChipCount": 1,
+        "terminalCode": "RESERVE_TOO_HIGH",
+        "terminalLabel": "High reserve",
+        "terminalLabelPresent": true,
+        "terminalReason": {
+          "category": "PRICE",
+          "code": "RESERVE_TOO_HIGH",
+          "polarity": "NEGATIVE"
+        }
+      },
+      "fixture": "no_sale",
+      "humanObserved": false,
+      "humanPass": false,
+      "listing": {
+        "chipCount": 3,
+        "labels": [
+          "Condition risk",
+          "Provenance uncertain",
+          "Disclosure mismatch"
+        ],
+        "publicSummaryPresent": true,
+        "rawPrivateFieldsHidden": true,
+        "visibleCopy": "APPRAISAL — LISTING & DISCLOSURE\nDAY 1   ¤ 1200   REP 12   GRADE 1\nGUIDE 1/6\nInspect one clue\nCheck the risk, then record one clue.\nMeridian Tide Chronograph\nYour hypothesis: GENUINE\nEvidence confidence: 28%\nEstimated value: ¤1031\nPUBLIC SUPPORT · Support low\n2 / 2 · CHOOSE CLAIM STRENGTH\nCondition risk\nProvenance uncertain\nDisclosure mismatch\nFINAL LISTING\nBALANCED · START ¤618 · RESERVE ¤742 · Li…\nListing choice ready to confirm.\nDefinite claim\nOverclaim risk\nSELECTED · Likely claim\nOverclaim risk\nLimited claim\nBalanced\n← CHANGE PRICE\nCONFIRM LISTING\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어"
+      },
+      "passed": true,
+      "requiresHumanCausalQuestions": [
+        "Why did the bidder enter or drop?",
+        "What was the biggest reason for SOLD/NO_SALE?",
+        "What will you change next: investigation, repair, disclosure, or price?"
+      ],
+      "stage": 1,
+      "stageSetup": {
+        "actualStage": 1,
+        "difficulty": 1.0,
+        "started": true
+      }
+    },
+    {
+      "artifactSpec": "artifact_069",
+      "auction": {
+        "actionHint": "KEEP_CITATION",
+        "finalPhase": "SOLD",
+        "finalVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 1740   REP 36   GRADE 3\nNickel Cipher Typewriter\nSOLD · ¤1145\nSOLD\n7 / 7\nOPEN\n¤1\nRESERVE\n¤1\nBIDS\n41\nRECENT CALLS\nMechanical Enthusiast  ·  ¤979\nClockmaker  ·  ¤1033\nMechanical Enthusiast  ·  ¤1087\nClockmaker  ·  ¤1145\nSOLD  ·  FEE ¤137  ·  NET ¤1008\nMID 5 · winding key\nClockmaker\nBidder\nWINNING BIDDER\nA fine relic to bring home.\nWINNING BIDDER\nKEY REACTION\nProvenance strong\nMID 5 · lot-number ribbon\nAuctioneer\nAuction host\nSOLD\nSold!\nRESULT READY\nAuction cue advanced.\nHAMMER & RECORD RESULT\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "hierarchyPresent": true,
+        "initialVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 1740   REP 36   GRADE 3\nNickel Cipher Typewriter\nCURRENT BID · ¤1\nLOT ENTRY\n1 / 7\nOPEN\n¤1\nRESERVE\n¤1\nBIDS\n41\nRECENT CALLS\nWaiting for the first public bid.\nLOT ENTRY · Follow the public call.\nMID 5 · winding key\nClockmaker\nBidder\nWATCHING\nChecking the condition.\nWATCHING THE LOT\nMID 5 · lot-number ribbon\nAuctioneer\nAuction host\nINTRODUCTION\nThe auction begins.\nLOT READY\n\nNEXT CUE\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "maxInflightChipCount": 2,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "BID",
+          "BID",
+          "BID",
+          "DROPOUT",
+          "SOLD"
+        ],
+        "primaryStateText": "SOLD · ¤1145",
+        "rawPrivateFieldsHidden": true,
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reasonTagsValid": true,
+        "saleStatus": "SOLD",
+        "terminalChipCount": 1,
+        "terminalCode": "PROVENANCE_STRONG",
+        "terminalLabel": "Provenance strong",
+        "terminalLabelPresent": true,
+        "terminalReason": {
+          "category": "PROVENANCE",
+          "code": "PROVENANCE_STRONG",
+          "polarity": "POSITIVE"
+        }
+      },
+      "fixture": "sold",
+      "humanObserved": false,
+      "humanPass": false,
+      "listing": {
+        "chipCount": 3,
+        "labels": [
+          "Good condition",
+          "Provenance strong",
+          "Disclosure mismatch"
+        ],
+        "publicSummaryPresent": true,
+        "rawPrivateFieldsHidden": true,
+        "visibleCopy": "APPRAISAL — LISTING & DISCLOSURE\nDAY 1   ¤ 1740   REP 36   GRADE 3\nNickel Cipher Typewriter\nYour hypothesis: REPRODUCTION\nEvidence confidence: 92%\nEstimated value: ¤2502\nPUBLIC SUPPORT · Support sufficient\n2 / 2 · CHOOSE CLAIM STRENGTH\nGood condition\nProvenance strong\nDisclosure mismatch\nFINAL LISTING\nBALANCED · START ¤1501 · RESERVE ¤1801 ·…\nListing choice ready to confirm.\nDefinite claim\nBalanced\nSELECTED · Likely claim\nUnder-disclosure · lower interest\nLimited claim\nUnder-disclosure · lower interest\n← CHANGE PRICE\nCONFIRM LISTING\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어"
+      },
+      "passed": true,
+      "requiresHumanCausalQuestions": [
+        "Why did the bidder enter or drop?",
+        "What was the biggest reason for SOLD/NO_SALE?",
+        "What will you change next: investigation, repair, disclosure, or price?"
+      ],
+      "stage": 5,
+      "stageSetup": {
+        "actualStage": 5,
+        "difficulty": 1.31079601,
+        "started": true
+      }
+    },
+    {
+      "artifactSpec": "artifact_069",
+      "auction": {
+        "actionHint": "PRICE_OR_DISCLOSURE",
+        "finalPhase": "NO_SALE",
+        "finalVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 1740   REP 36   GRADE 3\nNickel Cipher Typewriter\nRESERVE NOT MET / NO SALE · NO PUBLIC BID\nNO SALE\n4 / 4\nOPEN\n¤999999\nRESERVE\n¤1000000\nBIDS\n0\nRECENT CALLS\nWaiting for the first public bid.\nRESERVE NOT MET / NO SALE  ·  FEE ¤0  ·  NET ¤0\nMID 5 · price-sheet clip\nSpeculator\nBidder\nDROPPED OUT\nI will step back this time.\nRESERVE NOT MET\nKEY REACTION\nHigh reserve\nMID 5 · lot-number ribbon\nAuctioneer\nAuction host\nNO SALE\nThe reserve was not met. No sale.\nRESULT READY\nAuction cue advanced.\nHAMMER & RECORD RESULT\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "hierarchyPresent": true,
+        "initialVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 1740   REP 36   GRADE 3\nNickel Cipher Typewriter\nCURRENT BID · ¤999999\nLOT ENTRY\n1 / 4\nOPEN\n¤999999\nRESERVE\n¤1000000\nBIDS\n0\nRECENT CALLS\nWaiting for the first public bid.\nLOT ENTRY · Follow the public call.\nMID 5 · collection ribbon\nPrivate Collector\nBidder\nWATCHING\nChecking the condition.\nWATCHING THE LOT\nMID 5 · lot-number ribbon\nAuctioneer\nAuction host\nINTRODUCTION\nThe auction begins.\nLOT READY\n\nNEXT CUE\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "maxInflightChipCount": 2,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "DROPOUT",
+          "NO_SALE"
+        ],
+        "primaryStateText": "RESERVE NOT MET / NO SALE · NO PUBLIC BID",
+        "rawPrivateFieldsHidden": true,
+        "reasonTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          },
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_UNCERTAIN",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "reasonTagsValid": true,
+        "saleStatus": "NO_SALE",
+        "terminalChipCount": 1,
+        "terminalCode": "RESERVE_TOO_HIGH",
+        "terminalLabel": "High reserve",
+        "terminalLabelPresent": true,
+        "terminalReason": {
+          "category": "PRICE",
+          "code": "RESERVE_TOO_HIGH",
+          "polarity": "NEGATIVE"
+        }
+      },
+      "fixture": "no_sale",
+      "humanObserved": false,
+      "humanPass": false,
+      "listing": {
+        "chipCount": 3,
+        "labels": [
+          "Condition risk",
+          "Provenance uncertain",
+          "Disclosure mismatch"
+        ],
+        "publicSummaryPresent": true,
+        "rawPrivateFieldsHidden": true,
+        "visibleCopy": "APPRAISAL — LISTING & DISCLOSURE\nDAY 1   ¤ 1740   REP 36   GRADE 3\nNickel Cipher Typewriter\nYour hypothesis: GENUINE WITH PERIOD REPAIR\nEvidence confidence: 28%\nEstimated value: ¤2115\nPUBLIC SUPPORT · Support low\n2 / 2 · CHOOSE CLAIM STRENGTH\nCondition risk\nProvenance uncertain\nDisclosure mismatch\nFINAL LISTING\nBALANCED · START ¤1269 · RESERVE ¤1522 ·…\nListing choice ready to confirm.\nDefinite claim\nOverclaim risk\nSELECTED · Likely claim\nOverclaim risk\nLimited claim\nBalanced\n← CHANGE PRICE\nCONFIRM LISTING\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어"
+      },
+      "passed": true,
+      "requiresHumanCausalQuestions": [
+        "Why did the bidder enter or drop?",
+        "What was the biggest reason for SOLD/NO_SALE?",
+        "What will you change next: investigation, repair, disclosure, or price?"
+      ],
+      "stage": 5,
+      "stageSetup": {
+        "actualStage": 5,
+        "difficulty": 1.31079601,
+        "started": true
+      }
+    },
+    {
+      "artifactSpec": "artifact_075",
+      "auction": {
+        "actionHint": "KEEP_CITATION",
+        "finalPhase": "SOLD",
+        "finalVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 2100   REP 52   GRADE 4\nVelvet Entomology Microscope\nSOLD · ¤1897\nSOLD\n7 / 7\nOPEN\n¤1\nRESERVE\n¤1\nBIDS\n52\nRECENT CALLS\nArchive Curator  ·  ¤1648\nEstate Broker  ·  ¤1725\nDesign Scholar  ·  ¤1808\nClockmaker  ·  ¤1897\nSOLD  ·  FEE ¤227  ·  NET ¤1670\nLATE 8 · precision spring\nClockmaker\nBidder\nWINNING BIDDER\nA fine relic to bring home.\nWINNING BIDDER\nKEY REACTION\nProvenance strong\nLATE 8 · reserve gavel\nAuctioneer\nAuction host\nSOLD\nSold!\nRESULT READY\nAuction cue advanced.\nHAMMER & RECORD RESULT\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "hierarchyPresent": true,
+        "initialVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 2100   REP 52   GRADE 4\nVelvet Entomology Microscope\nCURRENT BID · ¤1\nLOT ENTRY\n1 / 7\nOPEN\n¤1\nRESERVE\n¤1\nBIDS\n52\nRECENT CALLS\nWaiting for the first public bid.\nLOT ENTRY · Follow the public call.\nLATE 8 · archive seal\nHistorian\nBidder\nWATCHING\nChecking the condition.\nWATCHING THE LOT\nLATE 8 · reserve gavel\nAuctioneer\nAuction host\nINTRODUCTION\nThe auction begins.\nLOT READY\n\nNEXT CUE\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "maxInflightChipCount": 2,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "BID",
+          "BID",
+          "BID",
+          "DROPOUT",
+          "SOLD"
+        ],
+        "primaryStateText": "SOLD · ¤1897",
+        "rawPrivateFieldsHidden": true,
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reasonTagsValid": true,
+        "saleStatus": "SOLD",
+        "terminalChipCount": 1,
+        "terminalCode": "PROVENANCE_STRONG",
+        "terminalLabel": "Provenance strong",
+        "terminalLabelPresent": true,
+        "terminalReason": {
+          "category": "PROVENANCE",
+          "code": "PROVENANCE_STRONG",
+          "polarity": "POSITIVE"
+        }
+      },
+      "fixture": "sold",
+      "humanObserved": false,
+      "humanPass": false,
+      "listing": {
+        "chipCount": 3,
+        "labels": [
+          "Good condition",
+          "Provenance strong",
+          "Disclosure mismatch"
+        ],
+        "publicSummaryPresent": true,
+        "rawPrivateFieldsHidden": true,
+        "visibleCopy": "APPRAISAL — LISTING & DISCLOSURE\nDAY 1   ¤ 2100   REP 52   GRADE 4\nVelvet Entomology Microscope\nYour hypothesis: GENUINE\nEvidence confidence: 92%\nEstimated value: ¤5830\nPUBLIC SUPPORT · Support sufficient\n2 / 2 · CHOOSE CLAIM STRENGTH\nGood condition\nProvenance strong\nDisclosure mismatch\nFINAL LISTING\nBALANCED · START ¤3498 · RESERVE ¤4197 ·…\nListing choice ready to confirm.\nDefinite claim\nBalanced\nSELECTED · Likely claim\nUnder-disclosure · lower interest\nLimited claim\nUnder-disclosure · lower interest\n← CHANGE PRICE\nCONFIRM LISTING\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어"
+      },
+      "passed": true,
+      "requiresHumanCausalQuestions": [
+        "Why did the bidder enter or drop?",
+        "What was the biggest reason for SOLD/NO_SALE?",
+        "What will you change next: investigation, repair, disclosure, or price?"
+      ],
+      "stage": 8,
+      "stageSetup": {
+        "actualStage": 8,
+        "difficulty": 1.60578147647843,
+        "started": true
+      }
+    },
+    {
+      "artifactSpec": "artifact_075",
+      "auction": {
+        "actionHint": "PRICE_OR_DISCLOSURE",
+        "finalPhase": "NO_SALE",
+        "finalVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 2100   REP 52   GRADE 4\nVelvet Entomology Microscope\nRESERVE NOT MET / NO SALE · NO PUBLIC BID\nNO SALE\n4 / 4\nOPEN\n¤999999\nRESERVE\n¤1000000\nBIDS\n0\nRECENT CALLS\nWaiting for the first public bid.\nRESERVE NOT MET / NO SALE  ·  FEE ¤0  ·  NET ¤0\nLATE 8 · precision caliper\nMechanical Enthusiast\nBidder\nDROPPED OUT\nI will step back this time.\nRESERVE NOT MET\nKEY REACTION\nHigh reserve\nLATE 8 · reserve gavel\nAuctioneer\nAuction host\nNO SALE\nThe reserve was not met. No sale.\nRESULT READY\nAuction cue advanced.\nHAMMER & RECORD RESULT\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "hierarchyPresent": true,
+        "initialVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 2100   REP 52   GRADE 4\nVelvet Entomology Microscope\nCURRENT BID · ¤999999\nLOT ENTRY\n1 / 4\nOPEN\n¤999999\nRESERVE\n¤1000000\nBIDS\n0\nRECENT CALLS\nWaiting for the first public bid.\nLOT ENTRY · Follow the public call.\nLATE 8 · precision spring\nClockmaker\nBidder\nWATCHING\nChecking the condition.\nWATCHING THE LOT\nLATE 8 · reserve gavel\nAuctioneer\nAuction host\nINTRODUCTION\nThe auction begins.\nLOT READY\n\nNEXT CUE\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "maxInflightChipCount": 2,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "DROPOUT",
+          "NO_SALE"
+        ],
+        "primaryStateText": "RESERVE NOT MET / NO SALE · NO PUBLIC BID",
+        "rawPrivateFieldsHidden": true,
+        "reasonTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          },
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_UNCERTAIN",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "reasonTagsValid": true,
+        "saleStatus": "NO_SALE",
+        "terminalChipCount": 1,
+        "terminalCode": "RESERVE_TOO_HIGH",
+        "terminalLabel": "High reserve",
+        "terminalLabelPresent": true,
+        "terminalReason": {
+          "category": "PRICE",
+          "code": "RESERVE_TOO_HIGH",
+          "polarity": "NEGATIVE"
+        }
+      },
+      "fixture": "no_sale",
+      "humanObserved": false,
+      "humanPass": false,
+      "listing": {
+        "chipCount": 3,
+        "labels": [
+          "Condition risk",
+          "Provenance uncertain",
+          "Disclosure mismatch"
+        ],
+        "publicSummaryPresent": true,
+        "rawPrivateFieldsHidden": true,
+        "visibleCopy": "APPRAISAL — LISTING & DISCLOSURE\nDAY 1   ¤ 2100   REP 52   GRADE 4\nVelvet Entomology Microscope\nYour hypothesis: FORGERY\nEvidence confidence: 28%\nEstimated value: ¤1035\nPUBLIC SUPPORT · Support low\n2 / 2 · CHOOSE CLAIM STRENGTH\nCondition risk\nProvenance uncertain\nDisclosure mismatch\nFINAL LISTING\nBALANCED · START ¤621 · RESERVE ¤745 · Li…\nListing choice ready to confirm.\nDefinite claim\nOverclaim risk\nSELECTED · Likely claim\nOverclaim risk\nLimited claim\nBalanced\n← CHANGE PRICE\nCONFIRM LISTING\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어"
+      },
+      "passed": true,
+      "requiresHumanCausalQuestions": [
+        "Why did the bidder enter or drop?",
+        "What was the biggest reason for SOLD/NO_SALE?",
+        "What will you change next: investigation, repair, disclosure, or price?"
+      ],
+      "stage": 8,
+      "stageSetup": {
+        "actualStage": 8,
+        "difficulty": 1.60578147647843,
+        "started": true
+      }
+    },
+    {
+      "artifactSpec": "artifact_079",
+      "auction": {
+        "actionHint": "KEEP_CITATION",
+        "finalPhase": "SOLD",
+        "finalVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 2280   REP 60   GRADE 5\nGlass Prism Spectroscope\nSOLD · ¤1251\nSOLD\n7 / 7\nOPEN\n¤1\nRESERVE\n¤1\nBIDS\n43\nRECENT CALLS\nHistorian  ·  ¤1082\nMechanical Enthusiast  ·  ¤1138\nSpeculator  ·  ¤1198\nHistorian  ·  ¤1251\nSOLD  ·  FEE ¤150  ·  NET ¤1101\nLATE 10 · archive seal\nHistorian\nBidder\nWINNING BIDDER\nA fine relic to bring home.\nWINNING BIDDER\nKEY REACTION\nProvenance strong\nLATE 10 · reserve gavel\nAuctioneer\nAuction host\nSOLD\nSold!\nRESULT READY\nAuction cue advanced.\nHAMMER & RECORD RESULT\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "hierarchyPresent": true,
+        "initialVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 2280   REP 60   GRADE 5\nGlass Prism Spectroscope\nCURRENT BID · ¤1\nLOT ENTRY\n1 / 7\nOPEN\n¤1\nRESERVE\n¤1\nBIDS\n43\nRECENT CALLS\nWaiting for the first public bid.\nLOT ENTRY · Follow the public call.\nLATE 10 · gilt ledger strap\nProfessional Dealer\nBidder\nWATCHING\nChecking the condition.\nWATCHING THE LOT\nLATE 10 · reserve gavel\nAuctioneer\nAuction host\nINTRODUCTION\nThe auction begins.\nLOT READY\n\nNEXT CUE\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "maxInflightChipCount": 2,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "BID",
+          "BID",
+          "BID",
+          "DROPOUT",
+          "SOLD"
+        ],
+        "primaryStateText": "SOLD · ¤1251",
+        "rawPrivateFieldsHidden": true,
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reasonTagsValid": true,
+        "saleStatus": "SOLD",
+        "terminalChipCount": 1,
+        "terminalCode": "PROVENANCE_STRONG",
+        "terminalLabel": "Provenance strong",
+        "terminalLabelPresent": true,
+        "terminalReason": {
+          "category": "PROVENANCE",
+          "code": "PROVENANCE_STRONG",
+          "polarity": "POSITIVE"
+        }
+      },
+      "fixture": "sold",
+      "humanObserved": false,
+      "humanPass": false,
+      "listing": {
+        "chipCount": 3,
+        "labels": [
+          "Good condition",
+          "Provenance strong",
+          "Disclosure mismatch"
+        ],
+        "publicSummaryPresent": true,
+        "rawPrivateFieldsHidden": true,
+        "visibleCopy": "APPRAISAL — LISTING & DISCLOSURE\nDAY 1   ¤ 2280   REP 60   GRADE 5\nGlass Prism Spectroscope\nYour hypothesis: REPRODUCTION\nEvidence confidence: 92%\nEstimated value: ¤3689\nPUBLIC SUPPORT · Support sufficient\n2 / 2 · CHOOSE CLAIM STRENGTH\nGood condition\nProvenance strong\nDisclosure mismatch\nFINAL LISTING\nBALANCED · START ¤2213 · RESERVE ¤2656 ·…\nListing choice ready to confirm.\nDefinite claim\nBalanced\nSELECTED · Likely claim\nUnder-disclosure · lower interest\nLimited claim\nUnder-disclosure · lower interest\n← CHANGE PRICE\nCONFIRM LISTING\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어"
+      },
+      "passed": true,
+      "requiresHumanCausalQuestions": [
+        "Why did the bidder enter or drop?",
+        "What was the biggest reason for SOLD/NO_SALE?",
+        "What will you change next: investigation, repair, disclosure, or price?"
+      ],
+      "stage": 10,
+      "stageSetup": {
+        "actualStage": 10,
+        "difficulty": 1.83845921242015,
+        "started": true
+      }
+    },
+    {
+      "artifactSpec": "artifact_079",
+      "auction": {
+        "actionHint": "PRICE_OR_DISCLOSURE",
+        "finalPhase": "NO_SALE",
+        "finalVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 2280   REP 60   GRADE 5\nGlass Prism Spectroscope\nRESERVE NOT MET / NO SALE · NO PUBLIC BID\nNO SALE\n4 / 4\nOPEN\n¤999999\nRESERVE\n¤1000000\nBIDS\n0\nRECENT CALLS\nWaiting for the first public bid.\nRESERVE NOT MET / NO SALE  ·  FEE ¤0  ·  NET ¤0\nLATE 10 · fabric knot\nInterior Decorator\nBidder\nDROPPED OUT\nI will step back this time.\nRESERVE NOT MET\nKEY REACTION\nHigh reserve\nLATE 10 · reserve gavel\nAuctioneer\nAuction host\nNO SALE\nThe reserve was not met. No sale.\nRESULT READY\nAuction cue advanced.\nHAMMER & RECORD RESULT\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "hierarchyPresent": true,
+        "initialVisibleCopy": "AUCTION — LIVE DATA-DRIVEN BIDDERS\nDAY 1   ¤ 2280   REP 60   GRADE 5\nGlass Prism Spectroscope\nCURRENT BID · ¤999999\nLOT ENTRY\n1 / 4\nOPEN\n¤999999\nRESERVE\n¤1000000\nBIDS\n0\nRECENT CALLS\nWaiting for the first public bid.\nLOT ENTRY · Follow the public call.\nLATE 10 · polyhedron pin\nDesign Scholar\nBidder\nWATCHING\nChecking the condition.\nWATCHING THE LOT\nLATE 10 · reserve gavel\nAuctioneer\nAuction host\nINTRODUCTION\nThe auction begins.\nLOT READY\n\nNEXT CUE\nAUCTION\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어",
+        "maxInflightChipCount": 2,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "DROPOUT",
+          "NO_SALE"
+        ],
+        "primaryStateText": "RESERVE NOT MET / NO SALE · NO PUBLIC BID",
+        "rawPrivateFieldsHidden": true,
+        "reasonTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          },
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_UNCERTAIN",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "reasonTagsValid": true,
+        "saleStatus": "NO_SALE",
+        "terminalChipCount": 1,
+        "terminalCode": "RESERVE_TOO_HIGH",
+        "terminalLabel": "High reserve",
+        "terminalLabelPresent": true,
+        "terminalReason": {
+          "category": "PRICE",
+          "code": "RESERVE_TOO_HIGH",
+          "polarity": "NEGATIVE"
+        }
+      },
+      "fixture": "no_sale",
+      "humanObserved": false,
+      "humanPass": false,
+      "listing": {
+        "chipCount": 3,
+        "labels": [
+          "Condition risk",
+          "Provenance uncertain",
+          "Disclosure mismatch"
+        ],
+        "publicSummaryPresent": true,
+        "rawPrivateFieldsHidden": true,
+        "visibleCopy": "APPRAISAL — LISTING & DISCLOSURE\nDAY 1   ¤ 2280   REP 60   GRADE 5\nGlass Prism Spectroscope\nYour hypothesis: REPRODUCTION\nEvidence confidence: 28%\nEstimated value: ¤1896\nPUBLIC SUPPORT · Support low\n2 / 2 · CHOOSE CLAIM STRENGTH\nCondition risk\nProvenance uncertain\nDisclosure mismatch\nFINAL LISTING\nBALANCED · START ¤1137 · RESERVE ¤1365 ·…\nListing choice ready to confirm.\nDefinite claim\nOverclaim risk\nSELECTED · Likely claim\nOverclaim risk\nLimited claim\nBalanced\n← CHANGE PRICE\nCONFIRM LISTING\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nCOMMISSIONS\nCAMPAIGN\nEND DAY\nSAVE\nEN / 한국어"
+      },
+      "passed": true,
+      "requiresHumanCausalQuestions": [
+        "Why did the bidder enter or drop?",
+        "What was the biggest reason for SOLD/NO_SALE?",
+        "What will you change next: investigation, repair, disclosure, or price?"
+      ],
+      "stage": 10,
+      "stageSetup": {
+        "actualStage": 10,
+        "difficulty": 1.83845921242015,
+        "started": true
+      }
+    }
+  ],
+  "structuralPass": true,
+  "suite": "R3 Stage 1/5/8/10 causal comprehension matrix",
+  "target": "At least 70% of human participants match the frozen primary reason category and next-action category at Stages 1/5/8/10.",
+  "vocabularyAudit": {
+    "auctionChipKo": "예약가 높음",
+    "enAdvice": "Adjust the reserve and public claim.",
+    "koAdvice": "예약가와 공개 주장을 조정해 보세요",
+    "koUsesLegacyReserveTerm": false,
+    "koUsesSameReserveTerm": true,
+    "status": "ALIGNED"
+  }
+}

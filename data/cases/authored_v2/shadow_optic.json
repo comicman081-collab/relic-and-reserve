@@ -1,0 +1,272 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage7-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "shadow_optic",
+  "act_id": "ACT_4",
+  "title": {"en": "Shadow Mark: Optic", "ko": "그림자 표식: 광학 기구"},
+  "briefing": {
+    "en": "Victor Hale brings a Quillmark-pattern telescope whose darkened tube and neat maker plate suggest a preserved period instrument. The optics look convincing, but the finish and fittings tell a less settled story.",
+    "ko": "빅터 헤일은 어두운 경통과 반듯한 제작사 명판 때문에 당대품처럼 보이는 퀼마크 양식 망원경을 가져왔다. 광학계는 그럴듯하지만 표면과 체결부의 이력은 분명하지 않다."
+  },
+  "central_question": {
+    "en": "Is this a genuine period telescope, a genuine body with later optical repair, or a later reproduction made in period style?",
+    "ko": "이 물건은 당대 진품 망원경인가, 후대에 광학계만 수리한 진품 몸체인가, 아니면 당대 양식으로 만든 후대 복제품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, marks, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 표식과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report identifies the later reproduction and explains why an orderly recent custody chain does not make it a period original.",
+    "ko": "보고서는 후대 복제품을 가려내고, 최근의 정돈된 소장 경로만으로 당대 원품이 될 수 없는 이유를 설명한다."
+  },
+  "failure": {
+    "en": "The telescope remains under review while Victor helps separate visual resemblance from material age and documented custody.",
+    "ko": "망원경은 검토 상태로 남고, 빅터는 닮은 외형과 재료의 연대, 기록된 소장 경로를 구분하도록 돕는다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the optic file from the Stage 7 campaign desk.", "ko": "스테이지 7 캠페인 책상에서 광학 기구 사건 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": ["fluorescent_adhesive_if_exposed_too_long"],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A conclusion based on period styling alone is reviewed with Victor.",
+        "ko": "당대풍 외형만으로 내린 결론은 빅터와 다시 검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_057",
+    "legacy_story_artifact_id": "story_artifact_19",
+    "display_name": {"en": "Quillmark Model 156 Telescope", "ko": "퀼마크 모델 156 망원경"},
+    "authoring_truth_hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style",
+    "player_prompt": {
+      "en": "Compare the tube, optical fittings, maker plate, custody record, and period construction guide.",
+      "ko": "경통, 광학 체결부, 제작사 명판, 소장 기록과 당대 제작 안내서를 대조하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.shadow_optic.genuine_period_optic",
+      "label": {"en": "Genuine period telescope", "ko": "당대 진품 망원경"},
+      "claim": {
+        "en": "The tube, optical cells, finish, and maker plate form one genuine Quillmark period instrument.",
+        "ko": "경통, 광학 셀, 마감과 제작사 명판이 하나의 진짜 퀼마크 당대 기구를 이룬다."
+      }
+    },
+    {
+      "id": "hyp.shadow_optic.genuine_body_with_later_optical_repair",
+      "label": {"en": "Genuine body, later optical repair", "ko": "진품 몸체와 후대 광학 수리"},
+      "claim": {
+        "en": "A genuine period tube received a limited later lens-cell repair without changing the identity of the instrument.",
+        "ko": "진짜 당대 경통에 제한적인 후대 렌즈 셀 수리가 더해졌지만 기구의 정체성은 유지되었다."
+      }
+    },
+    {
+      "id": "hyp.shadow_optic.later_reproduction_using_period_style",
+      "label": {"en": "Later reproduction in period style", "ko": "당대 양식의 후대 복제품"},
+      "claim": {
+        "en": "The entire telescope is a later teaching reproduction whose materials, adhesive, serial treatment, and artificial wear imitate a period Quillmark instrument.",
+        "ko": "망원경 전체가 당대 퀼마크 기구의 재료, 접착, 번호 표기와 마모를 흉내 낸 후대 교육용 복제품이다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.shadow_optic.artifact.period_mismatch_materials",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_057",
+      "reliability": "HIGH",
+      "label": {"en": "Tube material scan", "ko": "경통 재질 스캔"},
+      "short_observation": {"en": "The main finishes share a much later material recipe.", "ko": "주요 마감이 훨씬 후대의 재료 조합을 공유한다."},
+      "text": {
+        "en": "A low-power scan finds the tube alloy, black coating binder, lens-cell paint, and maker-plate lacquer all use formulations introduced decades after the claimed period. Scratches cross one continuous artificial darkening layer rather than separate generations of wear.",
+        "ko": "저출력 스캔에서 경통 합금, 검은 도막 결합제, 렌즈 셀 도료와 명판 래커가 모두 주장 연대보다 수십 년 뒤의 조성을 보인다. 긁힘도 여러 시기의 마모가 아니라 하나로 이어진 인공 흑화층을 가로지른다."
+      },
+      "unlock": {
+        "action": "scan_material",
+        "target": "tube_finish_and_maker_plate",
+        "requires": ["material_scanner"],
+        "action_label": {"en": "Scan the tube", "ko": "경통 스캔"},
+        "target_label": {"en": "Finish and maker plate", "ko": "마감과 제작사 명판"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {"en": "Use one low-power pass across the dark coating.", "ko": "어두운 도막은 저출력으로 한 번만 스캔하라."}
+      },
+      "independence": {"group": "modern_optic_materials", "depends_on": []},
+      "citation_id": "cite.shadow_optic.artifact.period_mismatch_materials"
+    },
+    {
+      "source_ref": "src.shadow_optic.artifact.uv_replica_adhesive",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_057",
+      "reliability": "HIGH",
+      "label": {"en": "Fluorescent assembly trace", "ko": "형광 조립 흔적"},
+      "short_observation": {"en": "One modern adhesive joins the optics and plate.", "ko": "하나의 현대 접착제가 광학계와 명판을 잇는다."},
+      "text": {
+        "en": "After the scan locations are recorded, a brief ultraviolet pass reveals the same bright adhesive beneath both optical cells and the maker plate. The adhesive crosses fresh tool scoring under an artificially darkened screw, showing that the body and optics were assembled together as a later copy.",
+        "ko": "스캔 위치를 기록한 뒤 짧게 자외선을 비추자 두 광학 셀과 제작사 명판 아래에서 같은 밝은 접착제가 드러난다. 접착제는 인공 흑화 나사 아래의 새 공구 흠집을 가로질러 몸체와 광학계가 후대 복제품으로 함께 조립되었음을 보여 준다."
+      },
+      "unlock": {
+        "action": "inspect_uv",
+        "target": "optical_cells_and_maker_plate",
+        "requires": ["src.shadow_optic.artifact.period_mismatch_materials", "uv_lamp"],
+        "action_label": {"en": "Check assembly glow", "ko": "조립 형광 확인"},
+        "target_label": {"en": "Lens cells and plate", "ko": "렌즈 셀과 명판"}
+      },
+      "risk": {
+        "destroyed_by": ["prolonged_uv_before_exposure_capture"],
+        "player_warning": {"en": "Photograph the glow during one brief exposure.", "ko": "한 번의 짧은 조사 중 형광을 촬영하라."}
+      },
+      "independence": {"group": "replica_adhesive_sequence", "depends_on": ["src.shadow_optic.artifact.period_mismatch_materials"]},
+      "citation_id": "cite.shadow_optic.artifact.uv_replica_adhesive"
+    },
+    {
+      "source_ref": "src.shadow_optic.document.archive_custody_record",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_19",
+      "document_id": "doc.shadow_optic.archive_custody_record",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Teaching collection record", "ko": "교육용 소장 기록"},
+      "short_observation": {"en": "The signed chain begins with a later teaching copy.", "ko": "서명된 소장 경로가 후대 교육용 복제품에서 시작된다."},
+      "text": {
+        "en": "Fictional Archive Record 19 first lists the telescope as a teaching copy acquired in 1968, then follows it through signed transfers to the Hale collection. The chain is continuous from that entry but never places the object in a Quillmark workshop; this is the case's sole provenance record.",
+        "ko": "가상 보관 기록 19는 망원경을 1968년에 취득한 교육용 복제품으로 처음 적고, 이후 헤일 소장품까지 서명된 이관을 잇는다. 그 시점부터 소장 경로는 연속되지만 퀼마크 공방에 있었던 적은 없으며, 이것이 이 사건의 유일한 소장 이력 기록이다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "teaching_collection_record",
+        "requires": [],
+        "action_label": {"en": "Read custody record", "ko": "소장 기록 읽기"},
+        "target_label": {"en": "Signed collection entries", "ko": "서명된 소장 항목"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "optic_archive_chain", "depends_on": []},
+      "citation_id": "cite.shadow_optic.document.archive_custody_record"
+    },
+    {
+      "source_ref": "src.shadow_optic.document.serial_reference_leaf",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_08",
+      "document_id": "doc.shadow_optic.serial_reference_leaf",
+      "reliability": "MEDIUM",
+      "label": {"en": "Telescope serial chart", "ko": "망원경 일련번호표"},
+      "short_observation": {"en": "The received number follows a later copy system.", "ko": "인수품 번호가 후대 복제품 체계를 따른다."},
+      "text": {
+        "en": "Fictional Reference Leaf 08 shows period Quillmark numbers cut beneath the focuser with a separate optician's mark. The received number is transferred onto the visible plate in a later teaching-series format. The leaf describes numbering practice only and contains no owner or transfer, so it is not provenance.",
+        "ko": "가상 참고 낱장 08은 당대 퀼마크 번호가 초점 장치 아래에 새겨지고 별도의 광학사 표식이 붙는 방식을 보여 준다. 인수품 번호는 후대 교육용 계열 형식으로 보이는 명판에 전사되어 있다. 이 낱장은 번호 체계만 설명하고 소유자나 이관 내용이 없어 소장 이력은 아니다."
+      },
+      "unlock": {
+        "action": "compare_records",
+        "target": "telescope_serial_chart",
+        "requires": ["src.shadow_optic.artifact.period_mismatch_materials"],
+        "action_label": {"en": "Compare serial chart", "ko": "일련번호표 대조"},
+        "target_label": {"en": "Period number placement", "ko": "당대 번호 위치"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "model156_serial_reference", "depends_on": ["src.shadow_optic.artifact.period_mismatch_materials"]},
+      "citation_id": "cite.shadow_optic.document.serial_reference_leaf"
+    },
+    {
+      "source_ref": "src.shadow_optic.npc.victor_shadow_mark_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "victor_hale",
+      "npc_id": "victor_hale",
+      "expression": "neutral",
+      "reliability": "MEDIUM",
+      "label": {"en": "Victor's collection account", "ko": "빅터의 소장품 설명"},
+      "short_observation": {"en": "Victor separates the old claim from the signed record.", "ko": "빅터가 오래된 주장과 서명 기록을 구분한다."},
+      "text": {
+        "en": "Victor says an earlier seller called the telescope a workshop survivor because its dark tube looked old. He also points out that the signed file begins with a teaching copy and asks that the material and assembly traces decide the attribution.",
+        "ko": "빅터는 이전 판매자가 어두운 경통이 낡아 보여 이 망원경을 공방 유품이라 불렀다고 말한다. 그러나 서명된 서류는 교육용 복제품에서 시작한다며 재료와 조립 흔적으로 귀속을 판단해 달라고 요청한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "victor_hale",
+        "requires": ["src.shadow_optic.document.archive_custody_record"],
+        "action_label": {"en": "Ask Victor", "ko": "빅터에게 묻기"},
+        "target_label": {"en": "Victor Hale", "ko": "빅터 헤일"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "victor_optic_account", "depends_on": ["src.shadow_optic.document.archive_custody_record"]},
+      "citation_id": "cite.shadow_optic.npc.victor_shadow_mark_context"
+    },
+    {
+      "source_ref": "src.shadow_optic.reference.period_telescope_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_09",
+      "reference_id": "ref.shadow_optic.period_telescope_standard",
+      "reliability": "HIGH",
+      "label": {"en": "Period telescope standard", "ko": "당대 망원경 기준"},
+      "short_observation": {"en": "The standard rejects every claimed workshop feature.", "ko": "기준 자료가 주장된 공방 특징을 모두 배척한다."},
+      "text": {
+        "en": "The fictional 1916–1927 optical standard matches Quillmark tube threading, cell shoulders, lacquer layers, hidden serial placement, and hand-cut plate corners. The received telescope instead matches the later teaching pattern in material, adhesive, visible numbering, and plate finish.",
+        "ko": "가상의 1916~1927년 광학 기준은 퀼마크 경통 나사산, 셀 턱, 래커 층, 숨은 번호 위치와 손으로 자른 명판 모서리를 제시한다. 인수품은 재료, 접착제, 보이는 번호와 명판 마감 모두 후대 교육용 양식에 맞는다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": ["src.shadow_optic.artifact.period_mismatch_materials", "reference_database"],
+        "action_label": {"en": "Check period standard", "ko": "당대 기준 확인"},
+        "target_label": {"en": "Optical construction guide", "ko": "광학 기구 제작 안내서"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_telescope_standard", "depends_on": ["src.shadow_optic.artifact.period_mismatch_materials"]},
+      "citation_id": "cite.shadow_optic.reference.period_telescope_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.shadow_optic.artifact.period_mismatch_materials", "source_ref": "src.shadow_optic.artifact.period_mismatch_materials", "label": {"en": "Object scan: tube materials", "ko": "실물 스캔: 경통 재료"}, "locator": {"en": "Object record A-1, tube and finish", "ko": "실물 기록 A-1, 경통과 마감"}},
+    {"id": "cite.shadow_optic.artifact.uv_replica_adhesive", "source_ref": "src.shadow_optic.artifact.uv_replica_adhesive", "label": {"en": "Object record: assembly glow", "ko": "실물 기록: 조립 형광"}, "locator": {"en": "Ultraviolet record A-2, cells and plate", "ko": "자외선 기록 A-2, 셀과 명판"}},
+    {"id": "cite.shadow_optic.document.archive_custody_record", "source_ref": "src.shadow_optic.document.archive_custody_record", "label": {"en": "Teaching collection record", "ko": "교육용 소장 기록"}, "locator": {"en": "Archive sheet 19, signed transfers", "ko": "보관 문서 19, 서명된 이관 항목"}},
+    {"id": "cite.shadow_optic.document.serial_reference_leaf", "source_ref": "src.shadow_optic.document.serial_reference_leaf", "label": {"en": "Telescope serial chart", "ko": "망원경 일련번호표"}, "locator": {"en": "Reference leaf 08, number placement", "ko": "참고 낱장 08, 번호 위치"}},
+    {"id": "cite.shadow_optic.npc.victor_shadow_mark_context", "source_ref": "src.shadow_optic.npc.victor_shadow_mark_context", "label": {"en": "Interview with Victor Hale", "ko": "빅터 헤일 면담"}, "locator": {"en": "Collection interview N-19", "ko": "소장품 면담 N-19"}},
+    {"id": "cite.shadow_optic.reference.period_telescope_standard", "source_ref": "src.shadow_optic.reference.period_telescope_standard", "label": {"en": "Period optical standard", "ko": "당대 광학 기준"}, "locator": {"en": "Fictional period reference 09, plate 6", "ko": "가상 시대 참고 09, 도판 6"}}
+  ],
+  "evidence_links": [
+    {"id": "link.shadow_optic.material_refutes_genuine", "source_ref": "src.shadow_optic.artifact.period_mismatch_materials", "hypothesis_id": "hyp.shadow_optic.genuine_period_optic", "relation": "REFUTE", "weight": 0.95, "independence_group": "modern_optic_materials", "citation_id": "cite.shadow_optic.artifact.period_mismatch_materials"},
+    {"id": "link.shadow_optic.material_refutes_repair", "source_ref": "src.shadow_optic.artifact.period_mismatch_materials", "hypothesis_id": "hyp.shadow_optic.genuine_body_with_later_optical_repair", "relation": "REFUTE", "weight": 0.9, "independence_group": "modern_optic_materials", "citation_id": "cite.shadow_optic.artifact.period_mismatch_materials"},
+    {"id": "link.shadow_optic.material_supports_reproduction", "source_ref": "src.shadow_optic.artifact.period_mismatch_materials", "hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style", "relation": "SUPPORT", "weight": 0.95, "independence_group": "modern_optic_materials", "citation_id": "cite.shadow_optic.artifact.period_mismatch_materials"},
+    {"id": "link.shadow_optic.adhesive_refutes_genuine", "source_ref": "src.shadow_optic.artifact.uv_replica_adhesive", "hypothesis_id": "hyp.shadow_optic.genuine_period_optic", "relation": "REFUTE", "weight": 1.0, "independence_group": "replica_adhesive_sequence", "citation_id": "cite.shadow_optic.artifact.uv_replica_adhesive"},
+    {"id": "link.shadow_optic.adhesive_refutes_repair", "source_ref": "src.shadow_optic.artifact.uv_replica_adhesive", "hypothesis_id": "hyp.shadow_optic.genuine_body_with_later_optical_repair", "relation": "REFUTE", "weight": 0.95, "independence_group": "replica_adhesive_sequence", "citation_id": "cite.shadow_optic.artifact.uv_replica_adhesive"},
+    {"id": "link.shadow_optic.adhesive_supports_reproduction", "source_ref": "src.shadow_optic.artifact.uv_replica_adhesive", "hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style", "relation": "SUPPORT", "weight": 1.0, "independence_group": "replica_adhesive_sequence", "citation_id": "cite.shadow_optic.artifact.uv_replica_adhesive"},
+    {"id": "link.shadow_optic.custody_supports_reproduction", "source_ref": "src.shadow_optic.document.archive_custody_record", "hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style", "relation": "SUPPORT", "weight": 0.9, "independence_group": "optic_archive_chain", "citation_id": "cite.shadow_optic.document.archive_custody_record"},
+    {"id": "link.shadow_optic.serial_refutes_genuine", "source_ref": "src.shadow_optic.document.serial_reference_leaf", "hypothesis_id": "hyp.shadow_optic.genuine_period_optic", "relation": "REFUTE", "weight": 0.9, "independence_group": "model156_serial_reference", "citation_id": "cite.shadow_optic.document.serial_reference_leaf"},
+    {"id": "link.shadow_optic.serial_refutes_repair", "source_ref": "src.shadow_optic.document.serial_reference_leaf", "hypothesis_id": "hyp.shadow_optic.genuine_body_with_later_optical_repair", "relation": "REFUTE", "weight": 0.8, "independence_group": "model156_serial_reference", "citation_id": "cite.shadow_optic.document.serial_reference_leaf"},
+    {"id": "link.shadow_optic.serial_supports_reproduction", "source_ref": "src.shadow_optic.document.serial_reference_leaf", "hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style", "relation": "SUPPORT", "weight": 0.85, "independence_group": "model156_serial_reference", "citation_id": "cite.shadow_optic.document.serial_reference_leaf"},
+    {"id": "link.shadow_optic.victor_supports_reproduction", "source_ref": "src.shadow_optic.npc.victor_shadow_mark_context", "hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style", "relation": "SUPPORT", "weight": 0.75, "independence_group": "victor_optic_account", "citation_id": "cite.shadow_optic.npc.victor_shadow_mark_context"},
+    {"id": "link.shadow_optic.standard_refutes_genuine", "source_ref": "src.shadow_optic.reference.period_telescope_standard", "hypothesis_id": "hyp.shadow_optic.genuine_period_optic", "relation": "REFUTE", "weight": 0.95, "independence_group": "independent_telescope_standard", "citation_id": "cite.shadow_optic.reference.period_telescope_standard"},
+    {"id": "link.shadow_optic.standard_refutes_repair", "source_ref": "src.shadow_optic.reference.period_telescope_standard", "hypothesis_id": "hyp.shadow_optic.genuine_body_with_later_optical_repair", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_telescope_standard", "citation_id": "cite.shadow_optic.reference.period_telescope_standard"},
+    {"id": "link.shadow_optic.standard_supports_reproduction", "source_ref": "src.shadow_optic.reference.period_telescope_standard", "hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style", "relation": "SUPPORT", "weight": 0.95, "independence_group": "independent_telescope_standard", "citation_id": "cite.shadow_optic.reference.period_telescope_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.shadow_optic.later_reproduction_using_period_style",
+    "required_source_refs": [
+      "src.shadow_optic.artifact.period_mismatch_materials",
+      "src.shadow_optic.artifact.uv_replica_adhesive",
+      "src.shadow_optic.document.archive_custody_record",
+      "src.shadow_optic.reference.period_telescope_standard"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite four findings from four independent groups. Explain the material date, shared assembly method, custody limit, and period construction mismatch.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 재료 연대, 공통 조립 방식, 소장 기록의 한계와 당대 제작법 불일치를 설명하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

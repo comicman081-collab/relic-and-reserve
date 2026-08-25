@@ -1,0 +1,543 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage2-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "pawn_watch",
+  "act_id": "ACT_1",
+  "title": {
+    "en": "The Pawned Watch",
+    "ko": "전당포의 회중시계"
+  },
+  "briefing": {
+    "en": "A Brasswell pocket watch returns with a pawn ticket that mentions a repaired wheel but gives no modern disclosure. The case, movement bridge, and one bright wheel do not tell the same simple story. Establish whether the watch is mostly untouched, carries a period repair, or contains modern replacement parts.",
+    "ko": "브래스웰 회중시계가 톱니 수리를 적은 전당표와 함께 돌아왔지만 현대 부품에 대한 고지는 없다. 케이스, 내부 브리지와 유난히 밝은 톱니 하나는 같은 단순한 이야기를 들려주지 않는다. 시계가 대부분 손대지 않은 원형인지, 당대 수리를 거쳤는지, 현대 교체 부품을 포함하는지 확인하라."
+  },
+  "central_question": {
+    "en": "Is the watch mostly factory original, authentically repaired in its period, or altered with modern parts?",
+    "ko": "이 시계는 대부분 출고 당시 원형인가, 당대에 진정성 있는 수리를 거쳤는가, 아니면 현대 부품으로 바뀌었는가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report identifies an authentic period wheel replacement and discloses it without mislabeling the whole watch as modern.",
+    "ko": "보고서는 진정성 있는 당대 톱니 교체를 확인하고 시계 전체를 현대품으로 잘못 규정하지 않으면서 이를 고지한다."
+  },
+  "failure": {
+    "en": "The component history remains unsupported, so the movement is stabilized and reviewed before sale.",
+    "ko": "부품 이력에 근거가 부족해 판매 전에 내부 장치를 안정화하고 함께 재검토한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 2 campaign desk.",
+      "ko": "스테이지 2 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "oil_movement_before_macro_capture",
+        "source_ref": "src.pawn_watch.artifact.bridge_service_marks",
+        "warning": {
+          "en": "Oiling the opened movement before macro capture destroys the dry residue pattern around the serviced bridge screw.",
+          "ko": "확대 촬영 전에 열린 무브먼트에 기름을 바르면 수리된 브리지 나사 주변의 마른 잔류물 무늬가 사라진다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "An unsupported component claim is reviewed and cannot earn a masterful result.",
+        "ko": "근거가 부족한 부품 판단은 재검토하며 최고 판정을 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_002",
+    "legacy_story_artifact_id": "story_artifact_06",
+    "display_name": {
+      "en": "Brasswell Pocket Watch BW-214",
+      "ko": "브래스웰 회중시계 BW-214"
+    },
+    "authoring_truth_hypothesis_id": "hyp.pawn_watch.period_repair",
+    "player_prompt": {
+      "en": "Record the unopened case first, then compare service marks and replacement-wheel dimensions without altering residue.",
+      "ko": "먼저 닫힌 케이스를 기록한 뒤 잔류물을 바꾸지 않으면서 수리 흔적과 교체 톱니의 치수를 비교하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.pawn_watch.mostly_original",
+      "label": {
+        "en": "Mostly factory original",
+        "ko": "대부분 출고 원형"
+      },
+      "claim": {
+        "en": "The case and all functional movement parts, including the bright escape wheel, remain the watch's original factory set.",
+        "ko": "케이스와 밝은 탈진 톱니를 포함한 모든 작동 부품이 출고 당시의 원래 한 세트다."
+      }
+    },
+    {
+      "id": "hyp.pawn_watch.period_repair",
+      "label": {
+        "en": "Authentic period repair",
+        "ko": "진정성 있는 당대 수리"
+      },
+      "claim": {
+        "en": "The watch is authentic, but a documented 1916 repair replaced its escape wheel with a compatible period workshop part.",
+        "ko": "시계는 진품이지만 기록된 1916년 수리에서 탈진 톱니를 호환되는 당대 공방 부품으로 교체했다."
+      }
+    },
+    {
+      "id": "hyp.pawn_watch.modern_parts",
+      "label": {
+        "en": "Modern replacement parts",
+        "ko": "현대 교체 부품"
+      },
+      "claim": {
+        "en": "The bright wheel and related fittings were manufactured recently and installed to imitate a working period movement.",
+        "ko": "밝은 톱니와 관련 체결 부품은 최근 제작되어 작동하는 당대 무브먼트처럼 보이도록 장착되었다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.pawn_watch.artifact.case_wear_serial",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_002",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Case wear and serial BW-214",
+        "ko": "케이스 마모와 일련번호 BW-214"
+      },
+      "text": {
+        "en": "Serial BW-214 is struck beneath the bow, and its compressed metal edge continues under an old polish layer. The hinge, pendant, and case lip share a long handling gradient with no fresh welding or recut serial bed.",
+        "ko": "일련번호 BW-214는 고리 아래에 찍혀 있고 눌린 금속 가장자리는 오래된 연마층 아래로 이어진다. 경첩, 용두 목과 케이스 가장자리는 오랜 손길 마모를 함께 보이며 새 용접이나 다시 깎은 번호 자리는 없다."
+      },
+      "unlock": {
+        "action": "inspect",
+        "target": "closed_case_and_bow",
+        "requires": []
+      },
+      "risk": {
+        "destroyed_by": []
+      },
+      "independence": {
+        "group": "external_case_identity",
+        "depends_on": []
+      },
+      "citation_id": "cite.pawn_watch.artifact.case_wear_serial"
+    },
+    {
+      "source_ref": "src.pawn_watch.artifact.bridge_service_marks",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_002",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Bridge screw service sequence",
+        "ko": "브리지 나사의 수리 순서"
+      },
+      "text": {
+        "en": "The movement bridge bears the matching BW-214 workshop suffix. One bridge screw has old opposing tool marks beneath a dry shellac residue ring; the other screws retain factory-parallel slots. The opened joint shows no fresh oil or modern abrasive dust.",
+        "ko": "무브먼트 브리지에는 일치하는 BW-214 공방 접미 표식이 있다. 브리지 나사 하나에는 마른 셸락 잔류 고리 아래에 오래된 반대 방향 공구 자국이 있고, 다른 나사들은 출고 당시 평행 홈을 유지한다. 열린 결합부에는 새 기름이나 현대 연마 가루가 없다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "movement_bridge",
+        "requires": [
+          "src.pawn_watch.artifact.case_wear_serial",
+          "precision_screwdriver"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [
+          "oil_movement_before_macro_capture"
+        ],
+        "player_warning": {
+          "en": "Capture the dry screw and residue ring before applying any oil; that action permanently removes this evidence state.",
+          "ko": "기름을 바르기 전에 마른 나사와 잔류 고리를 촬영하라. 기름칠은 이 증거 상태를 영구히 없앤다."
+        }
+      },
+      "independence": {
+        "group": "internal_service_sequence",
+        "depends_on": [
+          "src.pawn_watch.artifact.case_wear_serial"
+        ]
+      },
+      "citation_id": "cite.pawn_watch.artifact.bridge_service_marks"
+    },
+    {
+      "source_ref": "src.pawn_watch.artifact.escape_wheel_measurement",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_002",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Escape-wheel dimensions and cut",
+        "ko": "탈진 톱니의 치수와 절삭 흔적"
+      },
+      "text": {
+        "en": "The bright escape wheel is 0.18 millimeters thinner than the factory drawing but matches the repair gauge dimension. Its tooth roots carry period bow-saw chatter and an aged hand-burnished rim, not the regular milling lines expected from a modern replacement.",
+        "ko": "밝은 탈진 톱니는 공장 도면보다 0.18밀리미터 얇지만 수리용 게이지 치수와 일치한다. 톱니 뿌리에는 당대 활톱의 떨림 자국과 오래된 손 광택 테두리가 있으며 현대 교체품에서 예상되는 규칙적인 밀링 선은 없다."
+      },
+      "unlock": {
+        "action": "measure",
+        "target": "escape_wheel",
+        "requires": [
+          "src.pawn_watch.artifact.bridge_service_marks",
+          "precision_scale"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Support the wheel by its arbor and take one calibrated measurement; clamping the teeth can bend them.",
+          "ko": "축을 받치고 보정된 치수를 한 번만 재라. 톱니를 집게로 물면 휘어질 수 있다."
+        }
+      },
+      "independence": {
+        "group": "component_measurement",
+        "depends_on": [
+          "src.pawn_watch.artifact.bridge_service_marks"
+        ]
+      },
+      "citation_id": "cite.pawn_watch.artifact.escape_wheel_measurement"
+    },
+    {
+      "source_ref": "src.pawn_watch.document.pawn_ticket",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_11",
+      "document_id": "doc.pawn_watch.ticket_bw214",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "MEDIUM",
+      "label": {
+        "en": "Bell Street pawn and repair ticket",
+        "ko": "벨 거리 전당·수리표"
+      },
+      "text": {
+        "en": "The fictional 1916 ticket identifies Brasswell watch BW-214, records the depositor and continuous ticket renewals, and states: 'fractured escape wheel replaced from period service blank; original wheel returned in envelope.' Its bench code matches the mark beside the serviced bridge screw.",
+        "ko": "가상의 1916년 표는 브래스웰 시계 BW-214와 맡긴 사람, 이어지는 표 갱신 기록을 명시하고 '파손된 탈진 톱니를 당대 수리용 반제품으로 교체, 원래 톱니는 봉투에 반환'이라고 적는다. 작업대 부호는 수리된 브리지 나사 옆 표식과 일치한다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "document_11",
+        "requires": [
+          "src.pawn_watch.artifact.case_wear_serial"
+        ]
+      },
+      "risk": {
+        "destroyed_by": []
+      },
+      "independence": {
+        "group": "pawn_service_record",
+        "depends_on": [
+          "src.pawn_watch.artifact.case_wear_serial"
+        ]
+      },
+      "citation_id": "cite.pawn_watch.document.pawn_ticket"
+    },
+    {
+      "source_ref": "src.pawn_watch.npc.lena_ticket_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "lena_falk",
+      "npc_id": "lena_falk",
+      "expression": "earnest",
+      "reliability": "MEDIUM",
+      "label": {
+        "en": "Lena Falk's ticket context",
+        "ko": "레나 팔크가 전하는 표의 맥락"
+      },
+      "text": {
+        "en": "Lena says the ticket remained folded in the watch pouch when her family recovered the pledge. She recognizes the envelope notation from other family papers but did not see the 1916 repair, so she treats the ticket as the evidence and her memory only as context.",
+        "ko": "레나는 가족이 전당물을 되찾았을 때 표가 시계 주머니 안에 접혀 있었다고 말한다. 다른 집안 문서에서 같은 봉투 표기를 본 적은 있지만 1916년 수리를 직접 본 것은 아니므로 표 자체를 증거로, 자신의 기억은 정황으로만 다뤄 달라고 한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "lena_falk",
+        "requires": [
+          "src.pawn_watch.document.pawn_ticket"
+        ]
+      },
+      "risk": {
+        "destroyed_by": []
+      },
+      "independence": {
+        "group": "family_custody_context",
+        "depends_on": [
+          "src.pawn_watch.document.pawn_ticket"
+        ]
+      },
+      "citation_id": "cite.pawn_watch.npc.lena_ticket_context"
+    },
+    {
+      "source_ref": "src.pawn_watch.reference.brasswell_service_gauge",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_07",
+      "reference_id": "ref.brasswell.service_gauge_1908_1919",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Brasswell service gauge, 1908–1919",
+        "ko": "브래스웰 수리용 게이지, 1908~1919년"
+      },
+      "text": {
+        "en": "The fictional service sheet lists a thinner escape-wheel blank for field repairs to the BW-200 series and illustrates hand finishing with a bow saw and burnisher. The modern replacement appendix instead specifies machine-milled roots and a full factory thickness.",
+        "ko": "가상의 수리 지침은 BW-200 계열 현장 수리용으로 더 얇은 탈진 톱니 반제품을 적고 활톱과 광택쇠를 이용한 손 마감을 도해한다. 반면 현대 교체품 부록은 기계 밀링한 톱니 뿌리와 공장 규격 전체 두께를 명시한다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": [
+          "src.pawn_watch.artifact.escape_wheel_measurement",
+          "reference_database"
+        ]
+      },
+      "risk": {
+        "destroyed_by": []
+      },
+      "independence": {
+        "group": "independent_service_reference",
+        "depends_on": [
+          "src.pawn_watch.artifact.escape_wheel_measurement"
+        ]
+      },
+      "citation_id": "cite.pawn_watch.reference.brasswell_service_gauge"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.pawn_watch.artifact.case_wear_serial",
+      "source_ref": "src.pawn_watch.artifact.case_wear_serial",
+      "label": {
+        "en": "Object record: case serial BW-214",
+        "ko": "실물 기록: 케이스 일련번호 BW-214"
+      },
+      "locator": {
+        "en": "Inspection record A-1, bow and case lip",
+        "ko": "검사 기록 A-1, 고리와 케이스 가장자리"
+      }
+    },
+    {
+      "id": "cite.pawn_watch.artifact.bridge_service_marks",
+      "source_ref": "src.pawn_watch.artifact.bridge_service_marks",
+      "label": {
+        "en": "Object record: serviced bridge screw",
+        "ko": "실물 기록: 수리된 브리지 나사"
+      },
+      "locator": {
+        "en": "Macro record A-2, bridge screw and residue ring",
+        "ko": "확대 기록 A-2, 브리지 나사와 잔류 고리"
+      }
+    },
+    {
+      "id": "cite.pawn_watch.artifact.escape_wheel_measurement",
+      "source_ref": "src.pawn_watch.artifact.escape_wheel_measurement",
+      "label": {
+        "en": "Object measurement: escape wheel",
+        "ko": "실물 측정: 탈진 톱니"
+      },
+      "locator": {
+        "en": "Measurement record A-3, wheel thickness and tooth roots",
+        "ko": "측정 기록 A-3, 톱니 두께와 뿌리"
+      }
+    },
+    {
+      "id": "cite.pawn_watch.document.pawn_ticket",
+      "source_ref": "src.pawn_watch.document.pawn_ticket",
+      "label": {
+        "en": "Bell Street ticket BW-214",
+        "ko": "벨 거리 표 BW-214"
+      },
+      "locator": {
+        "en": "Case document D-11, repair line and renewals",
+        "ko": "사건 문서 D-11, 수리 항목과 갱신 기록"
+      }
+    },
+    {
+      "id": "cite.pawn_watch.npc.lena_ticket_context",
+      "source_ref": "src.pawn_watch.npc.lena_ticket_context",
+      "label": {
+        "en": "Interview with Lena Falk",
+        "ko": "레나 팔크 면담"
+      },
+      "locator": {
+        "en": "Custody interview N-1",
+        "ko": "보관 이력 면담 N-1"
+      }
+    },
+    {
+      "id": "cite.pawn_watch.reference.brasswell_service_gauge",
+      "source_ref": "src.pawn_watch.reference.brasswell_service_gauge",
+      "label": {
+        "en": "Brasswell BW-200 service gauge",
+        "ko": "브래스웰 BW-200 수리용 게이지"
+      },
+      "locator": {
+        "en": "Fictional reference archive R-7, service plate 5",
+        "ko": "가상 참고자료 보관함 R-7, 수리 도판 5"
+      }
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "link.pawn.case_supports_original",
+      "source_ref": "src.pawn_watch.artifact.case_wear_serial",
+      "hypothesis_id": "hyp.pawn_watch.mostly_original",
+      "relation": "SUPPORT",
+      "weight": 0.55,
+      "independence_group": "external_case_identity",
+      "citation_id": "cite.pawn_watch.artifact.case_wear_serial"
+    },
+    {
+      "id": "link.pawn.case_refutes_modern",
+      "source_ref": "src.pawn_watch.artifact.case_wear_serial",
+      "hypothesis_id": "hyp.pawn_watch.modern_parts",
+      "relation": "REFUTE",
+      "weight": 0.45,
+      "independence_group": "external_case_identity",
+      "citation_id": "cite.pawn_watch.artifact.case_wear_serial"
+    },
+    {
+      "id": "link.pawn.bridge_refutes_original",
+      "source_ref": "src.pawn_watch.artifact.bridge_service_marks",
+      "hypothesis_id": "hyp.pawn_watch.mostly_original",
+      "relation": "REFUTE",
+      "weight": 0.65,
+      "independence_group": "internal_service_sequence",
+      "citation_id": "cite.pawn_watch.artifact.bridge_service_marks"
+    },
+    {
+      "id": "link.pawn.bridge_supports_period_repair",
+      "source_ref": "src.pawn_watch.artifact.bridge_service_marks",
+      "hypothesis_id": "hyp.pawn_watch.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.65,
+      "independence_group": "internal_service_sequence",
+      "citation_id": "cite.pawn_watch.artifact.bridge_service_marks"
+    },
+    {
+      "id": "link.pawn.wheel_supports_period_repair",
+      "source_ref": "src.pawn_watch.artifact.escape_wheel_measurement",
+      "hypothesis_id": "hyp.pawn_watch.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.7,
+      "independence_group": "component_measurement",
+      "citation_id": "cite.pawn_watch.artifact.escape_wheel_measurement"
+    },
+    {
+      "id": "link.pawn.wheel_refutes_original",
+      "source_ref": "src.pawn_watch.artifact.escape_wheel_measurement",
+      "hypothesis_id": "hyp.pawn_watch.mostly_original",
+      "relation": "REFUTE",
+      "weight": 0.65,
+      "independence_group": "component_measurement",
+      "citation_id": "cite.pawn_watch.artifact.escape_wheel_measurement"
+    },
+    {
+      "id": "link.pawn.wheel_refutes_modern",
+      "source_ref": "src.pawn_watch.artifact.escape_wheel_measurement",
+      "hypothesis_id": "hyp.pawn_watch.modern_parts",
+      "relation": "REFUTE",
+      "weight": 0.7,
+      "independence_group": "component_measurement",
+      "citation_id": "cite.pawn_watch.artifact.escape_wheel_measurement"
+    },
+    {
+      "id": "link.pawn.ticket_supports_period_repair",
+      "source_ref": "src.pawn_watch.document.pawn_ticket",
+      "hypothesis_id": "hyp.pawn_watch.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.7,
+      "independence_group": "pawn_service_record",
+      "citation_id": "cite.pawn_watch.document.pawn_ticket"
+    },
+    {
+      "id": "link.pawn.ticket_refutes_modern",
+      "source_ref": "src.pawn_watch.document.pawn_ticket",
+      "hypothesis_id": "hyp.pawn_watch.modern_parts",
+      "relation": "REFUTE",
+      "weight": 0.6,
+      "independence_group": "pawn_service_record",
+      "citation_id": "cite.pawn_watch.document.pawn_ticket"
+    },
+    {
+      "id": "link.pawn.lena_supports_period_repair",
+      "source_ref": "src.pawn_watch.npc.lena_ticket_context",
+      "hypothesis_id": "hyp.pawn_watch.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.4,
+      "independence_group": "family_custody_context",
+      "citation_id": "cite.pawn_watch.npc.lena_ticket_context"
+    },
+    {
+      "id": "link.pawn.lena_refutes_modern",
+      "source_ref": "src.pawn_watch.npc.lena_ticket_context",
+      "hypothesis_id": "hyp.pawn_watch.modern_parts",
+      "relation": "REFUTE",
+      "weight": 0.35,
+      "independence_group": "family_custody_context",
+      "citation_id": "cite.pawn_watch.npc.lena_ticket_context"
+    },
+    {
+      "id": "link.pawn.reference_supports_period_repair",
+      "source_ref": "src.pawn_watch.reference.brasswell_service_gauge",
+      "hypothesis_id": "hyp.pawn_watch.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.7,
+      "independence_group": "independent_service_reference",
+      "citation_id": "cite.pawn_watch.reference.brasswell_service_gauge"
+    },
+    {
+      "id": "link.pawn.reference_refutes_modern",
+      "source_ref": "src.pawn_watch.reference.brasswell_service_gauge",
+      "hypothesis_id": "hyp.pawn_watch.modern_parts",
+      "relation": "REFUTE",
+      "weight": 0.65,
+      "independence_group": "independent_service_reference",
+      "citation_id": "cite.pawn_watch.reference.brasswell_service_gauge"
+    }
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.pawn_watch.period_repair",
+    "required_source_refs": [
+      "src.pawn_watch.artifact.bridge_service_marks",
+      "src.pawn_watch.artifact.escape_wheel_measurement",
+      "src.pawn_watch.document.pawn_ticket",
+      "src.pawn_watch.reference.brasswell_service_gauge"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings from four independent groups. Identify the replaced wheel, date the repair, reject a modern-part claim, and disclose the intervention without condemning the authentic watch body.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 교체된 톱니와 수리 시기를 밝히고 현대 부품 주장을 배제하며 진품 시계 본체 전체를 부정하지 않도록 수리 사실을 고지하라."
+    },
+    "outcome_rules": [
+      {
+        "outcome": "masterful",
+        "requires_correct_hypothesis": true,
+        "requires_all_required_sources": true,
+        "minimum_independent_groups": 4,
+        "minimum_citations": 4
+      },
+      {
+        "outcome": "credible",
+        "requires_correct_hypothesis": true,
+        "requires_all_required_sources": false,
+        "minimum_independent_groups": 3,
+        "minimum_citations": 3
+      },
+      {
+        "outcome": "mistaken",
+        "requires_correct_hypothesis": false,
+        "minimum_citations": 2
+      },
+      {
+        "outcome": "reviewed_with_mentor",
+        "fallback": true
+      }
+    ]
+  }
+}

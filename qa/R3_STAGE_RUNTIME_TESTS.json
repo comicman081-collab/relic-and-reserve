@@ -1,0 +1,1719 @@
+{
+  "executed": 43,
+  "failed": 0,
+  "passed": 43,
+  "skipped": 0,
+  "suite": "R3 ten-stage runtime and persistent profile",
+  "tests": [
+    {
+      "evidence": {
+        "errors": [],
+        "stages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "executed": true,
+      "id": "STAGE-DATA-01",
+      "name": "Exactly ten data-driven stage definitions load",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "STAGE-DATA-02",
+      "name": "Difficulty is exactly pow(1.07, stage-1)",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "STAGE-DATA-03",
+      "name": "Each stage introduces two cumulatively unlocked artifacts",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "contract": true,
+        "done": {
+          "icon": "",
+          "step": 6,
+          "target": "",
+          "targets": [],
+          "text": "",
+          "title": "",
+          "total": 6,
+          "visible": false
+        },
+        "publicFailures": [],
+        "sequenceFailures": []
+      },
+      "executed": true,
+      "id": "STAGE-TUTORIAL-01",
+      "name": "Stage 1 exposes six localized presentation-safe steps and accepts only the next event idempotently",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "explicitReset": {
+          "icon": "clue_generic",
+          "step": 1,
+          "target": "CaseEvidence_*",
+          "targets": [
+            "CaseEvidence_*",
+            "CaseEvidenceCard_*"
+          ],
+          "text": "Check the risk, then record one clue.",
+          "title": "Inspect one clue",
+          "total": 6,
+          "visible": true
+        },
+        "fullNewGame": true,
+        "fullReload": true,
+        "fullReset": true,
+        "invalid": {
+          "code": "INVALID_TUTORIAL_STEP_SEQUENCE",
+          "ok": false
+        },
+        "legacy": {
+          "clearedStages": [],
+          "highestUnlockedStage": 1,
+          "schema_version": 1,
+          "stageBest": {},
+          "tutorialCompletedSteps": []
+        },
+        "partialBefore": [
+          "INVESTIGATE",
+          "CITE",
+          "REPORT"
+        ],
+        "partialNewGame": {
+          "code": "OK",
+          "difficultyMultiplier": 1.0,
+          "ok": true,
+          "stage": 1
+        },
+        "partialReload": true,
+        "partialReset": true
+      },
+      "executed": true,
+      "id": "STAGE-TUTORIAL-02",
+      "name": "Full guidance completion persists across reset, NEW GAME and profile reload while partial guidance survives profile/run reload but restarts with a fresh Stage 1 run",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "eventIgnored": true,
+        "listedWithoutRepair": true,
+        "prefix": [
+          "INVESTIGATE",
+          "CITE",
+          "REPORT"
+        ],
+        "stage2": {
+          "icon": "",
+          "step": 3,
+          "target": "",
+          "targets": [],
+          "text": "",
+          "title": "",
+          "total": 6,
+          "visible": false
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TUTORIAL-03",
+      "name": "Tutorial guidance is advisory, cannot block listing, ignores out-of-order hooks and is inactive outside Stage 1",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cite": true,
+        "completed": [
+          "INVESTIGATE",
+          "CITE",
+          "REPORT",
+          "REPAIR",
+          "LIST",
+          "AUCTION"
+        ],
+        "discover": {
+          "appliedRiskPenalty": 3.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.prologue.artifact.backplate_screws",
+          "ok": true,
+          "riskLevel": "HIGH",
+          "sourceId": "physical_fastener_evidence"
+        },
+        "evidence": "src.prologue.artifact.backplate_screws",
+        "listed": true,
+        "noSaleHooked": true,
+        "repair": "Mechanism repaired.",
+        "repairProfile": {
+          "interventionTradeoff": {
+            "en": "Stabilizing the cracked bridge protects the movement, but over-tightening can disturb evidence around the period replacement screw.",
+            "ko": "갈라진 브리지를 고정하면 무브먼트를 보호하지만, 과도하게 조이면 당시 교체 나사 주변의 증거가 흐트러질 수 있습니다."
+          },
+          "repairableDamages": [
+            "CRACK"
+          ],
+          "requiredTools": [
+            "precision_screwdriver"
+          ]
+        },
+        "resolve": {
+          "citedEvidenceIds": [
+            "src.prologue.artifact.backplate_screws"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.period_repair",
+          "independentSourceCount": 1,
+          "netScore": 2,
+          "ok": true,
+          "outcome": "reviewed_with_mentor",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 2
+        },
+        "soldHooked": true,
+        "wrongTool": "Required precision tool is not selected."
+      },
+      "executed": true,
+      "id": "STAGE-TUTORIAL-04",
+      "name": "Real Stage 1 investigate, cite, report, recommended repair, listing and both auction outcomes drive the six hooks without counting a wrong-tool no-op",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "STAGE-MARKET-SPOTLIGHT-01",
+      "name": "Every stage starts with both introduced artifacts exactly once in a deterministic five-lot cumulative roster",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "auction": {
+          "participants": 6,
+          "reasons": [],
+          "status": "SOLD"
+        },
+        "bought": true,
+        "clue": "CONSTRUCTION_METHOD",
+        "fault": "SCRATCH",
+        "inspection": {
+          "confidenceWeight": 0.14,
+          "contradicts": [
+            "modern_method"
+          ],
+          "observation": "fastener and joinery class inspected",
+          "supports": [
+            "period_method"
+          ]
+        },
+        "listed": true,
+        "lot": {
+          "lotId": "day_1_lot_01",
+          "price": 1400,
+          "seed": 76584514,
+          "sold": true,
+          "specId": "artifact_070"
+        },
+        "moneyBeforeBuy": 1740,
+        "naturallyAffordable": true,
+        "observableBound": true,
+        "repair": "Mechanism repaired.",
+        "rosterStable": true,
+        "saveCompatible": true,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.31079601,
+          "ok": true,
+          "stage": 5
+        }
+      },
+      "executed": true,
+      "id": "STAGE-MARKET-SPOTLIGHT-02",
+      "name": "A naturally affordable spotlight expansion artifact reaches buy, authored inspection, repair, listing and auction while same-day/save roster state remains stable",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "baselineMissing": [],
+        "expansionMissing": [],
+        "specs": 80
+      },
+      "executed": true,
+      "id": "STAGE-CATALOG-01",
+      "name": "Baseline 60 identities remain and expansion reaches 80 specs",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "STAGE-CATALOG-02",
+      "name": "All 20 expansion specs have unique loadable visual variants",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "bound": true,
+        "hydrateRebound": true,
+        "serializedKeys": [
+          "uniqueId",
+          "artifactSpecId",
+          "seed",
+          "authenticityTruth",
+          "originalParts",
+          "replacementParts",
+          "damageInstances",
+          "knownClues",
+          "evidence",
+          "playerHypothesis",
+          "confidence",
+          "cleanliness",
+          "surfaceCondition",
+          "structuralCondition",
+          "mechanicalCondition",
+          "historicalIntegrity",
+          "restorationQuality",
+          "acquisitionPrice",
+          "restorationCost",
+          "estimatedValue",
+          "rotation",
+          "zoom",
+          "inspected",
+          "repaired",
+          "partStates",
+          "listing",
+          "sold",
+          "caseId",
+          "storyArtifactId",
+          "caseResolved",
+          "possibleClues"
+        ]
+      },
+      "executed": true,
+      "id": "STAGE-CATALOG-03",
+      "name": "Expansion inspection, repair and auction profiles bind immutably",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "campaignCases": [
+          "prologue_clock",
+          "silent_radio",
+          "perfect_fake",
+          "leave_patina",
+          "estate_compass",
+          "pawn_watch",
+          "garage_lamp",
+          "telephone_trace",
+          "early_camera",
+          "false_invoice",
+          "mislabelled_collection",
+          "observatory_instrument",
+          "collector_promise",
+          "three_cameras",
+          "shadow_camera",
+          "shadow_gauge",
+          "shadow_clock",
+          "shadow_music_box",
+          "shadow_optic",
+          "composite_prototype",
+          "master_chronometer",
+          "master_optical",
+          "master_recorder",
+          "master_gauge",
+          "master_camera",
+          "master_mechanism"
+        ],
+        "stageCases": [
+          "prologue_clock",
+          "silent_radio",
+          "perfect_fake",
+          "leave_patina",
+          "estate_compass",
+          "pawn_watch",
+          "garage_lamp",
+          "telephone_trace",
+          "early_camera",
+          "false_invoice",
+          "mislabelled_collection",
+          "observatory_instrument",
+          "collector_promise",
+          "three_cameras",
+          "shadow_camera",
+          "shadow_gauge",
+          "shadow_clock",
+          "shadow_music_box",
+          "shadow_optic",
+          "composite_prototype",
+          "master_chronometer",
+          "master_optical",
+          "master_recorder",
+          "master_gauge",
+          "master_camera",
+          "master_mechanism"
+        ]
+      },
+      "executed": true,
+      "id": "STAGE-CAMPAIGN-01",
+      "name": "Stage layer preserves the canonical 26-case sequence",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "STAGE-PERFORMANCE-01",
+      "name": "All ten stages expose localized data-driven public summaries without private IDs or raw tokens",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "STAGE-PERFORMANCE-02",
+      "name": "Every authored grade threshold selects the localized grade at and below its boundary",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "clear": {
+          "best": 54.0,
+          "code": "OK",
+          "highestUnlockedStage": 2,
+          "ok": true,
+          "performance": {
+            "advice": "Compare independent clues before reporting.",
+            "advisoryOnly": true,
+            "best": 54.0,
+            "completionLabel": "Complete every case in this opening set.",
+            "completionMet": true,
+            "completionProgress": 1.0,
+            "current": 54.0,
+            "failureOrSuccess": "The target was missed, but the stage is cleared.",
+            "goalLabel": "Build a sound evidence habit.",
+            "grade": "Developing",
+            "hasNextStage": true,
+            "isNewBest": true,
+            "metTarget": false,
+            "nextStageUnlocked": true,
+            "progress": 0.981818181818182,
+            "stage": 1,
+            "target": 55.0
+          },
+          "stage": 1
+        },
+        "profile": {
+          "clearedStages": [
+            1
+          ],
+          "highestUnlockedStage": 2,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 54.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "run": {
+          "caseIds": [
+            "prologue_clock",
+            "silent_radio",
+            "perfect_fake"
+          ],
+          "completedAtDay": 1,
+          "difficultyMultiplier": 1.0,
+          "grandReserveRequired": false,
+          "lastPerformance": {
+            "best": 54.0,
+            "current": 54.0,
+            "gradeId": "DEVELOPING",
+            "isNewBest": true,
+            "metTarget": false,
+            "target": 55.0
+          },
+          "score": 54.0,
+          "stageClearAcknowledged": true,
+          "stageId": 1,
+          "stageReplayFeedbackSnapshot": {
+            "adviceCode": "STRENGTHEN_EVIDENCE",
+            "axes": {
+              "investigation": {
+                "available": true,
+                "statusCode": "FRAGILE",
+                "value": 0.0
+              },
+              "preservation": {
+                "available": false,
+                "statusCode": "UNAVAILABLE",
+                "value": 0.0
+              },
+              "sale": {
+                "available": false,
+                "statusCode": "NO_ATTEMPTS",
+                "value": null
+              }
+            },
+            "stage": 1,
+            "weakest": "investigation"
+          },
+          "stageReplayTelemetrySnapshot": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "available": true,
+            "dominantToolId": "",
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskRate": 0.0,
+            "investigationRiskWeightSum": 0.0,
+            "listingCount": 0,
+            "listingStrategyDistribution": {
+              "AUTO_GRAND_RESERVE": 0.0,
+              "BALANCED": 0.0,
+              "CUSTOM": 0.0,
+              "FAST": 0.0,
+              "HIGH": 0.0,
+              "LEGACY_UNKNOWN": 0.0
+            },
+            "noSaleCount": 0,
+            "noSaleRate": 0.0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairResourcePressure": 0.0,
+            "repairToolIdsUsed": [],
+            "stage": 1,
+            "summaryCodes": [
+              "NO_INVESTIGATION"
+            ],
+            "toolConcentration": 0.0
+          },
+          "startedAtDay": 1,
+          "status": "CLEARED",
+          "telemetry": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "budgetBasis": 1200,
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskWeightSum": 0.0,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 0,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairToolUseCounts": {}
+          },
+          "telemetryAvailable": true,
+          "telemetrySeenIds": [],
+          "tutorialCompletedSteps": []
+        }
+      },
+      "executed": true,
+      "id": "STAGE-PERFORMANCE-03",
+      "name": "Missing an advisory target still clears the stage and persistently unlocks the next stage",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "legacy": {},
+        "malformed": {}
+      },
+      "executed": true,
+      "id": "STAGE-PERFORMANCE-04",
+      "name": "Old or malformed run saves normalize to a safe empty performance snapshot",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "act": "ACT_1",
+        "caseIds": [
+          "leave_patina",
+          "estate_compass",
+          "pawn_watch"
+        ],
+        "firstPending": "leave_patina",
+        "outsideBlocked": true,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.07,
+          "ok": true,
+          "stage": 2
+        }
+      },
+      "executed": true,
+      "id": "STAGE-SCOPE-01",
+      "name": "NEW GAME Stage 2 enters its first case and blocks out-of-stage cases",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "completedCases": [
+          "leave_patina",
+          "estate_compass",
+          "pawn_watch"
+        ],
+        "profile": {
+          "clearedStages": [
+            1,
+            2
+          ],
+          "highestUnlockedStage": 3,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 75.0,
+            "2": 100.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "run": {
+          "caseIds": [
+            "leave_patina",
+            "estate_compass",
+            "pawn_watch"
+          ],
+          "completedAtDay": 1,
+          "difficultyMultiplier": 1.07,
+          "grandReserveRequired": false,
+          "lastPerformance": {
+            "best": 100.0,
+            "current": 100.0,
+            "gradeId": "MASTER",
+            "isNewBest": true,
+            "metTarget": true,
+            "target": 56.0
+          },
+          "score": 100.0,
+          "stageClearAcknowledged": true,
+          "stageId": 2,
+          "stageReplayFeedbackSnapshot": {
+            "adviceCode": "PROTECT_CONDITION",
+            "axes": {
+              "investigation": {
+                "available": true,
+                "statusCode": "STRONG",
+                "value": 100.0
+              },
+              "preservation": {
+                "available": true,
+                "statusCode": "STEADY",
+                "value": 68.7923333333333
+              },
+              "sale": {
+                "available": true,
+                "statusCode": "STRONG",
+                "value": 79.1685366993922
+              }
+            },
+            "stage": 2,
+            "weakest": "preservation"
+          },
+          "stageReplayTelemetrySnapshot": {
+            "artifactSalesCount": 2,
+            "auctionCount": 2,
+            "available": true,
+            "dominantToolId": "",
+            "investigationActions": 16,
+            "investigationRiskActions": 4,
+            "investigationRiskRate": 0.25,
+            "investigationRiskWeightSum": 6.42,
+            "listingCount": 2,
+            "listingStrategyDistribution": {
+              "AUTO_GRAND_RESERVE": 0.0,
+              "BALANCED": 0.0,
+              "CUSTOM": 1.0,
+              "FAST": 0.0,
+              "HIGH": 0.0,
+              "LEGACY_UNKNOWN": 0.0
+            },
+            "noSaleCount": 0,
+            "noSaleRate": 0.0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairResourcePressure": 0.0,
+            "repairToolIdsUsed": [],
+            "stage": 2,
+            "summaryCodes": [
+              "RISK_TAKEN"
+            ],
+            "toolConcentration": 0.0
+          },
+          "startedAtDay": 1,
+          "status": "CLEARED",
+          "telemetry": {
+            "artifactSalesCount": 2,
+            "auctionCount": 2,
+            "budgetBasis": 1335,
+            "investigationActions": 16,
+            "investigationRiskActions": 4,
+            "investigationRiskWeightSum": 6.42,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 2,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairToolUseCounts": {}
+          },
+          "telemetryAvailable": true,
+          "telemetrySeenIds": [
+            "INVESTIGATE|leave_patina|src.leave_patina.artifact.wear_gradient",
+            "INVESTIGATE|leave_patina|src.leave_patina.artifact.hidden_finish_boundary",
+            "INVESTIGATE|leave_patina|src.leave_patina.document.service_note",
+            "INVESTIGATE|leave_patina|src.leave_patina.npc.iris_assessment",
+            "INVESTIGATE|leave_patina|src.leave_patina.reference.eldemere_finish",
+            "LISTING|auction_1_854565215_0",
+            "AUCTION|auction_1_854565215_0",
+            "INVESTIGATE|estate_compass|src.estate_compass.artifact.dial_serial",
+            "INVESTIGATE|estate_compass|src.estate_compass.artifact.internal_balance",
+            "INVESTIGATE|estate_compass|src.estate_compass.document.inventory_entry",
+            "INVESTIGATE|estate_compass|src.estate_compass.npc.lena_recollection",
+            "INVESTIGATE|estate_compass|src.estate_compass.reference.kestrel_guide",
+            "LISTING|auction_1_289559969_1",
+            "AUCTION|auction_1_289559969_1",
+            "INVESTIGATE|pawn_watch|src.pawn_watch.artifact.case_wear_serial",
+            "INVESTIGATE|pawn_watch|src.pawn_watch.artifact.bridge_service_marks",
+            "INVESTIGATE|pawn_watch|src.pawn_watch.document.pawn_ticket",
+            "INVESTIGATE|pawn_watch|src.pawn_watch.artifact.escape_wheel_measurement",
+            "INVESTIGATE|pawn_watch|src.pawn_watch.npc.lena_ticket_context",
+            "INVESTIGATE|pawn_watch|src.pawn_watch.reference.brasswell_service_gauge"
+          ],
+          "tutorialCompletedSteps": []
+        }
+      },
+      "executed": true,
+      "id": "STAGE-SCOPE-02",
+      "name": "The final scoped case authoritatively clears Stage 2 and unlocks Stage 3",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "stage1": {
+          "act": "ACT_1",
+          "ok": true,
+          "pending": "silent_radio"
+        },
+        "stage5": {
+          "act": "ACT_4",
+          "ok": true,
+          "pending": "shadow_camera"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-CROSS-ACT-01",
+      "name": "Stage-scoped runs bridge Prologue to Act 1 and Act 3 to Act 4 without a progression deadlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cleared": {
+          "advice": "Compare independent clues before reporting.",
+          "advisoryOnly": true,
+          "best": 100.0,
+          "completionLabel": "Complete every case in this opening set.",
+          "completionMet": true,
+          "completionProgress": 1.0,
+          "current": 100.0,
+          "failureOrSuccess": "Performance target met.",
+          "goalLabel": "Build a sound evidence habit.",
+          "grade": "Master",
+          "hasNextStage": true,
+          "isNewBest": true,
+          "metTarget": true,
+          "nextStageUnlocked": true,
+          "progress": 1.0,
+          "stage": 1,
+          "target": 55.0
+        },
+        "higher": {
+          "advice": "Compare independent clues before reporting.",
+          "advisoryOnly": true,
+          "best": 125.0,
+          "completionLabel": "Complete every case in this opening set.",
+          "completionMet": true,
+          "completionProgress": 1.0,
+          "current": 100.0,
+          "failureOrSuccess": "Performance target met.",
+          "goalLabel": "Build a sound evidence habit.",
+          "grade": "Master",
+          "hasNextStage": true,
+          "isNewBest": true,
+          "metTarget": true,
+          "nextStageUnlocked": true,
+          "progress": 1.0,
+          "stage": 1,
+          "target": 55.0
+        },
+        "lower": {
+          "advice": "Compare independent clues before reporting.",
+          "advisoryOnly": true,
+          "best": 100.0,
+          "completionLabel": "Complete every case in this opening set.",
+          "completionMet": true,
+          "completionProgress": 1.0,
+          "current": 40.0,
+          "failureOrSuccess": "The target was missed, but the stage is cleared.",
+          "goalLabel": "Build a sound evidence habit.",
+          "grade": "Developing",
+          "hasNextStage": true,
+          "isNewBest": false,
+          "metTarget": false,
+          "nextStageUnlocked": true,
+          "progress": 0.727272727272727,
+          "stage": 1,
+          "target": 55.0
+        },
+        "profile": {
+          "clearedStages": [
+            1
+          ],
+          "highestUnlockedStage": 2,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 125.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "run": {
+          "caseIds": [
+            "prologue_clock",
+            "silent_radio",
+            "perfect_fake"
+          ],
+          "completedAtDay": 1,
+          "difficultyMultiplier": 1.0,
+          "grandReserveRequired": false,
+          "lastPerformance": {
+            "best": 125.0,
+            "current": 100.0,
+            "gradeId": "MASTER",
+            "isNewBest": true,
+            "metTarget": true,
+            "target": 55.0
+          },
+          "score": 125.0,
+          "stageClearAcknowledged": true,
+          "stageId": 1,
+          "stageReplayFeedbackSnapshot": {
+            "adviceCode": "STRENGTHEN_EVIDENCE",
+            "axes": {
+              "investigation": {
+                "available": true,
+                "statusCode": "FRAGILE",
+                "value": 0.0
+              },
+              "preservation": {
+                "available": false,
+                "statusCode": "UNAVAILABLE",
+                "value": 0.0
+              },
+              "sale": {
+                "available": false,
+                "statusCode": "NO_ATTEMPTS",
+                "value": null
+              }
+            },
+            "stage": 1,
+            "weakest": "investigation"
+          },
+          "stageReplayTelemetrySnapshot": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "available": true,
+            "dominantToolId": "",
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskRate": 0.0,
+            "investigationRiskWeightSum": 0.0,
+            "listingCount": 0,
+            "listingStrategyDistribution": {
+              "AUTO_GRAND_RESERVE": 0.0,
+              "BALANCED": 0.0,
+              "CUSTOM": 0.0,
+              "FAST": 0.0,
+              "HIGH": 0.0,
+              "LEGACY_UNKNOWN": 0.0
+            },
+            "noSaleCount": 0,
+            "noSaleRate": 0.0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairResourcePressure": 0.0,
+            "repairToolIdsUsed": [],
+            "stage": 1,
+            "summaryCodes": [
+              "NO_INVESTIGATION"
+            ],
+            "toolConcentration": 0.0
+          },
+          "startedAtDay": 1,
+          "status": "CLEARED",
+          "telemetry": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "budgetBasis": 1200,
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskWeightSum": 0.0,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 0,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairToolUseCounts": {}
+          },
+          "telemetryAvailable": true,
+          "telemetrySeenIds": [],
+          "tutorialCompletedSteps": []
+        }
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-01",
+      "name": "Stage 1 clear, replay best and new-best flags are monotonic and idempotent",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "currentStage": 7,
+        "profile": {
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "highestUnlockedStage": 10,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 125.0,
+            "2": 200.0,
+            "3": 300.0,
+            "4": 400.0,
+            "5": 500.0,
+            "6": 600.0,
+            "7": 700.0,
+            "8": 800.0,
+            "9": 900.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "run": {
+          "caseIds": [
+            "shadow_optic",
+            "composite_prototype"
+          ],
+          "completedAtDay": 1,
+          "difficultyMultiplier": 1.500730351849,
+          "grandReserveRequired": false,
+          "lastPerformance": {
+            "best": 700.0,
+            "current": 60.0,
+            "gradeId": "DEVELOPING",
+            "isNewBest": false,
+            "metTarget": false,
+            "target": 61.0
+          },
+          "score": 60.0,
+          "stageClearAcknowledged": false,
+          "stageId": 7,
+          "stageReplayFeedbackSnapshot": {
+            "adviceCode": "STRENGTHEN_EVIDENCE",
+            "axes": {
+              "investigation": {
+                "available": true,
+                "statusCode": "FRAGILE",
+                "value": 0.0
+              },
+              "preservation": {
+                "available": false,
+                "statusCode": "UNAVAILABLE",
+                "value": 0.0
+              },
+              "sale": {
+                "available": false,
+                "statusCode": "NO_ATTEMPTS",
+                "value": null
+              }
+            },
+            "stage": 7,
+            "weakest": "investigation"
+          },
+          "stageReplayTelemetrySnapshot": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "available": true,
+            "dominantToolId": "",
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskRate": 0.0,
+            "investigationRiskWeightSum": 0.0,
+            "listingCount": 0,
+            "listingStrategyDistribution": {
+              "AUTO_GRAND_RESERVE": 0.0,
+              "BALANCED": 0.0,
+              "CUSTOM": 0.0,
+              "FAST": 0.0,
+              "HIGH": 0.0,
+              "LEGACY_UNKNOWN": 0.0
+            },
+            "noSaleCount": 0,
+            "noSaleRate": 0.0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairResourcePressure": 0.0,
+            "repairToolIdsUsed": [],
+            "stage": 7,
+            "summaryCodes": [
+              "NO_INVESTIGATION"
+            ],
+            "toolConcentration": 0.0
+          },
+          "startedAtDay": 1,
+          "status": "CLEARED",
+          "telemetry": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "budgetBasis": 2010,
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskWeightSum": 0.0,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 0,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairToolUseCounts": {}
+          },
+          "telemetryAvailable": true,
+          "telemetrySeenIds": [],
+          "tutorialCompletedSteps": []
+        }
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-02",
+      "name": "Sequential clears unlock Stage 10 and reset/new-game preserves profile",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "currentStage": 7,
+        "profile": {
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "highestUnlockedStage": 10,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 9999.0,
+            "2": 200.0,
+            "3": 300.0,
+            "4": 400.0,
+            "5": 500.0,
+            "6": 600.0,
+            "7": 700.0,
+            "8": 800.0,
+            "9": 900.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "run": {
+          "caseIds": [
+            "shadow_optic",
+            "composite_prototype"
+          ],
+          "completedAtDay": 1,
+          "difficultyMultiplier": 1.500730351849,
+          "grandReserveRequired": false,
+          "lastPerformance": {
+            "best": 700.0,
+            "current": 60.0,
+            "gradeId": "DEVELOPING",
+            "isNewBest": false,
+            "metTarget": false,
+            "target": 61.0
+          },
+          "score": 60.0,
+          "stageClearAcknowledged": true,
+          "stageId": 7,
+          "stageReplayFeedbackSnapshot": {
+            "adviceCode": "STRENGTHEN_EVIDENCE",
+            "axes": {
+              "investigation": {
+                "available": true,
+                "statusCode": "FRAGILE",
+                "value": 0.0
+              },
+              "preservation": {
+                "available": false,
+                "statusCode": "UNAVAILABLE",
+                "value": 0.0
+              },
+              "sale": {
+                "available": false,
+                "statusCode": "NO_ATTEMPTS",
+                "value": null
+              }
+            },
+            "stage": 7,
+            "weakest": "investigation"
+          },
+          "stageReplayTelemetrySnapshot": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "available": true,
+            "dominantToolId": "",
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskRate": 0.0,
+            "investigationRiskWeightSum": 0.0,
+            "listingCount": 0,
+            "listingStrategyDistribution": {
+              "AUTO_GRAND_RESERVE": 0.0,
+              "BALANCED": 0.0,
+              "CUSTOM": 0.0,
+              "FAST": 0.0,
+              "HIGH": 0.0,
+              "LEGACY_UNKNOWN": 0.0
+            },
+            "noSaleCount": 0,
+            "noSaleRate": 0.0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairResourcePressure": 0.0,
+            "repairToolIdsUsed": [],
+            "stage": 7,
+            "summaryCodes": [
+              "NO_INVESTIGATION"
+            ],
+            "toolConcentration": 0.0
+          },
+          "startedAtDay": 1,
+          "status": "CLEARED",
+          "telemetry": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "budgetBasis": 2010,
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskWeightSum": 0.0,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 0,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairToolUseCounts": {}
+          },
+          "telemetryAvailable": true,
+          "telemetrySeenIds": [],
+          "tutorialCompletedSteps": []
+        },
+        "summary": {
+          "advice": "Explain which parts agree and which do not.",
+          "advisoryOnly": true,
+          "best": 700.0,
+          "completionLabel": "Complete every case in the composite set.",
+          "completionMet": true,
+          "completionProgress": 1.0,
+          "current": 60.0,
+          "failureOrSuccess": "The target was missed, not the completion contract.",
+          "goalLabel": "Separate layered histories clearly.",
+          "grade": "Developing",
+          "hasNextStage": true,
+          "isNewBest": false,
+          "metTarget": false,
+          "nextStageUnlocked": true,
+          "progress": 0.983606557377049,
+          "stage": 7,
+          "target": 61.0
+        }
+      },
+      "executed": true,
+      "id": "STAGE-RUNSAVE-01",
+      "name": "Run save restores the last public summary without owning profile",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "profile": {
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "highestUnlockedStage": 10,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 125.0,
+            "2": 200.0,
+            "3": 300.0,
+            "4": 400.0,
+            "5": 500.0,
+            "6": 600.0,
+            "7": 700.0,
+            "8": 800.0,
+            "9": 900.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "recovered": false
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-03",
+      "name": "Separate profile reload preserves unlocks, clears and best scores",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "normalized": {
+          "clearedStages": [
+            5
+          ],
+          "highestUnlockedStage": 6,
+          "schema_version": 1,
+          "stageBest": {
+            "5": 500.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "validation": {
+          "code": "PROFILE_WOULD_RELOCK_CLEARED_STAGE",
+          "ok": false
+        }
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-04",
+      "name": "Profile validation rejects relocking a cleared stage",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "profilePath": "user://relic_reserve_profile.json",
+        "runPath": "user://relic_reserve_save.json"
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-05",
+      "name": "Profile and run stores have separate authoritative paths",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "ending": "",
+        "postGame": false,
+        "profile": {
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "highestUnlockedStage": 10,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 125.0,
+            "10": 1000.0,
+            "2": 200.0,
+            "3": 300.0,
+            "4": 400.0,
+            "5": 500.0,
+            "6": 600.0,
+            "7": 700.0,
+            "8": 800.0,
+            "9": 900.0
+          },
+          "tutorialCompletedSteps": []
+        }
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-06",
+      "name": "Stage 10 clear caps at 10 and leaves ending/postgame to campaign authority",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "act": "POSTGAME",
+        "auction": "OK",
+        "ending": "ENDING_B",
+        "entry": true,
+        "profile": {
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "highestUnlockedStage": 10,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 125.0,
+            "10": 79.2463980463981,
+            "2": 200.0,
+            "3": 300.0,
+            "4": 400.0,
+            "5": 500.0,
+            "6": 600.0,
+            "7": 700.0,
+            "8": 800.0,
+            "9": 900.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "ready": true
+      },
+      "executed": true,
+      "id": "STAGE-FINAL-01",
+      "name": "Stage 10 flows through Grand Reserve, ending, epilogue and postgame without Stage 11",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "difficulty": {
+          "stage1": 1.0,
+          "stage10": 1.83845921242015,
+          "stage5": 1.31079601
+        },
+        "gapDifficulty": {
+          "stage1": 1.0,
+          "stage10": 1.66,
+          "stage5": 1.31079601
+        },
+        "positiveDisclosure": {
+          "stage1": 1.0132,
+          "stage10": 1.0132
+        },
+        "repair1": {
+          "baseToleranceMm": 0.08,
+          "costPressure": 1.02,
+          "effectiveCostFactor": 1.02,
+          "effectivePenaltyFactor": 1.0,
+          "effectiveToleranceMm": 0.08,
+          "requiredTools": [
+            "precision_screwdriver",
+            "polishing_pad"
+          ],
+          "stageDifficulty": 1.0
+        },
+        "repair10": {
+          "baseToleranceMm": 0.08,
+          "costPressure": 1.02,
+          "effectiveCostFactor": 1.87522839666856,
+          "effectivePenaltyFactor": 1.83845921242015,
+          "effectiveToleranceMm": 0.0435146994067318,
+          "requiredTools": [
+            "precision_screwdriver",
+            "polishing_pad"
+          ],
+          "stageDifficulty": 1.83845921242015
+        },
+        "reserve1": 0.984544,
+        "reserve10": 0.971584774412834,
+        "reserve5": 0.97974033686944,
+        "scrutiny1": {
+          "condition": 0.90676,
+          "disclosure": 0.8064,
+          "preference": 1.08,
+          "provenance": 0.9272,
+          "stageDifficulty": 1.0
+        },
+        "scrutiny10": {
+          "condition": 0.8452216,
+          "disclosure": 0.644074296475458,
+          "preference": 1.08,
+          "provenance": 0.879152,
+          "stageDifficulty": 1.83845921242015
+        },
+        "scrutiny5": {
+          "condition": 0.8777813800276,
+          "disclosure": 0.746229892464,
+          "preference": 1.08,
+          "provenance": 0.904574050472,
+          "stageDifficulty": 1.31079601
+        }
+      },
+      "executed": true,
+      "id": "STAGE-DIFFICULTY-01",
+      "name": "Condition and provenance support gaps use the 1.66 cap exactly once while repair, negative disclosure and reserve retain full difficulty",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "difficulty": 1.83845921242015,
+        "stage10HighPenalty": 5.51537763726046,
+        "stage1HighPenalty": 3.0
+      },
+      "executed": true,
+      "id": "STAGE-DIFFICULTY-INVESTIGATION",
+      "name": "Risky investigation consequences consume the stage multiplier exactly once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "auctionEqual": true,
+        "cost1": 18.0,
+        "cost10": 34.0,
+        "expectedCost1": 18,
+        "expectedCost10": 34,
+        "globalRngUnchanged": true
+      },
+      "executed": true,
+      "id": "STAGE-DIFFICULTY-02",
+      "name": "Stage repair cost and auction effects are deterministic",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "good": {
+          "hammer": 1154,
+          "reasons": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_GOOD",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "sale": "SOLD"
+        },
+        "poor": {
+          "hammer": 231,
+          "reasons": [
+            {
+              "category": "PRICE",
+              "code": "RESERVE_TOO_HIGH",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_UNCERTAIN",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "sale": "NO_SALE"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-AUCTION-CAUSE-01",
+      "name": "Visible investigation, condition, disclosure and reserve choices produce compact causal auction reasons",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "hiddenChanged": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "noInputFallback": [],
+        "original": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          }
+        ]
+      },
+      "executed": true,
+      "id": "STAGE-AUCTION-CAUSE-02",
+      "name": "Auction reasons depend only on visible decision inputs, ignore hidden truth, and allow an empty positive legacy fallback",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifact": "artifact_070",
+        "message": "Mechanism repaired.",
+        "remainingDamage": [],
+        "repairable": [
+          "SCRATCH",
+          "DENT",
+          "MISSING_PART"
+        ],
+        "tool": "repair_toolkit"
+      },
+      "executed": true,
+      "id": "STAGE-REPAIR-REACHABILITY",
+      "name": "Expansion repair profiles make their authored possible faults reachable through any compatible selected tool",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "baseValue": 1280,
+        "ending1": "ENDING_A",
+        "ending10": "ENDING_A",
+        "truth": "ASSEMBLED_FROM_PERIOD_PARTS"
+      },
+      "executed": true,
+      "id": "STAGE-PRIVACY-01",
+      "name": "Stage difficulty never changes truth, evidence, true base value or endings",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "rejected": true
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-CRASH-GATE",
+      "name": "Profile crash injection is test-mode only",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "clearedStages": [
+            1
+          ],
+          "highestUnlockedStage": 2,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 101.0
+          },
+          "tutorialCompletedSteps": [
+            "INVESTIGATE"
+          ]
+        },
+        "expected": "OLD",
+        "loadError": "",
+        "loadRecovered": false,
+        "saveError": "TEST_CRASH_INJECTION:A_TMP_WRITE_INTERRUPTION"
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-CRASH-A",
+      "name": "A_TMP_WRITE_INTERRUPTION recovers one complete profile generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "clearedStages": [
+            1
+          ],
+          "highestUnlockedStage": 2,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 101.0
+          },
+          "tutorialCompletedSteps": [
+            "INVESTIGATE"
+          ]
+        },
+        "expected": "OLD",
+        "loadError": "",
+        "loadRecovered": false,
+        "saveError": "TEST_CRASH_INJECTION:B_TMP_COMPLETE_BEFORE_VALIDATION"
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-CRASH-B",
+      "name": "B_TMP_COMPLETE_BEFORE_VALIDATION recovers one complete profile generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "clearedStages": [
+            1
+          ],
+          "highestUnlockedStage": 2,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 101.0
+          },
+          "tutorialCompletedSteps": [
+            "INVESTIGATE"
+          ]
+        },
+        "expected": "OLD",
+        "loadError": "",
+        "loadRecovered": false,
+        "saveError": "TEST_CRASH_INJECTION:C_TMP_VALIDATED_BEFORE_BACKUP"
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-CRASH-C",
+      "name": "C_TMP_VALIDATED_BEFORE_BACKUP recovers one complete profile generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "clearedStages": [
+            1
+          ],
+          "highestUnlockedStage": 2,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 101.0
+          },
+          "tutorialCompletedSteps": [
+            "INVESTIGATE"
+          ]
+        },
+        "expected": "OLD",
+        "loadError": "",
+        "loadRecovered": true,
+        "saveError": "TEST_CRASH_INJECTION:D_AFTER_BACKUP_BEFORE_PROMOTE"
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-CRASH-D",
+      "name": "D_AFTER_BACKUP_BEFORE_PROMOTE recovers one complete profile generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "clearedStages": [
+            1,
+            2,
+            3
+          ],
+          "highestUnlockedStage": 4,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 101.0,
+            "2": 202.0,
+            "3": 303.0
+          },
+          "tutorialCompletedSteps": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT"
+          ]
+        },
+        "expected": "NEW",
+        "loadError": "",
+        "loadRecovered": false,
+        "saveError": "TEST_CRASH_INJECTION:E_AFTER_PROMOTE_BEFORE_FINAL_VALIDATION"
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-CRASH-E",
+      "name": "E_AFTER_PROMOTE_BEFORE_FINAL_VALIDATION recovers one complete profile generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "clearedStages": [
+            1
+          ],
+          "highestUnlockedStage": 2,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 101.0
+          },
+          "tutorialCompletedSteps": [
+            "INVESTIGATE"
+          ]
+        },
+        "expected": "OLD",
+        "loadError": "",
+        "loadRecovered": true,
+        "saveError": "TEST_CRASH_INJECTION:F_CORRUPT_PROMOTED_CURRENT"
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-CRASH-F",
+      "name": "F_CORRUPT_PROMOTED_CURRENT recovers one complete profile generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "loadError": "NO_VALID_PROFILE:user://r3_stage_profile_both_invalid.json=EMPTY_OR_INVALID_JSON,user://r3_stage_profile_both_invalid.json.bak=INVALID_SCHEMA_VERSION_TYPE",
+        "unchanged": true
+      },
+      "executed": true,
+      "id": "STAGE-PROFILE-NO-SILENT-RESET",
+      "name": "Both invalid profile slots fail with zero memory mutation",
+      "passed": true
+    }
+  ]
+}

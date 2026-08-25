@@ -1,0 +1,58 @@
+{
+  "id": "artifact_053",
+  "displayName": "Marrow Vintage Scale A",
+  "category": "scientific_instruments",
+  "baseModel": "model_08.obj",
+  "maker": "maker_13",
+  "modelName": "Model 152",
+  "era": "1932-1944",
+  "materialSet": [
+    "material_08",
+    "material_11"
+  ],
+  "rarity": "common",
+  "baseValue": 1098,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH",
+    "PAINT_LOSS"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.4
+  },
+  "collectorTags": [
+    "scientific_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_053"
+}

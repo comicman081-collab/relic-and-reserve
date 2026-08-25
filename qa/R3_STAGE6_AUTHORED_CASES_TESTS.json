@@ -1,0 +1,2224 @@
+{
+  "executed": 13,
+  "expectedCount": 13,
+  "failed": 0,
+  "passed": 13,
+  "skipped": 0,
+  "suite": "R3 Stage 6 Authored Cases",
+  "tests": [
+    {
+      "evidence": {
+        "authoredErrors": [],
+        "caseOrder": [
+          "shadow_gauge",
+          "shadow_clock",
+          "shadow_music_box"
+        ],
+        "difficulty": 1.4025517307,
+        "fallbackCount": 0,
+        "missingMethods": [],
+        "stageErrors": []
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-DATA-01",
+      "name": "Stage 6 resolves three authored cases in exact order at the canonical multiplier with zero fallback",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseIdHits": {
+          "shadow_clock": {
+            "gameState": false,
+            "main3d": false
+          },
+          "shadow_gauge": {
+            "gameState": false,
+            "main3d": false
+          },
+          "shadow_music_box": {
+            "gameState": false,
+            "main3d": false
+          }
+        },
+        "runtimeExact": true,
+        "saveMutation0": true
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-GENERIC-02",
+      "name": "All Stage 6 cases use generic read-only registry and gameplay paths",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "shadow_clock": {
+          "authoredSpec": "artifact_031",
+          "canonical": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+          "case": {
+            "act": "ACT_4",
+            "documentIds": [
+              "document_03",
+              "document_04"
+            ],
+            "id": "shadow_clock",
+            "npcId": "mara_venn",
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "recoveryOutcome": "reviewed_with_mentor",
+            "rewardSpecId": "artifact_031",
+            "rewards": {
+              "historicalIntegrity": 1.0,
+              "mastery": 3.0,
+              "money": 282.0,
+              "museumTrust": 1.0,
+              "reputation": 2.0
+            },
+            "storyArtifactId": "story_artifact_17",
+            "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Clock.",
+            "title": "Shadow Mark: Clock"
+          },
+          "ok": true,
+          "storyBaseSpec": "artifact_031"
+        },
+        "shadow_gauge": {
+          "authoredSpec": "artifact_050",
+          "canonical": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+          "case": {
+            "act": "ACT_4",
+            "documentIds": [
+              "document_01",
+              "document_02"
+            ],
+            "id": "shadow_gauge",
+            "npcId": "hana_mire",
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "recoveryOutcome": "reviewed_with_mentor",
+            "rewardSpecId": "artifact_050",
+            "rewards": {
+              "historicalIntegrity": 1.0,
+              "mastery": 3.0,
+              "money": 270.0,
+              "museumTrust": 1.0,
+              "reputation": 2.0
+            },
+            "storyArtifactId": "story_artifact_16",
+            "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Gauge.",
+            "title": "Shadow Mark: Gauge"
+          },
+          "ok": true,
+          "storyBaseSpec": "artifact_050"
+        },
+        "shadow_music_box": {
+          "authoredSpec": "artifact_035",
+          "canonical": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+          "case": {
+            "act": "ACT_4",
+            "documentIds": [
+              "document_05",
+              "document_06"
+            ],
+            "id": "shadow_music_box",
+            "npcId": "iris_bell",
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "recoveryOutcome": "reviewed_with_mentor",
+            "rewardSpecId": "artifact_035",
+            "rewards": {
+              "historicalIntegrity": 1.0,
+              "mastery": 3.0,
+              "money": 294.0,
+              "museumTrust": 1.0,
+              "reputation": 2.0
+            },
+            "storyArtifactId": "story_artifact_18",
+            "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Music Box.",
+            "title": "Shadow Mark: Music Box"
+          },
+          "ok": true,
+          "storyBaseSpec": "artifact_035"
+        }
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-CAMPAIGN-03",
+      "name": "Stage 6 keeps exact ACT 4, NPC, document, reward, story and corrected artifact bindings",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "shadow_clock": {
+          "groups": [
+            "period_clock_material",
+            "escapement_service_sequence",
+            "collector_repair_account",
+            "clock_auction_chain",
+            "restorer_service_analysis",
+            "independent_clock_standard"
+          ],
+          "ids": [
+            "src.shadow_clock.artifact.period_clock_identity",
+            "src.shadow_clock.artifact.period_escapement_repair",
+            "src.shadow_clock.document.collector_repair_letter",
+            "src.shadow_clock.document.auction_custody_receipt",
+            "src.shadow_clock.npc.mara_shadow_mark_context",
+            "src.shadow_clock.reference.period_clock_standard"
+          ],
+          "kinds": [
+            "ARTIFACT",
+            "ARTIFACT",
+            "DOCUMENT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "ok": true,
+          "required": [
+            "src.shadow_clock.artifact.period_clock_identity",
+            "src.shadow_clock.artifact.period_escapement_repair",
+            "src.shadow_clock.document.auction_custody_receipt",
+            "src.shadow_clock.reference.period_clock_standard"
+          ],
+          "rules": [
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 4,
+              "minimum_independent_groups": 4,
+              "minimum_net_support": 4,
+              "outcome_id": "masterful",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 3,
+              "minimum_independent_groups": 3,
+              "minimum_net_support": 3,
+              "outcome_id": "credible",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "INCORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "mistaken",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "ANY",
+              "fallback": true,
+              "minimum_citations": 0,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "reviewed_with_mentor",
+              "requires_all_required_sources": false
+            }
+          ]
+        },
+        "shadow_gauge": {
+          "groups": [
+            "period_gauge_material",
+            "internal_gauge_continuity",
+            "gauge_estate_chain",
+            "model149_catalog",
+            "curator_cabinet_account",
+            "independent_gauge_standard"
+          ],
+          "ids": [
+            "src.shadow_gauge.artifact.period_gauge_identity",
+            "src.shadow_gauge.artifact.internal_maker_continuity",
+            "src.shadow_gauge.document.estate_custody_note",
+            "src.shadow_gauge.document.model149_catalog_leaf",
+            "src.shadow_gauge.npc.hana_shadow_mark_context",
+            "src.shadow_gauge.reference.period_gauge_standard"
+          ],
+          "kinds": [
+            "ARTIFACT",
+            "ARTIFACT",
+            "DOCUMENT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "ok": true,
+          "required": [
+            "src.shadow_gauge.artifact.period_gauge_identity",
+            "src.shadow_gauge.artifact.internal_maker_continuity",
+            "src.shadow_gauge.document.estate_custody_note",
+            "src.shadow_gauge.reference.period_gauge_standard"
+          ],
+          "rules": [
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 4,
+              "minimum_independent_groups": 4,
+              "minimum_net_support": 4,
+              "outcome_id": "masterful",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 3,
+              "minimum_independent_groups": 3,
+              "minimum_net_support": 3,
+              "outcome_id": "credible",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "INCORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "mistaken",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "ANY",
+              "fallback": true,
+              "minimum_citations": 0,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "reviewed_with_mentor",
+              "requires_all_required_sources": false
+            }
+          ]
+        },
+        "shadow_music_box": {
+          "groups": [
+            "period_music_box_material",
+            "localized_governor_repair",
+            "model134_serial_chart",
+            "music_box_estate_chain",
+            "conservator_repair_account",
+            "independent_music_box_standard"
+          ],
+          "ids": [
+            "src.shadow_music_box.artifact.period_music_box_identity",
+            "src.shadow_music_box.artifact.modern_governor_repair",
+            "src.shadow_music_box.document.serial_reference_leaf",
+            "src.shadow_music_box.document.estate_custody_note",
+            "src.shadow_music_box.npc.iris_shadow_mark_context",
+            "src.shadow_music_box.reference.period_music_box_standard"
+          ],
+          "kinds": [
+            "ARTIFACT",
+            "ARTIFACT",
+            "DOCUMENT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "ok": true,
+          "required": [
+            "src.shadow_music_box.artifact.period_music_box_identity",
+            "src.shadow_music_box.artifact.modern_governor_repair",
+            "src.shadow_music_box.document.estate_custody_note",
+            "src.shadow_music_box.reference.period_music_box_standard"
+          ],
+          "rules": [
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 4,
+              "minimum_independent_groups": 4,
+              "minimum_net_support": 4,
+              "outcome_id": "masterful",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 3,
+              "minimum_independent_groups": 3,
+              "minimum_net_support": 3,
+              "outcome_id": "credible",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "INCORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "mistaken",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "ANY",
+              "fallback": true,
+              "minimum_citations": 0,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "reviewed_with_mentor",
+              "requires_all_required_sources": false
+            }
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-SOURCES-04",
+      "name": "Each Stage 6 graph has exact A2/D2/NPC1/REF1 sources, six groups and an ordered four-step outcome ladder",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "shadow_clock": {
+          "inventoryCount": 1,
+          "ok": true,
+          "pressureMutation0": true,
+          "repeatSame": true,
+          "spec": "artifact_031",
+          "story": "story_artifact_17",
+          "truth": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+          "uid": "case_shadow_clock"
+        },
+        "shadow_gauge": {
+          "inventoryCount": 1,
+          "ok": true,
+          "pressureMutation0": true,
+          "repeatSame": true,
+          "spec": "artifact_050",
+          "story": "story_artifact_16",
+          "truth": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+          "uid": "case_shadow_gauge"
+        },
+        "shadow_music_box": {
+          "inventoryCount": 1,
+          "ok": true,
+          "pressureMutation0": true,
+          "repeatSame": true,
+          "spec": "artifact_035",
+          "story": "story_artifact_18",
+          "truth": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+          "uid": "case_shadow_music_box"
+        }
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-ISSUANCE-05",
+      "name": "Fresh Stage 6 issuance is exactly gauge 050, clock 031 and music box 035 with stable one-per-case UIDs",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "aggregate": {
+          "HIGH": 3,
+          "LOW": 3,
+          "NONE": 12
+        },
+        "cases": {
+          "shadow_clock": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "ok": true,
+            "runtime": [
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.shadow_clock.artifact.period_clock_identity",
+                  "ok": true,
+                  "sourceId": "period_clock_material"
+                },
+                "expectedPenalty": 1.4025517307,
+                "id": "src.shadow_clock.artifact.period_clock_identity",
+                "level": "LOW",
+                "ok": true,
+                "penalty": 1.4025517307,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              },
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.shadow_clock.artifact.period_escapement_repair",
+                  "ok": true,
+                  "sourceId": "escapement_service_sequence"
+                },
+                "expectedPenalty": 4.2076551921,
+                "id": "src.shadow_clock.artifact.period_escapement_repair",
+                "level": "HIGH",
+                "ok": true,
+                "penalty": 4.2076551921,
+                "tools": [
+                  "precision_screwdriver"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "precision_screwdriver"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ],
+            "tools": {
+              "src.shadow_clock.artifact.period_clock_identity": {
+                "level": "LOW",
+                "tools": [
+                  "material_scanner"
+                ]
+              },
+              "src.shadow_clock.artifact.period_escapement_repair": {
+                "level": "HIGH",
+                "tools": [
+                  "precision_screwdriver"
+                ]
+              }
+            }
+          },
+          "shadow_gauge": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "ok": true,
+            "runtime": [
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.shadow_gauge.artifact.period_gauge_identity",
+                  "ok": true,
+                  "sourceId": "period_gauge_material"
+                },
+                "expectedPenalty": 1.4025517307,
+                "id": "src.shadow_gauge.artifact.period_gauge_identity",
+                "level": "LOW",
+                "ok": true,
+                "penalty": 1.4025517307,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              },
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.shadow_gauge.artifact.internal_maker_continuity",
+                  "ok": true,
+                  "sourceId": "internal_gauge_continuity"
+                },
+                "expectedPenalty": 4.2076551921,
+                "id": "src.shadow_gauge.artifact.internal_maker_continuity",
+                "level": "HIGH",
+                "ok": true,
+                "penalty": 4.2076551921,
+                "tools": [
+                  "precision_screwdriver"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "precision_screwdriver"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ],
+            "tools": {
+              "src.shadow_gauge.artifact.internal_maker_continuity": {
+                "level": "HIGH",
+                "tools": [
+                  "precision_screwdriver"
+                ]
+              },
+              "src.shadow_gauge.artifact.period_gauge_identity": {
+                "level": "LOW",
+                "tools": [
+                  "material_scanner"
+                ]
+              }
+            }
+          },
+          "shadow_music_box": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "ok": true,
+            "runtime": [
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.shadow_music_box.artifact.period_music_box_identity",
+                  "ok": true,
+                  "sourceId": "period_music_box_material"
+                },
+                "expectedPenalty": 1.4025517307,
+                "id": "src.shadow_music_box.artifact.period_music_box_identity",
+                "level": "LOW",
+                "ok": true,
+                "penalty": 1.4025517307,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              },
+              {
+                "duplicate": {
+                  "code": "ALREADY_DISCOVERED",
+                  "evidenceId": "src.shadow_music_box.artifact.modern_governor_repair",
+                  "ok": true,
+                  "sourceId": "localized_governor_repair"
+                },
+                "expectedPenalty": 4.2076551921,
+                "id": "src.shadow_music_box.artifact.modern_governor_repair",
+                "level": "HIGH",
+                "ok": true,
+                "penalty": 4.2076551921,
+                "tools": [
+                  "repair_toolkit"
+                ],
+                "wrong": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "repair_toolkit"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ],
+            "tools": {
+              "src.shadow_music_box.artifact.modern_governor_repair": {
+                "level": "HIGH",
+                "tools": [
+                  "repair_toolkit"
+                ]
+              },
+              "src.shadow_music_box.artifact.period_music_box_identity": {
+                "level": "LOW",
+                "tools": [
+                  "material_scanner"
+                ]
+              }
+            }
+          }
+        },
+        "weightedTotal": 16.8306207684
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-RISK-06",
+      "name": "Each Stage 6 case exposes NONE4/LOW1/HIGH1 with exact scanner and case-specific invasive tools at 1.4025517307 pressure",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "shadow_clock": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.shadow_clock.document.auction_custody_receipt",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "clock_auction_chain"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.shadow_clock.document.auction_custody_receipt",
+            "ok": true,
+            "sourceId": "clock_auction_chain"
+          },
+          "knownClues": [
+            "PROVENANCE"
+          ],
+          "ok": true,
+          "tagged": [
+            {
+              "citation": {
+                "allowed": true,
+                "id": "cite.shadow_clock.document.auction_custody_receipt",
+                "label": {
+                  "en": "Auction custody receipt",
+                  "ko": "경매 소장 영수증"
+                }
+              },
+              "discover_action_id": "read_document",
+              "id": "src.shadow_clock.document.auction_custody_receipt",
+              "independence_key": "clock_auction_chain",
+              "presentation": {
+                "citation_locator": {
+                  "en": "Case document D-03, signed transfer lines",
+                  "ko": "사건 문서 D-03, 서명된 이관 항목"
+                },
+                "npc_portrait": {},
+                "short_observation": {
+                  "en": "A signed receipt tracks the numbered clock after its repair.",
+                  "ko": "서명된 영수증이 수리 뒤 번호 있는 시계의 소장 경로를 잇는다."
+                },
+                "source_display_name": {
+                  "en": "Auction custody receipt",
+                  "ko": "경매 소장 영수증"
+                },
+                "unlock_action_label": {
+                  "en": "Read auction receipt",
+                  "ko": "경매 영수증 읽기"
+                },
+                "unlock_target_label": {
+                  "en": "Signed custody entries",
+                  "ko": "서명된 소장 항목"
+                }
+              },
+              "public_clue_id": "PROVENANCE",
+              "relations": [
+                {
+                  "hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+                  "stance": "SUPPORT",
+                  "strength": 2
+                },
+                {
+                  "hypothesis_id": "hyp.shadow_clock.later_reconstruction_old_case",
+                  "stance": "REFUTE",
+                  "strength": 2
+                }
+              ],
+              "reliability": "HIGH",
+              "risk": {
+                "level": "NONE",
+                "warning": {
+                  "en": "",
+                  "ko": ""
+                }
+              },
+              "source": {
+                "entry_id": "src.shadow_clock.document.auction_custody_receipt",
+                "kind": "DOCUMENT",
+                "ref_id": "document_03"
+              },
+              "text": {
+                "en": "Fictional Reference Leaf 03 records the Model 130 case number, dial nick, and service triangle at a workshop dispersal sale, then carries the same identifiers through signed collection transfers. This is the case's sole ownership chain; it does not claim the clock was untouched.",
+                "ko": "가상 참고 낱장 03은 공방 해산 경매에서 모델 130 케이스 번호, 다이얼 흠집과 정비 삼각형을 기록하고 같은 식별자를 서명된 소장품 이관까지 잇는다. 이것이 이 사건의 유일한 소유 경로이며 시계가 손대지 않았다고 주장하지 않는다."
+              },
+              "unlock": {
+                "requires_all": [],
+                "requires_tools": []
+              }
+            }
+          ]
+        },
+        "shadow_gauge": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.shadow_gauge.document.estate_custody_note",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "gauge_estate_chain"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.shadow_gauge.document.estate_custody_note",
+            "ok": true,
+            "sourceId": "gauge_estate_chain"
+          },
+          "knownClues": [
+            "PROVENANCE"
+          ],
+          "ok": true,
+          "tagged": [
+            {
+              "citation": {
+                "allowed": true,
+                "id": "cite.shadow_gauge.document.estate_custody_note",
+                "label": {
+                  "en": "Estate custody note",
+                  "ko": "유산 소장 기록"
+                }
+              },
+              "discover_action_id": "read_document",
+              "id": "src.shadow_gauge.document.estate_custody_note",
+              "independence_key": "gauge_estate_chain",
+              "presentation": {
+                "citation_locator": {
+                  "en": "Case document D-16, signed transfers",
+                  "ko": "사건 문서 D-16, 서명된 이관 항목"
+                },
+                "npc_portrait": {},
+                "short_observation": {
+                  "en": "The numbered gauge stays in one recorded chain.",
+                  "ko": "번호가 있는 계기가 하나의 기록된 소장 경로를 따른다."
+                },
+                "source_display_name": {
+                  "en": "Estate custody note",
+                  "ko": "유산 소장 기록"
+                },
+                "unlock_action_label": {
+                  "en": "Read custody note",
+                  "ko": "소장 기록 읽기"
+                },
+                "unlock_target_label": {
+                  "en": "Signed estate inventory",
+                  "ko": "서명된 유산 재고표"
+                }
+              },
+              "public_clue_id": "PROVENANCE",
+              "relations": [
+                {
+                  "hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+                  "stance": "SUPPORT",
+                  "strength": 2
+                },
+                {
+                  "hypothesis_id": "hyp.shadow_gauge.later_replica_old_estate_note",
+                  "stance": "REFUTE",
+                  "strength": 2
+                }
+              ],
+              "reliability": "HIGH",
+              "risk": {
+                "level": "NONE",
+                "warning": {
+                  "en": "",
+                  "ko": ""
+                }
+              },
+              "source": {
+                "entry_id": "src.shadow_gauge.document.estate_custody_note",
+                "kind": "DOCUMENT",
+                "ref_id": "document_16"
+              },
+              "text": {
+                "en": "Fictional Record 16 names Juniper Model 149, assembly 49, and the crescent control mark when the instrument enters the Mire estate cabinet. Signed inventory transfers follow the same gauge to the closed instrument room; no ownership gap or loose replacement movement appears.",
+                "ko": "가상 기록 16은 주니퍼 모델 149가 미레 유산 계측장에 들어올 때 조립 번호 49와 초승달 검사 표식을 함께 적는다. 서명된 재고 이관 기록은 같은 계기를 폐쇄 계측실까지 잇고, 소유 공백이나 별도 교체 기구부는 나타나지 않는다."
+              },
+              "unlock": {
+                "requires_all": [],
+                "requires_tools": []
+              }
+            }
+          ]
+        },
+        "shadow_music_box": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.shadow_music_box.document.estate_custody_note",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "music_box_estate_chain"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.shadow_music_box.document.estate_custody_note",
+            "ok": true,
+            "sourceId": "music_box_estate_chain"
+          },
+          "knownClues": [
+            "PROVENANCE"
+          ],
+          "ok": true,
+          "tagged": [
+            {
+              "citation": {
+                "allowed": true,
+                "id": "cite.shadow_music_box.document.estate_custody_note",
+                "label": {
+                  "en": "Estate custody note",
+                  "ko": "유산 소장 기록"
+                }
+              },
+              "discover_action_id": "read_document",
+              "id": "src.shadow_music_box.document.estate_custody_note",
+              "independence_key": "music_box_estate_chain",
+              "presentation": {
+                "citation_locator": {
+                  "en": "Case document D-06, signed storage entries",
+                  "ko": "사건 문서 D-06, 서명된 보관 항목"
+                },
+                "npc_portrait": {},
+                "short_observation": {
+                  "en": "The numbered box stays in a signed estate chain.",
+                  "ko": "번호가 있는 오르골이 서명된 유산 소장 경로를 따른다."
+                },
+                "source_display_name": {
+                  "en": "Estate custody note",
+                  "ko": "유산 소장 기록"
+                },
+                "unlock_action_label": {
+                  "en": "Read estate note",
+                  "ko": "유산 기록 읽기"
+                },
+                "unlock_target_label": {
+                  "en": "Signed custody entries",
+                  "ko": "서명된 소장 항목"
+                }
+              },
+              "public_clue_id": "PROVENANCE",
+              "relations": [
+                {
+                  "hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+                  "stance": "SUPPORT",
+                  "strength": 2
+                },
+                {
+                  "hypothesis_id": "hyp.shadow_music_box.later_reproduction_old_cylinder",
+                  "stance": "REFUTE",
+                  "strength": 2
+                }
+              ],
+              "reliability": "HIGH",
+              "risk": {
+                "level": "NONE",
+                "warning": {
+                  "en": "",
+                  "ko": ""
+                }
+              },
+              "source": {
+                "entry_id": "src.shadow_music_box.document.estate_custody_note",
+                "kind": "DOCUMENT",
+                "ref_id": "document_06"
+              },
+              "text": {
+                "en": "Fictional Reference Leaf 06 records serial 134-I, the lid marquetry loss, and the same tune sequence as the box enters the Bell estate. Signed entries carry it through storage and note a recent conservation visit without claiming the mechanism remained untouched. This is the case's sole provenance record.",
+                "ko": "가상 참고 낱장 06은 오르골이 벨 유산에 들어올 때 일련번호 134-I, 뚜껑 상감 손실과 같은 선율 순서를 기록한다. 서명된 항목은 보관 기간을 잇고 최근 보존 작업 방문을 적지만 기구부가 손대지 않았다고 주장하지 않는다. 이것이 이 사건의 유일한 소장 이력 기록이다."
+              },
+              "unlock": {
+                "requires_all": [],
+                "requires_tools": []
+              }
+            }
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-PROVENANCE-07",
+      "name": "Each Stage 6 case has one sole high-reliability DOCUMENT provenance bridge that commits once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "shadow_clock": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.shadow_clock.artifact.period_clock_identity",
+              "src.shadow_clock.artifact.period_escapement_repair",
+              "src.shadow_clock.document.auction_custody_receipt"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.shadow_clock.artifact.period_clock_identity",
+            "src.shadow_clock.document.auction_custody_receipt",
+            "src.shadow_clock.artifact.period_escapement_repair",
+            "src.shadow_clock.reference.period_clock_standard",
+            "src.shadow_clock.document.collector_repair_letter",
+            "src.shadow_clock.npc.mara_shadow_mark_context"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.shadow_clock.artifact.period_clock_identity",
+              "src.shadow_clock.artifact.period_escapement_repair",
+              "src.shadow_clock.document.auction_custody_receipt",
+              "src.shadow_clock.reference.period_clock_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.shadow_clock.artifact.period_clock_identity"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.shadow_clock.artifact.period_escapement_repair",
+              "src.shadow_clock.document.collector_repair_letter"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.shadow_clock.untouched_kestrel_clock",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "mutation0": true,
+          "ok": true,
+          "required": [
+            "src.shadow_clock.artifact.period_clock_identity",
+            "src.shadow_clock.artifact.period_escapement_repair",
+            "src.shadow_clock.document.auction_custody_receipt",
+            "src.shadow_clock.reference.period_clock_standard"
+          ],
+          "wrong": "hyp.shadow_clock.untouched_kestrel_clock"
+        },
+        "shadow_gauge": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.shadow_gauge.artifact.period_gauge_identity",
+              "src.shadow_gauge.artifact.internal_maker_continuity",
+              "src.shadow_gauge.document.estate_custody_note"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.shadow_gauge.artifact.period_gauge_identity",
+            "src.shadow_gauge.document.estate_custody_note",
+            "src.shadow_gauge.artifact.internal_maker_continuity",
+            "src.shadow_gauge.document.model149_catalog_leaf",
+            "src.shadow_gauge.npc.hana_shadow_mark_context",
+            "src.shadow_gauge.reference.period_gauge_standard"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.shadow_gauge.artifact.period_gauge_identity",
+              "src.shadow_gauge.artifact.internal_maker_continuity",
+              "src.shadow_gauge.document.estate_custody_note",
+              "src.shadow_gauge.reference.period_gauge_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.shadow_gauge.artifact.period_gauge_identity"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.shadow_gauge.artifact.internal_maker_continuity",
+              "src.shadow_gauge.document.model149_catalog_leaf"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.shadow_gauge.period_shell_substituted_core",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "mutation0": true,
+          "ok": true,
+          "required": [
+            "src.shadow_gauge.artifact.period_gauge_identity",
+            "src.shadow_gauge.artifact.internal_maker_continuity",
+            "src.shadow_gauge.document.estate_custody_note",
+            "src.shadow_gauge.reference.period_gauge_standard"
+          ],
+          "wrong": "hyp.shadow_gauge.period_shell_substituted_core"
+        },
+        "shadow_music_box": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.shadow_music_box.artifact.period_music_box_identity",
+              "src.shadow_music_box.artifact.modern_governor_repair",
+              "src.shadow_music_box.document.estate_custody_note"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.shadow_music_box.artifact.period_music_box_identity",
+            "src.shadow_music_box.document.estate_custody_note",
+            "src.shadow_music_box.artifact.modern_governor_repair",
+            "src.shadow_music_box.document.serial_reference_leaf",
+            "src.shadow_music_box.reference.period_music_box_standard",
+            "src.shadow_music_box.npc.iris_shadow_mark_context"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.shadow_music_box.artifact.period_music_box_identity",
+              "src.shadow_music_box.artifact.modern_governor_repair",
+              "src.shadow_music_box.document.estate_custody_note",
+              "src.shadow_music_box.reference.period_music_box_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.shadow_music_box.artifact.period_music_box_identity"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.shadow_music_box.artifact.modern_governor_repair",
+              "src.shadow_music_box.npc.iris_shadow_mark_context"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.shadow_music_box.untouched_orchard_music_box",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "mutation0": true,
+          "ok": true,
+          "required": [
+            "src.shadow_music_box.artifact.period_music_box_identity",
+            "src.shadow_music_box.artifact.modern_governor_repair",
+            "src.shadow_music_box.document.estate_custody_note",
+            "src.shadow_music_box.reference.period_music_box_standard"
+          ],
+          "wrong": "hyp.shadow_music_box.untouched_orchard_music_box"
+        }
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-OUTCOMES-08",
+      "name": "All Stage 6 public evaluators execute mentor, credible, masterful and mistaken in order while empty reports fail closed",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifacts": {
+          "shadow_clock": {
+            "actual": {
+              "acquisitionPrice": 528,
+              "artifactSpecId": "artifact_046",
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "caseId": "shadow_clock",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.74,
+              "damageInstances": [
+                "SCRATCH",
+                "CRACK",
+                "GRIME"
+              ],
+              "estimatedValue": 965,
+              "evidence": [
+                {
+                  "clueType": "shadow_clock:legacy",
+                  "confidenceWeight": 0.41,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 63.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "shadow_clock:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.72,
+                "disclosure": "LIKELY",
+                "reserve": 277,
+                "starting": 211
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 2,
+              "partStates": {
+                "body": true,
+                "mechanism": true,
+                "panel": true
+              },
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 2,
+              "restorationCost": 57.5,
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 960601,
+              "sold": false,
+              "storyArtifactId": "story_artifact_17",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_shadow_clock",
+              "zoom": 1.0
+            },
+            "expected": {
+              "acquisitionPrice": 528,
+              "artifactSpecId": "artifact_046",
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "caseId": "shadow_clock",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.74,
+              "damageInstances": [
+                "SCRATCH",
+                "CRACK",
+                "GRIME"
+              ],
+              "estimatedValue": 965,
+              "evidence": [
+                {
+                  "clueType": "shadow_clock:legacy",
+                  "confidenceWeight": 0.41,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 63.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "shadow_clock:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.72,
+                "disclosure": "LIKELY",
+                "reserve": 277,
+                "starting": 211
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 2,
+              "partStates": {
+                "body": true,
+                "mechanism": true,
+                "panel": true
+              },
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 2,
+              "restorationCost": 57.5,
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 960601,
+              "sold": false,
+              "storyArtifactId": "story_artifact_17",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_shadow_clock",
+              "zoom": 1.0
+            },
+            "ledgerExact": true,
+            "ok": true
+          },
+          "shadow_gauge": {
+            "actual": {
+              "acquisitionPrice": 372,
+              "artifactSpecId": "artifact_041",
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "caseId": "shadow_gauge",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.74,
+              "damageInstances": [
+                "WATER_DAMAGE",
+                "GRIME",
+                "BROKEN_PART"
+              ],
+              "estimatedValue": 870,
+              "evidence": [
+                {
+                  "clueType": "shadow_gauge:legacy",
+                  "confidenceWeight": 0.41,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 62.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "shadow_gauge:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.72,
+                "disclosure": "LIKELY",
+                "reserve": 277,
+                "starting": 211
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 2,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 56.5,
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 960600,
+              "sold": false,
+              "storyArtifactId": "story_artifact_16",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_shadow_gauge",
+              "zoom": 1.0
+            },
+            "expected": {
+              "acquisitionPrice": 372,
+              "artifactSpecId": "artifact_041",
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "caseId": "shadow_gauge",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.74,
+              "damageInstances": [
+                "WATER_DAMAGE",
+                "GRIME",
+                "BROKEN_PART"
+              ],
+              "estimatedValue": 870,
+              "evidence": [
+                {
+                  "clueType": "shadow_gauge:legacy",
+                  "confidenceWeight": 0.41,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 62.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "shadow_gauge:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.72,
+                "disclosure": "LIKELY",
+                "reserve": 277,
+                "starting": 211
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 2,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 56.5,
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 960600,
+              "sold": false,
+              "storyArtifactId": "story_artifact_16",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_shadow_gauge",
+              "zoom": 1.0
+            },
+            "ledgerExact": true,
+            "ok": true
+          },
+          "shadow_music_box": {
+            "actual": {
+              "acquisitionPrice": 509,
+              "artifactSpecId": "artifact_050",
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "caseId": "shadow_music_box",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.74,
+              "damageInstances": [
+                "RUST",
+                "CRACK",
+                "MECHANICAL_WEAR"
+              ],
+              "estimatedValue": 1041,
+              "evidence": [
+                {
+                  "clueType": "shadow_music_box:legacy",
+                  "confidenceWeight": 0.41,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 64.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "shadow_music_box:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.72,
+                "disclosure": "LIKELY",
+                "reserve": 277,
+                "starting": 211
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 2,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 58.5,
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 960602,
+              "sold": false,
+              "storyArtifactId": "story_artifact_18",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_shadow_music_box",
+              "zoom": 1.0
+            },
+            "expected": {
+              "acquisitionPrice": 509,
+              "artifactSpecId": "artifact_050",
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "caseId": "shadow_music_box",
+              "caseResolved": false,
+              "cleanliness": 18.0,
+              "confidence": 0.74,
+              "damageInstances": [
+                "RUST",
+                "CRACK",
+                "MECHANICAL_WEAR"
+              ],
+              "estimatedValue": 1041,
+              "evidence": [
+                {
+                  "clueType": "shadow_music_box:legacy",
+                  "confidenceWeight": 0.41,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 64.5,
+              "inspected": false,
+              "knownClues": [
+                "MATERIAL",
+                "shadow_music_box:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.72,
+                "disclosure": "LIKELY",
+                "reserve": 277,
+                "starting": 211
+              },
+              "mechanicalCondition": 42.0,
+              "originalParts": 2,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 58.5,
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 960602,
+              "sold": false,
+              "storyArtifactId": "story_artifact_18",
+              "structuralCondition": 70.0,
+              "surfaceCondition": 55.0,
+              "uniqueId": "case_shadow_music_box",
+              "zoom": 1.0
+            },
+            "ledgerExact": true,
+            "ok": true
+          }
+        },
+        "duplicates": {
+          "shadow_clock": {
+            "inventoryCount": 3,
+            "mutation0": true,
+            "ok": true,
+            "returnedSpec": "artifact_046",
+            "returnedUid": "case_shadow_clock"
+          },
+          "shadow_gauge": {
+            "inventoryCount": 3,
+            "mutation0": true,
+            "ok": true,
+            "returnedSpec": "artifact_041",
+            "returnedUid": "case_shadow_gauge"
+          },
+          "shadow_music_box": {
+            "inventoryCount": 3,
+            "mutation0": true,
+            "ok": true,
+            "returnedSpec": "artifact_050",
+            "returnedUid": "case_shadow_music_box"
+          }
+        },
+        "validation": {
+          "code": "OK",
+          "ok": true
+        }
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-LEGACY-09",
+      "name": "Legacy unresolved 041/046/050 artifacts, UIDs, mutable state and ledgers remain exact with zero duplicate issuance",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "shadow_clock": {
+          "actual": {
+            "citedEvidenceIds": [
+              "src.shadow_clock.artifact.period_clock_identity",
+              "src.shadow_clock.artifact.period_escapement_repair"
+            ],
+            "discoveredEvidenceIds": [
+              "src.shadow_clock.artifact.period_escapement_repair",
+              "src.shadow_clock.artifact.period_clock_identity"
+            ],
+            "migrationSentinel": {
+              "case": "shadow_clock",
+              "keep": [
+                6,
+                0,
+                6
+              ]
+            },
+            "resolutionResult": {},
+            "resolved": false,
+            "selectedHypothesisId": ""
+          },
+          "expectedCited": [
+            "src.shadow_clock.artifact.period_clock_identity",
+            "src.shadow_clock.artifact.period_escapement_repair"
+          ],
+          "expectedDiscovered": [
+            "src.shadow_clock.artifact.period_escapement_repair",
+            "src.shadow_clock.artifact.period_clock_identity"
+          ],
+          "ok": true,
+          "subsetExact": true
+        },
+        "shadow_gauge": {
+          "actual": {
+            "citedEvidenceIds": [
+              "src.shadow_gauge.artifact.period_gauge_identity",
+              "src.shadow_gauge.artifact.internal_maker_continuity"
+            ],
+            "discoveredEvidenceIds": [
+              "src.shadow_gauge.artifact.internal_maker_continuity",
+              "src.shadow_gauge.artifact.period_gauge_identity"
+            ],
+            "migrationSentinel": {
+              "case": "shadow_gauge",
+              "keep": [
+                6,
+                0,
+                6
+              ]
+            },
+            "resolutionResult": {},
+            "resolved": false,
+            "selectedHypothesisId": ""
+          },
+          "expectedCited": [
+            "src.shadow_gauge.artifact.period_gauge_identity",
+            "src.shadow_gauge.artifact.internal_maker_continuity"
+          ],
+          "expectedDiscovered": [
+            "src.shadow_gauge.artifact.internal_maker_continuity",
+            "src.shadow_gauge.artifact.period_gauge_identity"
+          ],
+          "ok": true,
+          "subsetExact": true
+        },
+        "shadow_music_box": {
+          "actual": {
+            "citedEvidenceIds": [
+              "src.shadow_music_box.artifact.period_music_box_identity",
+              "src.shadow_music_box.artifact.modern_governor_repair"
+            ],
+            "discoveredEvidenceIds": [
+              "src.shadow_music_box.artifact.modern_governor_repair",
+              "src.shadow_music_box.artifact.period_music_box_identity"
+            ],
+            "migrationSentinel": {
+              "case": "shadow_music_box",
+              "keep": [
+                6,
+                0,
+                6
+              ]
+            },
+            "resolutionResult": {},
+            "resolved": false,
+            "selectedHypothesisId": ""
+          },
+          "expectedCited": [
+            "src.shadow_music_box.artifact.period_music_box_identity",
+            "src.shadow_music_box.artifact.modern_governor_repair"
+          ],
+          "expectedDiscovered": [
+            "src.shadow_music_box.artifact.modern_governor_repair",
+            "src.shadow_music_box.artifact.period_music_box_identity"
+          ],
+          "ok": true,
+          "subsetExact": true
+        }
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-CANONICAL-10",
+      "name": "Unresolved Stage 6 legacy state keeps ordered valid evidence only and clears stale conclusions",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "idempotent": true,
+        "profileMutation0": true,
+        "protectedMutation0": true
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-SCOPE-11",
+      "name": "Stage 6 canonicalization is idempotent and mutates no economy, RNG, artifact, ledger, auction, tutorial, telemetry or profile authority",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "auctionHistory": [
+          {
+            "artifactId": "case_shadow_camera_historical",
+            "result": {
+              "hammer": 840,
+              "net": 777,
+              "reserve_met": true,
+              "sale_status": "SOLD",
+              "sentinel": "receipt-exact",
+              "transactionId": "stage6-historical-sale"
+            }
+          }
+        ],
+        "caseState": {
+          "citedEvidenceIds": [
+            "shadow_camera:material"
+          ],
+          "discoveredEvidenceIds": [
+            "shadow_camera:material",
+            "shadow_camera:provenance"
+          ],
+          "migrationSentinel": {
+            "keep": [
+              1,
+              8,
+              5
+            ],
+            "resolved": true
+          },
+          "resolutionResult": {
+            "historicalReceipt": "keep-exact",
+            "outcome": "credible"
+          },
+          "resolved": true,
+          "selectedHypothesisId": "FORGERY"
+        },
+        "ledger": {
+          "artifactUid": "case_shadow_camera_historical",
+          "disposition": "SOLD",
+          "issued": true,
+          "migrationSentinel": "sale-ledger-exact",
+          "publicAppraisalSnapshot": 730,
+          "publicConditionSnapshot": {
+            "historicalIntegrity": 64.0
+          },
+          "saleTransactionId": "stage6-historical-sale"
+        },
+        "transactions": [
+          {
+            "amount": 777,
+            "day": 8,
+            "id": "stage6-historical-sale",
+            "instanceId": "case_shadow_camera_historical",
+            "sentinel": "transaction-exact",
+            "type": "sale"
+          }
+        ]
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-HISTORY-12",
+      "name": "Resolved/completed historical case state, SOLD ledger, transaction and auction receipt remain semantically exact",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "deepCopy": true,
+        "freshGauge": {
+          "detail": {
+            "motif": "",
+            "placement": "",
+            "wearMask": ""
+          },
+          "materialPath": "res://assets/materials/steel.tres",
+          "meshPath": "res://assets/artifacts/gauge.obj",
+          "metallic": 0.63,
+          "palette": {
+            "accent": "#b99d70",
+            "primary": "#7f8b91",
+            "secondary": "#b99d70"
+          },
+          "recipe": "GAUGE",
+          "roughness": 0.39,
+          "scale": [
+            1.065,
+            1.05,
+            0.98
+          ],
+          "specId": "artifact_050",
+          "trim": {
+            "color": "#b99d70",
+            "materialPath": "",
+            "shape": "ring"
+          }
+        },
+        "freshMusic": {
+          "detail": {
+            "motif": "",
+            "placement": "",
+            "wearMask": ""
+          },
+          "materialPath": "res://assets/materials/steel.tres",
+          "meshPath": "res://assets/artifacts/music_box.obj",
+          "metallic": 0.46,
+          "palette": {
+            "accent": "#704a32",
+            "primary": "#7f8b91",
+            "secondary": "#704a32"
+          },
+          "recipe": "MUSIC_BOX",
+          "roughness": 0.5,
+          "scale": [
+            1.03,
+            1.05,
+            1.02
+          ],
+          "specId": "artifact_035",
+          "trim": {
+            "color": "#704a32",
+            "materialPath": "",
+            "shape": "plate"
+          }
+        },
+        "hookAvailable": true,
+        "legacyStory18Spec050": {
+          "detail": {
+            "motif": "",
+            "placement": "",
+            "wearMask": ""
+          },
+          "materialPath": "res://assets/materials/steel.tres",
+          "meshPath": "res://assets/artifacts/model_05.obj",
+          "metallic": 0.63,
+          "palette": {
+            "accent": "#b99d70",
+            "primary": "#7f8b91",
+            "secondary": "#b99d70"
+          },
+          "recipe": "DEFAULT",
+          "roughness": 0.39,
+          "scale": [
+            1.065,
+            1.05,
+            0.98
+          ],
+          "specId": "artifact_050",
+          "trim": {
+            "color": "#b99d70",
+            "materialPath": "",
+            "shape": "ring"
+          }
+        },
+        "plain035": {
+          "detail": {
+            "motif": "",
+            "placement": "",
+            "wearMask": ""
+          },
+          "materialPath": "res://assets/materials/steel.tres",
+          "meshPath": "res://assets/artifacts/model_05.obj",
+          "metallic": 0.46,
+          "palette": {
+            "accent": "#704a32",
+            "primary": "#7f8b91",
+            "secondary": "#704a32"
+          },
+          "recipe": "DEFAULT",
+          "roughness": 0.5,
+          "scale": [
+            1.03,
+            1.05,
+            1.02
+          ],
+          "specId": "artifact_035",
+          "trim": {
+            "color": "#704a32",
+            "materialPath": "",
+            "shape": "plate"
+          }
+        },
+        "plain050": {
+          "detail": {
+            "motif": "",
+            "placement": "",
+            "wearMask": ""
+          },
+          "materialPath": "res://assets/materials/steel.tres",
+          "meshPath": "res://assets/artifacts/model_05.obj",
+          "metallic": 0.63,
+          "palette": {
+            "accent": "#b99d70",
+            "primary": "#7f8b91",
+            "secondary": "#b99d70"
+          },
+          "recipe": "DEFAULT",
+          "roughness": 0.39,
+          "scale": [
+            1.065,
+            1.05,
+            0.98
+          ],
+          "specId": "artifact_050",
+          "trim": {
+            "color": "#b99d70",
+            "materialPath": "",
+            "shape": "ring"
+          }
+        },
+        "privateLeaks": [],
+        "renderer": {
+          "exact": true,
+          "gaugeNodes": {
+            "genericTrim": 0,
+            "hub": 1,
+            "needle": 1,
+            "plate": 1,
+            "seal": 1,
+            "ticks": 13
+          },
+          "gaugePath": "res://assets/artifacts/gauge.obj",
+          "musicNodes": {
+            "comb": 1,
+            "cylinder": 1,
+            "genericTrim": 0,
+            "inlay": 1,
+            "key": 1,
+            "pins": 8,
+            "stem": 1,
+            "teeth": 7
+          },
+          "musicPath": "res://assets/artifacts/music_box.obj"
+        },
+        "shapeExact": true
+      },
+      "executed": true,
+      "id": "S6-AUTHORED-RENDER-13",
+      "name": "Instance render DTO isolates fresh gauge 16+050, legacy music 18+050, fresh music 18+035 and unrelated spec-only defaults",
+      "passed": true
+    }
+  ]
+}

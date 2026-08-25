@@ -1,0 +1,273 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage6-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "shadow_music_box",
+  "act_id": "ACT_4",
+  "title": {"en": "Shadow Mark: Music Box", "ko": "그림자 표식: 오르골"},
+  "briefing": {
+    "en": "Conservation specialist Iris Bell brings an Orchard Model 134 music box that plays evenly despite decades in storage. A shadow-shaped witness mark beneath the governor suggests a recent intervention hidden inside a period instrument.",
+    "ko": "보존 전문가 아이리스 벨은 수십 년간 보관됐는데도 고르게 연주되는 오차드 모델 134 오르골을 가져왔다. 조속기 아래의 그림자 모양 접촉 흔적은 당대 기구 안에 감춰진 최근 개입을 암시한다."
+  },
+  "central_question": {
+    "en": "Is the music box untouched, a genuine Orchard instrument with a modern governor repair, or a later reproduction built around an old cylinder?",
+    "ko": "이 오르골은 손대지 않은 원형인가, 현대 조속기 수리를 받은 오차드 진품인가, 아니면 오래된 실린더를 중심으로 만든 후대 복제품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, tunes, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 선율과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report authenticates the Orchard music box while disclosing a localized modern governor repair.",
+    "ko": "보고서는 오차드 오르골을 진품으로 확인하면서 국소적인 현대 조속기 수리를 고지한다."
+  },
+  "failure": {
+    "en": "The music box remains in review while Iris Bell separates preserved period fabric from the modern part that keeps it playing.",
+    "ko": "오르골은 검토 상태로 남고, 아이리스 벨은 보존된 당대 구조와 연주를 유지하는 현대 부품을 구분하도록 돕는다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the music-box file from the Stage 6 campaign desk.", "ko": "스테이지 6 캠페인 책상에서 오르골 사건 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": ["governor_witness_mark_if_adjusted_first"],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A report that hides a modern functional repair or mistakes it for a complete reproduction is reviewed with Iris Bell.",
+        "ko": "현대 기능 수리를 숨기거나 전체 복제품으로 오인한 보고서는 아이리스 벨과 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_035",
+    "legacy_story_artifact_id": "story_artifact_18",
+    "display_name": {"en": "Orchard Model 134 Music Box", "ko": "오차드 모델 134 오르골"},
+    "authoring_truth_hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+    "player_prompt": {
+      "en": "Authenticate the case, cylinder, and comb, then disclose exactly what changed in the governor assembly.",
+      "ko": "케이스, 실린더와 빗살을 감정한 뒤 조속기 조립부에서 무엇이 바뀌었는지 정확히 고지하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.shadow_music_box.untouched_orchard_music_box",
+      "label": {"en": "Untouched Orchard music box", "ko": "손대지 않은 오차드 오르골"},
+      "claim": {
+        "en": "Every playing component, including the governor, remains as Orchard originally made it.",
+        "ko": "조속기를 포함한 모든 연주 부품이 오차드 제작 당시 그대로 남아 있다."
+      }
+    },
+    {
+      "id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+      "label": {"en": "Genuine, with modern governor repair", "ko": "현대 조속기 수리를 받은 진품"},
+      "claim": {
+        "en": "The Orchard case, cylinder, comb, and drive are genuine, but a modern governor sleeve and vane were fitted in a localized repair.",
+        "ko": "오차드 케이스, 실린더, 빗살과 구동부는 진품이지만 국소 수리로 현대식 조속기 슬리브와 날개가 장착되었다."
+      }
+    },
+    {
+      "id": "hyp.shadow_music_box.later_reproduction_old_cylinder",
+      "label": {"en": "Later reproduction around an old cylinder", "ko": "오래된 실린더를 쓴 후대 복제품"},
+      "claim": {
+        "en": "A later builder placed an old Orchard cylinder in a newly made case and mechanism.",
+        "ko": "후대 제작자가 오래된 오차드 실린더를 새 케이스와 기구부에 넣었다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.shadow_music_box.artifact.period_music_box_identity",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_035",
+      "reliability": "HIGH",
+      "label": {"en": "Period music-box body", "ko": "당대 오르골 몸체"},
+      "short_observation": {"en": "Case, comb, cylinder, and bedplate share one period build.", "ko": "케이스, 빗살, 실린더와 바닥판이 하나의 당대 제작품이다."},
+      "text": {
+        "en": "A low-power material scan matches Orchard shellac, walnut pore fill, steel comb temper, cylinder alloy, and cast-bedplate inclusions to the 1932–1943 period. Serial 134-I repeats beneath the comb and cylinder cap, while continuous compression and oxidation join all major mounts.",
+        "ko": "저출력 재질 스캔에서 오차드 셸락, 호두나무 도관 충전재, 강철 빗살 열처리, 실린더 합금과 주조 바닥판 내포물이 1932~1943년 시기에 맞는다. 일련번호 134-I가 빗살 아래와 실린더 캡에 반복되고 이어진 눌림과 산화가 모든 주요 장착부를 잇는다."
+      },
+      "unlock": {
+        "action": "scan_material",
+        "target": "case_comb_and_cylinder",
+        "requires": ["material_scanner"],
+        "action_label": {"en": "Scan music-box body", "ko": "오르골 몸체 스캔"},
+        "target_label": {"en": "Case, comb, and cylinder", "ko": "케이스, 빗살과 실린더"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {"en": "Use one low-power pass across the shellac and comb temper line.", "ko": "셸락과 빗살 열처리 경계는 저출력으로 한 번만 스캔하라."}
+      },
+      "independence": {"group": "period_music_box_material", "depends_on": []},
+      "citation_id": "cite.shadow_music_box.artifact.period_music_box_identity"
+    },
+    {
+      "source_ref": "src.shadow_music_box.artifact.modern_governor_repair",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_035",
+      "reliability": "HIGH",
+      "label": {"en": "Governor repair", "ko": "조속기 수리"},
+      "short_observation": {"en": "A modern sleeve and vane occupy one reversible repair point.", "ko": "현대식 슬리브와 날개가 되돌릴 수 있는 한 수리 지점에 놓여 있다."},
+      "text": {
+        "en": "With the spring relaxed and every washer photographed, the repair toolkit exposes a polymer-lined governor sleeve and laser-cut vane. Their metric service screw occupies a reversible adapter in the original bearing seat; the dark witness shape is the untouched footprint of the earlier vane, and no modern work reaches the cylinder, comb, bedplate, or drive train.",
+        "ko": "태엽을 풀고 모든 와셔를 촬영한 뒤 수리 도구 세트로 열자 폴리머 안감 조속기 슬리브와 레이저 절단 날개가 드러난다. 미터 규격 정비 나사는 원래 베어링 자리에 되돌릴 수 있는 어댑터로 고정되며, 어두운 접촉 모양은 이전 날개가 남긴 손대지 않은 흔적이다. 현대 작업은 실린더, 빗살, 바닥판이나 구동부까지 이어지지 않는다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "governor_assembly",
+        "requires": ["src.shadow_music_box.artifact.period_music_box_identity", "repair_toolkit"],
+        "action_label": {"en": "Open governor assembly", "ko": "조속기 조립부 열기"},
+        "target_label": {"en": "Sleeve, vane, and witness mark", "ko": "슬리브, 날개와 접촉 흔적"}
+      },
+      "risk": {
+        "destroyed_by": ["adjust_governor_before_witness_capture"],
+        "player_warning": {"en": "Relax the spring and record every washer before moving the governor.", "ko": "조속기를 움직이기 전에 태엽을 풀고 모든 와셔를 기록하라."}
+      },
+      "independence": {"group": "localized_governor_repair", "depends_on": ["src.shadow_music_box.artifact.period_music_box_identity"]},
+      "citation_id": "cite.shadow_music_box.artifact.modern_governor_repair"
+    },
+    {
+      "source_ref": "src.shadow_music_box.document.serial_reference_leaf",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_18",
+      "document_id": "doc.shadow_music_box.serial_reference_leaf",
+      "reliability": "HIGH",
+      "label": {"en": "Serial reference leaf", "ko": "일련번호 참고표"},
+      "short_observation": {"en": "The serial pattern binds the major period parts.", "ko": "일련번호 배열이 주요 당대 부품을 묶는다."},
+      "text": {
+        "en": "Fictional Record 18 lists Orchard Model 134-I number placement, tune-pin count, comb spacing, and bedplate casting codes. Every major part matches, while the governor sleeve and vane use identifiers introduced much later. The leaf contains no owner or transfer and is not provenance.",
+        "ko": "가상 기록 18은 오차드 모델 134-I의 번호 위치, 선율 핀 수, 빗살 간격과 바닥판 주조 코드를 정리한다. 모든 주요 부품은 일치하지만 조속기 슬리브와 날개는 훨씬 뒤에 도입된 식별 방식을 쓴다. 이 참고표에는 소유자나 이관이 없어 소장 이력은 아니다."
+      },
+      "unlock": {
+        "action": "compare_records",
+        "target": "serial_reference_leaf",
+        "requires": ["src.shadow_music_box.artifact.period_music_box_identity"],
+        "action_label": {"en": "Compare serial chart", "ko": "일련번호표 대조"},
+        "target_label": {"en": "Model 134-I parts chart", "ko": "모델 134-I 부품표"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "model134_serial_chart", "depends_on": ["src.shadow_music_box.artifact.period_music_box_identity"]},
+      "citation_id": "cite.shadow_music_box.document.serial_reference_leaf"
+    },
+    {
+      "source_ref": "src.shadow_music_box.document.estate_custody_note",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_06",
+      "document_id": "doc.shadow_music_box.estate_custody_note",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Estate custody note", "ko": "유산 소장 기록"},
+      "short_observation": {"en": "The numbered box stays in a signed estate chain.", "ko": "번호가 있는 오르골이 서명된 유산 소장 경로를 따른다."},
+      "text": {
+        "en": "Fictional Reference Leaf 06 records serial 134-I, the lid marquetry loss, and the same tune sequence as the box enters the Bell estate. Signed entries carry it through storage and note a recent conservation visit without claiming the mechanism remained untouched. This is the case's sole provenance record.",
+        "ko": "가상 참고 낱장 06은 오르골이 벨 유산에 들어올 때 일련번호 134-I, 뚜껑 상감 손실과 같은 선율 순서를 기록한다. 서명된 항목은 보관 기간을 잇고 최근 보존 작업 방문을 적지만 기구부가 손대지 않았다고 주장하지 않는다. 이것이 이 사건의 유일한 소장 이력 기록이다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "estate_custody_note",
+        "requires": [],
+        "action_label": {"en": "Read estate note", "ko": "유산 기록 읽기"},
+        "target_label": {"en": "Signed custody entries", "ko": "서명된 소장 항목"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "music_box_estate_chain", "depends_on": []},
+      "citation_id": "cite.shadow_music_box.document.estate_custody_note"
+    },
+    {
+      "source_ref": "src.shadow_music_box.npc.iris_shadow_mark_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "iris_bell",
+      "npc_id": "iris_bell",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Iris's repair disclosure", "ko": "아이리스의 수리 고지"},
+      "short_observation": {"en": "Iris identifies the repair goal and its limited scope.", "ko": "아이리스가 수리 목적과 제한된 범위를 밝힌다."},
+      "text": {
+        "en": "Iris Bell says she authorized a reversible governor repair after the original sleeve cracked during storage; she did not replace the musical train. She provides context but asks that the modern materials, untouched witness mark, serial chart, and custody note independently establish what remains genuine.",
+        "ko": "아이리스 벨은 보관 중 원래 슬리브가 갈라진 뒤 되돌릴 수 있는 조속기 수리를 승인했으며 음악 구동계는 교체하지 않았다고 말한다. 그녀는 맥락을 제공하지만 현대 재료, 손대지 않은 접촉 흔적, 일련번호표와 소장 기록으로 무엇이 진품인지 독립적으로 확인해 달라고 요청한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "iris_bell",
+        "requires": ["src.shadow_music_box.artifact.modern_governor_repair"],
+        "action_label": {"en": "Ask Iris Bell", "ko": "아이리스 벨에게 묻기"},
+        "target_label": {"en": "Iris Bell", "ko": "아이리스 벨"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "conservator_repair_account", "depends_on": ["src.shadow_music_box.artifact.modern_governor_repair"]},
+      "citation_id": "cite.shadow_music_box.npc.iris_shadow_mark_context"
+    },
+    {
+      "source_ref": "src.shadow_music_box.reference.period_music_box_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_13",
+      "reference_id": "ref.shadow_music_box.period_music_box_standard",
+      "reliability": "HIGH",
+      "label": {"en": "Period music-box standard", "ko": "당대 오르골 기준"},
+      "short_observation": {"en": "The guide matches the period body and isolates the modern governor.", "ko": "안내서가 당대 몸체와 일치하고 현대 조속기를 분리한다."},
+      "text": {
+        "en": "The fictional 1932–1943 music-box guide matches Orchard comb profiles, cylinder caps, bedplate ribs, winding-stop geometry, and serial placement. Its governors use leather-lined brass sleeves and hand-cut vanes; the received polymer lining, laser edge, and metric service screw are modern but confined to the same replaceable module.",
+        "ko": "가상의 1932~1943년 오르골 안내서는 오차드 빗살 형상, 실린더 캡, 바닥판 리브, 태엽 정지 구조와 일련번호 위치에 맞는다. 당대 조속기는 가죽 안감 황동 슬리브와 손절단 날개를 쓰며, 인수품의 폴리머 안감, 레이저 절단면과 미터 규격 정비 나사는 현대식이지만 같은 교체 가능 모듈에만 한정된다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": ["src.shadow_music_box.artifact.period_music_box_identity", "reference_database"],
+        "action_label": {"en": "Check period guide", "ko": "당대 안내서 확인"},
+        "target_label": {"en": "Orchard construction plates", "ko": "오차드 제작 도판"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_music_box_standard", "depends_on": ["src.shadow_music_box.artifact.period_music_box_identity"]},
+      "citation_id": "cite.shadow_music_box.reference.period_music_box_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.shadow_music_box.artifact.period_music_box_identity", "source_ref": "src.shadow_music_box.artifact.period_music_box_identity", "label": {"en": "Object scan: period music box", "ko": "실물 스캔: 당대 오르골"}, "locator": {"en": "Object record A-1, case through bedplate", "ko": "실물 기록 A-1, 케이스에서 바닥판까지"}},
+    {"id": "cite.shadow_music_box.artifact.modern_governor_repair", "source_ref": "src.shadow_music_box.artifact.modern_governor_repair", "label": {"en": "Object record: modern governor repair", "ko": "실물 기록: 현대 조속기 수리"}, "locator": {"en": "Repair record A-2, governor module", "ko": "수리 기록 A-2, 조속기 모듈"}},
+    {"id": "cite.shadow_music_box.document.serial_reference_leaf", "source_ref": "src.shadow_music_box.document.serial_reference_leaf", "label": {"en": "Model 134-I serial reference", "ko": "모델 134-I 일련번호 참고표"}, "locator": {"en": "Case document D-18, parts chart", "ko": "사건 문서 D-18, 부품표"}},
+    {"id": "cite.shadow_music_box.document.estate_custody_note", "source_ref": "src.shadow_music_box.document.estate_custody_note", "label": {"en": "Estate custody note", "ko": "유산 소장 기록"}, "locator": {"en": "Case document D-06, signed storage entries", "ko": "사건 문서 D-06, 서명된 보관 항목"}},
+    {"id": "cite.shadow_music_box.npc.iris_shadow_mark_context", "source_ref": "src.shadow_music_box.npc.iris_shadow_mark_context", "label": {"en": "Interview with Iris Bell", "ko": "아이리스 벨 면담"}, "locator": {"en": "Conservation interview N-18", "ko": "보존 면담 N-18"}},
+    {"id": "cite.shadow_music_box.reference.period_music_box_standard", "source_ref": "src.shadow_music_box.reference.period_music_box_standard", "label": {"en": "Period music-box construction guide", "ko": "당대 오르골 제작 안내서"}, "locator": {"en": "Fictional period reference 13, governor plate 3", "ko": "가상 시대 참고 13, 조속기 도판 3"}}
+  ],
+  "evidence_links": [
+    {"id": "link.shadow_music_box.body_supports_untouched", "source_ref": "src.shadow_music_box.artifact.period_music_box_identity", "hypothesis_id": "hyp.shadow_music_box.untouched_orchard_music_box", "relation": "SUPPORT", "weight": 0.45, "independence_group": "period_music_box_material", "citation_id": "cite.shadow_music_box.artifact.period_music_box_identity"},
+    {"id": "link.shadow_music_box.body_supports_repair", "source_ref": "src.shadow_music_box.artifact.period_music_box_identity", "hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "period_music_box_material", "citation_id": "cite.shadow_music_box.artifact.period_music_box_identity"},
+    {"id": "link.shadow_music_box.body_refutes_reproduction", "source_ref": "src.shadow_music_box.artifact.period_music_box_identity", "hypothesis_id": "hyp.shadow_music_box.later_reproduction_old_cylinder", "relation": "REFUTE", "weight": 0.95, "independence_group": "period_music_box_material", "citation_id": "cite.shadow_music_box.artifact.period_music_box_identity"},
+    {"id": "link.shadow_music_box.governor_refutes_untouched", "source_ref": "src.shadow_music_box.artifact.modern_governor_repair", "hypothesis_id": "hyp.shadow_music_box.untouched_orchard_music_box", "relation": "REFUTE", "weight": 1.0, "independence_group": "localized_governor_repair", "citation_id": "cite.shadow_music_box.artifact.modern_governor_repair"},
+    {"id": "link.shadow_music_box.governor_supports_repair", "source_ref": "src.shadow_music_box.artifact.modern_governor_repair", "hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "localized_governor_repair", "citation_id": "cite.shadow_music_box.artifact.modern_governor_repair"},
+    {"id": "link.shadow_music_box.governor_refutes_reproduction", "source_ref": "src.shadow_music_box.artifact.modern_governor_repair", "hypothesis_id": "hyp.shadow_music_box.later_reproduction_old_cylinder", "relation": "REFUTE", "weight": 0.75, "independence_group": "localized_governor_repair", "citation_id": "cite.shadow_music_box.artifact.modern_governor_repair"},
+    {"id": "link.shadow_music_box.serial_supports_repair", "source_ref": "src.shadow_music_box.document.serial_reference_leaf", "hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "model134_serial_chart", "citation_id": "cite.shadow_music_box.document.serial_reference_leaf"},
+    {"id": "link.shadow_music_box.serial_refutes_reproduction", "source_ref": "src.shadow_music_box.document.serial_reference_leaf", "hypothesis_id": "hyp.shadow_music_box.later_reproduction_old_cylinder", "relation": "REFUTE", "weight": 0.95, "independence_group": "model134_serial_chart", "citation_id": "cite.shadow_music_box.document.serial_reference_leaf"},
+    {"id": "link.shadow_music_box.custody_supports_repair", "source_ref": "src.shadow_music_box.document.estate_custody_note", "hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "music_box_estate_chain", "citation_id": "cite.shadow_music_box.document.estate_custody_note"},
+    {"id": "link.shadow_music_box.custody_refutes_reproduction", "source_ref": "src.shadow_music_box.document.estate_custody_note", "hypothesis_id": "hyp.shadow_music_box.later_reproduction_old_cylinder", "relation": "REFUTE", "weight": 0.85, "independence_group": "music_box_estate_chain", "citation_id": "cite.shadow_music_box.document.estate_custody_note"},
+    {"id": "link.shadow_music_box.iris_refutes_untouched", "source_ref": "src.shadow_music_box.npc.iris_shadow_mark_context", "hypothesis_id": "hyp.shadow_music_box.untouched_orchard_music_box", "relation": "REFUTE", "weight": 0.75, "independence_group": "conservator_repair_account", "citation_id": "cite.shadow_music_box.npc.iris_shadow_mark_context"},
+    {"id": "link.shadow_music_box.iris_supports_repair", "source_ref": "src.shadow_music_box.npc.iris_shadow_mark_context", "hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair", "relation": "SUPPORT", "weight": 0.8, "independence_group": "conservator_repair_account", "citation_id": "cite.shadow_music_box.npc.iris_shadow_mark_context"},
+    {"id": "link.shadow_music_box.standard_refutes_untouched", "source_ref": "src.shadow_music_box.reference.period_music_box_standard", "hypothesis_id": "hyp.shadow_music_box.untouched_orchard_music_box", "relation": "REFUTE", "weight": 0.8, "independence_group": "independent_music_box_standard", "citation_id": "cite.shadow_music_box.reference.period_music_box_standard"},
+    {"id": "link.shadow_music_box.standard_supports_repair", "source_ref": "src.shadow_music_box.reference.period_music_box_standard", "hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair", "relation": "SUPPORT", "weight": 0.95, "independence_group": "independent_music_box_standard", "citation_id": "cite.shadow_music_box.reference.period_music_box_standard"},
+    {"id": "link.shadow_music_box.standard_refutes_reproduction", "source_ref": "src.shadow_music_box.reference.period_music_box_standard", "hypothesis_id": "hyp.shadow_music_box.later_reproduction_old_cylinder", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_music_box_standard", "citation_id": "cite.shadow_music_box.reference.period_music_box_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.shadow_music_box.genuine_orchard_music_box_modern_governor_repair",
+    "required_source_refs": [
+      "src.shadow_music_box.artifact.period_music_box_identity",
+      "src.shadow_music_box.artifact.modern_governor_repair",
+      "src.shadow_music_box.document.estate_custody_note",
+      "src.shadow_music_box.reference.period_music_box_standard"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite four findings from four independent groups. Authenticate the period instrument, identify the modern governor work, and state why that local repair does not make the whole box a reproduction.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 당대 기구를 감정하고 현대 조속기 작업을 밝히며 그 국소 수리가 오르골 전체를 복제품으로 만들지 않는 이유를 설명하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

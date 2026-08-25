@@ -1,0 +1,272 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage6-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "shadow_gauge",
+  "act_id": "ACT_4",
+  "title": {"en": "Shadow Mark: Gauge", "ko": "그림자 표식: 계기"},
+  "briefing": {
+    "en": "Dr. Hana Mire brings a Juniper Model 149 precision gauge from a closed instrument room. A dark mark beneath its bezel may be a workshop control mark, or a later attempt to borrow an old estate history.",
+    "ko": "하나 미레 박사는 폐쇄된 계측실에서 나온 주니퍼 모델 149 정밀 계기를 가져왔다. 베젤 아래의 어두운 표식은 공방 검사 표식일 수도, 오래된 유산 이력을 빌리려는 후대 흔적일 수도 있다."
+  },
+  "central_question": {
+    "en": "Is the gauge a complete genuine Juniper instrument, a period shell with a substituted core, or a later replica carrying an old estate note?",
+    "ko": "이 계기는 온전한 주니퍼 진품인가, 당대 외피에 다른 핵심부를 넣은 물건인가, 아니면 오래된 유산 문서를 붙인 후대 복제품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, marks, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 표식과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report identifies one continuous Juniper Model 149 build and separates its genuine shadow inspection mark from later grime.",
+    "ko": "보고서는 하나로 이어진 주니퍼 모델 149 제작품을 확인하고 진짜 음영 검사 표식을 후대 오염과 구분한다."
+  },
+  "failure": {
+    "en": "The gauge remains in review while Dr. Mire helps rebuild the distinction between object evidence and an inherited label.",
+    "ko": "계기는 검토 상태로 남고, 미레 박사는 실물 근거와 전해진 명칭의 차이를 다시 정리하도록 돕는다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the gauge file from the Stage 6 campaign desk.", "ko": "스테이지 6 캠페인 책상에서 계기 사건 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": ["internal_alignment_if_opened_unrecorded"],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A conclusion that treats the estate note as stronger than the gauge itself is reviewed with Dr. Mire.",
+        "ko": "유산 문서를 계기 자체보다 강한 근거로 취급한 결론은 미레 박사와 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_050",
+    "legacy_story_artifact_id": "story_artifact_16",
+    "display_name": {"en": "Juniper Model 149 Precision Gauge", "ko": "주니퍼 모델 149 정밀 계기"},
+    "authoring_truth_hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+    "player_prompt": {
+      "en": "Match the housing, movement, shadow mark, and custody record without confusing a control mark with damage.",
+      "ko": "검사 표식을 손상으로 오인하지 말고 외함, 기구부, 음영 표식과 소장 기록을 대조하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+      "label": {"en": "Complete genuine precision gauge", "ko": "온전한 진품 정밀 계기"},
+      "claim": {
+        "en": "The housing, pressure movement, and shadow inspection mark belong to one genuine Juniper Model 149 instrument.",
+        "ko": "외함, 압력 기구부와 음영 검사 표식이 하나의 진짜 주니퍼 모델 149 계기에 속한다."
+      }
+    },
+    {
+      "id": "hyp.shadow_gauge.period_shell_substituted_core",
+      "label": {"en": "Period shell, substituted core", "ko": "당대 외피와 교체된 핵심부"},
+      "claim": {
+        "en": "A period Juniper shell surrounds a later pressure movement fitted to imitate an intact workshop instrument.",
+        "ko": "당대 주니퍼 외피 안에 후대 압력 기구부를 끼워 온전한 공방 계기처럼 꾸몄다."
+      }
+    },
+    {
+      "id": "hyp.shadow_gauge.later_replica_old_estate_note",
+      "label": {"en": "Later replica with old estate note", "ko": "오래된 유산 문서를 붙인 후대 복제품"},
+      "claim": {
+        "en": "A later replica carries an unrelated old estate note and an artificial dark mark to suggest Juniper history.",
+        "ko": "후대 복제품에 무관한 오래된 유산 문서와 인위적인 어두운 표식을 붙여 주니퍼 이력을 암시했다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.shadow_gauge.artifact.period_gauge_identity",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_050",
+      "reliability": "HIGH",
+      "label": {"en": "Gauge body", "ko": "계기 몸체"},
+      "short_observation": {"en": "The case, dial, and mark share period material.", "ko": "케이스, 다이얼과 표식의 재료가 같은 시대에 속한다."},
+      "text": {
+        "en": "A low-power material scan matches the brass bezel, blued scale screws, enamel binder, and rear plate to Juniper's 1908–1919 workshop mix. The dark crescent lies beneath the bezel's aged lacquer and contains compacted lampblack, not fresh pigment; scratches and dust cross above it.",
+        "ko": "저출력 재질 스캔에서 황동 베젤, 청색 열처리 눈금 나사, 에나멜 결합제와 후면판이 주니퍼의 1908~1919년 공방 재료 조합과 맞는다. 어두운 초승달 표식은 노화된 베젤 래커 아래에 있고 새 안료가 아닌 압착된 등잔 검댕을 품으며, 긁힘과 먼지가 그 위를 가로지른다."
+      },
+      "unlock": {
+        "action": "scan_material",
+        "target": "gauge_body_and_shadow_mark",
+        "requires": ["material_scanner"],
+        "action_label": {"en": "Scan gauge body", "ko": "계기 몸체 스캔"},
+        "target_label": {"en": "Bezel and shadow mark", "ko": "베젤과 음영 표식"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {"en": "Use one low-power pass so the enamel binder does not warm.", "ko": "에나멜 결합제가 데워지지 않도록 저출력으로 한 번만 스캔하라."}
+      },
+      "independence": {"group": "period_gauge_material", "depends_on": []},
+      "citation_id": "cite.shadow_gauge.artifact.period_gauge_identity"
+    },
+    {
+      "source_ref": "src.shadow_gauge.artifact.internal_maker_continuity",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_050",
+      "reliability": "HIGH",
+      "label": {"en": "Internal continuity", "ko": "내부 제작 연속성"},
+      "short_observation": {"en": "Matching marks join the movement to its case.", "ko": "일치하는 표식이 기구부와 케이스를 잇는다."},
+      "text": {
+        "en": "After the bezel index is photographed, precision opening reveals matching hand-scribed assembly 49 marks on the rear plate, movement bridge, and case lip. Oxidation bridges every fastener seat, the calibrated Bourdon linkage follows Juniper geometry, and no adapter holes or cut edges indicate a substituted core.",
+        "ko": "베젤 기준점을 촬영하고 정밀하게 열자 후면판, 기구 브리지와 케이스 가장자리에 같은 손새김 조립 번호 49가 나타난다. 산화가 모든 체결 자리를 이어 주고 보정된 부르동 연결부가 주니퍼 형상을 따르며, 교체 핵심부를 뜻하는 어댑터 구멍이나 절단면은 없다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "indexed_gauge_bezel",
+        "requires": ["src.shadow_gauge.artifact.period_gauge_identity", "precision_screwdriver"],
+        "action_label": {"en": "Open indexed bezel", "ko": "기준 표시 베젤 열기"},
+        "target_label": {"en": "Movement and rear plate", "ko": "기구부와 후면판"}
+      },
+      "risk": {
+        "destroyed_by": ["open_bezel_without_alignment_capture"],
+        "player_warning": {"en": "Capture needle and bezel alignment before loosening the screws.", "ko": "나사를 풀기 전에 바늘과 베젤의 정렬 상태를 기록하라."}
+      },
+      "independence": {"group": "internal_gauge_continuity", "depends_on": ["src.shadow_gauge.artifact.period_gauge_identity"]},
+      "citation_id": "cite.shadow_gauge.artifact.internal_maker_continuity"
+    },
+    {
+      "source_ref": "src.shadow_gauge.document.estate_custody_note",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_16",
+      "document_id": "doc.shadow_gauge.estate_custody_note",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Estate custody note", "ko": "유산 소장 기록"},
+      "short_observation": {"en": "The numbered gauge stays in one recorded chain.", "ko": "번호가 있는 계기가 하나의 기록된 소장 경로를 따른다."},
+      "text": {
+        "en": "Fictional Record 16 names Juniper Model 149, assembly 49, and the crescent control mark when the instrument enters the Mire estate cabinet. Signed inventory transfers follow the same gauge to the closed instrument room; no ownership gap or loose replacement movement appears.",
+        "ko": "가상 기록 16은 주니퍼 모델 149가 미레 유산 계측장에 들어올 때 조립 번호 49와 초승달 검사 표식을 함께 적는다. 서명된 재고 이관 기록은 같은 계기를 폐쇄 계측실까지 잇고, 소유 공백이나 별도 교체 기구부는 나타나지 않는다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "estate_custody_note",
+        "requires": [],
+        "action_label": {"en": "Read custody note", "ko": "소장 기록 읽기"},
+        "target_label": {"en": "Signed estate inventory", "ko": "서명된 유산 재고표"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "gauge_estate_chain", "depends_on": []},
+      "citation_id": "cite.shadow_gauge.document.estate_custody_note"
+    },
+    {
+      "source_ref": "src.shadow_gauge.document.model149_catalog_leaf",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_01",
+      "document_id": "doc.shadow_gauge.model149_catalog_leaf",
+      "reliability": "MEDIUM",
+      "label": {"en": "Model 149 catalog leaf", "ko": "모델 149 카탈로그 낱장"},
+      "short_observation": {"en": "The catalog matches the dial and pressure layout.", "ko": "카탈로그가 다이얼과 압력 구조에 맞는다."},
+      "text": {
+        "en": "Fictional Reference Leaf 01 diagrams the Model 149 dial spacing, rear-plate ports, and Bourdon linkage. Its workshop note calls the dark crescent a lampblack control mark checked before the bezel was lacquered. The leaf describes construction only and contains no owner or transfer, so it is not provenance.",
+        "ko": "가상 참고 낱장 01은 모델 149의 다이얼 간격, 후면판 포트와 부르동 연결부를 도해한다. 공방 주석은 어두운 초승달을 베젤 래커 전에 검사한 등잔 검댕 표식이라고 부른다. 이 낱장은 제작법만 설명하고 소유자나 이관 내용이 없어 소장 이력은 아니다."
+      },
+      "unlock": {
+        "action": "compare_records",
+        "target": "model149_catalog_leaf",
+        "requires": ["src.shadow_gauge.artifact.period_gauge_identity"],
+        "action_label": {"en": "Compare catalog", "ko": "카탈로그 대조"},
+        "target_label": {"en": "Model 149 diagram", "ko": "모델 149 도해"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "model149_catalog", "depends_on": ["src.shadow_gauge.artifact.period_gauge_identity"]},
+      "citation_id": "cite.shadow_gauge.document.model149_catalog_leaf"
+    },
+    {
+      "source_ref": "src.shadow_gauge.npc.hana_shadow_mark_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "hana_mire",
+      "npc_id": "hana_mire",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Dr. Mire's cabinet account", "ko": "미레 박사의 계측장 설명"},
+      "short_observation": {"en": "Dr. Mire separates family memory from custody proof.", "ko": "미레 박사가 가족의 기억과 소장 증명을 구분한다."},
+      "text": {
+        "en": "Dr. Mire remembers the gauge sealed in the instrument cabinet and the crescent being called a 'shadow mark.' She also admits that memory cannot prove maker or mechanism; she points instead to the signed estate chain and asks that the physical assembly marks decide the identity.",
+        "ko": "미레 박사는 계기가 계측장에 봉인되어 있었고 초승달이 '그림자 표식'이라 불렸다고 기억한다. 그러나 기억만으로 제작자나 기구부를 증명할 수 없다고 인정하며, 서명된 유산 소장 경로를 제시하고 실물 조립 표식으로 정체성을 판단해 달라고 요청한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "hana_mire",
+        "requires": ["src.shadow_gauge.document.estate_custody_note"],
+        "action_label": {"en": "Ask Dr. Mire", "ko": "미레 박사에게 묻기"},
+        "target_label": {"en": "Dr. Hana Mire", "ko": "하나 미레 박사"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "curator_cabinet_account", "depends_on": ["src.shadow_gauge.document.estate_custody_note"]},
+      "citation_id": "cite.shadow_gauge.npc.hana_shadow_mark_context"
+    },
+    {
+      "source_ref": "src.shadow_gauge.reference.period_gauge_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_07",
+      "reference_id": "ref.shadow_gauge.period_gauge_standard",
+      "reliability": "HIGH",
+      "label": {"en": "Period gauge standard", "ko": "당대 계기 기준"},
+      "short_observation": {"en": "The standard matches every functional proportion.", "ko": "기준 자료가 모든 기능 비례와 일치한다."},
+      "text": {
+        "en": "The fictional 1908–1919 instrument standard matches Model 149 scale spacing, port threading, bridge geometry, and assembly-number placement. Later teaching replicas use stamped crescents over finished lacquer and metric adapter rings, neither of which appears on this gauge.",
+        "ko": "가상의 1908~1919년 계기 기준은 모델 149의 눈금 간격, 포트 나사산, 브리지 형상과 조립 번호 위치에 맞는다. 후대 교육용 복제품은 완성된 래커 위에 초승달을 찍고 미터식 어댑터 링을 쓰지만 이 계기에는 둘 다 없다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": ["src.shadow_gauge.artifact.period_gauge_identity", "reference_database"],
+        "action_label": {"en": "Check period standard", "ko": "당대 기준 확인"},
+        "target_label": {"en": "Gauge construction guide", "ko": "계기 제작 안내서"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_gauge_standard", "depends_on": ["src.shadow_gauge.artifact.period_gauge_identity"]},
+      "citation_id": "cite.shadow_gauge.reference.period_gauge_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.shadow_gauge.artifact.period_gauge_identity", "source_ref": "src.shadow_gauge.artifact.period_gauge_identity", "label": {"en": "Object scan: gauge body", "ko": "실물 스캔: 계기 몸체"}, "locator": {"en": "Object record A-1, bezel and dial", "ko": "실물 기록 A-1, 베젤과 다이얼"}},
+    {"id": "cite.shadow_gauge.artifact.internal_maker_continuity", "source_ref": "src.shadow_gauge.artifact.internal_maker_continuity", "label": {"en": "Object record: internal continuity", "ko": "실물 기록: 내부 제작 연속성"}, "locator": {"en": "Precision record A-2, movement and rear plate", "ko": "정밀 기록 A-2, 기구부와 후면판"}},
+    {"id": "cite.shadow_gauge.document.estate_custody_note", "source_ref": "src.shadow_gauge.document.estate_custody_note", "label": {"en": "Estate custody note", "ko": "유산 소장 기록"}, "locator": {"en": "Case document D-16, signed transfers", "ko": "사건 문서 D-16, 서명된 이관 항목"}},
+    {"id": "cite.shadow_gauge.document.model149_catalog_leaf", "source_ref": "src.shadow_gauge.document.model149_catalog_leaf", "label": {"en": "Model 149 catalog leaf", "ko": "모델 149 카탈로그 낱장"}, "locator": {"en": "Workshop diagram D-01, construction plate", "ko": "공방 도해 D-01, 제작 도판"}},
+    {"id": "cite.shadow_gauge.npc.hana_shadow_mark_context", "source_ref": "src.shadow_gauge.npc.hana_shadow_mark_context", "label": {"en": "Interview with Dr. Hana Mire", "ko": "하나 미레 박사 면담"}, "locator": {"en": "Curatorial interview N-16", "ko": "큐레이터 면담 N-16"}},
+    {"id": "cite.shadow_gauge.reference.period_gauge_standard", "source_ref": "src.shadow_gauge.reference.period_gauge_standard", "label": {"en": "Period gauge construction standard", "ko": "당대 계기 제작 기준"}, "locator": {"en": "Fictional period reference 07, plate 4", "ko": "가상 시대 참고 07, 도판 4"}}
+  ],
+  "evidence_links": [
+    {"id": "link.shadow_gauge.body_supports_genuine", "source_ref": "src.shadow_gauge.artifact.period_gauge_identity", "hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge", "relation": "SUPPORT", "weight": 0.9, "independence_group": "period_gauge_material", "citation_id": "cite.shadow_gauge.artifact.period_gauge_identity"},
+    {"id": "link.shadow_gauge.body_refutes_replica", "source_ref": "src.shadow_gauge.artifact.period_gauge_identity", "hypothesis_id": "hyp.shadow_gauge.later_replica_old_estate_note", "relation": "REFUTE", "weight": 0.9, "independence_group": "period_gauge_material", "citation_id": "cite.shadow_gauge.artifact.period_gauge_identity"},
+    {"id": "link.shadow_gauge.internal_supports_genuine", "source_ref": "src.shadow_gauge.artifact.internal_maker_continuity", "hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge", "relation": "SUPPORT", "weight": 1.0, "independence_group": "internal_gauge_continuity", "citation_id": "cite.shadow_gauge.artifact.internal_maker_continuity"},
+    {"id": "link.shadow_gauge.internal_refutes_core", "source_ref": "src.shadow_gauge.artifact.internal_maker_continuity", "hypothesis_id": "hyp.shadow_gauge.period_shell_substituted_core", "relation": "REFUTE", "weight": 1.0, "independence_group": "internal_gauge_continuity", "citation_id": "cite.shadow_gauge.artifact.internal_maker_continuity"},
+    {"id": "link.shadow_gauge.internal_refutes_replica", "source_ref": "src.shadow_gauge.artifact.internal_maker_continuity", "hypothesis_id": "hyp.shadow_gauge.later_replica_old_estate_note", "relation": "REFUTE", "weight": 0.95, "independence_group": "internal_gauge_continuity", "citation_id": "cite.shadow_gauge.artifact.internal_maker_continuity"},
+    {"id": "link.shadow_gauge.custody_supports_genuine", "source_ref": "src.shadow_gauge.document.estate_custody_note", "hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge", "relation": "SUPPORT", "weight": 0.9, "independence_group": "gauge_estate_chain", "citation_id": "cite.shadow_gauge.document.estate_custody_note"},
+    {"id": "link.shadow_gauge.custody_refutes_replica", "source_ref": "src.shadow_gauge.document.estate_custody_note", "hypothesis_id": "hyp.shadow_gauge.later_replica_old_estate_note", "relation": "REFUTE", "weight": 0.85, "independence_group": "gauge_estate_chain", "citation_id": "cite.shadow_gauge.document.estate_custody_note"},
+    {"id": "link.shadow_gauge.catalog_supports_genuine", "source_ref": "src.shadow_gauge.document.model149_catalog_leaf", "hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge", "relation": "SUPPORT", "weight": 0.8, "independence_group": "model149_catalog", "citation_id": "cite.shadow_gauge.document.model149_catalog_leaf"},
+    {"id": "link.shadow_gauge.catalog_refutes_core", "source_ref": "src.shadow_gauge.document.model149_catalog_leaf", "hypothesis_id": "hyp.shadow_gauge.period_shell_substituted_core", "relation": "REFUTE", "weight": 0.75, "independence_group": "model149_catalog", "citation_id": "cite.shadow_gauge.document.model149_catalog_leaf"},
+    {"id": "link.shadow_gauge.hana_supports_genuine", "source_ref": "src.shadow_gauge.npc.hana_shadow_mark_context", "hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge", "relation": "SUPPORT", "weight": 0.75, "independence_group": "curator_cabinet_account", "citation_id": "cite.shadow_gauge.npc.hana_shadow_mark_context"},
+    {"id": "link.shadow_gauge.hana_refutes_replica", "source_ref": "src.shadow_gauge.npc.hana_shadow_mark_context", "hypothesis_id": "hyp.shadow_gauge.later_replica_old_estate_note", "relation": "REFUTE", "weight": 0.55, "independence_group": "curator_cabinet_account", "citation_id": "cite.shadow_gauge.npc.hana_shadow_mark_context"},
+    {"id": "link.shadow_gauge.standard_supports_genuine", "source_ref": "src.shadow_gauge.reference.period_gauge_standard", "hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge", "relation": "SUPPORT", "weight": 0.95, "independence_group": "independent_gauge_standard", "citation_id": "cite.shadow_gauge.reference.period_gauge_standard"},
+    {"id": "link.shadow_gauge.standard_refutes_core", "source_ref": "src.shadow_gauge.reference.period_gauge_standard", "hypothesis_id": "hyp.shadow_gauge.period_shell_substituted_core", "relation": "REFUTE", "weight": 0.85, "independence_group": "independent_gauge_standard", "citation_id": "cite.shadow_gauge.reference.period_gauge_standard"},
+    {"id": "link.shadow_gauge.standard_refutes_replica", "source_ref": "src.shadow_gauge.reference.period_gauge_standard", "hypothesis_id": "hyp.shadow_gauge.later_replica_old_estate_note", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_gauge_standard", "citation_id": "cite.shadow_gauge.reference.period_gauge_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.shadow_gauge.genuine_juniper_precision_gauge",
+    "required_source_refs": [
+      "src.shadow_gauge.artifact.period_gauge_identity",
+      "src.shadow_gauge.artifact.internal_maker_continuity",
+      "src.shadow_gauge.document.estate_custody_note",
+      "src.shadow_gauge.reference.period_gauge_standard"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite four findings from four independent groups. Identify the gauge, explain the shadow mark, and distinguish continuous construction from a substituted core or replica.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 계기의 정체와 음영 표식을 설명하고 연속된 제작을 교체 핵심부나 복제품과 구분하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "executed": 10,
+  "failed": 0,
+  "passed": 10,
+  "skipped": 0,
+  "suite": "R3 Shadow Camera Authored Case",
+  "tests": [
+    {
+      "evidence": {
+        "errors": [],
+        "evidence": 6,
+        "hypotheses": 3,
+        "reliability": [
+          "HIGH",
+          "HIGH",
+          "HIGH",
+          "HIGH",
+          "MEDIUM",
+          "HIGH"
+        ]
+      },
+      "executed": true,
+      "id": "M4-SC-DATA-01",
+      "name": "Shadow Camera authored-v2 loads with canonical runtime refs and explicit source reliability",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "available": [
+          "src.shadow_camera.artifact.mount_wear"
+        ],
+        "publicKeys": [
+          "ok",
+          "code",
+          "caseId",
+          "title",
+          "artifactDisplayName",
+          "briefing",
+          "centralQuestion",
+          "fictionNotice",
+          "reportPrompt",
+          "success",
+          "failure",
+          "hypotheses",
+          "evidence",
+          "availableEvidence",
+          "discoveredEvidence",
+          "selectedHypothesisId",
+          "citedEvidenceIds",
+          "resolved",
+          "resolutionResult",
+          "artifactId"
+        ]
+      },
+      "executed": true,
+      "id": "M4-SC-PRIVACY-01",
+      "name": "Initial player state exposes the physical starting action and risk without leaking authored truth",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "code": "EVIDENCE_LOCKED",
+        "ok": false,
+        "requires": [
+          "src.shadow_camera.artifact.mount_wear"
+        ]
+      },
+      "executed": true,
+      "id": "M4-SC-SEQUENCE-01",
+      "name": "The hidden UV observation is locked until the physical mount observation is recorded",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "integrityAfter": 77.0,
+        "integrityBefore": 78.0,
+        "mount": {
+          "appliedRiskPenalty": 1.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.shadow_camera.artifact.mount_wear",
+          "ok": true,
+          "riskLevel": "LOW",
+          "sourceId": "physical_surface_sequence"
+        },
+        "uvWithoutTool": {
+          "code": "TOOL_REQUIRED",
+          "ok": false,
+          "requiredTools": [
+            "uv_lamp"
+          ],
+          "selectedTool": "soft_brush"
+        }
+      },
+      "executed": true,
+      "id": "M4-SC-RISK-01",
+      "name": "LOW physical observation applies its disclosed consequence and the next hidden step requires the UV tool",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "integrityAfter": 74.0,
+        "integrityBefore": 77.0,
+        "internalWithoutTool": {
+          "code": "TOOL_REQUIRED",
+          "ok": false,
+          "requiredTools": [
+            "precision_screwdriver"
+          ],
+          "selectedTool": "soft_brush"
+        },
+        "uv": {
+          "appliedRiskPenalty": 3.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.shadow_camera.artifact.uv_shadow_mark",
+          "ok": true,
+          "riskLevel": "HIGH",
+          "sourceId": "concealed_uv_imaging"
+        }
+      },
+      "executed": true,
+      "id": "M4-SC-SEQUENCE-02",
+      "name": "HIGH-risk hidden UV capture unlocks the concealed internal observation, which requires precision disassembly",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "integrityAfter": 73.0,
+        "integrityBefore": 74.0,
+        "result": {
+          "appliedRiskPenalty": 1.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.shadow_camera.artifact.internal_spacer",
+          "ok": true,
+          "riskLevel": "LOW",
+          "sourceId": "internal_construction_sequence"
+        }
+      },
+      "executed": true,
+      "id": "M4-SC-RISK-02",
+      "name": "Precision disassembly reveals the second hidden observation with its LOW pre-action risk",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "discovered": [
+          "src.shadow_camera.artifact.mount_wear",
+          "src.shadow_camera.artifact.uv_shadow_mark",
+          "src.shadow_camera.artifact.internal_spacer",
+          "src.shadow_camera.document.repair_leaf",
+          "src.shadow_camera.npc.lena_invoice_account",
+          "src.shadow_camera.reference.model147_material_note"
+        ],
+        "kinds": [
+          "ARTIFACT",
+          "ARTIFACT",
+          "ARTIFACT",
+          "DOCUMENT",
+          "NPC",
+          "REFERENCE"
+        ],
+        "sourceIds": [
+          "physical_surface_sequence",
+          "concealed_uv_imaging",
+          "internal_construction_sequence",
+          "archival_service_record",
+          "interested_owner_memory",
+          "independent_period_material_reference"
+        ]
+      },
+      "executed": true,
+      "id": "M4-SC-LEDGER-01",
+      "name": "Sequential investigation joins physical, document, NPC, and reference corroboration across independent groups",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citedEvidenceIds": [
+          "src.shadow_camera.artifact.uv_shadow_mark",
+          "src.shadow_camera.artifact.internal_spacer",
+          "src.shadow_camera.document.repair_leaf",
+          "src.shadow_camera.reference.model147_material_note"
+        ],
+        "code": "OK",
+        "conclusionAccurate": true,
+        "hypothesisId": "hyp.late_composite",
+        "independentSourceCount": 4,
+        "netScore": 6,
+        "ok": true,
+        "outcome": "masterful",
+        "refuteScore": 0,
+        "requiredSourcesMet": true,
+        "substantiated": true,
+        "substantiation": "STRONG",
+        "supportScore": 6
+      },
+      "executed": true,
+      "id": "M4-SC-REPORT-01",
+      "name": "Four-source cross-validation earns a masterful accurate report while distinguishing the genuine body from later additions",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citedEvidenceIds": [
+          "src.shadow_camera.artifact.uv_shadow_mark",
+          "src.shadow_camera.artifact.internal_spacer",
+          "src.shadow_camera.document.repair_leaf",
+          "src.shadow_camera.reference.model147_material_note"
+        ],
+        "code": "OK",
+        "conclusionAccurate": false,
+        "hypothesisId": "hyp.factory_shadow_camera",
+        "independentSourceCount": 0,
+        "netScore": -8,
+        "ok": true,
+        "outcome": "mistaken",
+        "refuteScore": 8,
+        "requiredSourcesMet": true,
+        "substantiated": false,
+        "substantiation": "INCONCLUSIVE",
+        "supportScore": 0
+      },
+      "executed": true,
+      "id": "M4-SC-REPORT-02",
+      "name": "The same ledger explicitly refutes the dramatic factory-prototype claim instead of merely supporting the canonical answer",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "containsCaseId": false
+      },
+      "executed": true,
+      "id": "M4-SC-GENERIC-01",
+      "name": "Shadow Camera behavior is data-driven with no case-id branch in gameplay state code",
+      "passed": true
+    }
+  ]
+}

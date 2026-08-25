@@ -1,0 +1,34 @@
+=== meshes ===
+assets/artifacts/model_01.obj 8
+assets/artifacts/model_02.obj 8
+assets/artifacts/model_03.obj 8
+assets/artifacts/model_04.obj 8
+assets/artifacts/model_05.obj 8
+assets/artifacts/model_06.obj 8
+assets/artifacts/model_07.obj 8
+assets/artifacts/model_08.obj 8
+assets/artifacts/model_09.obj 8
+assets/artifacts/model_10.obj 8
+assets/artifacts/model_11.obj 8
+assets/artifacts/model_12.obj 8
+assets/artifacts/model_13.obj 8
+assets/artifacts/model_14.obj 8
+assets/artifacts/model_15.obj 8
+=== main scene/scripts ===
+scripts/main.gd:1:extends Node2D
+scripts/main.gd:12:    draw_rect(Rect2(0,0,1280,720),Color("#17191c"));
+scripts/main.gd:32:    for i in range(7): draw_rect(Rect2(70+i*100,150+(i%2)*50,75,220+(i%3)*30),Color("#514337")); draw_rect(Rect2(58,480,680,20),Color("#a47b48"));
+scripts/main.gd:39:        var a=GameState.new_artifact(i+GameState.day%4); var y=135+i*145; panel(Rect2(40,y,1180,118),Color("#262b2e")); draw_rect(Rect2(60,y+18,90,82),Color(["#9d7646","#4d5960","#7a5f4d"][i])); txt(a.displayName,Vector2(180,y+35),20); txt("%s  •  %s  •  estimated ¤%d"%[a.category,a.actualEra,int(a.acquisitionPrice)],Vector2(180,y+68),15,Color("#b9c0b8")); txt("BUY ¤%d"%int(a.acquisitionPrice),Vector2(1060,y+68),17,Color("#d6b36a"));
+scripts/main.gd:48:    header("INSPECTION / ROTATE • ZOOM • FIND CLUES"); panel(Rect2(38,102,730,500),Color("#332f2a")); draw_set_transform(Vector2(400,350),deg_to_rad(selected.get("rotation",0.0)),Vector2(selected.get("zoom",1.0),selected.get("zoom",1.0))); draw_rect(Rect2(-130,-95,260,190),Color("#b18a56")); draw_rect(Rect2(-105,-70,210,140),Color("#4b5558")); draw_circle(Vector2(30,-20),30,Color("#d4b06d")); draw_set_transform(Vector2.ZERO,0,Vector2.ONE); txt("DRAG TO ORBIT",Vector2(290,560),14,Color("#d6b36a"));
+tools/generators/generate_makers.py:1:print("generate_makers.py: deterministic content generator ready")
+tools/generators/generate_variants.py:1:print("generate_variants.py: deterministic content generator ready")
+tools/generators/generate_damage_presets.py:1:print("generate_damage_presets.py: deterministic content generator ready")
+tools/generators/generate_events.py:1:print("generate_events.py: deterministic content generator ready")
+tools/generators/generate_bidders.py:1:print("generate_bidders.py: deterministic content generator ready")
+tools/generators/generate_market_profiles.py:1:print("generate_market_profiles.py: deterministic content generator ready")
+tools/generators/generate_upgrade_data.py:1:print("generate_upgrade_data.py: deterministic content generator ready")
+scenes/Main.tscn:5:[node name="RelicAndReserve" type="Node2D"]
+=== export templates ===
+godot4.7.1
+=== files ===
+451

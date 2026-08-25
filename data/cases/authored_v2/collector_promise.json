@@ -1,0 +1,313 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage5-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "collector_promise",
+  "act_id": "ACT_3",
+  "title": {
+    "en": "The Promise in the Barometer",
+    "ko": "기압계에 담긴 약속"
+  },
+  "briefing": {
+    "en": "Victor Hale presents an Aurelian Model 120 barometer under a collector's promise that it was never altered. Authenticate the period instrument, then determine whether a later capsule repair changes the object or only the promise attached to it.",
+    "ko": "빅터 헤일은 한 번도 손대지 않았다는 수집가의 약속과 함께 오렐리안 모델 120 기압계를 내놓았다. 당대 기구를 감정한 뒤 후대 캡슐 수리가 물건의 정체성을 바꾸는지, 아니면 물건에 붙은 약속만 바꾸는지 판단하라."
+  },
+  "central_question": {
+    "en": "Is this an untouched original, a genuine barometer with a disclosed modern capsule repair, or a later reproduction protected by an old collector's promise?",
+    "ko": "이 기압계는 손대지 않은 원형인가, 현대식 캡슐 수리를 고지해야 하는 진품인가, 아니면 오래된 수집가의 약속으로 감싼 후대 복제품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, promises, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 약속과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report authenticates the period Model 120 body while disclosing the modern capsule repair and correcting the collector's promise.",
+    "ko": "보고서는 당대 모델 120 몸체를 진품으로 확인하고 현대식 캡슐 수리를 고지해 수집가의 약속을 바로잡는다."
+  },
+  "failure": {
+    "en": "The barometer remains in review while Victor Hale separates an inherited promise from verifiable object evidence.",
+    "ko": "기압계는 검토 상태로 남고, 빅터 헤일은 전해 들은 약속과 검증 가능한 실물 근거를 구분한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 5 campaign desk.",
+      "ko": "스테이지 5 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A report that confuses a localized modern repair with either untouched condition or a wholly modern reproduction is reviewed with Victor Hale.",
+        "ko": "국소적인 현대 수리를 손대지 않은 상태나 전부 현대식인 복제품으로 오인한 보고서는 빅터 헤일과 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_021",
+    "legacy_story_artifact_id": "story_artifact_13",
+    "display_name": {
+      "en": "Aurelian Model 120 Barometer",
+      "ko": "오렐리안 모델 120 기압계"
+    },
+    "authoring_truth_hypothesis_id": "hyp.collector_promise.genuine_barometer_modern_capsule_repair",
+    "player_prompt": {
+      "en": "Authenticate the Model 120 body, inspect the pressure capsule, and test the collector's promise against the custody record.",
+      "ko": "모델 120 몸체를 감정하고 압력 캡슐을 조사한 뒤 수집가의 약속을 소장 기록과 대조하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.collector_promise.untouched_original_barometer",
+      "label": {"en": "Untouched original barometer", "ko": "손대지 않은 원형 기압계"},
+      "claim": {
+        "en": "The Aurelian barometer remains exactly as made, including its original pressure capsule and fasteners.",
+        "ko": "오렐리안 기압계는 원래 압력 캡슐과 체결부를 포함해 제작 당시 그대로 남아 있다."
+      }
+    },
+    {
+      "id": "hyp.collector_promise.genuine_barometer_modern_capsule_repair",
+      "label": {"en": "Genuine, with modern capsule repair", "ko": "현대식 캡슐 수리를 받은 진품"},
+      "claim": {
+        "en": "The Model 120 body and mechanism are genuine, but a conservator fitted a modern pressure capsule during a documented repair.",
+        "ko": "모델 120 몸체와 기구는 진품이지만 보존 수리 과정에서 현대식 압력 캡슐이 장착되었다."
+      }
+    },
+    {
+      "id": "hyp.collector_promise.later_reproduction_with_old_promise",
+      "label": {"en": "Later reproduction under an old promise", "ko": "오래된 약속을 내세운 후대 복제품"},
+      "claim": {
+        "en": "A later maker built the entire barometer and used an inherited collector's promise to present it as an untouched Aurelian original.",
+        "ko": "후대 제작자가 기압계 전체를 만들고 전해진 수집가의 약속을 이용해 손대지 않은 오렐리안 진품으로 소개했다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.collector_promise.artifact.period_body_identity",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_021",
+      "reliability": "HIGH",
+      "label": {"en": "Model 120 body", "ko": "모델 120 몸체"},
+      "short_observation": {
+        "en": "The dial, case, and mechanism share one period build.",
+        "ko": "다이얼, 케이스와 기구가 하나의 당대 제작품이다."
+      },
+      "text": {
+        "en": "Raking light and magnification show continuous age across the enamel dial, brass case, linkage plate, and the stamped Model 120 serial. Period hand-finishing continues beneath the capsule bracket, so the surrounding instrument is one genuine Aurelian build rather than a newly assembled reproduction.",
+        "ko": "사광과 확대 관찰에서 에나멜 다이얼, 황동 케이스, 연결판과 타각된 모델 120 일련번호에 이어진 노화가 확인된다. 당대 수작업 마감은 캡슐 받침 아래까지 계속되므로 주변 기구는 새로 조립한 복제품이 아니라 하나의 진짜 오렐리안 제작품이다."
+      },
+      "unlock": {
+        "action": "inspect",
+        "target": "model120_body",
+        "requires": [],
+        "action_label": {"en": "Inspect period body", "ko": "당대 몸체 조사"},
+        "target_label": {"en": "Dial, case, and linkage", "ko": "다이얼, 케이스와 연결판"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "physical_barometer_identity", "depends_on": []},
+      "citation_id": "cite.collector_promise.artifact.period_body_identity"
+    },
+    {
+      "source_ref": "src.collector_promise.artifact.modern_capsule_repair",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_021",
+      "reliability": "HIGH",
+      "label": {"en": "Pressure capsule repair", "ko": "압력 캡슐 수리"},
+      "short_observation": {
+        "en": "A modern capsule sits in a localized repair bracket.",
+        "ko": "현대식 캡슐이 국소 수리 받침에 장착되어 있다."
+      },
+      "text": {
+        "en": "After the fastener positions are recorded, precision opening reveals a stainless capsule with a modern laser seam and metric service screws. The small adapter plate covers older mounting holes without cutting the period linkage; oxidation stops only at this localized repair boundary.",
+        "ko": "체결 위치를 기록하고 정밀하게 열자 현대식 레이저 접합선이 있는 스테인리스 캡슐과 미터 규격 정비 나사가 드러난다. 작은 어댑터 판은 당대 연결부를 자르지 않고 이전 장착 구멍을 덮으며 산화의 단절은 이 국소 수리 경계에서만 나타난다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "capsule_bracket",
+        "requires": [
+          "src.collector_promise.artifact.period_body_identity",
+          "precision_screwdriver"
+        ],
+        "action_label": {"en": "Open capsule bracket", "ko": "캡슐 받침 열기"},
+        "target_label": {"en": "Pressure capsule bracket", "ko": "압력 캡슐 받침"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Record the altered fastener positions before loosening them; fresh tool marks could blur the repair sequence.",
+          "ko": "교체된 체결부 위치를 풀기 전에 기록하라. 새 공구 자국이 수리 순서를 흐릴 수 있다."
+        }
+      },
+      "independence": {
+        "group": "localized_capsule_repair",
+        "depends_on": ["src.collector_promise.artifact.period_body_identity"]
+      },
+      "citation_id": "cite.collector_promise.artifact.modern_capsule_repair"
+    },
+    {
+      "source_ref": "src.collector_promise.document.transfer_repair_receipt",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_25",
+      "document_id": "doc.collector_promise.transfer_repair_receipt",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Transfer and repair receipt", "ko": "이관·수리 영수증"},
+      "short_observation": {
+        "en": "The numbered barometer passed through a recorded capsule repair.",
+        "ko": "번호가 있는 기압계가 기록된 캡슐 수리를 거쳤다."
+      },
+      "text": {
+        "en": "Fictional Record 25 follows the stamped Model 120 serial from the Hale collection to a conservation bench and back. Its signed return line records a replacement pressure capsule and retained original dial, case, and linkage; the earlier 'untouched' promise appears only as the previous seller's unverified description.",
+        "ko": "가상 기록 25는 타각된 모델 120 일련번호가 헤일 소장품에서 보존 작업대로 갔다 돌아온 과정을 잇는다. 서명된 반환 항목에는 압력 캡슐 교체와 원래 다이얼, 케이스, 연결부 유지가 적혀 있으며 이전의 '손대지 않음' 약속은 전 소유자의 미검증 설명으로만 나온다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "transfer_repair_receipt",
+        "requires": [],
+        "action_label": {"en": "Read custody receipt", "ko": "소장 영수증 읽기"},
+        "target_label": {"en": "Transfer and repair receipt", "ko": "이관·수리 영수증"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "documented_transfer_and_repair", "depends_on": []},
+      "citation_id": "cite.collector_promise.document.transfer_repair_receipt"
+    },
+    {
+      "source_ref": "src.collector_promise.npc.victor_promise_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "victor_hale",
+      "npc_id": "victor_hale",
+      "expression": "neutral",
+      "reliability": "MEDIUM",
+      "label": {"en": "Victor Hale's promise account", "ko": "빅터 헤일의 약속 설명"},
+      "short_observation": {
+        "en": "Victor Hale admits the promise came from a prior seller.",
+        "ko": "빅터 헤일은 그 약속이 전 소유자에게서 왔다고 인정한다."
+      },
+      "text": {
+        "en": "Victor Hale says he repeated the prior seller's 'untouched' promise before finding Record 25. He confirms that the same numbered barometer returned from conservation and acknowledges that preserving the stronger wording would raise its price, so his account supplies context rather than independent proof.",
+        "ko": "빅터 헤일은 기록 25를 찾기 전에 전 소유자의 '손대지 않음' 약속을 그대로 반복했다고 말한다. 그는 같은 번호의 기압계가 보존 수리 뒤 돌아왔음을 확인하고 더 강한 표현을 유지하면 가격이 오른다는 이해관계도 밝히므로, 그의 설명은 독립 증명이 아니라 맥락을 제공한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "victor_hale",
+        "requires": ["src.collector_promise.document.transfer_repair_receipt"],
+        "action_label": {"en": "Ask Victor Hale", "ko": "빅터 헤일에게 묻기"},
+        "target_label": {"en": "Victor Hale", "ko": "빅터 헤일"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "interested_collector_account",
+        "depends_on": ["src.collector_promise.document.transfer_repair_receipt"]
+      },
+      "citation_id": "cite.collector_promise.npc.victor_promise_context"
+    },
+    {
+      "source_ref": "src.collector_promise.reference.aurelian_model120_history",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "history_21",
+      "reference_id": "ref.aurelian.model120_barometer_history",
+      "reliability": "HIGH",
+      "label": {"en": "Aurelian model history", "ko": "오렐리안 모델 이력"},
+      "short_observation": {
+        "en": "The model guide matches the body but not the modern capsule.",
+        "ko": "모델 안내서는 몸체와 일치하지만 현대식 캡슐과는 맞지 않는다."
+      },
+      "text": {
+        "en": "The fictional Aurelian history matches Model 120 dial typography, case seams, serial placement, linkage geometry, and hand-filed edges. Its capsule plates use folded brass cells and slotted screws, unlike the received stainless laser-seamed capsule, while its service guidance permits a capsule-only replacement without remaking the instrument.",
+        "ko": "가상의 오렐리안 이력은 모델 120의 다이얼 서체, 케이스 이음, 일련번호 위치, 연결부 형상과 손줄 마감을 실물과 연결한다. 당대 캡슐 도판은 접은 황동 셀과 일자 나사를 사용해 인수품의 레이저 접합 스테인리스 캡슐과 다르며, 정비 지침은 기구 전체를 다시 만들지 않고 캡슐만 교체할 수 있다고 설명한다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": [
+          "src.collector_promise.artifact.period_body_identity",
+          "reference_database"
+        ],
+        "action_label": {"en": "Search model history", "ko": "모델 이력 검색"},
+        "target_label": {"en": "Aurelian maker archive", "ko": "오렐리안 제작사 기록"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "independent_model_history",
+        "depends_on": ["src.collector_promise.artifact.period_body_identity"]
+      },
+      "citation_id": "cite.collector_promise.reference.aurelian_model120_history"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.collector_promise.artifact.period_body_identity",
+      "source_ref": "src.collector_promise.artifact.period_body_identity",
+      "label": {"en": "Object record: Model 120 period body", "ko": "실물 기록: 모델 120 당대 몸체"},
+      "locator": {"en": "Object sheet A-1, dial through linkage", "ko": "실물 조사표 A-1, 다이얼에서 연결판까지"}
+    },
+    {
+      "id": "cite.collector_promise.artifact.modern_capsule_repair",
+      "source_ref": "src.collector_promise.artifact.modern_capsule_repair",
+      "label": {"en": "Object record: modern capsule repair", "ko": "실물 기록: 현대식 캡슐 수리"},
+      "locator": {"en": "Precision record A-2, capsule bracket", "ko": "정밀 기록 A-2, 캡슐 받침"}
+    },
+    {
+      "id": "cite.collector_promise.document.transfer_repair_receipt",
+      "source_ref": "src.collector_promise.document.transfer_repair_receipt",
+      "label": {"en": "Transfer and repair receipt", "ko": "이관·수리 영수증"},
+      "locator": {"en": "Case document D-25, serial and return lines", "ko": "사건 문서 D-25, 일련번호와 반환 항목"}
+    },
+    {
+      "id": "cite.collector_promise.npc.victor_promise_context",
+      "source_ref": "src.collector_promise.npc.victor_promise_context",
+      "label": {"en": "Interview with Victor Hale", "ko": "빅터 헤일 면담"},
+      "locator": {"en": "Collector interview N-25, promise context", "ko": "수집가 면담 N-25, 약속의 맥락"}
+    },
+    {
+      "id": "cite.collector_promise.reference.aurelian_model120_history",
+      "source_ref": "src.collector_promise.reference.aurelian_model120_history",
+      "label": {"en": "Aurelian Model 120 production history", "ko": "오렐리안 모델 120 생산 이력"},
+      "locator": {"en": "Fictional maker archive H-21, plates 2 and 6", "ko": "가상 제작사 기록 H-21, 도판 2와 6"}
+    }
+  ],
+  "evidence_links": [
+    {"id": "link.collector.body_supports_untouched", "source_ref": "src.collector_promise.artifact.period_body_identity", "hypothesis_id": "hyp.collector_promise.untouched_original_barometer", "relation": "SUPPORT", "weight": 0.55, "independence_group": "physical_barometer_identity", "citation_id": "cite.collector_promise.artifact.period_body_identity"},
+    {"id": "link.collector.body_supports_repair", "source_ref": "src.collector_promise.artifact.period_body_identity", "hypothesis_id": "hyp.collector_promise.genuine_barometer_modern_capsule_repair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "physical_barometer_identity", "citation_id": "cite.collector_promise.artifact.period_body_identity"},
+    {"id": "link.collector.body_refutes_reproduction", "source_ref": "src.collector_promise.artifact.period_body_identity", "hypothesis_id": "hyp.collector_promise.later_reproduction_with_old_promise", "relation": "REFUTE", "weight": 0.95, "independence_group": "physical_barometer_identity", "citation_id": "cite.collector_promise.artifact.period_body_identity"},
+    {"id": "link.collector.capsule_refutes_untouched", "source_ref": "src.collector_promise.artifact.modern_capsule_repair", "hypothesis_id": "hyp.collector_promise.untouched_original_barometer", "relation": "REFUTE", "weight": 1.0, "independence_group": "localized_capsule_repair", "citation_id": "cite.collector_promise.artifact.modern_capsule_repair"},
+    {"id": "link.collector.capsule_supports_repair", "source_ref": "src.collector_promise.artifact.modern_capsule_repair", "hypothesis_id": "hyp.collector_promise.genuine_barometer_modern_capsule_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "localized_capsule_repair", "citation_id": "cite.collector_promise.artifact.modern_capsule_repair"},
+    {"id": "link.collector.capsule_refutes_reproduction", "source_ref": "src.collector_promise.artifact.modern_capsule_repair", "hypothesis_id": "hyp.collector_promise.later_reproduction_with_old_promise", "relation": "REFUTE", "weight": 0.65, "independence_group": "localized_capsule_repair", "citation_id": "cite.collector_promise.artifact.modern_capsule_repair"},
+    {"id": "link.collector.receipt_refutes_untouched", "source_ref": "src.collector_promise.document.transfer_repair_receipt", "hypothesis_id": "hyp.collector_promise.untouched_original_barometer", "relation": "REFUTE", "weight": 0.95, "independence_group": "documented_transfer_and_repair", "citation_id": "cite.collector_promise.document.transfer_repair_receipt"},
+    {"id": "link.collector.receipt_supports_repair", "source_ref": "src.collector_promise.document.transfer_repair_receipt", "hypothesis_id": "hyp.collector_promise.genuine_barometer_modern_capsule_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "documented_transfer_and_repair", "citation_id": "cite.collector_promise.document.transfer_repair_receipt"},
+    {"id": "link.collector.receipt_refutes_reproduction", "source_ref": "src.collector_promise.document.transfer_repair_receipt", "hypothesis_id": "hyp.collector_promise.later_reproduction_with_old_promise", "relation": "REFUTE", "weight": 0.8, "independence_group": "documented_transfer_and_repair", "citation_id": "cite.collector_promise.document.transfer_repair_receipt"},
+    {"id": "link.collector.victor_supports_untouched", "source_ref": "src.collector_promise.npc.victor_promise_context", "hypothesis_id": "hyp.collector_promise.untouched_original_barometer", "relation": "SUPPORT", "weight": 0.25, "independence_group": "interested_collector_account", "citation_id": "cite.collector_promise.npc.victor_promise_context"},
+    {"id": "link.collector.victor_supports_repair", "source_ref": "src.collector_promise.npc.victor_promise_context", "hypothesis_id": "hyp.collector_promise.genuine_barometer_modern_capsule_repair", "relation": "SUPPORT", "weight": 0.8, "independence_group": "interested_collector_account", "citation_id": "cite.collector_promise.npc.victor_promise_context"},
+    {"id": "link.collector.victor_refutes_reproduction", "source_ref": "src.collector_promise.npc.victor_promise_context", "hypothesis_id": "hyp.collector_promise.later_reproduction_with_old_promise", "relation": "REFUTE", "weight": 0.45, "independence_group": "interested_collector_account", "citation_id": "cite.collector_promise.npc.victor_promise_context"},
+    {"id": "link.collector.history_refutes_untouched", "source_ref": "src.collector_promise.reference.aurelian_model120_history", "hypothesis_id": "hyp.collector_promise.untouched_original_barometer", "relation": "REFUTE", "weight": 0.85, "independence_group": "independent_model_history", "citation_id": "cite.collector_promise.reference.aurelian_model120_history"},
+    {"id": "link.collector.history_supports_repair", "source_ref": "src.collector_promise.reference.aurelian_model120_history", "hypothesis_id": "hyp.collector_promise.genuine_barometer_modern_capsule_repair", "relation": "SUPPORT", "weight": 0.95, "independence_group": "independent_model_history", "citation_id": "cite.collector_promise.reference.aurelian_model120_history"},
+    {"id": "link.collector.history_refutes_reproduction", "source_ref": "src.collector_promise.reference.aurelian_model120_history", "hypothesis_id": "hyp.collector_promise.later_reproduction_with_old_promise", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_model_history", "citation_id": "cite.collector_promise.reference.aurelian_model120_history"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.collector_promise.genuine_barometer_modern_capsule_repair",
+    "required_source_refs": [
+      "src.collector_promise.artifact.period_body_identity",
+      "src.collector_promise.artifact.modern_capsule_repair",
+      "src.collector_promise.document.transfer_repair_receipt",
+      "src.collector_promise.reference.aurelian_model120_history"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings from four independent groups. Authenticate the period body, disclose the modern capsule repair, and distinguish an inherited collector's promise from documented custody.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 당대 몸체를 감정하고 현대식 캡슐 수리를 고지하며 전해진 수집가의 약속과 기록된 소장 이력을 구분하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "minimum_citations": 2},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

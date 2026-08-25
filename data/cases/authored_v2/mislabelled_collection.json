@@ -1,0 +1,354 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage4-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "mislabelled_collection",
+  "act_id": "ACT_2",
+  "title": {
+    "en": "The Borrowed Accession Label",
+    "ko": "바뀐 소장품 라벨"
+  },
+  "briefing": {
+    "en": "A Rook Model 117 slide projector has a convincing period body but carries a collection label assigned to another object. Establish the projector's identity separately from the label attached during a later move.",
+    "ko": "룩 모델 117 슬라이드 영사기는 설득력 있는 당대 몸체를 지녔지만 다른 물건에 배정된 소장품 라벨이 붙어 있다. 영사기의 정체성과 후대 이동 중 붙은 라벨을 분리해 확인하라."
+  },
+  "central_question": {
+    "en": "Does the collection label identify this projector correctly, was a genuine projector given a swapped accession label, or is the object a later composite with a false identity?",
+    "ko": "소장품 라벨이 이 영사기를 올바르게 가리키는가, 진품 영사기에 뒤바뀐 등록 라벨이 붙었는가, 아니면 거짓 정체성을 지닌 후대 혼합품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, collections, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 소장품과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report authenticates the Rook projector while disclosing the swapped accession label without inventing a composite history.",
+    "ko": "보고서는 룩 영사기를 진품으로 확인하고 혼합 이력을 꾸며내지 않으면서 뒤바뀐 등록 라벨을 고지한다."
+  },
+  "failure": {
+    "en": "The projector remains in review while Dr. Hana Mire helps separate object identity from collection administration.",
+    "ko": "영사기는 검토 상태로 남고, 하나 미레 박사와 함께 물건의 정체성과 소장품 행정을 구분한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 4 campaign desk.",
+      "ko": "스테이지 4 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A report that treats a swapped museum label as a false object identity is reviewed with Dr. Mire.",
+        "ko": "뒤바뀐 박물관 라벨을 물건 자체의 거짓 정체성으로 판단한 보고서는 미레 박사와 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_018",
+    "legacy_story_artifact_id": "story_artifact_11",
+    "display_name": {
+      "en": "Rook Slide Projector R",
+      "ko": "룩 슬라이드 영사기 R"
+    },
+    "authoring_truth_hypothesis_id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+    "player_prompt": {
+      "en": "Authenticate the Model 117 body, then trace when its collection label was assigned.",
+      "ko": "모델 117 몸체를 감정한 뒤 소장품 라벨이 언제 배정되었는지 추적하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.mislabelled_collection.matched_collection_label",
+      "label": {"en": "Correct collection label", "ko": "일치하는 소장품 라벨"},
+      "claim": {
+        "en": "The period Rook projector and its present collection label have always belonged together.",
+        "ko": "당대 룩 영사기와 현재 소장품 라벨은 처음부터 함께해 왔다."
+      }
+    },
+    {
+      "id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+      "label": {"en": "Genuine projector, swapped label", "ko": "진품 영사기와 뒤바뀐 라벨"},
+      "claim": {
+        "en": "The Rook Model 117 projector is genuine, but a later collection move gave it another object's accession label.",
+        "ko": "룩 모델 117 영사기는 진품이지만 후대 소장품 이동 중 다른 물건의 등록 라벨이 붙었다."
+      }
+    },
+    {
+      "id": "hyp.mislabelled_collection.later_composite_false_identity",
+      "label": {"en": "Later composite with false identity", "ko": "거짓 정체성의 후대 혼합품"},
+      "claim": {
+        "en": "A later assembler combined unrelated projector parts and used an old collection label to create a false Rook identity.",
+        "ko": "후대 조립자가 서로 무관한 영사기 부품을 합치고 오래된 소장품 라벨로 거짓 룩 정체성을 만들었다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_018",
+      "reliability": "HIGH",
+      "label": {"en": "Projector body", "ko": "영사기 몸체"},
+      "short_observation": {
+        "en": "The chassis and optics share one period build.",
+        "ko": "섀시와 광학계가 하나의 당대 제작품이다."
+      },
+      "text": {
+        "en": "The stamped Model 117 chassis number lies beneath continuous oxidation. Its lens carrier, lamp gate, screw spacing, and casting wear align as one period Rook assembly rather than unrelated later parts.",
+        "ko": "타각된 모델 117 섀시 번호는 이어진 산화층 아래에 있다. 렌즈 받침, 램프 게이트, 나사 간격과 주물 마모가 서로 맞아 무관한 후대 부품이 아니라 하나의 당대 룩 조립품임을 보여 준다."
+      },
+      "unlock": {
+        "action": "inspect",
+        "target": "projector_chassis",
+        "requires": [],
+        "action_label": {"en": "Inspect body", "ko": "몸체 조사"},
+        "target_label": {"en": "Projector chassis", "ko": "영사기 섀시"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "physical_projector_identity", "depends_on": []},
+      "citation_id": "cite.mislabelled_collection.artifact.chassis_serial_optical_path"
+    },
+    {
+      "source_ref": "src.mislabelled_collection.artifact.accession_label_layer",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_018",
+      "reliability": "HIGH",
+      "label": {"en": "Label layers", "ko": "라벨 층위"},
+      "short_observation": {
+        "en": "The accession label was added after the body aged.",
+        "ko": "등록 라벨은 몸체가 노화된 뒤 붙었다."
+      },
+      "text": {
+        "en": "A single calibrated material scan shows modern adhesive above settled dust and a faded rectangular shadow from an earlier inventory tab. The present label is later than the continuously aged Model 117 casing; no seam or mixed-metal break interrupts the body.",
+        "ko": "한 차례의 보정된 재료 스캔에서 쌓인 먼지 위의 현대 접착제와 이전 재고표가 남긴 빛바랜 직사각형 흔적이 확인된다. 현재 라벨은 연속적으로 노화된 모델 117 외함보다 후대이며 몸체에는 이음선이나 서로 다른 금속의 단절이 없다."
+      },
+      "unlock": {
+        "action": "scan_material",
+        "target": "accession_label_layers",
+        "requires": [
+          "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+          "material_scanner"
+        ],
+        "action_label": {"en": "Scan label layers", "ko": "라벨 층 스캔"},
+        "target_label": {"en": "Accession label", "ko": "등록 라벨"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Use one low-power pass; repeated scanning can soften the later adhesive.",
+          "ko": "저출력으로 한 번만 스캔하라. 반복 스캔은 후대 접착제를 무르게 할 수 있다."
+        }
+      },
+      "independence": {
+        "group": "label_material_chronology",
+        "depends_on": ["src.mislabelled_collection.artifact.chassis_serial_optical_path"]
+      },
+      "citation_id": "cite.mislabelled_collection.artifact.accession_label_layer"
+    },
+    {
+      "source_ref": "src.mislabelled_collection.document.model117_catalog",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_21",
+      "document_id": "doc.mislabelled_collection.model117_catalog",
+      "reliability": "HIGH",
+      "label": {"en": "Model 117 catalog", "ko": "모델 117 카탈로그"},
+      "short_observation": {
+        "en": "Catalog details match the projector, not its custody.",
+        "ko": "카탈로그는 영사기 구조만 확인하며 소장 이력은 증명하지 않는다."
+      },
+      "text": {
+        "en": "The fictional Rook catalog illustrates the same lamp gate, vent count, lens-carrier stop, and stamped serial position used on Model 117. It describes production construction only and does not establish ownership, accession, or collection custody for this individual projector.",
+        "ko": "가상의 룩 카탈로그에는 모델 117의 램프 게이트, 통풍구 수, 렌즈 받침 멈춤쇠와 일련번호 타각 위치가 실물과 같게 그려져 있다. 이는 생산 구조만 설명할 뿐 이 영사기 개체의 소유권, 등록이나 소장 이력을 증명하지 않는다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "model117_catalog",
+        "requires": [],
+        "action_label": {"en": "Read maker catalog", "ko": "제작사 카탈로그 읽기"},
+        "target_label": {"en": "Model 117 catalog", "ko": "모델 117 카탈로그"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "maker_catalog_specification", "depends_on": []},
+      "citation_id": "cite.mislabelled_collection.document.model117_catalog"
+    },
+    {
+      "source_ref": "src.mislabelled_collection.document.collection_invoice",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_22",
+      "document_id": "doc.mislabelled_collection.invoice_accession_crosswalk",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Invoice and accession entry", "ko": "송장과 등록 대조표"},
+      "short_observation": {
+        "en": "A move sheet assigns the projector another object's label.",
+        "ko": "이동 기록이 영사기에 다른 물건의 라벨을 배정했다."
+      },
+      "text": {
+        "en": "The fictional invoice names a Rook Model 117 by its stamped chassis number. A later accession crosswalk repeats that number but records that the neighboring collection label was applied during a shelf move, while the projector's original tab was retired.",
+        "ko": "가상의 송장은 타각 섀시 번호로 룩 모델 117을 특정한다. 후대 등록 대조표는 같은 번호를 반복하며 선반 이동 중 옆 소장품의 라벨이 붙었고 영사기의 원래 재고표가 폐기되었다고 기록한다."
+      },
+      "unlock": {
+        "action": "compare_records",
+        "target": "invoice_accession_entry",
+        "requires": ["src.mislabelled_collection.document.model117_catalog"],
+        "action_label": {"en": "Compare records", "ko": "기록 대조"},
+        "target_label": {"en": "Invoice and accession entry", "ko": "송장과 등록 항목"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "accession_invoice_chain",
+        "depends_on": ["src.mislabelled_collection.document.model117_catalog"]
+      },
+      "citation_id": "cite.mislabelled_collection.document.collection_invoice"
+    },
+    {
+      "source_ref": "src.mislabelled_collection.npc.hana_accession_review",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "hana_mire",
+      "npc_id": "hana_mire",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Dr. Hana Mire's review", "ko": "하나 미레 박사의 검토"},
+      "short_observation": {
+        "en": "Dr. Hana Mire separates object identity from label history.",
+        "ko": "하나 미레 박사는 물건의 정체성과 라벨 이력을 구분한다."
+      },
+      "text": {
+        "en": "Dr. Hana Mire confirms that the invoice and accession entry came from separate record series and converge on the stamped chassis number. She cautions that the catalog authenticates a model, while only the accession record explains the swapped label.",
+        "ko": "하나 미레 박사는 송장과 등록 항목이 서로 다른 기록 계열에서 나왔고 타각 섀시 번호에서 일치한다고 확인한다. 카탈로그는 모델을 감정할 뿐이며 뒤바뀐 라벨은 등록 기록만 설명한다고 강조한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "hana_mire",
+        "requires": [
+          "src.mislabelled_collection.document.model117_catalog",
+          "src.mislabelled_collection.document.collection_invoice"
+        ],
+        "action_label": {"en": "Ask Dr. Mire", "ko": "미레 박사에게 묻기"},
+        "target_label": {"en": "Dr. Hana Mire", "ko": "하나 미레 박사"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "curator_accession_review",
+        "depends_on": [
+          "src.mislabelled_collection.document.model117_catalog",
+          "src.mislabelled_collection.document.collection_invoice"
+        ]
+      },
+      "citation_id": "cite.mislabelled_collection.npc.hana_accession_review"
+    },
+    {
+      "source_ref": "src.mislabelled_collection.reference.rook_model117_history",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "history_18",
+      "reference_id": "ref.rook.model117_projector_history",
+      "reliability": "HIGH",
+      "label": {"en": "Rook model history", "ko": "룩 모델 이력"},
+      "short_observation": {
+        "en": "Independent model history matches the continuous body.",
+        "ko": "독립 모델 이력이 이어진 몸체 구조와 일치한다."
+      },
+      "text": {
+        "en": "The fictional Rook model history dates the Model 117 casting, optical path, and serial placement to one production series. Its collection guidance notes that paper accession labels were added by institutions and cannot replace chassis-number identification.",
+        "ko": "가상의 룩 모델 이력은 모델 117의 주물, 광학 경로와 일련번호 위치를 하나의 생산 계열로 분류한다. 소장 지침은 종이 등록 라벨이 기관에서 후대에 붙인 것이며 섀시 번호 식별을 대신할 수 없다고 적는다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": [
+          "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+          "reference_database"
+        ],
+        "action_label": {"en": "Search model history", "ko": "모델 이력 검색"},
+        "target_label": {"en": "Rook maker archive", "ko": "룩 제작사 기록"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "independent_model_history",
+        "depends_on": ["src.mislabelled_collection.artifact.chassis_serial_optical_path"]
+      },
+      "citation_id": "cite.mislabelled_collection.reference.rook_model117_history"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.mislabelled_collection.artifact.chassis_serial_optical_path",
+      "source_ref": "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+      "label": {"en": "Object record: Model 117 body", "ko": "실물 기록: 모델 117 몸체"},
+      "locator": {"en": "Object sheet A-1, chassis and optical path", "ko": "실물 조사표 A-1, 섀시와 광학 경로"}
+    },
+    {
+      "id": "cite.mislabelled_collection.artifact.accession_label_layer",
+      "source_ref": "src.mislabelled_collection.artifact.accession_label_layer",
+      "label": {"en": "Material record: accession label layers", "ko": "재료 기록: 등록 라벨 층위"},
+      "locator": {"en": "Material scan A-2, rear label edge", "ko": "재료 스캔 A-2, 뒤쪽 라벨 가장자리"}
+    },
+    {
+      "id": "cite.mislabelled_collection.document.model117_catalog",
+      "source_ref": "src.mislabelled_collection.document.model117_catalog",
+      "label": {"en": "Rook Model 117 maker catalog", "ko": "룩 모델 117 제작사 카탈로그"},
+      "locator": {"en": "Case document D-21, construction plate", "ko": "사건 문서 D-21, 구조 도판"}
+    },
+    {
+      "id": "cite.mislabelled_collection.document.collection_invoice",
+      "source_ref": "src.mislabelled_collection.document.collection_invoice",
+      "label": {"en": "Invoice and accession crosswalk", "ko": "송장과 등록 대조표"},
+      "locator": {"en": "Case document D-22, chassis and move entries", "ko": "사건 문서 D-22, 섀시 번호와 이동 항목"}
+    },
+    {
+      "id": "cite.mislabelled_collection.npc.hana_accession_review",
+      "source_ref": "src.mislabelled_collection.npc.hana_accession_review",
+      "label": {"en": "Interview with Dr. Hana Mire", "ko": "하나 미레 박사 면담"},
+      "locator": {"en": "Curatorial interview N-21", "ko": "큐레이터 면담 N-21"}
+    },
+    {
+      "id": "cite.mislabelled_collection.reference.rook_model117_history",
+      "source_ref": "src.mislabelled_collection.reference.rook_model117_history",
+      "label": {"en": "Rook Model 117 production history", "ko": "룩 모델 117 생산 이력"},
+      "locator": {"en": "Fictional maker archive H-18, model plate 3", "ko": "가상 제작사 기록 H-18, 모델 도판 3"}
+    }
+  ],
+  "evidence_links": [
+    {"id": "link.mislabelled.body_supports_matched", "source_ref": "src.mislabelled_collection.artifact.chassis_serial_optical_path", "hypothesis_id": "hyp.mislabelled_collection.matched_collection_label", "relation": "SUPPORT", "weight": 0.35, "independence_group": "physical_projector_identity", "citation_id": "cite.mislabelled_collection.artifact.chassis_serial_optical_path"},
+    {"id": "link.mislabelled.body_supports_swapped", "source_ref": "src.mislabelled_collection.artifact.chassis_serial_optical_path", "hypothesis_id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label", "relation": "SUPPORT", "weight": 0.85, "independence_group": "physical_projector_identity", "citation_id": "cite.mislabelled_collection.artifact.chassis_serial_optical_path"},
+    {"id": "link.mislabelled.body_refutes_composite", "source_ref": "src.mislabelled_collection.artifact.chassis_serial_optical_path", "hypothesis_id": "hyp.mislabelled_collection.later_composite_false_identity", "relation": "REFUTE", "weight": 0.9, "independence_group": "physical_projector_identity", "citation_id": "cite.mislabelled_collection.artifact.chassis_serial_optical_path"},
+    {"id": "link.mislabelled.layers_refute_matched", "source_ref": "src.mislabelled_collection.artifact.accession_label_layer", "hypothesis_id": "hyp.mislabelled_collection.matched_collection_label", "relation": "REFUTE", "weight": 0.95, "independence_group": "label_material_chronology", "citation_id": "cite.mislabelled_collection.artifact.accession_label_layer"},
+    {"id": "link.mislabelled.layers_support_swapped", "source_ref": "src.mislabelled_collection.artifact.accession_label_layer", "hypothesis_id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label", "relation": "SUPPORT", "weight": 1.0, "independence_group": "label_material_chronology", "citation_id": "cite.mislabelled_collection.artifact.accession_label_layer"},
+    {"id": "link.mislabelled.layers_refute_composite", "source_ref": "src.mislabelled_collection.artifact.accession_label_layer", "hypothesis_id": "hyp.mislabelled_collection.later_composite_false_identity", "relation": "REFUTE", "weight": 0.7, "independence_group": "label_material_chronology", "citation_id": "cite.mislabelled_collection.artifact.accession_label_layer"},
+    {"id": "link.mislabelled.catalog_supports_swapped", "source_ref": "src.mislabelled_collection.document.model117_catalog", "hypothesis_id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label", "relation": "SUPPORT", "weight": 0.8, "independence_group": "maker_catalog_specification", "citation_id": "cite.mislabelled_collection.document.model117_catalog"},
+    {"id": "link.mislabelled.catalog_refutes_composite", "source_ref": "src.mislabelled_collection.document.model117_catalog", "hypothesis_id": "hyp.mislabelled_collection.later_composite_false_identity", "relation": "REFUTE", "weight": 0.8, "independence_group": "maker_catalog_specification", "citation_id": "cite.mislabelled_collection.document.model117_catalog"},
+    {"id": "link.mislabelled.crosswalk_refutes_matched", "source_ref": "src.mislabelled_collection.document.collection_invoice", "hypothesis_id": "hyp.mislabelled_collection.matched_collection_label", "relation": "REFUTE", "weight": 1.0, "independence_group": "accession_invoice_chain", "citation_id": "cite.mislabelled_collection.document.collection_invoice"},
+    {"id": "link.mislabelled.crosswalk_supports_swapped", "source_ref": "src.mislabelled_collection.document.collection_invoice", "hypothesis_id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label", "relation": "SUPPORT", "weight": 1.0, "independence_group": "accession_invoice_chain", "citation_id": "cite.mislabelled_collection.document.collection_invoice"},
+    {"id": "link.mislabelled.crosswalk_refutes_composite", "source_ref": "src.mislabelled_collection.document.collection_invoice", "hypothesis_id": "hyp.mislabelled_collection.later_composite_false_identity", "relation": "REFUTE", "weight": 0.85, "independence_group": "accession_invoice_chain", "citation_id": "cite.mislabelled_collection.document.collection_invoice"},
+    {"id": "link.mislabelled.hana_refutes_matched", "source_ref": "src.mislabelled_collection.npc.hana_accession_review", "hypothesis_id": "hyp.mislabelled_collection.matched_collection_label", "relation": "REFUTE", "weight": 0.8, "independence_group": "curator_accession_review", "citation_id": "cite.mislabelled_collection.npc.hana_accession_review"},
+    {"id": "link.mislabelled.hana_supports_swapped", "source_ref": "src.mislabelled_collection.npc.hana_accession_review", "hypothesis_id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label", "relation": "SUPPORT", "weight": 0.8, "independence_group": "curator_accession_review", "citation_id": "cite.mislabelled_collection.npc.hana_accession_review"},
+    {"id": "link.mislabelled.history_supports_swapped", "source_ref": "src.mislabelled_collection.reference.rook_model117_history", "hypothesis_id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label", "relation": "SUPPORT", "weight": 0.9, "independence_group": "independent_model_history", "citation_id": "cite.mislabelled_collection.reference.rook_model117_history"},
+    {"id": "link.mislabelled.history_refutes_composite", "source_ref": "src.mislabelled_collection.reference.rook_model117_history", "hypothesis_id": "hyp.mislabelled_collection.later_composite_false_identity", "relation": "REFUTE", "weight": 0.85, "independence_group": "independent_model_history", "citation_id": "cite.mislabelled_collection.reference.rook_model117_history"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+    "required_source_refs": [
+      "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+      "src.mislabelled_collection.artifact.accession_label_layer",
+      "src.mislabelled_collection.document.collection_invoice",
+      "src.mislabelled_collection.reference.rook_model117_history"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings from four independent groups. Authenticate the Model 117 body, date the attached label, and distinguish production reference from collection provenance.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 모델 117 몸체를 감정하고 붙은 라벨의 시기를 확인하며 생산 참고자료와 소장 이력을 구분하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "minimum_citations": 2},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

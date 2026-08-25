@@ -1,0 +1,215 @@
+{
+  "authoredCases": 22,
+  "executed": 11,
+  "expectedCount": 11,
+  "failed": 0,
+  "passed": 11,
+  "skipped": 0,
+  "suite": "R3 Authored Presentation Metadata",
+  "tests": [
+    {
+      "evidence": {
+        "lockCases": [
+          "false_invoice",
+          "prologue_clock",
+          "shadow_camera",
+          "estate_compass",
+          "leave_patina",
+          "pawn_watch",
+          "garage_lamp",
+          "telephone_trace",
+          "early_camera",
+          "mislabelled_collection",
+          "observatory_instrument",
+          "collector_promise",
+          "three_cameras",
+          "shadow_gauge",
+          "shadow_clock",
+          "shadow_music_box",
+          "shadow_optic",
+          "composite_prototype",
+          "master_chronometer",
+          "master_optical",
+          "master_recorder",
+          "master_gauge"
+        ],
+        "missing": [],
+        "registryErrors": []
+      },
+      "executed": true,
+      "id": "PRESENTATION-REGISTRY-01",
+      "name": "All locked authored cases load with normalized player-safe presentation metadata",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "expectedDifferences": 88,
+        "expectedSources": 125,
+        "failures": [],
+        "sourceCitationDifferences": 88,
+        "sources": 125
+      },
+      "executed": true,
+      "id": "PRESENTATION-SOURCE-02",
+      "name": "All authored source display names preserve authored citation-label distinctions and localized locators",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifact": {
+          "en": "Aurelian Mechanical Clock A",
+          "ko": "Aurelian Mechanical Clock A"
+        },
+        "source": {
+          "citation_locator": {
+            "en": "Inspection photograph A-1 and oxidation sketch",
+            "ko": "검사 사진 A-1 및 산화 경계 스케치"
+          },
+          "npc_portrait": {},
+          "short_observation": {
+            "en": "Object clue",
+            "ko": "실물 단서"
+          },
+          "source_display_name": {
+            "en": "Object clue",
+            "ko": "실물 단서"
+          },
+          "unlock_action_label": {
+            "en": "Inspect",
+            "ko": "살펴보기"
+          },
+          "unlock_target_label": {
+            "en": "the object area",
+            "ko": "유물 부위"
+          }
+        },
+        "spec": "Aurelian Mechanical Clock A"
+      },
+      "executed": true,
+      "id": "PRESENTATION-FALLBACK-03",
+      "name": "Missing optional artifact and source copy falls back to ArtifactSpec name, localized kind, and title-based short observation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citation_locator": {
+          "en": "Inspection photograph A-1 and oxidation sketch",
+          "ko": "검사 사진 A-1 및 산화 경계 스케치"
+        },
+        "npc_portrait": {},
+        "short_observation": {
+          "en": "Oxidation boundary recorded",
+          "ko": "산화 경계 기록 완료"
+        },
+        "source_display_name": {
+          "en": "Rear-plate screw mismatch",
+          "ko": "후면판 나사의 불일치"
+        },
+        "unlock_action_label": {
+          "en": "Photograph",
+          "ko": "촬영하기"
+        },
+        "unlock_target_label": {
+          "en": "the rear plate",
+          "ko": "후면판"
+        }
+      },
+      "executed": true,
+      "id": "PRESENTATION-OPTIONAL-04",
+      "name": "Optional localized short observation and unlock action/target overrides survive normalization without affecting evidence authority",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "leaks": [],
+        "surface": "{\"artifact\":{\"en\":\"Aurelian Mechanical Clock A\",\"ko\":\"Aurelian Mechanical Clock A\"},\"source\":{\"citation_locator\":{},\"npc_portrait\":{},\"short_observation\":{\"en\":\"Object clue\",\"ko\":\"실물 단서\"},\"source_display_name\":{\"en\":\"Object clue\",\"ko\":\"실물 단서\"},\"unlock_action_label\":{\"en\":\"Inspect\",\"ko\":\"살펴보기\"},\"unlock_target_label\":{\"en\":\"the object area\",\"ko\":\"유물 부위\"}}}"
+      },
+      "executed": true,
+      "id": "PRESENTATION-HOSTILE-05",
+      "name": "Identifier-shaped localized inputs fail closed to safe generic presentation copy",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "approvedPortraits": 18,
+        "discovered": 5,
+        "expectedPortraits": 18,
+        "failures": [],
+        "genericIcon": false,
+        "npcSources": 22
+      },
+      "executed": true,
+      "id": "PRESENTATION-NPC-06",
+      "name": "Every authored case-NPC witness resolves to a repo-native portrait and unmapped witnesses retain the generic NPC icon",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "card": "LOCKED\nSearch · the document",
+        "detail": "Search · the document",
+        "hiddenLeaks": []
+      },
+      "executed": true,
+      "id": "PRESENTATION-LOCKED-07",
+      "name": "A locked clue card and detail show only localized action/target guidance and reveal no hidden evidence, source, target, prerequisite or tool identifier",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": [],
+        "screensChecked": 44
+      },
+      "executed": true,
+      "id": "PRESENTATION-UI-08",
+      "name": "All thirteen authored dossiers render artifact/source presentation in Korean and English with zero raw case, spec, source, registry or target ids",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "beforeNodes": 0,
+        "citationTooltip": "Remove this citation from the report.\nRear-plate screw mismatch\nSource location · Inspection photograph A-1 and oxidation sketch",
+        "detail": "SOURCE LOCATION · Inspection photograph A-1 and oxidation sketch",
+        "locator": "Inspection photograph A-1 and oxidation sketch",
+        "undiscoveredLeaks": []
+      },
+      "executed": true,
+      "id": "PRESENTATION-LOCATOR-09",
+      "name": "Citation locator stays absent before discovery, then appears only in discovered detail and the cited report tooltip",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authorityExact": true,
+        "definitionExact": true,
+        "rng": -3378380881708314866
+      },
+      "executed": true,
+      "id": "PRESENTATION-AUTHORITY-10",
+      "name": "Locale and dossier rendering are presentation-only: save, profile, economy, auction, RNG and authored definition remain byte-exact",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseId": "silent_radio",
+        "expected": {
+          "en": "Material",
+          "ko": "Material"
+        },
+        "public": {
+          "sourceDisplayName": {
+            "en": "Material",
+            "ko": "Material"
+          },
+          "text": {
+            "en": "Material",
+            "ko": "Material"
+          }
+        }
+      },
+      "executed": true,
+      "id": "PRESENTATION-LEGACY-11",
+      "name": "Definitions without authored presentation fields retain the existing citation-label UI fallback",
+      "passed": true
+    }
+  ]
+}

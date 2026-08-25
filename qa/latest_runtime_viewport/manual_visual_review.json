@@ -1,0 +1,700 @@
+{
+  "status": "PASS_ORIGINAL_RESOLUTION",
+  "reviewedAt": "2026-08-25T11:36:37.3103700+09:00",
+  "reviewedAtOriginalResolution": true,
+  "reviewedResolution": [
+    1280,
+    720
+  ],
+  "reviewedCaptureCount": 79,
+  "reviewedContactSheet": "res://qa/latest_runtime_viewport/latest_runtime_contact_sheet.png",
+  "automatedPassIsNotVisualApproval": true,
+  "captureHashes": {
+    "01_stage_select_ko": "13c83e02f4ca2849410365410704bdcde347600711645e19f7be61772183ec21",
+    "02_stage1_investigation_tutorial_ko": "d7cd06366d2997ade8cfb991c8285465635a81df5f6aa331a532b851e662a564",
+    "03_listing_price_ko": "d6a039a989e6ea0d9960605f685c507ff668bae6effa0bbabcd24bd1d65cd036",
+    "04_listing_disclosure_ko": "55cf7e69578666c12d37e6eee09eee095c4447b3e32b5f939548cf3c823d1222",
+    "05_auction_sold_reasons_ko": "e4681ac6ae5a7cdb87432c6e18185607015a77d2d1d3b1eaf22244c2d30c2db8",
+    "06_stage_clear_ko": "d8e70a0a0f663b42c8deb647a13c0801746bb05e5394e51a36d7a65135ce7301",
+    "07_stage1_investigation_tutorial_en": "2a14d24be6b8fe06d96e859db4885aa347814ef392f2ecfa820891fa3da9f215",
+    "08_listing_disclosure_en": "022ae123338c62922d947a1c6cc0459f48706e9c7981a1380940ae034f431e1a",
+    "09_auction_sold_reasons_en": "93b719c8edd8d422c074132b1073314bb17402730908f70f0f854291f6b3e8eb",
+    "10_stage1_report_ready_ko": "ce15800a5ccce811661acdd6496d3d96b83e80b3cd69b1d361fffec46199f9e1",
+    "11_stage1_report_ready_en": "5f7cdba6d861d2aa783fe345ec7762d05436e6dc9bc05d043daeb9387d664a29",
+    "12_stage1_repair_ready_ko": "534a11bb72be56ddf5aeecf38efe7864e067f89f4b772aa4487722b2c8939aa7",
+    "13_stage1_repair_ready_en": "3865f180699087e733d327218025f03243cb2d42522b9c8b6e97ed9576628d8c",
+    "14_market_shopkeeper_offer_ko": "32abaacfbec25b59f771687176014b4c271aab9e387223a08a892074a2417bc3",
+    "15_event_npc_result_ko": "2fd7ed36b708a1e24b8ccaa98268021aea6a720df7e3fa0cc1b858b3bc8fd4bb",
+    "16_stage_clear_replay_en": "505914390aa3be78c9322da01d14876a0094050b971dbbef2fab80e7e63c9a72",
+    "17_grand_reserve_lot1_pending_ko": "601be74a4dc2324c9d90f508856999b8009ad0ebffa38e37983f9b044d41e8b1",
+    "18_grand_reserve_between_lots_ko": "b03d56b4c779be9b5a3a586554188f24c0f86efc98e327bf89fa03ff325f45bb",
+    "19_stage10_clear_view_ending_ko": "8cd2d454ea4ede72c8923f2398d94a2697f5a2fcc8aaca89a6cbce8558d7955f",
+    "20_final_selection_ko": "18d7f1b2cffac9012688b224c5e2fafee0174787dc15919cc29326da3ed8d504",
+    "21_final_selection_en": "2efb1f1f281dd563adedd510924708853b780ea40e256d29e143b2ca64b9987b",
+    "22_ending_ko": "6d30a194d6c64472f0f8514ae1e88f3cc63e78b02964003455cc8e8d98235b6a",
+    "23_ending_en": "57f5ceaf82723a7f9dabbbfb4ebba21c4d0c1db9390f951f0031572d79c4f987",
+    "24_postgame_ko": "de50c00bf5b11fef669d7ac17ff3967f83b75c27e37264c6315181e99be4d54a",
+    "25_postgame_en": "335c3a502cb3a80b9f864c7f4b070b3de0866998241576acf1caebcd188c51e9",
+    "26_inventory_ko": "e78439075667fe727be9a5c7ae94d947ead28a702d81eaa4cc58c93aa13b4dc8",
+    "27_inventory_en": "74dd858f843dc7c860bcc22dcaaedc166516e0b560aab74ac610d24f49289610",
+    "28_authentication_ko": "4f9cda0267a646c667a2cf76e34b86c0d4837610378de78186d7856fdc532220",
+    "29_authentication_en": "c9b1603a6993d10b229e96394fc0f0f7aaee697746ab7bc7d83f9f7155234bb0",
+    "30_upgrades_ko": "acbc72ef9730fd43bef74ee6e2adcc3f42e972796e076b105b3e5c9ff7d380d1",
+    "31_upgrades_en": "4ebe711c927210ab4476eedea1329e5611d1feef2568c043e5d5d8ca021dda98",
+    "32_stage2_leave_patina_report_ready_ko": "503110928d8e9e782c45b5cba657fb05ef8284c66573866da18893e7134b8e52",
+    "33_stage2_leave_patina_report_ready_en": "2dde3055972f5f6ee0303874bf8f17e8f6f845adee45d4daff65131ad18dd121",
+    "34_stage2_estate_compass_report_ready_ko": "6e53e394acfa48fa17c5c0c2b8b855eb3212f567c81f6ff62d898963118343e1",
+    "35_stage2_estate_compass_report_ready_en": "7a50562b9a9842a49601c08c0367a5f3496313db5e379c26be46eb8468c036ba",
+    "36_stage2_pawn_watch_report_ready_ko": "7e0086a07897d39bc73ceee2119fd78f81a941dc465b7c351b8b8c88d3e7a91b",
+    "37_stage2_pawn_watch_report_ready_en": "9ceb1046979a4885ca12f0fc9c3823b89aaa16cf35b6c33ed0c038255e4d995d",
+    "38_stage3_garage_lamp_report_ready_ko": "63fb1e106a476f30513666ebb2f54bf7b963204d9c888a847bdad01314e7b961",
+    "39_stage3_garage_lamp_report_ready_en": "7d22bcc3375598ac1d3e5750a5032ce1d4060f31fb6fe53a9a0e94e26c8559d6",
+    "40_stage3_telephone_trace_report_ready_ko": "8f88faa0dd5d9f80f7480f4ef6a275de227df531356f52c65a405966b44e21d1",
+    "41_stage3_telephone_trace_report_ready_en": "61a7836335d1de22bc001ba475a87fe55e9ceca1dbbb821593e2ddbc74b00e13",
+    "42_stage3_early_camera_report_ready_ko": "52ec10df607b1eb8cf5473816460f49afb1668ded388fe97af70f8c81299eaf6",
+    "43_stage3_early_camera_report_ready_en": "ccdcc957862fc95065f9cc2c7d310b022e738ed42e5e05b2b0fc3b17ec0f4fc1",
+    "44_stage4_mislabelled_collection_report_ready_ko": "5143498ba27a83c030c9f15496c66f6d664a6396249a99a8be7d997ea6a6c293",
+    "45_stage4_mislabelled_collection_report_ready_en": "497a7337972557544cae5f3c146cefe7f3aee382cfea2c005194f871ee398bd6",
+    "46_stage4_observatory_instrument_report_ready_ko": "54cb0b8866c0a90f946d062c5a63c6a60dc7a5b3c73715d12aefcc6d7d6f6015",
+    "47_stage4_observatory_instrument_report_ready_en": "df501f28f647ff3c7d592c3928e5c1ac6bc71d275a739eec0f8ff892f8ece662",
+    "48_stage5_collector_promise_report_ready_ko": "c8629c27b417e098d216c9d641806cfe96e035b498df52d4c0be161b8654114c",
+    "49_stage5_collector_promise_report_ready_en": "0fbb4b41235765c3327395135d070925a5e545cf8039c1b0a88c0ae7983457f9",
+    "50_stage5_three_cameras_report_ready_ko": "2bf64221c9ac8e0d0fec6ba7e3fdca46589e3faa43efc34ac6055af59dfcdefd",
+    "51_stage5_three_cameras_report_ready_en": "6add0fb0c1e22f9a9d9641d8fd866acb24a7f90c67171a60a2484e363736f16f",
+    "52_stage5_victor_hale_npc_detail_ko": "1ab5e7b1b34fbf77e53ecc2faee694fdca23cd4a49b920ef97c83af8e5da817d",
+    "53_stage5_lena_falk_npc_detail_ko": "96a134574d0db7abda200d9ce3d389681c19a3c4f4618ff69ba0dbb9a02d3ba1",
+    "54_stage5_case_npc_portraits_2up": "9dac812303c2093dc8e2f844f1ca41e2bc9d1e57000ff6e2d0ed498efe60ccff",
+    "55_artifact_069_typewriter_cipher_visual": "0cb49c3e3ff4da1d14f3c93828ca649fe743a107743a784cda6275d02882b1f6",
+    "56_artifact_070_sextant_visual": "627ba69b6a3d9ef21118bc6b29c394a68c94a8c09bbe7549ce51a0256951a64d",
+    "57_artifact_specs_01_40_contact_sheet": "5ea3e9916696b45298b7e84fe54a28e711a4947916b656f0204097c8d56b2753",
+    "58_artifact_specs_41_80_contact_sheet": "1f4927ab75309fab037b2bf265c018c0d6eff8aa86e0915cb510fa51f7744d7e",
+    "59_stage6_shadow_gauge_report_ready_ko": "2408269f601a6a0b025fb9d1e8c6d625f96615f4429bea95c39657cf684b4bc3",
+    "60_stage6_shadow_gauge_report_ready_en": "964f2a0bf357988f99c5132a156c9f801dd590c1dcb9294740e4ad29d8311625",
+    "61_stage6_shadow_clock_report_ready_ko": "0293329c87f8674fca0e3cf3f5dcc77e3b30a2442b8775512a4cb63f96055e82",
+    "62_stage6_shadow_clock_report_ready_en": "069b0283b34d27fdd5657c8716ed1680de7cc71e6f66fa01779af5869742a2b8",
+    "63_stage6_shadow_music_box_report_ready_ko": "b9b3aeb14c3e8d25963efe6c6dd15fc9e739d05f999c71ed5fadbc70e5b1d17a",
+    "64_stage6_shadow_music_box_report_ready_en": "ac35d88242a2c162ff9aaa06a8897defa37a8b7325e2e1717731042a28b7f636",
+    "65_stage6_hana_mire_npc_detail_ko": "9cf90d6ae029c892ebe921135e4c3f3aa6853c334f033dc7eb6c1e1cfafa3d5a",
+    "66_stage6_mara_venn_npc_detail_ko": "b10a578433874917463ecf65b1379a2004bd167a472776c07fb94fc6b6605f27",
+    "67_stage6_iris_bell_npc_detail_ko": "03942dda9648b7757a233af425f45aceaa3054093678545fd5b7592ad542b775",
+    "68_stage6_case_npc_portraits_3up": "213dd89217d14401e914ee35ebeece9eb8806b77e9431e4b0f81aef8abcb2526",
+    "69_story_artifact_16_artifact_050_gauge_visual": "607fff5c52345690fcc6276f78e402c4341ba1aefd3fe4df63ed2c0cc7e4c6dd",
+    "70_story_artifact_18_artifact_035_music_box_visual": "c26555d1da1f5f34e007ae8665fe3eb5521ef2e04333f086084d76b06631fc41",
+    "71_stage7_shadow_optic_report_ready_ko": "36231c1fd3157aad6148952b0b240d9985fccde383f0ce1bb49a91d928c193b6",
+    "72_stage7_shadow_optic_report_ready_en": "ea1f9714d547cfca821bf96075a622848a1b6cb6df4235ccb8c0e8129cab89ea",
+    "73_stage7_composite_prototype_report_ready_ko": "cf12cb224d277fbff37407eac1f17d06f602d698446456e6995f77752802b07a",
+    "74_stage7_composite_prototype_report_ready_en": "aa2f22805c3b77fd08149cd498f573fbafca335672a183f15a76fa5d8b262991",
+    "75_stage7_victor_hale_neutral_npc_detail_ko": "19e7280ebe65f38e9ab74e0d7eeb66285f4d3df17a6bb43fb9109a8cb2dddfce",
+    "76_stage7_noah_stern_concerned_npc_detail_ko": "ac04ff2f79ac2d9cb5235457c06d3fe1306a40c8f0c183fc491aa44374f47dad",
+    "77_stage7_victor_noah_case_npc_portraits_2up": "fcc9610c5ed3234a63dae0780a9adfb70c825078def6da864bf283047494c571",
+    "78_story_artifact_19_artifact_057_optic_visual": "9c42bf44d21a82286f97b1190560d9bf11388570545f1254f8e595b37fc8eade",
+    "79_story_artifact_20_artifact_059_composite_visual": "76063259c344832d3300f5fb0c51f5ace1f6725eecc18c864c6bb131f2388892"
+  },
+  "semanticHashes": {
+    "17_grand_reserve_lot1_pending_ko": "f9c7001a2b303c93d79a628033995602c656b3b42ab350808c64f2ad28e8f9bf",
+    "18_grand_reserve_between_lots_ko": "10b27112a65a3520e0ef5e8087f12913727bcba49d019802996d12196e0c0c7a",
+    "19_stage10_clear_view_ending_ko": "77fc2849179482ecdbf5af436bc311acf2c8893cfbc8a9bb0281633ead1144f8"
+  },
+  "reviewedSourceHashes": {
+    "res://scripts/main3d.gd": "0ccd16c47cb12faec559e46d5f376f7ef76df81b2d0e4ac7fab6c00ef20c569e",
+    "res://scripts/game_state.gd": "48f0bee2ede50fb6fba80dea978870e294862f08b31d94522172211adfa2b400",
+    "res://scripts/runtime_registry.gd": "6a570c9e4784322d31484c12e3412af60282ccea81a573d5b01d5edf2d82870d",
+    "res://tests/capture_latest_runtime_viewport.gd": "095422adcb04a632ab44001a6c14775e3a645605cf6b2be97abac2403b9f61ef",
+    "res://tests/r3_stage6_visual_identity_tests.gd": "fa7e8e5f2eedeef511920a563db14894df04104703d3669347eeb2fef22c96fc",
+    "res://assets/portraits/hana_mire_concerned.svg": "f778859e3e70b6217bb68128d568e69d1c3ed9f5541a3f02ef6be293f1523604",
+    "res://assets/portraits/mara_venn_concerned.svg": "f8af5be328611ca03242574b2a77e72db68d37f0c6cc18284448d8579c22e615",
+    "res://assets/portraits/iris_bell_concerned.svg": "10d4d9b62b778cfd4ec032033f50942e12d747c5508d3ac508f3d3382048428f",
+    "res://assets/artifacts/gauge.obj": "6554e82648add39443e3d7343c076591106a58064e42c4e23c3a5f63d7634fc5",
+    "res://assets/artifacts/music_box.obj": "fda50ba18fa8caed32b05e762d1122fcc5aae21e7087953700dc6c07f344e46b",
+    "res://tests/r3_stage7_visual_identity_tests.gd": "56b1c8045d7a40ae8d0875b5ebfd3f0f021a0ea4c337fb790bebfde014bfbdb1",
+    "res://assets/portraits/victor_hale_neutral.svg": "1a82c429c7d735e682dcd7104b7c096193cd069bfc22b37c67979508ceee412e",
+    "res://assets/portraits/noah_stern_concerned.svg": "4d1e7f8006ac7f3357bfccf2b9fe8497cd60916eb5c62f13f638aae94bff6ea0",
+    "res://data/cases/authored_v2/shadow_optic.json": "811aadf5b6e5b95b012fbb47647b983ba3a2a345a789c67768f836645635ee8c",
+    "res://data/cases/authored_v2/composite_prototype.json": "0bef63f495ec04ef3942e51b487f38269608aa0b9affb1bf6088b572b7d3e79d"
+  },
+  "criteria": {
+    "actualMainSceneFramebuffer": true,
+    "syntheticReconstruction": false,
+    "allRequiredControlsInsideContentOrIntentionalScrollClip": true,
+    "ctaNavigationStatusOverlapCount": 0,
+    "publicLabelGlyphCollapseCount": 0,
+    "verticalGlyphStackCount": 0,
+    "koreanAndEnglishBodyCopyLegible": true,
+    "tutorialRailAndTargetVisible": true,
+    "reportPromptFullWidthAndNormallyWrapped": true,
+    "reportHypothesisCitationAndCtaVisibleTogether": true,
+    "repairRecommendedToolAndCtaVisibleTogether": true,
+    "repairInfoToControlsGapPixels": 24,
+    "englishArtifactTitleOrStatsOverlapCount": 0,
+    "auctionPublicCueOrder": "ENTRY -> CALL -> BID x3 -> DROPOUT -> SOLD",
+    "auctionHierarchy": "current/result and price facts -> primary CTA -> active bidder -> 1-2 public reason chips -> auctioneer",
+    "auctionReasonChipMaximumObserved": 2,
+    "auctionTerminalReasonChipCount": 1,
+    "auctionReasonLabelsComplete": true,
+    "portraitFaceLegibility": true,
+    "portraitEyesShowScleraIrisHighlight": true,
+    "portraitBrowsAndExpressionRecognizable": true,
+    "portraitRoleAndIdentityRecognizable": true,
+    "portraitReactionDurationRangeMilliseconds": [
+      100,
+      180
+    ],
+    "portraitReactionSettledBeforeFramebuffer": true,
+    "portraitReactionSurroundingGeometryChangeCount": 0,
+    "shopAndEventSpeechMaximumObservedLines": 1,
+    "shopPriceAndEventEffectLegible": true,
+    "portraitSpeechPriceEffectOverlapCount": 0,
+    "grandReserveProgressSequence": [
+      "1 active",
+      "1 complete / 2 active",
+      "3 receipts finalized"
+    ],
+    "grandReservePublicActionSequence": "3 x HammerButton + 2 x GrandReserveNextLot",
+    "grandReserveReceiptPattern": [
+      "SOLD",
+      "NO_SALE",
+      "SOLD"
+    ],
+    "grandReserveSemanticHashesPresent": true,
+    "stageClearReplayAxisCount": 3,
+    "stageClearMeaningfulAxisValues": true,
+    "stageClearPressureSummaryLineCount": 1,
+    "stageClearPressureSummaryUsesPublicCodesOnly": true,
+    "stageClearAdviceLineCount": 1,
+    "stage10ViewEndingCtaVisible": true,
+    "finalSelectionVisibleCardCount": 5,
+    "finalSelectionProgressSequence": [
+      "0 / 3",
+      "3 / 3"
+    ],
+    "finalSelectionBeginDisabledUntilThree": true,
+    "finalSelectionLocaleAuthorityMutation0": true,
+    "endingPublicAxisCount": 3,
+    "endingAuthoritativeLotCardCount": 3,
+    "endingTerminalReasonChipCount": 3,
+    "endingLocaleAuthorityMutation0": true,
+    "postgameEndingGalleryCardCount": 5,
+    "postgamePublicActionCount": 3,
+    "postgameLocaleAuthorityMutation0": true,
+    "finalJourneyExposedRawTokenCount": 0,
+    "finalJourneyOverlapCount": 0,
+    "inventoryVisibleCardCount": 8,
+    "inventoryPageCount": 2,
+    "inventoryPagerRoundTripAuthorityMutation0": true,
+    "inventoryLocaleAuthorityMutation0": true,
+    "inventoryRngMutation0": true,
+    "authenticationVisibleEvidenceCardCount": 6,
+    "authenticationVisibleHypothesisCount": 6,
+    "authenticationSelectedEvidencePersistsAcrossLocale": true,
+    "authenticationDefiniteDraftOnlyMutation": true,
+    "authenticationLocaleAuthorityMutation0": true,
+    "authenticationRngMutation0": true,
+    "upgradeVisibleCardCount": 6,
+    "upgradePageCount": 5,
+    "upgradePagerRoundTripAuthorityMutation0": true,
+    "upgradeLocaleAuthorityMutation0": true,
+    "upgradeRngMutation0": true,
+    "stage2ThroughStage4AuthoredDossierCaptureCount": 16,
+    "stage5AuthoredDossierCaptureCount": 4,
+    "stage5CaseNpcActualInFlowCaptureCount": 2,
+    "stage5CaseNpcMinimumRuntimeTextureSize": [
+      96,
+      120
+    ],
+    "stage5CaseNpcPortraitComparisonCaptureCount": 1,
+    "stage5CaseNpcFaceLegibility": true,
+    "stage5ArtifactSignatureCaptureCount": 2,
+    "artifact069CipherDetailsRecognizable": true,
+    "artifact070SextantRecognizableAndNotCompass": true,
+    "artifactSpecContactSheetCount": 2,
+    "artifactSpecContactSheetResolution": [
+      1800,
+      480
+    ],
+    "artifactSpecCoverageCount": 80,
+    "artifactSpecOffCanvasTileCount": 0,
+    "authoredDossierPrimaryScrollCountPerCapture": 1,
+    "authoredDossierHorizontalScrollCount": 0,
+    "authoredDossierReportSummaryOverlapCount": 0,
+    "authoredDossierExposedRawOrPrivateTokenCount": 0,
+    "authoredDossierRequiredControlClippingCount": 0,
+    "newScreenExposedRawTokenCount": 0,
+    "newScreenCollapsedLabelCount": 0,
+    "newScreenOverlapCount": 0,
+    "newScreenVisibleScrollCount": 0,
+    "fatalDiagnosticCount": 0,
+    "allSeventyNinePngsReviewedAtOriginalResolution": true,
+    "stage6AuthoredDossierCaptureCount": 6,
+    "stage6CaseNpcActualInFlowCaptureCount": 3,
+    "stage6CaseNpcMinimumRuntimeTextureSize": [
+      96,
+      120
+    ],
+    "stage6CaseNpcPortraitComparisonCaptureCount": 1,
+    "stage6CaseNpcFaceLegibility": true,
+    "stage6CaseNpcEyesShowScleraIrisPupilHighlight": true,
+    "stage6CaseNpcIdentityDistinctCount": 3,
+    "stage6StaleImportRasterGatePass": true,
+    "stage6ArtifactSignatureCaptureCount": 2,
+    "stage6GaugeRecognizable": true,
+    "stage6MusicBoxRecognizable": true,
+    "stage6PairSpecificLegacyCrossContaminationVisibleCount": 0,
+    "stage7AuthoredDossierCaptureCount": 4,
+    "stage7CaseNpcActualInFlowCaptureCount": 2,
+    "stage7CaseNpcMinimumRuntimeTextureSize": [
+      96,
+      120
+    ],
+    "stage7CaseNpcPortraitComparisonCaptureCount": 1,
+    "stage7CaseNpcFaceLegibility": true,
+    "stage7CaseNpcEyesShowScleraIrisPupilHighlight": true,
+    "stage7CaseNpcIdentityDistinctCount": 2,
+    "stage7StaleImportRasterGatePass": true,
+    "stage7ArtifactSignatureCaptureCount": 2,
+    "stage7OpticRecognizable": true,
+    "stage7CompositeInstrumentRecognizable": true,
+    "stage7LegacyBaseMeshHiddenForFreshPairCount": 2,
+    "stage7PairSpecificLegacyCrossContaminationVisibleCount": 0
+  },
+  "captureReviews": [
+    {
+      "id": "01_stage_select_ko",
+      "status": "PASS",
+      "finding": "Ten stages are present; clear/open/locked states, 7-percent guidance and tutorial replay are readable without navigation overlap."
+    },
+    {
+      "id": "02_stage1_investigation_tutorial_ko",
+      "status": "PASS",
+      "finding": "Korean dossier cards, selected-clue panel, tutorial rail and highlighted actionable evidence fit normally; the target and CTA are fully visible."
+    },
+    {
+      "id": "03_listing_price_ko",
+      "status": "PASS",
+      "finding": "Three public material badges and three illustrated price strategies remain compact, complete and clear of navigation."
+    },
+    {
+      "id": "04_listing_disclosure_ko",
+      "status": "PASS",
+      "finding": "Public support, three disclosure choices, final summary and confirm action are visually separated and complete."
+    },
+    {
+      "id": "05_auction_sold_reasons_ko",
+      "status": "PASS",
+      "finding": "Auctioneer and winning bidder faces are legible with big eyes and distinct expressions; SOLD, current facts, Hammer CTA and exactly one terminal Korean reason form a clear hierarchy."
+    },
+    {
+      "id": "06_stage_clear_ko",
+      "status": "PASS",
+      "finding": "The real public-action clear shows Evidence 100, Preserve 70, Sale 93, one replay tip and the next/replay action in one frame."
+    },
+    {
+      "id": "07_stage1_investigation_tutorial_en",
+      "status": "PASS",
+      "finding": "English dossier density remains normal; title, status, tutorial target and navigation fit without collision."
+    },
+    {
+      "id": "08_listing_disclosure_en",
+      "status": "PASS",
+      "finding": "English public-support and disclosure controls preserve the Korean geometry and keep the confirmation action clear."
+    },
+    {
+      "id": "09_auction_sold_reasons_en",
+      "status": "PASS",
+      "finding": "English SOLD hierarchy is complete; the full `Provenance strong` reason, two face-legible portraits and the Hammer CTA do not overlap."
+    },
+    {
+      "id": "10_stage1_report_ready_ko",
+      "status": "PASS",
+      "finding": "Selected hypothesis, citation, full-width report prompt and enabled submit CTA are simultaneously visible."
+    },
+    {
+      "id": "11_stage1_report_ready_en",
+      "status": "PASS",
+      "finding": "English report prompt wraps horizontally and the complete report interaction remains visible in one frame."
+    },
+    {
+      "id": "12_stage1_repair_ready_ko",
+      "status": "PASS",
+      "finding": "Recommended tool, trade-off and repair CTA are visible; compact dossier action is clear of navigation."
+    },
+    {
+      "id": "13_stage1_repair_ready_en",
+      "status": "PASS",
+      "finding": "Info and controls columns have a measured 24-pixel gap; English title/status and compact clue controls do not clip or overlap."
+    },
+    {
+      "id": "14_market_shopkeeper_offer_ko",
+      "status": "PASS",
+      "finding": "Large shopkeeper bust has clearly visible big eyes, brows and expression; one-line advice, lot price and offer/purchase actions are separate."
+    },
+    {
+      "id": "15_event_npc_result_ko",
+      "status": "PASS",
+      "finding": "Activated-event NPC face, big eyes and expression are legible; one-line reaction, localized +10 effect and continuation action do not overlap."
+    },
+    {
+      "id": "16_stage_clear_replay_en",
+      "status": "PASS",
+      "finding": "English Stage Clear repeats the three meaningful axis values, one advice line and the next/replay action without clipping."
+    },
+    {
+      "id": "17_grand_reserve_lot1_pending_ko",
+      "status": "PASS",
+      "finding": "At the final public cue the session is still AUCTION_PENDING: progress reads lot 1 active, SOLD and price facts lead to the Hammer CTA, active bidder, one complete public reason and auctioneer; both large faces remain role- and expression-legible."
+    },
+    {
+      "id": "18_grand_reserve_between_lots_ko",
+      "status": "PASS",
+      "finding": "After Hammer, progress visibly changes to lot 1 complete / lot 2 active and the committed SOLD frame exposes exactly one NEXT LOT CTA; portraits, reason and controls remain stable and non-overlapping."
+    },
+    {
+      "id": "19_stage10_clear_view_ending_ko",
+      "status": "PASS",
+      "finding": "Three receipts finalize Stage 10 with Investigation 100, Preservation 67, Sale 59, one compact risk-investigation summary, one actionable replay tip and a fully visible VIEW ENDING CTA. Portrait review is not applicable to this deliberately portrait-free result card."
+    },
+    {
+      "id": "20_final_selection_ko",
+      "status": "PASS",
+      "finding": "Five illustrated relic cards, the Korean 0 / 3 progress state, two public badges per card, short requirement and disabled Grand Reserve CTA remain fully legible without scrolling or overlap."
+    },
+    {
+      "id": "21_final_selection_en",
+      "status": "PASS",
+      "finding": "The English 3 / 3 state clearly marks the same three selected cards and enabled Begin action; all five cards, labels and footer controls fit at 1280x720."
+    },
+    {
+      "id": "22_ending_ko",
+      "status": "PASS",
+      "finding": "The Korean ending uses one compact hero, three distinct public axes and three authoritative lot cards; SOLD/NO SALE, prices and exactly one public terminal reason per lot are immediately readable."
+    },
+    {
+      "id": "23_ending_en",
+      "status": "PASS",
+      "finding": "The English ending preserves the same hero/axes/results hierarchy; long artifact names, status amounts, public reasons and the Postgame CTA remain complete and collision-free."
+    },
+    {
+      "id": "24_postgame_ko",
+      "status": "PASS",
+      "finding": "The Korean postgame shows 10 / 10 Stage progress, one unlocked ending among exactly five gallery cards, and separate Stage Select, New Game and Credits actions with Credits collapsed."
+    },
+    {
+      "id": "25_postgame_en",
+      "status": "PASS",
+      "finding": "The English postgame preserves the five-card gallery and three-action hierarchy; locked/unlocked state, progress and ending title are legible without clipping."
+    },
+    {
+      "id": "26_inventory_ko",
+      "status": "PASS",
+      "finding": "The Korean Inventory shows eight illustrated three-line relic cards, a clear 1 / 2 pager, one compact selected-relic detail and one separate Place / Inspect action without overlap or scrolling."
+    },
+    {
+      "id": "27_inventory_en",
+      "status": "PASS",
+      "finding": "The English Inventory preserves the same eight-card page-one geometry after a public page-two/detail/previous round trip; long names, prices, stats and the primary action remain complete."
+    },
+    {
+      "id": "28_authentication_ko",
+      "status": "PASS",
+      "finding": "The Korean Authentication view keeps six illustrated evidence cards, a legible compact 1 / 2 counter, six hypothesis cards and one disabled Accept boundary together; the selected observation is readable and no raw hypothesis token leaks."
+    },
+    {
+      "id": "29_authentication_en",
+      "status": "PASS",
+      "finding": "The English Authentication refresh preserves the selected evidence and shows one definite GENUINE draft with an enabled separate Accept action; all card labels and support/refute summaries remain collision-free."
+    },
+    {
+      "id": "30_upgrades_ko",
+      "status": "PASS",
+      "finding": "The Korean Upgrades view shows six illustrated three-line upgrade cards, a clear 1 / 5 pager, one compact detail and one separate Buy action without clipping or scrolling."
+    },
+    {
+      "id": "31_upgrades_en",
+      "status": "PASS",
+      "finding": "The English Upgrades view preserves the six-card page-one layout after a public page-two/detail/previous round trip; price, effect and Buy labels remain fully legible."
+    },
+    {
+      "id": "32_stage2_leave_patina_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Leave the Patina dossier keeps the canonical hypothesis, five cited source cards, independence summary and enabled report CTA together inside the intentional dossier scroll without overlap."
+    },
+    {
+      "id": "33_stage2_leave_patina_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Leave the Patina report-ready state preserves the same five-source hierarchy; long evidence labels remain legible and the bounded prompt truncation does not hide the submission requirement."
+    },
+    {
+      "id": "34_stage2_estate_compass_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Estate Compass view clearly separates the three provenance hypotheses, five cited sources and report action; no raw public-clue token or hidden conclusion is exposed."
+    },
+    {
+      "id": "35_stage2_estate_compass_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Estate Compass view shows the selected misdated-provenance hypothesis, five independent citations and enabled report action with no clipping, navigation collision or horizontal scroll."
+    },
+    {
+      "id": "36_stage2_pawn_watch_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Pawned Watch view fits its five selected citation cards, three hypothesis choices and submit action while preserving one intentional vertical dossier scroll and clear public strength labels."
+    },
+    {
+      "id": "37_stage2_pawn_watch_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Pawned Watch report-ready state keeps all five independent citation labels readable, including the period-service contrast, without report-summary or scrollbar overlap."
+    },
+    {
+      "id": "38_stage3_garage_lamp_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Garage Lamp dossier communicates the period-repair contrast through five compact citations, one selected hypothesis and a fully visible evidence-backed report CTA."
+    },
+    {
+      "id": "39_stage3_garage_lamp_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Garage Lamp view preserves five independent support cards and the three-way original/period-repair/modern-assembly choice without collision or raw identifier leakage."
+    },
+    {
+      "id": "40_stage3_telephone_trace_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Telephone Trace view fits six independent citations in two rows, clearly selects the modern safety repair conclusion and leaves the primary report action unobstructed."
+    },
+    {
+      "id": "41_stage3_telephone_trace_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Telephone Trace view keeps all six citation labels, the three hypotheses and the enabled report CTA readable inside the intended vertical dossier scroll."
+    },
+    {
+      "id": "42_stage3_early_camera_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Early Camera dossier makes the later display reproduction distinct from early production and dealer conversion, with five compact support cards and no required-control clipping."
+    },
+    {
+      "id": "43_stage3_early_camera_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Early Camera view preserves the same five-source report hierarchy; long hypothesis and evidence labels remain horizontally readable with no report or navigation overlap."
+    },
+    {
+      "id": "44_stage4_mislabelled_collection_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Borrowed Accession Label dossier keeps all three hypotheses fully readable and presents five independent citations with chassis continuity, later label, movement record, Hana review and model-history meaning intact before bounded ellipses; the report CTA and all eight navigation controls remain visible."
+    },
+    {
+      "id": "45_stage4_mislabelled_collection_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Borrowed Accession Label view preserves the same genuine-projector versus swapped-label distinction, five-source report hierarchy and enabled CTA without raw identifiers, horizontal scrolling or overlap."
+    },
+    {
+      "id": "46_stage4_observatory_instrument_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Compass on the Meridian dossier makes compass function, period pivot repair, receipt, service card and Hana's scope legible across five independent citations; all hypotheses, the report CTA, header stats and eight navigation controls remain visible."
+    },
+    {
+      "id": "47_stage4_observatory_instrument_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Compass on the Meridian view preserves the three-way instrument conclusion and five-source evidence hierarchy with bounded compact labels, no raw/private tokens and no report-control or scrollbar collision."
+    },
+    {
+      "id": "48_stage5_collector_promise_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Promise in the Barometer report-ready view keeps the three hypotheses, five independent citations and full-width submit action together in the intentional dossier scroll; the modern-repair conclusion and opposing old-promise claim remain distinct."
+    },
+    {
+      "id": "49_stage5_collector_promise_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Promise in the Barometer view preserves the same five-source hierarchy and enabled evidence-backed report action; bounded labels do not hide the original-versus-modern-repair distinction or collide with navigation."
+    },
+    {
+      "id": "50_stage5_three_cameras_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Camera Between Two Pictures dossier presents the resurfaced original, modern comparison copy and undocumented third camera as three readable choices with five citations and an unobstructed report CTA."
+    },
+    {
+      "id": "51_stage5_three_cameras_report_ready_en",
+      "status": "PASS",
+      "finding": "The English Camera Between Two Pictures view keeps all three identities and five supporting citations readable inside one intentional vertical scroll; report summary and navigation remain separate."
+    },
+    {
+      "id": "52_stage5_victor_hale_npc_detail_ko",
+      "status": "PASS",
+      "finding": "Victor Hale appears inside the actual unlocked and discovered NPC clue detail at 96 x 120 pixels; both large amber eyes, brows, smile, silver hair, teal suit, clipboard and loupe remain recognizable beside the localized testimony."
+    },
+    {
+      "id": "53_stage5_lena_falk_npc_detail_ko",
+      "status": "PASS",
+      "finding": "Lena Falk appears inside the actual unlocked and discovered NPC clue detail at 96 x 120 pixels; both large violet eyes, concerned brows and mouth, auburn bob, rust coat, folder and seal remain recognizable beside the localized testimony."
+    },
+    {
+      "id": "54_stage5_case_npc_portraits_2up",
+      "status": "PASS",
+      "finding": "The Godot-rendered two-up comparison confirms Victor and Lena are distinct cute bust characters rather than dot-eye variants, and the paired 96 x 120 insets preserve face and role legibility at the minimum runtime size."
+    },
+    {
+      "id": "55_artifact_069_typewriter_cipher_visual",
+      "status": "PASS",
+      "finding": "Artifact 069 retains a readable typewriter silhouette while its cipher keyline, distinct third key row, paired glyph marks and filed stops are visible on the unobstructed 3D workpiece."
+    },
+    {
+      "id": "56_artifact_070_sextant_visual",
+      "status": "PASS",
+      "finding": "Artifact 070 is recognizable as a sextant through its open graduated arc, index arm, telescope, mirrors and vernier detail; it does not reuse the compass silhouette and remains unobstructed on the workbench."
+    },
+    {
+      "id": "57_artifact_specs_01_40_contact_sheet",
+      "status": "PASS",
+      "finding": "The first 1800 x 480 sheet shows all forty actual ArtifactSpecs 01-40 in a complete 10 x 4 grid with ordinal and spec labels; no row or tile is off-canvas."
+    },
+    {
+      "id": "58_artifact_specs_41_80_contact_sheet",
+      "status": "PASS",
+      "finding": "The second 1800 x 480 sheet shows all forty actual ArtifactSpecs 41-80 in a complete 10 x 4 grid, including the distinct Artifact 069 typewriter and Artifact 070 sextant; no row or tile is off-canvas."
+    },
+    {
+      "id": "59_stage6_shadow_gauge_report_ready_ko",
+      "status": "PASS",
+      "finding": "Korean Stage 6 gauge dossier keeps the selected hypothesis, five cited independent groups and full report CTA readable after one intentional vertical scroll, with no raw identifier or overlap."
+    },
+    {
+      "id": "60_stage6_shadow_gauge_report_ready_en",
+      "status": "PASS",
+      "finding": "English Stage 6 gauge dossier preserves the compact three-hypothesis and five-citation report hierarchy without clipped controls or raw authority tokens."
+    },
+    {
+      "id": "61_stage6_shadow_clock_report_ready_ko",
+      "status": "PASS",
+      "finding": "Korean Stage 6 clock dossier clearly distinguishes untouched, period-repaired and reconstructed hypotheses while keeping five evidence chips and the submit action visible."
+    },
+    {
+      "id": "62_stage6_shadow_clock_report_ready_en",
+      "status": "PASS",
+      "finding": "English Stage 6 clock dossier remains normally wrapped and readable; the period-repair choice, five independent citations and report CTA do not overlap."
+    },
+    {
+      "id": "63_stage6_shadow_music_box_report_ready_ko",
+      "status": "PASS",
+      "finding": "Korean Stage 6 music-box dossier uses compact illustrated cards and exposes the modern-repair distinction, five citations and full report action without a text wall."
+    },
+    {
+      "id": "64_stage6_shadow_music_box_report_ready_en",
+      "status": "PASS",
+      "finding": "English Stage 6 music-box dossier keeps all decision controls legible and player-safe within the intentional dossier scroll."
+    },
+    {
+      "id": "65_stage6_hana_mire_npc_detail_ko",
+      "status": "PASS",
+      "finding": "Hana Mire uses the actual V2 portrait at 96 by 120; turquoise big eyes with sclera, iris, pupil and highlights, curly teal hair, caliper and conservation tag remain recognizable."
+    },
+    {
+      "id": "66_stage6_mara_venn_npc_detail_ko",
+      "status": "PASS",
+      "finding": "Mara Venn uses the actual V2 portrait at 96 by 120; amber big eyes, navy angular hair, auction receipt and pocket watch clearly distinguish her role and face."
+    },
+    {
+      "id": "67_stage6_iris_bell_npc_detail_ko",
+      "status": "PASS",
+      "finding": "Iris Bell uses the actual V2 portrait at 96 by 120; mint big eyes, plum asymmetrical hair and music-conservation props are distinct and expression-legible."
+    },
+    {
+      "id": "68_stage6_case_npc_portraits_3up",
+      "status": "PASS",
+      "finding": "The large three-up comparison and three actual 96 by 120 insets show three visually distinct cute witnesses; no generic round-head or dot-eye fallback remains after the verified Godot reimport."
+    },
+    {
+      "id": "69_story_artifact_16_artifact_050_gauge_visual",
+      "status": "PASS",
+      "finding": "The fresh story 16 plus Artifact 050 pair reads as a pressure gauge through the circular scale, thirteen ticks, needle, hub, calibration plate and seal, without typewriter or compass dominance."
+    },
+    {
+      "id": "70_story_artifact_18_artifact_035_music_box_visual",
+      "status": "PASS",
+      "finding": "The fresh story 18 plus Artifact 035 pair reads as an open music box through the pinned cylinder, comb, teeth, winding key and lid inlay, without generic typewriter trim."
+    },
+    {
+      "id": "71_stage7_shadow_optic_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Shadow Mark: Optic dossier keeps the three-way period-original, later-repair and reproduction choice, five independent citations and the full report action readable inside one intentional vertical scroll with no raw IDs."
+    },
+    {
+      "id": "72_stage7_shadow_optic_report_ready_en",
+      "status": "PASS",
+      "finding": "The English optic dossier preserves the same compact report-ready hierarchy; the selected later-reproduction conclusion, five support cards and submit CTA remain distinct without overlap or horizontal scrolling."
+    },
+    {
+      "id": "73_stage7_composite_prototype_report_ready_ko",
+      "status": "PASS",
+      "finding": "The Korean Composite Prototype dossier clearly separates an experimental original, later adapter and mixed-parts forgery while five independent citations and the report action remain visible and player-safe."
+    },
+    {
+      "id": "74_stage7_composite_prototype_report_ready_en",
+      "status": "PASS",
+      "finding": "The English composite dossier keeps all three interpretations and five cited groups in the compact illustrated-card layout; bounded ellipses preserve meaning and no required control clips."
+    },
+    {
+      "id": "75_stage7_victor_hale_neutral_npc_detail_ko",
+      "status": "PASS",
+      "finding": "Victor Hale remains face- and role-legible in the actual 96 by 120 witness slot; both amber eyes, sclera, pupils and highlights, silver hair, teal suit, clipboard and loupe are recognizable beside the localized testimony."
+    },
+    {
+      "id": "76_stage7_noah_stern_concerned_npc_detail_ko",
+      "status": "PASS",
+      "finding": "Noah Stern's new concerned V2 bust is clearly recognizable at the actual 96 by 120 size through two large blue eyes with complete eye structure, worried brows and mouth, chestnut hair, archival folio and magnifier."
+    },
+    {
+      "id": "77_stage7_victor_noah_case_npc_portraits_2up",
+      "status": "PASS",
+      "finding": "The Godot-rendered two-up and paired 96 by 120 insets confirm Victor and Noah are distinct cute characters with readable faces, expressions, hair silhouettes, outfits and role props rather than dot-eye variants."
+    },
+    {
+      "id": "78_story_artifact_19_artifact_057_optic_visual",
+      "status": "PASS",
+      "finding": "The fresh story 19 plus Artifact 057 pair reads immediately as a mounted telescope through its long barrel, objective housing and lens, eyepiece, focus collar, yoke, feet and optical axis; the hidden gauge base is not visually dominant."
+    },
+    {
+      "id": "79_story_artifact_20_artifact_059_composite_visual",
+      "status": "PASS",
+      "finding": "The fresh story 20 plus Artifact 059 pair reads as a composite measuring prototype through its main body, graduated dial and needle, separate cylindrical module, visible adapter joint, mismatched connector and fasteners; the hidden camera base is absent."
+    }
+  ],
+  "closedDefects": [
+    "Dossier report prompt no longer collapses to one glyph or a narrow vertical strip.",
+    "Tutorial target remains inside the visible dossier viewport in Korean and English.",
+    "Listing material badges and auction reason chips no longer collapse to one-glyph columns.",
+    "Repair dossier action no longer overlaps navigation, and English clue controls no longer expand into artifact information.",
+    "English auction provenance reason uses the complete public label `Provenance strong` without clipping.",
+    "Grand Reserve exposes an explicit inter-lot boundary instead of automatically skipping to the next lot.",
+    "Final selection, ending and postgame no longer rely on long default text dumps; all three use compact illustrated cards and bounded public actions.",
+    "Inventory, Authentication and Upgrades pager labels now render horizontally centered as legible single-line counters instead of narrow or vertically stacked glyphs.",
+    "Stage 2 through Stage 4 authored dossiers keep five or six independent citations, the selected three-way hypothesis and the report CTA visible together inside one intentional vertical dossier scroll in both locales.",
+    "Stage 4 authored metadata survives to the compact KO/EN renderer: artifact and source names, citation meaning and short observations remain player-safe and legible without raw IDs or hidden authority leakage.",
+    "Stage 5 authored dossiers now preserve both bilingual five-source cases and their report controls in the same compact card hierarchy without restoring the previous wall-of-text layout.",
+    "Victor Hale and Lena Falk replace unreadable dot-eye case witnesses with distinct big-eyed SVG V2 busts that remain face- and role-legible in the actual 96 x 120 dossier slot.",
+    "Artifact 069 and Artifact 070 now expose case-specific typewriter-cipher and sextant silhouettes/details through the allowlisted renderer instead of an indistinguishable generic workpiece.",
+    "Two uncropped 10 x 4 framebuffer sheets provide original-resolution visual coverage for all 80 ArtifactSpecs.",
+    "Stage 6 Hana Mire, Mara Venn and Iris Bell replace their stale dot-eye runtime imports with distinct big-eyed V2 busts that remain face-, expression- and role-legible in the actual 96 x 120 dossier slot.",
+    "The Stage 6 visual regression now compares current SVG source import hashes and actual runtime raster eye/color complexity so a stale generic Godot texture cannot pass on metadata alone.",
+    "Fresh Stage 6 gauge and music-box story/spec pairs now expose unmistakable pair-keyed silhouettes without changing spec-only or legacy Artifact 035/050 rendering.",
+    "Noah Stern now uses a distinct big-eyed concerned SVG V2 bust whose complete eyes, expression, hair, archival folio and magnifier remain readable in the actual 96 x 120 dossier slot.",
+    "The Stage 7 Victor/Noah comparison confirms both witnesses retain distinct face and role identity at full and minimum runtime sizes without generic or dot-eye fallback.",
+    "Fresh Stage 7 optic and composite story/spec pairs now expose recognizable telescope and mixed-part measuring silhouettes while their incompatible legacy gauge/camera bases remain hidden and spec-only or historical pairs remain unchanged."
+  ],
+  "scopeNote": "This is a source/runtime visual QA milestone through Stage 7 only. It is not a declaration that the game is complete and it does not authorize Windows app or archive creation.",
+  "gpuHashRefresh": {
+    "status": "PASS_DETERMINISTIC_REGENERATION",
+    "framebufferCaptured": true,
+    "resolution": [
+      1280,
+      720
+    ],
+    "renderMode": "Godot 4.7.1 CLI in a hidden off-screen background process using OpenGL compatibility",
+    "backgroundOnly": true,
+    "deterministicSecondRun": true,
+    "representativeOriginalResolutionReviewed": [
+      "05_auction_sold_reasons_ko",
+      "14_market_shopkeeper_offer_ko",
+      "15_event_npc_result_ko",
+      "54_stage5_case_npc_portraits_2up",
+      "68_stage6_case_npc_portraits_3up",
+      "77_stage7_victor_noah_case_npc_portraits_2up",
+      "79_story_artifact_20_artifact_059_composite_visual"
+    ],
+    "note": "Current 79 capture hashes were refreshed after a second identical hidden OpenGL framebuffer run. Existing 79-capture visual criteria and review notes are retained; human MVP playtest remains a separate gate."
+  }
+}

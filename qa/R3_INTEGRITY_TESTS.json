@@ -1,0 +1,514 @@
+{
+  "executed": 12,
+  "failed": 0,
+  "passed": 12,
+  "skipped": 0,
+  "suite": "R3 M1 integrity",
+  "tests": [
+    {
+      "evidence": {
+        "result": {
+          "caseId": "silent_radio",
+          "code": "DEPRECATED_OUTCOME_ARGUMENT",
+          "ok": false
+        },
+        "stateDelta": false
+      },
+      "executed": true,
+      "id": "M1-CASE-LEGACY-01",
+      "name": "Deprecated caller outcome fails closed with zero state delta",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "evidenceId": "silent_radio:material",
+        "result": {
+          "code": "EVIDENCE_NOT_DISCOVERED",
+          "evidenceId": "silent_radio:material",
+          "ok": false
+        },
+        "stateDelta": false
+      },
+      "executed": true,
+      "id": "M1-EVIDENCE-01",
+      "name": "Undiscovered evidence citation is rejected with zero state delta",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "evidenceId": "perfect_fake::MATERIAL",
+        "result": {
+          "code": "CROSS_CASE_EVIDENCE",
+          "evidenceId": "perfect_fake::MATERIAL",
+          "ok": false
+        },
+        "stateDelta": false
+      },
+      "executed": true,
+      "id": "M1-EVIDENCE-02",
+      "name": "Cross-case evidence citation is rejected with zero state delta",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "discovery": [
+          {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "silent_radio:material",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "material"
+          },
+          {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "silent_radio:serial_pattern",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "serial_pattern"
+          },
+          {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "silent_radio:construction_method",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "construction_method"
+          },
+          {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "silent_radio:provenance",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "provenance"
+          },
+          {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "silent_radio:repair_trace",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "repair_trace"
+          }
+        ],
+        "independentResult": {
+          "citedEvidenceIds": [
+            "silent_radio:material",
+            "silent_radio:serial_pattern"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "GENUINE_WITH_PERIOD_REPAIR",
+          "independentSourceCount": 2,
+          "netScore": 2,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 2
+        },
+        "pairs": {
+          "independent": [
+            "silent_radio:material",
+            "silent_radio:serial_pattern"
+          ],
+          "sameSource": [
+            "silent_radio:material",
+            "silent_radio:material"
+          ],
+          "sources": {
+            "construction_method": [
+              "silent_radio:construction_method"
+            ],
+            "material": [
+              "silent_radio:material"
+            ],
+            "provenance": [
+              "silent_radio:provenance"
+            ],
+            "repair_trace": [
+              "silent_radio:repair_trace"
+            ],
+            "serial_pattern": [
+              "silent_radio:serial_pattern"
+            ]
+          }
+        },
+        "sameSourceResult": {
+          "citedEvidenceIds": [
+            "silent_radio:material"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "GENUINE_WITH_PERIOD_REPAIR",
+          "independentSourceCount": 1,
+          "netScore": 1,
+          "ok": true,
+          "outcome": "credible",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": false,
+          "substantiation": "PLAUSIBLE",
+          "supportScore": 1
+        },
+        "stateDelta": false
+      },
+      "executed": true,
+      "id": "M1-EVIDENCE-03",
+      "name": "Two same-source citations do not substantiate while two independent sources do",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "completed": true,
+        "result": {
+          "citedEvidenceIds": [
+            "silent_radio:material",
+            "silent_radio:serial_pattern"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "GENUINE_WITH_PERIOD_REPAIR",
+          "independentSourceCount": 2,
+          "netScore": 2,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 2
+        }
+      },
+      "executed": true,
+      "id": "M1-CASE-V2-01",
+      "name": "Substantiated independent evidence resolves through the v2 contract",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "firstSale": {
+          "code": "UNRESOLVED_CASE_ARTIFACT",
+          "net": 0,
+          "reserve_met": false,
+          "sale_status": "CASE_LOCKED"
+        },
+        "inventory": 1,
+        "secondSale": {
+          "code": "UNRESOLVED_CASE_ARTIFACT",
+          "net": 0,
+          "reserve_met": false,
+          "sale_status": "CASE_LOCKED"
+        },
+        "stableIssue": true,
+        "stateDeltaFirst": false,
+        "stateDeltaSecond": false
+      },
+      "executed": true,
+      "id": "M1-CASE-ARTIFACT-01",
+      "name": "Case artifact cannot be duplicated, sold while unresolved, reissued, or resold",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "inventory": [
+          "m1_gr_valid_1",
+          "m1_gr_valid_2",
+          "m1_gr_spare"
+        ],
+        "precondition": true,
+        "result": {
+          "code": "LOT_NOT_OWNED",
+          "ok": false
+        },
+        "stateDelta": false
+      },
+      "executed": true,
+      "id": "M1-GR-ATOMIC-01",
+      "name": "Invalid third Grand Reserve lot produces zero state delta",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "consecutiveSelfBid": false,
+        "result": {
+          "bids": [
+            {
+              "amount": 13,
+              "bidder": "fixture_alpha",
+              "bidderId": "fixture_alpha",
+              "budget": 5000,
+              "round": 0
+            },
+            {
+              "amount": 25,
+              "bidder": "fixture_beta",
+              "bidderId": "fixture_beta",
+              "budget": 5000,
+              "round": 0
+            },
+            {
+              "amount": 37,
+              "bidder": "fixture_gamma",
+              "bidderId": "fixture_gamma",
+              "budget": 5000,
+              "round": 0
+            },
+            {
+              "amount": 50,
+              "bidder": "fixture_alpha",
+              "bidderId": "fixture_alpha",
+              "budget": 5000,
+              "round": 1
+            }
+          ],
+          "dropouts": [
+            {
+              "behavior": "budget_or_value",
+              "bidderId": "fixture_beta",
+              "reason": "VALUE",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_UNCERTAIN",
+                  "polarity": "NEGATIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_RISK",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "round": 1
+            },
+            {
+              "behavior": "budget_or_value",
+              "bidderId": "fixture_gamma",
+              "reason": "VALUE",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_UNCERTAIN",
+                  "polarity": "NEGATIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_RISK",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "round": 1
+            }
+          ],
+          "fee": 6,
+          "hammer": 50,
+          "net": 44,
+          "opening": 1,
+          "participants": [
+            {
+              "aggression": 0.55,
+              "bidCount": 2,
+              "budget": 5000,
+              "dropoutBehavior": "budget_or_value",
+              "finalAction": "WON",
+              "id": "fixture_alpha",
+              "maxBid": 58,
+              "name": "fixture_alpha",
+              "reasonTags": []
+            },
+            {
+              "aggression": 0.75,
+              "bidCount": 1,
+              "budget": 5000,
+              "dropoutBehavior": "budget_or_value",
+              "finalAction": "BID",
+              "id": "fixture_beta",
+              "maxBid": 53,
+              "name": "fixture_beta",
+              "reasonTags": []
+            },
+            {
+              "aggression": 0.65,
+              "bidCount": 1,
+              "budget": 5000,
+              "dropoutBehavior": "budget_or_value",
+              "finalAction": "BID",
+              "id": "fixture_gamma",
+              "maxBid": 52,
+              "name": "fixture_gamma",
+              "reasonTags": []
+            }
+          ],
+          "reasonTags": [],
+          "reserve": 1,
+          "reservePressureFactor": 1.0,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "stageDifficulty": 1.0,
+          "winnerId": "fixture_alpha"
+        }
+      },
+      "executed": true,
+      "id": "M1-AUCTION-01",
+      "name": "Auction transcript never contains consecutive self-bids",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "bidCount": 1,
+        "result": {
+          "bids": [
+            {
+              "amount": 13,
+              "bidder": "fixture_solo",
+              "bidderId": "fixture_solo",
+              "budget": 5000,
+              "round": 0
+            }
+          ],
+          "dropouts": [],
+          "fee": 1,
+          "hammer": 13,
+          "net": 12,
+          "opening": 1,
+          "participants": [
+            {
+              "aggression": 0.8,
+              "bidCount": 1,
+              "budget": 5000,
+              "dropoutBehavior": "budget_or_value",
+              "finalAction": "WON",
+              "id": "fixture_solo",
+              "maxBid": 58,
+              "name": "fixture_solo",
+              "reasonTags": []
+            }
+          ],
+          "reasonTags": [],
+          "reserve": 1,
+          "reservePressureFactor": 1.0,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "stageDifficulty": 1.0,
+          "winnerId": "fixture_solo"
+        }
+      },
+      "executed": true,
+      "id": "M1-AUCTION-02",
+      "name": "Auction stops after at most one bid when no competitor exists",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "result": {
+          "bids": [
+            {
+              "amount": 13,
+              "bidder": "fixture_once",
+              "bidderId": "fixture_once",
+              "budget": 5000,
+              "round": 0
+            },
+            {
+              "amount": 25,
+              "bidder": "fixture_challenger",
+              "bidderId": "fixture_challenger",
+              "budget": 5000,
+              "round": 0
+            }
+          ],
+          "dropouts": [
+            {
+              "bidderId": "fixture_once",
+              "reason": "AFTER_FIRST_BID",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_UNCERTAIN",
+                  "polarity": "NEGATIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_RISK",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "round": 1
+            }
+          ],
+          "fee": 3,
+          "hammer": 25,
+          "net": 22,
+          "opening": 1,
+          "participants": [
+            {
+              "aggression": 0.9,
+              "bidCount": 1,
+              "budget": 5000,
+              "dropoutBehavior": "after_first_bid",
+              "finalAction": "BID",
+              "id": "fixture_once",
+              "maxBid": 58,
+              "name": "fixture_once",
+              "reasonTags": []
+            },
+            {
+              "aggression": 0.6,
+              "bidCount": 1,
+              "budget": 5000,
+              "dropoutBehavior": "budget_or_value",
+              "finalAction": "WON",
+              "id": "fixture_challenger",
+              "maxBid": 53,
+              "name": "fixture_challenger",
+              "reasonTags": []
+            }
+          ],
+          "reasonTags": [],
+          "reserve": 1,
+          "reservePressureFactor": 1.0,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "stageDifficulty": 1.0,
+          "winnerId": "fixture_challenger"
+        },
+        "sentinelBidCount": 1
+      },
+      "executed": true,
+      "id": "M1-AUCTION-03",
+      "name": "after_first_bid dropout behavior is consumed by the auction state machine",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "methodPresent": true,
+        "quoteAfter": 140,
+        "quoteBefore": 140,
+        "truthBefore": "ASSEMBLED_FROM_PERIOD_PARTS"
+      },
+      "executed": true,
+      "id": "M1-PRICE-PRIVACY-01",
+      "name": "Public appraisal quote has zero hidden-truth flip leakage",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "corruptWritten": true,
+        "currentValueOk": true,
+        "loadedBackup": true,
+        "loadedCurrent": true,
+        "recoveredValue": 1357,
+        "savedFirst": true,
+        "savedSecond": true
+      },
+      "executed": true,
+      "id": "M1-SAVE-RECOVERY-01",
+      "name": "Current save loads and corrupt current recovers the previous valid backup",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "artifact_058",
+  "displayName": "Rook Writing Instrument Set F",
+  "category": "office_machines",
+  "baseModel": "model_13.obj",
+  "maker": "maker_18",
+  "modelName": "Model 157",
+  "era": "1924-1936",
+  "materialSet": [
+    "material_13",
+    "material_01"
+  ],
+  "rarity": "uncommon",
+  "baseValue": 1193,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.4
+  },
+  "collectorTags": [
+    "office_machines",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_058"
+}

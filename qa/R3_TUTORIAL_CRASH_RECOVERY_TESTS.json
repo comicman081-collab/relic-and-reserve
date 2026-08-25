@@ -1,0 +1,966 @@
+{
+  "executed": 8,
+  "failed": 0,
+  "passed": 8,
+  "skipped": 0,
+  "suite": "R3 Tutorial Run/Profile Crash Recovery",
+  "tests": [
+    {
+      "evidence": {
+        "action": {
+          "appliedRiskPenalty": 3.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.prologue.artifact.backplate_screws",
+          "ok": true,
+          "riskLevel": "HIGH",
+          "sourceId": "physical_fastener_evidence"
+        },
+        "reload": {
+          "applied": true,
+          "ok": true,
+          "profile": [
+            "INVESTIGATE"
+          ],
+          "public": {
+            "icon": "citation",
+            "step": 2,
+            "target": "CaseCitation_*",
+            "targets": [
+              "CaseCitation_*",
+              "CaseEvidenceCard_*"
+            ],
+            "text": "Add one found clue to the report.",
+            "title": "Cite your evidence",
+            "total": 6,
+            "visible": true
+          },
+          "run": [
+            "INVESTIGATE"
+          ],
+          "validation": {
+            "code": "OK",
+            "ok": true
+          }
+        }
+      },
+      "executed": true,
+      "id": "TUTORIAL-TX-DISCOVER",
+      "name": "A committed evidence discovery restores its run tutorial prefix when the profile write was interrupted",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cited": true,
+        "citedEvidenceIds": [
+          "src.prologue.artifact.backplate_screws"
+        ],
+        "reload": {
+          "applied": true,
+          "ok": true,
+          "profile": [
+            "INVESTIGATE",
+            "CITE"
+          ],
+          "public": {
+            "icon": "report",
+            "step": 3,
+            "target": "ResolveCaseReport",
+            "targets": [
+              "ResolveCaseReport",
+              "CaseHypothesis_*"
+            ],
+            "text": "Choose a claim and submit the cited report.",
+            "title": "Submit the report",
+            "total": 6,
+            "visible": true
+          },
+          "run": [
+            "INVESTIGATE",
+            "CITE"
+          ],
+          "validation": {
+            "code": "OK",
+            "ok": true
+          }
+        }
+      },
+      "executed": true,
+      "id": "TUTORIAL-TX-CITE",
+      "name": "A committed citation and its tutorial prefix survive an interrupted profile update without asking for the citation again",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseCompleted": true,
+        "reload": {
+          "applied": true,
+          "ok": true,
+          "profile": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT"
+          ],
+          "public": {
+            "icon": "tool",
+            "step": 4,
+            "target": "Tool_repair",
+            "targets": [
+              "Tool_repair",
+              "RepairTool_*",
+              "InspectLot_*",
+              "Nav_INVENTORY",
+              "CaseContinue"
+            ],
+            "text": "Use one recommended tool for the needed repair.",
+            "title": "Repair with restraint",
+            "total": 6,
+            "visible": true
+          },
+          "run": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT"
+          ],
+          "validation": {
+            "code": "OK",
+            "ok": true
+          }
+        },
+        "result": {
+          "citedEvidenceIds": [
+            "src.prologue.artifact.backplate_screws"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.period_repair",
+          "independentSourceCount": 1,
+          "netScore": 2,
+          "ok": true,
+          "outcome": "reviewed_with_mentor",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 2
+        }
+      },
+      "executed": true,
+      "id": "TUTORIAL-TX-REPORT",
+      "name": "A resolved case report and its run prefix reload together before profile reconciliation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "damages": [
+          "DUST",
+          "RUST"
+        ],
+        "message": "Mechanism repaired.",
+        "reload": {
+          "applied": true,
+          "ok": true,
+          "profile": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT",
+            "REPAIR"
+          ],
+          "public": {
+            "icon": "objective",
+            "step": 5,
+            "target": "ListingConfirmButton",
+            "targets": [
+              "ListingConfirmButton",
+              "ListingDisclosure_*",
+              "ListingPrice_*",
+              "AcceptHypothesisButton",
+              "AuthenticateButton"
+            ],
+            "text": "Match the reserve and disclosure to what you found.",
+            "title": "Choose listing terms",
+            "total": 6,
+            "visible": true
+          },
+          "run": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT",
+            "REPAIR"
+          ],
+          "validation": {
+            "code": "OK",
+            "ok": true
+          }
+        },
+        "repaired": true
+      },
+      "executed": true,
+      "id": "TUTORIAL-TX-REPAIR",
+      "name": "A saved repair with an older profile reloads as repaired and advances guidance instead of requesting an impossible repeat repair",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "listed": true,
+        "listing": {
+          "confidence": 0.23,
+          "disclosure": "LIKELY",
+          "publicAppraisal": 110,
+          "reserve": 20,
+          "starting": 10
+        },
+        "reload": {
+          "applied": true,
+          "ok": true,
+          "profile": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT",
+            "REPAIR",
+            "LIST"
+          ],
+          "public": {
+            "icon": "artifact",
+            "step": 6,
+            "target": "HammerButton",
+            "targets": [
+              "HammerButton"
+            ],
+            "text": "Read the bidder reasons, then record the result.",
+            "title": "Read the result",
+            "total": 6,
+            "visible": true
+          },
+          "run": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT",
+            "REPAIR",
+            "LIST"
+          ],
+          "validation": {
+            "code": "OK",
+            "ok": true
+          }
+        }
+      },
+      "executed": true,
+      "id": "TUTORIAL-TX-LIST",
+      "name": "A committed listing and its run prefix survive an older profile without relisting the artifact",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "history": {
+          "caseId": "prologue_clock",
+          "day": 1,
+          "grandReserve": false,
+          "instanceId": "case_prologue_clock",
+          "item": "Aurelian Mechanical Clock A",
+          "publicAppraisal": 110,
+          "result": {
+            "bids": [
+              {
+                "amount": 22,
+                "bidder": "Interior Decorator",
+                "bidderId": "bidder_04",
+                "budget": 1040,
+                "round": 0
+              },
+              {
+                "amount": 34,
+                "bidder": "Mechanical Enthusiast",
+                "bidderId": "bidder_05",
+                "budget": 1170,
+                "round": 0
+              }
+            ],
+            "dropouts": [
+              {
+                "behavior": "budget_or_value",
+                "bidderId": "bidder_06",
+                "reason": "VALUE",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "round": 0
+              },
+              {
+                "behavior": "budget_or_value",
+                "bidderId": "bidder_07",
+                "reason": "VALUE",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "round": 0
+              },
+              {
+                "behavior": "budget_or_value",
+                "bidderId": "bidder_08",
+                "reason": "VALUE",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "round": 0
+              },
+              {
+                "behavior": "budget_or_value",
+                "bidderId": "bidder_09",
+                "reason": "VALUE",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "round": 0
+              },
+              {
+                "behavior": "budget_or_value",
+                "bidderId": "bidder_04",
+                "reason": "VALUE",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "round": 1
+              }
+            ],
+            "fee": 4,
+            "hammer": 34,
+            "net": 30,
+            "opening": 10,
+            "participants": [
+              {
+                "aggression": 0.74,
+                "bidCount": 1,
+                "budget": 1040,
+                "dropoutBehavior": "budget_or_value",
+                "finalAction": "BID",
+                "id": "bidder_04",
+                "maxBid": 39,
+                "name": "Interior Decorator",
+                "reasonTags": []
+              },
+              {
+                "aggression": 0.82,
+                "bidCount": 1,
+                "budget": 1170,
+                "dropoutBehavior": "budget_or_value",
+                "finalAction": "WON",
+                "id": "bidder_05",
+                "maxBid": 37,
+                "name": "Mechanical Enthusiast",
+                "reasonTags": []
+              },
+              {
+                "aggression": 0.9,
+                "bidCount": 0,
+                "budget": 1300,
+                "dropoutBehavior": "budget_or_value",
+                "finalAction": "DROPOUT",
+                "id": "bidder_06",
+                "maxBid": 27,
+                "name": "Speculator",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ]
+              },
+              {
+                "aggression": 0.5,
+                "bidCount": 0,
+                "budget": 1430,
+                "dropoutBehavior": "budget_or_value",
+                "finalAction": "DROPOUT",
+                "id": "bidder_07",
+                "maxBid": 26,
+                "name": "Historian",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ]
+              },
+              {
+                "aggression": 0.58,
+                "bidCount": 0,
+                "budget": 1560,
+                "dropoutBehavior": "budget_or_value",
+                "finalAction": "DROPOUT",
+                "id": "bidder_08",
+                "maxBid": 32,
+                "name": "Restoration Collector",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ]
+              },
+              {
+                "aggression": 0.66,
+                "bidCount": 0,
+                "budget": 1690,
+                "dropoutBehavior": "budget_or_value",
+                "finalAction": "DROPOUT",
+                "id": "bidder_09",
+                "maxBid": 26,
+                "name": "Archive Curator",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_UNCERTAIN",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ]
+              }
+            ],
+            "publicFingerprint": "AUC-1546705573",
+            "reasonTags": [],
+            "reserve": 20,
+            "reservePressureFactor": 1.0,
+            "reserve_met": true,
+            "sale_status": "SOLD",
+            "stageDifficulty": 1.0,
+            "transactionId": "auction_1_1606288872_0",
+            "winnerId": "bidder_05"
+          },
+          "status": "SOLD"
+        },
+        "pending": {
+          "artifactId": "case_prologue_clock",
+          "code": "OK",
+          "createdDay": 1,
+          "cueIndex": 0,
+          "cueQueue": [
+            {
+              "bidderId": "bidder_04",
+              "phase": "ENTRY",
+              "reasonTags": [],
+              "visibleBids": []
+            },
+            {
+              "amount": 10,
+              "bidderId": "bidder_04",
+              "phase": "CALL",
+              "reasonTags": [],
+              "visibleBids": []
+            },
+            {
+              "amount": 22,
+              "bidderId": "bidder_04",
+              "phase": "BID",
+              "reasonTags": [],
+              "visibleBids": [
+                {
+                  "amount": 22,
+                  "bidderId": "bidder_04"
+                }
+              ]
+            },
+            {
+              "amount": 34,
+              "bidderId": "bidder_05",
+              "phase": "BID",
+              "reasonTags": [],
+              "visibleBids": [
+                {
+                  "amount": 22,
+                  "bidderId": "bidder_04"
+                },
+                {
+                  "amount": 34,
+                  "bidderId": "bidder_05"
+                }
+              ]
+            },
+            {
+              "bidderId": "bidder_04",
+              "dropoutReason": "VALUE",
+              "phase": "DROPOUT",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_UNCERTAIN",
+                  "polarity": "NEGATIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_RISK",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 22,
+                  "bidderId": "bidder_04"
+                },
+                {
+                  "amount": 34,
+                  "bidderId": "bidder_05"
+                }
+              ]
+            },
+            {
+              "amount": 34,
+              "bidderId": "bidder_05",
+              "dropoutReason": "VALUE",
+              "phase": "SOLD",
+              "reasonTags": [],
+              "visibleBids": [
+                {
+                  "amount": 22,
+                  "bidderId": "bidder_04"
+                },
+                {
+                  "amount": 34,
+                  "bidderId": "bidder_05"
+                }
+              ]
+            }
+          ],
+          "decisions": {
+            "activeModifiers": {
+              "appraisalPrecision": 0,
+              "auctionFeeReduction": 0,
+              "bidderReach": 0,
+              "displayBonus": 0,
+              "listingBonus": 0,
+              "marketAll": 0,
+              "marketCategory": 10,
+              "stageDifficulty": 1
+            },
+            "condition": {
+              "cleanliness": 18,
+              "mechanical": 66,
+              "surface": 55
+            },
+            "day": 1,
+            "disclosure": "LIKELY",
+            "grandReserve": false,
+            "listingUid": "case_prologue_clock",
+            "provenanceKnown": false,
+            "publicAppraisal": 110,
+            "reportedConfidence": 0.23,
+            "reserve": 20,
+            "reserveRatio": 0.1818,
+            "specId": "artifact_001",
+            "stage": 1,
+            "starting": 10,
+            "startingRatio": 0.0909,
+            "substantiation": "INCONCLUSIVE"
+          },
+          "grandReserve": false,
+          "ok": true,
+          "publicFingerprint": "AUC-1546705573",
+          "receipt": {},
+          "result": {
+            "bids": [
+              {
+                "amount": 22,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 34,
+                "bidderId": "bidder_05"
+              }
+            ],
+            "dropouts": [
+              {
+                "bidderId": "bidder_06",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_07",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_08",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_09",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_04",
+                "reason": "VALUE"
+              }
+            ],
+            "fee": 4,
+            "hammer": 34,
+            "net": 30,
+            "opening": 10,
+            "participants": [
+              {
+                "id": "bidder_04"
+              },
+              {
+                "id": "bidder_05"
+              },
+              {
+                "id": "bidder_06"
+              },
+              {
+                "id": "bidder_07"
+              },
+              {
+                "id": "bidder_08"
+              },
+              {
+                "id": "bidder_09"
+              }
+            ],
+            "publicFingerprint": "AUC-1546705573",
+            "reasonTags": [],
+            "reserve": 20,
+            "reserve_met": true,
+            "sale_status": "SOLD",
+            "transactionId": "auction_1_1606288872_0",
+            "winnerId": "bidder_05"
+          },
+          "status": "PENDING",
+          "transactionId": "auction_1_1606288872_0"
+        },
+        "reload": {
+          "applied": true,
+          "ok": true,
+          "profile": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT",
+            "REPAIR",
+            "LIST",
+            "AUCTION"
+          ],
+          "public": {
+            "icon": "",
+            "step": 6,
+            "target": "",
+            "targets": [],
+            "text": "",
+            "title": "",
+            "total": 6,
+            "visible": false
+          },
+          "run": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT",
+            "REPAIR",
+            "LIST",
+            "AUCTION"
+          ],
+          "validation": {
+            "code": "OK",
+            "ok": true
+          }
+        },
+        "result": {
+          "bids": [
+            {
+              "amount": 22,
+              "bidderId": "bidder_04"
+            },
+            {
+              "amount": 34,
+              "bidderId": "bidder_05"
+            }
+          ],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_06",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_07",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_08",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_09",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_04",
+              "reason": "VALUE"
+            }
+          ],
+          "fee": 4,
+          "hammer": 34,
+          "idempotent": false,
+          "net": 30,
+          "ok": true,
+          "opening": 10,
+          "participants": [
+            {
+              "id": "bidder_04"
+            },
+            {
+              "id": "bidder_05"
+            },
+            {
+              "id": "bidder_06"
+            },
+            {
+              "id": "bidder_07"
+            },
+            {
+              "id": "bidder_08"
+            },
+            {
+              "id": "bidder_09"
+            }
+          ],
+          "publicFingerprint": "AUC-1546705573",
+          "reasonTags": [],
+          "reserve": 20,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1606288872_0",
+          "winnerId": "bidder_05"
+        },
+        "saleRecorded": true,
+        "soldAbsent": true
+      },
+      "executed": true,
+      "id": "TUTORIAL-TX-SOLD",
+      "name": "A public pending-auction SOLD commit reloads with matching v6 telemetry and completes guidance instead of requesting another auction",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "legacy": {
+          "applied": true,
+          "profile": [
+            "INVESTIGATE",
+            "CITE"
+          ],
+          "public": {
+            "icon": "report",
+            "step": 3,
+            "target": "ResolveCaseReport",
+            "targets": [
+              "ResolveCaseReport",
+              "CaseHypothesis_*"
+            ],
+            "text": "Choose a claim and submit the cited report.",
+            "title": "Submit the report",
+            "total": 6,
+            "visible": true
+          },
+          "run": [
+            "INVESTIGATE",
+            "CITE"
+          ],
+          "validation": {
+            "code": "OK",
+            "ok": true
+          }
+        },
+        "malformed": [
+          {
+            "expected": [],
+            "input": "REPORT",
+            "ok": true,
+            "profile": [],
+            "run": []
+          },
+          {
+            "expected": [],
+            "input": [
+              "CITE",
+              "INVESTIGATE"
+            ],
+            "ok": true,
+            "profile": [],
+            "run": []
+          },
+          {
+            "expected": [
+              "INVESTIGATE"
+            ],
+            "input": [
+              "INVESTIGATE",
+              "REPORT",
+              "CITE"
+            ],
+            "ok": true,
+            "profile": [
+              "INVESTIGATE"
+            ],
+            "run": [
+              "INVESTIGATE"
+            ]
+          },
+          {
+            "expected": [
+              "INVESTIGATE"
+            ],
+            "input": [
+              "INVESTIGATE",
+              "INVESTIGATE"
+            ],
+            "ok": true,
+            "profile": [
+              "INVESTIGATE"
+            ],
+            "run": [
+              "INVESTIGATE"
+            ]
+          },
+          {
+            "expected": [],
+            "input": [
+              "UNKNOWN"
+            ],
+            "ok": true,
+            "profile": [],
+            "run": []
+          }
+        ]
+      },
+      "executed": true,
+      "id": "TUTORIAL-TX-NORMALIZE",
+      "name": "Malformed run mirrors truncate safely, stale profiles cannot skip actions, and legacy saves without a mirror seed from their valid profile",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseId": "perfect_fake",
+        "cited": true,
+        "discovered": {
+          "appliedRiskPenalty": 0.0,
+          "code": "DISCOVERED",
+          "evidenceId": "perfect_fake:material",
+          "ok": true,
+          "riskLevel": "NONE",
+          "sourceId": "material"
+        },
+        "reload": {
+          "applied": true,
+          "ok": true,
+          "profile": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT"
+          ],
+          "public": {
+            "icon": "",
+            "step": 3,
+            "target": "",
+            "targets": [],
+            "text": "",
+            "title": "",
+            "total": 6,
+            "visible": false
+          },
+          "run": [
+            "INVESTIGATE",
+            "CITE",
+            "REPORT"
+          ],
+          "validation": {
+            "code": "OK",
+            "ok": true
+          }
+        },
+        "resolved": {
+          "citedEvidenceIds": [
+            "perfect_fake:material"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "GENUINE_WITH_MODERN_REPAIR",
+          "independentSourceCount": 1,
+          "netScore": 1,
+          "ok": true,
+          "outcome": "credible",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": false,
+          "substantiation": "PLAUSIBLE",
+          "supportScore": 1
+        },
+        "status": "CLEARED"
+      },
+      "executed": true,
+      "id": "TUTORIAL-TX-FINAL-REPORT",
+      "name": "A final scoped-case report advances the run mirror before Stage Clear and still reconciles an interrupted profile",
+      "passed": true
+    }
+  ]
+}

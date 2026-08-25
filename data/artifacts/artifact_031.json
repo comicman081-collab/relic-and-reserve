@@ -1,0 +1,54 @@
+{
+  "id": "artifact_031",
+  "displayName": "Kestrel Mechanical Clock E",
+  "category": "mechanical_instruments",
+  "baseModel": "model_01.obj",
+  "maker": "maker_11",
+  "modelName": "Model 130",
+  "era": "1900-1912",
+  "materialSet": [
+    "material_01",
+    "material_04"
+  ],
+  "rarity": "rare",
+  "baseValue": 680,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.2
+  },
+  "collectorTags": [
+    "mechanical_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_031"
+}

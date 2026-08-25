@@ -1,0 +1,56 @@
+{
+  "id": "artifact_045",
+  "displayName": "Eldermere Table Telephone S",
+  "category": "telephony",
+  "baseModel": "model_15.obj",
+  "maker": "maker_05",
+  "modelName": "Model 144",
+  "era": "1916-1928",
+  "materialSet": [
+    "material_15",
+    "material_03"
+  ],
+  "rarity": "common",
+  "baseValue": 946,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.6000000000000001
+  },
+  "collectorTags": [
+    "telephony",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_045"
+}

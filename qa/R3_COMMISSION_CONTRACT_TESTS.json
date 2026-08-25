@@ -1,0 +1,66 @@
+{
+  "executed": 2,
+  "failed": 0,
+  "passed": 2,
+  "suite": "R3 Commission Contract",
+  "tests": [
+    {
+      "evidence": {
+        "eligibleBefore": [
+          {
+            "displayName": "Aurelian Mechanical Clock A",
+            "id": "commission_contract_lot",
+            "specId": "artifact_001"
+          }
+        ],
+        "first": {
+          "code": "OK",
+          "commissionId": "commission_01",
+          "cost": 43,
+          "gross": 175,
+          "net": 132,
+          "ok": true,
+          "quality": 0.8754,
+          "type": "collector_commission"
+        },
+        "moneyAfter": 1332,
+        "moneyBefore": 1200,
+        "reuse": {
+          "code": "ARTIFACT_ALREADY_COMMISSIONED",
+          "net": 0,
+          "ok": false,
+          "previousCommissionId": "commission_01"
+        },
+        "transactions": [
+          {
+            "amount": 132,
+            "cause": "commission_01",
+            "day": 1,
+            "id": "money_1_commission_0",
+            "instanceId": "commission_contract_lot",
+            "item": "collector_commission",
+            "moneyAfter": 1332,
+            "moneyBefore": 1200,
+            "type": "commission"
+          }
+        ]
+      },
+      "executed": true,
+      "id": "COMMISSION-CONTRACT-01",
+      "name": "One eligible lot completes one commission exactly once and cannot be reused for a second commission",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cards": 5,
+        "grid": true,
+        "rawIdLeak": false,
+        "useButton": true
+      },
+      "executed": true,
+      "id": "COMMISSION-UI-02",
+      "name": "The Korean service board exposes five compact cards and a primary Use button for an eligible lot without raw identifiers",
+      "passed": true
+    }
+  ]
+}

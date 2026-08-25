@@ -1,0 +1,54 @@
+{
+  "id": "artifact_037",
+  "displayName": "Quillmark Desk Lamp K",
+  "category": "decorative_objects",
+  "baseModel": "model_07.obj",
+  "maker": "maker_17",
+  "modelName": "Model 136",
+  "era": "1900-1912",
+  "materialSet": [
+    "material_07",
+    "material_10"
+  ],
+  "rarity": "common",
+  "baseValue": 794,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.30000000000000004
+  },
+  "collectorTags": [
+    "decorative_objects",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_037"
+}

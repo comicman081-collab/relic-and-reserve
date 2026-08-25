@@ -1,0 +1,475 @@
+{
+  "executed": 11,
+  "failed": 0,
+  "passed": 11,
+  "skipped": 0,
+  "suite": "R3 Stage Replay Feedback",
+  "tests": [
+    {
+      "evidence": {
+        "cases": 26,
+        "invalid": [],
+        "specs": 80
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-DATA-01",
+      "name": "All staged cases author valid independent support and all 80 ArtifactSpecs remain registered",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authorityUnchanged": true,
+        "feedback": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-PUBLIC-01",
+      "name": "Compact feedback is public-only, advisory-only, and attempts=0 excludes Sale from weakest",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citation": 65.0,
+        "discovery": 35.0,
+        "duplicate": 100.0,
+        "full": 100.0,
+        "none": 0.0
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-INVESTIGATION-01",
+      "name": "Investigation is exactly 35% unique discovery plus 65% independent citation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "adviceCode": "PROTECT_CONDITION",
+        "axes": {
+          "investigation": {
+            "available": false,
+            "statusCode": "UNAVAILABLE",
+            "value": 0.0
+          },
+          "preservation": {
+            "available": true,
+            "statusCode": "STEADY",
+            "value": 70.1833333333333
+          },
+          "sale": {
+            "available": false,
+            "statusCode": "NO_ATTEMPTS",
+            "value": null
+          }
+        },
+        "stage": 1,
+        "weakest": "preservation"
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-INVESTIGATION-02",
+      "name": "Non-positive independent support fails closed without driving weakest advice",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "damaged": 46.7888888888889,
+        "expected": 70.1833333333333,
+        "improved": 80.1222222222222,
+        "untouched": 70.1833333333333
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-PRESERVATION-01",
+      "name": "Preservation is exactly 65% public integrity plus 35% visible condition and untouched artifacts are not automatic 100",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "conversionUp": 100.0,
+        "low": 47.7173913043478,
+        "noSaleOnly": 0.0,
+        "realizationUp": 67.5,
+        "reserveOnly": 67.5,
+        "tie": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-SALE-01",
+      "name": "Sale is 65% conversion plus 35% realization against cached appraisal; reserve is never the denominator",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": 66.5444444444444,
+        "before": 66.5444444444444,
+        "historyAppraisal": 345,
+        "ledger": {
+          "artifactUid": "feedback_s01_00",
+          "disposition": "SOLD",
+          "issued": true,
+          "publicAppraisalSnapshot": 345,
+          "publicConditionSnapshot": {
+            "historicalIntegrity": 63.0,
+            "mechanicalCondition": 64.0,
+            "structuralCondition": 52.0,
+            "surfaceCondition": 41.0
+          },
+          "saleTransactionId": "sale_1_feedback_s01_00_0"
+        },
+        "listing": {
+          "confidence": 0.7,
+          "disclosure": "LIKELY",
+          "publicAppraisal": 345,
+          "reserve": 180,
+          "starting": 50
+        },
+        "stable": 66.5444444444444
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-SNAPSHOT-01",
+      "name": "Explicit displayed appraisal and SOLD public condition survive inventory removal exactly",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 35.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        },
+        "before": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 35.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-PRIVACY-01",
+      "name": "Hidden truth, rarity, significance, value and originality flips cannot alter axes or advice",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "stage1": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "STRONG",
+              "value": 95.4347826086957
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        },
+        "stage1AfterForeign": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "STRONG",
+              "value": 95.4347826086957
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        },
+        "stage2AfterForeign": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 2,
+          "weakest": "investigation"
+        },
+        "stage2Before": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 2,
+          "weakest": "investigation"
+        },
+        "stage2Own": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "STRONG",
+              "value": 95.4347826086957
+            }
+          },
+          "stage": 2,
+          "weakest": "investigation"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-SCOPE-01",
+      "name": "Stage case-ledger UIDs exclude prior/later stage and unselected checkpoint auction history",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "feedback": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 69.5072463768116
+            }
+          },
+          "stage": 10,
+          "weakest": "investigation"
+        },
+        "selected": [
+          "feedback_s10_00",
+          "grand_checkpoint_a",
+          "grand_checkpoint_b"
+        ],
+        "withoutUnrelated": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 69.5072463768116
+            }
+          },
+          "stage": 10,
+          "weakest": "investigation"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-GRAND-01",
+      "name": "Stage 10 Sale includes all three selected Grand Reserve lots including checkpoints and excludes unrelated auctions",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "fresh": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": false,
+              "statusCode": "UNAVAILABLE",
+              "value": 0.0
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        },
+        "history": 0,
+        "leaked": false,
+        "ledger": 0,
+        "stableAfter": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 69.5072463768116
+            }
+          },
+          "stage": 10,
+          "weakest": "investigation"
+        },
+        "stableBefore": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 70.1833333333333
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 69.5072463768116
+            }
+          },
+          "stage": 10,
+          "weakest": "investigation"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-FEEDBACK-PERSISTENCE-01",
+      "name": "Feedback round-trips saves and NEW GAME cannot leak prior run artifacts or auctions",
+      "passed": true
+    }
+  ]
+}

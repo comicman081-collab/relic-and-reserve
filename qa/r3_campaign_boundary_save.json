@@ -1,0 +1,5213 @@
+{
+  "activeWorkpieceId": "",
+  "auctionHistory": [
+    {
+      "caseId": "prologue_clock",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_prologue_clock",
+      "item": "Aurelian Mechanical Clock A",
+      "publicAppraisal": 110,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Mechanical Enthusiast",
+            "bidderId": "bidder_05",
+            "budget": 1170,
+            "round": 0
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_06",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 0
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_07",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 0
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_08",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 0
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_09",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 0
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_04",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          }
+        ],
+        "fee": 3,
+        "hammer": 25,
+        "net": 22,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.74,
+            "bidCount": 1,
+            "budget": 1040,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_04",
+            "maxBid": 29,
+            "name": "Interior Decorator",
+            "reasonTags": []
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 1,
+            "budget": 1170,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_05",
+            "maxBid": 26,
+            "name": "Mechanical Enthusiast",
+            "reasonTags": []
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 0,
+            "budget": 1300,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "DROPOUT",
+            "id": "bidder_06",
+            "maxBid": 21,
+            "name": "Speculator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 0,
+            "budget": 1430,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "DROPOUT",
+            "id": "bidder_07",
+            "maxBid": 19,
+            "name": "Historian",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 0,
+            "budget": 1560,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "DROPOUT",
+            "id": "bidder_08",
+            "maxBid": 23,
+            "name": "Restoration Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.66,
+            "bidCount": 0,
+            "budget": 1690,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "DROPOUT",
+            "id": "bidder_09",
+            "maxBid": 18,
+            "name": "Archive Curator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-289916817",
+        "reasonTags": [],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_2012191032_0",
+        "winnerId": "bidder_05"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "perfect_fake",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_perfect_fake",
+      "item": "Cindervale Film Camera C",
+      "publicAppraisal": 148,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Archive Curator",
+            "bidderId": "bidder_09",
+            "budget": 1690,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Estate Broker",
+            "bidderId": "bidder_10",
+            "budget": 1820,
+            "round": 0
+          },
+          {
+            "amount": 38,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 0
+          },
+          {
+            "amount": 51,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 0
+          },
+          {
+            "amount": 64,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 0
+          },
+          {
+            "amount": 78,
+            "bidder": "Estate Broker",
+            "bidderId": "bidder_10",
+            "budget": 1820,
+            "round": 1
+          },
+          {
+            "amount": 93,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 1
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_01",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 0
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_09",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_11",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_02",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_10",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          }
+        ],
+        "fee": 11,
+        "hammer": 93,
+        "net": 82,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.66,
+            "bidCount": 1,
+            "budget": 1690,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_09",
+            "maxBid": 69,
+            "name": "Archive Curator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.74,
+            "bidCount": 2,
+            "budget": 1820,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_10",
+            "maxBid": 89,
+            "name": "Estate Broker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 1,
+            "budget": 1950,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_11",
+            "maxBid": 82,
+            "name": "Design Scholar",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 2,
+            "budget": 2080,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_12",
+            "maxBid": 107,
+            "name": "Clockmaker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 0,
+            "budget": 650,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "DROPOUT",
+            "id": "bidder_01",
+            "maxBid": 53,
+            "name": "Private Collector",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 1,
+            "budget": 780,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_02",
+            "maxBid": 70,
+            "name": "Professional Dealer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-972419175",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_747054050_1",
+        "winnerId": "bidder_12"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "leave_patina",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_leave_patina",
+      "item": "Eldermere Music Box E",
+      "publicAppraisal": 186,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 0
+          },
+          {
+            "amount": 37,
+            "bidder": "Private Collector",
+            "bidderId": "bidder_01",
+            "budget": 650,
+            "round": 0
+          },
+          {
+            "amount": 50,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 0
+          },
+          {
+            "amount": 63,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 0
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_03",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 0
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_11",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_12",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_01",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_02",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          }
+        ],
+        "fee": 7,
+        "hammer": 63,
+        "net": 56,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.82,
+            "bidCount": 1,
+            "budget": 1950,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_11",
+            "maxBid": 62,
+            "name": "Design Scholar",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 1,
+            "budget": 2080,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_12",
+            "maxBid": 63,
+            "name": "Clockmaker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 1,
+            "budget": 650,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_01",
+            "maxBid": 61,
+            "name": "Private Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 1,
+            "budget": 780,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_02",
+            "maxBid": 61,
+            "name": "Professional Dealer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.66,
+            "bidCount": 0,
+            "budget": 910,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "DROPOUT",
+            "id": "bidder_03",
+            "maxBid": 59,
+            "name": "Museum Buyer",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.74,
+            "bidCount": 1,
+            "budget": 1040,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_04",
+            "maxBid": 73,
+            "name": "Interior Decorator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-1799463380",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_173250665_2",
+        "winnerId": "bidder_04"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "estate_compass",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_estate_compass",
+      "item": "Kestrel Compass K",
+      "publicAppraisal": 300,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Archive Curator",
+            "bidderId": "bidder_09",
+            "budget": 1690,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Estate Broker",
+            "bidderId": "bidder_10",
+            "budget": 1820,
+            "round": 0
+          },
+          {
+            "amount": 38,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 0
+          },
+          {
+            "amount": 51,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 0
+          },
+          {
+            "amount": 64,
+            "bidder": "Private Collector",
+            "bidderId": "bidder_01",
+            "budget": 650,
+            "round": 0
+          },
+          {
+            "amount": 78,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 0
+          },
+          {
+            "amount": 92,
+            "bidder": "Archive Curator",
+            "bidderId": "bidder_09",
+            "budget": 1690,
+            "round": 1
+          },
+          {
+            "amount": 107,
+            "bidder": "Estate Broker",
+            "bidderId": "bidder_10",
+            "budget": 1820,
+            "round": 1
+          },
+          {
+            "amount": 123,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 1
+          },
+          {
+            "amount": 140,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 1
+          },
+          {
+            "amount": 157,
+            "bidder": "Estate Broker",
+            "bidderId": "bidder_10",
+            "budget": 1820,
+            "round": 2
+          },
+          {
+            "amount": 175,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 2
+          },
+          {
+            "amount": 194,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 2
+          },
+          {
+            "amount": 214,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 3
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_01",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_02",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_09",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_10",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_12",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          }
+        ],
+        "fee": 25,
+        "hammer": 214,
+        "net": 189,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.66,
+            "bidCount": 2,
+            "budget": 1690,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_09",
+            "maxBid": 115,
+            "name": "Archive Curator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.74,
+            "bidCount": 3,
+            "budget": 1820,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_10",
+            "maxBid": 166,
+            "name": "Estate Broker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 4,
+            "budget": 1950,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_11",
+            "maxBid": 239,
+            "name": "Design Scholar",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 3,
+            "budget": 2080,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_12",
+            "maxBid": 200,
+            "name": "Clockmaker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 1,
+            "budget": 650,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_01",
+            "maxBid": 106,
+            "name": "Private Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 1,
+            "budget": 780,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_02",
+            "maxBid": 147,
+            "name": "Professional Dealer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-1508101746",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_1786216174_3",
+        "winnerId": "bidder_11"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "pawn_watch",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_pawn_watch",
+      "item": "Brasswell Pocket Watch B",
+      "publicAppraisal": 129,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Speculator",
+            "bidderId": "bidder_06",
+            "budget": 1300,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Historian",
+            "bidderId": "bidder_07",
+            "budget": 1430,
+            "round": 0
+          },
+          {
+            "amount": 37,
+            "bidder": "Restoration Collector",
+            "bidderId": "bidder_08",
+            "budget": 1560,
+            "round": 0
+          },
+          {
+            "amount": 50,
+            "bidder": "Estate Broker",
+            "bidderId": "bidder_10",
+            "budget": 1820,
+            "round": 0
+          },
+          {
+            "amount": 64,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 0
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_09",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 0
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_06",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_07",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_08",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_10",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          }
+        ],
+        "fee": 7,
+        "hammer": 64,
+        "net": 57,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.9,
+            "bidCount": 1,
+            "budget": 1300,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_06",
+            "maxBid": 54,
+            "name": "Speculator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 1,
+            "budget": 1430,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_07",
+            "maxBid": 55,
+            "name": "Historian",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 1,
+            "budget": 1560,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_08",
+            "maxBid": 70,
+            "name": "Restoration Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.66,
+            "bidCount": 0,
+            "budget": 1690,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "DROPOUT",
+            "id": "bidder_09",
+            "maxBid": 43,
+            "name": "Archive Curator",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.74,
+            "bidCount": 1,
+            "budget": 1820,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_10",
+            "maxBid": 76,
+            "name": "Estate Broker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 1,
+            "budget": 1950,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_11",
+            "maxBid": 64,
+            "name": "Design Scholar",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-1142034337",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_394914389_4",
+        "winnerId": "bidder_11"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "garage_lamp",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_garage_lamp",
+      "item": "Gildspire Desk Lamp G",
+      "publicAppraisal": 224,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Estate Broker",
+            "bidderId": "bidder_10",
+            "budget": 1820,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 0
+          },
+          {
+            "amount": 38,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 0
+          },
+          {
+            "amount": 51,
+            "bidder": "Private Collector",
+            "bidderId": "bidder_01",
+            "budget": 650,
+            "round": 0
+          },
+          {
+            "amount": 64,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 0
+          },
+          {
+            "amount": 78,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 0
+          },
+          {
+            "amount": 93,
+            "bidder": "Estate Broker",
+            "bidderId": "bidder_10",
+            "budget": 1820,
+            "round": 1
+          },
+          {
+            "amount": 108,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 1
+          },
+          {
+            "amount": 124,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 1
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_01",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_02",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_03",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_10",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_11",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          }
+        ],
+        "fee": 14,
+        "hammer": 124,
+        "net": 110,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.74,
+            "bidCount": 2,
+            "budget": 1820,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_10",
+            "maxBid": 114,
+            "name": "Estate Broker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 2,
+            "budget": 1950,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_11",
+            "maxBid": 132,
+            "name": "Design Scholar",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 2,
+            "budget": 2080,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_12",
+            "maxBid": 156,
+            "name": "Clockmaker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 1,
+            "budget": 650,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_01",
+            "maxBid": 71,
+            "name": "Private Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 1,
+            "budget": 780,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_02",
+            "maxBid": 95,
+            "name": "Professional Dealer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.66,
+            "bidCount": 1,
+            "budget": 910,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_03",
+            "maxBid": 121,
+            "name": "Museum Buyer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-432901751",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_2047493855_5",
+        "winnerId": "bidder_12"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "telephone_trace",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_telephone_trace",
+      "item": "Orchard Table Telephone O",
+      "publicAppraisal": 376,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Private Collector",
+            "bidderId": "bidder_01",
+            "budget": 650,
+            "round": 0
+          },
+          {
+            "amount": 37,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 0
+          },
+          {
+            "amount": 50,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 0
+          },
+          {
+            "amount": 63,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 0
+          },
+          {
+            "amount": 77,
+            "bidder": "Mechanical Enthusiast",
+            "bidderId": "bidder_05",
+            "budget": 1170,
+            "round": 0
+          },
+          {
+            "amount": 92,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 1
+          },
+          {
+            "amount": 107,
+            "bidder": "Private Collector",
+            "bidderId": "bidder_01",
+            "budget": 650,
+            "round": 1
+          },
+          {
+            "amount": 122,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 1
+          },
+          {
+            "amount": 138,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 1
+          },
+          {
+            "amount": 155,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 1
+          },
+          {
+            "amount": 173,
+            "bidder": "Mechanical Enthusiast",
+            "bidderId": "bidder_05",
+            "budget": 1170,
+            "round": 1
+          },
+          {
+            "amount": 192,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 2
+          },
+          {
+            "amount": 211,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 2
+          },
+          {
+            "amount": 231,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 2
+          },
+          {
+            "amount": 252,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 3
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_01",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_02",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_05",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_03",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_04",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          }
+        ],
+        "fee": 30,
+        "hammer": 252,
+        "net": 222,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.9,
+            "bidCount": 4,
+            "budget": 2080,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_12",
+            "maxBid": 288,
+            "name": "Clockmaker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 2,
+            "budget": 650,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_01",
+            "maxBid": 145,
+            "name": "Private Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 2,
+            "budget": 780,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_02",
+            "maxBid": 170,
+            "name": "Professional Dealer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.66,
+            "bidCount": 3,
+            "budget": 910,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_03",
+            "maxBid": 226,
+            "name": "Museum Buyer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.74,
+            "bidCount": 3,
+            "budget": 1040,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_04",
+            "maxBid": 268,
+            "name": "Interior Decorator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 2,
+            "budget": 1170,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_05",
+            "maxBid": 177,
+            "name": "Mechanical Enthusiast",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-388854721",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_2018833063_6",
+        "winnerId": "bidder_12"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "early_camera",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_early_camera",
+      "item": "Cindervale Film Camera C",
+      "publicAppraisal": 148,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Private Collector",
+            "bidderId": "bidder_01",
+            "budget": 650,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 0
+          },
+          {
+            "amount": 37,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 0
+          },
+          {
+            "amount": 50,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 0
+          },
+          {
+            "amount": 64,
+            "bidder": "Speculator",
+            "bidderId": "bidder_06",
+            "budget": 1300,
+            "round": 0
+          },
+          {
+            "amount": 78,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 1
+          },
+          {
+            "amount": 93,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 1
+          },
+          {
+            "amount": 108,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 2
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_05",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 0
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_01",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_02",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_06",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_04",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          }
+        ],
+        "fee": 12,
+        "hammer": 108,
+        "net": 96,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.5,
+            "bidCount": 1,
+            "budget": 650,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_01",
+            "maxBid": 49,
+            "name": "Private Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 1,
+            "budget": 780,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_02",
+            "maxBid": 61,
+            "name": "Professional Dealer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.66,
+            "bidCount": 3,
+            "budget": 910,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_03",
+            "maxBid": 117,
+            "name": "Museum Buyer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.74,
+            "bidCount": 2,
+            "budget": 1040,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_04",
+            "maxBid": 107,
+            "name": "Interior Decorator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 0,
+            "budget": 1170,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "DROPOUT",
+            "id": "bidder_05",
+            "maxBid": 63,
+            "name": "Mechanical Enthusiast",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 1,
+            "budget": 1300,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_06",
+            "maxBid": 95,
+            "name": "Speculator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-2071989879",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_750801685_7",
+        "winnerId": "bidder_03"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "false_invoice",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_false_invoice",
+      "item": "Peregrine Jewelry Box P",
+      "publicAppraisal": 395,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 0
+          },
+          {
+            "amount": 38,
+            "bidder": "Mechanical Enthusiast",
+            "bidderId": "bidder_05",
+            "budget": 1170,
+            "round": 0
+          },
+          {
+            "amount": 51,
+            "bidder": "Speculator",
+            "bidderId": "bidder_06",
+            "budget": 1300,
+            "round": 0
+          },
+          {
+            "amount": 64,
+            "bidder": "Historian",
+            "bidderId": "bidder_07",
+            "budget": 1430,
+            "round": 0
+          },
+          {
+            "amount": 78,
+            "bidder": "Restoration Collector",
+            "bidderId": "bidder_08",
+            "budget": 1560,
+            "round": 0
+          },
+          {
+            "amount": 92,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 1
+          },
+          {
+            "amount": 107,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 1
+          },
+          {
+            "amount": 123,
+            "bidder": "Mechanical Enthusiast",
+            "bidderId": "bidder_05",
+            "budget": 1170,
+            "round": 1
+          },
+          {
+            "amount": 140,
+            "bidder": "Speculator",
+            "bidderId": "bidder_06",
+            "budget": 1300,
+            "round": 1
+          },
+          {
+            "amount": 156,
+            "bidder": "Historian",
+            "bidderId": "bidder_07",
+            "budget": 1430,
+            "round": 1
+          },
+          {
+            "amount": 173,
+            "bidder": "Restoration Collector",
+            "bidderId": "bidder_08",
+            "budget": 1560,
+            "round": 1
+          },
+          {
+            "amount": 191,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 2
+          },
+          {
+            "amount": 210,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 2
+          },
+          {
+            "amount": 230,
+            "bidder": "Mechanical Enthusiast",
+            "bidderId": "bidder_05",
+            "budget": 1170,
+            "round": 2
+          },
+          {
+            "amount": 251,
+            "bidder": "Speculator",
+            "bidderId": "bidder_06",
+            "budget": 1300,
+            "round": 2
+          },
+          {
+            "amount": 271,
+            "bidder": "Historian",
+            "bidderId": "bidder_07",
+            "budget": 1430,
+            "round": 2
+          },
+          {
+            "amount": 292,
+            "bidder": "Restoration Collector",
+            "bidderId": "bidder_08",
+            "budget": 1560,
+            "round": 2
+          },
+          {
+            "amount": 315,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 3
+          },
+          {
+            "amount": 339,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 3
+          },
+          {
+            "amount": 362,
+            "bidder": "Historian",
+            "bidderId": "bidder_07",
+            "budget": 1430,
+            "round": 3
+          },
+          {
+            "amount": 387,
+            "bidder": "Restoration Collector",
+            "bidderId": "bidder_08",
+            "budget": 1560,
+            "round": 3
+          },
+          {
+            "amount": 413,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 4
+          },
+          {
+            "amount": 439,
+            "bidder": "Historian",
+            "bidderId": "bidder_07",
+            "budget": 1430,
+            "round": 4
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_05",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_06",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_04",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 4
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_08",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 4
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_03",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 5
+          }
+        ],
+        "fee": 52,
+        "hammer": 439,
+        "net": 387,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.66,
+            "bidCount": 5,
+            "budget": 910,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_03",
+            "maxBid": 419,
+            "name": "Museum Buyer",
+            "reasonTags": [
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.74,
+            "bidCount": 4,
+            "budget": 1040,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_04",
+            "maxBid": 440,
+            "name": "Interior Decorator",
+            "reasonTags": [
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 3,
+            "budget": 1170,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_05",
+            "maxBid": 332,
+            "name": "Mechanical Enthusiast",
+            "reasonTags": [
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 3,
+            "budget": 1300,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_06",
+            "maxBid": 315,
+            "name": "Speculator",
+            "reasonTags": [
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 5,
+            "budget": 1430,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_07",
+            "maxBid": 462,
+            "name": "Historian",
+            "reasonTags": [
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 4,
+            "budget": 1560,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_08",
+            "maxBid": 395,
+            "name": "Restoration Collector",
+            "reasonTags": [
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-981866974",
+        "reasonTags": [
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_1145280889_8",
+        "winnerId": "bidder_07"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "mislabelled_collection",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_mislabelled_collection",
+      "item": "Rook Slide Projector R",
+      "publicAppraisal": 433,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 0
+          },
+          {
+            "amount": 37,
+            "bidder": "Private Collector",
+            "bidderId": "bidder_01",
+            "budget": 650,
+            "round": 0
+          },
+          {
+            "amount": 50,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 0
+          },
+          {
+            "amount": 63,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 0
+          },
+          {
+            "amount": 77,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 0
+          },
+          {
+            "amount": 92,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 1
+          },
+          {
+            "amount": 107,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 1
+          },
+          {
+            "amount": 122,
+            "bidder": "Professional Dealer",
+            "bidderId": "bidder_02",
+            "budget": 780,
+            "round": 1
+          },
+          {
+            "amount": 138,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 1
+          },
+          {
+            "amount": 155,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 1
+          },
+          {
+            "amount": 173,
+            "bidder": "Design Scholar",
+            "bidderId": "bidder_11",
+            "budget": 1950,
+            "round": 2
+          },
+          {
+            "amount": 192,
+            "bidder": "Clockmaker",
+            "bidderId": "bidder_12",
+            "budget": 2080,
+            "round": 2
+          },
+          {
+            "amount": 211,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 2
+          },
+          {
+            "amount": 231,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 2
+          },
+          {
+            "amount": 251,
+            "bidder": "Museum Buyer",
+            "bidderId": "bidder_03",
+            "budget": 910,
+            "round": 3
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_01",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_02",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_11",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_12",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_04",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          }
+        ],
+        "fee": 30,
+        "hammer": 251,
+        "net": 221,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.82,
+            "bidCount": 3,
+            "budget": 1950,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_11",
+            "maxBid": 179,
+            "name": "Design Scholar",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 3,
+            "budget": 2080,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_12",
+            "maxBid": 229,
+            "name": "Clockmaker",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 1,
+            "budget": 650,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_01",
+            "maxBid": 120,
+            "name": "Private Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 2,
+            "budget": 780,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_02",
+            "maxBid": 164,
+            "name": "Professional Dealer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.66,
+            "bidCount": 4,
+            "budget": 910,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_03",
+            "maxBid": 253,
+            "name": "Museum Buyer",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.74,
+            "bidCount": 3,
+            "budget": 1040,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_04",
+            "maxBid": 242,
+            "name": "Interior Decorator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-997177250",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_692325402_9",
+        "winnerId": "bidder_03"
+      },
+      "status": "SOLD"
+    },
+    {
+      "caseId": "observatory_instrument",
+      "day": 1,
+      "grandReserve": false,
+      "instanceId": "case_observatory_instrument",
+      "item": "Kestrel Compass K",
+      "publicAppraisal": 300,
+      "result": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 0
+          },
+          {
+            "amount": 25,
+            "bidder": "Mechanical Enthusiast",
+            "bidderId": "bidder_05",
+            "budget": 1170,
+            "round": 0
+          },
+          {
+            "amount": 38,
+            "bidder": "Speculator",
+            "bidderId": "bidder_06",
+            "budget": 1300,
+            "round": 0
+          },
+          {
+            "amount": 51,
+            "bidder": "Historian",
+            "bidderId": "bidder_07",
+            "budget": 1430,
+            "round": 0
+          },
+          {
+            "amount": 64,
+            "bidder": "Restoration Collector",
+            "bidderId": "bidder_08",
+            "budget": 1560,
+            "round": 0
+          },
+          {
+            "amount": 78,
+            "bidder": "Archive Curator",
+            "bidderId": "bidder_09",
+            "budget": 1690,
+            "round": 0
+          },
+          {
+            "amount": 93,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 1
+          },
+          {
+            "amount": 108,
+            "bidder": "Mechanical Enthusiast",
+            "bidderId": "bidder_05",
+            "budget": 1170,
+            "round": 1
+          },
+          {
+            "amount": 124,
+            "bidder": "Speculator",
+            "bidderId": "bidder_06",
+            "budget": 1300,
+            "round": 1
+          },
+          {
+            "amount": 140,
+            "bidder": "Historian",
+            "bidderId": "bidder_07",
+            "budget": 1430,
+            "round": 1
+          },
+          {
+            "amount": 157,
+            "bidder": "Restoration Collector",
+            "bidderId": "bidder_08",
+            "budget": 1560,
+            "round": 1
+          },
+          {
+            "amount": 175,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 2
+          },
+          {
+            "amount": 193,
+            "bidder": "Restoration Collector",
+            "bidderId": "bidder_08",
+            "budget": 1560,
+            "round": 2
+          },
+          {
+            "amount": 212,
+            "bidder": "Interior Decorator",
+            "bidderId": "bidder_04",
+            "budget": 1040,
+            "round": 3
+          }
+        ],
+        "dropouts": [
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_09",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 1
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_05",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_06",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_07",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 2
+          },
+          {
+            "behavior": "budget_or_value",
+            "bidderId": "bidder_08",
+            "reason": "VALUE",
+            "reasonTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "round": 3
+          }
+        ],
+        "fee": 25,
+        "hammer": 212,
+        "net": 187,
+        "opening": 1,
+        "participants": [
+          {
+            "aggression": 0.74,
+            "bidCount": 4,
+            "budget": 1040,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "WON",
+            "id": "bidder_04",
+            "maxBid": 228,
+            "name": "Interior Decorator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.82,
+            "bidCount": 2,
+            "budget": 1170,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_05",
+            "maxBid": 158,
+            "name": "Mechanical Enthusiast",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.9,
+            "bidCount": 2,
+            "budget": 1300,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_06",
+            "maxBid": 169,
+            "name": "Speculator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.5,
+            "bidCount": 2,
+            "budget": 1430,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_07",
+            "maxBid": 162,
+            "name": "Historian",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.58,
+            "bidCount": 3,
+            "budget": 1560,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_08",
+            "maxBid": 220,
+            "name": "Restoration Collector",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          {
+            "aggression": 0.66,
+            "bidCount": 1,
+            "budget": 1690,
+            "dropoutBehavior": "budget_or_value",
+            "finalAction": "BID",
+            "id": "bidder_09",
+            "maxBid": 137,
+            "name": "Archive Curator",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          }
+        ],
+        "publicFingerprint": "AUC-851774955",
+        "reasonTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "reserve": 1,
+        "reservePressureFactor": 1.0,
+        "reserve_met": true,
+        "sale_status": "SOLD",
+        "stageDifficulty": 1.0,
+        "transactionId": "auction_1_579458528_10",
+        "winnerId": "bidder_04"
+      },
+      "status": "SOLD"
+    }
+  ],
+  "campaign": {
+    "activeCaseId": "",
+    "caseArtifactLedger": {
+      "early_camera": {
+        "artifactUid": "case_early_camera",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 148,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 74.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_early_camera_16"
+      },
+      "estate_compass": {
+        "artifactUid": "case_estate_compass",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 300,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 77.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_estate_compass_8"
+      },
+      "false_invoice": {
+        "artifactUid": "case_false_invoice",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 395,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 70.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_false_invoice_18"
+      },
+      "garage_lamp": {
+        "artifactUid": "case_garage_lamp",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 224,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 77.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_garage_lamp_12"
+      },
+      "leave_patina": {
+        "artifactUid": "case_leave_patina",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 186,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 77.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_leave_patina_6"
+      },
+      "mislabelled_collection": {
+        "artifactUid": "case_mislabelled_collection",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 433,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 77.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_mislabelled_collection_20"
+      },
+      "observatory_instrument": {
+        "artifactUid": "case_observatory_instrument",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 300,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 74.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_observatory_instrument_22"
+      },
+      "pawn_watch": {
+        "artifactUid": "case_pawn_watch",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 129,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 74.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_pawn_watch_10"
+      },
+      "perfect_fake": {
+        "artifactUid": "case_perfect_fake",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 148,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 78.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_perfect_fake_4"
+      },
+      "prologue_clock": {
+        "artifactUid": "case_prologue_clock",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 110,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 71.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_prologue_clock_1"
+      },
+      "silent_radio": {
+        "artifactUid": "case_silent_radio",
+        "disposition": "INVENTORY",
+        "issued": true,
+        "publicAppraisalSnapshot": 0,
+        "publicConditionSnapshot": {},
+        "saleTransactionId": ""
+      },
+      "telephone_trace": {
+        "artifactUid": "case_telephone_trace",
+        "disposition": "SOLD",
+        "issued": true,
+        "publicAppraisalSnapshot": 376,
+        "publicConditionSnapshot": {
+          "historicalIntegrity": 74.0,
+          "mechanicalCondition": 42.0,
+          "structuralCondition": 70.0,
+          "surfaceCondition": 55.0
+        },
+        "saleTransactionId": "sale_1_case_telephone_trace_14"
+      }
+    },
+    "caseOutcomes": {
+      "early_camera": "masterful",
+      "estate_compass": "masterful",
+      "false_invoice": "credible",
+      "garage_lamp": "masterful",
+      "leave_patina": "masterful",
+      "mislabelled_collection": "masterful",
+      "observatory_instrument": "masterful",
+      "pawn_watch": "masterful",
+      "perfect_fake": "masterful",
+      "prologue_clock": "masterful",
+      "silent_radio": "mistaken",
+      "telephone_trace": "masterful"
+    },
+    "caseStates": {
+      "early_camera": {
+        "citedEvidenceIds": [
+          "src.early_camera.artifact.body_material_scan",
+          "src.early_camera.artifact.uv_label_fasteners",
+          "src.early_camera.document.display_serial_register",
+          "src.early_camera.npc.hana_catalog_context",
+          "src.early_camera.reference.cindervale_construction_guide"
+        ],
+        "discoveredEvidenceIds": [
+          "src.early_camera.artifact.body_material_scan",
+          "src.early_camera.artifact.uv_label_fasteners",
+          "src.early_camera.document.display_serial_register",
+          "src.early_camera.npc.hana_catalog_context",
+          "src.early_camera.reference.cindervale_construction_guide"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.early_camera.artifact.body_material_scan",
+            "src.early_camera.artifact.uv_label_fasteners",
+            "src.early_camera.document.display_serial_register",
+            "src.early_camera.npc.hana_catalog_context",
+            "src.early_camera.reference.cindervale_construction_guide"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.early_camera.later_display_reproduction",
+          "independentSourceCount": 5,
+          "netScore": 9,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 9
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.early_camera.later_display_reproduction"
+      },
+      "estate_compass": {
+        "citedEvidenceIds": [
+          "src.estate_compass.artifact.dial_serial",
+          "src.estate_compass.artifact.internal_balance",
+          "src.estate_compass.document.inventory_entry",
+          "src.estate_compass.npc.lena_recollection",
+          "src.estate_compass.reference.kestrel_guide"
+        ],
+        "discoveredEvidenceIds": [
+          "src.estate_compass.artifact.dial_serial",
+          "src.estate_compass.artifact.internal_balance",
+          "src.estate_compass.document.inventory_entry",
+          "src.estate_compass.npc.lena_recollection",
+          "src.estate_compass.reference.kestrel_guide"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.estate_compass.artifact.dial_serial",
+            "src.estate_compass.artifact.internal_balance",
+            "src.estate_compass.document.inventory_entry",
+            "src.estate_compass.npc.lena_recollection",
+            "src.estate_compass.reference.kestrel_guide"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.estate_compass.misdated_provenance",
+          "independentSourceCount": 5,
+          "netScore": 5,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 5
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.estate_compass.misdated_provenance"
+      },
+      "false_invoice": {
+        "citedEvidenceIds": [
+          "src.false_invoice.artifact.box_joinery",
+          "src.false_invoice.artifact.carbon_transfer",
+          "src.false_invoice.npc.noah_ledger",
+          "src.false_invoice.reference.reserve_numbering"
+        ],
+        "discoveredEvidenceIds": [
+          "src.false_invoice.artifact.box_joinery",
+          "src.false_invoice.document.invoice_face",
+          "src.false_invoice.document.reverse_provenance",
+          "src.false_invoice.artifact.carbon_transfer",
+          "src.false_invoice.npc.noah_ledger",
+          "src.false_invoice.reference.reserve_numbering"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.false_invoice.artifact.box_joinery",
+            "src.false_invoice.artifact.carbon_transfer",
+            "src.false_invoice.npc.noah_ledger",
+            "src.false_invoice.reference.reserve_numbering"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.authentic_box_false_invoice",
+          "independentSourceCount": 4,
+          "netScore": 8,
+          "ok": true,
+          "outcome": "credible",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "PLAUSIBLE",
+          "supportScore": 8
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.authentic_box_false_invoice"
+      },
+      "garage_lamp": {
+        "citedEvidenceIds": [
+          "src.garage_lamp.artifact.shell_wear_stamp",
+          "src.garage_lamp.artifact.socket_service_marks",
+          "src.garage_lamp.document.service_receipt",
+          "src.garage_lamp.npc.mara_assessment",
+          "src.garage_lamp.reference.gildspire_service_sheet"
+        ],
+        "discoveredEvidenceIds": [
+          "src.garage_lamp.artifact.shell_wear_stamp",
+          "src.garage_lamp.artifact.socket_service_marks",
+          "src.garage_lamp.document.service_receipt",
+          "src.garage_lamp.npc.mara_assessment",
+          "src.garage_lamp.reference.gildspire_service_sheet"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.garage_lamp.artifact.shell_wear_stamp",
+            "src.garage_lamp.artifact.socket_service_marks",
+            "src.garage_lamp.document.service_receipt",
+            "src.garage_lamp.npc.mara_assessment",
+            "src.garage_lamp.reference.gildspire_service_sheet"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.garage_lamp.genuine_period_repair",
+          "independentSourceCount": 5,
+          "netScore": 8,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 8
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.garage_lamp.genuine_period_repair"
+      },
+      "leave_patina": {
+        "citedEvidenceIds": [
+          "src.leave_patina.artifact.wear_gradient",
+          "src.leave_patina.artifact.hidden_finish_boundary",
+          "src.leave_patina.document.service_note",
+          "src.leave_patina.npc.iris_assessment",
+          "src.leave_patina.reference.eldemere_finish"
+        ],
+        "discoveredEvidenceIds": [
+          "src.leave_patina.artifact.wear_gradient",
+          "src.leave_patina.artifact.hidden_finish_boundary",
+          "src.leave_patina.document.service_note",
+          "src.leave_patina.npc.iris_assessment",
+          "src.leave_patina.reference.eldemere_finish"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.leave_patina.artifact.wear_gradient",
+            "src.leave_patina.artifact.hidden_finish_boundary",
+            "src.leave_patina.document.service_note",
+            "src.leave_patina.npc.iris_assessment",
+            "src.leave_patina.reference.eldemere_finish"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.leave_patina.natural_patina",
+          "independentSourceCount": 5,
+          "netScore": 5,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 5
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.leave_patina.natural_patina"
+      },
+      "mislabelled_collection": {
+        "citedEvidenceIds": [
+          "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+          "src.mislabelled_collection.artifact.accession_label_layer",
+          "src.mislabelled_collection.document.model117_catalog",
+          "src.mislabelled_collection.document.collection_invoice",
+          "src.mislabelled_collection.npc.hana_accession_review",
+          "src.mislabelled_collection.reference.rook_model117_history"
+        ],
+        "discoveredEvidenceIds": [
+          "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+          "src.mislabelled_collection.document.model117_catalog",
+          "src.mislabelled_collection.artifact.accession_label_layer",
+          "src.mislabelled_collection.document.collection_invoice",
+          "src.mislabelled_collection.reference.rook_model117_history",
+          "src.mislabelled_collection.npc.hana_accession_review"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+            "src.mislabelled_collection.artifact.accession_label_layer",
+            "src.mislabelled_collection.document.model117_catalog",
+            "src.mislabelled_collection.document.collection_invoice",
+            "src.mislabelled_collection.npc.hana_accession_review",
+            "src.mislabelled_collection.reference.rook_model117_history"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+          "independentSourceCount": 6,
+          "netScore": 12,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 12
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label"
+      },
+      "observatory_instrument": {
+        "citedEvidenceIds": [
+          "src.observatory_instrument.artifact.meridian_dial_material",
+          "src.observatory_instrument.artifact.pivot_repair_sequence",
+          "src.observatory_instrument.document.auction_receipt",
+          "src.observatory_instrument.document.pivot_service_card",
+          "src.observatory_instrument.npc.hana_meridian_context",
+          "src.observatory_instrument.reference.kestrel_model110_guide"
+        ],
+        "discoveredEvidenceIds": [
+          "src.observatory_instrument.artifact.meridian_dial_material",
+          "src.observatory_instrument.document.auction_receipt",
+          "src.observatory_instrument.artifact.pivot_repair_sequence",
+          "src.observatory_instrument.reference.kestrel_model110_guide",
+          "src.observatory_instrument.document.pivot_service_card",
+          "src.observatory_instrument.npc.hana_meridian_context"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.observatory_instrument.artifact.meridian_dial_material",
+            "src.observatory_instrument.artifact.pivot_repair_sequence",
+            "src.observatory_instrument.document.auction_receipt",
+            "src.observatory_instrument.document.pivot_service_card",
+            "src.observatory_instrument.npc.hana_meridian_context",
+            "src.observatory_instrument.reference.kestrel_model110_guide"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.observatory_instrument.genuine_period_pivot_repair",
+          "independentSourceCount": 6,
+          "netScore": 12,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 12
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.observatory_instrument.genuine_period_pivot_repair"
+      },
+      "pawn_watch": {
+        "citedEvidenceIds": [
+          "src.pawn_watch.artifact.bridge_service_marks",
+          "src.pawn_watch.artifact.escape_wheel_measurement",
+          "src.pawn_watch.document.pawn_ticket",
+          "src.pawn_watch.npc.lena_ticket_context",
+          "src.pawn_watch.reference.brasswell_service_gauge"
+        ],
+        "discoveredEvidenceIds": [
+          "src.pawn_watch.artifact.case_wear_serial",
+          "src.pawn_watch.artifact.bridge_service_marks",
+          "src.pawn_watch.document.pawn_ticket",
+          "src.pawn_watch.artifact.escape_wheel_measurement",
+          "src.pawn_watch.npc.lena_ticket_context",
+          "src.pawn_watch.reference.brasswell_service_gauge"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.pawn_watch.artifact.bridge_service_marks",
+            "src.pawn_watch.artifact.escape_wheel_measurement",
+            "src.pawn_watch.document.pawn_ticket",
+            "src.pawn_watch.npc.lena_ticket_context",
+            "src.pawn_watch.reference.brasswell_service_gauge"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.pawn_watch.period_repair",
+          "independentSourceCount": 5,
+          "netScore": 5,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 5
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.pawn_watch.period_repair"
+      },
+      "perfect_fake": {
+        "citedEvidenceIds": [
+          "perfect_fake:material",
+          "perfect_fake:serial_pattern",
+          "perfect_fake:construction_method",
+          "perfect_fake:provenance",
+          "perfect_fake:repair_trace"
+        ],
+        "discoveredEvidenceIds": [
+          "perfect_fake:material",
+          "perfect_fake:serial_pattern",
+          "perfect_fake:construction_method",
+          "perfect_fake:provenance",
+          "perfect_fake:repair_trace"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "perfect_fake:material",
+            "perfect_fake:serial_pattern",
+            "perfect_fake:construction_method",
+            "perfect_fake:provenance",
+            "perfect_fake:repair_trace"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "GENUINE_WITH_MODERN_REPAIR",
+          "independentSourceCount": 5,
+          "netScore": 5,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 5
+        },
+        "resolved": true,
+        "selectedHypothesisId": "GENUINE_WITH_MODERN_REPAIR"
+      },
+      "prologue_clock": {
+        "citedEvidenceIds": [
+          "src.prologue.artifact.backplate_screws",
+          "src.prologue.artifact.bridge_stamp",
+          "src.prologue.document.service_card",
+          "src.prologue.npc.mara_statement",
+          "src.prologue.reference.factory_plate"
+        ],
+        "discoveredEvidenceIds": [
+          "src.prologue.artifact.backplate_screws",
+          "src.prologue.artifact.bridge_stamp",
+          "src.prologue.document.service_card",
+          "src.prologue.reference.factory_plate",
+          "src.prologue.npc.mara_statement"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.prologue.artifact.backplate_screws",
+            "src.prologue.artifact.bridge_stamp",
+            "src.prologue.document.service_card",
+            "src.prologue.npc.mara_statement",
+            "src.prologue.reference.factory_plate"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.period_repair",
+          "independentSourceCount": 5,
+          "netScore": 7,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 7
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.period_repair"
+      },
+      "silent_radio": {
+        "citedEvidenceIds": [
+          "silent_radio:material",
+          "silent_radio:serial_pattern"
+        ],
+        "discoveredEvidenceIds": [
+          "silent_radio:material",
+          "silent_radio:serial_pattern"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "silent_radio:material",
+            "silent_radio:serial_pattern"
+          ],
+          "code": "OK",
+          "conclusionAccurate": false,
+          "hypothesisId": "REPRODUCTION",
+          "independentSourceCount": 0,
+          "netScore": 0,
+          "ok": true,
+          "outcome": "mistaken",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 0
+        },
+        "resolved": true,
+        "selectedHypothesisId": "REPRODUCTION"
+      },
+      "telephone_trace": {
+        "citedEvidenceIds": [
+          "src.telephone_trace.artifact.shell_material_serial",
+          "src.telephone_trace.artifact.terminal_safety_repair",
+          "src.telephone_trace.document.safety_repair_log",
+          "src.telephone_trace.document.estate_inventory",
+          "src.telephone_trace.npc.noah_archive_context",
+          "src.telephone_trace.reference.orchard_wiring_guide"
+        ],
+        "discoveredEvidenceIds": [
+          "src.telephone_trace.artifact.shell_material_serial",
+          "src.telephone_trace.artifact.terminal_safety_repair",
+          "src.telephone_trace.document.safety_repair_log",
+          "src.telephone_trace.document.estate_inventory",
+          "src.telephone_trace.reference.orchard_wiring_guide",
+          "src.telephone_trace.npc.noah_archive_context"
+        ],
+        "resolutionResult": {
+          "citedEvidenceIds": [
+            "src.telephone_trace.artifact.shell_material_serial",
+            "src.telephone_trace.artifact.terminal_safety_repair",
+            "src.telephone_trace.document.safety_repair_log",
+            "src.telephone_trace.document.estate_inventory",
+            "src.telephone_trace.npc.noah_archive_context",
+            "src.telephone_trace.reference.orchard_wiring_guide"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.telephone_trace.genuine_modern_safety_repair",
+          "independentSourceCount": 6,
+          "netScore": 10,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 10
+        },
+        "resolved": true,
+        "selectedHypothesisId": "hyp.telephone_trace.genuine_modern_safety_repair"
+      }
+    },
+    "collectorNetwork": 23,
+    "commissionArtifactUses": {},
+    "completedActs": {
+      "ACT_1": true,
+      "ACT_2": true,
+      "PROLOGUE": true
+    },
+    "completedCases": {
+      "early_camera": true,
+      "estate_compass": true,
+      "false_invoice": true,
+      "garage_lamp": true,
+      "leave_patina": true,
+      "mislabelled_collection": true,
+      "observatory_instrument": true,
+      "pawn_watch": true,
+      "perfect_fake": true,
+      "prologue_clock": true,
+      "silent_radio": true,
+      "telephone_trace": true
+    },
+    "completedCommissionIds": [],
+    "currentAct": "ACT_3",
+    "currentEnding": "",
+    "endingMetrics": {},
+    "endingUnlocked": [],
+    "epilogueSeen": false,
+    "ethics": 71,
+    "grandReserve": {
+      "completed": false,
+      "invited": false,
+      "results": [],
+      "score": {},
+      "selectedLotIds": []
+    },
+    "historicalIntegrity": 61,
+    "mastery": {
+      "DECORATIVE": 7,
+      "DOCUMENTARY": 0,
+      "ELECTRICAL": 5,
+      "MECHANICAL": 12,
+      "OPTICAL": 12,
+      "SCIENTIFIC": 8
+    },
+    "museumTrust": 11,
+    "postGame": false,
+    "relationships": {
+      "dorian_vale": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "elias_rowe": {
+        "relationship": 2,
+        "trust": 2
+      },
+      "hana_mire": {
+        "relationship": 6,
+        "trust": 6
+      },
+      "iris_bell": {
+        "relationship": 2,
+        "trust": 2
+      },
+      "lena_falk": {
+        "relationship": 4,
+        "trust": 4
+      },
+      "mara_venn": {
+        "relationship": 6,
+        "trust": 3
+      },
+      "noah_stern": {
+        "relationship": 4,
+        "trust": 4
+      },
+      "victor_hale": {
+        "relationship": 0,
+        "trust": 0
+      }
+    },
+    "schemaVersion": 2,
+    "storyFlags": {},
+    "unlockedModules": [
+      "basic_bench"
+    ],
+    "workshopGrade": 3
+  },
+  "currentEventId": "",
+  "currentStage": 1,
+  "dailyModifiers": {},
+  "day": 1,
+  "eventHistory": [],
+  "gameVersion": "R3",
+  "grandReserveSession": {
+    "activeArtifact": {},
+    "activeTransactionId": "",
+    "currentLotIndex": -1,
+    "finalizationReceiptId": "",
+    "lotUids": [],
+    "phase": "IDLE",
+    "receipts": [],
+    "reserveRunId": "",
+    "schemaVersion": 1
+  },
+  "instanceCounter": 0,
+  "inventory": [
+    {
+      "acquisitionPrice": 186,
+      "artifactSpecId": "artifact_004",
+      "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+      "caseId": "silent_radio",
+      "caseResolved": true,
+      "cleanliness": 18.0,
+      "confidence": 0.34,
+      "damageInstances": [
+        "DUST",
+        "RUST",
+        "SCRATCH"
+      ],
+      "estimatedValue": 167,
+      "evidence": [
+        {
+          "clueType": "silent_radio:material",
+          "confidenceWeight": 0.12,
+          "contradicts": [],
+          "observation": {
+            "en": "Material inspection recorded for the case file.",
+            "ko": "Material 조사 결과를 사건 기록에 남겼습니다."
+          },
+          "supports": []
+        },
+        {
+          "clueType": "silent_radio:serial_pattern",
+          "confidenceWeight": 0.12,
+          "contradicts": [],
+          "observation": {
+            "en": "Serial Pattern inspection recorded for the case file.",
+            "ko": "Serial Pattern 조사 결과를 사건 기록에 남겼습니다."
+          },
+          "supports": []
+        }
+      ],
+      "historicalIntegrity": 78.0,
+      "inspected": false,
+      "knownClues": [
+        "MATERIAL",
+        "SERIAL_PATTERN"
+      ],
+      "listing": {
+        "confidence": 0.0,
+        "disclosure": "UNCERTAIN",
+        "reserve": 0,
+        "starting": 0
+      },
+      "mechanicalCondition": 42.0,
+      "originalParts": 3,
+      "partStates": {
+        "body": true,
+        "mechanism": true,
+        "panel": true
+      },
+      "playerHypothesis": "REPRODUCTION",
+      "possibleClues": [
+        "MATERIAL",
+        "SERIAL_PATTERN",
+        "CONSTRUCTION_METHOD",
+        "PROVENANCE",
+        "REPAIR_TRACE"
+      ],
+      "repaired": false,
+      "replacementParts": 1,
+      "restorationCost": 0.0,
+      "restorationQuality": 0.0,
+      "rotation": 0.0,
+      "seed": 1595988459,
+      "sold": false,
+      "storyArtifactId": "story_artifact_02",
+      "structuralCondition": 70.0,
+      "surfaceCondition": 55.0,
+      "uniqueId": "case_silent_radio",
+      "zoom": 1.0
+    }
+  ],
+  "language": "en",
+  "marketRoster": [
+    {
+      "lotId": "day_1_lot_00",
+      "price": 564,
+      "seed": 4820145,
+      "sold": false,
+      "specId": "artifact_032"
+    },
+    {
+      "lotId": "day_1_lot_01",
+      "price": 453,
+      "seed": 26052978,
+      "sold": false,
+      "specId": "artifact_045"
+    },
+    {
+      "lotId": "day_1_lot_02",
+      "price": 625,
+      "seed": 883218431,
+      "sold": false,
+      "specId": "artifact_058"
+    },
+    {
+      "lotId": "day_1_lot_03",
+      "price": 126,
+      "seed": 910890388,
+      "sold": false,
+      "specId": "artifact_009"
+    },
+    {
+      "lotId": "day_1_lot_04",
+      "price": 266,
+      "seed": 679390032,
+      "sold": false,
+      "specId": "artifact_022"
+    }
+  ],
+  "marketRosterDay": 1,
+  "marketState": {
+    "ceramics": -4,
+    "decorative_objects": 2,
+    "mechanical_instruments": 10,
+    "office_machines": 8,
+    "optical_devices": 6,
+    "scientific_instruments": 11,
+    "telephony": 7,
+    "vintage_audio": 14
+  },
+  "masterSeed": 481516,
+  "money": 4949,
+  "pendingAuction": {
+    "artifactId": "case_observatory_instrument",
+    "committedDay": 1,
+    "createdDay": 1,
+    "cueIndex": 6,
+    "cueQueue": [
+      {
+        "bidderId": "bidder_04",
+        "phase": "ENTRY",
+        "visibleBids": []
+      },
+      {
+        "amount": 1,
+        "bidderId": "bidder_04",
+        "phase": "CALL",
+        "visibleBids": []
+      },
+      {
+        "amount": 175,
+        "bidderId": "bidder_04",
+        "phase": "BID",
+        "visibleBids": [
+          {
+            "amount": 175,
+            "bidderId": "bidder_04"
+          }
+        ]
+      },
+      {
+        "amount": 193,
+        "bidderId": "bidder_08",
+        "phase": "BID",
+        "visibleBids": [
+          {
+            "amount": 175,
+            "bidderId": "bidder_04"
+          },
+          {
+            "amount": 193,
+            "bidderId": "bidder_08"
+          }
+        ]
+      },
+      {
+        "amount": 212,
+        "bidderId": "bidder_04",
+        "phase": "BID",
+        "visibleBids": [
+          {
+            "amount": 175,
+            "bidderId": "bidder_04"
+          },
+          {
+            "amount": 193,
+            "bidderId": "bidder_08"
+          },
+          {
+            "amount": 212,
+            "bidderId": "bidder_04"
+          }
+        ]
+      },
+      {
+        "bidderId": "bidder_08",
+        "dropoutReason": "VALUE",
+        "phase": "DROPOUT",
+        "visibleBids": [
+          {
+            "amount": 175,
+            "bidderId": "bidder_04"
+          },
+          {
+            "amount": 193,
+            "bidderId": "bidder_08"
+          },
+          {
+            "amount": 212,
+            "bidderId": "bidder_04"
+          }
+        ]
+      },
+      {
+        "amount": 212,
+        "bidderId": "bidder_04",
+        "dropoutReason": "VALUE",
+        "phase": "SOLD",
+        "visibleBids": [
+          {
+            "amount": 157,
+            "bidderId": "bidder_08"
+          },
+          {
+            "amount": 175,
+            "bidderId": "bidder_04"
+          },
+          {
+            "amount": 193,
+            "bidderId": "bidder_08"
+          },
+          {
+            "amount": 212,
+            "bidderId": "bidder_04"
+          }
+        ]
+      }
+    ],
+    "decisions": {
+      "activeModifiers": {
+        "appraisalPrecision": 0.0,
+        "auctionFeeReduction": 0.0,
+        "bidderReach": 0,
+        "displayBonus": 0.0,
+        "listingBonus": 0.0,
+        "marketAll": 0,
+        "marketCategory": 11,
+        "stageDifficulty": 1.0
+      },
+      "condition": {
+        "cleanliness": 18.0,
+        "mechanical": 42.0,
+        "surface": 55.0
+      },
+      "day": 1,
+      "disclosure": "LIKELY",
+      "grandReserve": false,
+      "listingUid": "case_observatory_instrument",
+      "provenanceKnown": true,
+      "publicAppraisal": 300,
+      "reportedConfidence": 0.78,
+      "reserve": 1,
+      "reserveRatio": 0.0033,
+      "specId": "artifact_011",
+      "stage": 1,
+      "starting": 1,
+      "startingRatio": 0.0033,
+      "substantiation": "STRONG"
+    },
+    "grandReserve": false,
+    "publicFingerprint": "AUC-851774955",
+    "receipt": {
+      "bids": [
+        {
+          "amount": 13,
+          "bidderId": "bidder_04"
+        },
+        {
+          "amount": 25,
+          "bidderId": "bidder_05"
+        },
+        {
+          "amount": 38,
+          "bidderId": "bidder_06"
+        },
+        {
+          "amount": 51,
+          "bidderId": "bidder_07"
+        },
+        {
+          "amount": 64,
+          "bidderId": "bidder_08"
+        },
+        {
+          "amount": 78,
+          "bidderId": "bidder_09"
+        },
+        {
+          "amount": 93,
+          "bidderId": "bidder_04"
+        },
+        {
+          "amount": 108,
+          "bidderId": "bidder_05"
+        },
+        {
+          "amount": 124,
+          "bidderId": "bidder_06"
+        },
+        {
+          "amount": 140,
+          "bidderId": "bidder_07"
+        },
+        {
+          "amount": 157,
+          "bidderId": "bidder_08"
+        },
+        {
+          "amount": 175,
+          "bidderId": "bidder_04"
+        },
+        {
+          "amount": 193,
+          "bidderId": "bidder_08"
+        },
+        {
+          "amount": 212,
+          "bidderId": "bidder_04"
+        }
+      ],
+      "dropouts": [
+        {
+          "bidderId": "bidder_09",
+          "reason": "VALUE"
+        },
+        {
+          "bidderId": "bidder_05",
+          "reason": "VALUE"
+        },
+        {
+          "bidderId": "bidder_06",
+          "reason": "VALUE"
+        },
+        {
+          "bidderId": "bidder_07",
+          "reason": "VALUE"
+        },
+        {
+          "bidderId": "bidder_08",
+          "reason": "VALUE"
+        }
+      ],
+      "fee": 25,
+      "hammer": 212,
+      "net": 187,
+      "opening": 1,
+      "participants": [
+        {
+          "id": "bidder_04"
+        },
+        {
+          "id": "bidder_05"
+        },
+        {
+          "id": "bidder_06"
+        },
+        {
+          "id": "bidder_07"
+        },
+        {
+          "id": "bidder_08"
+        },
+        {
+          "id": "bidder_09"
+        }
+      ],
+      "publicFingerprint": "AUC-851774955",
+      "reasonTags": [
+        {
+          "category": "PROVENANCE",
+          "code": "PROVENANCE_STRONG",
+          "polarity": "POSITIVE"
+        },
+        {
+          "category": "DISCLOSURE",
+          "code": "DISCLOSURE_CLEAR",
+          "polarity": "POSITIVE"
+        }
+      ],
+      "reserve": 1,
+      "reserve_met": true,
+      "sale_status": "SOLD",
+      "transactionId": "auction_1_579458528_10",
+      "winnerId": "bidder_04"
+    },
+    "result": {
+      "bids": [
+        {
+          "amount": 13,
+          "bidder": "Interior Decorator",
+          "bidderId": "bidder_04",
+          "budget": 1040,
+          "round": 0
+        },
+        {
+          "amount": 25,
+          "bidder": "Mechanical Enthusiast",
+          "bidderId": "bidder_05",
+          "budget": 1170,
+          "round": 0
+        },
+        {
+          "amount": 38,
+          "bidder": "Speculator",
+          "bidderId": "bidder_06",
+          "budget": 1300,
+          "round": 0
+        },
+        {
+          "amount": 51,
+          "bidder": "Historian",
+          "bidderId": "bidder_07",
+          "budget": 1430,
+          "round": 0
+        },
+        {
+          "amount": 64,
+          "bidder": "Restoration Collector",
+          "bidderId": "bidder_08",
+          "budget": 1560,
+          "round": 0
+        },
+        {
+          "amount": 78,
+          "bidder": "Archive Curator",
+          "bidderId": "bidder_09",
+          "budget": 1690,
+          "round": 0
+        },
+        {
+          "amount": 93,
+          "bidder": "Interior Decorator",
+          "bidderId": "bidder_04",
+          "budget": 1040,
+          "round": 1
+        },
+        {
+          "amount": 108,
+          "bidder": "Mechanical Enthusiast",
+          "bidderId": "bidder_05",
+          "budget": 1170,
+          "round": 1
+        },
+        {
+          "amount": 124,
+          "bidder": "Speculator",
+          "bidderId": "bidder_06",
+          "budget": 1300,
+          "round": 1
+        },
+        {
+          "amount": 140,
+          "bidder": "Historian",
+          "bidderId": "bidder_07",
+          "budget": 1430,
+          "round": 1
+        },
+        {
+          "amount": 157,
+          "bidder": "Restoration Collector",
+          "bidderId": "bidder_08",
+          "budget": 1560,
+          "round": 1
+        },
+        {
+          "amount": 175,
+          "bidder": "Interior Decorator",
+          "bidderId": "bidder_04",
+          "budget": 1040,
+          "round": 2
+        },
+        {
+          "amount": 193,
+          "bidder": "Restoration Collector",
+          "bidderId": "bidder_08",
+          "budget": 1560,
+          "round": 2
+        },
+        {
+          "amount": 212,
+          "bidder": "Interior Decorator",
+          "bidderId": "bidder_04",
+          "budget": 1040,
+          "round": 3
+        }
+      ],
+      "dropouts": [
+        {
+          "behavior": "budget_or_value",
+          "bidderId": "bidder_09",
+          "reason": "VALUE",
+          "reasonTags": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "round": 1
+        },
+        {
+          "behavior": "budget_or_value",
+          "bidderId": "bidder_05",
+          "reason": "VALUE",
+          "reasonTags": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "round": 2
+        },
+        {
+          "behavior": "budget_or_value",
+          "bidderId": "bidder_06",
+          "reason": "VALUE",
+          "reasonTags": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "round": 2
+        },
+        {
+          "behavior": "budget_or_value",
+          "bidderId": "bidder_07",
+          "reason": "VALUE",
+          "reasonTags": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "round": 2
+        },
+        {
+          "behavior": "budget_or_value",
+          "bidderId": "bidder_08",
+          "reason": "VALUE",
+          "reasonTags": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "round": 3
+        }
+      ],
+      "fee": 25,
+      "hammer": 212,
+      "net": 187,
+      "opening": 1,
+      "participants": [
+        {
+          "aggression": 0.74,
+          "bidCount": 4,
+          "budget": 1040,
+          "dropoutBehavior": "budget_or_value",
+          "finalAction": "WON",
+          "id": "bidder_04",
+          "maxBid": 228,
+          "name": "Interior Decorator",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ]
+        },
+        {
+          "aggression": 0.82,
+          "bidCount": 2,
+          "budget": 1170,
+          "dropoutBehavior": "budget_or_value",
+          "finalAction": "BID",
+          "id": "bidder_05",
+          "maxBid": 158,
+          "name": "Mechanical Enthusiast",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ]
+        },
+        {
+          "aggression": 0.9,
+          "bidCount": 2,
+          "budget": 1300,
+          "dropoutBehavior": "budget_or_value",
+          "finalAction": "BID",
+          "id": "bidder_06",
+          "maxBid": 169,
+          "name": "Speculator",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ]
+        },
+        {
+          "aggression": 0.5,
+          "bidCount": 2,
+          "budget": 1430,
+          "dropoutBehavior": "budget_or_value",
+          "finalAction": "BID",
+          "id": "bidder_07",
+          "maxBid": 162,
+          "name": "Historian",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ]
+        },
+        {
+          "aggression": 0.58,
+          "bidCount": 3,
+          "budget": 1560,
+          "dropoutBehavior": "budget_or_value",
+          "finalAction": "BID",
+          "id": "bidder_08",
+          "maxBid": 220,
+          "name": "Restoration Collector",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ]
+        },
+        {
+          "aggression": 0.66,
+          "bidCount": 1,
+          "budget": 1690,
+          "dropoutBehavior": "budget_or_value",
+          "finalAction": "BID",
+          "id": "bidder_09",
+          "maxBid": 137,
+          "name": "Archive Curator",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ]
+        }
+      ],
+      "publicFingerprint": "AUC-851774955",
+      "reasonTags": [
+        {
+          "category": "PROVENANCE",
+          "code": "PROVENANCE_STRONG",
+          "polarity": "POSITIVE"
+        },
+        {
+          "category": "DISCLOSURE",
+          "code": "DISCLOSURE_CLEAR",
+          "polarity": "POSITIVE"
+        }
+      ],
+      "reserve": 1,
+      "reservePressureFactor": 1.0,
+      "reserve_met": true,
+      "sale_status": "SOLD",
+      "stageDifficulty": 1.0,
+      "transactionId": "auction_1_579458528_10",
+      "winnerId": "bidder_04"
+    },
+    "schemaVersion": 1,
+    "status": "COMMITTED",
+    "transactionId": "auction_1_579458528_10"
+  },
+  "reputation": 25,
+  "rngState": -3378380881708314866,
+  "rngStateExact": "-3378380881708314866",
+  "saveVersion": 6,
+  "selectedTool": "reference_database",
+  "stageRunState": {
+    "caseIds": [
+      "prologue_clock",
+      "silent_radio",
+      "perfect_fake"
+    ],
+    "completedAtDay": 0,
+    "difficultyMultiplier": 1.0,
+    "grandReserveRequired": false,
+    "lastPerformance": {},
+    "score": 0.0,
+    "stageClearAcknowledged": false,
+    "stageId": 1,
+    "stageReplayFeedbackSnapshot": {},
+    "stageReplayTelemetrySnapshot": {},
+    "startedAtDay": 0,
+    "status": "NOT_STARTED",
+    "telemetry": {
+      "artifactSalesCount": 0,
+      "auctionCount": 0,
+      "budgetBasis": 1200,
+      "investigationActions": 0,
+      "investigationRiskActions": 0,
+      "investigationRiskWeightSum": 0.0,
+      "listingStrategyCounts": {
+        "AUTO_GRAND_RESERVE": 0,
+        "BALANCED": 0,
+        "CUSTOM": 0,
+        "FAST": 0,
+        "HIGH": 0,
+        "LEGACY_UNKNOWN": 0
+      },
+      "noSaleCount": 0,
+      "relistCount": 0,
+      "repairActions": 0,
+      "repairCostAccrued": 0.0,
+      "repairToolUseCounts": {}
+    },
+    "telemetryAvailable": true,
+    "telemetrySeenIds": [],
+    "tutorialCompletedSteps": []
+  },
+  "statistics": {
+    "authentication_attempts": 12,
+    "authentication_correct": 11,
+    "biggest_loss": -85,
+    "biggest_profit": 56,
+    "commissions": 0,
+    "days_operated": 1,
+    "discoveries": 62,
+    "forgeries_detected": 0,
+    "museum_acquisitions": 0,
+    "no_sales": 0,
+    "original_parts_preserved": 0,
+    "profit": -329,
+    "purchases": 0,
+    "restorations": 0,
+    "sales": 11,
+    "total_auction_revenue": 1845
+  },
+  "transactions": [
+    {
+      "amount": 108,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_0",
+      "instanceId": "artifact_001",
+      "item": "prologue_clock",
+      "moneyAfter": 1308,
+      "moneyBefore": 1200,
+      "type": "case_reward"
+    },
+    {
+      "amount": 22,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_prologue_clock_1",
+      "instanceId": "case_prologue_clock",
+      "item": "Aurelian Mechanical Clock A",
+      "moneyAfter": 1330,
+      "moneyBefore": 1308,
+      "type": "sale"
+    },
+    {
+      "amount": 36,
+      "cause": "mistaken",
+      "day": 1,
+      "id": "money_1_case_reward_2",
+      "instanceId": "artifact_004",
+      "item": "silent_radio",
+      "moneyAfter": 1366,
+      "moneyBefore": 1330,
+      "type": "case_reward"
+    },
+    {
+      "amount": 137,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_3",
+      "instanceId": "artifact_003",
+      "item": "perfect_fake",
+      "moneyAfter": 1503,
+      "moneyBefore": 1366,
+      "type": "case_reward"
+    },
+    {
+      "amount": 82,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_perfect_fake_4",
+      "instanceId": "case_perfect_fake",
+      "item": "Cindervale Film Camera C",
+      "moneyAfter": 1585,
+      "moneyBefore": 1503,
+      "type": "sale"
+    },
+    {
+      "amount": 151,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_5",
+      "instanceId": "artifact_005",
+      "item": "leave_patina",
+      "moneyAfter": 1736,
+      "moneyBefore": 1585,
+      "type": "case_reward"
+    },
+    {
+      "amount": 56,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_leave_patina_6",
+      "instanceId": "case_leave_patina",
+      "item": "Eldermere Music Box E",
+      "moneyAfter": 1792,
+      "moneyBefore": 1736,
+      "type": "sale"
+    },
+    {
+      "amount": 166,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_7",
+      "instanceId": "artifact_011",
+      "item": "estate_compass",
+      "moneyAfter": 1958,
+      "moneyBefore": 1792,
+      "type": "case_reward"
+    },
+    {
+      "amount": 189,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_estate_compass_8",
+      "instanceId": "case_estate_compass",
+      "item": "Kestrel Compass K",
+      "moneyAfter": 2147,
+      "moneyBefore": 1958,
+      "type": "sale"
+    },
+    {
+      "amount": 180,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_9",
+      "instanceId": "artifact_002",
+      "item": "pawn_watch",
+      "moneyAfter": 2327,
+      "moneyBefore": 2147,
+      "type": "case_reward"
+    },
+    {
+      "amount": 57,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_pawn_watch_10",
+      "instanceId": "case_pawn_watch",
+      "item": "Brasswell Pocket Watch B",
+      "moneyAfter": 2384,
+      "moneyBefore": 2327,
+      "type": "sale"
+    },
+    {
+      "amount": 194,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_11",
+      "instanceId": "artifact_007",
+      "item": "garage_lamp",
+      "moneyAfter": 2578,
+      "moneyBefore": 2384,
+      "type": "case_reward"
+    },
+    {
+      "amount": 110,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_garage_lamp_12",
+      "instanceId": "case_garage_lamp",
+      "item": "Gildspire Desk Lamp G",
+      "moneyAfter": 2688,
+      "moneyBefore": 2578,
+      "type": "sale"
+    },
+    {
+      "amount": 209,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_13",
+      "instanceId": "artifact_015",
+      "item": "telephone_trace",
+      "moneyAfter": 2897,
+      "moneyBefore": 2688,
+      "type": "case_reward"
+    },
+    {
+      "amount": 222,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_telephone_trace_14",
+      "instanceId": "case_telephone_trace",
+      "item": "Orchard Table Telephone O",
+      "moneyAfter": 3119,
+      "moneyBefore": 2897,
+      "type": "sale"
+    },
+    {
+      "amount": 223,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_15",
+      "instanceId": "artifact_003",
+      "item": "early_camera",
+      "moneyAfter": 3342,
+      "moneyBefore": 3119,
+      "type": "case_reward"
+    },
+    {
+      "amount": 96,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_early_camera_16",
+      "instanceId": "case_early_camera",
+      "item": "Cindervale Film Camera C",
+      "moneyAfter": 3438,
+      "moneyBefore": 3342,
+      "type": "sale"
+    },
+    {
+      "amount": 198,
+      "cause": "credible",
+      "day": 1,
+      "id": "money_1_case_reward_17",
+      "instanceId": "artifact_016",
+      "item": "false_invoice",
+      "moneyAfter": 3636,
+      "moneyBefore": 3438,
+      "type": "case_reward"
+    },
+    {
+      "amount": 387,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_false_invoice_18",
+      "instanceId": "case_false_invoice",
+      "item": "Peregrine Jewelry Box P",
+      "moneyAfter": 4023,
+      "moneyBefore": 3636,
+      "type": "sale"
+    },
+    {
+      "amount": 252,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_19",
+      "instanceId": "artifact_018",
+      "item": "mislabelled_collection",
+      "moneyAfter": 4275,
+      "moneyBefore": 4023,
+      "type": "case_reward"
+    },
+    {
+      "amount": 221,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_mislabelled_collection_20",
+      "instanceId": "case_mislabelled_collection",
+      "item": "Rook Slide Projector R",
+      "moneyAfter": 4496,
+      "moneyBefore": 4275,
+      "type": "sale"
+    },
+    {
+      "amount": 266,
+      "cause": "masterful",
+      "day": 1,
+      "id": "money_1_case_reward_21",
+      "instanceId": "artifact_011",
+      "item": "observatory_instrument",
+      "moneyAfter": 4762,
+      "moneyBefore": 4496,
+      "type": "case_reward"
+    },
+    {
+      "amount": 187,
+      "cause": "auction",
+      "day": 1,
+      "id": "sale_1_case_observatory_instrument_22",
+      "instanceId": "case_observatory_instrument",
+      "item": "Kestrel Compass K",
+      "moneyAfter": 4949,
+      "moneyBefore": 4762,
+      "type": "sale"
+    }
+  ],
+  "upgrades": []
+}

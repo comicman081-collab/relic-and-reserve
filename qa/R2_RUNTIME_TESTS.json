@@ -1,0 +1,38 @@
+{
+  "data_exists": {
+    "ArtifactSpecs": 60,
+    "Makers": 20,
+    "Tools": 12,
+    "Bidders": 12,
+    "Events": 25,
+    "Upgrades": 25
+  },
+  "asset_exists": {
+    "artifact_mesh_files": 27,
+    "hero_meshes": 8,
+    "workshop_prop_files": 24,
+    "materials": 15,
+    "icons": 40,
+    "sfx": 20
+  },
+  "runtime_connected": {
+    "ArtifactSpecs": 60,
+    "artifact_model_paths": 60,
+    "bidder_profiles": 12,
+    "events": 25,
+    "upgrades": 10,
+    "workshop_props": 24,
+    "materials": 15,
+    "audio": 12,
+    "localization": 2
+  },
+  "automated_tested": {
+    "P0_assertions_executed": 40,
+    "P0_passed": 40,
+    "P0_failed": 0
+  },
+  "visually_verified": {
+    "screenshots_opened": 11,
+    "visual_findings": "qa/R2_VISUAL_FINDINGS.md"
+  }
+}

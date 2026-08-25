@@ -1,0 +1,190 @@
+{
+  "executed": 10,
+  "expectedCount": 10,
+  "failed": 0,
+  "passed": 10,
+  "skipped": 0,
+  "suite": "R3 Stage 5B Visual Identity",
+  "tests": [
+    {
+      "evidence": {
+        "catalogSize": 80,
+        "failures": [],
+        "topKeys": [
+          "detail",
+          "materialPath",
+          "meshPath",
+          "metallic",
+          "palette",
+          "recipe",
+          "roughness",
+          "scale",
+          "specId",
+          "trim"
+        ]
+      },
+      "executed": true,
+      "id": "S5B-RENDER-DTO-SHAPE-01",
+      "name": "All eighty ArtifactSpecs expose the exact canonical public render DTO whitelist",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "freshDtoRestored": true,
+        "rawRegistryMutation": false
+      },
+      "executed": true,
+      "id": "S5B-RENDER-DTO-COPY-02",
+      "name": "Returned render DTOs are deep copies whose nested mutation cannot alter a later DTO or raw registries",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": [],
+        "specsChecked": 80
+      },
+      "executed": true,
+      "id": "S5B-RENDER-DTO-PRIVACY-03",
+      "name": "The render DTO surface contains no private truth, bidder, auction, reserve, price, rarity, clue or fault token",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "allowlist": [
+          "ASTRONOMICAL_REGULATOR",
+          "CHRONOMETER",
+          "COMPOSITE",
+          "DEFAULT",
+          "GAUGE",
+          "MICROSCOPE",
+          "MUSIC_BOX",
+          "OPTIC",
+          "SEXTANT",
+          "SIGNAL_LANTERN",
+          "SPECTROSCOPE",
+          "TYPEWRITER_CIPHER",
+          "WIRE_RECORDER"
+        ],
+        "counts": {
+          "DEFAULT": 78,
+          "SEXTANT": 1,
+          "TYPEWRITER_CIPHER": 1
+        },
+        "failures": []
+      },
+      "executed": true,
+      "id": "S5B-RENDER-RECIPE-CATALOG-04",
+      "name": "The spec-only catalog resolves to DEFAULT except the two Stage 5B recipes while the global allowlist also reserves later pair-keyed recipes",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "childExit": 0,
+        "emptyDto": true,
+        "rejectionDiagnostic": true
+      },
+      "executed": true,
+      "id": "S5B-RENDER-RECIPE-FAIL-CLOSED-05",
+      "name": "An unknown render recipe remains unknown and returns no DTO instead of silently becoming DEFAULT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "detail": {
+          "motif": "paired_glyphs",
+          "placement": "third_key_row",
+          "wearMask": "filed_stops"
+        },
+        "filedStops": 2,
+        "genericTrim": 0,
+        "keyline": 1,
+        "pairedGlyphs": 2,
+        "thirdRowKeys": 9
+      },
+      "executed": true,
+      "id": "S5B-TYPEWRITER-CIPHER-06",
+      "name": "Artifact 069 preserves its nested cipher metadata and visibly renders the keyline, nine-key third row, paired glyphs and filed stops",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "arcSegments": 11,
+        "dtoPath": "res://assets/artifacts/sextant.obj",
+        "genericTrim": 0,
+        "liveMeshPath": "res://assets/artifacts/sextant.obj",
+        "loadableMesh": true,
+        "mirror": 1,
+        "vernier": 1,
+        "wearSector": 1
+      },
+      "executed": true,
+      "id": "S5B-SEXTANT-IDENTITY-07",
+      "name": "Artifact 070 loads the sextant mesh and visible sextant-only recipe nodes without a compass mesh or generic VariantTrim",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": [],
+        "registryPaths": {
+          "lena_falk": "res://assets/portraits/lena_falk_concerned.svg",
+          "victor_hale": "res://assets/portraits/victor_hale_neutral.svg"
+        }
+      },
+      "executed": true,
+      "id": "S5B-PORTRAIT-SVG-V2-08",
+      "name": "Victor and Lena resolve to the approved local SVG V2 busts with two complete large-eye marker systems and expression anchors",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": [
+          {
+            "artifactCreated": true,
+            "case": "collector_promise",
+            "discoveredCount": 5,
+            "hasTexture": true,
+            "minimumSize": [
+              96.0,
+              120.0
+            ],
+            "npcPath": "res://assets/portraits/victor_hale_neutral.svg",
+            "npcRow": true,
+            "passed": true,
+            "portraitCount": 1
+          },
+          {
+            "artifactCreated": true,
+            "case": "shadow_camera",
+            "discoveredCount": 6,
+            "hasTexture": true,
+            "minimumSize": [
+              96.0,
+              120.0
+            ],
+            "npcPath": "res://assets/portraits/lena_falk_concerned.svg",
+            "npcRow": true,
+            "passed": true,
+            "portraitCount": 1
+          }
+        ],
+        "failures": 0
+      },
+      "executed": true,
+      "id": "S5B-PORTRAIT-DOSSIER-09",
+      "name": "Victor and Lena each render as a textured 96 by 120 CaseNpcSourcePortrait in their actual unlocked dossier detail",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifactType": "String",
+        "equal": true,
+        "registryType": "String",
+        "schemaChangeAttempted": false
+      },
+      "executed": true,
+      "id": "S5B-VISUAL-SIGNATURE-CONTAINMENT-10",
+      "name": "The contained legacy visual_signature contract remains String and a new artifact instance stores that same String",
+      "passed": true
+    }
+  ]
+}

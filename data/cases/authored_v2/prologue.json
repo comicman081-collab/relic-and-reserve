@@ -1,0 +1,485 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-golden-prologue",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "prologue_clock",
+  "act_id": "PROLOGUE",
+  "title": {
+    "en": "The Closed Workshop",
+    "ko": "닫힌 공방"
+  },
+  "briefing": {
+    "en": "Mara Venn has opened the workshop that belonged to her late mentor. A mantel clock was left on the bench beside a sale tag claiming it had never been opened. One mismatched screw and a folded service card challenge that claim. Establish what is original, what was changed, and what must be disclosed before the clock is offered for sale.",
+    "ko": "마라 벤은 세상을 떠난 스승의 공방을 다시 열었다. 작업대에는 한 번도 열어 본 적이 없다는 판매표가 붙은 탁상시계가 남아 있다. 그러나 서로 다른 나사 하나와 접힌 수리표가 그 주장을 흔든다. 시계의 어떤 부분이 원형이고 무엇이 바뀌었는지, 판매 전에 무엇을 밝혀야 하는지 확인하라."
+  },
+  "central_question": {
+    "en": "Is the clock an untouched factory original, an authentic clock with a period repair, or a later rebuild?",
+    "ko": "이 시계는 출고 당시 그대로인 진품인가, 당대 수리를 거친 진품인가, 아니면 후대에 다시 조립한 물건인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the campaign desk.",
+      "ko": "캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "polish_rear_plate_before_capture",
+        "source_ref": "src.prologue.artifact.backplate_screws",
+        "warning": {
+          "en": "Polishing the rear plate before recording it can erase the oxidation boundary beneath the replacement screw.",
+          "ko": "기록하기 전에 후면판을 연마하면 교체 나사 아래의 산화 경계가 사라질 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "An unsupported conclusion is reviewed with Mara instead of ending the campaign, but it cannot earn a masterful result.",
+        "ko": "근거가 부족한 결론은 캠페인을 끝내지 않고 마라와 함께 재검토하지만, 최고 판정은 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_001",
+    "legacy_story_artifact_id": "story_artifact_01",
+    "display_name": {
+      "en": "Venn Workshop Mantel Clock IV-417",
+      "ko": "벤 공방 탁상시계 IV-417"
+    },
+    "authoring_truth_hypothesis_id": "hyp.period_repair",
+    "player_prompt": {
+      "en": "Record physical observations before cleaning or disassembly changes the object.",
+      "ko": "세척이나 분해로 물건이 달라지기 전에 물리적 관찰을 기록하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.untouched_original",
+      "label": {
+        "en": "Untouched factory original",
+        "ko": "출고 상태 그대로인 진품"
+      },
+      "claim": {
+        "en": "The clock and all visible fasteners remain exactly as they left the Arclight factory in 1931.",
+        "ko": "시계와 눈에 보이는 모든 체결 부품은 1931년 아크라이트 공장에서 출고된 상태 그대로다."
+      }
+    },
+    {
+      "id": "hyp.period_repair",
+      "label": {
+        "en": "Authentic with a period repair",
+        "ko": "당대 수리를 거친 진품"
+      },
+      "claim": {
+        "en": "The main clock is authentic, but a documented repair replaced one rear-plate screw several years after manufacture.",
+        "ko": "시계 본체는 진품이지만 제작 후 몇 년 뒤 기록된 수리 과정에서 후면판 나사 하나가 교체되었다."
+      }
+    },
+    {
+      "id": "hyp.later_rebuild",
+      "label": {
+        "en": "Later rebuild",
+        "ko": "후대 재조립품"
+      },
+      "claim": {
+        "en": "The clock was assembled substantially later from unrelated or modern parts and should not be presented as an authentic period object.",
+        "ko": "서로 무관하거나 현대적인 부품을 훨씬 후대에 조립한 물건이므로 당대 진품으로 소개해서는 안 된다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.prologue.artifact.backplate_screws",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_001",
+      "label": {
+        "en": "Rear-plate screw mismatch",
+        "ko": "후면판 나사의 불일치"
+      },
+      "text": {
+        "en": "Beneath the dust, three rear-plate screws are brass. The upper-right screw is blued steel and its slot was filed by hand. A dark oxidation ring continues beneath its head, showing that it was installed long ago rather than during a recent rebuild.",
+        "ko": "먼지 아래에서 후면판 나사 세 개는 황동으로 확인된다. 오른쪽 위 나사만 청색 열처리 강철이며 홈은 손으로 다듬었다. 나사 머리 아래까지 짙은 산화 고리가 이어져 있어 최근 재조립 때가 아니라 오래전에 장착되었음을 보여 준다."
+      },
+      "unlock": {
+        "action": "inspect",
+        "target": "rear_plate",
+        "requires": []
+      },
+      "risk": {
+        "destroyed_by": [
+          "polish_rear_plate_before_capture"
+        ],
+        "player_warning": {
+          "en": "Photograph and record the oxidation boundary before polishing.",
+          "ko": "연마하기 전에 산화 경계를 촬영하고 기록하라."
+        }
+      },
+      "independence": {
+        "group": "physical_fastener_evidence",
+        "depends_on": []
+      },
+      "citation_id": "cite.prologue.artifact.backplate_screws"
+    },
+    {
+      "source_ref": "src.prologue.artifact.bridge_stamp",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_001",
+      "label": {
+        "en": "Escapement bridge stamp",
+        "ko": "탈진기 브리지 각인"
+      },
+      "text": {
+        "en": "The maker stamp and serial IV-417 are impressed to the same depth beneath an unbroken aged lacquer layer. The bridge geometry matches the screw positions shown in the factory plate drawing.",
+        "ko": "제작사 각인과 일련번호 IV-417은 끊기지 않은 오래된 래커층 아래에 같은 깊이로 찍혀 있다. 브리지의 형상도 공장 도면에 표시된 나사 위치와 일치한다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "mechanism_cover",
+        "requires": [
+          "precision_screwdriver"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Use the precision screwdriver to avoid marking the screw slots.",
+          "ko": "나사 홈에 새 흔적을 남기지 않도록 정밀 드라이버를 사용하라."
+        }
+      },
+      "independence": {
+        "group": "physical_manufacture_evidence",
+        "depends_on": []
+      },
+      "citation_id": "cite.prologue.artifact.bridge_stamp"
+    },
+    {
+      "source_ref": "src.prologue.document.service_card",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_01",
+      "document_id": "doc.prologue.service_card_1937",
+      "label": {
+        "en": "Folded service card dated 14 October 1937",
+        "ko": "1937년 10월 14일자 접힌 수리표"
+      },
+      "text": {
+        "en": "Venn & Daughters Service Bench — Job 226. Arclight mantel clock IV-417. Replaced fractured upper-right brass back screw with blued workshop steel; cleaned mainspring without replacing it. Customer declined cosmetic polishing. Returned with original surface retained.",
+        "ko": "벤 앤드 도터스 수리대 — 작업 226. 아크라이트 탁상시계 IV-417. 파손된 오른쪽 위 황동 후면 나사를 공방의 청색 강철 나사로 교체함. 태엽은 교체하지 않고 세척함. 고객이 외관 연마를 거절하여 원래 표면을 보존한 채 반환함."
+      },
+      "unlock": {
+        "action": "search",
+        "target": "bench_drawer",
+        "requires": [
+          "src.prologue.artifact.backplate_screws"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "A document is a claim; compare its serial and repair detail with the object.",
+          "ko": "문서는 하나의 주장일 뿐이다. 일련번호와 수리 내용을 실물과 대조하라."
+        }
+      },
+      "independence": {
+        "group": "workshop_documentary_evidence",
+        "depends_on": []
+      },
+      "citation_id": "cite.prologue.document.service_card"
+    },
+    {
+      "source_ref": "src.prologue.npc.mara_statement",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "mara_venn",
+      "npc_id": "mara_venn",
+      "expression": "concerned",
+      "label": {
+        "en": "Mara Venn's recollection",
+        "ko": "마라 벤의 기억"
+      },
+      "text": {
+        "en": "My mentor kept damaged original screws in a red parts envelope, but I never saw this clock serviced. She used blued steel when a matching brass screw could not be sourced. Treat my recollection as context, not proof.",
+        "ko": "스승님은 손상된 원래 나사를 붉은 부품 봉투에 보관했어요. 하지만 이 시계를 수리하는 모습은 제가 직접 보지 못했습니다. 맞는 황동 나사를 구하지 못하면 청색 강철을 쓰셨죠. 제 기억은 정황일 뿐 증거 그 자체로 보지는 마세요."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "mara_venn",
+        "requires": [
+          "src.prologue.document.service_card"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Mara openly marks the limit of her firsthand knowledge.",
+          "ko": "마라는 자신이 직접 아는 범위의 한계를 분명히 밝힌다."
+        }
+      },
+      "independence": {
+        "group": "oral_history_context",
+        "depends_on": []
+      },
+      "citation_id": "cite.prologue.npc.mara_statement"
+    },
+    {
+      "source_ref": "src.prologue.reference.factory_plate",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_01",
+      "reference_id": "ref.arclight.plate_1931_iv_series",
+      "label": {
+        "en": "Arclight IV-series factory plate, 1931 edition",
+        "ko": "아크라이트 IV 시리즈 공장 도면, 1931년판"
+      },
+      "text": {
+        "en": "The fictional 1931 factory plate specifies four matching brass rear screws and shows the IV-series escapement bridge used for serial block IV-401 through IV-460. It does not list a blued-steel factory variant.",
+        "ko": "가상의 1931년 공장 도면은 서로 같은 황동 후면 나사 네 개를 지정하고, 일련번호 IV-401부터 IV-460까지 사용한 IV 시리즈 탈진기 브리지를 보여 준다. 청색 강철 나사를 사용한 출고형은 기재되어 있지 않다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": [
+          "src.prologue.artifact.bridge_stamp"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "The reference establishes the expected factory configuration, not the history of this individual clock.",
+          "ko": "이 참고자료는 공장 출고 사양을 보여 줄 뿐, 이 개별 시계의 이력을 직접 증명하지는 않는다."
+        }
+      },
+      "independence": {
+        "group": "independent_factory_reference",
+        "depends_on": []
+      },
+      "citation_id": "cite.prologue.reference.factory_plate"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.prologue.artifact.backplate_screws",
+      "source_ref": "src.prologue.artifact.backplate_screws",
+      "label": {
+        "en": "Object record: rear plate, upper-right fastener",
+        "ko": "실물 기록: 후면판 오른쪽 위 체결부"
+      },
+      "locator": {
+        "en": "Inspection photograph A-1 and oxidation sketch",
+        "ko": "검사 사진 A-1 및 산화 경계 스케치"
+      }
+    },
+    {
+      "id": "cite.prologue.artifact.bridge_stamp",
+      "source_ref": "src.prologue.artifact.bridge_stamp",
+      "label": {
+        "en": "Object record: escapement bridge IV-417",
+        "ko": "실물 기록: 탈진기 브리지 IV-417"
+      },
+      "locator": {
+        "en": "Disassembly photograph A-2",
+        "ko": "분해 사진 A-2"
+      }
+    },
+    {
+      "id": "cite.prologue.document.service_card",
+      "source_ref": "src.prologue.document.service_card",
+      "label": {
+        "en": "Venn & Daughters service card, Job 226",
+        "ko": "벤 앤드 도터스 수리표, 작업 226"
+      },
+      "locator": {
+        "en": "Bench drawer document D-1, lines 1–4",
+        "ko": "작업대 서랍 문서 D-1, 1~4행"
+      }
+    },
+    {
+      "id": "cite.prologue.npc.mara_statement",
+      "source_ref": "src.prologue.npc.mara_statement",
+      "label": {
+        "en": "Interview with Mara Venn",
+        "ko": "마라 벤 면담"
+      },
+      "locator": {
+        "en": "Case interview N-1",
+        "ko": "사건 면담 N-1"
+      }
+    },
+    {
+      "id": "cite.prologue.reference.factory_plate",
+      "source_ref": "src.prologue.reference.factory_plate",
+      "label": {
+        "en": "Arclight IV-series factory plate",
+        "ko": "아크라이트 IV 시리즈 공장 도면"
+      },
+      "locator": {
+        "en": "Fictional reference archive R-1, figure 4",
+        "ko": "가상 참고자료 보관함 R-1, 도면 4"
+      }
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "link.backplate_refutes_untouched",
+      "source_ref": "src.prologue.artifact.backplate_screws",
+      "hypothesis_id": "hyp.untouched_original",
+      "relation": "REFUTE",
+      "weight": 0.9,
+      "independence_group": "physical_fastener_evidence",
+      "citation_id": "cite.prologue.artifact.backplate_screws"
+    },
+    {
+      "id": "link.backplate_supports_period_repair",
+      "source_ref": "src.prologue.artifact.backplate_screws",
+      "hypothesis_id": "hyp.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.75,
+      "independence_group": "physical_fastener_evidence",
+      "citation_id": "cite.prologue.artifact.backplate_screws"
+    },
+    {
+      "id": "link.backplate_refutes_later_rebuild",
+      "source_ref": "src.prologue.artifact.backplate_screws",
+      "hypothesis_id": "hyp.later_rebuild",
+      "relation": "REFUTE",
+      "weight": 0.55,
+      "independence_group": "physical_fastener_evidence",
+      "citation_id": "cite.prologue.artifact.backplate_screws"
+    },
+    {
+      "id": "link.bridge_supports_untouched_body",
+      "source_ref": "src.prologue.artifact.bridge_stamp",
+      "hypothesis_id": "hyp.untouched_original",
+      "relation": "SUPPORT",
+      "weight": 0.45,
+      "independence_group": "physical_manufacture_evidence",
+      "citation_id": "cite.prologue.artifact.bridge_stamp"
+    },
+    {
+      "id": "link.bridge_supports_period_repair",
+      "source_ref": "src.prologue.artifact.bridge_stamp",
+      "hypothesis_id": "hyp.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.7,
+      "independence_group": "physical_manufacture_evidence",
+      "citation_id": "cite.prologue.artifact.bridge_stamp"
+    },
+    {
+      "id": "link.bridge_refutes_later_rebuild",
+      "source_ref": "src.prologue.artifact.bridge_stamp",
+      "hypothesis_id": "hyp.later_rebuild",
+      "relation": "REFUTE",
+      "weight": 0.85,
+      "independence_group": "physical_manufacture_evidence",
+      "citation_id": "cite.prologue.artifact.bridge_stamp"
+    },
+    {
+      "id": "link.service_card_refutes_untouched",
+      "source_ref": "src.prologue.document.service_card",
+      "hypothesis_id": "hyp.untouched_original",
+      "relation": "REFUTE",
+      "weight": 0.95,
+      "independence_group": "workshop_documentary_evidence",
+      "citation_id": "cite.prologue.document.service_card"
+    },
+    {
+      "id": "link.service_card_supports_period_repair",
+      "source_ref": "src.prologue.document.service_card",
+      "hypothesis_id": "hyp.period_repair",
+      "relation": "SUPPORT",
+      "weight": 1.0,
+      "independence_group": "workshop_documentary_evidence",
+      "citation_id": "cite.prologue.document.service_card"
+    },
+    {
+      "id": "link.service_card_refutes_later_rebuild",
+      "source_ref": "src.prologue.document.service_card",
+      "hypothesis_id": "hyp.later_rebuild",
+      "relation": "REFUTE",
+      "weight": 0.7,
+      "independence_group": "workshop_documentary_evidence",
+      "citation_id": "cite.prologue.document.service_card"
+    },
+    {
+      "id": "link.mara_supports_period_repair",
+      "source_ref": "src.prologue.npc.mara_statement",
+      "hypothesis_id": "hyp.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.35,
+      "independence_group": "oral_history_context",
+      "citation_id": "cite.prologue.npc.mara_statement"
+    },
+    {
+      "id": "link.factory_plate_refutes_untouched",
+      "source_ref": "src.prologue.reference.factory_plate",
+      "hypothesis_id": "hyp.untouched_original",
+      "relation": "REFUTE",
+      "weight": 0.75,
+      "independence_group": "independent_factory_reference",
+      "citation_id": "cite.prologue.reference.factory_plate"
+    },
+    {
+      "id": "link.factory_plate_supports_period_repair",
+      "source_ref": "src.prologue.reference.factory_plate",
+      "hypothesis_id": "hyp.period_repair",
+      "relation": "SUPPORT",
+      "weight": 0.65,
+      "independence_group": "independent_factory_reference",
+      "citation_id": "cite.prologue.reference.factory_plate"
+    },
+    {
+      "id": "link.factory_plate_refutes_later_rebuild",
+      "source_ref": "src.prologue.reference.factory_plate",
+      "hypothesis_id": "hyp.later_rebuild",
+      "relation": "REFUTE",
+      "weight": 0.55,
+      "independence_group": "independent_factory_reference",
+      "citation_id": "cite.prologue.reference.factory_plate"
+    }
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.period_repair",
+    "required_source_refs": [
+      "src.prologue.artifact.backplate_screws",
+      "src.prologue.document.service_card"
+    ],
+    "minimum_independent_groups": 3,
+    "minimum_citations": 3,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least three findings from three independent source groups. Your report must include both the rear-plate observation and the service card.",
+      "ko": "가설 하나를 선택하고 서로 독립된 세 출처 집단에서 최소 세 가지 근거를 인용하라. 보고서에는 후면판 관찰과 수리표를 반드시 포함해야 한다."
+    },
+    "outcome_rules": [
+      {
+        "outcome": "masterful",
+        "requires_correct_hypothesis": true,
+        "requires_all_required_sources": true,
+        "minimum_independent_groups": 3,
+        "minimum_citations": 3
+      },
+      {
+        "outcome": "credible",
+        "requires_correct_hypothesis": true,
+        "requires_all_required_sources": false,
+        "minimum_independent_groups": 2,
+        "minimum_citations": 2
+      },
+      {
+        "outcome": "mistaken",
+        "requires_correct_hypothesis": false,
+        "minimum_citations": 2
+      },
+      {
+        "outcome": "reviewed_with_mentor",
+        "fallback": true
+      }
+    ]
+  }
+}

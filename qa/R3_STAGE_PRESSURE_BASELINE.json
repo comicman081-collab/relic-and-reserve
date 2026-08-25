@@ -1,0 +1,1322 @@
+{
+  "acceptance": {
+    "pairedAuctionControlUnchanged": true,
+    "riskSparsity": true,
+    "riskValuesAndOrdering": true,
+    "scopeIdentityAndExecution": true,
+    "toolRoutesAndIntersections": true
+  },
+  "acceptancePassed": true,
+  "auditedStages": [
+    1,
+    5,
+    10
+  ],
+  "diagnosticOnly": true,
+  "executed": 5,
+  "execution": {
+    "completed": true,
+    "errors": []
+  },
+  "failed": 0,
+  "gates": {
+    "atLeastTwoViableAuctionStrategiesEveryStage": true,
+    "noSharedOptimalToolAcrossIntroducedPairs": true,
+    "pairedAuctionControlsStable": true,
+    "riskProgressionStage10GtStage5GteStage1": true,
+    "stage10RiskGreaterThanStage5": true,
+    "stage5RiskGreaterThanOrEqualToStage1": true
+  },
+  "methodology": {
+    "auctionControl": "One fixed public artifact fixture and identical paired master-seed vector for FAST/BALANCED/HIGH and all audited stages; only stage difficulty and listing price ratios differ",
+    "gateFailuresDoNotFailExecution": true,
+    "pricePresetRatios": {
+      "BALANCED": {
+        "reserveRatio": 0.72,
+        "startingRatio": 0.6
+      },
+      "FAST": {
+        "reserveRatio": 0.6,
+        "startingRatio": 0.5
+      },
+      "HIGH": {
+        "reserveRatio": 0.82,
+        "startingRatio": 0.68
+      }
+    },
+    "riskMetric": "sum(investigation_risk_penalty(level, stage)) / evidence action count",
+    "riskWeights": {
+      "HIGH": 3.0,
+      "LOW": 1.0,
+      "NONE": 0.0
+    },
+    "toolConvergence": "A single allowed requiredTools id appears in both introduced ArtifactSpecs",
+    "viableStrategy": "At least one SOLD result in 64 deterministic paired trials"
+  },
+  "needsTuning": false,
+  "passed": 5,
+  "riskProgressionInputs": {
+    "stage1": 0.466667,
+    "stage10": 1.149037,
+    "stage5": 0.819248
+  },
+  "schemaVersion": 1,
+  "skipped": 0,
+  "stages": {
+    "1": {
+      "controlledAuction": {
+        "atLeastTwoViableStrategies": true,
+        "difficultyMultiplier": 1.0,
+        "fixture": {
+          "artifactSeed": 424242,
+          "artifactSpecId": "artifact_061",
+          "condition": {
+            "cleanliness": 78.0,
+            "mechanical": 78.0,
+            "surface": 78.0
+          },
+          "day": 4,
+          "disclosure": "LIKELY",
+          "grandReserve": false,
+          "provenanceKnown": true,
+          "publicAppraisal": 1741,
+          "reportedConfidence": 0.78,
+          "uniqueId": "stage_pressure_control_fixture"
+        },
+        "mixedOutcomeStrategies": [
+          "BALANCED",
+          "HIGH"
+        ],
+        "noSaleProbabilitySpread": 0.296875,
+        "pairedControlStable": true,
+        "pairedSeedPlan": {
+          "artifactSeed": 424242,
+          "masterSeedBase": 930001,
+          "masterSeedStride": 7919,
+          "sampleCount": 64
+        },
+        "strategies": {
+          "BALANCED": {
+            "hammer": {
+              "count": 64,
+              "max": 1866.0,
+              "mean": 1577.328125,
+              "min": 1158.0,
+              "p50": 1669.0,
+              "p90": 1839.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.489226,
+              "mean": 1.258841,
+              "min": 0.924182,
+              "p50": 1.332003,
+              "p90": 1.467678
+            },
+            "mixedOutcome": true,
+            "noSaleCount": 11,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 11
+            },
+            "noSaleProbability": 0.171875,
+            "noSaleShortfallRatio": {
+              "count": 11,
+              "max": 0.075818,
+              "mean": 0.054052,
+              "min": 0.027933,
+              "p50": 0.075818,
+              "p90": 0.075818
+            },
+            "reserveRatio": 0.72,
+            "soldCount": 53,
+            "soldProbability": 0.828125,
+            "startingRatio": 0.6,
+            "trials": 64,
+            "viable": true
+          },
+          "FAST": {
+            "hammer": {
+              "count": 64,
+              "max": 1901.0,
+              "mean": 1589.578125,
+              "min": 1130.0,
+              "p50": 1681.0,
+              "p90": 1819.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.820881,
+              "mean": 1.522584,
+              "min": 1.082375,
+              "p50": 1.610153,
+              "p90": 1.742337
+            },
+            "mixedOutcome": false,
+            "noSaleCount": 0,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 0
+            },
+            "noSaleProbability": 0.0,
+            "noSaleShortfallRatio": {
+              "count": 0,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p90": 0.0
+            },
+            "reserveRatio": 0.6,
+            "soldCount": 64,
+            "soldProbability": 1.0,
+            "startingRatio": 0.5,
+            "trials": 64,
+            "viable": true
+          },
+          "HIGH": {
+            "hammer": {
+              "count": 64,
+              "max": 1904.0,
+              "mean": 1576.625,
+              "min": 1245.0,
+              "p50": 1642.0,
+              "p90": 1814.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.334268,
+              "mean": 1.104853,
+              "min": 0.87246,
+              "p50": 1.150666,
+              "p90": 1.271198
+            },
+            "mixedOutcome": true,
+            "noSaleCount": 19,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 19
+            },
+            "noSaleProbability": 0.296875,
+            "noSaleShortfallRatio": {
+              "count": 19,
+              "max": 0.12754,
+              "mean": 0.098255,
+              "min": 0.047652,
+              "p50": 0.12754,
+              "p90": 0.12754
+            },
+            "reserveRatio": 0.82,
+            "soldCount": 45,
+            "soldProbability": 0.703125,
+            "startingRatio": 0.68,
+            "trials": 64,
+            "viable": true
+          }
+        },
+        "viableStrategies": [
+          "FAST",
+          "BALANCED",
+          "HIGH"
+        ],
+        "viableStrategyCount": 3,
+        "viableStrategyDefinition": "soldCount > 0 in the deterministic paired sample"
+      },
+      "evidencePressure": {
+        "actions": [
+          {
+            "baseWeight": 3.0,
+            "caseId": "prologue_clock",
+            "difficultyAppliedWeight": 3.0,
+            "evidenceId": "src.prologue.artifact.backplate_screws",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "HIGH"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "prologue_clock",
+            "difficultyAppliedWeight": 1.0,
+            "evidenceId": "src.prologue.artifact.bridge_stamp",
+            "requiredTools": [
+              "precision_screwdriver"
+            ],
+            "requiresEvidence": [],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "prologue_clock",
+            "difficultyAppliedWeight": 1.0,
+            "evidenceId": "src.prologue.document.service_card",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.prologue.artifact.backplate_screws"
+            ],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "prologue_clock",
+            "difficultyAppliedWeight": 1.0,
+            "evidenceId": "src.prologue.npc.mara_statement",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.prologue.document.service_card"
+            ],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "prologue_clock",
+            "difficultyAppliedWeight": 1.0,
+            "evidenceId": "src.prologue.reference.factory_plate",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.prologue.artifact.bridge_stamp"
+            ],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "silent_radio",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "silent_radio:material",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "silent_radio",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "silent_radio:serial_pattern",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "silent_radio",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "silent_radio:construction_method",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "silent_radio",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "silent_radio:provenance",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "silent_radio",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "silent_radio:repair_trace",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "perfect_fake",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "perfect_fake:material",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "perfect_fake",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "perfect_fake:serial_pattern",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "perfect_fake",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "perfect_fake:construction_method",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "perfect_fake",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "perfect_fake:provenance",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "perfect_fake",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "perfect_fake:repair_trace",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          }
+        ],
+        "baseWeightByRisk": {
+          "HIGH": 3.0,
+          "LOW": 1.0,
+          "NONE": 0.0
+        },
+        "caseIds": [
+          "prologue_clock",
+          "silent_radio",
+          "perfect_fake"
+        ],
+        "cases": [
+          {
+            "caseId": "prologue_clock",
+            "evidenceActions": 5,
+            "opportunitiesByRisk": {
+              "HIGH": 1,
+              "LOW": 4,
+              "NONE": 0
+            },
+            "schemaVersion": 2,
+            "title": "The Closed Workshop"
+          },
+          {
+            "caseId": "silent_radio",
+            "evidenceActions": 5,
+            "opportunitiesByRisk": {
+              "HIGH": 0,
+              "LOW": 0,
+              "NONE": 5
+            },
+            "schemaVersion": 1,
+            "title": "The Silent Radio"
+          },
+          {
+            "caseId": "perfect_fake",
+            "evidenceActions": 5,
+            "opportunitiesByRisk": {
+              "HIGH": 0,
+              "LOW": 0,
+              "NONE": 5
+            },
+            "schemaVersion": 1,
+            "title": "The Perfect Fake"
+          }
+        ],
+        "difficultyAppliedUnitWeight": {
+          "HIGH": 3.0,
+          "LOW": 1.0,
+          "NONE": 0.0
+        },
+        "difficultyAppliedWeightByRisk": {
+          "HIGH": 3.0,
+          "LOW": 4.0,
+          "NONE": 0.0
+        },
+        "difficultyMultiplier": 1.0,
+        "evidenceActions": 15,
+        "invalidRiskLevels": [],
+        "opportunitiesByRisk": {
+          "HIGH": 1,
+          "LOW": 4,
+          "NONE": 10
+        },
+        "riskBearingActions": 5,
+        "safeActions": 10,
+        "weightedRiskPerEvidenceAction": 0.466667,
+        "weightedRiskPerRiskOpportunity": 1.4,
+        "weightedRiskTotal": 7.0
+      },
+      "gates": {
+        "atLeastTwoViableStrategies": true,
+        "noSharedOptimalTool": true,
+        "pairedAuctionControlStable": true
+      },
+      "needsTuning": false,
+      "repairToolRoutes": {
+        "introducedSpecCountExactTwo": true,
+        "introducedSpecIds": [
+          "artifact_061",
+          "artifact_062"
+        ],
+        "maximumSingleToolCoverage": 1,
+        "noSharedOptimalTool": true,
+        "requiredToolsIntersection": [],
+        "singleToolConvergence": false,
+        "singleToolCoverage": {
+          "cotton_swab": [
+            "artifact_062"
+          ],
+          "polishing_pad": [
+            "artifact_061"
+          ],
+          "precision_screwdriver": [
+            "artifact_061"
+          ],
+          "repair_toolkit": [
+            "artifact_062"
+          ]
+        },
+        "specs": [
+          {
+            "displayName": "Meridian Tide Chronograph",
+            "requiredToolCount": 2,
+            "requiredTools": [
+              "precision_screwdriver",
+              "polishing_pad"
+            ],
+            "specId": "artifact_061",
+            "toleranceMm": 0.08
+          },
+          {
+            "displayName": "Vellum Bellows Camera",
+            "requiredToolCount": 2,
+            "requiredTools": [
+              "cotton_swab",
+              "repair_toolkit"
+            ],
+            "specId": "artifact_062",
+            "toleranceMm": 0.16
+          }
+        ]
+      },
+      "stageId": 1,
+      "title": "The First Lot"
+    },
+    "10": {
+      "controlledAuction": {
+        "atLeastTwoViableStrategies": true,
+        "difficultyMultiplier": 1.838459,
+        "fixture": {
+          "artifactSeed": 424242,
+          "artifactSpecId": "artifact_061",
+          "condition": {
+            "cleanliness": 78.0,
+            "mechanical": 78.0,
+            "surface": 78.0
+          },
+          "day": 4,
+          "disclosure": "LIKELY",
+          "grandReserve": false,
+          "provenanceKnown": true,
+          "publicAppraisal": 1741,
+          "reportedConfidence": 0.78,
+          "uniqueId": "stage_pressure_control_fixture"
+        },
+        "mixedOutcomeStrategies": [
+          "BALANCED",
+          "HIGH"
+        ],
+        "noSaleProbabilitySpread": 0.296875,
+        "pairedControlStable": true,
+        "pairedSeedPlan": {
+          "artifactSeed": 424242,
+          "masterSeedBase": 930001,
+          "masterSeedStride": 7919,
+          "sampleCount": 64
+        },
+        "strategies": {
+          "BALANCED": {
+            "hammer": {
+              "count": 64,
+              "max": 1862.0,
+              "mean": 1546.125,
+              "min": 1158.0,
+              "p50": 1594.0,
+              "p90": 1769.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.486034,
+              "mean": 1.233939,
+              "min": 0.924182,
+              "p50": 1.272147,
+              "p90": 1.411812
+            },
+            "mixedOutcome": true,
+            "noSaleCount": 11,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 11
+            },
+            "noSaleProbability": 0.171875,
+            "noSaleShortfallRatio": {
+              "count": 11,
+              "max": 0.075818,
+              "mean": 0.054052,
+              "min": 0.027933,
+              "p50": 0.075818,
+              "p90": 0.075818
+            },
+            "reserveRatio": 0.72,
+            "soldCount": 53,
+            "soldProbability": 0.828125,
+            "startingRatio": 0.6,
+            "trials": 64,
+            "viable": true
+          },
+          "FAST": {
+            "hammer": {
+              "count": 64,
+              "max": 1901.0,
+              "mean": 1567.5625,
+              "min": 1130.0,
+              "p50": 1625.0,
+              "p90": 1797.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.820881,
+              "mean": 1.501497,
+              "min": 1.082375,
+              "p50": 1.556513,
+              "p90": 1.721264
+            },
+            "mixedOutcome": false,
+            "noSaleCount": 0,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 0
+            },
+            "noSaleProbability": 0.0,
+            "noSaleShortfallRatio": {
+              "count": 0,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p90": 0.0
+            },
+            "reserveRatio": 0.6,
+            "soldCount": 64,
+            "soldProbability": 1.0,
+            "startingRatio": 0.5,
+            "trials": 64,
+            "viable": true
+          },
+          "HIGH": {
+            "hammer": {
+              "count": 64,
+              "max": 1821.0,
+              "mean": 1540.90625,
+              "min": 1245.0,
+              "p50": 1586.0,
+              "p90": 1738.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.276104,
+              "mean": 1.079822,
+              "min": 0.87246,
+              "p50": 1.111423,
+              "p90": 1.21794
+            },
+            "mixedOutcome": true,
+            "noSaleCount": 19,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 19
+            },
+            "noSaleProbability": 0.296875,
+            "noSaleShortfallRatio": {
+              "count": 19,
+              "max": 0.12754,
+              "mean": 0.098255,
+              "min": 0.047652,
+              "p50": 0.12754,
+              "p90": 0.12754
+            },
+            "reserveRatio": 0.82,
+            "soldCount": 45,
+            "soldProbability": 0.703125,
+            "startingRatio": 0.68,
+            "trials": 64,
+            "viable": true
+          }
+        },
+        "viableStrategies": [
+          "FAST",
+          "BALANCED",
+          "HIGH"
+        ],
+        "viableStrategyCount": 3,
+        "viableStrategyDefinition": "soldCount > 0 in the deterministic paired sample"
+      },
+      "evidencePressure": {
+        "actions": [
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "master_camera:material",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "master_camera:mechanism",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "master_camera:tool_mark",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 1.838459,
+            "evidenceId": "master_camera:construction_method",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "master_mechanism",
+            "difficultyAppliedWeight": 1.838459,
+            "evidenceId": "master_mechanism:material",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 3.0,
+            "caseId": "master_mechanism",
+            "difficultyAppliedWeight": 5.515378,
+            "evidenceId": "master_mechanism:mechanism",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "HIGH"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_mechanism",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "master_mechanism:wear_pattern",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_mechanism",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "master_mechanism:provenance",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          }
+        ],
+        "baseWeightByRisk": {
+          "HIGH": 3.0,
+          "LOW": 1.0,
+          "NONE": 0.0
+        },
+        "caseIds": [
+          "master_camera",
+          "master_mechanism"
+        ],
+        "cases": [
+          {
+            "caseId": "master_camera",
+            "evidenceActions": 4,
+            "opportunitiesByRisk": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 3
+            },
+            "schemaVersion": 1,
+            "title": "Master Work: Prism Spectroscope"
+          },
+          {
+            "caseId": "master_mechanism",
+            "evidenceActions": 4,
+            "opportunitiesByRisk": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 2
+            },
+            "schemaVersion": 1,
+            "title": "Master Work: Astronomical Regulator"
+          }
+        ],
+        "difficultyAppliedUnitWeight": {
+          "HIGH": 5.515378,
+          "LOW": 1.838459,
+          "NONE": 0.0
+        },
+        "difficultyAppliedWeightByRisk": {
+          "HIGH": 5.515378,
+          "LOW": 3.676918,
+          "NONE": 0.0
+        },
+        "difficultyMultiplier": 1.838459,
+        "evidenceActions": 8,
+        "invalidRiskLevels": [],
+        "opportunitiesByRisk": {
+          "HIGH": 1,
+          "LOW": 2,
+          "NONE": 5
+        },
+        "riskBearingActions": 3,
+        "safeActions": 5,
+        "weightedRiskPerEvidenceAction": 1.149037,
+        "weightedRiskPerRiskOpportunity": 3.064099,
+        "weightedRiskTotal": 9.192296
+      },
+      "gates": {
+        "atLeastTwoViableStrategies": true,
+        "noSharedOptimalTool": true,
+        "pairedAuctionControlStable": true
+      },
+      "needsTuning": false,
+      "repairToolRoutes": {
+        "introducedSpecCountExactTwo": true,
+        "introducedSpecIds": [
+          "artifact_079",
+          "artifact_080"
+        ],
+        "maximumSingleToolCoverage": 1,
+        "noSharedOptimalTool": true,
+        "requiredToolsIntersection": [],
+        "singleToolConvergence": false,
+        "singleToolCoverage": {
+          "material_scanner": [
+            "artifact_079"
+          ],
+          "precision_scale": [
+            "artifact_080"
+          ],
+          "precision_screwdriver": [
+            "artifact_080"
+          ],
+          "reference_database": [
+            "artifact_080"
+          ],
+          "uv_lamp": [
+            "artifact_079"
+          ]
+        },
+        "specs": [
+          {
+            "displayName": "Glass Prism Spectroscope",
+            "requiredToolCount": 2,
+            "requiredTools": [
+              "material_scanner",
+              "uv_lamp"
+            ],
+            "specId": "artifact_079",
+            "toleranceMm": 0.015
+          },
+          {
+            "displayName": "Grand Reserve Astronomical Regulator",
+            "requiredToolCount": 3,
+            "requiredTools": [
+              "precision_scale",
+              "precision_screwdriver",
+              "reference_database"
+            ],
+            "specId": "artifact_080",
+            "toleranceMm": 0.01
+          }
+        ]
+      },
+      "stageId": 10,
+      "title": "The Grand Reserve"
+    },
+    "5": {
+      "controlledAuction": {
+        "atLeastTwoViableStrategies": true,
+        "difficultyMultiplier": 1.310796,
+        "fixture": {
+          "artifactSeed": 424242,
+          "artifactSpecId": "artifact_061",
+          "condition": {
+            "cleanliness": 78.0,
+            "mechanical": 78.0,
+            "surface": 78.0
+          },
+          "day": 4,
+          "disclosure": "LIKELY",
+          "grandReserve": false,
+          "provenanceKnown": true,
+          "publicAppraisal": 1741,
+          "reportedConfidence": 0.78,
+          "uniqueId": "stage_pressure_control_fixture"
+        },
+        "mixedOutcomeStrategies": [
+          "BALANCED",
+          "HIGH"
+        ],
+        "noSaleProbabilitySpread": 0.296875,
+        "pairedControlStable": true,
+        "pairedSeedPlan": {
+          "artifactSeed": 424242,
+          "masterSeedBase": 930001,
+          "masterSeedStride": 7919,
+          "sampleCount": 64
+        },
+        "strategies": {
+          "BALANCED": {
+            "hammer": {
+              "count": 64,
+              "max": 1862.0,
+              "mean": 1559.515625,
+              "min": 1158.0,
+              "p50": 1627.0,
+              "p90": 1776.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.486034,
+              "mean": 1.244625,
+              "min": 0.924182,
+              "p50": 1.298484,
+              "p90": 1.417398
+            },
+            "mixedOutcome": true,
+            "noSaleCount": 11,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 11
+            },
+            "noSaleProbability": 0.171875,
+            "noSaleShortfallRatio": {
+              "count": 11,
+              "max": 0.075818,
+              "mean": 0.054052,
+              "min": 0.027933,
+              "p50": 0.075818,
+              "p90": 0.075818
+            },
+            "reserveRatio": 0.72,
+            "soldCount": 53,
+            "soldProbability": 0.828125,
+            "startingRatio": 0.6,
+            "trials": 64,
+            "viable": true
+          },
+          "FAST": {
+            "hammer": {
+              "count": 64,
+              "max": 1901.0,
+              "mean": 1574.625,
+              "min": 1130.0,
+              "p50": 1635.0,
+              "p90": 1797.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.820881,
+              "mean": 1.508261,
+              "min": 1.082375,
+              "p50": 1.566092,
+              "p90": 1.721264
+            },
+            "mixedOutcome": false,
+            "noSaleCount": 0,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 0
+            },
+            "noSaleProbability": 0.0,
+            "noSaleShortfallRatio": {
+              "count": 0,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p90": 0.0
+            },
+            "reserveRatio": 0.6,
+            "soldCount": 64,
+            "soldProbability": 1.0,
+            "startingRatio": 0.5,
+            "trials": 64,
+            "viable": true
+          },
+          "HIGH": {
+            "hammer": {
+              "count": 64,
+              "max": 1821.0,
+              "mean": 1562.953125,
+              "min": 1245.0,
+              "p50": 1637.0,
+              "p90": 1753.0
+            },
+            "hammerToReserveRatio": {
+              "count": 64,
+              "max": 1.276104,
+              "mean": 1.095272,
+              "min": 0.87246,
+              "p50": 1.147162,
+              "p90": 1.228451
+            },
+            "mixedOutcome": true,
+            "noSaleCount": 19,
+            "noSaleDistribution": {
+              "NO_BID": 0,
+              "RESERVE_MISS": 19
+            },
+            "noSaleProbability": 0.296875,
+            "noSaleShortfallRatio": {
+              "count": 19,
+              "max": 0.12754,
+              "mean": 0.098255,
+              "min": 0.047652,
+              "p50": 0.12754,
+              "p90": 0.12754
+            },
+            "reserveRatio": 0.82,
+            "soldCount": 45,
+            "soldProbability": 0.703125,
+            "startingRatio": 0.68,
+            "trials": 64,
+            "viable": true
+          }
+        },
+        "viableStrategies": [
+          "FAST",
+          "BALANCED",
+          "HIGH"
+        ],
+        "viableStrategyCount": 3,
+        "viableStrategyDefinition": "soldCount > 0 in the deterministic paired sample"
+      },
+      "evidencePressure": {
+        "actions": [
+          {
+            "baseWeight": 0.0,
+            "caseId": "collector_promise",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.collector_promise.artifact.period_body_identity",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "collector_promise",
+            "difficultyAppliedWeight": 1.310796,
+            "evidenceId": "src.collector_promise.artifact.modern_capsule_repair",
+            "requiredTools": [
+              "precision_screwdriver"
+            ],
+            "requiresEvidence": [
+              "src.collector_promise.artifact.period_body_identity"
+            ],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "collector_promise",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.collector_promise.document.transfer_repair_receipt",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "collector_promise",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.collector_promise.npc.victor_promise_context",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.collector_promise.document.transfer_repair_receipt"
+            ],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "collector_promise",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.collector_promise.reference.aurelian_model120_history",
+            "requiredTools": [
+              "reference_database"
+            ],
+            "requiresEvidence": [
+              "src.collector_promise.artifact.period_body_identity"
+            ],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "three_cameras",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.three_cameras.artifact.received_camera_body",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "three_cameras",
+            "difficultyAppliedWeight": 1.310796,
+            "evidenceId": "src.three_cameras.artifact.copied_repair_surface",
+            "requiredTools": [
+              "material_scanner"
+            ],
+            "requiresEvidence": [
+              "src.three_cameras.artifact.received_camera_body"
+            ],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "three_cameras",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.three_cameras.document.reference_pair_photo_ledger",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "three_cameras",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.three_cameras.npc.victor_single_lot_account",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.three_cameras.document.reference_pair_photo_ledger"
+            ],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "three_cameras",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.three_cameras.reference.marrow_model132_history",
+            "requiredTools": [
+              "reference_database"
+            ],
+            "requiresEvidence": [
+              "src.three_cameras.artifact.received_camera_body",
+              "src.three_cameras.document.reference_pair_photo_ledger"
+            ],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "shadow_camera",
+            "difficultyAppliedWeight": 1.310796,
+            "evidenceId": "src.shadow_camera.artifact.mount_wear",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 3.0,
+            "caseId": "shadow_camera",
+            "difficultyAppliedWeight": 3.932388,
+            "evidenceId": "src.shadow_camera.artifact.uv_shadow_mark",
+            "requiredTools": [
+              "uv_lamp"
+            ],
+            "requiresEvidence": [
+              "src.shadow_camera.artifact.mount_wear"
+            ],
+            "riskLevel": "HIGH"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "shadow_camera",
+            "difficultyAppliedWeight": 1.310796,
+            "evidenceId": "src.shadow_camera.artifact.internal_spacer",
+            "requiredTools": [
+              "precision_screwdriver"
+            ],
+            "requiresEvidence": [
+              "src.shadow_camera.artifact.uv_shadow_mark"
+            ],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "shadow_camera",
+            "difficultyAppliedWeight": 1.310796,
+            "evidenceId": "src.shadow_camera.document.repair_leaf",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.shadow_camera.artifact.mount_wear"
+            ],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "shadow_camera",
+            "difficultyAppliedWeight": 1.310796,
+            "evidenceId": "src.shadow_camera.npc.lena_invoice_account",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.shadow_camera.document.repair_leaf"
+            ],
+            "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 1.0,
+            "caseId": "shadow_camera",
+            "difficultyAppliedWeight": 1.310796,
+            "evidenceId": "src.shadow_camera.reference.model147_material_note",
+            "requiredTools": [
+              "reference_database"
+            ],
+            "requiresEvidence": [
+              "src.shadow_camera.artifact.internal_spacer"
+            ],
+            "riskLevel": "LOW"
+          }
+        ],
+        "baseWeightByRisk": {
+          "HIGH": 3.0,
+          "LOW": 1.0,
+          "NONE": 0.0
+        },
+        "caseIds": [
+          "collector_promise",
+          "three_cameras",
+          "shadow_camera"
+        ],
+        "cases": [
+          {
+            "caseId": "collector_promise",
+            "evidenceActions": 5,
+            "opportunitiesByRisk": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "schemaVersion": 2,
+            "title": "The Promise in the Barometer"
+          },
+          {
+            "caseId": "three_cameras",
+            "evidenceActions": 5,
+            "opportunitiesByRisk": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "schemaVersion": 2,
+            "title": "The Camera Between Two Pictures"
+          },
+          {
+            "caseId": "shadow_camera",
+            "evidenceActions": 6,
+            "opportunitiesByRisk": {
+              "HIGH": 1,
+              "LOW": 5,
+              "NONE": 0
+            },
+            "schemaVersion": 2,
+            "title": "The Shadow Camera"
+          }
+        ],
+        "difficultyAppliedUnitWeight": {
+          "HIGH": 3.932388,
+          "LOW": 1.310796,
+          "NONE": 0.0
+        },
+        "difficultyAppliedWeightByRisk": {
+          "HIGH": 3.932388,
+          "LOW": 9.175572,
+          "NONE": 0.0
+        },
+        "difficultyMultiplier": 1.310796,
+        "evidenceActions": 16,
+        "invalidRiskLevels": [],
+        "opportunitiesByRisk": {
+          "HIGH": 1,
+          "LOW": 7,
+          "NONE": 8
+        },
+        "riskBearingActions": 8,
+        "safeActions": 8,
+        "weightedRiskPerEvidenceAction": 0.819248,
+        "weightedRiskPerRiskOpportunity": 1.638495,
+        "weightedRiskTotal": 13.10796
+      },
+      "gates": {
+        "atLeastTwoViableStrategies": true,
+        "noSharedOptimalTool": true,
+        "pairedAuctionControlStable": true
+      },
+      "needsTuning": false,
+      "repairToolRoutes": {
+        "introducedSpecCountExactTwo": true,
+        "introducedSpecIds": [
+          "artifact_069",
+          "artifact_070"
+        ],
+        "maximumSingleToolCoverage": 1,
+        "noSharedOptimalTool": true,
+        "requiredToolsIntersection": [],
+        "singleToolConvergence": false,
+        "singleToolCoverage": {
+          "cleaning_cloth": [
+            "artifact_070"
+          ],
+          "precision_scale": [
+            "artifact_070"
+          ],
+          "precision_screwdriver": [
+            "artifact_069"
+          ],
+          "reference_database": [
+            "artifact_069"
+          ],
+          "repair_toolkit": [
+            "artifact_070"
+          ]
+        },
+        "specs": [
+          {
+            "displayName": "Nickel Cipher Typewriter",
+            "requiredToolCount": 2,
+            "requiredTools": [
+              "precision_screwdriver",
+              "reference_database"
+            ],
+            "specId": "artifact_069",
+            "toleranceMm": 0.1
+          },
+          {
+            "displayName": "Brass Pocket Sextant",
+            "requiredToolCount": 3,
+            "requiredTools": [
+              "cleaning_cloth",
+              "precision_scale",
+              "repair_toolkit"
+            ],
+            "specId": "artifact_070",
+            "toleranceMm": 0.06
+          }
+        ]
+      },
+      "stageId": 5,
+      "title": "Collector's Eye"
+    }
+  },
+  "suite": "R3 Stage 1/5/10 Judgment Pressure Baseline",
+  "tuningFlags": []
+}

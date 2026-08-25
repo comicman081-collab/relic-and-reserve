@@ -1,0 +1,57 @@
+{
+  "id": "artifact_040",
+  "displayName": "Tarnwell Mechanical Toy N",
+  "category": "mechanical_instruments",
+  "baseModel": "model_10.obj",
+  "maker": "maker_20",
+  "modelName": "Model 139",
+  "era": "1924-1936",
+  "materialSet": [
+    "material_10",
+    "material_13"
+  ],
+  "rarity": "very_rare",
+  "baseValue": 851,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.6000000000000001
+  },
+  "collectorTags": [
+    "mechanical_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_040"
+}

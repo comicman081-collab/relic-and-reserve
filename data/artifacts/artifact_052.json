@@ -1,0 +1,57 @@
+{
+  "id": "artifact_052",
+  "displayName": "Lattice Table Microscope Z",
+  "category": "scientific_instruments",
+  "baseModel": "model_07.obj",
+  "maker": "maker_12",
+  "modelName": "Model 151",
+  "era": "1924-1936",
+  "materialSet": [
+    "material_07",
+    "material_10"
+  ],
+  "rarity": "very_rare",
+  "baseValue": 1079,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.30000000000000004
+  },
+  "collectorTags": [
+    "scientific_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_052"
+}

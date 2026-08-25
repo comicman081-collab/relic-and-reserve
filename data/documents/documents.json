@@ -1,0 +1,242 @@
+[
+  {
+    "id": "document_01",
+    "title": "Fictional Reference Leaf 01",
+    "type": "maker_catalog",
+    "body": "In-world record 01: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "prologue_clock"
+  },
+  {
+    "id": "document_02",
+    "title": "Fictional Reference Leaf 02",
+    "type": "invoice",
+    "body": "In-world record 02: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "silent_radio"
+  },
+  {
+    "id": "document_03",
+    "title": "Fictional Reference Leaf 03",
+    "type": "auction_receipt",
+    "body": "In-world record 03: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "perfect_fake"
+  },
+  {
+    "id": "document_04",
+    "title": "Fictional Reference Leaf 04",
+    "type": "museum_card",
+    "body": "In-world record 04: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "leave_patina"
+  },
+  {
+    "id": "document_05",
+    "title": "Fictional Reference Leaf 05",
+    "type": "repair_record",
+    "body": "In-world record 05: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "estate_compass"
+  },
+  {
+    "id": "document_06",
+    "title": "Fictional Reference Leaf 06",
+    "type": "estate_note",
+    "body": "In-world record 06: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "pawn_watch"
+  },
+  {
+    "id": "document_07",
+    "title": "Fictional Reference Leaf 07",
+    "type": "collector_letter",
+    "body": "In-world record 07: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "garage_lamp"
+  },
+  {
+    "id": "document_08",
+    "title": "Fictional Reference Leaf 08",
+    "type": "serial_reference",
+    "body": "In-world record 08: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "telephone_trace"
+  },
+  {
+    "id": "document_09",
+    "title": "Fictional Reference Leaf 09",
+    "type": "archive_record",
+    "body": "In-world record 09: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "early_camera"
+  },
+  {
+    "id": "document_10",
+    "title": "Fictional Reference Leaf 10",
+    "type": "reserve_catalog",
+    "body": "In-world record 10: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "false_invoice"
+  },
+  {
+    "id": "document_11",
+    "title": "Fictional Reference Leaf 11",
+    "type": "maker_catalog",
+    "body": "In-world record 11: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "mislabelled_collection"
+  },
+  {
+    "id": "document_12",
+    "title": "Fictional Reference Leaf 12",
+    "type": "invoice",
+    "body": "In-world record 12: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "observatory_instrument"
+  },
+  {
+    "id": "document_13",
+    "title": "Fictional Reference Leaf 13",
+    "type": "auction_receipt",
+    "body": "In-world record 13: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "collector_promise"
+  },
+  {
+    "id": "document_14",
+    "title": "Fictional Reference Leaf 14",
+    "type": "museum_card",
+    "body": "In-world record 14: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "three_cameras"
+  },
+  {
+    "id": "document_15",
+    "title": "Fictional Reference Leaf 15",
+    "type": "repair_record",
+    "body": "In-world record 15: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "shadow_camera"
+  },
+  {
+    "id": "document_16",
+    "title": "Fictional Reference Leaf 16",
+    "type": "estate_note",
+    "body": "In-world record 16: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "shadow_gauge"
+  },
+  {
+    "id": "document_17",
+    "title": "Fictional Reference Leaf 17",
+    "type": "collector_letter",
+    "body": "In-world record 17: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "shadow_clock"
+  },
+  {
+    "id": "document_18",
+    "title": "Fictional Reference Leaf 18",
+    "type": "serial_reference",
+    "body": "In-world record 18: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "shadow_music_box"
+  },
+  {
+    "id": "document_19",
+    "title": "Fictional Reference Leaf 19",
+    "type": "archive_record",
+    "body": "In-world record 19: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "shadow_optic"
+  },
+  {
+    "id": "document_20",
+    "title": "Fictional Reference Leaf 20",
+    "type": "reserve_catalog",
+    "body": "In-world record 20: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "composite_prototype"
+  },
+  {
+    "id": "document_21",
+    "title": "Fictional Reference Leaf 21",
+    "type": "maker_catalog",
+    "body": "In-world record 21: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "master_chronometer"
+  },
+  {
+    "id": "document_22",
+    "title": "Fictional Reference Leaf 22",
+    "type": "invoice",
+    "body": "In-world record 22: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "master_optical"
+  },
+  {
+    "id": "document_23",
+    "title": "Fictional Reference Leaf 23",
+    "type": "auction_receipt",
+    "body": "In-world record 23: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "master_recorder"
+  },
+  {
+    "id": "document_24",
+    "title": "Fictional Reference Leaf 24",
+    "type": "museum_card",
+    "body": "In-world record 24: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "master_gauge"
+  },
+  {
+    "id": "document_25",
+    "title": "Fictional Reference Leaf 25",
+    "type": "repair_record",
+    "body": "In-world record 25: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "master_camera"
+  },
+  {
+    "id": "document_26",
+    "title": "Fictional Reference Leaf 26",
+    "type": "estate_note",
+    "body": "In-world record 26: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "master_mechanism"
+  },
+  {
+    "id": "document_27",
+    "title": "Fictional Reference Leaf 27",
+    "type": "collector_letter",
+    "body": "In-world record 27: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "prologue_clock"
+  },
+  {
+    "id": "document_28",
+    "title": "Fictional Reference Leaf 28",
+    "type": "serial_reference",
+    "body": "In-world record 28: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "silent_radio"
+  },
+  {
+    "id": "document_29",
+    "title": "Fictional Reference Leaf 29",
+    "type": "archive_record",
+    "body": "In-world record 29: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "perfect_fake"
+  },
+  {
+    "id": "document_30",
+    "title": "Fictional Reference Leaf 30",
+    "type": "reserve_catalog",
+    "body": "In-world record 30: a fictional maker, date range, ownership note, and confidence annotation for case use.",
+    "fictional": true,
+    "usedByCase": "leave_patina"
+  }
+]

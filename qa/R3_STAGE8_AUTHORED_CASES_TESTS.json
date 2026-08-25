@@ -1,0 +1,621 @@
+{
+  "executed": 7,
+  "expectedCount": 7,
+  "failed": 0,
+  "passed": 7,
+  "suite": "R3 Stage 8 Authored Cases",
+  "tests": [
+    {
+      "evidence": {
+        "cases": {
+          "master_chronometer": {
+            "kinds": [
+              "ARTIFACT",
+              "ARTIFACT",
+              "DOCUMENT",
+              "DOCUMENT",
+              "NPC",
+              "REFERENCE"
+            ],
+            "ok": true,
+            "provenance": 1,
+            "risk": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "sources": 6
+          },
+          "master_optical": {
+            "kinds": [
+              "ARTIFACT",
+              "ARTIFACT",
+              "DOCUMENT",
+              "DOCUMENT",
+              "NPC",
+              "REFERENCE"
+            ],
+            "ok": true,
+            "provenance": 1,
+            "risk": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "sources": 6
+          }
+        },
+        "stageMultiplier": 1.60578147647843,
+        "stageStart": {
+          "code": "OK",
+          "difficultyMultiplier": 1.60578147647843,
+          "ok": true,
+          "stage": 8
+        }
+      },
+      "executed": true,
+      "id": "S8-DATA-01",
+      "name": "Both Stage 8 cases resolve to fresh authored identities with exact six-source pressure and one provenance bridge",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_chronometer": {
+          "ok": true,
+          "repeatSame": true,
+          "spec": "artifact_061",
+          "story": "story_artifact_21",
+          "truth": "hyp.master_chronometer.genuine_precision_chronometer",
+          "uid": "case_master_chronometer"
+        },
+        "master_optical": {
+          "ok": true,
+          "repeatSame": true,
+          "spec": "artifact_075",
+          "story": "story_artifact_22",
+          "truth": "hyp.master_optical.genuine_microscope_with_period_optical_repair",
+          "uid": "case_master_optical"
+        }
+      },
+      "executed": true,
+      "id": "S8-ISSUE-02",
+      "name": "Fresh Stage 8 issuance is one stable UID per case with no duplicate path",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_chronometer": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.master_chronometer.artifact.escapement_consistency",
+              "src.master_chronometer.artifact.timing_mark_sequence",
+              "src.master_chronometer.document.bench_log"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_chronometer.genuine_precision_chronometer",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.master_chronometer.artifact.escapement_consistency",
+            "src.master_chronometer.document.bench_log",
+            "src.master_chronometer.document.serial_practice",
+            "src.master_chronometer.artifact.timing_mark_sequence",
+            "src.master_chronometer.npc.mara_service_context",
+            "src.master_chronometer.reference.precision_standard"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.master_chronometer.artifact.escapement_consistency",
+              "src.master_chronometer.artifact.timing_mark_sequence",
+              "src.master_chronometer.document.bench_log",
+              "src.master_chronometer.reference.precision_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_chronometer.genuine_precision_chronometer",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.master_chronometer.artifact.escapement_consistency"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_chronometer.genuine_precision_chronometer",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mesh": "res://assets/artifacts/clock.obj",
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.master_chronometer.artifact.escapement_consistency",
+              "src.master_chronometer.artifact.timing_mark_sequence",
+              "src.master_chronometer.document.bench_log",
+              "src.master_chronometer.reference.precision_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.master_chronometer.genuine_body_with_later_timing_repair",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "ok": true,
+          "recipe": "CHRONOMETER",
+          "wrongToolZero": true
+        },
+        "master_optical": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.master_optical.artifact.body_construction",
+              "src.master_optical.artifact.period_repair_seam",
+              "src.master_optical.document.repair_register"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_optical.genuine_microscope_with_period_optical_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.master_optical.artifact.body_construction",
+            "src.master_optical.document.repair_register",
+            "src.master_optical.document.maker_cell_practice",
+            "src.master_optical.artifact.period_repair_seam",
+            "src.master_optical.npc.victor_collection_context",
+            "src.master_optical.reference.microscopy_standard"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.master_optical.artifact.body_construction",
+              "src.master_optical.artifact.period_repair_seam",
+              "src.master_optical.document.repair_register",
+              "src.master_optical.reference.microscopy_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_optical.genuine_microscope_with_period_optical_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.master_optical.artifact.body_construction"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_optical.genuine_microscope_with_period_optical_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mesh": "res://assets/artifacts/binoculars.obj",
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.master_optical.artifact.body_construction",
+              "src.master_optical.artifact.period_repair_seam",
+              "src.master_optical.document.repair_register",
+              "src.master_optical.reference.microscopy_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.master_optical.untouched_period_microscope",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "ok": true,
+          "recipe": "MICROSCOPE",
+          "wrongToolZero": true
+        }
+      },
+      "executed": true,
+      "id": "S8-REASON-03",
+      "name": "Stage 8 evidence is consumed by the ordered mentor/credible/masterful/mistaken evaluator and pair renderer",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_chronometer": {
+          "after": {
+            "acquisitionPrice": 1230,
+            "artifactSpecId": "artifact_052",
+            "authenticityTruth": "GENUINE",
+            "caseId": "master_chronometer",
+            "caseResolved": false,
+            "cleanliness": 18.0,
+            "confidence": 0.12,
+            "damageInstances": [
+              "TARNISH",
+              "BROKEN_PART",
+              "GRIME"
+            ],
+            "estimatedValue": 1079,
+            "evidence": [],
+            "historicalIntegrity": 78.0,
+            "inspected": false,
+            "knownClues": [],
+            "listing": {
+              "confidence": 0.0,
+              "disclosure": "UNCERTAIN",
+              "reserve": 0,
+              "starting": 0
+            },
+            "mechanicalCondition": 42.0,
+            "originalParts": 2,
+            "partStates": {},
+            "playerHypothesis": "UNKNOWN",
+            "possibleClues": [
+              "SERIAL_PATTERN",
+              "CONSTRUCTION_METHOD",
+              "MATERIAL",
+              "MECHANISM",
+              "COMPONENT_STYLE",
+              "WEAR_PATTERN",
+              "LABEL",
+              "PATINA",
+              "REPAIR_TRACE",
+              "PROVENANCE",
+              "TOOL_MARK"
+            ],
+            "repaired": false,
+            "replacementParts": 0,
+            "restorationCost": 0.0,
+            "restorationQuality": 0.0,
+            "rotation": 0.0,
+            "seed": 884400,
+            "sold": false,
+            "storyArtifactId": "",
+            "structuralCondition": 70.0,
+            "surfaceCondition": 55.0,
+            "uniqueId": "case_master_chronometer_legacy",
+            "zoom": 1.0
+          },
+          "before": {
+            "acquisitionPrice": 1230.0,
+            "artifactSpecId": "artifact_052",
+            "authenticityTruth": "GENUINE",
+            "caseId": "master_chronometer",
+            "caseResolved": false,
+            "cleanliness": 18.0,
+            "confidence": 0.12,
+            "damageInstances": [
+              "TARNISH",
+              "BROKEN_PART",
+              "GRIME"
+            ],
+            "estimatedValue": 1079.0,
+            "evidence": [],
+            "historicalIntegrity": 78.0,
+            "inspected": false,
+            "knownClues": [],
+            "listing": {
+              "confidence": 0.0,
+              "disclosure": "UNCERTAIN",
+              "reserve": 0.0,
+              "starting": 0.0
+            },
+            "mechanicalCondition": 42.0,
+            "originalParts": 2.0,
+            "partStates": {},
+            "playerHypothesis": "UNKNOWN",
+            "possibleClues": [
+              "SERIAL_PATTERN",
+              "CONSTRUCTION_METHOD",
+              "MATERIAL",
+              "MECHANISM",
+              "COMPONENT_STYLE",
+              "WEAR_PATTERN",
+              "LABEL",
+              "PATINA",
+              "REPAIR_TRACE",
+              "PROVENANCE",
+              "TOOL_MARK"
+            ],
+            "repaired": false,
+            "replacementParts": 0.0,
+            "restorationCost": 0.0,
+            "restorationQuality": 0.0,
+            "rotation": 0.0,
+            "seed": 884400.0,
+            "sold": false,
+            "storyArtifactId": "",
+            "structuralCondition": 70.0,
+            "surfaceCondition": 55.0,
+            "uniqueId": "case_master_chronometer_legacy",
+            "zoom": 1.0
+          },
+          "loaded": true,
+          "ok": true
+        },
+        "master_optical": {
+          "after": {
+            "acquisitionPrice": 556,
+            "artifactSpecId": "artifact_053",
+            "authenticityTruth": "GENUINE",
+            "caseId": "master_optical",
+            "caseResolved": false,
+            "cleanliness": 18.0,
+            "confidence": 0.12,
+            "damageInstances": [
+              "SCRATCH",
+              "WATER_DAMAGE",
+              "PAINT_LOSS"
+            ],
+            "estimatedValue": 1098,
+            "evidence": [],
+            "historicalIntegrity": 78.0,
+            "inspected": false,
+            "knownClues": [],
+            "listing": {
+              "confidence": 0.0,
+              "disclosure": "UNCERTAIN",
+              "reserve": 0,
+              "starting": 0
+            },
+            "mechanicalCondition": 42.0,
+            "originalParts": 1,
+            "partStates": {},
+            "playerHypothesis": "UNKNOWN",
+            "possibleClues": [
+              "SERIAL_PATTERN",
+              "CONSTRUCTION_METHOD",
+              "MATERIAL",
+              "MECHANISM",
+              "COMPONENT_STYLE",
+              "WEAR_PATTERN",
+              "LABEL",
+              "PATINA",
+              "REPAIR_TRACE",
+              "PROVENANCE",
+              "TOOL_MARK"
+            ],
+            "repaired": false,
+            "replacementParts": 0,
+            "restorationCost": 0.0,
+            "restorationQuality": 0.0,
+            "rotation": 0.0,
+            "seed": 884401,
+            "sold": false,
+            "storyArtifactId": "",
+            "structuralCondition": 70.0,
+            "surfaceCondition": 55.0,
+            "uniqueId": "case_master_optical_legacy",
+            "zoom": 1.0
+          },
+          "before": {
+            "acquisitionPrice": 556.0,
+            "artifactSpecId": "artifact_053",
+            "authenticityTruth": "GENUINE",
+            "caseId": "master_optical",
+            "caseResolved": false,
+            "cleanliness": 18.0,
+            "confidence": 0.12,
+            "damageInstances": [
+              "SCRATCH",
+              "WATER_DAMAGE",
+              "PAINT_LOSS"
+            ],
+            "estimatedValue": 1098.0,
+            "evidence": [],
+            "historicalIntegrity": 78.0,
+            "inspected": false,
+            "knownClues": [],
+            "listing": {
+              "confidence": 0.0,
+              "disclosure": "UNCERTAIN",
+              "reserve": 0.0,
+              "starting": 0.0
+            },
+            "mechanicalCondition": 42.0,
+            "originalParts": 1.0,
+            "partStates": {},
+            "playerHypothesis": "UNKNOWN",
+            "possibleClues": [
+              "SERIAL_PATTERN",
+              "CONSTRUCTION_METHOD",
+              "MATERIAL",
+              "MECHANISM",
+              "COMPONENT_STYLE",
+              "WEAR_PATTERN",
+              "LABEL",
+              "PATINA",
+              "REPAIR_TRACE",
+              "PROVENANCE",
+              "TOOL_MARK"
+            ],
+            "repaired": false,
+            "replacementParts": 0.0,
+            "restorationCost": 0.0,
+            "restorationQuality": 0.0,
+            "rotation": 0.0,
+            "seed": 884401.0,
+            "sold": false,
+            "storyArtifactId": "",
+            "structuralCondition": 70.0,
+            "surfaceCondition": 55.0,
+            "uniqueId": "case_master_optical_legacy",
+            "zoom": 1.0
+          },
+          "loaded": true,
+          "ok": true
+        }
+      },
+      "executed": true,
+      "id": "S8-LEGACY-04",
+      "name": "Legacy Stage 8 issued artifact specs 052/053 remain byte-exact and are never silently migrated to fresh 061/075 bindings",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "swapped": {
+          "detail": {
+            "motif": "wing_scale_speckle",
+            "placement": "focus_column",
+            "wearMask": "lacquer_touchup"
+          },
+          "materialPath": "res://assets/materials/brass.tres",
+          "meshPath": "res://assets/artifacts/binoculars.obj",
+          "metallic": 0.2,
+          "palette": {
+            "accent": "#C9B78A",
+            "primary": "#A77A37",
+            "secondary": "#4B1835"
+          },
+          "recipe": "DEFAULT",
+          "roughness": 0.55,
+          "scale": [
+            0.9,
+            1.18,
+            0.98
+          ],
+          "specId": "artifact_075",
+          "trim": {
+            "color": "#7B294D",
+            "materialPath": "res://assets/materials/brown_leather.tres",
+            "shape": "objective_turret"
+          }
+        },
+        "valid": {
+          "detail": {
+            "motif": "radial_guilloche",
+            "placement": "dial_ring",
+            "wearMask": "edge_salt_nicks"
+          },
+          "materialPath": "res://assets/materials/tarnished_brass.tres",
+          "meshPath": "res://assets/artifacts/clock.obj",
+          "metallic": 0.2,
+          "palette": {
+            "accent": "#C7A861",
+            "primary": "#6F552B",
+            "secondary": "#183C49"
+          },
+          "recipe": "CHRONOMETER",
+          "roughness": 0.55,
+          "scale": [
+            0.94,
+            1.03,
+            0.96
+          ],
+          "specId": "artifact_061",
+          "trim": {
+            "color": "#B99A51",
+            "materialPath": "res://assets/materials/brass.tres",
+            "shape": "salt_bezel"
+          }
+        }
+      },
+      "executed": true,
+      "id": "S8-VISUAL-05",
+      "name": "Stage 8 pair renderer is isolated: valid pairs are special, swapped story/spec pairs are DEFAULT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "keys": [
+          "ok",
+          "code",
+          "caseId",
+          "title",
+          "artifactDisplayName",
+          "briefing",
+          "centralQuestion",
+          "fictionNotice",
+          "reportPrompt",
+          "success",
+          "failure",
+          "hypotheses",
+          "evidence",
+          "availableEvidence",
+          "discoveredEvidence",
+          "selectedHypothesisId",
+          "citedEvidenceIds",
+          "resolved",
+          "resolutionResult",
+          "artifactId"
+        ],
+        "leaks": []
+      },
+      "executed": true,
+      "id": "S8-PUBLIC-06",
+      "name": "Stage 8 public dossier does not leak hidden truth or internal source identifiers",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "lockIds": [
+          "master_chronometer",
+          "master_optical"
+        ]
+      },
+      "executed": true,
+      "id": "S8-LOCK-07",
+      "name": "Stage 8 authored files are both present in the immutable lock manifest",
+      "passed": true
+    }
+  ]
+}

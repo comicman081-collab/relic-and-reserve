@@ -1,0 +1,349 @@
+{
+  "executed": 6,
+  "expectedCount": 6,
+  "failed": 0,
+  "passed": 6,
+  "suite": "R3 Stage 9 Authored Cases",
+  "tests": [
+    {
+      "evidence": {
+        "cases": {
+          "master_gauge": {
+            "kinds": [
+              "ARTIFACT",
+              "ARTIFACT",
+              "DOCUMENT",
+              "DOCUMENT",
+              "NPC",
+              "REFERENCE"
+            ],
+            "ok": true,
+            "provenance": 1,
+            "risk": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "sources": 6
+          },
+          "master_recorder": {
+            "kinds": [
+              "ARTIFACT",
+              "ARTIFACT",
+              "DOCUMENT",
+              "DOCUMENT",
+              "NPC",
+              "REFERENCE"
+            ],
+            "ok": true,
+            "provenance": 1,
+            "risk": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "sources": 6
+          }
+        },
+        "stageMultiplier": 1.71818617983192,
+        "stageStart": {
+          "code": "OK",
+          "difficultyMultiplier": 1.71818617983192,
+          "ok": true,
+          "stage": 9
+        }
+      },
+      "executed": true,
+      "id": "S9-DATA-01",
+      "name": "Stage 9 cases bind fresh authored identities with six-source topology and exact risk pressure",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_gauge": {
+          "ok": true,
+          "repeatSame": true,
+          "spec": "artifact_077",
+          "story": "story_artifact_24",
+          "truth": "hyp.master_gauge.genuine_signal_lantern",
+          "uid": "case_master_gauge"
+        },
+        "master_recorder": {
+          "ok": true,
+          "repeatSame": true,
+          "spec": "artifact_078",
+          "story": "story_artifact_23",
+          "truth": "hyp.master_recorder.genuine_field_recorder_with_period_transport_repair",
+          "uid": "case_master_recorder"
+        }
+      },
+      "executed": true,
+      "id": "S9-ISSUE-02",
+      "name": "Fresh Stage 9 issuance remains one stable UID per case without duplicate paths",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_gauge": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.master_gauge.artifact.lens_heat_pattern",
+              "src.master_gauge.artifact.clip_service_marks",
+              "src.master_gauge.document.route_register"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_gauge.genuine_signal_lantern",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.master_gauge.artifact.lens_heat_pattern",
+            "src.master_gauge.document.route_register",
+            "src.master_gauge.document.signal_maker_practice",
+            "src.master_gauge.artifact.clip_service_marks",
+            "src.master_gauge.npc.hana_collection_context",
+            "src.master_gauge.reference.signaling_standard"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.master_gauge.artifact.lens_heat_pattern",
+              "src.master_gauge.artifact.clip_service_marks",
+              "src.master_gauge.document.route_register",
+              "src.master_gauge.reference.signaling_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_gauge.genuine_signal_lantern",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.master_gauge.artifact.lens_heat_pattern"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_gauge.genuine_signal_lantern",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mesh": "res://assets/artifacts/telephone.obj",
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.master_gauge.artifact.lens_heat_pattern",
+              "src.master_gauge.artifact.clip_service_marks",
+              "src.master_gauge.document.route_register",
+              "src.master_gauge.reference.signaling_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.master_gauge.genuine_lantern_with_later_lens_replacement",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "ok": true,
+          "recipe": "SIGNAL_LANTERN",
+          "wrongToolZero": true
+        },
+        "master_recorder": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.master_recorder.artifact.transport_scoring",
+              "src.master_recorder.artifact.period_repair_interface",
+              "src.master_recorder.document.broadcast_register"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_recorder.genuine_field_recorder_with_period_transport_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovered": [
+            "src.master_recorder.artifact.transport_scoring",
+            "src.master_recorder.document.broadcast_register",
+            "src.master_recorder.document.maker_transport_practice",
+            "src.master_recorder.artifact.period_repair_interface",
+            "src.master_recorder.npc.iris_service_context",
+            "src.master_recorder.reference.recording_standard"
+          ],
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.master_recorder.artifact.transport_scoring",
+              "src.master_recorder.artifact.period_repair_interface",
+              "src.master_recorder.document.broadcast_register",
+              "src.master_recorder.reference.recording_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_recorder.genuine_field_recorder_with_period_transport_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.master_recorder.artifact.transport_scoring"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_recorder.genuine_field_recorder_with_period_transport_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mesh": "res://assets/artifacts/model_02.obj",
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.master_recorder.artifact.transport_scoring",
+              "src.master_recorder.artifact.period_repair_interface",
+              "src.master_recorder.document.broadcast_register",
+              "src.master_recorder.reference.recording_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.master_recorder.untouched_period_field_recorder",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "ok": true,
+          "recipe": "WIRE_RECORDER",
+          "wrongToolZero": true
+        },
+        "pairIsolation": {
+          "swappedGauge": "DEFAULT",
+          "swappedRecorder": "DEFAULT"
+        }
+      },
+      "executed": true,
+      "id": "S9-REASON-03",
+      "name": "Stage 9 evidence drives fail-closed, mentor, credible, masterful and mistaken outcomes while pair renderers remain isolated",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_gauge": {
+          "loaded": true,
+          "ok": true,
+          "spec": "artifact_055",
+          "story": ""
+        },
+        "master_recorder": {
+          "loaded": true,
+          "ok": true,
+          "spec": "artifact_054",
+          "story": ""
+        }
+      },
+      "executed": true,
+      "id": "S9-LEGACY-04",
+      "name": "Legacy Stage 9 bindings remain exact and do not migrate to fresh 077/078 identities",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "keys": [
+          "ok",
+          "code",
+          "caseId",
+          "title",
+          "artifactDisplayName",
+          "briefing",
+          "centralQuestion",
+          "fictionNotice",
+          "reportPrompt",
+          "success",
+          "failure",
+          "hypotheses",
+          "evidence",
+          "availableEvidence",
+          "discoveredEvidence",
+          "selectedHypothesisId",
+          "citedEvidenceIds",
+          "resolved",
+          "resolutionResult",
+          "artifactId"
+        ],
+        "leaks": []
+      },
+      "executed": true,
+      "id": "S9-PUBLIC-05",
+      "name": "Stage 9 public dossier keeps hidden truth and internal source identifiers out of the player surface",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "lockIds": [
+          "master_recorder",
+          "master_gauge"
+        ]
+      },
+      "executed": true,
+      "id": "S9-LOCK-06",
+      "name": "Stage 9 authored files are present in the immutable lock manifest",
+      "passed": true
+    }
+  ]
+}

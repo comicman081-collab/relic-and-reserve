@@ -1,0 +1,30 @@
+# Godot editor/import cache and local tool runtimes
+.godot/
+.tools/
+
+# Local audit sandboxes and generated test profiles
+.codex*/
+.codex-*/
+qa/.runtime*/
+qa/.isolated_appdata/
+qa/**/*.console.log
+qa/**/*.log
+
+# Generated build/release outputs (Windows binaries are kept outside the source repo)
+builds/
+*.exe
+*.pck
+
+# Source-only youth academy pack; selected runtime tracks live under audio/
+/BGM/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.pyc
+__pycache__/
+
+# Godot regenerates import metadata from source assets
+*.import

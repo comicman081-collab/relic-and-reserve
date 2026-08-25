@@ -1,0 +1,55 @@
+{
+  "id": "artifact_050",
+  "displayName": "Juniper Precision Gauge X",
+  "category": "scientific_instruments",
+  "baseModel": "model_05.obj",
+  "maker": "maker_10",
+  "modelName": "Model 149",
+  "era": "1908-1920",
+  "materialSet": [
+    "material_05",
+    "material_08"
+  ],
+  "rarity": "uncommon",
+  "baseValue": 1041,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.6000000000000001
+  },
+  "collectorTags": [
+    "scientific_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_050"
+}

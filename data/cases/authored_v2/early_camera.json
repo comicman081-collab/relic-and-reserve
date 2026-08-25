@@ -1,0 +1,290 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage3-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "early_camera",
+  "act_id": "ACT_1",
+  "title": {
+    "en": "The Early Mechanical Camera",
+    "ko": "초기 기계식 카메라"
+  },
+  "briefing": {
+    "en": "A Cindervale camera bears an early-production silhouette, a dealer-style plate, and a remarkably clean interior. It could be an original, a period dealer conversion, or a later display reproduction. Record the materials and fluorescent traces before exhibition cleaning changes them.",
+    "ko": "신더베일 카메라는 초기 생산품의 윤곽, 판매점식 명판과 지나치게 깨끗한 내부를 함께 지닌다. 진품일 수도, 당대 판매점 개조품일 수도, 후대 전시용 복제품일 수도 있다. 전시 세척이 흔적을 바꾸기 전에 재료와 형광 반응을 기록하라."
+  },
+  "central_question": {
+    "en": "Is the camera genuine early production, a period dealer conversion, or a later display reproduction?",
+    "ko": "이 카메라는 초기 생산 진품인가, 당대 판매점 개조품인가, 아니면 후대 전시용 복제품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, museums, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 박물관과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report identifies the display reproduction without erasing the later object history that gives it museum context.",
+    "ko": "보고서는 전시용 복제품임을 밝히면서도 박물관 맥락을 이루는 후대 물건의 이력을 지우지 않는다."
+  },
+  "failure": {
+    "en": "The camera remains a study object while Hana reviews the difference between an early camera and a later museum display replica.",
+    "ko": "카메라는 연구용 물건으로 남고, 하나와 함께 초기 카메라와 후대 박물관 전시 복제품의 차이를 다시 검토한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 3 campaign desk.",
+      "ko": "스테이지 3 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "prolonged_uv_exposure_before_capture",
+        "source_ref": "src.early_camera.artifact.uv_label_fasteners",
+        "warning": {
+          "en": "Prolonged UV exposure can fade the fluorescent adhesive boundary before it is photographed.",
+          "ko": "자외선에 오래 노출하면 촬영 전에 형광 접착제 경계가 흐려질 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "An unsupported early-production attribution is reviewed with Hana before cataloguing.",
+        "ko": "근거가 부족한 초기 생산품 귀속은 목록 등록 전에 하나와 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_003",
+    "legacy_story_artifact_id": "story_artifact_09",
+    "display_name": {
+      "en": "Cindervale Display Camera CDP-78",
+      "ko": "신더베일 전시 카메라 CDP-78"
+    },
+    "authoring_truth_hypothesis_id": "hyp.early_camera.later_display_reproduction",
+    "player_prompt": {
+      "en": "Compare the body material, label adhesive, fasteners, and archive number before cleaning the display surface.",
+      "ko": "전시 표면을 세척하기 전에 몸체 재료, 명판 접착제, 고정 나사와 기록 번호를 대조하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.early_camera.genuine_early_production",
+      "label": {"en": "Genuine early production", "ko": "초기 생산 진품"},
+      "claim": {
+        "en": "The camera left Cindervale in its present early-production form and retains its original maker plate and mechanism.",
+        "ko": "카메라는 현재의 초기 생산 형태로 신더베일에서 출고되었고 원래 제작사 명판과 기구를 유지한다."
+      }
+    },
+    {
+      "id": "hyp.early_camera.period_dealer_conversion",
+      "label": {"en": "Period dealer conversion", "ko": "당대 판매점 개조"},
+      "claim": {
+        "en": "A genuine early body was modified by a period dealer with a replacement plate and viewing hardware.",
+        "ko": "초기 진품 몸체를 당대 판매점이 교체 명판과 관찰 장치로 개조했다."
+      }
+    },
+    {
+      "id": "hyp.early_camera.later_display_reproduction",
+      "label": {"en": "Later display reproduction", "ko": "후대 전시용 복제품"},
+      "claim": {
+        "en": "The whole object was commissioned later as a museum display reproduction using early Cindervale styling.",
+        "ko": "물건 전체가 초기 신더베일 양식을 본떠 후대 박물관 전시용 복제품으로 제작되었다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.early_camera.artifact.body_material_scan",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_003",
+      "reliability": "HIGH",
+      "label": {"en": "Body material scan", "ko": "몸체 재료 스캔"},
+      "text": {
+        "en": "A calibrated scan finds a postwar aluminium-silicon casting beneath the black finish and a synthetic filler uniform through protected screw wells. Genuine early Cindervale bodies used folded brass over wood; period dealer conversions reused those bodies rather than recasting them.",
+        "ko": "보정된 스캔에서 검은 마감 아래 전후 시기의 알루미늄-규소 주물과 가려진 나사 구멍까지 균일한 합성 충전재가 확인된다. 초기 신더베일 진품은 목재 위에 접은 황동을 사용했고, 당대 판매점 개조도 그 몸체를 재사용했지 새로 주조하지 않았다."
+      },
+      "unlock": {"action": "inspect", "target": "body_and_screw_wells", "requires": ["material_scanner"]},
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Scan one protected screw well only; repeated passes can warm the filled finish and disturb its surface.",
+          "ko": "가려진 나사 구멍 한 곳만 스캔하라. 반복하면 충전 마감이 달아올라 표면이 흐트러질 수 있다."
+        }
+      },
+      "independence": {"group": "body_material_chronology", "depends_on": []},
+      "citation_id": "cite.early_camera.artifact.body_material_scan"
+    },
+    {
+      "source_ref": "src.early_camera.artifact.uv_label_fasteners",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_003",
+      "reliability": "HIGH",
+      "label": {"en": "UV label and fastener record", "ko": "자외선 명판·고정 나사 기록"},
+      "text": {
+        "en": "A brief UV exposure reveals a bright optical-whitener halo around the dealer-style plate and matching fluorescence beneath every fastener head. The CDP-78 number is laser-cut through that adhesive layer, and all screw slots share fresh machine chatter rather than staggered service wear.",
+        "ko": "짧게 자외선을 비추자 판매점식 명판 둘레와 모든 고정 나사 머리 아래에서 광학 증백제의 밝은 형광이 일치한다. CDP-78 번호는 그 접착층을 지나 레이저로 절삭되었고, 모든 나사 홈에는 시차가 있는 수리 마모 대신 같은 시기의 기계 떨림 자국이 남아 있다."
+      },
+      "unlock": {
+        "action": "inspect_uv",
+        "target": "maker_plate_and_fasteners",
+        "requires": ["src.early_camera.artifact.body_material_scan", "uv_lamp"]
+      },
+      "risk": {
+        "destroyed_by": ["prolonged_uv_exposure_before_capture"],
+        "player_warning": {
+          "en": "Use one timed UV exposure and photograph immediately; a prolonged pass can fade the adhesive boundary.",
+          "ko": "시간을 정해 자외선을 한 번만 비추고 즉시 촬영하라. 오래 비추면 접착제 경계가 흐려질 수 있다."
+        }
+      },
+      "independence": {
+        "group": "label_fastener_sequence",
+        "depends_on": ["src.early_camera.artifact.body_material_scan"]
+      },
+      "citation_id": "cite.early_camera.artifact.uv_label_fasteners"
+    },
+    {
+      "source_ref": "src.early_camera.document.display_serial_register",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_18",
+      "document_id": "doc.early_camera.display_serial_register",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Harbour Museum display register", "ko": "항구 박물관 전시물 등록부"},
+      "text": {
+        "en": "The fictional 1978 register commissions display camera CDP-78 for a hands-on history room, specifying a cast shell, fixed shutter, laser-cut plate, and no claim of original Cindervale manufacture. A transfer line matches the chipped base corner now on the object.",
+        "ko": "가상의 1978년 등록부는 체험형 역사 전시실을 위해 전시 카메라 CDP-78을 주문하며 주물 외피, 고정 셔터와 레이저 절삭 명판을 명시하고 신더베일 원제품이라고 주장하지 않는다. 이관 항목의 받침 모서리 깨짐도 현재 물건과 일치한다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "document_18",
+        "requires": ["src.early_camera.artifact.body_material_scan"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "museum_display_commission",
+        "depends_on": ["src.early_camera.artifact.body_material_scan"]
+      },
+      "citation_id": "cite.early_camera.document.display_serial_register"
+    },
+    {
+      "source_ref": "src.early_camera.npc.hana_catalog_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "hana_mire",
+      "npc_id": "hana_mire",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Dr. Hana Mire's catalogue context", "ko": "하나 미레 박사의 목록 맥락"},
+      "text": {
+        "en": "Hana says older museum cards sometimes shortened display reproduction to early camera, creating the present confusion. She recognizes the CDP prefix in other teaching props but relies on the material record and commission register, not institutional memory, for the conclusion.",
+        "ko": "하나는 오래된 박물관 카드가 전시용 복제품을 종종 초기 카메라라고 줄여 적어 지금의 혼동이 생겼다고 말한다. 다른 교육용 소품에서도 CDP 접두어를 봤지만, 결론은 기관의 기억이 아니라 재료 기록과 주문 등록부에 근거해야 한다고 선을 긋는다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "hana_mire",
+        "requires": ["src.early_camera.artifact.uv_label_fasteners", "src.early_camera.document.display_serial_register"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "curatorial_catalog_context",
+        "depends_on": ["src.early_camera.artifact.uv_label_fasteners", "src.early_camera.document.display_serial_register"]
+      },
+      "citation_id": "cite.early_camera.npc.hana_catalog_context"
+    },
+    {
+      "source_ref": "src.early_camera.reference.cindervale_construction_guide",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "history_03",
+      "reference_id": "ref.cindervale.model102_construction",
+      "reliability": "HIGH",
+      "label": {"en": "Cindervale Model 102 construction guide", "ko": "신더베일 모델 102 제작 지침"},
+      "text": {
+        "en": "The fictional Cindervale guide shows folded-brass bodies, hand-stamped C-series numbers, and offset holes left by authorized period dealer conversions. It contains no CDP prefix, cast shell, synthetic filler, or laser-cut plate matching the examined object.",
+        "ko": "가상의 신더베일 지침은 접은 황동 몸체, 손으로 타각한 C 계열 번호와 당대 공인 판매점 개조가 남기는 어긋난 구멍을 보여 준다. 검사한 물건과 같은 CDP 접두어, 주물 외피, 합성 충전재나 레이저 절삭 명판은 없다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": ["src.early_camera.artifact.uv_label_fasteners", "reference_database"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "independent_cindervale_reference",
+        "depends_on": ["src.early_camera.artifact.uv_label_fasteners"]
+      },
+      "citation_id": "cite.early_camera.reference.cindervale_construction_guide"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.early_camera.artifact.body_material_scan",
+      "source_ref": "src.early_camera.artifact.body_material_scan",
+      "label": {"en": "Object scan: body chronology", "ko": "실물 스캔: 몸체 연대"},
+      "locator": {"en": "Material record A-1, body and screw wells", "ko": "재료 기록 A-1, 몸체와 나사 구멍"}
+    },
+    {
+      "id": "cite.early_camera.artifact.uv_label_fasteners",
+      "source_ref": "src.early_camera.artifact.uv_label_fasteners",
+      "label": {"en": "UV record: plate and fasteners", "ko": "자외선 기록: 명판과 고정 나사"},
+      "locator": {"en": "Timed UV record A-2, CDP-78 plate", "ko": "시간 제한 자외선 기록 A-2, CDP-78 명판"}
+    },
+    {
+      "id": "cite.early_camera.document.display_serial_register",
+      "source_ref": "src.early_camera.document.display_serial_register",
+      "label": {"en": "Harbour Museum register CDP-78", "ko": "항구 박물관 등록부 CDP-78"},
+      "locator": {"en": "Case document D-18, 1978 commission line", "ko": "사건 문서 D-18, 1978년 주문 항목"}
+    },
+    {
+      "id": "cite.early_camera.npc.hana_catalog_context",
+      "source_ref": "src.early_camera.npc.hana_catalog_context",
+      "label": {"en": "Interview with Dr. Hana Mire", "ko": "하나 미레 박사 면담"},
+      "locator": {"en": "Curatorial interview N-1", "ko": "학예 면담 N-1"}
+    },
+    {
+      "id": "cite.early_camera.reference.cindervale_construction_guide",
+      "source_ref": "src.early_camera.reference.cindervale_construction_guide",
+      "label": {"en": "Cindervale Model 102 guide", "ko": "신더베일 모델 102 지침"},
+      "locator": {"en": "Fictional maker archive H-3, construction plate 6", "ko": "가상 제작사 기록 H-3, 제작 도판 6"}
+    }
+  ],
+  "evidence_links": [
+    {"id": "link.camera.material_supports_reproduction", "source_ref": "src.early_camera.artifact.body_material_scan", "hypothesis_id": "hyp.early_camera.later_display_reproduction", "relation": "SUPPORT", "weight": 0.9, "independence_group": "body_material_chronology", "citation_id": "cite.early_camera.artifact.body_material_scan"},
+    {"id": "link.camera.material_refutes_early", "source_ref": "src.early_camera.artifact.body_material_scan", "hypothesis_id": "hyp.early_camera.genuine_early_production", "relation": "REFUTE", "weight": 0.85, "independence_group": "body_material_chronology", "citation_id": "cite.early_camera.artifact.body_material_scan"},
+    {"id": "link.camera.material_refutes_conversion", "source_ref": "src.early_camera.artifact.body_material_scan", "hypothesis_id": "hyp.early_camera.period_dealer_conversion", "relation": "REFUTE", "weight": 0.75, "independence_group": "body_material_chronology", "citation_id": "cite.early_camera.artifact.body_material_scan"},
+    {"id": "link.camera.uv_supports_reproduction", "source_ref": "src.early_camera.artifact.uv_label_fasteners", "hypothesis_id": "hyp.early_camera.later_display_reproduction", "relation": "SUPPORT", "weight": 0.95, "independence_group": "label_fastener_sequence", "citation_id": "cite.early_camera.artifact.uv_label_fasteners"},
+    {"id": "link.camera.uv_refutes_early", "source_ref": "src.early_camera.artifact.uv_label_fasteners", "hypothesis_id": "hyp.early_camera.genuine_early_production", "relation": "REFUTE", "weight": 0.9, "independence_group": "label_fastener_sequence", "citation_id": "cite.early_camera.artifact.uv_label_fasteners"},
+    {"id": "link.camera.uv_refutes_conversion", "source_ref": "src.early_camera.artifact.uv_label_fasteners", "hypothesis_id": "hyp.early_camera.period_dealer_conversion", "relation": "REFUTE", "weight": 0.8, "independence_group": "label_fastener_sequence", "citation_id": "cite.early_camera.artifact.uv_label_fasteners"},
+    {"id": "link.camera.register_supports_reproduction", "source_ref": "src.early_camera.document.display_serial_register", "hypothesis_id": "hyp.early_camera.later_display_reproduction", "relation": "SUPPORT", "weight": 0.95, "independence_group": "museum_display_commission", "citation_id": "cite.early_camera.document.display_serial_register"},
+    {"id": "link.camera.register_refutes_early", "source_ref": "src.early_camera.document.display_serial_register", "hypothesis_id": "hyp.early_camera.genuine_early_production", "relation": "REFUTE", "weight": 0.9, "independence_group": "museum_display_commission", "citation_id": "cite.early_camera.document.display_serial_register"},
+    {"id": "link.camera.register_refutes_conversion", "source_ref": "src.early_camera.document.display_serial_register", "hypothesis_id": "hyp.early_camera.period_dealer_conversion", "relation": "REFUTE", "weight": 0.85, "independence_group": "museum_display_commission", "citation_id": "cite.early_camera.document.display_serial_register"},
+    {"id": "link.camera.hana_supports_reproduction", "source_ref": "src.early_camera.npc.hana_catalog_context", "hypothesis_id": "hyp.early_camera.later_display_reproduction", "relation": "SUPPORT", "weight": 0.55, "independence_group": "curatorial_catalog_context", "citation_id": "cite.early_camera.npc.hana_catalog_context"},
+    {"id": "link.camera.hana_refutes_early", "source_ref": "src.early_camera.npc.hana_catalog_context", "hypothesis_id": "hyp.early_camera.genuine_early_production", "relation": "REFUTE", "weight": 0.45, "independence_group": "curatorial_catalog_context", "citation_id": "cite.early_camera.npc.hana_catalog_context"},
+    {"id": "link.camera.reference_supports_reproduction", "source_ref": "src.early_camera.reference.cindervale_construction_guide", "hypothesis_id": "hyp.early_camera.later_display_reproduction", "relation": "SUPPORT", "weight": 0.85, "independence_group": "independent_cindervale_reference", "citation_id": "cite.early_camera.reference.cindervale_construction_guide"},
+    {"id": "link.camera.reference_refutes_early", "source_ref": "src.early_camera.reference.cindervale_construction_guide", "hypothesis_id": "hyp.early_camera.genuine_early_production", "relation": "REFUTE", "weight": 0.8, "independence_group": "independent_cindervale_reference", "citation_id": "cite.early_camera.reference.cindervale_construction_guide"},
+    {"id": "link.camera.reference_refutes_conversion", "source_ref": "src.early_camera.reference.cindervale_construction_guide", "hypothesis_id": "hyp.early_camera.period_dealer_conversion", "relation": "REFUTE", "weight": 0.75, "independence_group": "independent_cindervale_reference", "citation_id": "cite.early_camera.reference.cindervale_construction_guide"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.early_camera.later_display_reproduction",
+    "required_source_refs": [
+      "src.early_camera.artifact.body_material_scan",
+      "src.early_camera.artifact.uv_label_fasteners",
+      "src.early_camera.document.display_serial_register",
+      "src.early_camera.reference.cindervale_construction_guide"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings from four independent groups. Date the body material and label, connect CDP-78 to its display commission, and distinguish a whole reproduction from a period conversion.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 몸체 재료와 명판의 연대를 밝히고 CDP-78을 전시 주문 기록에 연결하며 전체 복제품과 당대 개조품을 구분하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "minimum_citations": 2},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

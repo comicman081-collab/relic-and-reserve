@@ -1,0 +1,311 @@
+{
+  "executed": 7,
+  "failed": 0,
+  "passed": 7,
+  "skipped": 0,
+  "suite": "R3 Auction Listing Balance",
+  "tests": [
+    {
+      "evidence": {
+        "HIGH": {
+          "certain": {
+            "band": "HIGH",
+            "risk": "BALANCED"
+          },
+          "likely": {
+            "band": "HIGH",
+            "risk": "UNDERCLAIM"
+          },
+          "uncertain": {
+            "band": "HIGH",
+            "risk": "UNDERCLAIM"
+          }
+        },
+        "LOW": {
+          "certain": {
+            "band": "LOW",
+            "risk": "OVERCLAIM"
+          },
+          "likely": {
+            "band": "LOW",
+            "risk": "OVERCLAIM"
+          },
+          "uncertain": {
+            "band": "LOW",
+            "risk": "BALANCED"
+          }
+        },
+        "MEDIUM": {
+          "certain": {
+            "band": "MEDIUM",
+            "risk": "OVERCLAIM"
+          },
+          "likely": {
+            "band": "MEDIUM",
+            "risk": "BALANCED"
+          },
+          "uncertain": {
+            "band": "MEDIUM",
+            "risk": "UNDERCLAIM"
+          }
+        }
+      },
+      "executed": true,
+      "id": "AUCTION-BALANCE-SUPPORT-01",
+      "name": "Public confidence, known provenance and visible condition produce presentation-safe low, medium and high support bands with calibrated claim risk",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authoredScrutiny": {
+          "full": 0.93,
+          "quarter": 0.9825
+        },
+        "high": {
+          "CERTAIN": 1.0352,
+          "LIKELY": 0.9868,
+          "UNCERTAIN": 0.9296
+        },
+        "low": {
+          "CERTAIN": 0.8064,
+          "LIKELY": 0.9472,
+          "UNCERTAIN": 1.0132
+        },
+        "medium": {
+          "CERTAIN": 0.9384,
+          "LIKELY": 1.022,
+          "UNCERTAIN": 0.9736
+        }
+      },
+      "executed": true,
+      "id": "AUCTION-BALANCE-DISCLOSURE-01",
+      "name": "Uncertain, likely and certain are claim strengths: low support favors caution, medium support favors likely, and high support favors certain without a double multiplier",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "supportedCertain": {
+          "1": 1.0352,
+          "10": 1.0352,
+          "5": 1.0352
+        },
+        "unsupportedCertain": {
+          "1": 0.8064,
+          "10": 0.644074296475458,
+          "5": 0.746229892464
+        }
+      },
+      "executed": true,
+      "id": "AUCTION-BALANCE-DISCLOSURE-02",
+      "name": "Supported disclosure bonuses stay Stage-independent while unsupported claims alone receive the 7-percent Stage pressure",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "factor": 0.9384,
+        "reasons": [
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_UNCLEAR",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "support": {
+          "band": "MEDIUM",
+          "risk": "OVERCLAIM"
+        }
+      },
+      "executed": true,
+      "id": "AUCTION-BALANCE-PRIVACY-01",
+      "name": "Disclosure support, calibration and causal reasons are invariant to hidden truth, rarity, value and originality changes",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "globalRngUnchanged": true,
+        "repeatEqual": true,
+        "variance": [
+          {
+            "bidderId": "bidder_01",
+            "variance": 0.931207835674286
+          },
+          {
+            "bidderId": "bidder_02",
+            "variance": 0.947438836097717
+          },
+          {
+            "bidderId": "bidder_03",
+            "variance": 1.06767678260803
+          },
+          {
+            "bidderId": "bidder_04",
+            "variance": 0.973162889480591
+          },
+          {
+            "bidderId": "bidder_05",
+            "variance": 0.933609843254089
+          },
+          {
+            "bidderId": "bidder_06",
+            "variance": 1.05637431144714
+          }
+        ]
+      },
+      "executed": true,
+      "id": "AUCTION-BALANCE-RNG-01",
+      "name": "Price and disclosure counterfactuals share bidder variance while repeated auctions remain deterministic and do not consume the global RNG",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "bids": [],
+        "hammer": 0,
+        "opening": 100,
+        "reasons": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "sale": "NO_SALE"
+      },
+      "executed": true,
+      "id": "AUCTION-BALANCE-HAMMER-01",
+      "name": "An opening term is not a bid: a no-bid auction reports hammer zero and remains a no-sale",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "averageSoldHammer": {
+          "BALANCED": 1857.16981132075,
+          "FAST": 1741.48333333333,
+          "HIGH": 968.318181818182
+        },
+        "averageSoldHammerRatio": {
+          "BALANCED": 0.813621964500009,
+          "FAST": 0.794926383627312,
+          "HIGH": 0.837558485386517
+        },
+        "deterministic": true,
+        "fixtures": 60,
+        "legacyReservePressureNeutral": true,
+        "matchedFailures": [
+          {
+            "appraisal": 91,
+            "balanced": 81,
+            "fast": 72,
+            "high": 75
+          },
+          {
+            "appraisal": 91,
+            "balanced": 81,
+            "fast": 72,
+            "high": 75
+          },
+          {
+            "appraisal": 91,
+            "balanced": 81,
+            "fast": 72,
+            "high": 75
+          },
+          {
+            "appraisal": 98,
+            "balanced": 86,
+            "fast": 76,
+            "high": 80
+          },
+          {
+            "appraisal": 1599,
+            "balanced": 1283,
+            "fast": 1309,
+            "high": 1315
+          },
+          {
+            "appraisal": 1599,
+            "balanced": 1283,
+            "fast": 1309,
+            "high": 1315
+          },
+          {
+            "appraisal": 1599,
+            "balanced": 1283,
+            "fast": 1309,
+            "high": 1315
+          },
+          {
+            "appraisal": 1599,
+            "balanced": 1283,
+            "fast": 1309,
+            "high": 1315
+          },
+          {
+            "appraisal": 1599,
+            "balanced": 1283,
+            "fast": 1309,
+            "high": 1315
+          },
+          {
+            "appraisal": 1691,
+            "balanced": 1364,
+            "fast": 1396,
+            "high": 1396
+          },
+          {
+            "appraisal": 1843,
+            "balanced": 1492,
+            "fast": 1533,
+            "high": 1527
+          },
+          {
+            "appraisal": 2616,
+            "balanced": 2086,
+            "fast": 2116,
+            "high": 2147
+          },
+          {
+            "appraisal": 1126,
+            "balanced": 908,
+            "fast": 934,
+            "high": 929
+          },
+          {
+            "appraisal": 1126,
+            "balanced": 908,
+            "fast": 934,
+            "high": 929
+          },
+          {
+            "appraisal": 1388,
+            "balanced": 1113,
+            "fast": 1138,
+            "high": 1140
+          },
+          {
+            "appraisal": 2093,
+            "balanced": 1669,
+            "fast": 1695,
+            "high": 1717
+          },
+          {
+            "appraisal": 2093,
+            "balanced": 1669,
+            "fast": 1695,
+            "high": 1717
+          }
+        ],
+        "matchedUpsideCases": 22,
+        "sales": {
+          "balanced": 53,
+          "fast": 60,
+          "high": 22
+        },
+        "sharedVariance": true
+      },
+      "executed": true,
+      "id": "AUCTION-BALANCE-PRICE-01",
+      "name": "Across diverse artifacts and seeds, fast sale rate is at least balanced, balanced is at least high, and higher reserves provide sold-hammer upside under shared bidder variance",
+      "passed": true
+    }
+  ]
+}

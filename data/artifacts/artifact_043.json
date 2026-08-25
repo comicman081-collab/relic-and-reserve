@@ -1,0 +1,54 @@
+{
+  "id": "artifact_043",
+  "displayName": "Cindervale Scientific Instrument Q",
+  "category": "scientific_instruments",
+  "baseModel": "model_13.obj",
+  "maker": "maker_03",
+  "modelName": "Model 142",
+  "era": "1900-1912",
+  "materialSet": [
+    "material_13",
+    "material_01"
+  ],
+  "rarity": "rare",
+  "baseValue": 908,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART"
+  ],
+  "possibleFaults": [
+    "MECHANICAL_WEAR",
+    "MISSING_PART",
+    "CRACK"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.4
+  },
+  "collectorTags": [
+    "scientific_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_043"
+}

@@ -1,0 +1,722 @@
+[
+  {
+    "id": "artifact_061",
+    "displayName": "Meridian Tide Chronograph",
+    "category": "horological_instruments",
+    "maker": "maker_01",
+    "model": "MT-1896 Deck Chronograph",
+    "modelName": "MT-1896 Deck Chronograph",
+    "era": "1892-1898",
+    "baseValue": 1280,
+    "rarity": "rare",
+    "materialSet": ["material_01", "material_09"],
+    "compatibleDamages": ["DUST", "GRIME", "TARNISH", "MECHANICAL_WEAR", "MISSING_PART"],
+    "possibleFaults": ["MECHANICAL_WEAR", "MISSING_PART", "TARNISH"],
+    "possibleClues": ["SERIAL_PATTERN", "MECHANISM", "TOOL_MARK", "PATINA"],
+    "restorationProfile": {"cleaning": 0.62, "repair": 0.74, "patinaRisk": 0.26},
+    "collectorTags": ["mechanical_instruments", "maritime", "precision_timekeeping"],
+    "visualVariant": "stage_variant_061",
+    "baseModel": "clock.obj",
+    "inspectionObservable": {
+      "en": "The salt-darkened bezel carries evenly spaced service nicks, while one blued screw is conspicuously unworn.",
+      "ko": "소금기에 검게 변한 베젤에는 정비 흔적이 고르게 남았지만, 푸른 나사 하나만 유난히 마모가 없다."
+    },
+    "repairProfile": {
+      "requiredTools": ["precision_screwdriver", "polishing_pad"],
+      "toleranceMm": 0.08,
+      "interventionTradeoff": {"en": "Correcting beat error improves timing but erases useful service history if the regulator is polished.", "ko": "오차를 바로잡으면 정확도는 오르지만 조속기를 연마하면 중요한 정비 이력이 사라진다."},
+      "costPressure": 1.02
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["clockmaker", "museum_buyer"],
+      "conditionSensitivity": 0.84,
+      "disclosureScrutiny": 0.88,
+      "provenanceScrutiny": 0.91,
+      "reserveStrategy": {"mode": "evidence_backed", "appraisalRatio": 0.63}
+    }
+  },
+  {
+    "id": "artifact_062",
+    "displayName": "Vellum Bellows Camera",
+    "category": "photographic_apparatus",
+    "maker": "maker_02",
+    "model": "VB No. 4 Folding Camera",
+    "modelName": "VB No. 4 Folding Camera",
+    "era": "1895-1901",
+    "baseValue": 1365,
+    "rarity": "uncommon",
+    "materialSet": ["material_11", "material_09", "material_05"],
+    "compatibleDamages": ["DUST", "GRIME", "CRACK", "FADING", "WATER_DAMAGE"],
+    "possibleFaults": ["CRACK", "FADING", "WATER_DAMAGE"],
+    "possibleClues": ["CONSTRUCTION_METHOD", "COMPONENT_STYLE", "LABEL", "REPAIR_TRACE"],
+    "restorationProfile": {"cleaning": 0.55, "repair": 0.48, "patinaRisk": 0.42},
+    "collectorTags": ["optical_devices", "early_photography", "field_camera"],
+    "visualVariant": "stage_variant_062",
+    "baseModel": "camera.obj",
+    "inspectionObservable": {
+      "en": "Three bellows corners flex with different resistance, and the rear standard leans slightly toward the focusing rail.",
+      "ko": "주름막의 세 모서리가 서로 다른 저항으로 접히며, 후면 스탠더드는 초점 레일 쪽으로 살짝 기울어 있다."
+    },
+    "repairProfile": {
+      "requiredTools": ["cotton_swab", "repair_toolkit"],
+      "toleranceMm": 0.16,
+      "interventionTradeoff": {"en": "Sealing light leaks stabilizes use, but new backing cloth makes the original fold pattern harder to authenticate.", "ko": "빛샘을 막으면 사용성은 좋아지지만 새 안감은 원래의 접힘 무늬 감정을 어렵게 한다."},
+      "costPressure": 1.04
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["private_collector", "design_scholar"],
+      "conditionSensitivity": 0.79,
+      "disclosureScrutiny": 0.86,
+      "provenanceScrutiny": 0.83,
+      "reserveStrategy": {"mode": "condition_band", "appraisalRatio": 0.6}
+    }
+  },
+  {
+    "id": "artifact_063",
+    "displayName": "Helix Telegraph Sounder",
+    "category": "telegraphy_equipment",
+    "maker": "maker_03",
+    "model": "HS-7 Relay Sounder",
+    "modelName": "HS-7 Relay Sounder",
+    "era": "1898-1904",
+    "baseValue": 1455,
+    "rarity": "rare",
+    "materialSet": ["material_06", "material_12", "material_04"],
+    "compatibleDamages": ["DUST", "GRIME", "CORROSION", "MECHANICAL_WEAR", "BROKEN_PART"],
+    "possibleFaults": ["CORROSION", "MECHANICAL_WEAR", "BROKEN_PART"],
+    "possibleClues": ["SERIAL_PATTERN", "MATERIAL", "MECHANISM", "REPAIR_TRACE", "PROVENANCE"],
+    "restorationProfile": {"cleaning": 0.69, "repair": 0.67, "patinaRisk": 0.31},
+    "collectorTags": ["office_machines", "communications", "electromechanical"],
+    "visualVariant": "stage_variant_063",
+    "baseModel": "radio.obj",
+    "inspectionObservable": {
+      "en": "The armature strikes off-center, leaving a crescent polish on the stop and a darker unused face beside it.",
+      "ko": "전기자가 중심에서 벗어나 닿아 스토퍼에 초승달 모양 광택과 사용되지 않은 어두운 면이 나란히 보인다."
+    },
+    "repairProfile": {
+      "requiredTools": ["rust_treatment", "precision_screwdriver"],
+      "toleranceMm": 0.11,
+      "interventionTradeoff": {"en": "Realigning the armature restores tone, while replacing the oxidized coil sacrifices its traceable winding style.", "ko": "전기자 정렬은 소리를 되살리지만 산화된 코일 교체는 식별 가능한 권선 방식을 잃게 한다."},
+      "costPressure": 1.06
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["historian", "mechanical_enthusiast"],
+      "conditionSensitivity": 0.76,
+      "disclosureScrutiny": 0.9,
+      "provenanceScrutiny": 0.87,
+      "reserveStrategy": {"mode": "function_verified", "appraisalRatio": 0.64}
+    }
+  },
+  {
+    "id": "artifact_064",
+    "displayName": "Aurelia Brass Orrery",
+    "category": "astronomical_models",
+    "maker": "maker_04",
+    "model": "ABO Schoolroom Orrery",
+    "modelName": "ABO Schoolroom Orrery",
+    "era": "1900-1907",
+    "baseValue": 1540,
+    "rarity": "very_rare",
+    "materialSet": ["material_01", "material_10", "material_04"],
+    "compatibleDamages": ["DUST", "TARNISH", "SCRATCH", "DENT", "MECHANICAL_WEAR"],
+    "possibleFaults": ["DENT", "MECHANICAL_WEAR", "TARNISH"],
+    "possibleClues": ["CONSTRUCTION_METHOD", "MECHANISM", "WEAR_PATTERN", "TOOL_MARK", "LABEL"],
+    "restorationProfile": {"cleaning": 0.58, "repair": 0.71, "patinaRisk": 0.55},
+    "collectorTags": ["scientific_instruments", "astronomy", "education"],
+    "visualVariant": "stage_variant_064",
+    "baseModel": "model_07.obj",
+    "inspectionObservable": {
+      "en": "The outer orbit ring is hand-scribed in uneven degrees, but the central gear teeth are machine-uniform.",
+      "ko": "바깥 궤도 고리는 불균일한 눈금이 손으로 새겨졌으나 중앙 기어 톱니는 기계 가공처럼 일정하다."
+    },
+    "repairProfile": {
+      "requiredTools": ["soft_brush", "repair_toolkit"],
+      "toleranceMm": 0.14,
+      "interventionTradeoff": {"en": "Straightening orbital arms improves motion but can flatten the period hammer marks used for dating.", "ko": "궤도 암을 펴면 움직임은 좋아지지만 연대 판단에 쓰이는 당시 망치 자국이 눌릴 수 있다."},
+      "costPressure": 1.08
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["museum_buyer", "archive_curator"],
+      "conditionSensitivity": 0.72,
+      "disclosureScrutiny": 0.92,
+      "provenanceScrutiny": 0.94,
+      "reserveStrategy": {"mode": "provenance_premium", "appraisalRatio": 0.67}
+    }
+  },
+  {
+    "id": "artifact_065",
+    "displayName": "Sable Cylinder Phonograph",
+    "category": "acoustic_reproducers",
+    "maker": "maker_05",
+    "model": "SCP Parlour No. 2",
+    "modelName": "SCP Parlour No. 2",
+    "era": "1902-1909",
+    "baseValue": 1635,
+    "rarity": "rare",
+    "materialSet": ["material_04", "material_01", "material_11"],
+    "compatibleDamages": ["DUST", "GRIME", "SCRATCH", "MECHANICAL_WEAR", "MISSING_PART", "WATER_DAMAGE"],
+    "possibleFaults": ["MECHANICAL_WEAR", "MISSING_PART", "WATER_DAMAGE"],
+    "possibleClues": ["SERIAL_PATTERN", "COMPONENT_STYLE", "MECHANISM", "PATINA", "PROVENANCE"],
+    "restorationProfile": {"cleaning": 0.64, "repair": 0.78, "patinaRisk": 0.37},
+    "collectorTags": ["vintage_audio", "recorded_sound", "parlour"],
+    "visualVariant": "stage_variant_065",
+    "baseModel": "record_player.obj",
+    "inspectionObservable": {
+      "en": "The mandrel rotates smoothly until one point, where the feed screw clicks beneath a varnish-dark repair pin.",
+      "ko": "맨드릴은 한 지점까지 부드럽게 돌다가 바니시로 어두워진 수리 핀 아래에서 이송 나사가 딸깍거린다."
+    },
+    "repairProfile": {
+      "requiredTools": ["precision_screwdriver", "mild_cleaner"],
+      "toleranceMm": 0.09,
+      "interventionTradeoff": {"en": "A replacement feed nut removes the skip but reduces originality and may alter playback pitch.", "ko": "이송 너트를 교체하면 튐은 사라지지만 원형성이 낮아지고 재생 음정이 달라질 수 있다."},
+      "costPressure": 1.1
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["restoration_collector", "private_collector"],
+      "conditionSensitivity": 0.89,
+      "disclosureScrutiny": 0.91,
+      "provenanceScrutiny": 0.8,
+      "reserveStrategy": {"mode": "originality_floor", "appraisalRatio": 0.65}
+    }
+  },
+  {
+    "id": "artifact_066",
+    "displayName": "Cobalt Surveyor Transit",
+    "category": "geodetic_instruments",
+    "maker": "maker_06",
+    "model": "CST Mountain Transit",
+    "modelName": "CST Mountain Transit",
+    "era": "1905-1912",
+    "baseValue": 1725,
+    "rarity": "very_rare",
+    "materialSet": ["material_06", "material_09", "material_10"],
+    "compatibleDamages": ["DUST", "RUST", "CORROSION", "DENT", "MECHANICAL_WEAR"],
+    "possibleFaults": ["RUST", "DENT", "MECHANICAL_WEAR"],
+    "possibleClues": ["MATERIAL", "CONSTRUCTION_METHOD", "SERIAL_PATTERN", "WEAR_PATTERN", "REPAIR_TRACE"],
+    "restorationProfile": {"cleaning": 0.73, "repair": 0.69, "patinaRisk": 0.29},
+    "collectorTags": ["scientific_instruments", "surveying", "expedition"],
+    "visualVariant": "stage_variant_066",
+    "baseModel": "model_06.obj",
+    "inspectionObservable": {
+      "en": "The horizontal bubble centers only when the foot screws form an asymmetric triangle, suggesting a bent tribrach plate.",
+      "ko": "수평 기포는 조정 나사들이 비대칭 삼각형을 이룰 때만 중앙에 와서 트라이브랙 판의 휨을 시사한다."
+    },
+    "repairProfile": {
+      "requiredTools": ["precision_scale", "rust_treatment", "repair_toolkit"],
+      "toleranceMm": 0.05,
+      "interventionTradeoff": {"en": "Plate correction recovers calibration, but aggressive leveling can fracture the aged vial mount.", "ko": "판 교정은 측정 정확도를 되찾지만 과도한 수평 조정은 노후한 기포관 마운트를 깨뜨릴 수 있다."},
+      "costPressure": 1.12
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["museum_buyer", "historian"],
+      "conditionSensitivity": 0.93,
+      "disclosureScrutiny": 0.89,
+      "provenanceScrutiny": 0.93,
+      "reserveStrategy": {"mode": "calibration_certificate", "appraisalRatio": 0.69}
+    }
+  },
+  {
+    "id": "artifact_067",
+    "displayName": "Marquetry Automaton Bird",
+    "category": "mechanical_automata",
+    "maker": "maker_07",
+    "model": "MAB Salon Chanter",
+    "modelName": "MAB Salon Chanter",
+    "era": "1907-1914",
+    "baseValue": 1820,
+    "rarity": "very_rare",
+    "materialSet": ["material_04", "material_12", "material_14"],
+    "compatibleDamages": ["DUST", "GRIME", "TARNISH", "MECHANICAL_WEAR", "BROKEN_PART", "MISSING_PART"],
+    "possibleFaults": ["BROKEN_PART", "MISSING_PART", "MECHANICAL_WEAR"],
+    "possibleClues": ["CONSTRUCTION_METHOD", "COMPONENT_STYLE", "TOOL_MARK", "REPAIR_TRACE", "PATINA"],
+    "restorationProfile": {"cleaning": 0.51, "repair": 0.82, "patinaRisk": 0.61},
+    "collectorTags": ["mechanical_instruments", "automata", "decorative_arts"],
+    "visualVariant": "stage_variant_067",
+    "baseModel": "music_box.obj",
+    "inspectionObservable": {
+      "en": "A feathered wing rises half a beat late, exposing a darker pivot and a replacement spring with modern winding pitch.",
+      "ko": "깃털 날개 하나가 반 박자 늦게 올라가며 더 어두운 축과 현대식 감김 간격의 교체 스프링을 드러낸다."
+    },
+    "repairProfile": {
+      "requiredTools": ["repair_toolkit", "precision_screwdriver", "soft_brush"],
+      "toleranceMm": 0.07,
+      "interventionTradeoff": {"en": "Synchronizing the cams restores the song gesture but risks losing the maker's irregular hand timing.", "ko": "캠을 동기화하면 노래 동작은 돌아오지만 제작자의 불규칙한 수공 타이밍이 사라질 수 있다."},
+      "costPressure": 1.14
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["private_collector", "interior_decorator"],
+      "conditionSensitivity": 0.9,
+      "disclosureScrutiny": 0.84,
+      "provenanceScrutiny": 0.88,
+      "reserveStrategy": {"mode": "demonstration_premium", "appraisalRatio": 0.7}
+    }
+  },
+  {
+    "id": "artifact_068",
+    "displayName": "Porcelain Apothecary Balance",
+    "category": "pharmaceutical_scales",
+    "maker": "maker_08",
+    "model": "PAB Dispensary Set",
+    "modelName": "PAB Dispensary Set",
+    "era": "1910-1917",
+    "baseValue": 1910,
+    "rarity": "rare",
+    "materialSet": ["material_07", "material_01", "material_14"],
+    "compatibleDamages": ["DUST", "GRIME", "TARNISH", "CRACK", "BROKEN_PART"],
+    "possibleFaults": ["CRACK", "BROKEN_PART", "TARNISH"],
+    "possibleClues": ["MATERIAL", "LABEL", "WEAR_PATTERN", "PROVENANCE", "SERIAL_PATTERN"],
+    "restorationProfile": {"cleaning": 0.47, "repair": 0.63, "patinaRisk": 0.68},
+    "collectorTags": ["scientific_instruments", "medical_history", "porcelain"],
+    "visualVariant": "stage_variant_068",
+    "baseModel": "vase.obj",
+    "inspectionObservable": {
+      "en": "One pan's cobalt dosage marks continue beneath a hairline glaze crack, while the opposite pan's marks stop at its rim.",
+      "ko": "한쪽 접시의 코발트 용량 표시는 유약 실금 아래로 이어지지만 반대쪽 표시는 가장자리에서 끊긴다."
+    },
+    "repairProfile": {
+      "requiredTools": ["cotton_swab", "material_scanner"],
+      "toleranceMm": 0.18,
+      "interventionTradeoff": {"en": "Consolidating the crack protects weighing geometry, yet excess fill obscures the underglaze sequence.", "ko": "실금을 보강하면 저울 형상은 지키지만 충전재가 많으면 유약 아래 문양 순서를 가린다."},
+      "costPressure": 1.16
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["archive_curator", "museum_buyer"],
+      "conditionSensitivity": 0.81,
+      "disclosureScrutiny": 0.93,
+      "provenanceScrutiny": 0.92,
+      "reserveStrategy": {"mode": "matched_set", "appraisalRatio": 0.66}
+    }
+  },
+  {
+    "id": "artifact_069",
+    "displayName": "Nickel Cipher Typewriter",
+    "category": "cryptographic_office_machines",
+    "maker": "maker_09",
+    "model": "NCT Diplomatic 12",
+    "modelName": "NCT Diplomatic 12",
+    "era": "1912-1919",
+    "baseValue": 2010,
+    "rarity": "very_rare",
+    "materialSet": ["material_10", "material_06", "material_08"],
+    "compatibleDamages": ["DUST", "GRIME", "RUST", "MECHANICAL_WEAR", "PAINT_LOSS", "MISSING_PART"],
+    "possibleFaults": ["RUST", "PAINT_LOSS", "MISSING_PART"],
+    "possibleClues": ["SERIAL_PATTERN", "MECHANISM", "LABEL", "TOOL_MARK", "PROVENANCE"],
+    "restorationProfile": {"cleaning": 0.66, "repair": 0.8, "patinaRisk": 0.45},
+    "collectorTags": ["office_machines", "cryptography", "diplomatic_history"],
+    "visualVariant": "stage_variant_069",
+    "baseModel": "typewriter.obj",
+    "inspectionObservable": {
+      "en": "The third-row type slugs bear paired symbols, but two key levers have single-slot stops filed by hand.",
+      "ko": "세 번째 줄 활자는 이중 기호를 지녔지만 두 키 레버의 단일 홈 스토퍼는 손으로 갈아낸 흔적이 있다."
+    },
+    "repairProfile": {
+      "requiredTools": ["precision_screwdriver", "reference_database"],
+      "toleranceMm": 0.1,
+      "interventionTradeoff": {"en": "Freeing the key basket improves operation, but replacing filed stops removes evidence of field modification.", "ko": "키 바스켓을 풀면 작동은 좋아지지만 갈아낸 스토퍼 교체는 현장 개조 증거를 없앤다."},
+      "costPressure": 1.18
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["archive_curator", "speculator"],
+      "conditionSensitivity": 0.82,
+      "disclosureScrutiny": 0.96,
+      "provenanceScrutiny": 0.97,
+      "reserveStrategy": {"mode": "documented_rarity", "appraisalRatio": 0.72}
+    }
+  },
+  {
+    "id": "artifact_070",
+    "displayName": "Brass Pocket Sextant",
+    "category": "nautical_instruments",
+    "maker": "maker_10",
+    "model": "BPS Merchant's Arc",
+    "modelName": "BPS Merchant's Arc",
+    "era": "1914-1921",
+    "baseValue": 2105,
+    "rarity": "rare",
+    "materialSet": ["material_01", "material_09", "material_13"],
+    "compatibleDamages": ["DUST", "TARNISH", "SCRATCH", "DENT", "MISSING_PART"],
+    "possibleFaults": ["SCRATCH", "DENT", "MISSING_PART"],
+    "possibleClues": ["CONSTRUCTION_METHOD", "MATERIAL", "SERIAL_PATTERN", "PATINA", "WEAR_PATTERN"],
+    "restorationProfile": {"cleaning": 0.59, "repair": 0.72, "patinaRisk": 0.52},
+    "collectorTags": ["scientific_instruments", "navigation", "pocket_instrument"],
+    "visualVariant": "stage_variant_070",
+    "baseModel": "sextant.obj",
+    "inspectionObservable": {
+      "en": "The index mirror shows a narrow silver-loss band that aligns with the arc's most worn thirty-degree sector.",
+      "ko": "인덱스 거울의 좁은 은막 손실 띠가 호의 가장 닳은 30도 구간과 정확히 맞는다."
+    },
+    "repairProfile": {
+      "requiredTools": ["cleaning_cloth", "precision_scale", "repair_toolkit"],
+      "toleranceMm": 0.06,
+      "interventionTradeoff": {"en": "Mirror resilvering restores readings but replaces the wear relationship that supports the navigation history.", "ko": "거울 재도금은 측정을 회복하지만 항해 이력을 뒷받침하는 마모의 연관성을 없앤다."},
+      "costPressure": 1.2
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["historian", "professional_dealer"],
+      "conditionSensitivity": 0.87,
+      "disclosureScrutiny": 0.9,
+      "provenanceScrutiny": 0.89,
+      "reserveStrategy": {"mode": "navigation_provenance", "appraisalRatio": 0.68}
+    }
+  },
+  {
+    "id": "artifact_071",
+    "displayName": "Lacquered Zoetrope Drum",
+    "category": "optical_animation_devices",
+    "maker": "maker_11",
+    "model": "LZD Parlour Motion Set",
+    "modelName": "LZD Parlour Motion Set",
+    "era": "1916-1923",
+    "baseValue": 2210,
+    "rarity": "uncommon",
+    "materialSet": ["material_03", "material_04", "material_15"],
+    "compatibleDamages": ["DUST", "GRIME", "FADING", "SCRATCH", "MECHANICAL_WEAR"],
+    "possibleFaults": ["FADING", "SCRATCH", "MECHANICAL_WEAR"],
+    "possibleClues": ["COMPONENT_STYLE", "LABEL", "WEAR_PATTERN", "MATERIAL", "REPAIR_TRACE"],
+    "restorationProfile": {"cleaning": 0.43, "repair": 0.65, "patinaRisk": 0.74},
+    "collectorTags": ["optical_devices", "animation_history", "paper_ephemera"],
+    "visualVariant": "stage_variant_071",
+    "baseModel": "model_03.obj",
+    "inspectionObservable": {
+      "en": "Eleven viewing slots are punched square, while the twelfth has rounded corners and a brighter lacquer edge.",
+      "ko": "열한 개 관찰 틈은 각지게 뚫렸지만 열두 번째만 모서리가 둥글고 옻칠 가장자리도 더 밝다."
+    },
+    "repairProfile": {
+      "requiredTools": ["soft_brush", "cotton_swab"],
+      "toleranceMm": 0.22,
+      "interventionTradeoff": {"en": "Balancing the drum reduces image judder, but added weight can conceal the later replacement slot.", "ko": "드럼 균형을 잡으면 영상 떨림은 줄지만 추를 더하면 후대 교체된 틈의 증거를 가릴 수 있다."},
+      "costPressure": 1.22
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["design_scholar", "interior_decorator"],
+      "conditionSensitivity": 0.74,
+      "disclosureScrutiny": 0.85,
+      "provenanceScrutiny": 0.82,
+      "reserveStrategy": {"mode": "visual_completeness", "appraisalRatio": 0.61}
+    }
+  },
+  {
+    "id": "artifact_072",
+    "displayName": "Copper Field Galvanometer",
+    "category": "electrical_measurement",
+    "maker": "maker_12",
+    "model": "CFG Portable Mark II",
+    "modelName": "CFG Portable Mark II",
+    "era": "1918-1925",
+    "baseValue": 2310,
+    "rarity": "rare",
+    "materialSet": ["material_12", "material_09", "material_04"],
+    "compatibleDamages": ["DUST", "CORROSION", "TARNISH", "MECHANICAL_WEAR", "WATER_DAMAGE"],
+    "possibleFaults": ["CORROSION", "WATER_DAMAGE", "MECHANICAL_WEAR"],
+    "possibleClues": ["MECHANISM", "MATERIAL", "TOOL_MARK", "SERIAL_PATTERN", "LABEL"],
+    "restorationProfile": {"cleaning": 0.71, "repair": 0.76, "patinaRisk": 0.34},
+    "collectorTags": ["scientific_instruments", "electrical_history", "field_equipment"],
+    "visualVariant": "stage_variant_072",
+    "baseModel": "gauge.obj",
+    "inspectionObservable": {
+      "en": "The needle returns two divisions left of zero, and the copper terminal nearest the case seam carries green tide lines.",
+      "ko": "바늘은 영점보다 두 눈금 왼쪽에 멈추며 케이스 이음새 가까운 구리 단자에는 초록 물자국이 있다."
+    },
+    "repairProfile": {
+      "requiredTools": ["material_scanner", "rust_treatment", "precision_screwdriver"],
+      "toleranceMm": 0.04,
+      "interventionTradeoff": {"en": "Rewinding the coil improves sensitivity, but original resistance data and moisture history are lost.", "ko": "코일을 다시 감으면 감도는 오르지만 원래 저항값과 침수 이력은 사라진다."},
+      "costPressure": 1.24
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["mechanical_enthusiast", "museum_buyer"],
+      "conditionSensitivity": 0.95,
+      "disclosureScrutiny": 0.94,
+      "provenanceScrutiny": 0.9,
+      "reserveStrategy": {"mode": "measurement_verified", "appraisalRatio": 0.71}
+    }
+  },
+  {
+    "id": "artifact_073",
+    "displayName": "Ebonite Crystal Radio",
+    "category": "wireless_receivers",
+    "maker": "maker_13",
+    "model": "ECR Listener 3",
+    "modelName": "ECR Listener 3",
+    "era": "1920-1927",
+    "baseValue": 2420,
+    "rarity": "rare",
+    "materialSet": ["material_02", "material_12", "material_15"],
+    "compatibleDamages": ["DUST", "GRIME", "CORROSION", "MECHANICAL_WEAR", "BROKEN_PART", "WATER_DAMAGE"],
+    "possibleFaults": ["BROKEN_PART", "CORROSION", "WATER_DAMAGE"],
+    "possibleClues": ["CONSTRUCTION_METHOD", "MECHANISM", "COMPONENT_STYLE", "PROVENANCE", "REPAIR_TRACE"],
+    "restorationProfile": {"cleaning": 0.68, "repair": 0.83, "patinaRisk": 0.39},
+    "collectorTags": ["vintage_audio", "wireless", "homebuilt_technology"],
+    "visualVariant": "stage_variant_073",
+    "baseModel": "model_04.obj",
+    "inspectionObservable": {
+      "en": "A pencil station list follows the panel edge, but its final frequency is written over a plugged terminal hole.",
+      "ko": "패널 가장자리에 연필로 방송국 목록이 적혀 있으나 마지막 주파수는 메운 단자 구멍 위에 겹쳐 쓰였다."
+    },
+    "repairProfile": {
+      "requiredTools": ["precision_screwdriver", "repair_toolkit", "reference_database"],
+      "toleranceMm": 0.13,
+      "interventionTradeoff": {"en": "Installing a stable detector restores reception, while preserving the erratic crystal retains stronger use evidence.", "ko": "안정된 검파기를 달면 수신은 되살지만 불안정한 원래 광석을 보존해야 사용 증거가 더 강하게 남는다."},
+      "costPressure": 1.26
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["mechanical_enthusiast", "private_collector"],
+      "conditionSensitivity": 0.86,
+      "disclosureScrutiny": 0.92,
+      "provenanceScrutiny": 0.86,
+      "reserveStrategy": {"mode": "working_with_disclosure", "appraisalRatio": 0.66}
+    }
+  },
+  {
+    "id": "artifact_074",
+    "displayName": "Silver Cartographer Planimeter",
+    "category": "cartographic_instruments",
+    "maker": "maker_14",
+    "model": "SCP Polar Integrator",
+    "modelName": "SCP Polar Integrator",
+    "era": "1922-1929",
+    "baseValue": 2525,
+    "rarity": "very_rare",
+    "materialSet": ["material_13", "material_06", "material_14"],
+    "compatibleDamages": ["DUST", "TARNISH", "SCRATCH", "MECHANICAL_WEAR", "MISSING_PART"],
+    "possibleFaults": ["TARNISH", "SCRATCH", "MISSING_PART"],
+    "possibleClues": ["SERIAL_PATTERN", "CONSTRUCTION_METHOD", "WEAR_PATTERN", "LABEL", "TOOL_MARK"],
+    "restorationProfile": {"cleaning": 0.57, "repair": 0.75, "patinaRisk": 0.59},
+    "collectorTags": ["scientific_instruments", "cartography", "precision_drafting"],
+    "visualVariant": "stage_variant_074",
+    "baseModel": "model_13.obj",
+    "inspectionObservable": {
+      "en": "The tracing point is flattened on one side, and the counting wheel repeats a faint ink-blue arc every rotation.",
+      "ko": "추적침 한쪽이 납작하며 계수 바퀴는 한 바퀴마다 옅은 잉크색 호를 반복해 남긴다."
+    },
+    "repairProfile": {
+      "requiredTools": ["precision_scale", "polishing_pad"],
+      "toleranceMm": 0.03,
+      "interventionTradeoff": {"en": "Refacing the tracer improves area readings but removes the wear angle linking it to a left-handed operator.", "ko": "추적침 면을 다듬으면 면적 측정은 좋아지지만 왼손잡이 사용자를 보여 주는 마모 각도가 사라진다."},
+      "costPressure": 1.28
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["design_scholar", "archive_curator"],
+      "conditionSensitivity": 0.92,
+      "disclosureScrutiny": 0.95,
+      "provenanceScrutiny": 0.95,
+      "reserveStrategy": {"mode": "precision_and_case", "appraisalRatio": 0.73}
+    }
+  },
+  {
+    "id": "artifact_075",
+    "displayName": "Velvet Entomology Microscope",
+    "category": "microscopy_instruments",
+    "maker": "maker_15",
+    "model": "VEM Cabinet Naturalist",
+    "modelName": "VEM Cabinet Naturalist",
+    "era": "1924-1931",
+    "baseValue": 2640,
+    "rarity": "very_rare",
+    "materialSet": ["material_01", "material_09", "material_14"],
+    "compatibleDamages": ["DUST", "GRIME", "TARNISH", "CRACK", "MECHANICAL_WEAR", "MISSING_PART"],
+    "possibleFaults": ["CRACK", "MECHANICAL_WEAR", "MISSING_PART"],
+    "possibleClues": ["MATERIAL", "COMPONENT_STYLE", "MECHANISM", "PROVENANCE", "PATINA"],
+    "restorationProfile": {"cleaning": 0.49, "repair": 0.86, "patinaRisk": 0.63},
+    "collectorTags": ["scientific_instruments", "natural_history", "microscopy"],
+    "visualVariant": "stage_variant_075",
+    "baseModel": "binoculars.obj",
+    "inspectionObservable": {
+      "en": "The fine-focus knob binds near its midpoint, where wing-scale dust is trapped beneath a clear lacquer touch-up.",
+      "ko": "미세 초점 노브는 중간에서 걸리며 투명 보수칠 아래에 나비 날개 비늘 가루가 갇혀 있다."
+    },
+    "repairProfile": {
+      "requiredTools": ["uv_lamp", "cotton_swab", "precision_screwdriver"],
+      "toleranceMm": 0.02,
+      "interventionTradeoff": {"en": "Removing the lacquer frees focus travel but destroys residue that may tie the instrument to a collection.", "ko": "보수칠을 제거하면 초점 이동은 회복되지만 특정 수집품과 연결할 잔류물이 사라진다."},
+      "costPressure": 1.3
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["museum_buyer", "restoration_collector"],
+      "conditionSensitivity": 0.97,
+      "disclosureScrutiny": 0.97,
+      "provenanceScrutiny": 0.98,
+      "reserveStrategy": {"mode": "collection_link", "appraisalRatio": 0.76}
+    }
+  },
+  {
+    "id": "artifact_076",
+    "displayName": "Walnut Repeating Barograph",
+    "category": "meteorological_recorders",
+    "maker": "maker_16",
+    "model": "WRB Seven-Day Marine",
+    "modelName": "WRB Seven-Day Marine",
+    "era": "1926-1933",
+    "baseValue": 2750,
+    "rarity": "rare",
+    "materialSet": ["material_04", "material_01", "material_15"],
+    "compatibleDamages": ["DUST", "GRIME", "CORROSION", "MECHANICAL_WEAR", "WATER_DAMAGE", "PAINT_LOSS"],
+    "possibleFaults": ["CORROSION", "PAINT_LOSS", "MECHANICAL_WEAR"],
+    "possibleClues": ["MECHANISM", "WEAR_PATTERN", "LABEL", "REPAIR_TRACE", "SERIAL_PATTERN"],
+    "restorationProfile": {"cleaning": 0.61, "repair": 0.79, "patinaRisk": 0.57},
+    "collectorTags": ["scientific_instruments", "meteorology", "chart_recording"],
+    "visualVariant": "stage_variant_076",
+    "baseModel": "model_12.obj",
+    "inspectionObservable": {
+      "en": "The seven-day drum advances cleanly, yet the pen arm rises at one dent whose profile matches a case-lid screw.",
+      "ko": "7일 드럼은 매끄럽게 돌지만 펜 암은 케이스 뚜껑 나사와 같은 모양의 눌림 자국에서 들린다."
+    },
+    "repairProfile": {
+      "requiredTools": ["precision_scale", "repair_toolkit", "mild_cleaner"],
+      "toleranceMm": 0.045,
+      "interventionTradeoff": {"en": "Bending the pen arm restores charts, but its collision mark explains a historically significant recording gap.", "ko": "펜 암을 펴면 기록은 회복되지만 충돌 자국은 역사적으로 중요한 기록 공백의 원인을 설명한다."},
+      "costPressure": 1.32
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["historian", "restoration_collector"],
+      "conditionSensitivity": 0.94,
+      "disclosureScrutiny": 0.96,
+      "provenanceScrutiny": 0.96,
+      "reserveStrategy": {"mode": "chart_archive", "appraisalRatio": 0.74}
+    }
+  },
+  {
+    "id": "artifact_077",
+    "displayName": "Enamel Railway Signal Lantern",
+    "category": "railway_signaling",
+    "maker": "maker_17",
+    "model": "ERSL Junction Pattern",
+    "modelName": "ERSL Junction Pattern",
+    "era": "1928-1935",
+    "baseValue": 2870,
+    "rarity": "rare",
+    "materialSet": ["material_03", "material_06", "material_09"],
+    "compatibleDamages": ["DUST", "GRIME", "RUST", "CORROSION", "CRACK", "PAINT_LOSS"],
+    "possibleFaults": ["RUST", "CRACK", "PAINT_LOSS"],
+    "possibleClues": ["MATERIAL", "LABEL", "PATINA", "PROVENANCE", "CONSTRUCTION_METHOD"],
+    "restorationProfile": {"cleaning": 0.76, "repair": 0.58, "patinaRisk": 0.66},
+    "collectorTags": ["decorative_objects", "railway_history", "industrial_design"],
+    "visualVariant": "stage_variant_077",
+    "baseModel": "telephone.obj",
+    "inspectionObservable": {
+      "en": "Red and green lenses share soot at the upper vents, but only the red lens has heat crazing around its retaining clip.",
+      "ko": "빨강과 초록 렌즈 모두 위쪽 환기구에 그을음이 있으나 빨강 렌즈만 고정 클립 주위에 열 균열이 있다."
+    },
+    "repairProfile": {
+      "requiredTools": ["rust_treatment", "cleaning_cloth", "material_scanner"],
+      "toleranceMm": 0.2,
+      "interventionTradeoff": {"en": "Replacing the crazed lens improves safety, while retaining it preserves evidence of asymmetric duty use.", "ko": "갈라진 렌즈를 바꾸면 안전하지만 그대로 두면 서로 다른 운용 빈도의 증거가 보존된다."},
+      "costPressure": 1.34
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["interior_decorator", "historian"],
+      "conditionSensitivity": 0.78,
+      "disclosureScrutiny": 0.89,
+      "provenanceScrutiny": 0.91,
+      "reserveStrategy": {"mode": "industrial_patina", "appraisalRatio": 0.65}
+    }
+  },
+  {
+    "id": "artifact_078",
+    "displayName": "Leather Field Wire Recorder",
+    "category": "magnetic_recorders",
+    "maker": "maker_18",
+    "model": "LFWR Correspondent",
+    "modelName": "LFWR Correspondent",
+    "era": "1930-1937",
+    "baseValue": 2995,
+    "rarity": "very_rare",
+    "materialSet": ["material_11", "material_05", "material_12"],
+    "compatibleDamages": ["DUST", "GRIME", "TARNISH", "MECHANICAL_WEAR", "WATER_DAMAGE", "FADING"],
+    "possibleFaults": ["WATER_DAMAGE", "FADING", "MECHANICAL_WEAR"],
+    "possibleClues": ["SERIAL_PATTERN", "MECHANISM", "COMPONENT_STYLE", "LABEL", "REPAIR_TRACE", "PROVENANCE"],
+    "restorationProfile": {"cleaning": 0.54, "repair": 0.88, "patinaRisk": 0.47},
+    "collectorTags": ["vintage_audio", "broadcast_history", "portable_recording"],
+    "visualVariant": "stage_variant_078",
+    "baseModel": "model_02.obj",
+    "inspectionObservable": {
+      "en": "The take-up spindle has spiral scoring that changes pitch exactly where the leather case shows a water tide mark.",
+      "ko": "권취 스핀들의 나선 흠집 간격은 가죽 케이스의 물자국 높이에서 정확히 달라진다."
+    },
+    "repairProfile": {
+      "requiredTools": ["repair_toolkit", "precision_screwdriver", "mild_cleaner"],
+      "toleranceMm": 0.065,
+      "interventionTradeoff": {"en": "Polishing the spindle protects new wire, but its scoring records how water exposure changed the transport.", "ko": "스핀들을 연마하면 새 와이어는 보호되지만 흠집은 침수가 이송계에 준 변화를 기록한다."},
+      "costPressure": 1.36
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["archive_curator", "professional_dealer"],
+      "conditionSensitivity": 0.96,
+      "disclosureScrutiny": 0.98,
+      "provenanceScrutiny": 0.99,
+      "reserveStrategy": {"mode": "recording_provenance", "appraisalRatio": 0.77}
+    }
+  },
+  {
+    "id": "artifact_079",
+    "displayName": "Glass Prism Spectroscope",
+    "category": "spectroscopy_instruments",
+    "maker": "maker_19",
+    "model": "GPS Laboratory Compact",
+    "modelName": "GPS Laboratory Compact",
+    "era": "1932-1939",
+    "baseValue": 3130,
+    "rarity": "very_rare",
+    "materialSet": ["material_09", "material_01", "material_04"],
+    "compatibleDamages": ["DUST", "GRIME", "TARNISH", "CRACK", "SCRATCH", "MISSING_PART"],
+    "possibleFaults": ["CRACK", "SCRATCH", "MISSING_PART"],
+    "possibleClues": ["MATERIAL", "MECHANISM", "TOOL_MARK", "WEAR_PATTERN", "PROVENANCE", "PATINA"],
+    "restorationProfile": {"cleaning": 0.45, "repair": 0.9, "patinaRisk": 0.71},
+    "collectorTags": ["scientific_instruments", "spectroscopy", "laboratory_optics"],
+    "visualVariant": "stage_variant_079",
+    "baseModel": "model_05.obj",
+    "inspectionObservable": {
+      "en": "A tiny edge chip sits outside the light path, while the prism clamp bears two incompatible screwdriver widths.",
+      "ko": "작은 모서리 깨짐은 광로 밖에 있고 프리즘 고정쇠에는 폭이 다른 두 종류의 드라이버 자국이 남아 있다."
+    },
+    "repairProfile": {
+      "requiredTools": ["material_scanner", "uv_lamp"],
+      "toleranceMm": 0.015,
+      "interventionTradeoff": {"en": "Re-seating the prism sharpens spectra, but disturbing the clamp can erase the sequence of prior interventions.", "ko": "프리즘을 재장착하면 스펙트럼은 선명해지지만 고정쇠를 건드리면 과거 개입 순서가 사라질 수 있다."},
+      "costPressure": 1.38
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["museum_buyer", "design_scholar"],
+      "conditionSensitivity": 0.98,
+      "disclosureScrutiny": 0.99,
+      "provenanceScrutiny": 0.97,
+      "reserveStrategy": {"mode": "optical_benchmark", "appraisalRatio": 0.79}
+    }
+  },
+  {
+    "id": "artifact_080",
+    "displayName": "Grand Reserve Astronomical Regulator",
+    "category": "precision_regulators",
+    "maker": "maker_20",
+    "model": "GRAR Observatory Standard",
+    "modelName": "GRAR Observatory Standard",
+    "era": "1934-1941",
+    "baseValue": 3280,
+    "rarity": "very_rare",
+    "materialSet": ["material_01", "material_09", "material_04", "material_13"],
+    "compatibleDamages": ["DUST", "GRIME", "TARNISH", "CORROSION", "MECHANICAL_WEAR", "BROKEN_PART", "MISSING_PART"],
+    "possibleFaults": ["CORROSION", "BROKEN_PART", "MISSING_PART", "MECHANICAL_WEAR"],
+    "possibleClues": ["SERIAL_PATTERN", "CONSTRUCTION_METHOD", "MATERIAL", "MECHANISM", "WEAR_PATTERN", "REPAIR_TRACE", "PROVENANCE"],
+    "restorationProfile": {"cleaning": 0.52, "repair": 0.94, "patinaRisk": 0.77},
+    "collectorTags": ["mechanical_instruments", "grand_reserve", "observatory_timekeeping"],
+    "visualVariant": "stage_variant_080",
+    "baseModel": "watch.obj",
+    "inspectionObservable": {
+      "en": "The mercury-compensation scale is intact, but its zero line sits beneath a later lacquer layer and beside an unrecorded jewel setting.",
+      "ko": "수은 보정 눈금은 온전하지만 영점선은 후대 옻칠 아래에 있고 기록에 없는 보석 받침과 맞닿아 있다."
+    },
+    "repairProfile": {
+      "requiredTools": ["precision_scale", "precision_screwdriver", "reference_database"],
+      "toleranceMm": 0.01,
+      "interventionTradeoff": {"en": "Full regulation maximizes auction performance, but partial conservation better preserves the disputed jewel and lacquer chronology.", "ko": "완전 조정은 경매 성능을 높이지만 최소 보존은 논쟁적인 보석 받침과 옻칠 연대 순서를 더 잘 지킨다."},
+      "costPressure": 1.4
+    },
+    "auctionProfile": {
+      "preferredBidderTags": ["clockmaker", "museum_buyer", "speculator"],
+      "conditionSensitivity": 1.0,
+      "disclosureScrutiny": 1.0,
+      "provenanceScrutiny": 1.0,
+      "reserveStrategy": {"mode": "grand_reserve_tier", "appraisalRatio": 0.82}
+    }
+  }
+]

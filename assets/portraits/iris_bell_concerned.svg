@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" data-character-id="iris_bell_concerned" data-character-name="Iris Bell" data-rendered-expression="NEGATIVE" data-expression-anchor="128,140" data-face-zone="73 55 110 141" data-face-height-ratio="0.441" data-eye-system="sclera-iris-pupil-highlight" data-runtime-reference="220x250" data-head-height-svg="164" data-visible-face-skin-height-svg="108" data-major-face-stroke-svg="3.5" data-expression-geometry-version="2">
+  <title>Iris Bell concerned portrait</title>
+  <desc>Cute big-eyed music-box specialist Iris Bell with long plum waves, mint eyes, a berry capelet, a musical-note brooch, and a tiny ornate winding key.</desc>
+  <path fill="#F5EAF4" d="M18 302V91q0-60 60-60h100q60 0 60 60v211z"/>
+  <path fill="#D1ADD2" d="M28 302V84l22-23 25 16 20-36 31 26 31-34 27 39 25-12 19 24v218z"/>
+  <path fill="#8ED5C7" d="M39 84l33-23 24 15 31-31 30 28 30-14 30 24v12H39z" opacity=".75"/>
+  <g data-layer="hair" data-feature="plum-wave-hair">
+    <path fill="#3D244D" d="M67 146Q53 94 76 56q24-41 70-28 38 10 46 54l-4 128-28 35-8-149-57-8-3 139-29-27z"/>
+    <path fill="#6C376E" d="M73 83q17-52 67-55 34 0 50 31l-10 31q-20-23-50-23-27 0-40 27l-4 112-21-30z"/>
+    <path fill="#96538D" d="M87 63q25-36 67-29l-17 21 37-9-22 25 32-5q-37 21-87 23z"/>
+    <path fill="none" stroke="#BD78AC" stroke-width="8" stroke-linecap="round" d="M76 104q19 13 1 32t2 36-2 40m103-111q-19 14-1 33t-2 36 2 42"/>
+    <path fill="none" stroke="#D99AC8" stroke-width="4" stroke-linecap="round" d="M97 49q20-13 41-10m-51 43q21-14 45-15m43 43q-10 12 0 24m-101 10q10 12 0 24" opacity=".72"/>
+    <circle fill="#E8B95E" stroke="#68442C" stroke-width="2" cx="177" cy="82" r="8"/>
+    <path fill="#FFF0A8" d="M177 76l2 4 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z"/>
+  </g>
+  <g data-layer="face">
+    <ellipse fill="#713E34" cx="75" cy="137" rx="10" ry="17"/>
+    <ellipse fill="#713E34" cx="181" cy="137" rx="10" ry="17"/>
+    <path data-part="face-shape" fill="#95604B" d="M77 88Q94 55 128 58q37-3 51 30l-4 63q-13 39-47 47-34-8-47-47z"/>
+    <path fill="#B67B60" d="M88 98q11-28 40-29 30 1 42 26l-5 54q-10 28-37 35-28-7-37-34z" opacity=".46"/>
+    <g data-part="brows" fill="none" stroke="#432A32" stroke-width="3.5" stroke-linecap="round">
+      <path d="M89 111q15-12 30-4"/>
+      <path d="M137 107q15-8 30 4"/>
+    </g>
+    <g data-eye="left">
+      <ellipse data-part="sclera" fill="#FFFAF4" cx="104" cy="126" rx="16.2" ry="9.2"/>
+      <circle data-part="iris" fill="#62C7A7" cx="106" cy="127" r="8.3"/>
+      <circle data-part="pupil" fill="#173E3A" cx="106" cy="127" r="4.2"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="103" cy="123" r="2.4"/>
+      <circle fill="#C4FFE7" cx="109" cy="130" r="1.4"/>
+      <path fill="none" stroke="#4B3035" stroke-width="2" stroke-linecap="round" d="M92 121l-5-2m36 2 5-2"/>
+    </g>
+    <g data-eye="right">
+      <ellipse data-part="sclera" fill="#FFFAF4" cx="152" cy="126" rx="16.2" ry="9.2"/>
+      <circle data-part="iris" fill="#62C7A7" cx="150" cy="127" r="8.3"/>
+      <circle data-part="pupil" fill="#173E3A" cx="150" cy="127" r="4.2"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="147" cy="123" r="2.4"/>
+      <circle fill="#C4FFE7" cx="153" cy="130" r="1.4"/>
+      <path fill="none" stroke="#4B3035" stroke-width="2" stroke-linecap="round" d="M164 121l5-2m-36 2-5-2"/>
+    </g>
+    <ellipse fill="#B85872" cx="92" cy="153" rx="10" ry="4.8" opacity=".55"/>
+    <ellipse fill="#B85872" cx="164" cy="153" rx="10" ry="4.8" opacity=".55"/>
+    <path data-part="nose" fill="#74443B" d="M124 138l-5 14 9 5 8-5-5-14z"/>
+    <path data-part="mouth" fill="none" stroke="#672F4B" stroke-width="3.5" stroke-linecap="round" d="M115 174q13-10 26 0"/>
+    <path fill="none" stroke="#C99178" stroke-width="2" stroke-linecap="round" d="M120 165q8 3 16 0" opacity=".8"/>
+  </g>
+  <g data-layer="outfit">
+    <path fill="#74355F" d="M42 304l16-80q8-33 49-40l21 22 21-22q41 7 49 40l16 80z"/>
+    <path fill="#A44875" d="M42 304l49-102 37 45 37-45 49 102z"/>
+    <path fill="#E9F6E8" d="M106 185l22 21 22-21-8 55-14 18-14-18z"/>
+    <path fill="#55A997" d="M122 207h12v54h-12z"/>
+    <path fill="#512846" d="M89 203l30 44-19 57H57zm78 0-30 44 19 57h43z"/>
+    <path fill="#D66B98" d="M58 240q29-25 61 5l-8 22q-29-18-59-3zm140 0q-29-25-61 5l8 22q29-18 59-3z"/>
+    <path fill="none" stroke="#8ED5C7" stroke-width="4" stroke-linecap="round" d="M61 273h34m66 0h34"/>
+  </g>
+  <g data-layer="prop">
+    <g data-feature="music-note-brooch">
+      <circle fill="#F4D36D" stroke="#68452F" stroke-width="3" cx="96" cy="239" r="17"/>
+      <path fill="none" stroke="#6D3765" stroke-width="5" stroke-linecap="round" d="M100 245v-23l13-3v19"/>
+      <ellipse fill="#6D3765" cx="94" cy="246" rx="7" ry="5" transform="rotate(-18 94 246)"/>
+      <ellipse fill="#6D3765" cx="108" cy="239" rx="7" ry="5" transform="rotate(-18 108 239)"/>
+      <circle fill="#FFF5BB" cx="90" cy="232" r="3"/>
+    </g>
+    <g data-feature="music-box-key">
+      <path fill="#D8AE4E" stroke="#65442E" stroke-width="3" d="M170 226h12v67h-12z"/>
+      <path fill="#F2CC69" stroke="#65442E" stroke-width="3" d="M157 218q19-18 38 0v19q-19-11-38 0zm8 3v8q11-6 22 0v-8q-11-8-22 0z" fill-rule="evenodd"/>
+      <path fill="#A65379" stroke="#5D314D" stroke-width="3" d="M160 277h32v20h-32z"/>
+      <path fill="#F4D36D" d="M167 283h18v4h-18zm3 7h12v3h-12z"/>
+      <circle fill="#8ED5C7" stroke="#315C58" stroke-width="2" cx="176" cy="268" r="6"/>
+    </g>
+  </g>
+  <g data-layer="expression-anchors" fill="none" stroke="none">
+    <path data-expression="NEUTRAL" data-brow-shift-svg="0" data-eye-height-shift-svg="0" data-mouth-corner-shift-svg="0" d="M95 109h25m16 0h25m-39 58h14"/>
+    <path data-expression="POSITIVE" data-brow-shift-svg="-5" data-eye-height-shift-svg="-3" data-mouth-corner-shift-svg="-5" d="M95 105h25m16 0h25m-28 52q9 12 18 0"/>
+    <path data-expression="NEGATIVE" data-brow-shift-svg="5" data-eye-height-shift-svg="3" data-mouth-corner-shift-svg="5" d="M95 114h25m16 0h25m-28 55q9-10 18 0"/>
+  </g>
+</svg>

@@ -1,0 +1,2177 @@
+{
+  "checks": [
+    {
+      "evidence": {
+        "routes": [
+          {
+            "actual": "title",
+            "ok": true,
+            "route": "title"
+          },
+          {
+            "actual": "stage_select",
+            "ok": true,
+            "route": "stage_select"
+          },
+          {
+            "actual": "campaign",
+            "ok": true,
+            "route": "campaign"
+          },
+          {
+            "actual": "market",
+            "ok": true,
+            "route": "market"
+          },
+          {
+            "actual": "event",
+            "ok": true,
+            "route": "event"
+          },
+          {
+            "actual": "workshop",
+            "ok": true,
+            "route": "workshop"
+          }
+        ],
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.0,
+          "ok": true,
+          "stage": 1
+        }
+      },
+      "executed": true,
+      "id": "E2E-BOOT-ROUTES",
+      "name": "Fresh profile starts a Stage 1 run and all core non-terminal routes construct",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifact": "case_prologue_clock",
+        "completed": true,
+        "dossier": true,
+        "inspection": true,
+        "observableTile": false
+      },
+      "executed": true,
+      "id": "E2E-UI-CHAIN",
+      "name": "First lot exposes dossier/inspection before the complete public case chain",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "ack": {
+          "code": "OK",
+          "ok": true,
+          "stage": 1
+        },
+        "remaining": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1
+          ],
+          "currentAct": "ACT_1",
+          "ending": "",
+          "highestUnlockedStage": 2,
+          "inventory": 0,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 3,
+          "stage": 1,
+          "stageStatus": "CLEARED",
+          "transactions": 6
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE1",
+      "name": "Stage 1 completes every scoped case and clears without target-score gating",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "leave_patina",
+            "completed": true,
+            "currentAct": "ACT_1",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_leave_patina"
+          },
+          {
+            "case": "estate_compass",
+            "completed": true,
+            "currentAct": "ACT_1",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_estate_compass"
+          },
+          {
+            "case": "pawn_watch",
+            "completed": true,
+            "currentAct": "PROLOGUE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_pawn_watch"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.07,
+        "expectedNextUnlock": 3,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {},
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2
+          ],
+          "currentAct": "PROLOGUE",
+          "ending": "",
+          "highestUnlockedStage": 3,
+          "inventory": 0,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 3,
+          "stage": 2,
+          "stageStatus": "CLEARED",
+          "transactions": 6
+        },
+        "stage": 2,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.07,
+          "ok": true,
+          "stage": 2
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-02",
+      "name": "Fresh-run replay completes Stage 2 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "garage_lamp",
+            "completed": true,
+            "currentAct": "ACT_1",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_garage_lamp"
+          },
+          {
+            "case": "telephone_trace",
+            "completed": true,
+            "currentAct": "ACT_1",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_telephone_trace"
+          },
+          {
+            "case": "early_camera",
+            "completed": true,
+            "currentAct": "PROLOGUE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_early_camera"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.1449,
+        "expectedNextUnlock": 4,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {},
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3
+          ],
+          "currentAct": "PROLOGUE",
+          "ending": "",
+          "highestUnlockedStage": 4,
+          "inventory": 0,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 3,
+          "stage": 3,
+          "stageStatus": "CLEARED",
+          "transactions": 6
+        },
+        "stage": 3,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.1449,
+          "ok": true,
+          "stage": 3
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-03",
+      "name": "Fresh-run replay completes Stage 3 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "false_invoice",
+            "completed": true,
+            "currentAct": "ACT_2",
+            "issued": true,
+            "outcome": "credible",
+            "repeatUidStable": true,
+            "uid": "case_false_invoice"
+          },
+          {
+            "case": "mislabelled_collection",
+            "completed": true,
+            "currentAct": "ACT_2",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_mislabelled_collection"
+          },
+          {
+            "case": "observatory_instrument",
+            "completed": true,
+            "currentAct": "PROLOGUE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_observatory_instrument"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.225043,
+        "expectedNextUnlock": 5,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {},
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "currentAct": "PROLOGUE",
+          "ending": "",
+          "highestUnlockedStage": 5,
+          "inventory": 0,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 3,
+          "stage": 4,
+          "stageStatus": "CLEARED",
+          "transactions": 6
+        },
+        "stage": 4,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.225043,
+          "ok": true,
+          "stage": 4
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-04",
+      "name": "Fresh-run replay completes Stage 4 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "collector_promise",
+            "completed": true,
+            "currentAct": "ACT_3",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_collector_promise"
+          },
+          {
+            "case": "three_cameras",
+            "completed": true,
+            "currentAct": "ACT_4",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_three_cameras"
+          },
+          {
+            "case": "shadow_camera",
+            "completed": true,
+            "currentAct": "PROLOGUE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_shadow_camera"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.31079601,
+        "expectedNextUnlock": 6,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {},
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "currentAct": "PROLOGUE",
+          "ending": "",
+          "highestUnlockedStage": 6,
+          "inventory": 0,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 3,
+          "stage": 5,
+          "stageStatus": "CLEARED",
+          "transactions": 6
+        },
+        "stage": 5,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.31079601,
+          "ok": true,
+          "stage": 5
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-05",
+      "name": "Fresh-run replay completes Stage 5 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "shadow_gauge",
+            "completed": true,
+            "currentAct": "ACT_4",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_shadow_gauge"
+          },
+          {
+            "case": "shadow_clock",
+            "completed": true,
+            "currentAct": "ACT_4",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_shadow_clock"
+          },
+          {
+            "case": "shadow_music_box",
+            "completed": true,
+            "currentAct": "PROLOGUE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_shadow_music_box"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.4025517307,
+        "expectedNextUnlock": 7,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {},
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "currentAct": "PROLOGUE",
+          "ending": "",
+          "highestUnlockedStage": 7,
+          "inventory": 0,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 3,
+          "stage": 6,
+          "stageStatus": "CLEARED",
+          "transactions": 6
+        },
+        "stage": 6,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.4025517307,
+          "ok": true,
+          "stage": 6
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-06",
+      "name": "Fresh-run replay completes Stage 6 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "shadow_optic",
+            "completed": true,
+            "currentAct": "ACT_4",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_shadow_optic"
+          },
+          {
+            "case": "composite_prototype",
+            "completed": true,
+            "currentAct": "PROLOGUE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_composite_prototype"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.500730351849,
+        "expectedNextUnlock": 8,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {},
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "currentAct": "PROLOGUE",
+          "ending": "",
+          "highestUnlockedStage": 8,
+          "inventory": 0,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 2,
+          "stage": 7,
+          "stageStatus": "CLEARED",
+          "transactions": 4
+        },
+        "stage": 7,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.500730351849,
+          "ok": true,
+          "stage": 7
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-07",
+      "name": "Fresh-run replay completes Stage 7 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "master_chronometer",
+            "completed": true,
+            "currentAct": "ACT_5",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_master_chronometer"
+          },
+          {
+            "case": "master_optical",
+            "completed": true,
+            "currentAct": "PROLOGUE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_master_optical"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.60578147647843,
+        "expectedNextUnlock": 9,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {},
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "currentAct": "PROLOGUE",
+          "ending": "",
+          "highestUnlockedStage": 9,
+          "inventory": 2,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 0,
+          "stage": 8,
+          "stageStatus": "CLEARED",
+          "transactions": 2
+        },
+        "stage": 8,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.60578147647843,
+          "ok": true,
+          "stage": 8
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-08",
+      "name": "Fresh-run replay completes Stage 8 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "master_recorder",
+            "completed": true,
+            "currentAct": "ACT_5",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_master_recorder"
+          },
+          {
+            "case": "master_gauge",
+            "completed": true,
+            "currentAct": "PROLOGUE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_master_gauge"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.71818617983192,
+        "expectedNextUnlock": 10,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {},
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "currentAct": "PROLOGUE",
+          "ending": "",
+          "highestUnlockedStage": 10,
+          "inventory": 2,
+          "noSales": 0,
+          "postGame": false,
+          "sales": 0,
+          "stage": 9,
+          "stageStatus": "CLEARED",
+          "transactions": 2
+        },
+        "stage": 9,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.71818617983192,
+          "ok": true,
+          "stage": 9
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-09",
+      "name": "Fresh-run replay completes Stage 9 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "allCaseRowsOk": true,
+        "cases": [
+          {
+            "case": "master_camera",
+            "completed": true,
+            "currentAct": "ACT_5",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_master_camera"
+          },
+          {
+            "case": "master_mechanism",
+            "completed": true,
+            "currentAct": "GRAND_RESERVE",
+            "issued": true,
+            "outcome": "masterful",
+            "repeatUidStable": true,
+            "uid": "case_master_mechanism"
+          }
+        ],
+        "cleared": true,
+        "difficulty": 1.83845921242015,
+        "expectedNextUnlock": 10,
+        "ok": true,
+        "profileOk": true,
+        "reserve": {
+          "code": "OK",
+          "ending": "ENDING_B",
+          "ok": true,
+          "results": [
+            {
+              "artifact": {
+                "artifactSpecId": "artifact_077",
+                "category": "railway_signaling",
+                "damageInstances": [
+                  "CRACK",
+                  "RUST",
+                  "DUST"
+                ],
+                "displayName": "Enamel Railway Signal Lantern",
+                "instanceId": "stage_10_checkpoint_01",
+                "partStates": {},
+                "specId": "artifact_077",
+                "uniqueId": "stage_10_checkpoint_01",
+                "visualSignature": {}
+              },
+              "auction": {
+                "bids": [
+                  {
+                    "amount": 1747,
+                    "bidderId": "bidder_12"
+                  }
+                ],
+                "dropouts": [
+                  {
+                    "bidderId": "bidder_01",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_02",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_03",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_04",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_05",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_06",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_07",
+                    "reason": "BUDGET"
+                  }
+                ],
+                "fee": 0,
+                "hammer": 1747,
+                "net": 0,
+                "opening": 1664,
+                "participants": [
+                  {
+                    "id": "bidder_12"
+                  },
+                  {
+                    "id": "bidder_01"
+                  },
+                  {
+                    "id": "bidder_02"
+                  },
+                  {
+                    "id": "bidder_03"
+                  },
+                  {
+                    "id": "bidder_04"
+                  },
+                  {
+                    "id": "bidder_05"
+                  },
+                  {
+                    "id": "bidder_06"
+                  },
+                  {
+                    "id": "bidder_07"
+                  }
+                ],
+                "publicFingerprint": "AUC-504302644",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "reserve": 2008,
+                "reserve_met": false,
+                "sale_status": "NO_SALE",
+                "transactionId": "auction_1_676651165_0",
+                "winnerId": "bidder_12"
+              }
+            },
+            {
+              "artifact": {
+                "artifactSpecId": "artifact_078",
+                "category": "magnetic_recorders",
+                "damageInstances": [
+                  "GRIME",
+                  "TARNISH",
+                  "WATER_DAMAGE"
+                ],
+                "displayName": "Leather Field Wire Recorder",
+                "instanceId": "stage_10_checkpoint_02",
+                "partStates": {},
+                "specId": "artifact_078",
+                "uniqueId": "stage_10_checkpoint_02",
+                "visualSignature": {}
+              },
+              "auction": {
+                "bids": [],
+                "dropouts": [
+                  {
+                    "bidderId": "bidder_11",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_12",
+                    "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_01",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_02",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_03",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_04",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_05",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_06",
+                    "reason": "BUDGET"
+                  }
+                ],
+                "fee": 0,
+                "hammer": 0,
+                "net": 0,
+                "opening": 1737,
+                "participants": [
+                  {
+                    "id": "bidder_11"
+                  },
+                  {
+                    "id": "bidder_12"
+                  },
+                  {
+                    "id": "bidder_01"
+                  },
+                  {
+                    "id": "bidder_02"
+                  },
+                  {
+                    "id": "bidder_03"
+                  },
+                  {
+                    "id": "bidder_04"
+                  },
+                  {
+                    "id": "bidder_05"
+                  },
+                  {
+                    "id": "bidder_06"
+                  }
+                ],
+                "publicFingerprint": "AUC-1812873807",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_RISK",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "reserve": 2096,
+                "reserve_met": false,
+                "sale_status": "NO_SALE",
+                "transactionId": "auction_1_1641216154_1",
+                "winnerId": ""
+              }
+            },
+            {
+              "artifact": {
+                "artifactSpecId": "artifact_075",
+                "category": "microscopy_instruments",
+                "damageInstances": [
+                  "MECHANICAL_WEAR",
+                  "MISSING_PART",
+                  "TARNISH"
+                ],
+                "displayName": "Velvet Entomology Microscope",
+                "instanceId": "stage_10_checkpoint_03",
+                "partStates": {},
+                "specId": "artifact_075",
+                "uniqueId": "stage_10_checkpoint_03",
+                "visualSignature": {}
+              },
+              "auction": {
+                "bids": [
+                  {
+                    "amount": 1603,
+                    "bidderId": "bidder_10"
+                  },
+                  {
+                    "amount": 1681,
+                    "bidderId": "bidder_11"
+                  },
+                  {
+                    "amount": 1765,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 1850,
+                    "bidderId": "bidder_11"
+                  },
+                  {
+                    "amount": 1941,
+                    "bidderId": "bidder_12"
+                  }
+                ],
+                "dropouts": [
+                  {
+                    "bidderId": "bidder_01",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_02",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_03",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_04",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_05",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_10",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_11",
+                    "reason": "BUDGET"
+                  }
+                ],
+                "fee": 232,
+                "hammer": 1941,
+                "net": 1709,
+                "opening": 1531,
+                "participants": [
+                  {
+                    "id": "bidder_10"
+                  },
+                  {
+                    "id": "bidder_11"
+                  },
+                  {
+                    "id": "bidder_12"
+                  },
+                  {
+                    "id": "bidder_01"
+                  },
+                  {
+                    "id": "bidder_02"
+                  },
+                  {
+                    "id": "bidder_03"
+                  },
+                  {
+                    "id": "bidder_04"
+                  },
+                  {
+                    "id": "bidder_05"
+                  }
+                ],
+                "publicFingerprint": "AUC-326008088",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "reserve": 1847,
+                "reserve_met": true,
+                "sale_status": "SOLD",
+                "transactionId": "auction_1_1426811284_2",
+                "winnerId": "bidder_12"
+              }
+            }
+          ],
+          "score": {
+            "authentication": 80.7692307692308,
+            "authenticationAccuracy": 0.807692307692308,
+            "balancedScore": 79.2463980463981,
+            "collectionQuality": 100.0,
+            "collectorReputation": 73.0,
+            "collectorTrust": 4,
+            "ethics": 61,
+            "financial": 89.9555555555555,
+            "grandReserveRevenue": 3688,
+            "integrity": 52.0,
+            "museumTrust": 95.0,
+            "restoration": 64.0
+          }
+        },
+        "reserveOk": true,
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "currentAct": "EPILOGUE",
+          "ending": "ENDING_B",
+          "highestUnlockedStage": 10,
+          "inventory": 4,
+          "noSales": 2,
+          "postGame": false,
+          "sales": 1,
+          "stage": 10,
+          "stageStatus": "CLEARED",
+          "transactions": 3
+        },
+        "stage": 10,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.83845921242015,
+          "ok": true,
+          "stage": 10
+        }
+      },
+      "executed": true,
+      "id": "E2E-STAGE-10",
+      "name": "Fresh-run replay completes Stage 10 and preserves the next unlock",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "routes": [
+          {
+            "actual": "ending",
+            "ok": true,
+            "route": "ending"
+          },
+          {
+            "actual": "postgame",
+            "ok": true,
+            "route": "postgame"
+          }
+        ],
+        "snapshot": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "currentAct": "POSTGAME",
+          "ending": "ENDING_B",
+          "highestUnlockedStage": 10,
+          "inventory": 4,
+          "noSales": 2,
+          "postGame": true,
+          "sales": 1,
+          "stage": 10,
+          "stageStatus": "CLEARED",
+          "transactions": 3
+        }
+      },
+      "executed": true,
+      "id": "E2E-ENDINGS",
+      "name": "Stage 10 reaches ending/postgame routes after Grand Reserve",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "currentAct": "POSTGAME",
+          "ending": "ENDING_B",
+          "highestUnlockedStage": 10,
+          "inventory": 4,
+          "noSales": 2,
+          "postGame": true,
+          "sales": 1,
+          "stage": 10,
+          "stageStatus": "CLEARED",
+          "transactions": 3
+        },
+        "before": {
+          "clearAcknowledged": true,
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "currentAct": "POSTGAME",
+          "ending": "ENDING_B",
+          "highestUnlockedStage": 10,
+          "inventory": 4,
+          "noSales": 2,
+          "postGame": true,
+          "sales": 1,
+          "stage": 10,
+          "stageStatus": "CLEARED",
+          "transactions": 3
+        },
+        "loadedProfile": true,
+        "loadedRun": true,
+        "savedProfile": true,
+        "savedRun": true
+      },
+      "executed": true,
+      "id": "E2E-RESTART",
+      "name": "Profile/run save reload restores Stage 10 postgame state exactly",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "profile": {
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "highestUnlockedStage": 10,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 100.0,
+            "10": 79.2463980463981,
+            "2": 100.0,
+            "3": 100.0,
+            "4": 92.6666666666667,
+            "5": 100.0,
+            "6": 100.0,
+            "7": 100.0,
+            "8": 100.0,
+            "9": 100.0
+          },
+          "tutorialCompletedSteps": []
+        },
+        "profileBefore": {
+          "clearedStages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "highestUnlockedStage": 10,
+          "schema_version": 1,
+          "stageBest": {
+            "1": 100.0,
+            "10": 79.2463980463981,
+            "2": 100.0,
+            "3": 100.0,
+            "4": 92.6666666666667,
+            "5": 100.0,
+            "6": 100.0,
+            "7": 100.0,
+            "8": 100.0,
+            "9": 100.0
+          },
+          "tutorialCompletedSteps": [
+            "INVESTIGATE"
+          ]
+        },
+        "profilePreserved": true,
+        "stage10Button": true,
+        "stage10Disabled": false,
+        "stage10Selectable": true,
+        "start": {
+          "code": "OK",
+          "difficultyMultiplier": 1.0,
+          "ok": true,
+          "stage": 1
+        }
+      },
+      "executed": true,
+      "id": "E2E-REPLAY",
+      "name": "NEW GAME resets only the run and keeps all ten stages selectable",
+      "passed": true
+    }
+  ],
+  "executed": 15,
+  "failed": 0,
+  "humanPlaytestRequired": true,
+  "humanPlaytestUnverified": [
+    "first-time comprehension",
+    "auction cause recall",
+    "portrait legibility at native display",
+    "felt difficulty curve"
+  ],
+  "mode": "audit-only",
+  "passed": 15,
+  "productionMutations": 0,
+  "stages": [
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "leave_patina",
+          "completed": true,
+          "currentAct": "ACT_1",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_leave_patina"
+        },
+        {
+          "case": "estate_compass",
+          "completed": true,
+          "currentAct": "ACT_1",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_estate_compass"
+        },
+        {
+          "case": "pawn_watch",
+          "completed": true,
+          "currentAct": "PROLOGUE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_pawn_watch"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.07,
+      "expectedNextUnlock": 3,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {},
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2
+        ],
+        "currentAct": "PROLOGUE",
+        "ending": "",
+        "highestUnlockedStage": 3,
+        "inventory": 0,
+        "noSales": 0,
+        "postGame": false,
+        "sales": 3,
+        "stage": 2,
+        "stageStatus": "CLEARED",
+        "transactions": 6
+      },
+      "stage": 2,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.07,
+        "ok": true,
+        "stage": 2
+      }
+    },
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "garage_lamp",
+          "completed": true,
+          "currentAct": "ACT_1",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_garage_lamp"
+        },
+        {
+          "case": "telephone_trace",
+          "completed": true,
+          "currentAct": "ACT_1",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_telephone_trace"
+        },
+        {
+          "case": "early_camera",
+          "completed": true,
+          "currentAct": "PROLOGUE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_early_camera"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.1449,
+      "expectedNextUnlock": 4,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {},
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2,
+          3
+        ],
+        "currentAct": "PROLOGUE",
+        "ending": "",
+        "highestUnlockedStage": 4,
+        "inventory": 0,
+        "noSales": 0,
+        "postGame": false,
+        "sales": 3,
+        "stage": 3,
+        "stageStatus": "CLEARED",
+        "transactions": 6
+      },
+      "stage": 3,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.1449,
+        "ok": true,
+        "stage": 3
+      }
+    },
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "false_invoice",
+          "completed": true,
+          "currentAct": "ACT_2",
+          "issued": true,
+          "outcome": "credible",
+          "repeatUidStable": true,
+          "uid": "case_false_invoice"
+        },
+        {
+          "case": "mislabelled_collection",
+          "completed": true,
+          "currentAct": "ACT_2",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_mislabelled_collection"
+        },
+        {
+          "case": "observatory_instrument",
+          "completed": true,
+          "currentAct": "PROLOGUE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_observatory_instrument"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.225043,
+      "expectedNextUnlock": 5,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {},
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "currentAct": "PROLOGUE",
+        "ending": "",
+        "highestUnlockedStage": 5,
+        "inventory": 0,
+        "noSales": 0,
+        "postGame": false,
+        "sales": 3,
+        "stage": 4,
+        "stageStatus": "CLEARED",
+        "transactions": 6
+      },
+      "stage": 4,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.225043,
+        "ok": true,
+        "stage": 4
+      }
+    },
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "collector_promise",
+          "completed": true,
+          "currentAct": "ACT_3",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_collector_promise"
+        },
+        {
+          "case": "three_cameras",
+          "completed": true,
+          "currentAct": "ACT_4",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_three_cameras"
+        },
+        {
+          "case": "shadow_camera",
+          "completed": true,
+          "currentAct": "PROLOGUE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_shadow_camera"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.31079601,
+      "expectedNextUnlock": 6,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {},
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "currentAct": "PROLOGUE",
+        "ending": "",
+        "highestUnlockedStage": 6,
+        "inventory": 0,
+        "noSales": 0,
+        "postGame": false,
+        "sales": 3,
+        "stage": 5,
+        "stageStatus": "CLEARED",
+        "transactions": 6
+      },
+      "stage": 5,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.31079601,
+        "ok": true,
+        "stage": 5
+      }
+    },
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "shadow_gauge",
+          "completed": true,
+          "currentAct": "ACT_4",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_shadow_gauge"
+        },
+        {
+          "case": "shadow_clock",
+          "completed": true,
+          "currentAct": "ACT_4",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_shadow_clock"
+        },
+        {
+          "case": "shadow_music_box",
+          "completed": true,
+          "currentAct": "PROLOGUE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_shadow_music_box"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.4025517307,
+      "expectedNextUnlock": 7,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {},
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "currentAct": "PROLOGUE",
+        "ending": "",
+        "highestUnlockedStage": 7,
+        "inventory": 0,
+        "noSales": 0,
+        "postGame": false,
+        "sales": 3,
+        "stage": 6,
+        "stageStatus": "CLEARED",
+        "transactions": 6
+      },
+      "stage": 6,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.4025517307,
+        "ok": true,
+        "stage": 6
+      }
+    },
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "shadow_optic",
+          "completed": true,
+          "currentAct": "ACT_4",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_shadow_optic"
+        },
+        {
+          "case": "composite_prototype",
+          "completed": true,
+          "currentAct": "PROLOGUE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_composite_prototype"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.500730351849,
+      "expectedNextUnlock": 8,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {},
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "currentAct": "PROLOGUE",
+        "ending": "",
+        "highestUnlockedStage": 8,
+        "inventory": 0,
+        "noSales": 0,
+        "postGame": false,
+        "sales": 2,
+        "stage": 7,
+        "stageStatus": "CLEARED",
+        "transactions": 4
+      },
+      "stage": 7,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.500730351849,
+        "ok": true,
+        "stage": 7
+      }
+    },
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "master_chronometer",
+          "completed": true,
+          "currentAct": "ACT_5",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_master_chronometer"
+        },
+        {
+          "case": "master_optical",
+          "completed": true,
+          "currentAct": "PROLOGUE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_master_optical"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.60578147647843,
+      "expectedNextUnlock": 9,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {},
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "currentAct": "PROLOGUE",
+        "ending": "",
+        "highestUnlockedStage": 9,
+        "inventory": 2,
+        "noSales": 0,
+        "postGame": false,
+        "sales": 0,
+        "stage": 8,
+        "stageStatus": "CLEARED",
+        "transactions": 2
+      },
+      "stage": 8,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.60578147647843,
+        "ok": true,
+        "stage": 8
+      }
+    },
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "master_recorder",
+          "completed": true,
+          "currentAct": "ACT_5",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_master_recorder"
+        },
+        {
+          "case": "master_gauge",
+          "completed": true,
+          "currentAct": "PROLOGUE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_master_gauge"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.71818617983192,
+      "expectedNextUnlock": 10,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {},
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "currentAct": "PROLOGUE",
+        "ending": "",
+        "highestUnlockedStage": 10,
+        "inventory": 2,
+        "noSales": 0,
+        "postGame": false,
+        "sales": 0,
+        "stage": 9,
+        "stageStatus": "CLEARED",
+        "transactions": 2
+      },
+      "stage": 9,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.71818617983192,
+        "ok": true,
+        "stage": 9
+      }
+    },
+    {
+      "acknowledged": true,
+      "allCaseRowsOk": true,
+      "cases": [
+        {
+          "case": "master_camera",
+          "completed": true,
+          "currentAct": "ACT_5",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_master_camera"
+        },
+        {
+          "case": "master_mechanism",
+          "completed": true,
+          "currentAct": "GRAND_RESERVE",
+          "issued": true,
+          "outcome": "masterful",
+          "repeatUidStable": true,
+          "uid": "case_master_mechanism"
+        }
+      ],
+      "cleared": true,
+      "difficulty": 1.83845921242015,
+      "expectedNextUnlock": 10,
+      "ok": true,
+      "profileOk": true,
+      "reserve": {
+        "code": "OK",
+        "ending": "ENDING_B",
+        "ok": true,
+        "results": [
+          {
+            "artifact": {
+              "artifactSpecId": "artifact_077",
+              "category": "railway_signaling",
+              "damageInstances": [
+                "CRACK",
+                "RUST",
+                "DUST"
+              ],
+              "displayName": "Enamel Railway Signal Lantern",
+              "instanceId": "stage_10_checkpoint_01",
+              "partStates": {},
+              "specId": "artifact_077",
+              "uniqueId": "stage_10_checkpoint_01",
+              "visualSignature": {}
+            },
+            "auction": {
+              "bids": [
+                {
+                  "amount": 1747,
+                  "bidderId": "bidder_12"
+                }
+              ],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_05",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_06",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_07",
+                  "reason": "BUDGET"
+                }
+              ],
+              "fee": 0,
+              "hammer": 1747,
+              "net": 0,
+              "opening": 1664,
+              "participants": [
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                },
+                {
+                  "id": "bidder_06"
+                },
+                {
+                  "id": "bidder_07"
+                }
+              ],
+              "publicFingerprint": "AUC-504302644",
+              "reasonTags": [
+                {
+                  "category": "PRICE",
+                  "code": "RESERVE_TOO_HIGH",
+                  "polarity": "NEGATIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_RISK",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "reserve": 2008,
+              "reserve_met": false,
+              "sale_status": "NO_SALE",
+              "transactionId": "auction_1_676651165_0",
+              "winnerId": "bidder_12"
+            }
+          },
+          {
+            "artifact": {
+              "artifactSpecId": "artifact_078",
+              "category": "magnetic_recorders",
+              "damageInstances": [
+                "GRIME",
+                "TARNISH",
+                "WATER_DAMAGE"
+              ],
+              "displayName": "Leather Field Wire Recorder",
+              "instanceId": "stage_10_checkpoint_02",
+              "partStates": {},
+              "specId": "artifact_078",
+              "uniqueId": "stage_10_checkpoint_02",
+              "visualSignature": {}
+            },
+            "auction": {
+              "bids": [],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_11",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_12",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_05",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_06",
+                  "reason": "BUDGET"
+                }
+              ],
+              "fee": 0,
+              "hammer": 0,
+              "net": 0,
+              "opening": 1737,
+              "participants": [
+                {
+                  "id": "bidder_11"
+                },
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                },
+                {
+                  "id": "bidder_06"
+                }
+              ],
+              "publicFingerprint": "AUC-1812873807",
+              "reasonTags": [
+                {
+                  "category": "PRICE",
+                  "code": "RESERVE_TOO_HIGH",
+                  "polarity": "NEGATIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_RISK",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "reserve": 2096,
+              "reserve_met": false,
+              "sale_status": "NO_SALE",
+              "transactionId": "auction_1_1641216154_1",
+              "winnerId": ""
+            }
+          },
+          {
+            "artifact": {
+              "artifactSpecId": "artifact_075",
+              "category": "microscopy_instruments",
+              "damageInstances": [
+                "MECHANICAL_WEAR",
+                "MISSING_PART",
+                "TARNISH"
+              ],
+              "displayName": "Velvet Entomology Microscope",
+              "instanceId": "stage_10_checkpoint_03",
+              "partStates": {},
+              "specId": "artifact_075",
+              "uniqueId": "stage_10_checkpoint_03",
+              "visualSignature": {}
+            },
+            "auction": {
+              "bids": [
+                {
+                  "amount": 1603,
+                  "bidderId": "bidder_10"
+                },
+                {
+                  "amount": 1681,
+                  "bidderId": "bidder_11"
+                },
+                {
+                  "amount": 1765,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 1850,
+                  "bidderId": "bidder_11"
+                },
+                {
+                  "amount": 1941,
+                  "bidderId": "bidder_12"
+                }
+              ],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_05",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_10",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_11",
+                  "reason": "BUDGET"
+                }
+              ],
+              "fee": 232,
+              "hammer": 1941,
+              "net": 1709,
+              "opening": 1531,
+              "participants": [
+                {
+                  "id": "bidder_10"
+                },
+                {
+                  "id": "bidder_11"
+                },
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                }
+              ],
+              "publicFingerprint": "AUC-326008088",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "reserve": 1847,
+              "reserve_met": true,
+              "sale_status": "SOLD",
+              "transactionId": "auction_1_1426811284_2",
+              "winnerId": "bidder_12"
+            }
+          }
+        ],
+        "score": {
+          "authentication": 80.7692307692308,
+          "authenticationAccuracy": 0.807692307692308,
+          "balancedScore": 79.2463980463981,
+          "collectionQuality": 100.0,
+          "collectorReputation": 73.0,
+          "collectorTrust": 4,
+          "ethics": 61,
+          "financial": 89.9555555555555,
+          "grandReserveRevenue": 3688,
+          "integrity": 52.0,
+          "museumTrust": 95.0,
+          "restoration": 64.0
+        }
+      },
+      "reserveOk": true,
+      "snapshot": {
+        "clearAcknowledged": true,
+        "clearedStages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "currentAct": "EPILOGUE",
+        "ending": "ENDING_B",
+        "highestUnlockedStage": 10,
+        "inventory": 4,
+        "noSales": 2,
+        "postGame": false,
+        "sales": 1,
+        "stage": 10,
+        "stageStatus": "CLEARED",
+        "transactions": 3
+      },
+      "stage": 10,
+      "start": {
+        "code": "OK",
+        "difficultyMultiplier": 1.83845921242015,
+        "ok": true,
+        "stage": 10
+      }
+    }
+  ],
+  "suite": "R3 fresh profile 1-10 E2E audit"
+}

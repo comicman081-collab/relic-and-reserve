@@ -1,0 +1,44 @@
+{
+  "executed": 5,
+  "failed": 0,
+  "passed": 5,
+  "skipped": 0,
+  "suite": "R3 endings",
+  "tests": [
+    {
+      "actual": "ENDING_D",
+      "executed": true,
+      "expected": "ENDING_D",
+      "id": "ENDING-01",
+      "passed": true
+    },
+    {
+      "actual": "ENDING_S",
+      "executed": true,
+      "expected": "ENDING_S",
+      "id": "ENDING-02",
+      "passed": true
+    },
+    {
+      "actual": "ENDING_A",
+      "executed": true,
+      "expected": "ENDING_A",
+      "id": "ENDING-03",
+      "passed": true
+    },
+    {
+      "actual": "ENDING_B",
+      "executed": true,
+      "expected": "ENDING_B",
+      "id": "ENDING-04",
+      "passed": true
+    },
+    {
+      "actual": "ENDING_C",
+      "executed": true,
+      "expected": "ENDING_C",
+      "id": "ENDING-05",
+      "passed": true
+    }
+  ]
+}

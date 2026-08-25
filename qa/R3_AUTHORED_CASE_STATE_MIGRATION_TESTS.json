@@ -1,0 +1,779 @@
+{
+  "executed": 5,
+  "expectedCount": 5,
+  "failed": 0,
+  "passed": 5,
+  "skipped": 0,
+  "suite": "R3 Authored Case State Migration",
+  "tests": [
+    {
+      "evidence": {
+        "cases": {
+          "garage_lamp": {
+            "actual": {
+              "citedEvidenceIds": [
+                "src.garage_lamp.artifact.shell_wear_stamp",
+                "src.garage_lamp.artifact.socket_service_marks"
+              ],
+              "discoveredEvidenceIds": [
+                "src.garage_lamp.artifact.socket_service_marks",
+                "src.garage_lamp.artifact.shell_wear_stamp"
+              ],
+              "migrationSentinel": {
+                "keep": [
+                  3.0,
+                  1.0,
+                  4.0
+                ],
+                "marker": "real-authored"
+              },
+              "resolutionResult": {},
+              "resolved": false,
+              "selectedHypothesisId": ""
+            },
+            "expectedCited": [
+              "src.garage_lamp.artifact.shell_wear_stamp",
+              "src.garage_lamp.artifact.socket_service_marks"
+            ],
+            "expectedDiscovered": [
+              "src.garage_lamp.artifact.socket_service_marks",
+              "src.garage_lamp.artifact.shell_wear_stamp"
+            ],
+            "ok": true
+          },
+          "mislabelled_collection": {
+            "actual": {
+              "citedEvidenceIds": [
+                "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+                "src.mislabelled_collection.artifact.accession_label_layer"
+              ],
+              "discoveredEvidenceIds": [
+                "src.mislabelled_collection.artifact.accession_label_layer",
+                "src.mislabelled_collection.artifact.chassis_serial_optical_path"
+              ],
+              "migrationSentinel": {
+                "keep": [
+                  3.0,
+                  1.0,
+                  4.0
+                ],
+                "marker": "target:mislabelled_collection"
+              },
+              "resolutionResult": {},
+              "resolved": false,
+              "selectedHypothesisId": ""
+            },
+            "expectedCited": [
+              "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+              "src.mislabelled_collection.artifact.accession_label_layer"
+            ],
+            "expectedDiscovered": [
+              "src.mislabelled_collection.artifact.accession_label_layer",
+              "src.mislabelled_collection.artifact.chassis_serial_optical_path"
+            ],
+            "ok": true
+          },
+          "observatory_instrument": {
+            "actual": {
+              "citedEvidenceIds": [
+                "src.observatory_instrument.artifact.meridian_dial_material",
+                "src.observatory_instrument.artifact.pivot_repair_sequence"
+              ],
+              "discoveredEvidenceIds": [
+                "src.observatory_instrument.artifact.pivot_repair_sequence",
+                "src.observatory_instrument.artifact.meridian_dial_material"
+              ],
+              "migrationSentinel": {
+                "keep": [
+                  3.0,
+                  1.0,
+                  4.0
+                ],
+                "marker": "target:observatory_instrument"
+              },
+              "resolutionResult": {},
+              "resolved": false,
+              "selectedHypothesisId": ""
+            },
+            "expectedCited": [
+              "src.observatory_instrument.artifact.meridian_dial_material",
+              "src.observatory_instrument.artifact.pivot_repair_sequence"
+            ],
+            "expectedDiscovered": [
+              "src.observatory_instrument.artifact.pivot_repair_sequence",
+              "src.observatory_instrument.artifact.meridian_dial_material"
+            ],
+            "ok": true
+          }
+        },
+        "injectedCases": [],
+        "loaded": true,
+        "saved": true
+      },
+      "executed": true,
+      "id": "AUTHORED-STATE-MIGRATION-01",
+      "name": "Unresolved authored states retain only current ordered unique evidence membership and clear invalid hypothesis/result fields",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": {
+          "citedEvidenceIds": [
+            "early_camera:material"
+          ],
+          "discoveredEvidenceIds": [
+            "early_camera:material",
+            "early_camera:provenance"
+          ],
+          "migrationSentinel": {
+            "keep": [
+              9.0,
+              2.0,
+              6.0
+            ],
+            "resolved": true
+          },
+          "resolutionResult": {
+            "historicalReceipt": "keep-exact",
+            "outcome": "masterful"
+          },
+          "resolved": true,
+          "selectedHypothesisId": "FORGERY"
+        },
+        "before": {
+          "citedEvidenceIds": [
+            "early_camera:material"
+          ],
+          "discoveredEvidenceIds": [
+            "early_camera:material",
+            "early_camera:provenance"
+          ],
+          "migrationSentinel": {
+            "keep": [
+              9,
+              2,
+              6
+            ],
+            "resolved": true
+          },
+          "resolutionResult": {
+            "historicalReceipt": "keep-exact",
+            "outcome": "masterful"
+          },
+          "resolved": true,
+          "selectedHypothesisId": "FORGERY"
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-STATE-MIGRATION-02",
+      "name": "Resolved authored case history remains exact even when it uses pre-authored identifiers",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "afterRng": -3378380881708314866,
+        "artifacts": {
+          "mislabelled_collection": {
+            "after": {
+              "acquisitionPrice": 216.0,
+              "actualEra": "1940-1952",
+              "artifactSpecId": "artifact_018",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE",
+              "baseModel": "model_03.obj",
+              "baseValue": 433,
+              "caseId": "mislabelled_collection",
+              "caseResolved": false,
+              "category": "optical_devices",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "optical_devices",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE",
+                "TARNISH",
+                "PAINT_LOSS",
+                "FADING"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "RUST",
+                "PAINT_LOSS",
+                "TARNISH"
+              ],
+              "displayName": "Rook Slide Projector R",
+              "estimatedValue": 433.0,
+              "evidence": [
+                {
+                  "clueType": "mislabelled_collection:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 61.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "mislabelled_collection:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 244.0,
+                "starting": 177.0
+              },
+              "maker": "maker_18",
+              "materialSet": [
+                "material_03",
+                "material_06"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 117",
+              "originalParts": 2.0,
+              "partStates": {
+                "body": true,
+                "mechanism": true,
+                "panel": true
+              },
+              "playerHypothesis": "GENUINE",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "uncommon",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 1.0,
+              "restorationCost": 47.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.4,
+                "repair": 0.6
+              },
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 940100.0,
+              "sold": false,
+              "storyArtifactId": "story_artifact_11",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": true,
+                "part_family": "camera",
+                "parts": [
+                  "body",
+                  "panel",
+                  "mechanism"
+                ]
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.28,
+              "trueMarketBaseline": 433,
+              "trueRarity": 1.25,
+              "uniqueId": "case_mislabelled_collection",
+              "visualSignature": "model_03.obj|variant_018|model_03|ceramic|1|18",
+              "visualVariant": "variant_018",
+              "zoom": 1.0
+            },
+            "before": {
+              "acquisitionPrice": 216,
+              "actualEra": "1940-1952",
+              "artifactSpecId": "artifact_018",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE",
+              "baseModel": "model_03.obj",
+              "baseValue": 433,
+              "caseId": "mislabelled_collection",
+              "caseResolved": false,
+              "category": "optical_devices",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "optical_devices",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE",
+                "TARNISH",
+                "PAINT_LOSS",
+                "FADING"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "RUST",
+                "PAINT_LOSS",
+                "TARNISH"
+              ],
+              "displayName": "Rook Slide Projector R",
+              "estimatedValue": 433,
+              "evidence": [
+                {
+                  "clueType": "mislabelled_collection:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 61.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "mislabelled_collection:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 244,
+                "starting": 177
+              },
+              "maker": "maker_18",
+              "materialSet": [
+                "material_03",
+                "material_06"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 117",
+              "originalParts": 2,
+              "partStates": {
+                "body": true,
+                "mechanism": true,
+                "panel": true
+              },
+              "playerHypothesis": "GENUINE",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "uncommon",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 47.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.4,
+                "repair": 0.6
+              },
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 940100,
+              "sold": false,
+              "storyArtifactId": "story_artifact_11",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": true,
+                "part_family": "camera",
+                "parts": [
+                  "body",
+                  "panel",
+                  "mechanism"
+                ]
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.28,
+              "trueMarketBaseline": 433,
+              "trueRarity": 1.25,
+              "uniqueId": "case_mislabelled_collection",
+              "visualSignature": "model_03.obj|variant_018|model_03|ceramic|1|18",
+              "visualVariant": "variant_018",
+              "zoom": 1.0
+            },
+            "ok": true
+          },
+          "observatory_instrument": {
+            "after": {
+              "acquisitionPrice": 229.0,
+              "actualEra": "1932-1944",
+              "artifactSpecId": "artifact_011",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_11.obj",
+              "baseValue": 300,
+              "caseId": "observatory_instrument",
+              "caseResolved": false,
+              "category": "scientific_instruments",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "scientific_instruments",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE",
+                "TARNISH",
+                "PAINT_LOSS"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "PAINT_LOSS",
+                "GRIME",
+                "DUST"
+              ],
+              "displayName": "Kestrel Compass K",
+              "estimatedValue": 300.0,
+              "evidence": [
+                {
+                  "clueType": "observatory_instrument:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 62.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "observatory_instrument:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 244.0,
+                "starting": 177.0
+              },
+              "maker": "maker_11",
+              "materialSet": [
+                "material_11",
+                "material_14"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 110",
+              "originalParts": 3.0,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "rare",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 0.0,
+              "restorationCost": 48.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.2,
+                "repair": 0.6
+              },
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 940101.0,
+              "sold": false,
+              "storyArtifactId": "story_artifact_12",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.2485,
+              "trueMarketBaseline": 300,
+              "trueRarity": 1.65,
+              "uniqueId": "case_observatory_instrument",
+              "visualSignature": "model_11.obj|variant_011|model_11|paper|0|11",
+              "visualVariant": "variant_011",
+              "zoom": 1.0
+            },
+            "before": {
+              "acquisitionPrice": 229,
+              "actualEra": "1932-1944",
+              "artifactSpecId": "artifact_011",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_11.obj",
+              "baseValue": 300,
+              "caseId": "observatory_instrument",
+              "caseResolved": false,
+              "category": "scientific_instruments",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "scientific_instruments",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE",
+                "TARNISH",
+                "PAINT_LOSS"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "PAINT_LOSS",
+                "GRIME",
+                "DUST"
+              ],
+              "displayName": "Kestrel Compass K",
+              "estimatedValue": 300,
+              "evidence": [
+                {
+                  "clueType": "observatory_instrument:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 62.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "observatory_instrument:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 244,
+                "starting": 177
+              },
+              "maker": "maker_11",
+              "materialSet": [
+                "material_11",
+                "material_14"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 110",
+              "originalParts": 3,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "rare",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 48.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.2,
+                "repair": 0.6
+              },
+              "restorationQuality": 26.0,
+              "rotation": 0.0,
+              "seed": 940101,
+              "sold": false,
+              "storyArtifactId": "story_artifact_12",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.2485,
+              "trueMarketBaseline": 300,
+              "trueRarity": 1.65,
+              "uniqueId": "case_observatory_instrument",
+              "visualSignature": "model_11.obj|variant_011|model_11|paper|0|11",
+              "visualVariant": "variant_011",
+              "zoom": 1.0
+            },
+            "ok": true
+          }
+        },
+        "beforeRng": -3378380881708314866,
+        "protectedExact": true
+      },
+      "executed": true,
+      "id": "AUTHORED-STATE-MIGRATION-03",
+      "name": "Canonicalization preserves artifacts, identity, ledger, economy, RNG, public clues, repair, auction, tutorial, telemetry and schema state",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "firstExact": true,
+        "reloadOne": true,
+        "reloadTwo": true,
+        "saved": true,
+        "secondExact": true
+      },
+      "executed": true,
+      "id": "AUTHORED-STATE-MIGRATION-04",
+      "name": "The normalized authored state is idempotent across repeated save and reload",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "mislabelled_collection": {
+          "citationSet": true,
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "physical_projector_identity"
+          },
+          "hypothesisSet": true,
+          "ok": true,
+          "publicCitations": [
+            "src.mislabelled_collection.artifact.chassis_serial_optical_path"
+          ],
+          "resolution": {
+            "citedEvidenceIds": [
+              "src.mislabelled_collection.artifact.chassis_serial_optical_path"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "rootEvidence": "src.mislabelled_collection.artifact.chassis_serial_optical_path"
+        },
+        "observatory_instrument": {
+          "citationSet": true,
+          "discovery": {
+            "appliedRiskPenalty": 1.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.observatory_instrument.artifact.meridian_dial_material",
+            "ok": true,
+            "riskLevel": "LOW",
+            "sourceId": "physical_observatory_identity"
+          },
+          "hypothesisSet": true,
+          "ok": true,
+          "publicCitations": [
+            "src.observatory_instrument.artifact.meridian_dial_material"
+          ],
+          "resolution": {
+            "citedEvidenceIds": [
+              "src.observatory_instrument.artifact.meridian_dial_material"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.observatory_instrument.genuine_period_pivot_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "rootEvidence": "src.observatory_instrument.artifact.meridian_dial_material"
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-STATE-MIGRATION-05",
+      "name": "Both projected Stage 4 legacy cases can rediscover, cite and resolve after canonicalization without CROSS_CASE_EVIDENCE",
+      "passed": true
+    }
+  ]
+}

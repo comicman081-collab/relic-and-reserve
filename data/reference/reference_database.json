@@ -1,0 +1,500 @@
+{
+  "fictional": true,
+  "notice": "All entries are fictional in-world reference material.",
+  "makerModelHistories": [
+    {
+      "id": "history_01",
+      "makerId": "maker_01",
+      "model": "Archive Model 01",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_02",
+      "makerId": "maker_02",
+      "model": "Archive Model 02",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_03",
+      "makerId": "maker_03",
+      "model": "Archive Model 03",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_04",
+      "makerId": "maker_04",
+      "model": "Archive Model 04",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_05",
+      "makerId": "maker_05",
+      "model": "Archive Model 05",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_06",
+      "makerId": "maker_06",
+      "model": "Archive Model 06",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_07",
+      "makerId": "maker_07",
+      "model": "Archive Model 07",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_08",
+      "makerId": "maker_08",
+      "model": "Archive Model 08",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_09",
+      "makerId": "maker_09",
+      "model": "Archive Model 09",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_10",
+      "makerId": "maker_10",
+      "model": "Archive Model 10",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_11",
+      "makerId": "maker_11",
+      "model": "Archive Model 11",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_12",
+      "makerId": "maker_12",
+      "model": "Archive Model 12",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_13",
+      "makerId": "maker_13",
+      "model": "Archive Model 13",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_14",
+      "makerId": "maker_14",
+      "model": "Archive Model 14",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_15",
+      "makerId": "maker_15",
+      "model": "Archive Model 15",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_16",
+      "makerId": "maker_16",
+      "model": "Archive Model 16",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_17",
+      "makerId": "maker_17",
+      "model": "Archive Model 17",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_18",
+      "makerId": "maker_18",
+      "model": "Archive Model 18",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_19",
+      "makerId": "maker_19",
+      "model": "Archive Model 19",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_20",
+      "makerId": "maker_20",
+      "model": "Archive Model 20",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_21",
+      "makerId": "maker_01",
+      "model": "Archive Model 21",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_22",
+      "makerId": "maker_02",
+      "model": "Archive Model 22",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_23",
+      "makerId": "maker_03",
+      "model": "Archive Model 23",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_24",
+      "makerId": "maker_04",
+      "model": "Archive Model 24",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_25",
+      "makerId": "maker_05",
+      "model": "Archive Model 25",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_26",
+      "makerId": "maker_06",
+      "model": "Archive Model 26",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_27",
+      "makerId": "maker_07",
+      "model": "Archive Model 27",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_28",
+      "makerId": "maker_08",
+      "model": "Archive Model 28",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_29",
+      "makerId": "maker_09",
+      "model": "Archive Model 29",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_30",
+      "makerId": "maker_10",
+      "model": "Archive Model 30",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_31",
+      "makerId": "maker_11",
+      "model": "Archive Model 31",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_32",
+      "makerId": "maker_12",
+      "model": "Archive Model 32",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_33",
+      "makerId": "maker_13",
+      "model": "Archive Model 33",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_34",
+      "makerId": "maker_14",
+      "model": "Archive Model 34",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_35",
+      "makerId": "maker_15",
+      "model": "Archive Model 35",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_36",
+      "makerId": "maker_16",
+      "model": "Archive Model 36",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_37",
+      "makerId": "maker_17",
+      "model": "Archive Model 37",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_38",
+      "makerId": "maker_18",
+      "model": "Archive Model 38",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_39",
+      "makerId": "maker_19",
+      "model": "Archive Model 39",
+      "note": "Fictional in-world production and ownership history."
+    },
+    {
+      "id": "history_40",
+      "makerId": "maker_20",
+      "model": "Archive Model 40",
+      "note": "Fictional in-world production and ownership history."
+    }
+  ],
+  "materialConstructionNotes": [
+    {
+      "id": "material_note_01",
+      "title": "Construction Note 01",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_02",
+      "title": "Construction Note 02",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_03",
+      "title": "Construction Note 03",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_04",
+      "title": "Construction Note 04",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_05",
+      "title": "Construction Note 05",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_06",
+      "title": "Construction Note 06",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_07",
+      "title": "Construction Note 07",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_08",
+      "title": "Construction Note 08",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_09",
+      "title": "Construction Note 09",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_10",
+      "title": "Construction Note 10",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_11",
+      "title": "Construction Note 11",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_12",
+      "title": "Construction Note 12",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_13",
+      "title": "Construction Note 13",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_14",
+      "title": "Construction Note 14",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_15",
+      "title": "Construction Note 15",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_16",
+      "title": "Construction Note 16",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_17",
+      "title": "Construction Note 17",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_18",
+      "title": "Construction Note 18",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_19",
+      "title": "Construction Note 19",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_20",
+      "title": "Construction Note 20",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_21",
+      "title": "Construction Note 21",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_22",
+      "title": "Construction Note 22",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_23",
+      "title": "Construction Note 23",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_24",
+      "title": "Construction Note 24",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_25",
+      "title": "Construction Note 25",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_26",
+      "title": "Construction Note 26",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_27",
+      "title": "Construction Note 27",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_28",
+      "title": "Construction Note 28",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_29",
+      "title": "Construction Note 29",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    },
+    {
+      "id": "material_note_30",
+      "title": "Construction Note 30",
+      "note": "Fictional conservation reference: compare surface, joinery, and age evidence."
+    }
+  ],
+  "periodReferences": [
+    {
+      "id": "period_ref_01",
+      "range": "1884-1895",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_02",
+      "range": "1888-1899",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_03",
+      "range": "1892-1903",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_04",
+      "range": "1896-1907",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_05",
+      "range": "1900-1911",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_06",
+      "range": "1904-1915",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_07",
+      "range": "1908-1919",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_08",
+      "range": "1912-1923",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_09",
+      "range": "1916-1927",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_10",
+      "range": "1920-1931",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_11",
+      "range": "1924-1935",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_12",
+      "range": "1928-1939",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_13",
+      "range": "1932-1943",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_14",
+      "range": "1936-1947",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_15",
+      "range": "1940-1951",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_16",
+      "range": "1944-1955",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_17",
+      "range": "1948-1959",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_18",
+      "range": "1952-1963",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_19",
+      "range": "1956-1967",
+      "note": "Fictional design and workshop reference period."
+    },
+    {
+      "id": "period_ref_20",
+      "range": "1960-1971",
+      "note": "Fictional design and workshop reference period."
+    }
+  ]
+}

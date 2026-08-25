@@ -1,0 +1,52 @@
+[
+  {
+    "id": "commission_01",
+    "type": "collector_commission",
+    "localizedName": {"en": "Collector request", "ko": "수집가 의뢰"},
+    "localizedDescription": {"en": "A collector wants a documented, inspected lot.", "ko": "수집가가 조사 기록이 남은 유물을 찾습니다."},
+    "baseReward": 160,
+    "risk": 0.15,
+    "recovery": true,
+    "requirements": {"requiresInspected": true, "minimumClues": 1, "minimumConfidence": 0.25}
+  },
+  {
+    "id": "commission_02",
+    "type": "museum_conservation",
+    "localizedName": {"en": "Museum conservation", "ko": "박물관 보존 의뢰"},
+    "localizedDescription": {"en": "The museum needs a stable, carefully handled object.", "ko": "박물관이 안정적으로 보존된 유물을 필요로 합니다."},
+    "baseReward": 240,
+    "risk": 0.22999999999999998,
+    "recovery": true,
+    "requirements": {"requiresInspected": true, "minimumCondition": 0.70, "minimumIntegrity": 0.65}
+  },
+  {
+    "id": "commission_03",
+    "type": "authentication_only",
+    "localizedName": {"en": "Authentication review", "ko": "진위 감정 의뢰"},
+    "localizedDescription": {"en": "A client pays for a traceable authentication opinion.", "ko": "의뢰인이 추적 가능한 진위 감정 의견을 원합니다."},
+    "baseReward": 320,
+    "risk": 0.31,
+    "recovery": true,
+    "requirements": {"requiresInspected": true, "minimumClues": 2, "minimumConfidence": 0.50}
+  },
+  {
+    "id": "commission_04",
+    "type": "repair_only",
+    "localizedName": {"en": "Precision repair", "ko": "정밀 수리 의뢰"},
+    "localizedDescription": {"en": "A workshop slot is reserved for an already repaired mechanism.", "ko": "수리가 완료된 기계부의 작업 이력을 확인합니다."},
+    "baseReward": 400,
+    "risk": 0.39,
+    "recovery": true,
+    "requirements": {"requiresInspected": true, "requiresRepaired": true}
+  },
+  {
+    "id": "commission_05",
+    "type": "estate_evaluation",
+    "localizedName": {"en": "Estate evaluation", "ko": "유산 평가 의뢰"},
+    "localizedDescription": {"en": "An estate asks for a deep, evidence-backed valuation.", "ko": "유산 관리인이 근거가 충분한 평가를 의뢰합니다."},
+    "baseReward": 480,
+    "risk": 0.47,
+    "recovery": true,
+    "requirements": {"requiresInspected": true, "minimumClues": 3, "minimumConfidence": 0.65, "minimumIntegrity": 0.75}
+  }
+]

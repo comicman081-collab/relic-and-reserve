@@ -1,0 +1,58 @@
+{
+  "id": "artifact_011",
+  "displayName": "Kestrel Compass K",
+  "category": "scientific_instruments",
+  "baseModel": "model_11.obj",
+  "maker": "maker_11",
+  "modelName": "Model 110",
+  "era": "1932-1944",
+  "materialSet": [
+    "material_11",
+    "material_14"
+  ],
+  "rarity": "rare",
+  "baseValue": 300,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH",
+    "PAINT_LOSS"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.2
+  },
+  "collectorTags": [
+    "scientific_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_011"
+}

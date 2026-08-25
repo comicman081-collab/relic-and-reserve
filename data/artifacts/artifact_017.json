@@ -1,0 +1,58 @@
+{
+  "id": "artifact_017",
+  "displayName": "Quillmark Portable Recorder Q",
+  "category": "vintage_audio",
+  "baseModel": "model_02.obj",
+  "maker": "maker_17",
+  "modelName": "Model 116",
+  "era": "1932-1944",
+  "materialSet": [
+    "material_02",
+    "material_05"
+  ],
+  "rarity": "common",
+  "baseValue": 414,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH",
+    "PAINT_LOSS"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.30000000000000004
+  },
+  "collectorTags": [
+    "vintage_audio",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_017"
+}

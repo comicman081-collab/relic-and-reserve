@@ -1,0 +1,72 @@
+[
+  {
+    "id": "DUST",
+    "severity": 1,
+    "visual": "overlay_dust"
+  },
+  {
+    "id": "GRIME",
+    "severity": 2,
+    "visual": "overlay_grime"
+  },
+  {
+    "id": "RUST",
+    "severity": 3,
+    "visual": "overlay_rust"
+  },
+  {
+    "id": "SCRATCH",
+    "severity": 4,
+    "visual": "overlay_scratch"
+  },
+  {
+    "id": "DENT",
+    "severity": 1,
+    "visual": "overlay_dent"
+  },
+  {
+    "id": "CRACK",
+    "severity": 2,
+    "visual": "overlay_crack"
+  },
+  {
+    "id": "BROKEN_PART",
+    "severity": 3,
+    "visual": "overlay_broken_part"
+  },
+  {
+    "id": "MISSING_PART",
+    "severity": 4,
+    "visual": "overlay_missing_part"
+  },
+  {
+    "id": "MECHANICAL_WEAR",
+    "severity": 1,
+    "visual": "overlay_mechanical_wear"
+  },
+  {
+    "id": "WATER_DAMAGE",
+    "severity": 2,
+    "visual": "overlay_water_damage"
+  },
+  {
+    "id": "TARNISH",
+    "severity": 3,
+    "visual": "overlay_tarnish"
+  },
+  {
+    "id": "PAINT_LOSS",
+    "severity": 4,
+    "visual": "overlay_paint_loss"
+  },
+  {
+    "id": "FADING",
+    "severity": 1,
+    "visual": "overlay_fading"
+  },
+  {
+    "id": "CORROSION",
+    "severity": 2,
+    "visual": "overlay_corrosion"
+  }
+]

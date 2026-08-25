@@ -1,0 +1,273 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage6-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "shadow_clock",
+  "act_id": "ACT_4",
+  "title": {"en": "Shadow Mark: Clock", "ko": "그림자 표식: 시계"},
+  "briefing": {
+    "en": "Veteran restorer Mara Venn presents a Kestrel Model 130 clock whose movement carries a black service triangle. The clock is period, but a clean-running escapement raises the question of when and how it was repaired.",
+    "ko": "베테랑 수복가 마라 벤은 기구부에 검은 정비 삼각형이 있는 케스트럴 모델 130 시계를 내놓았다. 시계는 당대 물건이지만 매끄럽게 도는 탈진기가 언제 어떤 방식으로 수리됐는지 밝혀야 한다."
+  },
+  "central_question": {
+    "en": "Is the clock untouched, a genuine Kestrel with a period escapement repair, or a later reconstruction inside an old case?",
+    "ko": "이 시계는 손대지 않은 원형인가, 당대 탈진기 수리를 받은 케스트럴 진품인가, 아니면 오래된 케이스 안에 만든 후대 재구성품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, service marks, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 정비 표식과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report authenticates the Kestrel clock and dates its escapement repair to the instrument's working period.",
+    "ko": "보고서는 케스트럴 시계를 진품으로 확인하고 탈진기 수리를 기구의 사용 시기로 연대 판정한다."
+  },
+  "failure": {
+    "en": "The clock remains in review while Mara Venn reconstructs the service sequence with the player.",
+    "ko": "시계는 검토 상태로 남고, 마라 벤은 플레이어와 함께 정비 순서를 다시 구성한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the clock file from the Stage 6 campaign desk.", "ko": "스테이지 6 캠페인 책상에서 시계 사건 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": ["escapement_sequence_if_bridge_shifted"],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A report that treats a period service repair as either untouched condition or modern reconstruction is reviewed with Mara Venn.",
+        "ko": "당대 정비 수리를 손대지 않은 상태나 현대 재구성으로 오인한 보고서는 마라 벤과 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_031",
+    "legacy_story_artifact_id": "story_artifact_17",
+    "display_name": {"en": "Kestrel Model 130 Mechanical Clock", "ko": "케스트럴 모델 130 기계식 시계"},
+    "authoring_truth_hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+    "player_prompt": {
+      "en": "Authenticate the case and movement, then place the escapement work before or after the clock's working life ended.",
+      "ko": "케이스와 기구부를 감정한 뒤 탈진기 작업이 시계의 사용 종료 전인지 후인지 판단하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.shadow_clock.untouched_kestrel_clock",
+      "label": {"en": "Untouched Kestrel clock", "ko": "손대지 않은 케스트럴 시계"},
+      "claim": {
+        "en": "The clock retains its factory escapement and has never received functional repair.",
+        "ko": "시계는 출고 당시 탈진기를 유지하며 기능 수리를 받은 적이 없다."
+      }
+    },
+    {
+      "id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+      "label": {"en": "Genuine, with period escapement repair", "ko": "당대 탈진기 수리를 받은 진품"},
+      "claim": {
+        "en": "The Kestrel clock is genuine and received a documented escapement bushing and pallet repair during its working period.",
+        "ko": "케스트럴 시계는 진품이며 사용 시기에 기록된 탈진기 부싱과 팰릿 수리를 받았다."
+      }
+    },
+    {
+      "id": "hyp.shadow_clock.later_reconstruction_old_case",
+      "label": {"en": "Later reconstruction in an old case", "ko": "오래된 케이스의 후대 재구성품"},
+      "claim": {
+        "en": "A later movement was fitted into a period Kestrel case and marked to resemble workshop service.",
+        "ko": "후대 기구부를 당대 케스트럴 케이스에 넣고 공방 정비품처럼 보이도록 표식을 더했다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.shadow_clock.artifact.period_clock_identity",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_031",
+      "reliability": "HIGH",
+      "label": {"en": "Clock case and dial", "ko": "시계 케이스와 다이얼"},
+      "short_observation": {"en": "Period materials continue from dial to movement seat.", "ko": "당대 재료가 다이얼에서 기구 안착부까지 이어진다."},
+      "text": {
+        "en": "A low-power material scan matches the silvered chapter ring, shellac binder, brass plate, and blued screws to Kestrel's Model 130 period. Wear circles around both winding holes align with the movement arbors, and continuous dust shadows beneath the dial rule out a recently fitted movement.",
+        "ko": "저출력 재질 스캔에서 은도금 문자환, 셸락 결합제, 황동판과 청색 열처리 나사가 케스트럴 모델 130 시기와 맞는다. 두 태엽 구멍 둘레의 마모가 기구 축과 정렬되고 다이얼 아래의 이어진 먼지 음영은 최근에 기구부를 끼운 가능성을 배제한다."
+      },
+      "unlock": {
+        "action": "scan_material",
+        "target": "clock_case_and_dial",
+        "requires": ["material_scanner"],
+        "action_label": {"en": "Scan clock body", "ko": "시계 몸체 스캔"},
+        "target_label": {"en": "Dial and movement seat", "ko": "다이얼과 기구 안착부"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {"en": "Keep the scan brief around the silvered chapter ring.", "ko": "은도금 문자환 둘레는 짧게 스캔하라."}
+      },
+      "independence": {"group": "period_clock_material", "depends_on": []},
+      "citation_id": "cite.shadow_clock.artifact.period_clock_identity"
+    },
+    {
+      "source_ref": "src.shadow_clock.artifact.period_escapement_repair",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_031",
+      "reliability": "HIGH",
+      "label": {"en": "Escapement repair", "ko": "탈진기 수리"},
+      "short_observation": {"en": "A period bushing and pallet repair share old working wear.", "ko": "당대 부싱과 팰릿 수리에 오래된 사용 마모가 함께 남아 있다."},
+      "text": {
+        "en": "After bridge and beat positions are recorded, precision disassembly exposes a hand-peened escape-wheel bushing and one recut pallet face. The black service triangle sits below old oil residue, Kestrel punch 17 crosses the replacement bushing, and decades of matched wear continue after the repair.",
+        "ko": "브리지와 박자 위치를 기록하고 정밀 분해하자 손으로 두드려 맞춘 탈진바퀴 부싱과 다시 깎은 팰릿 면 하나가 드러난다. 검은 정비 삼각형은 오래된 기름 잔류물 아래에 있고 케스트럴 타각 17이 교체 부싱을 가로지르며, 수리 뒤 수십 년의 일치하는 마모가 이어진다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "escapement_bridge",
+        "requires": ["src.shadow_clock.artifact.period_clock_identity", "precision_screwdriver"],
+        "action_label": {"en": "Open escapement bridge", "ko": "탈진기 브리지 열기"},
+        "target_label": {"en": "Bushing and pallet", "ko": "부싱과 팰릿"}
+      },
+      "risk": {
+        "destroyed_by": ["lift_bridge_before_beat_capture"],
+        "player_warning": {"en": "Record bridge position and beat before lifting it.", "ko": "브리지를 들기 전에 위치와 박자를 기록하라."}
+      },
+      "independence": {"group": "escapement_service_sequence", "depends_on": ["src.shadow_clock.artifact.period_clock_identity"]},
+      "citation_id": "cite.shadow_clock.artifact.period_escapement_repair"
+    },
+    {
+      "source_ref": "src.shadow_clock.document.collector_repair_letter",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_17",
+      "document_id": "doc.shadow_clock.collector_repair_letter",
+      "reliability": "MEDIUM",
+      "label": {"en": "Collector repair letter", "ko": "수집가 수리 서신"},
+      "short_observation": {"en": "The letter describes a working-period escapement service.", "ko": "서신이 사용 시기의 탈진기 정비를 설명한다."},
+      "text": {
+        "en": "Fictional Record 17 quotes a Kestrel repairer fitting a bushing, correcting one pallet, and adding service triangle 17 so later workers would preserve the new beat. The letter names no owner, address, sale, or transfer and therefore documents repair context, not provenance.",
+        "ko": "가상 기록 17은 케스트럴 수리공이 부싱을 맞추고 팰릿 하나를 바로잡은 뒤 후대 작업자가 새 박자를 유지하도록 정비 삼각형 17을 남겼다고 전한다. 이 서신에는 소유자, 주소, 매매나 이관이 없어 수리 맥락만 보여 주며 소장 이력은 아니다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "collector_repair_letter",
+        "requires": ["src.shadow_clock.artifact.period_escapement_repair"],
+        "action_label": {"en": "Read repair letter", "ko": "수리 서신 읽기"},
+        "target_label": {"en": "Escapement service note", "ko": "탈진기 정비 기록"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "collector_repair_account", "depends_on": ["src.shadow_clock.artifact.period_escapement_repair"]},
+      "citation_id": "cite.shadow_clock.document.collector_repair_letter"
+    },
+    {
+      "source_ref": "src.shadow_clock.document.auction_custody_receipt",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_03",
+      "document_id": "doc.shadow_clock.auction_custody_receipt",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Auction custody receipt", "ko": "경매 소장 영수증"},
+      "short_observation": {"en": "A signed receipt tracks the numbered clock after its repair.", "ko": "서명된 영수증이 수리 뒤 번호 있는 시계의 소장 경로를 잇는다."},
+      "text": {
+        "en": "Fictional Reference Leaf 03 records the Model 130 case number, dial nick, and service triangle at a workshop dispersal sale, then carries the same identifiers through signed collection transfers. This is the case's sole ownership chain; it does not claim the clock was untouched.",
+        "ko": "가상 참고 낱장 03은 공방 해산 경매에서 모델 130 케이스 번호, 다이얼 흠집과 정비 삼각형을 기록하고 같은 식별자를 서명된 소장품 이관까지 잇는다. 이것이 이 사건의 유일한 소유 경로이며 시계가 손대지 않았다고 주장하지 않는다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "auction_custody_receipt",
+        "requires": [],
+        "action_label": {"en": "Read auction receipt", "ko": "경매 영수증 읽기"},
+        "target_label": {"en": "Signed custody entries", "ko": "서명된 소장 항목"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "clock_auction_chain", "depends_on": []},
+      "citation_id": "cite.shadow_clock.document.auction_custody_receipt"
+    },
+    {
+      "source_ref": "src.shadow_clock.npc.mara_shadow_mark_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "mara_venn",
+      "npc_id": "mara_venn",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Mara's service reading", "ko": "마라의 정비 판독"},
+      "short_observation": {"en": "Mara reads the triangle as a warning, not a maker seal.", "ko": "마라는 삼각형을 제작자 인장이 아닌 정비 경고로 읽는다."},
+      "text": {
+        "en": "Mara Venn explains that a restorer marked a corrected beat so the next worker would not reset it to factory geometry. She recognizes period peening and old oil layering but asks that the physical sequence and separate receipt carry the conclusion rather than her professional opinion alone.",
+        "ko": "마라 벤은 수복가가 교정한 박자를 다음 작업자가 출고 형상으로 되돌리지 않도록 표시했다고 설명한다. 그녀는 당대 두드림 자국과 오래된 기름 층을 알아보지만, 자신의 전문 의견만이 아니라 실물 순서와 별도 영수증으로 결론을 세우라고 요청한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "mara_venn",
+        "requires": ["src.shadow_clock.document.collector_repair_letter"],
+        "action_label": {"en": "Ask Mara Venn", "ko": "마라 벤에게 묻기"},
+        "target_label": {"en": "Mara Venn", "ko": "마라 벤"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "restorer_service_analysis", "depends_on": ["src.shadow_clock.document.collector_repair_letter"]},
+      "citation_id": "cite.shadow_clock.npc.mara_shadow_mark_context"
+    },
+    {
+      "source_ref": "src.shadow_clock.reference.period_clock_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_05",
+      "reference_id": "ref.shadow_clock.period_clock_standard",
+      "reliability": "HIGH",
+      "label": {"en": "Period clock standard", "ko": "당대 시계 기준"},
+      "short_observation": {"en": "The repair follows a documented Kestrel service method.", "ko": "수리가 기록된 케스트럴 정비법을 따른다."},
+      "text": {
+        "en": "The fictional 1900–1911 clock standard matches Model 130 plate spacing, arbor sizes, and dial feet. Its Kestrel appendix shows hand-peened escape bushings, recut pallets, and numbered black triangles as authorized working repairs; later replacement movements use machine-ringed bushings and metric bridges.",
+        "ko": "가상의 1900~1911년 시계 기준은 모델 130의 판 간격, 축 규격과 다이얼 발 위치에 맞는다. 케스트럴 부록은 손으로 두드린 탈진 부싱, 다시 깎은 팰릿과 번호가 든 검은 삼각형을 허용된 사용기 수리로 보여 주며, 후대 교체 기구부는 기계 가공 원형 자국과 미터식 브리지를 쓴다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": ["src.shadow_clock.artifact.period_clock_identity", "reference_database"],
+        "action_label": {"en": "Check service standard", "ko": "정비 기준 확인"},
+        "target_label": {"en": "Kestrel repair appendix", "ko": "케스트럴 수리 부록"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_clock_standard", "depends_on": ["src.shadow_clock.artifact.period_clock_identity"]},
+      "citation_id": "cite.shadow_clock.reference.period_clock_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.shadow_clock.artifact.period_clock_identity", "source_ref": "src.shadow_clock.artifact.period_clock_identity", "label": {"en": "Object scan: clock identity", "ko": "실물 스캔: 시계 정체"}, "locator": {"en": "Object record A-1, dial and movement seat", "ko": "실물 기록 A-1, 다이얼과 기구 안착부"}},
+    {"id": "cite.shadow_clock.artifact.period_escapement_repair", "source_ref": "src.shadow_clock.artifact.period_escapement_repair", "label": {"en": "Object record: escapement repair", "ko": "실물 기록: 탈진기 수리"}, "locator": {"en": "Precision record A-2, bridge and pallet", "ko": "정밀 기록 A-2, 브리지와 팰릿"}},
+    {"id": "cite.shadow_clock.document.collector_repair_letter", "source_ref": "src.shadow_clock.document.collector_repair_letter", "label": {"en": "Collector repair letter", "ko": "수집가 수리 서신"}, "locator": {"en": "Case document D-17, service paragraph", "ko": "사건 문서 D-17, 정비 문단"}},
+    {"id": "cite.shadow_clock.document.auction_custody_receipt", "source_ref": "src.shadow_clock.document.auction_custody_receipt", "label": {"en": "Auction custody receipt", "ko": "경매 소장 영수증"}, "locator": {"en": "Case document D-03, signed transfer lines", "ko": "사건 문서 D-03, 서명된 이관 항목"}},
+    {"id": "cite.shadow_clock.npc.mara_shadow_mark_context", "source_ref": "src.shadow_clock.npc.mara_shadow_mark_context", "label": {"en": "Interview with Mara Venn", "ko": "마라 벤 면담"}, "locator": {"en": "Restorer interview N-17", "ko": "수복가 면담 N-17"}},
+    {"id": "cite.shadow_clock.reference.period_clock_standard", "source_ref": "src.shadow_clock.reference.period_clock_standard", "label": {"en": "Period clock service standard", "ko": "당대 시계 정비 기준"}, "locator": {"en": "Fictional period reference 05, service plate 7", "ko": "가상 시대 참고 05, 정비 도판 7"}}
+  ],
+  "evidence_links": [
+    {"id": "link.shadow_clock.body_supports_untouched", "source_ref": "src.shadow_clock.artifact.period_clock_identity", "hypothesis_id": "hyp.shadow_clock.untouched_kestrel_clock", "relation": "SUPPORT", "weight": 0.45, "independence_group": "period_clock_material", "citation_id": "cite.shadow_clock.artifact.period_clock_identity"},
+    {"id": "link.shadow_clock.body_supports_repair", "source_ref": "src.shadow_clock.artifact.period_clock_identity", "hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair", "relation": "SUPPORT", "weight": 0.85, "independence_group": "period_clock_material", "citation_id": "cite.shadow_clock.artifact.period_clock_identity"},
+    {"id": "link.shadow_clock.body_refutes_reconstruction", "source_ref": "src.shadow_clock.artifact.period_clock_identity", "hypothesis_id": "hyp.shadow_clock.later_reconstruction_old_case", "relation": "REFUTE", "weight": 0.9, "independence_group": "period_clock_material", "citation_id": "cite.shadow_clock.artifact.period_clock_identity"},
+    {"id": "link.shadow_clock.escapement_refutes_untouched", "source_ref": "src.shadow_clock.artifact.period_escapement_repair", "hypothesis_id": "hyp.shadow_clock.untouched_kestrel_clock", "relation": "REFUTE", "weight": 1.0, "independence_group": "escapement_service_sequence", "citation_id": "cite.shadow_clock.artifact.period_escapement_repair"},
+    {"id": "link.shadow_clock.escapement_supports_repair", "source_ref": "src.shadow_clock.artifact.period_escapement_repair", "hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "escapement_service_sequence", "citation_id": "cite.shadow_clock.artifact.period_escapement_repair"},
+    {"id": "link.shadow_clock.escapement_refutes_reconstruction", "source_ref": "src.shadow_clock.artifact.period_escapement_repair", "hypothesis_id": "hyp.shadow_clock.later_reconstruction_old_case", "relation": "REFUTE", "weight": 0.9, "independence_group": "escapement_service_sequence", "citation_id": "cite.shadow_clock.artifact.period_escapement_repair"},
+    {"id": "link.shadow_clock.letter_refutes_untouched", "source_ref": "src.shadow_clock.document.collector_repair_letter", "hypothesis_id": "hyp.shadow_clock.untouched_kestrel_clock", "relation": "REFUTE", "weight": 0.85, "independence_group": "collector_repair_account", "citation_id": "cite.shadow_clock.document.collector_repair_letter"},
+    {"id": "link.shadow_clock.letter_supports_repair", "source_ref": "src.shadow_clock.document.collector_repair_letter", "hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair", "relation": "SUPPORT", "weight": 0.85, "independence_group": "collector_repair_account", "citation_id": "cite.shadow_clock.document.collector_repair_letter"},
+    {"id": "link.shadow_clock.receipt_supports_repair", "source_ref": "src.shadow_clock.document.auction_custody_receipt", "hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "clock_auction_chain", "citation_id": "cite.shadow_clock.document.auction_custody_receipt"},
+    {"id": "link.shadow_clock.receipt_refutes_reconstruction", "source_ref": "src.shadow_clock.document.auction_custody_receipt", "hypothesis_id": "hyp.shadow_clock.later_reconstruction_old_case", "relation": "REFUTE", "weight": 0.85, "independence_group": "clock_auction_chain", "citation_id": "cite.shadow_clock.document.auction_custody_receipt"},
+    {"id": "link.shadow_clock.mara_refutes_untouched", "source_ref": "src.shadow_clock.npc.mara_shadow_mark_context", "hypothesis_id": "hyp.shadow_clock.untouched_kestrel_clock", "relation": "REFUTE", "weight": 0.75, "independence_group": "restorer_service_analysis", "citation_id": "cite.shadow_clock.npc.mara_shadow_mark_context"},
+    {"id": "link.shadow_clock.mara_supports_repair", "source_ref": "src.shadow_clock.npc.mara_shadow_mark_context", "hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair", "relation": "SUPPORT", "weight": 0.8, "independence_group": "restorer_service_analysis", "citation_id": "cite.shadow_clock.npc.mara_shadow_mark_context"},
+    {"id": "link.shadow_clock.standard_refutes_untouched", "source_ref": "src.shadow_clock.reference.period_clock_standard", "hypothesis_id": "hyp.shadow_clock.untouched_kestrel_clock", "relation": "REFUTE", "weight": 0.8, "independence_group": "independent_clock_standard", "citation_id": "cite.shadow_clock.reference.period_clock_standard"},
+    {"id": "link.shadow_clock.standard_supports_repair", "source_ref": "src.shadow_clock.reference.period_clock_standard", "hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair", "relation": "SUPPORT", "weight": 0.95, "independence_group": "independent_clock_standard", "citation_id": "cite.shadow_clock.reference.period_clock_standard"},
+    {"id": "link.shadow_clock.standard_refutes_reconstruction", "source_ref": "src.shadow_clock.reference.period_clock_standard", "hypothesis_id": "hyp.shadow_clock.later_reconstruction_old_case", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_clock_standard", "citation_id": "cite.shadow_clock.reference.period_clock_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.shadow_clock.genuine_kestrel_clock_period_escapement_repair",
+    "required_source_refs": [
+      "src.shadow_clock.artifact.period_clock_identity",
+      "src.shadow_clock.artifact.period_escapement_repair",
+      "src.shadow_clock.document.auction_custody_receipt",
+      "src.shadow_clock.reference.period_clock_standard"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite four findings from four independent groups. Authenticate the clock, date the escapement intervention, and distinguish a period repair from untouched condition or later reconstruction.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 시계를 감정하고 탈진기 개입 시기를 밝히며 당대 수리를 원형 상태나 후대 재구성과 구분하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

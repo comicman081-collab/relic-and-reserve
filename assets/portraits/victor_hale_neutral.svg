@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" data-character-id="victor_hale_neutral" data-character-name="Victor Hale" data-rendered-expression="NEUTRAL" data-expression-anchor="128,139" data-face-zone="73 55 110 140" data-face-height-ratio="0.438" data-eye-system="sclera-iris-pupil-highlight" data-runtime-reference="220x250" data-head-height-svg="164" data-visible-face-skin-height-svg="108" data-major-face-stroke-svg="3.5" data-expression-geometry-version="2">
+  <title>Victor Hale neutral portrait</title>
+  <desc>Cute big-eyed collector Victor Hale with swept silver hair, amber eyes, a teal jacket, a loupe chain, and a camera inventory list.</desc>
+  <path fill="#EAF3EE" d="M18 302V91q0-60 60-60h100q60 0 60 60v211z"/>
+  <path fill="#B9D9CF" d="M28 302V84l22-22 24 15 19-34 31 25 31-34 25 38 27-12 21 24v218z"/>
+  <path fill="#F6E4B8" d="M42 78l31-18 24 13 29-29 30 28 31-13 29 21v13H42z" opacity=".72"/>
+  <g data-layer="hair" data-feature="swept-silver-hair">
+    <path fill="#65717B" d="M70 139Q59 92 77 58q23-42 71-28 40 11 41 61l-12 50-15-60-63 5-12 56z"/>
+    <path fill="#DDE4E6" d="M75 76q20-48 66-48 31 0 46 27-27-13-60 3l34 2q-28 8-54 31l-16 25-7-33-15 17z"/>
+    <path fill="#AAB5B9" d="M92 54q26-27 55-22l-20 26 39-17-18 28 34-12q-31 31-83 36z"/>
+    <path fill="none" stroke="#F4F7F5" stroke-width="4" stroke-linecap="round" d="M103 47q22-14 43-11m-53 27q21-12 42-12" opacity=".8"/>
+  </g>
+  <g data-layer="face">
+    <ellipse fill="#D79572" cx="75" cy="136" rx="10" ry="17"/>
+    <ellipse fill="#D79572" cx="181" cy="136" rx="10" ry="17"/>
+    <path data-part="face-shape" fill="#E8B38E" d="M75 89Q89 58 128 58q40 0 53 31l-6 66q-11 35-47 42-36-7-48-42z"/>
+    <path fill="#F3C5A2" d="M87 97q10-27 41-29 32 1 43 26l-5 55q-10 29-38 35-28-6-37-34z" opacity=".46"/>
+    <g data-part="brows" fill="none" stroke="#665247" stroke-width="3.5" stroke-linecap="round">
+      <path d="M90 107q14-7 29 0"/>
+      <path d="M137 107q14-7 29 0"/>
+    </g>
+    <g data-eye="left">
+      <ellipse data-part="sclera" fill="#FFFDF5" cx="105" cy="125" rx="15.5" ry="9.5"/>
+      <circle data-part="iris" fill="#D49331" cx="106" cy="126" r="8.2"/>
+      <circle data-part="pupil" fill="#4A3526" cx="106" cy="126" r="4.1"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="103" cy="122" r="2.3"/>
+      <circle fill="#FFD879" cx="109" cy="129" r="1.4" opacity=".9"/>
+      <path fill="none" stroke="#6D5145" stroke-width="2" stroke-linecap="round" d="M92 120l-5-2m36 2 5-2"/>
+    </g>
+    <g data-eye="right">
+      <ellipse data-part="sclera" fill="#FFFDF5" cx="151" cy="125" rx="15.5" ry="9.5"/>
+      <circle data-part="iris" fill="#D49331" cx="150" cy="126" r="8.2"/>
+      <circle data-part="pupil" fill="#4A3526" cx="150" cy="126" r="4.1"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="147" cy="122" r="2.3"/>
+      <circle fill="#FFD879" cx="153" cy="129" r="1.4" opacity=".9"/>
+      <path fill="none" stroke="#6D5145" stroke-width="2" stroke-linecap="round" d="M164 120l5-2m-36 2-5-2"/>
+    </g>
+    <ellipse fill="#D87971" cx="93" cy="152" rx="10" ry="4.5" opacity=".55"/>
+    <ellipse fill="#D87971" cx="163" cy="152" rx="10" ry="4.5" opacity=".55"/>
+    <path data-part="nose" fill="#C47E63" d="M124 137l-5 14 9 5 8-5-5-14z"/>
+    <path data-part="mouth" fill="none" stroke="#844D54" stroke-width="3.5" stroke-linecap="round" d="M116 172q12 7 24 0"/>
+    <path fill="none" stroke="#F8D3B5" stroke-width="2" stroke-linecap="round" d="M120 163q8 3 16 0" opacity=".8"/>
+  </g>
+  <g data-layer="outfit">
+    <path fill="#145C5C" d="M43 304l15-78q7-34 49-42l21 22 21-22q42 8 49 42l15 78z"/>
+    <path fill="#237A75" d="M43 304l48-102 37 45 37-45 48 102z"/>
+    <path fill="#F6EEE0" d="M106 185l22 21 22-21-8 56-14 18-14-18z"/>
+    <path fill="#D7A83E" d="M123 207h10v52h-10z"/>
+    <path fill="#0E4649" d="M88 204l31 42-20 58H57zm80 0-31 42 20 58h42z"/>
+    <path fill="none" stroke="#73B9A9" stroke-width="4" d="M59 263h35m68 0h35"/>
+  </g>
+  <g data-layer="prop">
+    <g data-feature="camera-list">
+      <path fill="#F7E9C9" stroke="#815F3D" stroke-width="3" d="M48 230h57v70H48z"/>
+      <path fill="#C9923D" d="M64 220h25v14H64z"/>
+      <path fill="#417D79" d="M58 246h14v11H58zm0 18h14v11H58zm0 18h14v11H58z"/>
+      <path fill="none" stroke="#765D4A" stroke-width="3" stroke-linecap="round" d="M78 250h18m-18 18h15m-15 18h19"/>
+      <circle fill="#203C3E" cx="65" cy="251" r="3.5"/>
+    </g>
+    <g data-feature="loupe-chain">
+      <path fill="none" stroke="#E2B54E" stroke-width="3" stroke-linecap="round" d="M150 210q33 14 19 52"/>
+      <circle fill="#F8D36C" stroke="#74522D" stroke-width="3" cx="168" cy="268" r="13"/>
+      <circle fill="#A7D2CB" stroke="#FFF5D2" stroke-width="3" cx="168" cy="268" r="7" opacity=".9"/>
+      <circle fill="#FFFDF1" cx="165" cy="264" r="2.2"/>
+    </g>
+  </g>
+  <g data-layer="expression-anchors" fill="none" stroke="none">
+    <path data-expression="NEUTRAL" data-brow-shift-svg="0" data-eye-height-shift-svg="0" data-mouth-corner-shift-svg="0" d="M95 108h25m16 0h25m-39 58h14"/>
+    <path data-expression="POSITIVE" data-brow-shift-svg="-5" data-eye-height-shift-svg="-3" data-mouth-corner-shift-svg="-5" d="M95 104h25m16 0h25m-28 52q9 12 18 0"/>
+    <path data-expression="NEGATIVE" data-brow-shift-svg="5" data-eye-height-shift-svg="3" data-mouth-corner-shift-svg="5" d="M95 114h25m16 0h25m-28 55q9-10 18 0"/>
+  </g>
+</svg>

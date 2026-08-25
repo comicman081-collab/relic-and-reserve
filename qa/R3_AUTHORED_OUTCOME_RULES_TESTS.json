@@ -1,0 +1,668 @@
+{
+  "executed": 9,
+  "expectedCount": 9,
+  "failed": 0,
+  "passed": 9,
+  "skipped": 0,
+  "suite": "R3 Authored Outcome Rules",
+  "tests": [
+    {
+      "evidence": {
+        "authoredCount": 22,
+        "cases": {
+          "estate_compass": {
+            "exact": true,
+            "rules": [
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 4,
+                "minimum_independent_groups": 3,
+                "minimum_net_support": 3,
+                "outcome_id": "masterful",
+                "requires_all_required_sources": true
+              },
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 2,
+                "minimum_net_support": 1,
+                "outcome_id": "credible",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "INCORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "mistaken",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "ANY",
+                "fallback": true,
+                "minimum_citations": 0,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "reviewed_with_mentor",
+                "requires_all_required_sources": false
+              }
+            ]
+          },
+          "false_invoice": {
+            "exact": true,
+            "rules": [
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 4,
+                "minimum_independent_groups": 3,
+                "minimum_net_support": 3,
+                "outcome_id": "masterful",
+                "requires_all_required_sources": true
+              },
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 2,
+                "minimum_net_support": 1,
+                "outcome_id": "credible",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "INCORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "mistaken",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "ANY",
+                "fallback": true,
+                "minimum_citations": 0,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "reviewed_with_mentor",
+                "requires_all_required_sources": false
+              }
+            ]
+          },
+          "leave_patina": {
+            "exact": true,
+            "rules": [
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 3,
+                "minimum_independent_groups": 3,
+                "minimum_net_support": 3,
+                "outcome_id": "masterful",
+                "requires_all_required_sources": true
+              },
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 2,
+                "minimum_net_support": 1,
+                "outcome_id": "credible",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "INCORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "mistaken",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "ANY",
+                "fallback": true,
+                "minimum_citations": 0,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "reviewed_with_mentor",
+                "requires_all_required_sources": false
+              }
+            ]
+          },
+          "pawn_watch": {
+            "exact": true,
+            "rules": [
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 4,
+                "minimum_independent_groups": 4,
+                "minimum_net_support": 4,
+                "outcome_id": "masterful",
+                "requires_all_required_sources": true
+              },
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 3,
+                "minimum_independent_groups": 3,
+                "minimum_net_support": 1,
+                "outcome_id": "credible",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "INCORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "mistaken",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "ANY",
+                "fallback": true,
+                "minimum_citations": 0,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "reviewed_with_mentor",
+                "requires_all_required_sources": false
+              }
+            ]
+          },
+          "prologue_clock": {
+            "exact": true,
+            "rules": [
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 3,
+                "minimum_independent_groups": 3,
+                "minimum_net_support": 3,
+                "outcome_id": "masterful",
+                "requires_all_required_sources": true
+              },
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 2,
+                "minimum_net_support": 1,
+                "outcome_id": "credible",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "INCORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "mistaken",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "ANY",
+                "fallback": true,
+                "minimum_citations": 0,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "reviewed_with_mentor",
+                "requires_all_required_sources": false
+              }
+            ]
+          },
+          "shadow_camera": {
+            "exact": true,
+            "rules": [
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 4,
+                "minimum_independent_groups": 4,
+                "minimum_net_support": 4,
+                "outcome_id": "masterful",
+                "requires_all_required_sources": true
+              },
+              {
+                "correctness": "CORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 2,
+                "minimum_net_support": 1,
+                "outcome_id": "credible",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "INCORRECT",
+                "fallback": false,
+                "minimum_citations": 2,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "mistaken",
+                "requires_all_required_sources": false
+              },
+              {
+                "correctness": "ANY",
+                "fallback": true,
+                "minimum_citations": 0,
+                "minimum_independent_groups": 0,
+                "minimum_net_support": 0,
+                "outcome_id": "reviewed_with_mentor",
+                "requires_all_required_sources": false
+              }
+            ]
+          }
+        },
+        "registryErrors": [],
+        "requiredCasesPresent": true
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-NORMALIZE-01",
+      "name": "The six established authored cases preserve ordered normalized rules and deterministic threshold defaults as the registry expands",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "rngMutation0": true,
+        "stateMutation0": true,
+        "three": {
+          "citedEvidenceIds": [
+            "src.pawn_watch.artifact.bridge_service_marks",
+            "src.pawn_watch.artifact.escape_wheel_measurement",
+            "src.pawn_watch.document.pawn_ticket"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.pawn_watch.period_repair",
+          "independentSourceCount": 3,
+          "netScore": 3,
+          "ok": true,
+          "outcome": "credible",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "PLAUSIBLE",
+          "supportScore": 3
+        },
+        "two": {
+          "citedEvidenceIds": [
+            "src.pawn_watch.artifact.bridge_service_marks",
+            "src.pawn_watch.artifact.escape_wheel_measurement"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.pawn_watch.period_repair",
+          "independentSourceCount": 2,
+          "netScore": 2,
+          "ok": true,
+          "outcome": "reviewed_with_mentor",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 2
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-PAWN-LADDER-01",
+      "name": "Pawn Watch correct 2/2 reaches mentor review while correct 3/3 reaches credible",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "one": {
+          "citedEvidenceIds": [
+            "src.pawn_watch.artifact.escape_wheel_measurement"
+          ],
+          "code": "OK",
+          "conclusionAccurate": false,
+          "hypothesisId": "hyp.pawn_watch.modern_parts",
+          "independentSourceCount": 0,
+          "netScore": -1,
+          "ok": true,
+          "outcome": "reviewed_with_mentor",
+          "refuteScore": 1,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 0
+        },
+        "rngMutation0": true,
+        "stateMutation0": true,
+        "two": {
+          "citedEvidenceIds": [
+            "src.pawn_watch.artifact.escape_wheel_measurement",
+            "src.pawn_watch.document.pawn_ticket"
+          ],
+          "code": "OK",
+          "conclusionAccurate": false,
+          "hypothesisId": "hyp.pawn_watch.modern_parts",
+          "independentSourceCount": 0,
+          "netScore": -2,
+          "ok": true,
+          "outcome": "mistaken",
+          "refuteScore": 2,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 0
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-PAWN-WRONG-01",
+      "name": "Pawn Watch wrong 1-citation report reaches mentor fallback and wrong 2+ reaches mistaken even with negative net",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "result": {
+          "citedEvidenceIds": [
+            "src.pawn_watch.artifact.bridge_service_marks",
+            "src.pawn_watch.artifact.escape_wheel_measurement",
+            "src.pawn_watch.document.pawn_ticket",
+            "src.pawn_watch.reference.brasswell_service_gauge"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.pawn_watch.period_repair",
+          "independentSourceCount": 4,
+          "netScore": 4,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 4
+        },
+        "rngMutation0": true,
+        "stateMutation0": true
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-PRECEDENCE-01",
+      "name": "First-match precedence awards Pawn Watch masterful before its credible rule",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "legacyThresholds": {
+          "outcome_rules": [],
+          "plausible_min_citations": 2,
+          "plausible_min_independent_support": 2,
+          "plausible_min_net_score": 1,
+          "report_prompt": {
+            "en": "Choose one hypothesis and cite at least four findings from four independent groups. Identify the replaced wheel, date the repair, reject a modern-part claim, and disclose the intervention without condemning the authentic watch body.",
+            "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 교체된 톱니와 수리 시기를 밝히고 현대 부품 주장을 배제하며 진품 시계 본체 전체를 부정하지 않도록 수리 사실을 고지하라."
+          },
+          "required_source_refs": [
+            "src.pawn_watch.artifact.bridge_service_marks",
+            "src.pawn_watch.artifact.escape_wheel_measurement",
+            "src.pawn_watch.document.pawn_ticket",
+            "src.pawn_watch.reference.brasswell_service_gauge"
+          ],
+          "strong_min_citations": 4,
+          "strong_min_independent_support": 4,
+          "strong_min_net_score": 4
+        },
+        "normalizedRules": [],
+        "result": {
+          "citedEvidenceIds": [
+            "src.pawn_watch.artifact.bridge_service_marks",
+            "src.pawn_watch.artifact.escape_wheel_measurement"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.pawn_watch.period_repair",
+          "independentSourceCount": 2,
+          "netScore": 2,
+          "ok": true,
+          "outcome": "credible",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "PLAUSIBLE",
+          "supportScore": 2
+        },
+        "rngMutation0": true,
+        "stateMutation0": true
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-LEGACY-01",
+      "name": "A normalized ruleless definition retains the exact legacy strong/plausible matcher",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "emptyRngMutation0": true,
+        "emptyStateMutation0": true,
+        "evaluate": {
+          "code": "CITATION_REQUIRED",
+          "ok": false
+        },
+        "lockRngMutation0": true,
+        "lockStateMutation0": true,
+        "locked": {
+          "code": "PENDING_AUCTION_LOCKED",
+          "ok": false
+        },
+        "resolve": {
+          "code": "CITATION_REQUIRED",
+          "ok": false
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-EMPTY-01",
+      "name": "Domain evaluation rejects zero citations without mutation while pending-auction lock keeps priority",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "false_invoice": {
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.false_invoice.artifact.box_joinery",
+              "src.false_invoice.document.invoice_face",
+              "src.false_invoice.document.reverse_provenance",
+              "src.false_invoice.artifact.carbon_transfer",
+              "src.false_invoice.npc.noah_ledger",
+              "src.false_invoice.reference.reserve_numbering"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.authentic_box_false_invoice",
+            "independentSourceCount": 4,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "masterfulMutation0": true,
+          "ok": true,
+          "wrongMutation0": true,
+          "wrongTwoPlus": {
+            "citedEvidenceIds": [
+              "src.false_invoice.artifact.box_joinery",
+              "src.false_invoice.document.invoice_face"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.genuine_1927_invoice",
+            "independentSourceCount": 2,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          }
+        },
+        "prologue_clock": {
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.prologue.artifact.backplate_screws",
+              "src.prologue.artifact.bridge_stamp",
+              "src.prologue.document.service_card",
+              "src.prologue.reference.factory_plate",
+              "src.prologue.npc.mara_statement"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.period_repair",
+            "independentSourceCount": 5,
+            "netScore": 7,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 7
+          },
+          "masterfulMutation0": true,
+          "ok": true,
+          "wrongMutation0": true,
+          "wrongTwoPlus": {
+            "citedEvidenceIds": [
+              "src.prologue.artifact.backplate_screws",
+              "src.prologue.artifact.bridge_stamp"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.untouched_original",
+            "independentSourceCount": 1,
+            "netScore": -1,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 1
+          }
+        },
+        "shadow_camera": {
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.shadow_camera.artifact.mount_wear",
+              "src.shadow_camera.artifact.uv_shadow_mark",
+              "src.shadow_camera.document.repair_leaf",
+              "src.shadow_camera.artifact.internal_spacer",
+              "src.shadow_camera.npc.lena_invoice_account",
+              "src.shadow_camera.reference.model147_material_note"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.late_composite",
+            "independentSourceCount": 6,
+            "netScore": 9,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 9
+          },
+          "masterfulMutation0": true,
+          "ok": true,
+          "wrongMutation0": true,
+          "wrongTwoPlus": {
+            "citedEvidenceIds": [
+              "src.shadow_camera.artifact.mount_wear",
+              "src.shadow_camera.artifact.uv_shadow_mark"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.factory_shadow_camera",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          }
+        }
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-PROTECTED-01",
+      "name": "The three established authored cases retain masterful and wrong-two-plus mistaken outcomes",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "fallbackCondition": "INVALID_OUTCOME_RULE_FALLBACK",
+        "fallbackPosition": "INVALID_OUTCOME_RULE_FALLBACK",
+        "fraction": "INVALID_OUTCOME_RULE_THRESHOLD",
+        "missingFallback": "INVALID_OUTCOME_RULE_FALLBACK",
+        "order": "INVALID_OUTCOME_RULE_ORDER",
+        "threshold": "INVALID_OUTCOME_RULE_THRESHOLD"
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-FAIL-CLOSED-01",
+      "name": "Runtime validation rejects reordered, malformed-threshold and non-final or conditional fallback rules",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "leaks": [],
+        "outcome": "reviewed_with_mentor",
+        "previewKeys": [
+          "ok",
+          "code",
+          "outcome",
+          "substantiated",
+          "substantiation",
+          "independentSourceCount",
+          "supportScore",
+          "refuteScore",
+          "netScore",
+          "requiredSourcesMet",
+          "conclusionAccurate",
+          "hypothesisId",
+          "citedEvidenceIds"
+        ],
+        "publicKeys": [
+          "ok",
+          "code",
+          "caseId",
+          "title",
+          "artifactDisplayName",
+          "briefing",
+          "centralQuestion",
+          "fictionNotice",
+          "reportPrompt",
+          "success",
+          "failure",
+          "hypotheses",
+          "evidence",
+          "availableEvidence",
+          "discoveredEvidence",
+          "selectedHypothesisId",
+          "citedEvidenceIds",
+          "resolved",
+          "resolutionResult",
+          "artifactId"
+        ],
+        "rngMutation0": true,
+        "stateMutation0": true
+      },
+      "executed": true,
+      "id": "AUTHORED-RULES-PUBLIC-01",
+      "name": "Public dossier and evaluation expose outcomes but no raw rule or canonical-answer fields",
+      "passed": true
+    }
+  ]
+}

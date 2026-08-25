@@ -1,0 +1,182 @@
+{
+  "executed": 7,
+  "failed": 0,
+  "passed": 7,
+  "skipped": 0,
+  "suite": "R3 False Invoice Authored Case",
+  "tests": [
+    {
+      "evidence": {
+        "errors": [],
+        "evidence": 6,
+        "hypotheses": 3
+      },
+      "executed": true,
+      "id": "M3-DATA-01",
+      "name": "False Invoice authored-v2 definition loads with bilingual reactions and all runtime source indexes",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "groups": [
+          "reserve_invoice_document_10",
+          "reserve_invoice_document_10"
+        ],
+        "reliability": [
+          "MEDIUM",
+          "LOW"
+        ]
+      },
+      "executed": true,
+      "id": "M3-PROVENANCE-01",
+      "name": "Two entries from the same invoice share one independence group and expose the low-reliability provenance note",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "invoiceRelations": [
+          {
+            "hypothesis_id": "hyp.genuine_1927_invoice",
+            "stance": "SUPPORT",
+            "strength": 1
+          },
+          {
+            "hypothesis_id": "hyp.authentic_box_false_invoice",
+            "stance": "REFUTE",
+            "strength": 1
+          }
+        ],
+        "noahRelations": [
+          {
+            "hypothesis_id": "hyp.genuine_1927_invoice",
+            "stance": "REFUTE",
+            "strength": 2
+          },
+          {
+            "hypothesis_id": "hyp.authentic_box_false_invoice",
+            "stance": "SUPPORT",
+            "strength": 2
+          },
+          {
+            "hypothesis_id": "hyp.modern_reproduction_bundle",
+            "stance": "REFUTE",
+            "strength": 1
+          }
+        ]
+      },
+      "executed": true,
+      "id": "M3-CONFLICT-01",
+      "name": "The document claim and archive comparison form an explicit support/refute conflict",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "code": "EVIDENCE_LOCKED",
+        "ok": false,
+        "requires": [
+          "src.false_invoice.document.invoice_face"
+        ]
+      },
+      "executed": true,
+      "id": "M3-UNLOCK-01",
+      "name": "The reverse-side provenance echo is locked until the invoice face is recorded",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "ok",
+        "code",
+        "caseId",
+        "title",
+        "artifactDisplayName",
+        "briefing",
+        "centralQuestion",
+        "fictionNotice",
+        "reportPrompt",
+        "success",
+        "failure",
+        "hypotheses",
+        "evidence",
+        "availableEvidence",
+        "discoveredEvidence",
+        "selectedHypothesisId",
+        "citedEvidenceIds",
+        "resolved",
+        "resolutionResult",
+        "artifactId"
+      ],
+      "executed": true,
+      "id": "M3-PRIVACY-01",
+      "name": "Public dossier shows reliability without leaking the authored answer",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citedEvidenceIds": [
+          "src.false_invoice.document.invoice_face",
+          "src.false_invoice.document.reverse_provenance"
+        ],
+        "code": "OK",
+        "conclusionAccurate": false,
+        "hypothesisId": "hyp.genuine_1927_invoice",
+        "independentSourceCount": 1,
+        "netScore": 2,
+        "ok": true,
+        "outcome": "mistaken",
+        "refuteScore": 0,
+        "requiredSourcesMet": false,
+        "substantiated": false,
+        "substantiation": "INCONCLUSIVE",
+        "supportScore": 2
+      },
+      "executed": true,
+      "id": "M3-INDEPENDENCE-01",
+      "name": "Citing both sides of one invoice counts as one source and cannot substantiate the claim",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "discoveries": [
+          "src.false_invoice.artifact.box_joinery",
+          "src.false_invoice.document.invoice_face",
+          "src.false_invoice.document.reverse_provenance",
+          "src.false_invoice.artifact.carbon_transfer",
+          "src.false_invoice.npc.noah_ledger",
+          "src.false_invoice.reference.reserve_numbering"
+        ],
+        "result": {
+          "citedEvidenceIds": [
+            "src.false_invoice.artifact.box_joinery",
+            "src.false_invoice.document.invoice_face",
+            "src.false_invoice.npc.noah_ledger",
+            "src.false_invoice.reference.reserve_numbering"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.authentic_box_false_invoice",
+          "independentSourceCount": 3,
+          "netScore": 5,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 1,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 6
+        },
+        "sourceKinds": [
+          "ARTIFACT",
+          "DOCUMENT",
+          "DOCUMENT",
+          "ARTIFACT",
+          "NPC",
+          "REFERENCE"
+        ]
+      },
+      "executed": true,
+      "id": "M3-REPORT-01",
+      "name": "A cross-source report can accept the invoice's conflicting claim and still reach the masterful conclusion",
+      "passed": true
+    }
+  ]
+}

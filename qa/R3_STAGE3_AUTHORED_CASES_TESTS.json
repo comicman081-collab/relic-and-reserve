@@ -1,0 +1,1231 @@
+{
+  "executed": 8,
+  "expectedCount": 8,
+  "failed": 0,
+  "passed": 8,
+  "skipped": 0,
+  "suite": "R3 Stage 3 Authored Cases",
+  "tests": [
+    {
+      "evidence": {
+        "authoredCount": 22,
+        "caseOrder": [
+          "garage_lamp",
+          "telephone_trace",
+          "early_camera"
+        ],
+        "cases": {
+          "early_camera": {
+            "artifactSpecId": "artifact_003",
+            "campaignRewardSpecId": "artifact_003",
+            "runtimeExact": true,
+            "schemaVersion": 2
+          },
+          "garage_lamp": {
+            "artifactSpecId": "artifact_007",
+            "campaignRewardSpecId": "artifact_007",
+            "runtimeExact": true,
+            "schemaVersion": 2
+          },
+          "telephone_trace": {
+            "artifactSpecId": "artifact_015",
+            "campaignRewardSpecId": "artifact_015",
+            "runtimeExact": true,
+            "schemaVersion": 2
+          }
+        },
+        "difficultyMultiplier": 1.1449,
+        "fallbackCount": 0,
+        "missingMethods": [],
+        "registryErrors": []
+      },
+      "executed": true,
+      "id": "S3-AUTHORED-DATA-01",
+      "name": "Stage 3 resolves its three ordered authored-v2 definitions with zero fallback as the registry grows",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseIdHits": {
+          "early_camera": {
+            "gameState": false,
+            "main3d": false,
+            "runtimeRegistry": false
+          },
+          "garage_lamp": {
+            "gameState": false,
+            "main3d": false,
+            "runtimeRegistry": false
+          },
+          "telephone_trace": {
+            "gameState": false,
+            "main3d": false,
+            "runtimeRegistry": false
+          }
+        },
+        "genericTokens": {
+          "dossier": true,
+          "evaluator": true,
+          "normalizer": true
+        },
+        "publicContractKeys": [
+          "ok",
+          "code",
+          "caseId",
+          "title",
+          "artifactDisplayName",
+          "briefing",
+          "centralQuestion",
+          "fictionNotice",
+          "reportPrompt",
+          "success",
+          "failure",
+          "hypotheses",
+          "evidence",
+          "availableEvidence",
+          "discoveredEvidence",
+          "selectedHypothesisId",
+          "citedEvidenceIds",
+          "resolved",
+          "resolutionResult",
+          "artifactId"
+        ]
+      },
+      "executed": true,
+      "id": "S3-AUTHORED-GENERIC-01",
+      "name": "Stage 3 stays on generic authored normalization, public-state, resolver, and dossier paths with no case-id branches",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "early_camera": {
+          "collectiveStances": [
+            "REFUTE",
+            "SUPPORT"
+          ],
+          "dependencyRows": [
+            "src.early_camera.artifact.uv_label_fasteners",
+            "src.early_camera.document.display_serial_register",
+            "src.early_camera.npc.hana_catalog_context",
+            "src.early_camera.reference.cindervale_construction_guide"
+          ],
+          "everyHypothesisLinked": true,
+          "groups": [
+            "body_material_chronology",
+            "label_fastener_sequence",
+            "museum_display_commission",
+            "curatorial_catalog_context",
+            "independent_cindervale_reference"
+          ],
+          "hypotheses": 3,
+          "lockedResult": {
+            "code": "EVIDENCE_LOCKED",
+            "ok": false,
+            "requires": [
+              "src.early_camera.artifact.body_material_scan"
+            ]
+          },
+          "masterfulThresholds": {
+            "correctness": "CORRECT",
+            "fallback": false,
+            "minimum_citations": 4,
+            "minimum_independent_groups": 4,
+            "minimum_net_support": 4,
+            "outcome_id": "masterful",
+            "requires_all_required_sources": false
+          },
+          "ok": true,
+          "oneSourceSolveImpossible": true,
+          "relations": {
+            "hyp.early_camera.genuine_early_production": [
+              "REFUTE"
+            ],
+            "hyp.early_camera.later_display_reproduction": [
+              "SUPPORT"
+            ],
+            "hyp.early_camera.period_dealer_conversion": [
+              "REFUTE"
+            ]
+          },
+          "sourceKinds": [
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "supportAndRefutePresent": true
+        },
+        "garage_lamp": {
+          "collectiveStances": [
+            "SUPPORT",
+            "REFUTE"
+          ],
+          "dependencyRows": [
+            "src.garage_lamp.artifact.socket_service_marks",
+            "src.garage_lamp.document.service_receipt",
+            "src.garage_lamp.npc.mara_assessment",
+            "src.garage_lamp.reference.gildspire_service_sheet"
+          ],
+          "everyHypothesisLinked": true,
+          "groups": [
+            "physical_shell_history",
+            "internal_socket_sequence",
+            "garage_service_record",
+            "conservator_cross_check",
+            "independent_maker_reference"
+          ],
+          "hypotheses": 3,
+          "lockedResult": {
+            "code": "EVIDENCE_LOCKED",
+            "ok": false,
+            "requires": [
+              "src.garage_lamp.artifact.shell_wear_stamp"
+            ]
+          },
+          "masterfulThresholds": {
+            "correctness": "CORRECT",
+            "fallback": false,
+            "minimum_citations": 4,
+            "minimum_independent_groups": 4,
+            "minimum_net_support": 4,
+            "outcome_id": "masterful",
+            "requires_all_required_sources": false
+          },
+          "ok": true,
+          "oneSourceSolveImpossible": true,
+          "relations": {
+            "hyp.garage_lamp.genuine_period_repair": [
+              "SUPPORT"
+            ],
+            "hyp.garage_lamp.modern_assembly_old_shell": [
+              "REFUTE"
+            ],
+            "hyp.garage_lamp.untouched_original": [
+              "SUPPORT",
+              "REFUTE"
+            ]
+          },
+          "sourceKinds": [
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "supportAndRefutePresent": true
+        },
+        "telephone_trace": {
+          "collectiveStances": [
+            "SUPPORT",
+            "REFUTE"
+          ],
+          "dependencyRows": [
+            "src.telephone_trace.artifact.terminal_safety_repair",
+            "src.telephone_trace.document.safety_repair_log",
+            "src.telephone_trace.document.estate_inventory",
+            "src.telephone_trace.npc.noah_archive_context",
+            "src.telephone_trace.reference.orchard_wiring_guide"
+          ],
+          "everyHypothesisLinked": true,
+          "groups": [
+            "shell_material_identity",
+            "internal_electrical_sequence",
+            "modern_safety_record",
+            "estate_object_continuity",
+            "archive_custody_context",
+            "independent_orchard_reference"
+          ],
+          "hypotheses": 3,
+          "lockedResult": {
+            "code": "EVIDENCE_LOCKED",
+            "ok": false,
+            "requires": [
+              "src.telephone_trace.artifact.shell_material_serial"
+            ]
+          },
+          "masterfulThresholds": {
+            "correctness": "CORRECT",
+            "fallback": false,
+            "minimum_citations": 4,
+            "minimum_independent_groups": 4,
+            "minimum_net_support": 4,
+            "outcome_id": "masterful",
+            "requires_all_required_sources": false
+          },
+          "ok": true,
+          "oneSourceSolveImpossible": true,
+          "relations": {
+            "hyp.telephone_trace.genuine_modern_safety_repair": [
+              "SUPPORT"
+            ],
+            "hyp.telephone_trace.later_parts_reproduction": [
+              "REFUTE"
+            ],
+            "hyp.telephone_trace.untouched_original": [
+              "SUPPORT",
+              "REFUTE"
+            ]
+          },
+          "sourceKinds": [
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "supportAndRefutePresent": true
+        }
+      },
+      "executed": true,
+      "id": "S3-AUTHORED-STRUCTURE-01",
+      "name": "Every Stage 3 case has four evidence kinds, five-plus groups, contested hypotheses, dependencies, and no one-source masterful path",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": {
+          "early_camera": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 3
+            },
+            "expectedCounts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 3
+            },
+            "expectedToolMap": {
+              "src.early_camera.artifact.body_material_scan": [
+                "material_scanner"
+              ],
+              "src.early_camera.artifact.uv_label_fasteners": [
+                "uv_lamp"
+              ]
+            },
+            "noneMajority": true,
+            "ok": true,
+            "runtime": [
+              {
+                "discovery": {
+                  "appliedRiskPenalty": 1.1449,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.early_camera.artifact.body_material_scan",
+                  "ok": true,
+                  "riskLevel": "LOW",
+                  "sourceId": "body_material_chronology"
+                },
+                "evidenceId": "src.early_camera.artifact.body_material_scan",
+                "expectedPenalty": 1.1449,
+                "integrity": [
+                  78.0,
+                  76.8551
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                },
+                "wrongTool": "soft_brush"
+              },
+              {
+                "discovery": {
+                  "appliedRiskPenalty": 3.4347,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.early_camera.artifact.uv_label_fasteners",
+                  "ok": true,
+                  "riskLevel": "HIGH",
+                  "sourceId": "label_fastener_sequence"
+                },
+                "evidenceId": "src.early_camera.artifact.uv_label_fasteners",
+                "expectedPenalty": 3.4347,
+                "integrity": [
+                  76.8551,
+                  73.4204
+                ],
+                "level": "HIGH",
+                "ok": true,
+                "tools": [
+                  "uv_lamp"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "uv_lamp"
+                  ],
+                  "selectedTool": "soft_brush"
+                },
+                "wrongTool": "soft_brush"
+              }
+            ],
+            "toolMap": {
+              "src.early_camera.artifact.body_material_scan": [
+                "material_scanner"
+              ],
+              "src.early_camera.artifact.uv_label_fasteners": [
+                "uv_lamp"
+              ]
+            }
+          },
+          "garage_lamp": {
+            "counts": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedCounts": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedToolMap": {
+              "src.garage_lamp.artifact.socket_service_marks": [
+                "precision_screwdriver"
+              ]
+            },
+            "noneMajority": true,
+            "ok": true,
+            "runtime": [
+              {
+                "discovery": {
+                  "appliedRiskPenalty": 1.1449,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.garage_lamp.artifact.socket_service_marks",
+                  "ok": true,
+                  "riskLevel": "LOW",
+                  "sourceId": "internal_socket_sequence"
+                },
+                "evidenceId": "src.garage_lamp.artifact.socket_service_marks",
+                "expectedPenalty": 1.1449,
+                "integrity": [
+                  78.0,
+                  76.8551
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "precision_screwdriver"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "precision_screwdriver"
+                  ],
+                  "selectedTool": "soft_brush"
+                },
+                "wrongTool": "soft_brush"
+              }
+            ],
+            "toolMap": {
+              "src.garage_lamp.artifact.socket_service_marks": [
+                "precision_screwdriver"
+              ]
+            }
+          },
+          "telephone_trace": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedCounts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedToolMap": {
+              "src.telephone_trace.artifact.shell_material_serial": [
+                "material_scanner"
+              ],
+              "src.telephone_trace.artifact.terminal_safety_repair": [
+                "precision_screwdriver"
+              ]
+            },
+            "noneMajority": true,
+            "ok": true,
+            "runtime": [
+              {
+                "discovery": {
+                  "appliedRiskPenalty": 1.1449,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.telephone_trace.artifact.shell_material_serial",
+                  "ok": true,
+                  "riskLevel": "LOW",
+                  "sourceId": "shell_material_identity"
+                },
+                "evidenceId": "src.telephone_trace.artifact.shell_material_serial",
+                "expectedPenalty": 1.1449,
+                "integrity": [
+                  78.0,
+                  76.8551
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                },
+                "wrongTool": "soft_brush"
+              },
+              {
+                "discovery": {
+                  "appliedRiskPenalty": 3.4347,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.telephone_trace.artifact.terminal_safety_repair",
+                  "ok": true,
+                  "riskLevel": "HIGH",
+                  "sourceId": "internal_electrical_sequence"
+                },
+                "evidenceId": "src.telephone_trace.artifact.terminal_safety_repair",
+                "expectedPenalty": 3.4347,
+                "integrity": [
+                  76.8551,
+                  73.4204
+                ],
+                "level": "HIGH",
+                "ok": true,
+                "tools": [
+                  "precision_screwdriver"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "precision_screwdriver"
+                  ],
+                  "selectedTool": "soft_brush"
+                },
+                "wrongTool": "soft_brush"
+              }
+            ],
+            "toolMap": {
+              "src.telephone_trace.artifact.shell_material_serial": [
+                "material_scanner"
+              ],
+              "src.telephone_trace.artifact.terminal_safety_repair": [
+                "precision_screwdriver"
+              ]
+            }
+          }
+        },
+        "distinctRiskyTools": [
+          "precision_screwdriver",
+          "material_scanner",
+          "uv_lamp"
+        ],
+        "universalRiskyTools": []
+      },
+      "executed": true,
+      "id": "S3-AUTHORED-RISK-01",
+      "name": "Stage 3 has exact LOW/HIGH/NONE counts, differentiated risky tools, wrong-tool rejection, and no universal risky-path tool",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "early_camera": {
+          "afterAuction": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "afterListing": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "beforeAuction": [
+            {
+              "category": "PRICE",
+              "code": "RESERVE_TOO_HIGH",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_UNCERTAIN",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "beforeKnownClues": 0,
+          "beforeListing": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_UNCERTAIN",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.early_camera.document.display_serial_register",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "museum_display_commission"
+          },
+          "evidenceId": "src.early_camera.document.display_serial_register",
+          "hiddenTruthInvariant": true,
+          "knownClueCount": 1,
+          "ok": true,
+          "publicPrivateHidden": true,
+          "reliability": "HIGH",
+          "sourceKind": "DOCUMENT",
+          "taggedCount": 1
+        },
+        "garage_lamp": {
+          "afterAuction": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "afterListing": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "beforeAuction": [
+            {
+              "category": "PRICE",
+              "code": "RESERVE_TOO_HIGH",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_UNCERTAIN",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "beforeKnownClues": 0,
+          "beforeListing": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_UNCERTAIN",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.garage_lamp.document.service_receipt",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "garage_service_record"
+          },
+          "evidenceId": "src.garage_lamp.document.service_receipt",
+          "hiddenTruthInvariant": true,
+          "knownClueCount": 1,
+          "ok": true,
+          "publicPrivateHidden": true,
+          "reliability": "HIGH",
+          "sourceKind": "DOCUMENT",
+          "taggedCount": 1
+        },
+        "telephone_trace": {
+          "afterAuction": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "afterListing": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "beforeAuction": [
+            {
+              "category": "PRICE",
+              "code": "RESERVE_TOO_HIGH",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_UNCERTAIN",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "beforeKnownClues": 0,
+          "beforeListing": [
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_RISK",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_UNCERTAIN",
+              "polarity": "NEGATIVE"
+            },
+            {
+              "category": "DISCLOSURE",
+              "code": "DISCLOSURE_CLEAR",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.telephone_trace.document.safety_repair_log",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "modern_safety_record"
+          },
+          "evidenceId": "src.telephone_trace.document.safety_repair_log",
+          "hiddenTruthInvariant": true,
+          "knownClueCount": 1,
+          "ok": true,
+          "publicPrivateHidden": true,
+          "reliability": "HIGH",
+          "sourceKind": "DOCUMENT",
+          "taggedCount": 1
+        }
+      },
+      "executed": true,
+      "id": "S3-AUTHORED-PROVENANCE-01",
+      "name": "Each Stage 3 case exposes exactly one strong-document provenance bridge with uncertain-to-strong public reasons and zero private leakage",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "early_camera": {
+          "correct1": {
+            "citedEvidenceIds": [
+              "src.early_camera.artifact.body_material_scan"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.early_camera.later_display_reproduction",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "correct2": {
+            "citedEvidenceIds": [
+              "src.early_camera.artifact.body_material_scan",
+              "src.early_camera.artifact.uv_label_fasteners"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.early_camera.later_display_reproduction",
+            "independentSourceCount": 2,
+            "netScore": 4,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 4
+          },
+          "correct3": {
+            "citedEvidenceIds": [
+              "src.early_camera.artifact.body_material_scan",
+              "src.early_camera.artifact.uv_label_fasteners",
+              "src.early_camera.document.display_serial_register"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.early_camera.later_display_reproduction",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "correct4": {
+            "citedEvidenceIds": [
+              "src.early_camera.artifact.body_material_scan",
+              "src.early_camera.artifact.uv_label_fasteners",
+              "src.early_camera.document.display_serial_register",
+              "src.early_camera.npc.hana_catalog_context"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.early_camera.later_display_reproduction",
+            "independentSourceCount": 4,
+            "netScore": 7,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 7
+          },
+          "correctCitations": [
+            "src.early_camera.artifact.body_material_scan",
+            "src.early_camera.artifact.uv_label_fasteners",
+            "src.early_camera.document.display_serial_register",
+            "src.early_camera.npc.hana_catalog_context"
+          ],
+          "discoveredCount": 5,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "evidenceCount": 5,
+          "ok": true,
+          "rngMutation0": true,
+          "rulesExact": true,
+          "stateMutation0": true,
+          "wrong1": {
+            "citedEvidenceIds": [
+              "src.early_camera.artifact.body_material_scan"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.early_camera.genuine_early_production",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 2,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrong2": {
+            "citedEvidenceIds": [
+              "src.early_camera.artifact.body_material_scan",
+              "src.early_camera.artifact.uv_label_fasteners"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.early_camera.genuine_early_production",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrongCitations": [
+            "src.early_camera.artifact.body_material_scan",
+            "src.early_camera.artifact.uv_label_fasteners"
+          ],
+          "wrongHypothesis": "hyp.early_camera.genuine_early_production"
+        },
+        "garage_lamp": {
+          "correct1": {
+            "citedEvidenceIds": [
+              "src.garage_lamp.artifact.shell_wear_stamp"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.garage_lamp.genuine_period_repair",
+            "independentSourceCount": 1,
+            "netScore": 1,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 1
+          },
+          "correct2": {
+            "citedEvidenceIds": [
+              "src.garage_lamp.artifact.shell_wear_stamp",
+              "src.garage_lamp.artifact.socket_service_marks"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.garage_lamp.genuine_period_repair",
+            "independentSourceCount": 2,
+            "netScore": 3,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 3
+          },
+          "correct3": {
+            "citedEvidenceIds": [
+              "src.garage_lamp.artifact.shell_wear_stamp",
+              "src.garage_lamp.artifact.socket_service_marks",
+              "src.garage_lamp.document.service_receipt"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.garage_lamp.genuine_period_repair",
+            "independentSourceCount": 3,
+            "netScore": 5,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 5
+          },
+          "correct4": {
+            "citedEvidenceIds": [
+              "src.garage_lamp.artifact.shell_wear_stamp",
+              "src.garage_lamp.artifact.socket_service_marks",
+              "src.garage_lamp.document.service_receipt",
+              "src.garage_lamp.npc.mara_assessment"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.garage_lamp.genuine_period_repair",
+            "independentSourceCount": 4,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 6
+          },
+          "correctCitations": [
+            "src.garage_lamp.artifact.shell_wear_stamp",
+            "src.garage_lamp.artifact.socket_service_marks",
+            "src.garage_lamp.document.service_receipt",
+            "src.garage_lamp.npc.mara_assessment"
+          ],
+          "discoveredCount": 5,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "evidenceCount": 5,
+          "ok": true,
+          "rngMutation0": true,
+          "rulesExact": true,
+          "stateMutation0": true,
+          "wrong1": {
+            "citedEvidenceIds": [
+              "src.garage_lamp.artifact.socket_service_marks"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.garage_lamp.untouched_original",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 2,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrong2": {
+            "citedEvidenceIds": [
+              "src.garage_lamp.artifact.socket_service_marks",
+              "src.garage_lamp.document.service_receipt"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.garage_lamp.untouched_original",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrongCitations": [
+            "src.garage_lamp.artifact.socket_service_marks",
+            "src.garage_lamp.document.service_receipt"
+          ],
+          "wrongHypothesis": "hyp.garage_lamp.untouched_original"
+        },
+        "telephone_trace": {
+          "correct1": {
+            "citedEvidenceIds": [
+              "src.telephone_trace.artifact.shell_material_serial"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.telephone_trace.genuine_modern_safety_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "correct2": {
+            "citedEvidenceIds": [
+              "src.telephone_trace.artifact.shell_material_serial",
+              "src.telephone_trace.artifact.terminal_safety_repair"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.telephone_trace.genuine_modern_safety_repair",
+            "independentSourceCount": 2,
+            "netScore": 4,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 4
+          },
+          "correct3": {
+            "citedEvidenceIds": [
+              "src.telephone_trace.artifact.shell_material_serial",
+              "src.telephone_trace.artifact.terminal_safety_repair",
+              "src.telephone_trace.document.safety_repair_log"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.telephone_trace.genuine_modern_safety_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "correct4": {
+            "citedEvidenceIds": [
+              "src.telephone_trace.artifact.shell_material_serial",
+              "src.telephone_trace.artifact.terminal_safety_repair",
+              "src.telephone_trace.document.safety_repair_log",
+              "src.telephone_trace.document.estate_inventory"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.telephone_trace.genuine_modern_safety_repair",
+            "independentSourceCount": 4,
+            "netScore": 7,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 7
+          },
+          "correctCitations": [
+            "src.telephone_trace.artifact.shell_material_serial",
+            "src.telephone_trace.artifact.terminal_safety_repair",
+            "src.telephone_trace.document.safety_repair_log",
+            "src.telephone_trace.document.estate_inventory"
+          ],
+          "discoveredCount": 6,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "evidenceCount": 6,
+          "ok": true,
+          "rngMutation0": true,
+          "rulesExact": true,
+          "stateMutation0": true,
+          "wrong1": {
+            "citedEvidenceIds": [
+              "src.telephone_trace.artifact.terminal_safety_repair"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.telephone_trace.untouched_original",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 2,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrong2": {
+            "citedEvidenceIds": [
+              "src.telephone_trace.artifact.terminal_safety_repair",
+              "src.telephone_trace.document.safety_repair_log"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.telephone_trace.untouched_original",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrongCitations": [
+            "src.telephone_trace.artifact.terminal_safety_repair",
+            "src.telephone_trace.document.safety_repair_log"
+          ],
+          "wrongHypothesis": "hyp.telephone_trace.untouched_original"
+        }
+      },
+      "executed": true,
+      "id": "S3-AUTHORED-OUTCOMES-01",
+      "name": "All Stage 3 cases execute the ordered masterful 4/4, credible 3/3, mistaken wrong+2, mentor fallback ladder, with empty-report fail-closed",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authoredSpecId": "artifact_015",
+        "campaignRewardSpecId": "artifact_015",
+        "delta": 95,
+        "newBaseValue": 376.0,
+        "oldBaseValue": 281.0,
+        "profileFieldsExact": true,
+        "runtime": {
+          "artifactSpecId": "artifact_015",
+          "baseModel": "model_15.obj",
+          "baseValue": 376,
+          "storyArtifactId": "story_artifact_08",
+          "trueMarketBaseline": 376,
+          "uid": "case_telephone_trace",
+          "visualSignature": "model_15.obj|variant_015|model_15|rubber|0|15",
+          "visualVariant": "variant_015"
+        },
+        "storyBaseSpecId": "artifact_015"
+      },
+      "executed": true,
+      "id": "S3-AUTHORED-PHONE-FRESH-01",
+      "name": "Fresh Telephone Trace issuance consistently uses campaign/story/authored artifact 015 with the exact 281-to-376 base correction and derived profile",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseStateExact": true,
+        "inventoryCount": 1,
+        "inventoryExact": true,
+        "ledgerExact": true,
+        "returned": {
+          "artifactSpecId": "artifact_010",
+          "baseValue": 281,
+          "uid": "case_telephone_trace"
+        },
+        "rngMutation0": true,
+        "stateMutation0": true
+      },
+      "executed": true,
+      "id": "S3-AUTHORED-PHONE-LEGACY-01",
+      "name": "An already-issued Telephone Trace artifact 010 keeps its UID, instance, ledger, case state, and RNG exactly with no migration",
+      "passed": true
+    }
+  ]
+}

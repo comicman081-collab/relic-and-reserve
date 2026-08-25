@@ -1,0 +1,83 @@
+{
+  "captures": [
+    {
+      "name": "01_prologue_dossier_risk_ko",
+      "note": "조사 전에 노출되는 위험 등급과 손상 방지 지침",
+      "path": "res://qa/golden_case_renders/01_prologue_dossier_risk_ko.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "새 게임",
+        "프롤로그 시작",
+        "사건 서류 열기"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "name": "02_prologue_dossier_evidence_ko",
+      "note": "발견된 실물·문서·NPC·참고자료와 가설 지지/반박 관계",
+      "path": "res://qa/golden_case_renders/02_prologue_dossier_evidence_ko.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "도구 장착",
+        "독립 출처 5개 조사",
+        "증거 원장 중단 보기"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "name": "03_prologue_dossier_report_ko",
+      "note": "세 가설, 보고서 요구사항, 인용 수와 제출 가능 상태",
+      "path": "res://qa/golden_case_renders/03_prologue_dossier_report_ko.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "가설 선택",
+        "서로 독립된 증거 3개 인용",
+        "보고서 영역으로 스크롤"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "name": "04_prologue_dossier_result_ko",
+      "note": "결론 정확도와 입증 수준을 분리해 보여 주는 결과 화면",
+      "path": "res://qa/golden_case_renders/04_prologue_dossier_result_ko.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "증거 기반 보고서 제출"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    }
+  ],
+  "caseId": "prologue_clock",
+  "count": 4,
+  "discoveredEvidenceCount": 5,
+  "heldArtifactsCreated": false,
+  "locale": "ko",
+  "resolution": {
+    "citedEvidenceIds": [
+      "src.prologue.artifact.backplate_screws",
+      "src.prologue.artifact.bridge_stamp",
+      "src.prologue.document.service_card"
+    ],
+    "code": "OK",
+    "conclusionAccurate": true,
+    "hypothesisId": "hyp.period_repair",
+    "independentSourceCount": 3,
+    "netScore": 5,
+    "ok": true,
+    "outcome": "masterful",
+    "refuteScore": 0,
+    "requiredSourcesMet": true,
+    "substantiated": true,
+    "substantiation": "STRONG",
+    "supportScore": 5
+  },
+  "suite": "R3 Authored-v2 Prologue Dossier Visual QA",
+  "visualReview": {
+    "legibility": "PASS",
+    "riskWarningVisibleBeforeAction": true,
+    "crossSourceEvidenceRelationsVisible": true,
+    "hypothesesAndReportRequirementsVisible": true,
+    "accuracyAndSubstantiationSeparated": true,
+    "reviewedCaptureCount": 4
+  }
+}

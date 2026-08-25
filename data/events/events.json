@@ -1,0 +1,402 @@
+[
+  {
+    "id": "event_01",
+    "name": "Estate Sale",
+    "localizedName": {"en": "Estate Sale", "ko": "유산 정리 판매"},
+    "localizedDescription": {"en": "An estate lot sold and added funds to the workshop.", "ko": "유산 유물이 팔려 공방 자금이 늘었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "money",
+      "target": "money",
+      "amount": 120
+    },
+    "description": "Daily effect: money 120"
+  },
+  {
+    "id": "event_02",
+    "name": "Mystery Crate",
+    "localizedName": {"en": "Mystery Crate", "ko": "수수께끼 상자"},
+    "localizedDescription": {"en": "A new crate expanded today's market selection.", "ko": "새 상자가 도착해 오늘 시장 물량이 늘었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "market_slots",
+      "target": "market_slots",
+      "amount": 1
+    },
+    "description": "Daily effect: market_slots 1"
+  },
+  {
+    "id": "event_03",
+    "name": "Collector Request",
+    "localizedName": {"en": "Collector Request", "ko": "수집가의 의뢰"},
+    "localizedDescription": {"en": "A collector paid the reward for a workshop request.", "ko": "수집가 의뢰 보상이 입금되었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "commission_credit",
+      "target": "money",
+      "amount": 80
+    },
+    "description": "Daily effect: money 80"
+  },
+  {
+    "id": "event_04",
+    "name": "Museum Inquiry",
+    "localizedName": {"en": "Museum Inquiry", "ko": "박물관 문의"},
+    "localizedDescription": {"en": "A careful reply improved the museum's trust.", "ko": "성실한 답변으로 박물관 신뢰가 올랐습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "museum_trust",
+      "target": "museumTrust",
+      "amount": 2
+    },
+    "description": "Daily effect: museumTrust 2"
+  },
+  {
+    "id": "event_05",
+    "name": "Questionable Provenance",
+    "localizedName": {"en": "Questionable Provenance", "ko": "의심스러운 소장 이력"},
+    "localizedDescription": {"en": "An unclear record weakened historical integrity.", "ko": "불분명한 기록이 역사적 온전성을 낮췄습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "integrity_warning",
+      "target": "historicalIntegrity",
+      "amount": -2
+    },
+    "description": "Daily effect: historicalIntegrity -2"
+  },
+  {
+    "id": "event_06",
+    "name": "Market Boom",
+    "localizedName": {"en": "Market Boom", "ko": "시장 호황"},
+    "localizedDescription": {"en": "Interest in vintage audio rose across the market.", "ko": "고전 음향 기기에 대한 관심이 높아졌습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "market_modifier",
+      "target": "vintage_audio",
+      "amount": 8
+    },
+    "description": "Daily effect: vintage_audio 8"
+  },
+  {
+    "id": "event_07",
+    "name": "Market Slump",
+    "localizedName": {"en": "Market Slump", "ko": "시장 침체"},
+    "localizedDescription": {"en": "Demand cooled across every market category today.", "ko": "오늘 모든 유물의 시장 열기가 낮아졌습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "market_modifier",
+      "target": "all",
+      "amount": -6
+    },
+    "description": "Daily effect: all -6"
+  },
+  {
+    "id": "event_08",
+    "name": "Damaged Delivery",
+    "localizedName": {"en": "Damaged Delivery", "ko": "손상된 배송"},
+    "localizedDescription": {"en": "A hard impact damaged one stored artifact in transit.", "ko": "배송 중 충격으로 보관 유물 하나가 손상되었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "storage_damage",
+      "target": "damage_count",
+      "amount": 1
+    },
+    "description": "Daily effect: damage_count 1"
+  },
+  {
+    "id": "event_09",
+    "name": "Rare Maker Trend",
+    "localizedName": {"en": "Rare Maker Trend", "ko": "희귀 제작자 유행"},
+    "localizedDescription": {"en": "Collectors showed more interest in rare makers.", "ko": "희귀 제작자에 대한 관심이 커졌습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "rarity_bonus",
+      "target": "rarity_bonus",
+      "amount": 0.12
+    },
+    "description": "Daily effect: rarity_bonus 0.12"
+  },
+  {
+    "id": "event_10",
+    "name": "Private Offer",
+    "localizedName": {"en": "Private Offer", "ko": "비공개 제안"},
+    "localizedDescription": {"en": "A private transaction added funds to the workshop.", "ko": "비공개 거래로 공방 자금이 늘었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "money",
+      "target": "money",
+      "amount": 140
+    },
+    "description": "Daily effect: money 140"
+  },
+  {
+    "id": "event_11",
+    "name": "Hidden Compartment",
+    "localizedName": {"en": "Hidden Compartment", "ko": "숨은 수납칸"},
+    "localizedDescription": {"en": "A hidden compartment made clues easier to uncover.", "ko": "숨은 수납칸 덕분에 단서를 찾기 쉬워졌습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "clue_bonus",
+      "target": "clue_bonus",
+      "amount": 0.06
+    },
+    "description": "Daily effect: clue_bonus 0.06"
+  },
+  {
+    "id": "event_12",
+    "name": "Replacement Part Discovery",
+    "localizedName": {"en": "Replacement Part Discovery", "ko": "교체 부품 발견"},
+    "localizedDescription": {"en": "Usable parts reduced the burden of restoration work.", "ko": "쓸 만한 부품으로 복원 비용 부담이 줄었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "restoration_discount",
+      "target": "restoration_discount",
+      "amount": 0.1
+    },
+    "description": "Daily effect: restoration_discount 0.1"
+  },
+  {
+    "id": "event_13",
+    "name": "Collector Rival",
+    "localizedName": {"en": "Collector Rival", "ko": "경쟁 수집가"},
+    "localizedDescription": {"en": "A rival collector claimed one market lot first.", "ko": "경쟁 수집가가 시장 유물 하나를 먼저 가져갔습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "market_slots",
+      "target": "market_slots",
+      "amount": -1
+    },
+    "description": "Daily effect: market_slots -1"
+  },
+  {
+    "id": "event_14",
+    "name": "Auction Fee Discount",
+    "localizedName": {"en": "Auction Fee Discount", "ko": "경매 수수료 할인"},
+    "localizedDescription": {"en": "Today's auction fee has been reduced.", "ko": "오늘 경매 수수료가 줄었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "auction_fee_discount",
+      "target": "auction_fee_discount",
+      "amount": 0.05
+    },
+    "description": "Daily effect: auction_fee_discount 0.05"
+  },
+  {
+    "id": "event_15",
+    "name": "Storage Accident",
+    "localizedName": {"en": "Storage Accident", "ko": "보관 사고"},
+    "localizedDescription": {"en": "A storage accident damaged one artifact.", "ko": "보관 중 사고로 유물 하나가 손상되었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "storage_damage",
+      "target": "damage_count",
+      "amount": 1
+    },
+    "description": "Daily effect: damage_count 1"
+  },
+  {
+    "id": "event_16",
+    "name": "Expert Visit",
+    "localizedName": {"en": "Expert Visit", "ko": "전문가 방문"},
+    "localizedDescription": {"en": "Expert advice improved inspection accuracy.", "ko": "전문가 조언으로 조사 정확도가 높아졌습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "inspection_bonus",
+      "target": "inspection_bonus",
+      "amount": 0.08
+    },
+    "description": "Daily effect: inspection_bonus 0.08"
+  },
+  {
+    "id": "event_17",
+    "name": "Mislabelled Lot",
+    "localizedName": {"en": "Mislabelled Lot", "ko": "잘못 붙은 표찰"},
+    "localizedDescription": {"en": "Correcting a bad label reduced acquisition costs.", "ko": "잘못 붙은 표찰을 바로잡아 매입 부담이 줄었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "acquisition_discount",
+      "target": "acquisition_discount",
+      "amount": 0.1
+    },
+    "description": "Daily effect: acquisition_discount 0.1"
+  },
+  {
+    "id": "event_18",
+    "name": "Workshop Inspection",
+    "localizedName": {"en": "Workshop Inspection", "ko": "공방 점검"},
+    "localizedDescription": {"en": "Passing the workshop inspection improved reputation.", "ko": "공방 점검을 통과해 평판이 올랐습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "reputation",
+      "target": "reputation",
+      "amount": 2
+    },
+    "description": "Daily effect: reputation 2"
+  },
+  {
+    "id": "event_19",
+    "name": "Returning Seller",
+    "localizedName": {"en": "Returning Seller", "ko": "다시 온 판매자"},
+    "localizedDescription": {"en": "A returning seller improved today's listing terms.", "ko": "단골 판매자가 오늘의 출품 조건을 좋게 해주었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "listing_bonus",
+      "target": "listing_bonus",
+      "amount": 0.04
+    },
+    "description": "Daily effect: listing_bonus 0.04"
+  },
+  {
+    "id": "event_20",
+    "name": "Special Auction",
+    "localizedName": {"en": "Special Auction", "ko": "특별 경매"},
+    "localizedDescription": {"en": "News of a special auction drew more bidders.", "ko": "특별 경매 소식에 입찰자가 더 모였습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "bidder_reach",
+      "target": "bidder_reach",
+      "amount": 2
+    },
+    "description": "Daily effect: bidder_reach 2"
+  },
+  {
+    "id": "event_21",
+    "name": "Freight Delay",
+    "localizedName": {"en": "Freight Delay", "ko": "화물 지연"},
+    "localizedDescription": {"en": "A freight delay reduced today's market selection.", "ko": "배송 지연으로 오늘 시장 물량이 줄었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "market_slots",
+      "target": "market_slots",
+      "amount": -1
+    },
+    "description": "Daily effect: market_slots -1"
+  },
+  {
+    "id": "event_22",
+    "name": "Local Fair",
+    "localizedName": {"en": "Local Fair", "ko": "지역 장터"},
+    "localizedDescription": {"en": "The local fair raised interest in decorative artifacts.", "ko": "지역 장터가 장식 유물에 대한 관심을 높였습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "market_modifier",
+      "target": "decorative_objects",
+      "amount": 10
+    },
+    "description": "Daily effect: decorative_objects 10"
+  },
+  {
+    "id": "event_23",
+    "name": "Insurance Check",
+    "localizedName": {"en": "Insurance Check", "ko": "보험 확인"},
+    "localizedDescription": {"en": "An insurance settlement added workshop funds.", "ko": "보험 정산금이 공방에 들어왔습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "money",
+      "target": "money",
+      "amount": 60
+    },
+    "description": "Daily effect: money 60"
+  },
+  {
+    "id": "event_24",
+    "name": "Unexpected Bequest",
+    "localizedName": {"en": "Unexpected Bequest", "ko": "뜻밖의 유증"},
+    "localizedDescription": {"en": "An unexpected bequest increased workshop funds.", "ko": "뜻밖의 유산으로 공방 자금이 늘었습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "money",
+      "target": "money",
+      "amount": 180
+    },
+    "description": "Daily effect: money 180"
+  },
+  {
+    "id": "event_25",
+    "name": "Catalog Feature",
+    "localizedName": {"en": "Catalog Feature", "ko": "도록 특집"},
+    "localizedDescription": {"en": "A catalog feature improved today's listing value.", "ko": "도록 특집으로 오늘의 출품 가치가 높아졌습니다."},
+    "trigger": {
+      "type": "daily_seeded",
+      "weight": 1
+    },
+    "effect": {
+      "type": "listing_bonus",
+      "target": "listing_bonus",
+      "amount": 0.08
+    },
+    "description": "Daily effect: listing_bonus 0.08"
+  }
+]

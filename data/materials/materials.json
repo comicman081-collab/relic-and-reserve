@@ -1,0 +1,77 @@
+[
+  {
+    "id": "material_01",
+    "name": "Brass",
+    "patinaValue": 0.9
+  },
+  {
+    "id": "material_02",
+    "name": "Ebonite",
+    "patinaValue": 0.8
+  },
+  {
+    "id": "material_03",
+    "name": "Enamel",
+    "patinaValue": 0.75
+  },
+  {
+    "id": "material_04",
+    "name": "Walnut",
+    "patinaValue": 0.65
+  },
+  {
+    "id": "material_05",
+    "name": "Aluminium",
+    "patinaValue": 0.55
+  },
+  {
+    "id": "material_06",
+    "name": "Steel",
+    "patinaValue": 0.7
+  },
+  {
+    "id": "material_07",
+    "name": "Porcelain",
+    "patinaValue": 0.8
+  },
+  {
+    "id": "material_08",
+    "name": "Bakélite",
+    "patinaValue": 0.6
+  },
+  {
+    "id": "material_09",
+    "name": "Glass",
+    "patinaValue": 0.5
+  },
+  {
+    "id": "material_10",
+    "name": "Nickel",
+    "patinaValue": 0.72
+  },
+  {
+    "id": "material_11",
+    "name": "Leather",
+    "patinaValue": 0.45
+  },
+  {
+    "id": "material_12",
+    "name": "Copper",
+    "patinaValue": 0.88
+  },
+  {
+    "id": "material_13",
+    "name": "Silver-tone",
+    "patinaValue": 0.92
+  },
+  {
+    "id": "material_14",
+    "name": "Velvet",
+    "patinaValue": 0.4
+  },
+  {
+    "id": "material_15",
+    "name": "Parchment",
+    "patinaValue": 0.35
+  }
+]

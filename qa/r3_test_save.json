@@ -1,0 +1,316 @@
+{
+  "activeWorkpieceId": "",
+  "auctionHistory": [],
+  "campaign": {
+    "activeCaseId": "",
+    "caseArtifactLedger": {},
+    "caseOutcomes": {},
+    "caseStates": {},
+    "collectorNetwork": 0,
+    "commissionArtifactUses": {},
+    "completedActs": {},
+    "completedCases": {},
+    "completedCommissionIds": [],
+    "currentAct": "PROLOGUE",
+    "currentEnding": "",
+    "endingMetrics": {},
+    "endingUnlocked": [],
+    "epilogueSeen": false,
+    "ethics": 60,
+    "grandReserve": {
+      "completed": false,
+      "invited": false,
+      "results": [],
+      "score": {},
+      "selectedLotIds": []
+    },
+    "historicalIntegrity": 50,
+    "mastery": {
+      "DECORATIVE": 0,
+      "DOCUMENTARY": 0,
+      "ELECTRICAL": 0,
+      "MECHANICAL": 0,
+      "OPTICAL": 0,
+      "SCIENTIFIC": 0
+    },
+    "museumTrust": 0,
+    "postGame": false,
+    "relationships": {
+      "dorian_vale": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "elias_rowe": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "hana_mire": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "iris_bell": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "lena_falk": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "mara_venn": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "noah_stern": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "victor_hale": {
+        "relationship": 0,
+        "trust": 0
+      }
+    },
+    "schemaVersion": 2,
+    "storyFlags": {},
+    "unlockedModules": [
+      "basic_bench"
+    ],
+    "workshopGrade": 1
+  },
+  "currentEventId": "event_22",
+  "currentStage": 1,
+  "dailyModifiers": {},
+  "day": 2,
+  "eventHistory": [
+    {
+      "day": 2,
+      "eventId": "event_22",
+      "result": {
+        "appliedAmount": 10.0,
+        "effect": {
+          "amount": 10.0,
+          "target": "decorative_objects",
+          "type": "market_modifier"
+        },
+        "eventId": "event_22",
+        "name": "Local Fair"
+      }
+    }
+  ],
+  "gameVersion": "R3",
+  "grandReserveSession": {
+    "activeArtifact": {},
+    "activeTransactionId": "",
+    "currentLotIndex": -1,
+    "finalizationReceiptId": "",
+    "lotUids": [],
+    "phase": "IDLE",
+    "receipts": [],
+    "reserveRunId": "",
+    "schemaVersion": 1
+  },
+  "instanceCounter": 1,
+  "inventory": [
+    {
+      "acquisitionPrice": 174,
+      "artifactSpecId": "artifact_004",
+      "authenticityTruth": "GENUINE_WITH_MODERN_REPAIR",
+      "caseId": "",
+      "caseResolved": false,
+      "cleanliness": 18.0,
+      "confidence": 0.12,
+      "damageInstances": [
+        "MISSING_PART",
+        "DUST",
+        "RUST"
+      ],
+      "estimatedValue": 167,
+      "evidence": [],
+      "historicalIntegrity": 78.0,
+      "inspected": false,
+      "knownClues": [],
+      "listing": {
+        "confidence": 0.0,
+        "disclosure": "UNCERTAIN",
+        "reserve": 0,
+        "starting": 0
+      },
+      "mechanicalCondition": 42.0,
+      "originalParts": 1,
+      "partStates": {
+        "body": true,
+        "mechanism": true,
+        "panel": true
+      },
+      "playerHypothesis": "UNKNOWN",
+      "possibleClues": [
+        "SERIAL_PATTERN",
+        "CONSTRUCTION_METHOD",
+        "MATERIAL",
+        "MECHANISM",
+        "COMPONENT_STYLE",
+        "WEAR_PATTERN",
+        "LABEL",
+        "PATINA",
+        "REPAIR_TRACE",
+        "PROVENANCE",
+        "TOOL_MARK"
+      ],
+      "repaired": false,
+      "replacementParts": 1,
+      "restorationCost": 0.0,
+      "restorationQuality": 0.0,
+      "rotation": 0.0,
+      "seed": 3976322376,
+      "sold": false,
+      "storyArtifactId": "",
+      "structuralCondition": 70.0,
+      "surfaceCondition": 55.0,
+      "uniqueId": "inst_1_3976322376_0001",
+      "zoom": 1.0
+    }
+  ],
+  "language": "ko",
+  "marketRoster": [
+    {
+      "lotId": "day_2_lot_00",
+      "price": 669,
+      "seed": 177298335,
+      "sold": false,
+      "specId": "artifact_039"
+    },
+    {
+      "lotId": "day_2_lot_01",
+      "price": 1104,
+      "seed": 1683699085,
+      "sold": false,
+      "specId": "artifact_052"
+    },
+    {
+      "lotId": "day_2_lot_02",
+      "price": 110,
+      "seed": 1553616052,
+      "sold": false,
+      "specId": "artifact_003"
+    },
+    {
+      "lotId": "day_2_lot_03",
+      "price": 339,
+      "seed": 2004542511,
+      "sold": false,
+      "specId": "artifact_016"
+    },
+    {
+      "lotId": "day_2_lot_04",
+      "price": 307,
+      "seed": 2015020006,
+      "sold": false,
+      "specId": "artifact_029"
+    }
+  ],
+  "marketRosterDay": 2,
+  "marketState": {
+    "ceramics": -4,
+    "decorative_objects": 12,
+    "mechanical_instruments": 10,
+    "office_machines": 8,
+    "optical_devices": 6,
+    "scientific_instruments": 11,
+    "telephony": 7,
+    "vintage_audio": 14
+  },
+  "masterSeed": 481516,
+  "money": 1026,
+  "pendingAuction": {
+    "artifactId": "",
+    "createdDay": 0,
+    "cueIndex": 0,
+    "cueQueue": [],
+    "decisions": {},
+    "grandReserve": false,
+    "publicFingerprint": "",
+    "receipt": {},
+    "result": {},
+    "schemaVersion": 1,
+    "status": "NONE",
+    "transactionId": ""
+  },
+  "reputation": 12,
+  "rngState": 4009591132859505173,
+  "rngStateExact": "4009591132859505173",
+  "saveVersion": 6,
+  "selectedTool": "soft_brush",
+  "stageRunState": {
+    "caseIds": [
+      "prologue_clock",
+      "silent_radio",
+      "perfect_fake"
+    ],
+    "completedAtDay": 0,
+    "difficultyMultiplier": 1.0,
+    "grandReserveRequired": false,
+    "lastPerformance": {},
+    "score": 0.0,
+    "stageClearAcknowledged": false,
+    "stageId": 1,
+    "stageReplayFeedbackSnapshot": {},
+    "stageReplayTelemetrySnapshot": {},
+    "startedAtDay": 0,
+    "status": "NOT_STARTED",
+    "telemetry": {
+      "artifactSalesCount": 0,
+      "auctionCount": 0,
+      "budgetBasis": 1200,
+      "investigationActions": 0,
+      "investigationRiskActions": 0,
+      "investigationRiskWeightSum": 0.0,
+      "listingStrategyCounts": {
+        "AUTO_GRAND_RESERVE": 0,
+        "BALANCED": 0,
+        "CUSTOM": 0,
+        "FAST": 0,
+        "HIGH": 0,
+        "LEGACY_UNKNOWN": 0
+      },
+      "noSaleCount": 0,
+      "relistCount": 0,
+      "repairActions": 0,
+      "repairCostAccrued": 0.0,
+      "repairToolUseCounts": {}
+    },
+    "telemetryAvailable": true,
+    "telemetrySeenIds": [],
+    "tutorialCompletedSteps": []
+  },
+  "statistics": {
+    "authentication_attempts": 0,
+    "authentication_correct": 0,
+    "biggest_loss": 0,
+    "biggest_profit": 0,
+    "commissions": 0,
+    "days_operated": 2,
+    "discoveries": 0,
+    "forgeries_detected": 0,
+    "museum_acquisitions": 0,
+    "no_sales": 0,
+    "original_parts_preserved": 0,
+    "profit": 0,
+    "purchases": 1,
+    "restorations": 0,
+    "sales": 0,
+    "total_auction_revenue": 0
+  },
+  "transactions": [
+    {
+      "amount": -174,
+      "cause": "catalog",
+      "day": 1,
+      "id": "money_1_purchase_0",
+      "instanceId": "inst_1_3976322376_0001",
+      "item": "Dovetail Vintage Radio D",
+      "moneyAfter": 1026,
+      "moneyBefore": 1200,
+      "type": "purchase"
+    }
+  ],
+  "upgrades": []
+}

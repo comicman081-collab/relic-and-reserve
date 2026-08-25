@@ -1,0 +1,13 @@
+{
+  "ArtifactSpecs": true,
+  "Makers": true,
+  "Tools": true,
+  "Bidders": true,
+  "Events": true,
+  "Upgrades": true,
+  "Localization": true,
+  "Audio": true,
+  "Materials": true,
+  "Node3D": true,
+  "ModelLoading": true
+}

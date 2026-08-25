@@ -1,0 +1,680 @@
+[
+  {
+    "id": "story_artifact_01",
+    "caseId": "prologue_clock",
+    "baseSpecId": "artifact_001",
+    "title": "The Closed Workshop",
+    "fictionalHistory": "A disputed workshop record connected to The Closed Workshop.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "CRACK"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE",
+    "visualAccent": "#b8893f"
+  },
+  {
+    "id": "story_artifact_02",
+    "caseId": "silent_radio",
+    "baseSpecId": "artifact_004",
+    "title": "The Silent Radio",
+    "fictionalHistory": "A disputed workshop record connected to The Silent Radio.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE_WITH_PERIOD_REPAIR",
+    "visualAccent": "#343236"
+  },
+  {
+    "id": "story_artifact_03",
+    "caseId": "perfect_fake",
+    "baseSpecId": "artifact_003",
+    "title": "The Perfect Fake",
+    "fictionalHistory": "A disputed workshop record connected to The Perfect Fake.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE_WITH_MODERN_REPAIR",
+    "visualAccent": "#d7c7a1"
+  },
+  {
+    "id": "story_artifact_04",
+    "caseId": "leave_patina",
+    "baseSpecId": "artifact_005",
+    "title": "Leave the Patina",
+    "fictionalHistory": "A disputed workshop record connected to Leave the Patina.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "REPRODUCTION",
+    "visualAccent": "#705038"
+  },
+  {
+    "id": "story_artifact_05",
+    "caseId": "estate_compass",
+    "baseSpecId": "artifact_011",
+    "title": "The Estate Compass",
+    "fictionalHistory": "A disputed workshop record connected to The Estate Compass.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "FORGERY",
+    "visualAccent": "#7f8b91"
+  },
+  {
+    "id": "story_artifact_06",
+    "caseId": "pawn_watch",
+    "baseSpecId": "artifact_002",
+    "title": "The Pawn Broker Watch",
+    "fictionalHistory": "A disputed workshop record connected to The Pawn Broker Watch.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE",
+    "visualAccent": "#8fb8bf"
+  },
+  {
+    "id": "story_artifact_07",
+    "caseId": "garage_lamp",
+    "baseSpecId": "artifact_007",
+    "title": "The Garage Lamp",
+    "fictionalHistory": "A disputed workshop record connected to The Garage Lamp.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE_WITH_PERIOD_REPAIR",
+    "visualAccent": "#496b73"
+  },
+  {
+    "id": "story_artifact_08",
+    "caseId": "telephone_trace",
+    "baseSpecId": "artifact_015",
+    "title": "A Voice in Bakelite",
+    "fictionalHistory": "A disputed workshop record connected to A Voice in Bakelite.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE_WITH_MODERN_REPAIR",
+    "visualAccent": "#5c3f2a"
+  },
+  {
+    "id": "story_artifact_09",
+    "caseId": "early_camera",
+    "baseSpecId": "artifact_003",
+    "title": "The Early Mechanical Camera",
+    "fictionalHistory": "A disputed workshop record connected to The Early Mechanical Camera.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "REPRODUCTION",
+    "visualAccent": "#80612e"
+  },
+  {
+    "id": "story_artifact_10",
+    "caseId": "false_invoice",
+    "baseSpecId": "artifact_016",
+    "title": "The False Invoice",
+    "fictionalHistory": "A disputed workshop record connected to The False Invoice.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "FORGERY",
+    "visualAccent": "#704a32"
+  },
+  {
+    "id": "story_artifact_11",
+    "caseId": "mislabelled_collection",
+    "baseSpecId": "artifact_018",
+    "title": "The Mislabelled Collection",
+    "fictionalHistory": "A disputed workshop record connected to The Mislabelled Collection.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE",
+    "visualAccent": "#b99d70"
+  },
+  {
+    "id": "story_artifact_12",
+    "caseId": "observatory_instrument",
+    "baseSpecId": "artifact_011",
+    "title": "The Observatory Instrument",
+    "fictionalHistory": "A disputed workshop record connected to The Observatory Instrument.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE_WITH_PERIOD_REPAIR",
+    "visualAccent": "#7d3e2f"
+  },
+  {
+    "id": "story_artifact_13",
+    "caseId": "collector_promise",
+    "baseSpecId": "artifact_021",
+    "title": "The Collector Promise",
+    "fictionalHistory": "A disputed workshop record connected to The Collector Promise.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE_WITH_MODERN_REPAIR",
+    "visualAccent": "#5c6571"
+  },
+  {
+    "id": "story_artifact_14",
+    "caseId": "three_cameras",
+    "baseSpecId": "artifact_033",
+    "title": "The Three Cameras",
+    "fictionalHistory": "A disputed workshop record connected to The Three Cameras.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "REPRODUCTION",
+    "visualAccent": "#a5774f"
+  },
+  {
+    "id": "story_artifact_15",
+    "caseId": "shadow_camera",
+    "baseSpecId": "artifact_048",
+    "title": "Shadow Mark: Camera",
+    "fictionalHistory": "A disputed workshop record connected to Shadow Mark: Camera.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "FORGERY",
+    "visualAccent": "#34383b"
+  },
+  {
+    "id": "story_artifact_16",
+    "caseId": "shadow_gauge",
+    "baseSpecId": "artifact_050",
+    "title": "Shadow Mark: Gauge",
+    "fictionalHistory": "A disputed workshop record connected to Shadow Mark: Gauge.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE",
+    "visualAccent": "#b8893f"
+  },
+  {
+    "id": "story_artifact_17",
+    "caseId": "shadow_clock",
+    "baseSpecId": "artifact_031",
+    "title": "Shadow Mark: Clock",
+    "fictionalHistory": "A disputed workshop record connected to Shadow Mark: Clock.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE_WITH_PERIOD_REPAIR",
+    "visualAccent": "#343236"
+  },
+  {
+    "id": "story_artifact_18",
+    "caseId": "shadow_music_box",
+    "baseSpecId": "artifact_035",
+    "title": "Shadow Mark: Music Box",
+    "fictionalHistory": "A disputed workshop record connected to Shadow Mark: Music Box.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "GENUINE_WITH_MODERN_REPAIR",
+    "visualAccent": "#d7c7a1"
+  },
+  {
+    "id": "story_artifact_19",
+    "caseId": "shadow_optic",
+    "baseSpecId": "artifact_057",
+    "title": "Shadow Mark: Optic",
+    "fictionalHistory": "A disputed workshop record connected to Shadow Mark: Optic.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "REPRODUCTION",
+    "visualAccent": "#705038"
+  },
+  {
+    "id": "story_artifact_20",
+    "caseId": "composite_prototype",
+    "baseSpecId": "artifact_059",
+    "title": "The Composite Prototype",
+    "fictionalHistory": "A disputed workshop record connected to The Composite Prototype.",
+    "clueLayout": [
+      "MATERIAL",
+      "SERIAL_PATTERN",
+      "CONSTRUCTION_METHOD",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "panel mark",
+      "internal fastener"
+    ],
+    "restorationTradeoff": "Preserve historical surface versus improve sale presentation.",
+    "groundTruth": "FORGERY",
+    "visualAccent": "#7f8b91"
+  },
+  {
+    "id": "story_artifact_21",
+    "caseId": "master_chronometer",
+    "baseSpecId": "artifact_061",
+    "title": "Master Work: Chronometer",
+    "fictionalHistory": "A precision chronometer from the final bench of the Quillmark workshop.",
+    "clueLayout": [
+      "SERIAL_PATTERN",
+      "MECHANISM",
+      "TOOL_MARK",
+      "PATINA",
+      "PROVENANCE",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "escapement jewel",
+      "timing screw"
+    ],
+    "restorationTradeoff": "Preserve the original timing marks while returning the escapement to service.",
+    "groundTruth": "GENUINE",
+    "visualAccent": "#b8893f"
+  },
+  {
+    "id": "story_artifact_22",
+    "caseId": "master_optical",
+    "baseSpecId": "artifact_075",
+    "title": "Master Work: Optical Engine",
+    "fictionalHistory": "A velvet-cased microscope whose body is period-made but whose optical cell was repaired by the same workshop.",
+    "clueLayout": [
+      "MATERIAL",
+      "COMPONENT_STYLE",
+      "MECHANISM",
+      "PROVENANCE",
+      "PATINA",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "lens cell thread",
+      "stage clamp"
+    ],
+    "restorationTradeoff": "Keep the honest period repair visible while stabilizing the optical assembly.",
+    "groundTruth": "GENUINE_WITH_PERIOD_REPAIR",
+    "visualAccent": "#a7c9c2"
+  },
+  {
+    "id": "story_artifact_23",
+    "caseId": "master_recorder",
+    "baseSpecId": "artifact_078",
+    "title": "Master Work: Field Recorder",
+    "fictionalHistory": "A leather field recorder whose water-marked transport preserves a disputed broadcast history.",
+    "clueLayout": [
+      "SERIAL_PATTERN",
+      "MECHANISM",
+      "COMPONENT_STYLE",
+      "PROVENANCE",
+      "REPAIR_TRACE",
+      "WEAR_PATTERN"
+    ],
+    "damages": [
+      "DUST",
+      "WATER_DAMAGE",
+      "MECHANICAL_WEAR"
+    ],
+    "hiddenObservations": [
+      "take-up spindle scoring",
+      "leather water tide"
+    ],
+    "restorationTradeoff": "Stabilize the transport without polishing away the water history recorded in its scoring.",
+    "groundTruth": "GENUINE_WITH_PERIOD_REPAIR",
+    "visualAccent": "#9b7456"
+  },
+  {
+    "id": "story_artifact_24",
+    "caseId": "master_gauge",
+    "baseSpecId": "artifact_077",
+    "title": "Master Work: Signal Lantern",
+    "fictionalHistory": "An enamel railway signal lantern whose paired lenses record unequal service on a junction line.",
+    "clueLayout": [
+      "MATERIAL",
+      "LABEL",
+      "PATINA",
+      "PROVENANCE",
+      "CONSTRUCTION_METHOD",
+      "REPAIR_TRACE"
+    ],
+    "damages": [
+      "DUST",
+      "RUST",
+      "PAINT_LOSS"
+    ],
+    "hiddenObservations": [
+      "lens retaining clip",
+      "upper vent soot"
+    ],
+    "restorationTradeoff": "Replace the unsafe lens only after recording the asymmetric heat and soot pattern.",
+    "groundTruth": "GENUINE",
+    "visualAccent": "#b45d4f"
+  },
+  {
+    "id": "story_artifact_25",
+    "caseId": "master_camera",
+    "baseSpecId": "artifact_079",
+    "title": "Master Work: Prism Spectroscope",
+    "fictionalHistory": "A compact glass prism spectroscope whose clamp sequence preserves a disputed laboratory service history.",
+    "clueLayout": [
+      "MATERIAL",
+      "MECHANISM",
+      "TOOL_MARK",
+      "CONSTRUCTION_METHOD"
+    ],
+    "damages": [
+      "DUST",
+      "CRACK",
+      "SCRATCH"
+    ],
+    "hiddenObservations": [
+      "prism clamp seating",
+      "ultraviolet seam residue"
+    ],
+    "restorationTradeoff": "Re-seat the prism for a clean spectrum without erasing the sequence of earlier clamp interventions.",
+    "groundTruth": "GENUINE_WITH_PERIOD_REPAIR",
+    "visualAccent": "#83b8c2"
+  },
+  {
+    "id": "story_artifact_26",
+    "caseId": "master_mechanism",
+    "baseSpecId": "artifact_080",
+    "title": "Master Work: Astronomical Regulator",
+    "fictionalHistory": "A grand reserve astronomical regulator whose escapement and casing record careful observatory service across two eras.",
+    "clueLayout": [
+      "MATERIAL",
+      "MECHANISM",
+      "WEAR_PATTERN",
+      "PROVENANCE"
+    ],
+    "damages": [
+      "DUST",
+      "CORROSION",
+      "MECHANICAL_WEAR"
+    ],
+    "hiddenObservations": [
+      "escapement tooth polish",
+      "observatory inventory stamp"
+    ],
+    "restorationTradeoff": "Stabilize the escapement while keeping the observatory wear pattern visible to reserve buyers.",
+    "groundTruth": "GENUINE",
+    "visualAccent": "#c6a56a"
+  }
+]

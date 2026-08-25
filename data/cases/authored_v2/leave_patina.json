@@ -1,0 +1,474 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage2-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "leave_patina",
+  "act_id": "ACT_1",
+  "title": {
+    "en": "Leave the Patina",
+    "ko": "세월의 빛을 남겨라"
+  },
+  "briefing": {
+    "en": "A music box from an old riverside house carries a dark surface that the seller calls untouched patina. A sticky film near the lid and unusually even color around the fittings raise two alternatives: later contamination or deliberate artificial aging. Record the layers before deciding what may safely be cleaned and what must be disclosed.",
+    "ko": "강가의 오래된 집에서 나온 오르골에는 판매자가 손대지 않은 파티나라고 부르는 짙은 표면이 남아 있다. 뚜껑 근처의 끈적한 막과 장식 둘레의 지나치게 고른 색은 후대 오염이나 인위적 노화라는 다른 가능성을 제기한다. 무엇을 안전하게 세척할 수 있고 무엇을 고지해야 하는지 판단하기 전에 표면층을 기록하라."
+  },
+  "central_question": {
+    "en": "Is the dark surface chiefly natural patina, later contamination, or artificial aging?",
+    "ko": "짙은 표면은 주로 자연스럽게 생긴 파티나인가, 후대 오염인가, 아니면 인위적으로 만든 노화 흔적인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report separates stable natural patina from removable later residue and avoids destructive over-cleaning.",
+    "ko": "보고서는 안정된 자연 파티나와 제거 가능한 후대 잔류물을 구분하고 파괴적인 과세척을 피한다."
+  },
+  "failure": {
+    "en": "The surface history remains unsupported, so Iris reviews the evidence before any treatment continues.",
+    "ko": "표면 이력에 근거가 부족해 아이리스가 추가 처리 전에 증거를 함께 재검토한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 2 campaign desk.",
+      "ko": "스테이지 2 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "wipe_hidden_finish_before_capture",
+        "source_ref": "src.leave_patina.artifact.hidden_finish_boundary",
+        "warning": {
+          "en": "Wiping beneath the hinge before recording the boundary can mix the later film with the older finish.",
+          "ko": "경계를 기록하기 전에 경첩 아래를 닦으면 후대 막과 오래된 마감층이 뒤섞일 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "An unsupported treatment plan is reviewed with Iris and cannot earn a masterful result.",
+        "ko": "근거가 부족한 처리 계획은 아이리스와 재검토하며 최고 판정을 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_005",
+    "legacy_story_artifact_id": "story_artifact_04",
+    "display_name": {
+      "en": "Eldermere Riverside Music Box E",
+      "ko": "엘더미어 강변 오르골 E"
+    },
+    "authoring_truth_hypothesis_id": "hyp.leave_patina.natural_patina",
+    "player_prompt": {
+      "en": "Map wear, residue, and protected finish before cleaning any surface.",
+      "ko": "표면을 세척하기 전에 마모, 잔류물과 가려진 마감층의 분포를 기록하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.leave_patina.natural_patina",
+      "label": {
+        "en": "Natural patina",
+        "ko": "자연 파티나"
+      },
+      "claim": {
+        "en": "The stable dark layer developed gradually through ordinary handling and storage; only a small later residue sits above it.",
+        "ko": "안정된 짙은 층은 오랜 사용과 보관 과정에서 서서히 생겼으며 그 위에 소량의 후대 잔류물만 놓여 있다."
+      }
+    },
+    {
+      "id": "hyp.leave_patina.later_contamination",
+      "label": {
+        "en": "Later contamination",
+        "ko": "후대 오염"
+      },
+      "claim": {
+        "en": "Most of the dark appearance comes from a later wax-and-soot film rather than the object's own aged finish.",
+        "ko": "짙은 외관의 대부분은 물건 자체의 오래된 마감이 아니라 후대에 묻은 왁스와 그을음 막에서 비롯되었다."
+      }
+    },
+    {
+      "id": "hyp.leave_patina.artificial_aging",
+      "label": {
+        "en": "Artificial aging",
+        "ko": "인위적 노화"
+      },
+      "claim": {
+        "en": "A recent owner deliberately colored and abraded the surface to imitate age before sale.",
+        "ko": "최근 소유자가 판매 전에 오래된 물건처럼 보이도록 표면을 의도적으로 착색하고 마모시켰다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.leave_patina.artifact.wear_gradient",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_005",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Handling wear gradient",
+        "ko": "손길에 따른 마모 변화"
+      },
+      "text": {
+        "en": "The lid edge and winding side are lighter where fingers repeatedly touched them, while protected recesses remain dark. Fine scratches cross both tones without stopping at the color boundary, indicating gradual wear rather than a recently painted antique effect.",
+        "ko": "손가락이 반복해서 닿은 뚜껑 가장자리와 태엽 쪽은 밝고, 오목하게 보호된 곳은 짙다. 미세한 흠집은 색 경계에서 끊기지 않고 두 색조를 함께 지나가 최근 칠한 노화 효과보다 점진적 마모를 보여 준다."
+      },
+      "unlock": {
+        "action": "inspect",
+        "target": "handling_surfaces",
+        "requires": []
+      },
+      "risk": {
+        "destroyed_by": []
+      },
+      "independence": {
+        "group": "physical_wear_sequence",
+        "depends_on": []
+      },
+      "citation_id": "cite.leave_patina.artifact.wear_gradient"
+    },
+    {
+      "source_ref": "src.leave_patina.artifact.hidden_finish_boundary",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_005",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Protected finish boundary",
+        "ko": "가려진 마감층 경계"
+      },
+      "text": {
+        "en": "A dry-cloth test beside the rear hinge lifts a thin amber residue but leaves the coherent brown layer below unchanged. Under the hinge leaf, that lower layer continues evenly and shows no pooled pigment or brush edge.",
+        "ko": "뒤 경첩 옆을 마른 천으로 시험하자 얇은 호박색 잔류물만 묻어나고 아래의 단단한 갈색 층은 그대로 남는다. 경첩 날개 아래에서도 그 아래층은 고르게 이어지며 안료가 고이거나 붓자국이 생긴 흔적은 없다."
+      },
+      "unlock": {
+        "action": "surface_test",
+        "target": "rear_hinge_margin",
+        "requires": [
+          "src.leave_patina.artifact.wear_gradient",
+          "cleaning_cloth"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Test one marked margin only; broad wiping would erase the residue boundary before it is recorded.",
+          "ko": "표시한 가장자리 한 곳만 시험하라. 넓게 닦으면 기록 전에 잔류물 경계가 사라진다."
+        }
+      },
+      "independence": {
+        "group": "protected_finish_layer",
+        "depends_on": [
+          "src.leave_patina.artifact.wear_gradient"
+        ]
+      },
+      "citation_id": "cite.leave_patina.artifact.hidden_finish_boundary"
+    },
+    {
+      "source_ref": "src.leave_patina.document.service_note",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_07",
+      "document_id": "doc.leave_patina.household_service_note",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "MEDIUM",
+      "label": {
+        "en": "Riverside household service note",
+        "ko": "강변 저택 관리 기록"
+      },
+      "text": {
+        "en": "The fictional household note identifies Eldermere music box E-52 in the riverside music room across three dated inventories and records it as already 'deep brown at the handled edges' before a 1951 winter treatment. It then lists one light coat of amber furniture wax after soot entered through a blocked flue.",
+        "ko": "가상의 저택 관리 기록은 날짜가 있는 세 차례 목록에서 강변 저택 음악실의 엘더미어 오르골 E-52를 확인하고, 1951년 겨울 처리 전부터 '손이 닿는 가장자리까지 짙은 갈색'이었다고 적는다. 이어 막힌 연통으로 그을음이 들어온 뒤 호박색 가구 왁스를 얇게 한 번 발랐다고 기록한다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "document_07",
+        "requires": [
+          "src.leave_patina.artifact.wear_gradient"
+        ]
+      },
+      "risk": {
+        "destroyed_by": []
+      },
+      "independence": {
+        "group": "household_treatment_record",
+        "depends_on": [
+          "src.leave_patina.artifact.wear_gradient"
+        ]
+      },
+      "citation_id": "cite.leave_patina.document.service_note"
+    },
+    {
+      "source_ref": "src.leave_patina.npc.iris_assessment",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "iris_bell",
+      "npc_id": "iris_bell",
+      "expression": "thoughtful",
+      "reliability": "MEDIUM",
+      "label": {
+        "en": "Iris Bell's treatment assessment",
+        "ko": "아이리스 벨의 처리 소견"
+      },
+      "text": {
+        "en": "Iris says the loose amber film resembles aged furniture wax, but the compact layer beneath behaves like an older oxidized finish. She cautions that her visual assessment needs the hidden-boundary test and service note before it can guide treatment.",
+        "ko": "아이리스는 느슨한 호박색 막은 오래된 가구 왁스와 비슷하지만 아래의 치밀한 층은 더 오래 산화된 마감처럼 반응한다고 말한다. 다만 처리 방향을 정하려면 가려진 경계 시험과 관리 기록을 함께 확인해야 한다고 선을 긋는다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "iris_bell",
+        "requires": [
+          "src.leave_patina.document.service_note"
+        ]
+      },
+      "risk": {
+        "destroyed_by": []
+      },
+      "independence": {
+        "group": "conservator_assessment",
+        "depends_on": [
+          "src.leave_patina.document.service_note"
+        ]
+      },
+      "citation_id": "cite.leave_patina.npc.iris_assessment"
+    },
+    {
+      "source_ref": "src.leave_patina.reference.eldemere_finish",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_13",
+      "reference_id": "ref.eldemere.finish_1932_1943",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Eldermere finish guide, 1932–1943",
+        "ko": "엘더미어 마감 지침, 1932~1943년"
+      },
+      "text": {
+        "en": "The fictional period guide describes a transparent brown oil-resin finish that darkens in recesses and lightens at repeated touch points. Its workshop sample shows no opaque pigment pooling, unlike the artificial aging recipes listed in a later appendix.",
+        "ko": "가상의 당대 지침은 오목한 곳에서 짙어지고 반복해서 만지는 곳에서 밝아지는 투명한 갈색 유성 수지 마감을 설명한다. 공방 표본에는 후대 부록의 인위적 노화법과 달리 불투명 안료가 고인 흔적이 없다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": [
+          "src.leave_patina.artifact.hidden_finish_boundary",
+          "reference_database"
+        ]
+      },
+      "risk": {
+        "destroyed_by": []
+      },
+      "independence": {
+        "group": "independent_period_reference",
+        "depends_on": [
+          "src.leave_patina.artifact.hidden_finish_boundary"
+        ]
+      },
+      "citation_id": "cite.leave_patina.reference.eldemere_finish"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.leave_patina.artifact.wear_gradient",
+      "source_ref": "src.leave_patina.artifact.wear_gradient",
+      "label": {
+        "en": "Object map: handling wear",
+        "ko": "실물 지도: 손길 마모"
+      },
+      "locator": {
+        "en": "Inspection record A-1, lid and winding side",
+        "ko": "검사 기록 A-1, 뚜껑과 태엽 쪽"
+      }
+    },
+    {
+      "id": "cite.leave_patina.artifact.hidden_finish_boundary",
+      "source_ref": "src.leave_patina.artifact.hidden_finish_boundary",
+      "label": {
+        "en": "Object test: protected finish",
+        "ko": "실물 시험: 가려진 마감층"
+      },
+      "locator": {
+        "en": "Surface test A-2, rear hinge margin",
+        "ko": "표면 시험 A-2, 뒤 경첩 가장자리"
+      }
+    },
+    {
+      "id": "cite.leave_patina.document.service_note",
+      "source_ref": "src.leave_patina.document.service_note",
+      "label": {
+        "en": "Riverside household service note",
+        "ko": "강변 저택 관리 기록"
+      },
+      "locator": {
+        "en": "Case document D-7, winter 1951 entry",
+        "ko": "사건 문서 D-7, 1951년 겨울 항목"
+      }
+    },
+    {
+      "id": "cite.leave_patina.npc.iris_assessment",
+      "source_ref": "src.leave_patina.npc.iris_assessment",
+      "label": {
+        "en": "Interview with Iris Bell",
+        "ko": "아이리스 벨 면담"
+      },
+      "locator": {
+        "en": "Conservation interview N-1",
+        "ko": "보존 처리 면담 N-1"
+      }
+    },
+    {
+      "id": "cite.leave_patina.reference.eldemere_finish",
+      "source_ref": "src.leave_patina.reference.eldemere_finish",
+      "label": {
+        "en": "Eldermere period finish guide",
+        "ko": "엘더미어 당대 마감 지침"
+      },
+      "locator": {
+        "en": "Fictional reference archive R-13, finish plate 3",
+        "ko": "가상 참고자료 보관함 R-13, 마감 도판 3"
+      }
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "link.leave.wear_supports_natural",
+      "source_ref": "src.leave_patina.artifact.wear_gradient",
+      "hypothesis_id": "hyp.leave_patina.natural_patina",
+      "relation": "SUPPORT",
+      "weight": 0.7,
+      "independence_group": "physical_wear_sequence",
+      "citation_id": "cite.leave_patina.artifact.wear_gradient"
+    },
+    {
+      "id": "link.leave.wear_refutes_artificial",
+      "source_ref": "src.leave_patina.artifact.wear_gradient",
+      "hypothesis_id": "hyp.leave_patina.artificial_aging",
+      "relation": "REFUTE",
+      "weight": 0.65,
+      "independence_group": "physical_wear_sequence",
+      "citation_id": "cite.leave_patina.artifact.wear_gradient"
+    },
+    {
+      "id": "link.leave.boundary_supports_natural",
+      "source_ref": "src.leave_patina.artifact.hidden_finish_boundary",
+      "hypothesis_id": "hyp.leave_patina.natural_patina",
+      "relation": "SUPPORT",
+      "weight": 0.7,
+      "independence_group": "protected_finish_layer",
+      "citation_id": "cite.leave_patina.artifact.hidden_finish_boundary"
+    },
+    {
+      "id": "link.leave.boundary_refutes_contamination",
+      "source_ref": "src.leave_patina.artifact.hidden_finish_boundary",
+      "hypothesis_id": "hyp.leave_patina.later_contamination",
+      "relation": "REFUTE",
+      "weight": 0.65,
+      "independence_group": "protected_finish_layer",
+      "citation_id": "cite.leave_patina.artifact.hidden_finish_boundary"
+    },
+    {
+      "id": "link.leave.boundary_refutes_artificial",
+      "source_ref": "src.leave_patina.artifact.hidden_finish_boundary",
+      "hypothesis_id": "hyp.leave_patina.artificial_aging",
+      "relation": "REFUTE",
+      "weight": 0.7,
+      "independence_group": "protected_finish_layer",
+      "citation_id": "cite.leave_patina.artifact.hidden_finish_boundary"
+    },
+    {
+      "id": "link.leave.note_supports_contamination",
+      "source_ref": "src.leave_patina.document.service_note",
+      "hypothesis_id": "hyp.leave_patina.later_contamination",
+      "relation": "SUPPORT",
+      "weight": 0.55,
+      "independence_group": "household_treatment_record",
+      "citation_id": "cite.leave_patina.document.service_note"
+    },
+    {
+      "id": "link.leave.note_supports_natural",
+      "source_ref": "src.leave_patina.document.service_note",
+      "hypothesis_id": "hyp.leave_patina.natural_patina",
+      "relation": "SUPPORT",
+      "weight": 0.6,
+      "independence_group": "household_treatment_record",
+      "citation_id": "cite.leave_patina.document.service_note"
+    },
+    {
+      "id": "link.leave.iris_supports_natural",
+      "source_ref": "src.leave_patina.npc.iris_assessment",
+      "hypothesis_id": "hyp.leave_patina.natural_patina",
+      "relation": "SUPPORT",
+      "weight": 0.55,
+      "independence_group": "conservator_assessment",
+      "citation_id": "cite.leave_patina.npc.iris_assessment"
+    },
+    {
+      "id": "link.leave.iris_refutes_contamination",
+      "source_ref": "src.leave_patina.npc.iris_assessment",
+      "hypothesis_id": "hyp.leave_patina.later_contamination",
+      "relation": "REFUTE",
+      "weight": 0.45,
+      "independence_group": "conservator_assessment",
+      "citation_id": "cite.leave_patina.npc.iris_assessment"
+    },
+    {
+      "id": "link.leave.reference_supports_natural",
+      "source_ref": "src.leave_patina.reference.eldemere_finish",
+      "hypothesis_id": "hyp.leave_patina.natural_patina",
+      "relation": "SUPPORT",
+      "weight": 0.7,
+      "independence_group": "independent_period_reference",
+      "citation_id": "cite.leave_patina.reference.eldemere_finish"
+    },
+    {
+      "id": "link.leave.reference_refutes_artificial",
+      "source_ref": "src.leave_patina.reference.eldemere_finish",
+      "hypothesis_id": "hyp.leave_patina.artificial_aging",
+      "relation": "REFUTE",
+      "weight": 0.65,
+      "independence_group": "independent_period_reference",
+      "citation_id": "cite.leave_patina.reference.eldemere_finish"
+    }
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.leave_patina.natural_patina",
+    "required_source_refs": [
+      "src.leave_patina.artifact.hidden_finish_boundary",
+      "src.leave_patina.document.service_note",
+      "src.leave_patina.reference.eldemere_finish"
+    ],
+    "minimum_independent_groups": 3,
+    "minimum_citations": 3,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least three independent findings. Distinguish the stable lower finish from the removable later residue and state the cleaning limit.",
+      "ko": "가설 하나를 선택하고 서로 독립된 근거를 최소 세 가지 인용하라. 안정된 아래 마감층과 제거 가능한 후대 잔류물을 구분하고 세척 한계를 밝혀라."
+    },
+    "outcome_rules": [
+      {
+        "outcome": "masterful",
+        "requires_correct_hypothesis": true,
+        "requires_all_required_sources": true,
+        "minimum_independent_groups": 3,
+        "minimum_citations": 3
+      },
+      {
+        "outcome": "credible",
+        "requires_correct_hypothesis": true,
+        "requires_all_required_sources": false,
+        "minimum_independent_groups": 2,
+        "minimum_citations": 2
+      },
+      {
+        "outcome": "mistaken",
+        "requires_correct_hypothesis": false,
+        "minimum_citations": 2
+      },
+      {
+        "outcome": "reviewed_with_mentor",
+        "fallback": true
+      }
+    ]
+  }
+}

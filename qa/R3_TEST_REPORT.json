@@ -1,0 +1,589 @@
+{
+  "executed": 36,
+  "failed": 0,
+  "passed": 36,
+  "skipped": 0,
+  "suite": "R3 core",
+  "tests": [
+    {
+      "category": "integration",
+      "evidence": "WorkshopEnvironment3D present",
+      "executed": true,
+      "id": "R3-BOOT-01",
+      "name": "R3 main scene is Node3D",
+      "passed": true
+    },
+    {
+      "category": "data",
+      "evidence": {
+        "baseline": 60,
+        "bidders": 12,
+        "events": 25,
+        "expansion": 20,
+        "specs": 80,
+        "upgrades": 25
+      },
+      "executed": true,
+      "id": "R3-DATA-01",
+      "name": "Catalog loads exact required counts",
+      "passed": true
+    },
+    {
+      "category": "data",
+      "evidence": [],
+      "executed": true,
+      "id": "R3-DATA-02",
+      "name": "All 80 ArtifactSpecs bind immutable catalog fields",
+      "passed": true
+    },
+    {
+      "category": "data",
+      "evidence": [],
+      "executed": true,
+      "id": "R3-DATA-03",
+      "name": "Generated damage respects compatible set",
+      "passed": true
+    },
+    {
+      "category": "integration",
+      "evidence": [],
+      "executed": true,
+      "id": "R3-VIS-01",
+      "name": "All 80 variants resolve mesh and material",
+      "passed": true
+    },
+    {
+      "category": "data",
+      "evidence": [],
+      "executed": true,
+      "id": "R3-VIS-02",
+      "name": "Every variant per base mesh has a distinct signature",
+      "passed": true
+    },
+    {
+      "category": "state",
+      "evidence": [
+        "artifact_032",
+        "artifact_045",
+        "artifact_058",
+        "artifact_009",
+        "artifact_022"
+      ],
+      "executed": true,
+      "id": "R3-MARKET-01",
+      "name": "Same seed and day reproduces roster",
+      "passed": true
+    },
+    {
+      "category": "state",
+      "evidence": {
+        "day1": [
+          "artifact_032",
+          "artifact_045",
+          "artifact_058",
+          "artifact_009",
+          "artifact_022"
+        ],
+        "day2": [
+          "artifact_039",
+          "artifact_052",
+          "artifact_003",
+          "artifact_016",
+          "artifact_029"
+        ]
+      },
+      "executed": true,
+      "id": "R3-MARKET-02",
+      "name": "Advance day rotates market",
+      "passed": true
+    },
+    {
+      "category": "simulation",
+      "evidence": {
+        "days": 30,
+        "unique_specs": 58
+      },
+      "executed": true,
+      "id": "R3-MARKET-03",
+      "name": "Thirty-day market exposes substantial catalog",
+      "passed": true
+    },
+    {
+      "category": "state",
+      "evidence": {
+        "lot": "day_1_lot_00",
+        "spec": "artifact_032"
+      },
+      "executed": true,
+      "id": "R3-MARKET-04",
+      "name": "Bought lot does not duplicate on screen refresh",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": {
+        "after": 1,
+        "before": 2
+      },
+      "executed": true,
+      "id": "R3-RESTORE-01",
+      "name": "Cleaning UI immediately synchronizes damage markers",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": {
+        "integrity_after": 77.76,
+        "integrity_before": 78.0,
+        "markers": 2
+      },
+      "executed": true,
+      "id": "R3-RESTORE-02",
+      "name": "Wrong tool immediately updates state and visual feedback",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": {
+        "disassembly": true,
+        "part_family": "clock",
+        "parts": [
+          "body",
+          "panel",
+          "mechanism"
+        ]
+      },
+      "executed": true,
+      "id": "R3-DISASSEMBLY-01",
+      "name": "Supported disassembly hides part immediately",
+      "passed": true
+    },
+    {
+      "category": "state",
+      "evidence": "artifact_002",
+      "executed": true,
+      "id": "R3-DISASSEMBLY-02",
+      "name": "Unsupported artifact cannot enter fake disassembly",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": [
+        "[P: (624.0, 153.0), S: (194.0, 72.0)]",
+        "[P: (824.0, 153.0), S: (194.0, 72.0)]",
+        "[P: (1024.0, 153.0), S: (194.0, 72.0)]",
+        "[P: (624.0, 231.0), S: (194.0, 72.0)]",
+        "[P: (824.0, 231.0), S: (194.0, 72.0)]",
+        "[P: (1024.0, 231.0), S: (194.0, 72.0)]"
+      ],
+      "executed": true,
+      "id": "R3-AUTH-01",
+      "name": "Six hypothesis controls are visible and non-overlapping",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": [],
+      "executed": true,
+      "id": "R3-AUTH-02",
+      "name": "Each hypothesis activates its own value through Button signal",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": "GENUINE",
+      "executed": true,
+      "id": "R3-AUTH-03",
+      "name": "Appraisal continuation requires accepted non-UNKNOWN selection",
+      "passed": true
+    },
+    {
+      "category": "state",
+      "evidence": {
+        "bids": [
+          {
+            "amount": 13,
+            "bidderId": "bidder_10"
+          },
+          {
+            "amount": 25,
+            "bidderId": "bidder_11"
+          },
+          {
+            "amount": 38,
+            "bidderId": "bidder_12"
+          }
+        ],
+        "code": "OK",
+        "dropouts": [
+          {
+            "bidderId": "bidder_01",
+            "reason": "VALUE"
+          },
+          {
+            "bidderId": "bidder_02",
+            "reason": "VALUE"
+          },
+          {
+            "bidderId": "bidder_03",
+            "reason": "VALUE"
+          },
+          {
+            "bidderId": "bidder_10",
+            "reason": "VALUE"
+          },
+          {
+            "bidderId": "bidder_11",
+            "reason": "VALUE"
+          }
+        ],
+        "fee": 0,
+        "hammer": 38,
+        "idempotent": false,
+        "net": 0,
+        "ok": true,
+        "opening": 1,
+        "participants": [
+          {
+            "id": "bidder_10"
+          },
+          {
+            "id": "bidder_11"
+          },
+          {
+            "id": "bidder_12"
+          },
+          {
+            "id": "bidder_01"
+          },
+          {
+            "id": "bidder_02"
+          },
+          {
+            "id": "bidder_03"
+          }
+        ],
+        "publicFingerprint": "AUC-887354367",
+        "reasonTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          },
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_UNCERTAIN",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "reserve": 999999,
+        "reserve_met": false,
+        "sale_status": "NO_SALE",
+        "status": "COMMITTED",
+        "transactionId": "auction_1_1672809598_0",
+        "winnerId": "bidder_12"
+      },
+      "executed": true,
+      "id": "R3-AUCTION-01",
+      "name": "Reserve failure keeps item and credits no money",
+      "passed": true
+    },
+    {
+      "category": "state",
+      "evidence": {
+        "duplicate": {
+          "net": 0,
+          "reserve_met": false,
+          "sale_status": "ALREADY_RECORDED"
+        },
+        "sale": {
+          "bids": [
+            {
+              "amount": 13,
+              "bidderId": "bidder_10"
+            },
+            {
+              "amount": 25,
+              "bidderId": "bidder_11"
+            },
+            {
+              "amount": 38,
+              "bidderId": "bidder_12"
+            }
+          ],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_01",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_03",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_10",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_11",
+              "reason": "VALUE"
+            }
+          ],
+          "fee": 4,
+          "hammer": 38,
+          "idempotent": false,
+          "net": 34,
+          "ok": true,
+          "opening": 1,
+          "participants": [
+            {
+              "id": "bidder_10"
+            },
+            {
+              "id": "bidder_11"
+            },
+            {
+              "id": "bidder_12"
+            },
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            }
+          ],
+          "publicFingerprint": "AUC-1125063034",
+          "reasonTags": [],
+          "reserve": 1,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_439445938_1",
+          "winnerId": "bidder_12"
+        }
+      },
+      "executed": true,
+      "id": "R3-AUCTION-02",
+      "name": "Reserve-met sale completes exactly once",
+      "passed": true
+    },
+    {
+      "category": "simulation",
+      "evidence": [
+        "bidder_10",
+        "bidder_11",
+        "bidder_12",
+        "bidder_01",
+        "bidder_02",
+        "bidder_03",
+        "bidder_04",
+        "bidder_05",
+        "bidder_06",
+        "bidder_07",
+        "bidder_08",
+        "bidder_09"
+      ],
+      "executed": true,
+      "id": "R3-BIDDER-01",
+      "name": "All 12 bidder profiles are reachable",
+      "passed": true
+    },
+    {
+      "category": "simulation",
+      "evidence": [],
+      "executed": true,
+      "id": "R3-BIDDER-02",
+      "name": "Bidder budget caps cannot be violated",
+      "passed": true
+    },
+    {
+      "category": "state",
+      "evidence": {
+        "high": 498,
+        "low": 247
+      },
+      "executed": true,
+      "id": "R3-BIDDER-03",
+      "name": "Distinct bidder profiles produce distinct controlled valuation",
+      "passed": true
+    },
+    {
+      "category": "integration",
+      "evidence": [],
+      "executed": true,
+      "id": "R3-EVENT-01",
+      "name": "All 25 events execute a structured state effect",
+      "passed": true
+    },
+    {
+      "category": "simulation",
+      "evidence": [
+        "event_03",
+        "event_22",
+        "event_16",
+        "event_08",
+        "event_02",
+        "event_21",
+        "event_15",
+        "event_11",
+        "event_05",
+        "event_09",
+        "event_14",
+        "event_20",
+        "event_17",
+        "event_04",
+        "event_23",
+        "event_18",
+        "event_12",
+        "event_24",
+        "event_19",
+        "event_13",
+        "event_10",
+        "event_06",
+        "event_25",
+        "event_07",
+        "event_01"
+      ],
+      "executed": true,
+      "id": "R3-EVENT-02",
+      "name": "Seeded daily selection reaches all events",
+      "passed": true
+    },
+    {
+      "category": "integration",
+      "evidence": [],
+      "executed": true,
+      "id": "R3-UPGRADE-01",
+      "name": "All 25 upgrades charge data cost, apply effect, and block duplicates",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": {
+        "missing": [],
+        "reachable": 25
+      },
+      "executed": true,
+      "id": "R3-UPGRADE-02",
+      "name": "All 25 upgrade cards are reachable across five compact pages and each exposes one authoritative purchase control",
+      "passed": true
+    },
+    {
+      "category": "integration",
+      "evidence": {
+        "damage": true,
+        "day": true,
+        "instance": true,
+        "language": true,
+        "market": true,
+        "money": true,
+        "spec": true
+      },
+      "executed": true,
+      "id": "R3-SAVE-01",
+      "name": "R3 save/load preserves semantic state",
+      "passed": true
+    },
+    {
+      "category": "state",
+      "evidence": "PROLOGUE",
+      "executed": true,
+      "id": "R3-SAVE-02",
+      "name": "R2 save migrates to safe campaign defaults",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": {
+        "language": "ko",
+        "screen": "market"
+      },
+      "executed": true,
+      "id": "R3-LOC-01",
+      "name": "Language toggle refreshes current screen",
+      "passed": true
+    },
+    {
+      "category": "data",
+      "evidence": {
+        "en": 107,
+        "ko": 107
+      },
+      "executed": true,
+      "id": "R3-LOC-02",
+      "name": "All EN and KO localization keys have non-empty counterparts",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": "시장 — 시드 기반 오늘의 출품작",
+      "executed": true,
+      "id": "R3-LOC-03",
+      "name": "Current core screen renders localized Korean title and subtitle",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": {
+        "header_stats": "[P: (818.0, 22.0), S: (434.0, 42.0)]",
+        "language": "[P: (1100.0, 620.0), S: (130.0, 46.0)]"
+      },
+      "executed": true,
+      "id": "R3-LOC-04",
+      "name": "Long Korean copy keeps header stats and every navigation control on screen",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": {
+        "language": "en",
+        "screen": "postgame"
+      },
+      "executed": true,
+      "id": "R3-NAV-01",
+      "name": "Language refresh keeps the player on the postgame screen",
+      "passed": true
+    },
+    {
+      "category": "ui",
+      "evidence": {
+        "act": "POSTGAME",
+        "screen": "postgame"
+      },
+      "executed": true,
+      "id": "R3-NAV-02",
+      "name": "Campaign navigation routes POSTGAME state to the postgame screen",
+      "passed": true
+    },
+    {
+      "category": "data",
+      "evidence": {
+        "entries": 238,
+        "missing": []
+      },
+      "executed": true,
+      "id": "R3-ASSET-01",
+      "name": "Asset manifest has zero missing paths",
+      "passed": true
+    },
+    {
+      "category": "data",
+      "evidence": {
+        "files": 238,
+        "unique_hashes": 215
+      },
+      "executed": true,
+      "id": "R3-ASSET-02",
+      "name": "Manifest reports actual unique hashes separately",
+      "passed": true
+    }
+  ]
+}

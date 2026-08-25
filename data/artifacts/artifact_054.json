@@ -1,0 +1,59 @@
+{
+  "id": "artifact_054",
+  "displayName": "Nightingale Mechanical Counter B",
+  "category": "office_machines",
+  "baseModel": "model_09.obj",
+  "maker": "maker_14",
+  "modelName": "Model 153",
+  "era": "1940-1952",
+  "materialSet": [
+    "material_09",
+    "material_12"
+  ],
+  "rarity": "uncommon",
+  "baseValue": 1117,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH",
+    "PAINT_LOSS",
+    "FADING"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.5
+  },
+  "collectorTags": [
+    "office_machines",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_054"
+}

@@ -1,0 +1,2412 @@
+{
+  "executed": 11,
+  "failed": 0,
+  "passed": 11,
+  "skipped": 0,
+  "suite": "R3 Stage Pressure Telemetry Backend",
+  "tests": [
+    {
+      "evidence": {
+        "missingMethods": [],
+        "missingRunKeys": []
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-API-01",
+      "name": "Telemetry public actions, query, persistence and frozen-snapshot contracts are callable",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "mutation0": true,
+        "public": {
+          "artifactSalesCount": 0,
+          "auctionCount": 0,
+          "available": true,
+          "dominantToolId": "",
+          "investigationActions": 0,
+          "investigationRiskActions": 0,
+          "investigationRiskRate": 0.0,
+          "investigationRiskWeightSum": 0.0,
+          "listingCount": 0,
+          "listingStrategyDistribution": {
+            "AUTO_GRAND_RESERVE": 0.0,
+            "BALANCED": 0.0,
+            "CUSTOM": 0.0,
+            "FAST": 0.0,
+            "HIGH": 0.0,
+            "LEGACY_UNKNOWN": 0.0
+          },
+          "noSaleCount": 0,
+          "noSaleRate": 0.0,
+          "relistCount": 0,
+          "repairActions": 0,
+          "repairCostAccrued": 0.0,
+          "repairResourcePressure": 0.0,
+          "repairToolIdsUsed": [],
+          "stage": 1,
+          "summaryCodes": [
+            "NO_INVESTIGATION"
+          ],
+          "toolConcentration": 0.0
+        },
+        "raw": {
+          "artifactSalesCount": 0,
+          "auctionCount": 0,
+          "budgetBasis": 1200,
+          "investigationActions": 0,
+          "investigationRiskActions": 0,
+          "investigationRiskWeightSum": 0.0,
+          "listingStrategyCounts": {
+            "AUTO_GRAND_RESERVE": 0,
+            "BALANCED": 0,
+            "CUSTOM": 0,
+            "FAST": 0,
+            "HIGH": 0,
+            "LEGACY_UNKNOWN": 0
+          },
+          "noSaleCount": 0,
+          "relistCount": 0,
+          "repairActions": 0,
+          "repairCostAccrued": 0.0,
+          "repairToolUseCounts": {}
+        },
+        "rng": [
+          "-3378380881708314866",
+          "-3378380881708314866"
+        ],
+        "started": {
+          "code": "OK",
+          "difficultyMultiplier": 1.0,
+          "ok": true,
+          "stage": 1
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-DEFAULT-01",
+      "name": "A new RUNNING stage starts with available zero telemetry and advisory queries mutate no state or RNG",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "deltas": [
+          12.0,
+          48.0,
+          8.0
+        ],
+        "public": {
+          "artifactSalesCount": 0,
+          "auctionCount": 0,
+          "available": true,
+          "dominantToolId": "precision_screwdriver",
+          "investigationActions": 0,
+          "investigationRiskActions": 0,
+          "investigationRiskRate": 0.0,
+          "investigationRiskWeightSum": 0.0,
+          "listingCount": 0,
+          "listingStrategyDistribution": {
+            "AUTO_GRAND_RESERVE": 0.0,
+            "BALANCED": 0.0,
+            "CUSTOM": 0.0,
+            "FAST": 0.0,
+            "HIGH": 0.0,
+            "LEGACY_UNKNOWN": 0.0
+          },
+          "noSaleCount": 0,
+          "noSaleRate": 0.0,
+          "relistCount": 0,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairResourcePressure": 0.0566666666666667,
+          "repairToolIdsUsed": [
+            "precision_screwdriver",
+            "soft_brush"
+          ],
+          "stage": 1,
+          "summaryCodes": [
+            "NO_INVESTIGATION",
+            "TOOL_VARIETY"
+          ],
+          "toolConcentration": 0.333333333333333
+        },
+        "raw": {
+          "artifactSalesCount": 0,
+          "auctionCount": 0,
+          "budgetBasis": 1200,
+          "investigationActions": 0,
+          "investigationRiskActions": 0,
+          "investigationRiskWeightSum": 0.0,
+          "listingStrategyCounts": {
+            "AUTO_GRAND_RESERVE": 0,
+            "BALANCED": 0,
+            "CUSTOM": 0,
+            "FAST": 0,
+            "HIGH": 0,
+            "LEGACY_UNKNOWN": 0
+          },
+          "noSaleCount": 0,
+          "relistCount": 0,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairToolUseCounts": {
+            "precision_screwdriver": 1,
+            "soft_brush": 1
+          }
+        },
+        "restoreSeen": 3,
+        "results": [
+          "Effective restoration.",
+          "Mechanism repaired.",
+          true
+        ]
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-RESTORE-01",
+      "name": "Clean, repair and disassemble accrue their actual cost once and attribute only the two selected tools once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "duplicate": {
+          "code": "ALREADY_DISCOVERED",
+          "evidenceId": "src.prologue.artifact.backplate_screws",
+          "ok": true,
+          "sourceId": "physical_fastener_evidence"
+        },
+        "evidenceId": "src.prologue.artifact.backplate_screws",
+        "first": {
+          "appliedRiskPenalty": 3.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.prologue.artifact.backplate_screws",
+          "ok": true,
+          "riskLevel": "HIGH",
+          "sourceId": "physical_fastener_evidence"
+        },
+        "integrity": [
+          78.0,
+          75.0
+        ],
+        "telemetry": {
+          "artifactSalesCount": 0,
+          "auctionCount": 0,
+          "budgetBasis": 1200,
+          "investigationActions": 1,
+          "investigationRiskActions": 1,
+          "investigationRiskWeightSum": 3.0,
+          "listingStrategyCounts": {
+            "AUTO_GRAND_RESERVE": 0,
+            "BALANCED": 0,
+            "CUSTOM": 0,
+            "FAST": 0,
+            "HIGH": 0,
+            "LEGACY_UNKNOWN": 0
+          },
+          "noSaleCount": 0,
+          "relistCount": 0,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairToolUseCounts": {
+            "precision_screwdriver": 1,
+            "soft_brush": 1
+          }
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-INVESTIGATION-01",
+      "name": "A discovered high-risk clue records one risk event while ALREADY_DISCOVERED records no duplicate",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "exactAcrossResume": true,
+        "first": {
+          "created": {
+            "artifactId": "telemetry_auction_lot",
+            "code": "OK",
+            "createdDay": 1,
+            "cueIndex": 0,
+            "cueQueue": [
+              {
+                "bidderId": "bidder_12",
+                "phase": "ENTRY",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 999999,
+                "bidderId": "bidder_12",
+                "phase": "CALL",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "bidderId": "bidder_05",
+                "dropoutReason": "BUDGET",
+                "phase": "DROPOUT",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": []
+              },
+              {
+                "amount": 0,
+                "bidderId": "bidder_05",
+                "dropoutReason": "BUDGET",
+                "phase": "NO_SALE",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": []
+              }
+            ],
+            "decisions": {
+              "activeModifiers": {
+                "appraisalPrecision": 0,
+                "auctionFeeReduction": 0,
+                "bidderReach": 0,
+                "displayBonus": 0,
+                "listingBonus": 0,
+                "marketAll": 0,
+                "marketCategory": 10,
+                "stageDifficulty": 1
+              },
+              "condition": {
+                "cleanliness": 100,
+                "mechanical": 100,
+                "surface": 100
+              },
+              "day": 1,
+              "disclosure": "CERTAIN",
+              "grandReserve": false,
+              "listingUid": "telemetry_auction_lot",
+              "provenanceKnown": true,
+              "publicAppraisal": 100,
+              "reportedConfidence": 0.96,
+              "reserve": 1000000,
+              "reserveRatio": 10000,
+              "specId": "artifact_001",
+              "stage": 1,
+              "starting": 999999,
+              "startingRatio": 9999.99,
+              "substantiation": "NO_CASE"
+            },
+            "grandReserve": false,
+            "ok": true,
+            "publicFingerprint": "AUC-583221152",
+            "receipt": {},
+            "result": {
+              "bids": [],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_12",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_05",
+                  "reason": "BUDGET"
+                }
+              ],
+              "fee": 0,
+              "hammer": 0,
+              "net": 0,
+              "opening": 999999,
+              "participants": [
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                }
+              ],
+              "publicFingerprint": "AUC-583221152",
+              "reasonTags": [
+                {
+                  "category": "PRICE",
+                  "code": "RESERVE_TOO_HIGH",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "reserve": 1000000,
+              "reserve_met": false,
+              "sale_status": "NO_SALE",
+              "transactionId": "auction_1_1528407766_0",
+              "winnerId": ""
+            },
+            "status": "PENDING",
+            "transactionId": "auction_1_1528407766_0"
+          },
+          "raw": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "budgetBasis": 1200,
+            "investigationActions": 1,
+            "investigationRiskActions": 1,
+            "investigationRiskWeightSum": 3.0,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 1,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 3,
+            "repairCostAccrued": 68.0,
+            "repairToolUseCounts": {
+              "precision_screwdriver": 1,
+              "soft_brush": 1
+            }
+          },
+          "resumeRetry": {
+            "artifactId": "telemetry_auction_lot",
+            "code": "OK",
+            "createdDay": 1,
+            "cueIndex": 0,
+            "cueQueue": [
+              {
+                "bidderId": "bidder_12",
+                "phase": "ENTRY",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 999999,
+                "bidderId": "bidder_12",
+                "phase": "CALL",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "bidderId": "bidder_05",
+                "dropoutReason": "BUDGET",
+                "phase": "DROPOUT",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": []
+              },
+              {
+                "amount": 0,
+                "bidderId": "bidder_05",
+                "dropoutReason": "BUDGET",
+                "phase": "NO_SALE",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": []
+              }
+            ],
+            "decisions": {
+              "activeModifiers": {
+                "appraisalPrecision": 0,
+                "auctionFeeReduction": 0,
+                "bidderReach": 0,
+                "displayBonus": 0,
+                "listingBonus": 0,
+                "marketAll": 0,
+                "marketCategory": 10,
+                "stageDifficulty": 1
+              },
+              "condition": {
+                "cleanliness": 100,
+                "mechanical": 100,
+                "surface": 100
+              },
+              "day": 1,
+              "disclosure": "CERTAIN",
+              "grandReserve": false,
+              "listingUid": "telemetry_auction_lot",
+              "provenanceKnown": true,
+              "publicAppraisal": 100,
+              "reportedConfidence": 0.96,
+              "reserve": 1000000,
+              "reserveRatio": 10000,
+              "specId": "artifact_001",
+              "stage": 1,
+              "starting": 999999,
+              "startingRatio": 9999.99,
+              "substantiation": "NO_CASE"
+            },
+            "grandReserve": false,
+            "ok": true,
+            "publicFingerprint": "AUC-583221152",
+            "receipt": {},
+            "result": {
+              "bids": [],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_12",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_05",
+                  "reason": "BUDGET"
+                }
+              ],
+              "fee": 0,
+              "hammer": 0,
+              "net": 0,
+              "opening": 999999,
+              "participants": [
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                }
+              ],
+              "publicFingerprint": "AUC-583221152",
+              "reasonTags": [
+                {
+                  "category": "PRICE",
+                  "code": "RESERVE_TOO_HIGH",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "reserve": 1000000,
+              "reserve_met": false,
+              "sale_status": "NO_SALE",
+              "transactionId": "auction_1_1528407766_0",
+              "winnerId": ""
+            },
+            "status": "PENDING",
+            "transactionId": "auction_1_1528407766_0"
+          },
+          "retry": {
+            "artifactId": "telemetry_auction_lot",
+            "code": "OK",
+            "createdDay": 1,
+            "cueIndex": 0,
+            "cueQueue": [
+              {
+                "bidderId": "bidder_12",
+                "phase": "ENTRY",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 999999,
+                "bidderId": "bidder_12",
+                "phase": "CALL",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "bidderId": "bidder_05",
+                "dropoutReason": "BUDGET",
+                "phase": "DROPOUT",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": []
+              },
+              {
+                "amount": 0,
+                "bidderId": "bidder_05",
+                "dropoutReason": "BUDGET",
+                "phase": "NO_SALE",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": []
+              }
+            ],
+            "decisions": {
+              "activeModifiers": {
+                "appraisalPrecision": 0,
+                "auctionFeeReduction": 0,
+                "bidderReach": 0,
+                "displayBonus": 0,
+                "listingBonus": 0,
+                "marketAll": 0,
+                "marketCategory": 10,
+                "stageDifficulty": 1
+              },
+              "condition": {
+                "cleanliness": 100,
+                "mechanical": 100,
+                "surface": 100
+              },
+              "day": 1,
+              "disclosure": "CERTAIN",
+              "grandReserve": false,
+              "listingUid": "telemetry_auction_lot",
+              "provenanceKnown": true,
+              "publicAppraisal": 100,
+              "reportedConfidence": 0.96,
+              "reserve": 1000000,
+              "reserveRatio": 10000,
+              "specId": "artifact_001",
+              "stage": 1,
+              "starting": 999999,
+              "startingRatio": 9999.99,
+              "substantiation": "NO_CASE"
+            },
+            "grandReserve": false,
+            "ok": true,
+            "publicFingerprint": "AUC-583221152",
+            "receipt": {},
+            "result": {
+              "bids": [],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_12",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "BUDGET"
+                },
+                {
+                  "bidderId": "bidder_05",
+                  "reason": "BUDGET"
+                }
+              ],
+              "fee": 0,
+              "hammer": 0,
+              "net": 0,
+              "opening": 999999,
+              "participants": [
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                }
+              ],
+              "publicFingerprint": "AUC-583221152",
+              "reasonTags": [
+                {
+                  "category": "PRICE",
+                  "code": "RESERVE_TOO_HIGH",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "reserve": 1000000,
+              "reserve_met": false,
+              "sale_status": "NO_SALE",
+              "transactionId": "auction_1_1528407766_0",
+              "winnerId": ""
+            },
+            "status": "PENDING",
+            "transactionId": "auction_1_1528407766_0"
+          }
+        },
+        "second": {
+          "created": {
+            "artifactId": "telemetry_auction_lot",
+            "code": "OK",
+            "createdDay": 1,
+            "cueIndex": 0,
+            "cueQueue": [
+              {
+                "bidderId": "bidder_12",
+                "phase": "ENTRY",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 10,
+                "bidderId": "bidder_12",
+                "phase": "CALL",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 34,
+                "bidderId": "bidder_01",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  }
+                ]
+              },
+              {
+                "amount": 47,
+                "bidderId": "bidder_02",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  }
+                ]
+              },
+              {
+                "amount": 60,
+                "bidderId": "bidder_05",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              },
+              {
+                "bidderId": "bidder_02",
+                "dropoutReason": "VALUE",
+                "phase": "DROPOUT",
+                "reasonTags": [],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              },
+              {
+                "amount": 60,
+                "bidderId": "bidder_05",
+                "dropoutReason": "VALUE",
+                "phase": "SOLD",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 22,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              }
+            ],
+            "decisions": {
+              "activeModifiers": {
+                "appraisalPrecision": 0,
+                "auctionFeeReduction": 0,
+                "bidderReach": 0,
+                "displayBonus": 0,
+                "listingBonus": 0,
+                "marketAll": 0,
+                "marketCategory": 10,
+                "stageDifficulty": 1
+              },
+              "condition": {
+                "cleanliness": 100,
+                "mechanical": 100,
+                "surface": 100
+              },
+              "day": 1,
+              "disclosure": "CERTAIN",
+              "grandReserve": false,
+              "listingUid": "telemetry_auction_lot",
+              "provenanceKnown": true,
+              "publicAppraisal": 20,
+              "reportedConfidence": 0.96,
+              "reserve": 12,
+              "reserveRatio": 0.6,
+              "specId": "artifact_001",
+              "stage": 1,
+              "starting": 10,
+              "startingRatio": 0.5,
+              "substantiation": "NO_CASE"
+            },
+            "grandReserve": false,
+            "ok": true,
+            "publicFingerprint": "AUC-823103594",
+            "receipt": {},
+            "result": {
+              "bids": [
+                {
+                  "amount": 22,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 34,
+                  "bidderId": "bidder_01"
+                },
+                {
+                  "amount": 47,
+                  "bidderId": "bidder_02"
+                },
+                {
+                  "amount": 60,
+                  "bidderId": "bidder_05"
+                }
+              ],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_12",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "VALUE"
+                }
+              ],
+              "fee": 7,
+              "hammer": 60,
+              "net": 53,
+              "opening": 10,
+              "participants": [
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                }
+              ],
+              "publicFingerprint": "AUC-823103594",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "reserve": 12,
+              "reserve_met": true,
+              "sale_status": "SOLD",
+              "transactionId": "auction_1_1554040714_1",
+              "winnerId": "bidder_05"
+            },
+            "status": "PENDING",
+            "transactionId": "auction_1_1554040714_1"
+          },
+          "raw": {
+            "artifactSalesCount": 0,
+            "auctionCount": 1,
+            "budgetBasis": 1200,
+            "investigationActions": 1,
+            "investigationRiskActions": 1,
+            "investigationRiskWeightSum": 3.0,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 1,
+              "FAST": 1,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 1,
+            "relistCount": 1,
+            "repairActions": 3,
+            "repairCostAccrued": 68.0,
+            "repairToolUseCounts": {
+              "precision_screwdriver": 1,
+              "soft_brush": 1
+            }
+          },
+          "resumeRetry": {
+            "artifactId": "telemetry_auction_lot",
+            "code": "OK",
+            "createdDay": 1,
+            "cueIndex": 0,
+            "cueQueue": [
+              {
+                "bidderId": "bidder_12",
+                "phase": "ENTRY",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 10,
+                "bidderId": "bidder_12",
+                "phase": "CALL",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 34,
+                "bidderId": "bidder_01",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  }
+                ]
+              },
+              {
+                "amount": 47,
+                "bidderId": "bidder_02",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  }
+                ]
+              },
+              {
+                "amount": 60,
+                "bidderId": "bidder_05",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              },
+              {
+                "bidderId": "bidder_02",
+                "dropoutReason": "VALUE",
+                "phase": "DROPOUT",
+                "reasonTags": [],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              },
+              {
+                "amount": 60,
+                "bidderId": "bidder_05",
+                "dropoutReason": "VALUE",
+                "phase": "SOLD",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 22,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              }
+            ],
+            "decisions": {
+              "activeModifiers": {
+                "appraisalPrecision": 0,
+                "auctionFeeReduction": 0,
+                "bidderReach": 0,
+                "displayBonus": 0,
+                "listingBonus": 0,
+                "marketAll": 0,
+                "marketCategory": 10,
+                "stageDifficulty": 1
+              },
+              "condition": {
+                "cleanliness": 100,
+                "mechanical": 100,
+                "surface": 100
+              },
+              "day": 1,
+              "disclosure": "CERTAIN",
+              "grandReserve": false,
+              "listingUid": "telemetry_auction_lot",
+              "provenanceKnown": true,
+              "publicAppraisal": 20,
+              "reportedConfidence": 0.96,
+              "reserve": 12,
+              "reserveRatio": 0.6,
+              "specId": "artifact_001",
+              "stage": 1,
+              "starting": 10,
+              "startingRatio": 0.5,
+              "substantiation": "NO_CASE"
+            },
+            "grandReserve": false,
+            "ok": true,
+            "publicFingerprint": "AUC-823103594",
+            "receipt": {},
+            "result": {
+              "bids": [
+                {
+                  "amount": 22,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 34,
+                  "bidderId": "bidder_01"
+                },
+                {
+                  "amount": 47,
+                  "bidderId": "bidder_02"
+                },
+                {
+                  "amount": 60,
+                  "bidderId": "bidder_05"
+                }
+              ],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_12",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "VALUE"
+                }
+              ],
+              "fee": 7,
+              "hammer": 60,
+              "net": 53,
+              "opening": 10,
+              "participants": [
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                }
+              ],
+              "publicFingerprint": "AUC-823103594",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "reserve": 12,
+              "reserve_met": true,
+              "sale_status": "SOLD",
+              "transactionId": "auction_1_1554040714_1",
+              "winnerId": "bidder_05"
+            },
+            "status": "PENDING",
+            "transactionId": "auction_1_1554040714_1"
+          },
+          "retry": {
+            "artifactId": "telemetry_auction_lot",
+            "code": "OK",
+            "createdDay": 1,
+            "cueIndex": 0,
+            "cueQueue": [
+              {
+                "bidderId": "bidder_12",
+                "phase": "ENTRY",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 10,
+                "bidderId": "bidder_12",
+                "phase": "CALL",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 34,
+                "bidderId": "bidder_01",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  }
+                ]
+              },
+              {
+                "amount": 47,
+                "bidderId": "bidder_02",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  }
+                ]
+              },
+              {
+                "amount": 60,
+                "bidderId": "bidder_05",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              },
+              {
+                "bidderId": "bidder_02",
+                "dropoutReason": "VALUE",
+                "phase": "DROPOUT",
+                "reasonTags": [],
+                "visibleBids": [
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              },
+              {
+                "amount": 60,
+                "bidderId": "bidder_05",
+                "dropoutReason": "VALUE",
+                "phase": "SOLD",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 22,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 34,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 47,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 60,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              }
+            ],
+            "decisions": {
+              "activeModifiers": {
+                "appraisalPrecision": 0,
+                "auctionFeeReduction": 0,
+                "bidderReach": 0,
+                "displayBonus": 0,
+                "listingBonus": 0,
+                "marketAll": 0,
+                "marketCategory": 10,
+                "stageDifficulty": 1
+              },
+              "condition": {
+                "cleanliness": 100,
+                "mechanical": 100,
+                "surface": 100
+              },
+              "day": 1,
+              "disclosure": "CERTAIN",
+              "grandReserve": false,
+              "listingUid": "telemetry_auction_lot",
+              "provenanceKnown": true,
+              "publicAppraisal": 20,
+              "reportedConfidence": 0.96,
+              "reserve": 12,
+              "reserveRatio": 0.6,
+              "specId": "artifact_001",
+              "stage": 1,
+              "starting": 10,
+              "startingRatio": 0.5,
+              "substantiation": "NO_CASE"
+            },
+            "grandReserve": false,
+            "ok": true,
+            "publicFingerprint": "AUC-823103594",
+            "receipt": {},
+            "result": {
+              "bids": [
+                {
+                  "amount": 22,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 34,
+                  "bidderId": "bidder_01"
+                },
+                {
+                  "amount": 47,
+                  "bidderId": "bidder_02"
+                },
+                {
+                  "amount": 60,
+                  "bidderId": "bidder_05"
+                }
+              ],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_03",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_04",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_12",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_02",
+                  "reason": "VALUE"
+                }
+              ],
+              "fee": 7,
+              "hammer": 60,
+              "net": 53,
+              "opening": 10,
+              "participants": [
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                },
+                {
+                  "id": "bidder_02"
+                },
+                {
+                  "id": "bidder_03"
+                },
+                {
+                  "id": "bidder_04"
+                },
+                {
+                  "id": "bidder_05"
+                }
+              ],
+              "publicFingerprint": "AUC-823103594",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "reserve": 12,
+              "reserve_met": true,
+              "sale_status": "SOLD",
+              "transactionId": "auction_1_1554040714_1",
+              "winnerId": "bidder_05"
+            },
+            "status": "PENDING",
+            "transactionId": "auction_1_1554040714_1"
+          }
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-LISTING-01",
+      "name": "Pending creation records its strategy once, survives resume exactly, and a post-NO_SALE relist increments once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "first": {
+          "bids": [],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_12",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_01",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_03",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_04",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_05",
+              "reason": "BUDGET"
+            }
+          ],
+          "fee": 0,
+          "hammer": 0,
+          "idempotent": false,
+          "net": 0,
+          "ok": true,
+          "opening": 999999,
+          "participants": [
+            {
+              "id": "bidder_12"
+            },
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            },
+            {
+              "id": "bidder_04"
+            },
+            {
+              "id": "bidder_05"
+            }
+          ],
+          "publicFingerprint": "AUC-583221152",
+          "reasonTags": [
+            {
+              "category": "PRICE",
+              "code": "RESERVE_TOO_HIGH",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "reserve": 1000000,
+          "reserve_met": false,
+          "sale_status": "NO_SALE",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1528407766_0",
+          "winnerId": ""
+        },
+        "firstRaw": {
+          "artifactSalesCount": 0,
+          "auctionCount": 1,
+          "budgetBasis": 1200,
+          "investigationActions": 1,
+          "investigationRiskActions": 1,
+          "investigationRiskWeightSum": 3.0,
+          "listingStrategyCounts": {
+            "AUTO_GRAND_RESERVE": 0,
+            "BALANCED": 0,
+            "CUSTOM": 1,
+            "FAST": 0,
+            "HIGH": 0,
+            "LEGACY_UNKNOWN": 0
+          },
+          "noSaleCount": 1,
+          "relistCount": 0,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairToolUseCounts": {
+            "precision_screwdriver": 1,
+            "soft_brush": 1
+          }
+        },
+        "firstRepeat": {
+          "bids": [],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_12",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_01",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_03",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_04",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_05",
+              "reason": "BUDGET"
+            }
+          ],
+          "fee": 0,
+          "hammer": 0,
+          "idempotent": true,
+          "net": 0,
+          "ok": true,
+          "opening": 999999,
+          "participants": [
+            {
+              "id": "bidder_12"
+            },
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            },
+            {
+              "id": "bidder_04"
+            },
+            {
+              "id": "bidder_05"
+            }
+          ],
+          "publicFingerprint": "AUC-583221152",
+          "reasonTags": [
+            {
+              "category": "PRICE",
+              "code": "RESERVE_TOO_HIGH",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "reserve": 1000000,
+          "reserve_met": false,
+          "sale_status": "NO_SALE",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1528407766_0",
+          "winnerId": ""
+        },
+        "mutation0": [
+          true,
+          true
+        ],
+        "second": {
+          "bids": [
+            {
+              "amount": 22,
+              "bidderId": "bidder_12"
+            },
+            {
+              "amount": 34,
+              "bidderId": "bidder_01"
+            },
+            {
+              "amount": 47,
+              "bidderId": "bidder_02"
+            },
+            {
+              "amount": 60,
+              "bidderId": "bidder_05"
+            }
+          ],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_03",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_04",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_12",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_01",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "VALUE"
+            }
+          ],
+          "fee": 7,
+          "hammer": 60,
+          "idempotent": false,
+          "net": 53,
+          "ok": true,
+          "opening": 10,
+          "participants": [
+            {
+              "id": "bidder_12"
+            },
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            },
+            {
+              "id": "bidder_04"
+            },
+            {
+              "id": "bidder_05"
+            }
+          ],
+          "publicFingerprint": "AUC-823103594",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_GOOD",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "reserve": 12,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1554040714_1",
+          "winnerId": "bidder_05"
+        },
+        "secondRaw": {
+          "artifactSalesCount": 1,
+          "auctionCount": 2,
+          "budgetBasis": 1200,
+          "investigationActions": 1,
+          "investigationRiskActions": 1,
+          "investigationRiskWeightSum": 3.0,
+          "listingStrategyCounts": {
+            "AUTO_GRAND_RESERVE": 0,
+            "BALANCED": 0,
+            "CUSTOM": 1,
+            "FAST": 1,
+            "HIGH": 0,
+            "LEGACY_UNKNOWN": 0
+          },
+          "noSaleCount": 1,
+          "relistCount": 1,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairToolUseCounts": {
+            "precision_screwdriver": 1,
+            "soft_brush": 1
+          }
+        },
+        "secondRepeat": {
+          "bids": [
+            {
+              "amount": 22,
+              "bidderId": "bidder_12"
+            },
+            {
+              "amount": 34,
+              "bidderId": "bidder_01"
+            },
+            {
+              "amount": 47,
+              "bidderId": "bidder_02"
+            },
+            {
+              "amount": 60,
+              "bidderId": "bidder_05"
+            }
+          ],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_03",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_04",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_12",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_01",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "VALUE"
+            }
+          ],
+          "fee": 7,
+          "hammer": 60,
+          "idempotent": true,
+          "net": 53,
+          "ok": true,
+          "opening": 10,
+          "participants": [
+            {
+              "id": "bidder_12"
+            },
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            },
+            {
+              "id": "bidder_04"
+            },
+            {
+              "id": "bidder_05"
+            }
+          ],
+          "publicFingerprint": "AUC-823103594",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_GOOD",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "reserve": 12,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1554040714_1",
+          "winnerId": "bidder_05"
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-AUCTION-01",
+      "name": "NO_SALE and SOLD receipts each record once and repeated commits are authoritative mutation-zero receipts",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "distributionOk": true,
+        "expectedPressure": 0.0566666666666667,
+        "public": {
+          "artifactSalesCount": 1,
+          "auctionCount": 2,
+          "available": true,
+          "dominantToolId": "precision_screwdriver",
+          "investigationActions": 1,
+          "investigationRiskActions": 1,
+          "investigationRiskRate": 1.0,
+          "investigationRiskWeightSum": 3.0,
+          "listingCount": 2,
+          "listingStrategyDistribution": {
+            "AUTO_GRAND_RESERVE": 0.0,
+            "BALANCED": 0.0,
+            "CUSTOM": 0.5,
+            "FAST": 0.5,
+            "HIGH": 0.0,
+            "LEGACY_UNKNOWN": 0.0
+          },
+          "noSaleCount": 1,
+          "noSaleRate": 0.5,
+          "relistCount": 1,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairResourcePressure": 0.0566666666666667,
+          "repairToolIdsUsed": [
+            "precision_screwdriver",
+            "soft_brush"
+          ],
+          "stage": 1,
+          "summaryCodes": [
+            "RISK_TAKEN",
+            "RELIST_USED"
+          ],
+          "toolConcentration": 0.333333333333333
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-DERIVED-01",
+      "name": "Public pressure, risk, listing distribution, no-sale rate and tool concentration derive exactly from the action ledger",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authorityMutation0": true,
+        "replayAfter": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 2.33333333333333
+            },
+            "preservation": {
+              "available": false,
+              "statusCode": "UNAVAILABLE",
+              "value": 0.0
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        },
+        "replayBefore": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 2.33333333333333
+            },
+            "preservation": {
+              "available": false,
+              "statusCode": "UNAVAILABLE",
+              "value": 0.0
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        },
+        "rng": [
+          "-3378380881708314866",
+          "-3378380881708314866"
+        ],
+        "score": [
+          0.0,
+          0.0
+        ],
+        "summaryEqual": true,
+        "telemetry": {
+          "artifactSalesCount": 1,
+          "auctionCount": 2,
+          "available": true,
+          "dominantToolId": "precision_screwdriver",
+          "investigationActions": 1,
+          "investigationRiskActions": 1,
+          "investigationRiskRate": 1.0,
+          "investigationRiskWeightSum": 3.0,
+          "listingCount": 2,
+          "listingStrategyDistribution": {
+            "AUTO_GRAND_RESERVE": 0.0,
+            "BALANCED": 0.0,
+            "CUSTOM": 0.5,
+            "FAST": 0.5,
+            "HIGH": 0.0,
+            "LEGACY_UNKNOWN": 0.0
+          },
+          "noSaleCount": 1,
+          "noSaleRate": 0.5,
+          "relistCount": 1,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairResourcePressure": 0.0566666666666667,
+          "repairToolIdsUsed": [
+            "precision_screwdriver",
+            "soft_brush"
+          ],
+          "stage": 1,
+          "summaryCodes": [
+            "RISK_TAKEN",
+            "RELIST_USED"
+          ],
+          "toolConcentration": 0.333333333333333
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-ADVISORY-01",
+      "name": "Telemetry reads leave the established three-axis replay result, score, stage summary, authority and RNG unchanged",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "afterBackingMutation": {
+          "artifactSalesCount": 1,
+          "auctionCount": 2,
+          "available": true,
+          "dominantToolId": "precision_screwdriver",
+          "investigationActions": 1,
+          "investigationRiskActions": 1,
+          "investigationRiskRate": 1.0,
+          "investigationRiskWeightSum": 3.0,
+          "listingCount": 2,
+          "listingStrategyDistribution": {
+            "AUTO_GRAND_RESERVE": 0.0,
+            "BALANCED": 0.0,
+            "CUSTOM": 0.5,
+            "FAST": 0.5,
+            "HIGH": 0.0,
+            "LEGACY_UNKNOWN": 0.0
+          },
+          "noSaleCount": 1,
+          "noSaleRate": 0.5,
+          "relistCount": 1,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairResourcePressure": 0.0566666666666667,
+          "repairToolIdsUsed": [
+            "precision_screwdriver",
+            "soft_brush"
+          ],
+          "stage": 1,
+          "summaryCodes": [
+            "RISK_TAKEN",
+            "RELIST_USED"
+          ],
+          "toolConcentration": 0.333333333333333
+        },
+        "completion": {
+          "best": 78.0,
+          "code": "OK",
+          "highestUnlockedStage": 2,
+          "ok": true,
+          "performance": {
+            "advice": "Compare independent clues before reporting.",
+            "advisoryOnly": true,
+            "best": 78.0,
+            "completionLabel": "Complete every case in this opening set.",
+            "completionMet": true,
+            "completionProgress": 1.0,
+            "current": 78.0,
+            "failureOrSuccess": "Performance target met.",
+            "goalLabel": "Build a sound evidence habit.",
+            "grade": "Expert",
+            "hasNextStage": true,
+            "isNewBest": true,
+            "metTarget": true,
+            "nextStageUnlocked": true,
+            "progress": 1.0,
+            "stage": 1,
+            "target": 55.0
+          },
+          "stage": 1
+        },
+        "repeat": {
+          "best": 78.0,
+          "code": "OK",
+          "highestUnlockedStage": 2,
+          "ok": true,
+          "performance": {
+            "advice": "Compare independent clues before reporting.",
+            "advisoryOnly": true,
+            "best": 78.0,
+            "completionLabel": "Complete every case in this opening set.",
+            "completionMet": true,
+            "completionProgress": 1.0,
+            "current": 78.0,
+            "failureOrSuccess": "Performance target met.",
+            "goalLabel": "Build a sound evidence habit.",
+            "grade": "Expert",
+            "hasNextStage": true,
+            "isNewBest": false,
+            "metTarget": true,
+            "nextStageUnlocked": true,
+            "progress": 1.0,
+            "stage": 1,
+            "target": 55.0
+          },
+          "stage": 1
+        },
+        "replayStable": true,
+        "rng": [
+          "-3378380881708314866",
+          "-3378380881708314866"
+        ],
+        "score": [
+          78.0,
+          78.0
+        ],
+        "snapshot": {
+          "artifactSalesCount": 1,
+          "auctionCount": 2,
+          "available": true,
+          "dominantToolId": "precision_screwdriver",
+          "investigationActions": 1,
+          "investigationRiskActions": 1,
+          "investigationRiskRate": 1.0,
+          "investigationRiskWeightSum": 3.0,
+          "listingCount": 2,
+          "listingStrategyDistribution": {
+            "AUTO_GRAND_RESERVE": 0.0,
+            "BALANCED": 0.0,
+            "CUSTOM": 0.5,
+            "FAST": 0.5,
+            "HIGH": 0.0,
+            "LEGACY_UNKNOWN": 0.0
+          },
+          "noSaleCount": 1,
+          "noSaleRate": 0.5,
+          "relistCount": 1,
+          "repairActions": 3,
+          "repairCostAccrued": 68.0,
+          "repairResourcePressure": 0.0566666666666667,
+          "repairToolIdsUsed": [
+            "precision_screwdriver",
+            "soft_brush"
+          ],
+          "stage": 1,
+          "summaryCodes": [
+            "RISK_TAKEN",
+            "RELIST_USED"
+          ],
+          "toolConcentration": 0.333333333333333
+        },
+        "snapshotStable": true
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-FREEZE-01",
+      "name": "complete_stage freezes telemetry once; later backing-ledger changes, repeated completion and reads cannot change it or established results",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "applied": true,
+        "mutation0": true,
+        "public": {
+          "available": false,
+          "stage": 1
+        },
+        "rng": [
+          "-3378380881708314866",
+          "-3378380881708314866"
+        ],
+        "run": {
+          "caseIds": [
+            "prologue_clock",
+            "silent_radio",
+            "perfect_fake"
+          ],
+          "completedAtDay": 0,
+          "difficultyMultiplier": 1.0,
+          "grandReserveRequired": false,
+          "lastPerformance": {},
+          "score": 0.0,
+          "stageClearAcknowledged": false,
+          "stageId": 1,
+          "stageReplayFeedbackSnapshot": {},
+          "stageReplayTelemetrySnapshot": {},
+          "startedAtDay": 1,
+          "status": "RUNNING",
+          "telemetry": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "budgetBasis": 1200,
+            "investigationActions": 0,
+            "investigationRiskActions": 0,
+            "investigationRiskWeightSum": 0.0,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 0,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairToolUseCounts": {}
+          },
+          "telemetryAvailable": false,
+          "telemetrySeenIds": [],
+          "tutorialCompletedSteps": []
+        },
+        "validation": {
+          "code": "OK",
+          "ok": true
+        }
+      },
+      "executed": true,
+      "id": "STAGE-TELEMETRY-LEGACY-01",
+      "name": "A valid v5 run loads without invented telemetry and remains explicitly unavailable",
+      "passed": true
+    },
+    {
+      "evidence": [
+        {
+          "applied": false,
+          "case": "available_type",
+          "expected": "INVALID_STAGE_TELEMETRY",
+          "loadError": "NO_VALID_SAVE:user://r3_stage_telemetry_hostile.json=INVALID_STAGE_TELEMETRY,user://r3_stage_telemetry_hostile.json.bak=EMPTY_OR_INVALID_JSON",
+          "loaded": false,
+          "mutation0": true,
+          "passed": true,
+          "validation": {
+            "code": "INVALID_STAGE_TELEMETRY",
+            "ok": false
+          },
+          "written": true
+        },
+        {
+          "applied": false,
+          "case": "telemetry_type",
+          "expected": "INVALID_STAGE_TELEMETRY",
+          "loadError": "NO_VALID_SAVE:user://r3_stage_telemetry_hostile.json=INVALID_STAGE_TELEMETRY,user://r3_stage_telemetry_hostile.json.bak=EMPTY_OR_INVALID_JSON",
+          "loaded": false,
+          "mutation0": true,
+          "passed": true,
+          "validation": {
+            "code": "INVALID_STAGE_TELEMETRY",
+            "ok": false
+          },
+          "written": true
+        },
+        {
+          "applied": false,
+          "case": "negative_count",
+          "expected": "INVALID_STAGE_TELEMETRY",
+          "loadError": "NO_VALID_SAVE:user://r3_stage_telemetry_hostile.json=INVALID_STAGE_TELEMETRY,user://r3_stage_telemetry_hostile.json.bak=EMPTY_OR_INVALID_JSON",
+          "loaded": false,
+          "mutation0": true,
+          "passed": true,
+          "validation": {
+            "code": "INVALID_STAGE_TELEMETRY",
+            "ok": false
+          },
+          "written": true
+        },
+        {
+          "applied": false,
+          "case": "tool_total_exceeds_actions",
+          "expected": "INVALID_STAGE_TELEMETRY",
+          "loadError": "NO_VALID_SAVE:user://r3_stage_telemetry_hostile.json=INVALID_STAGE_TELEMETRY,user://r3_stage_telemetry_hostile.json.bak=EMPTY_OR_INVALID_JSON",
+          "loaded": false,
+          "mutation0": true,
+          "passed": true,
+          "validation": {
+            "code": "INVALID_STAGE_TELEMETRY",
+            "ok": false
+          },
+          "written": true
+        },
+        {
+          "applied": false,
+          "case": "duplicate_seen_id",
+          "expected": "INVALID_STAGE_TELEMETRY",
+          "loadError": "NO_VALID_SAVE:user://r3_stage_telemetry_hostile.json=INVALID_STAGE_TELEMETRY,user://r3_stage_telemetry_hostile.json.bak=EMPTY_OR_INVALID_JSON",
+          "loaded": false,
+          "mutation0": true,
+          "passed": true,
+          "validation": {
+            "code": "INVALID_STAGE_TELEMETRY",
+            "ok": false
+          },
+          "written": true
+        },
+        {
+          "applied": false,
+          "case": "malformed_snapshot",
+          "expected": "INVALID_STAGE_TELEMETRY",
+          "loadError": "NO_VALID_SAVE:user://r3_stage_telemetry_hostile.json=INVALID_STAGE_TELEMETRY,user://r3_stage_telemetry_hostile.json.bak=EMPTY_OR_INVALID_JSON",
+          "loaded": false,
+          "mutation0": true,
+          "passed": true,
+          "validation": {
+            "code": "INVALID_STAGE_TELEMETRY",
+            "ok": false
+          },
+          "written": true
+        },
+        {
+          "applied": false,
+          "case": "cleared_without_snapshot",
+          "expected": "INCONSISTENT_STAGE_TELEMETRY",
+          "loadError": "NO_VALID_SAVE:user://r3_stage_telemetry_hostile.json=INCONSISTENT_STAGE_TELEMETRY,user://r3_stage_telemetry_hostile.json.bak=EMPTY_OR_INVALID_JSON",
+          "loaded": false,
+          "mutation0": true,
+          "passed": true,
+          "validation": {
+            "code": "INCONSISTENT_STAGE_TELEMETRY",
+            "ok": false
+          },
+          "written": true
+        },
+        {
+          "applied": false,
+          "case": "unavailable_with_snapshot",
+          "expected": "INCONSISTENT_STAGE_TELEMETRY",
+          "loadError": "NO_VALID_SAVE:user://r3_stage_telemetry_hostile.json=INCONSISTENT_STAGE_TELEMETRY,user://r3_stage_telemetry_hostile.json.bak=EMPTY_OR_INVALID_JSON",
+          "loaded": false,
+          "mutation0": true,
+          "passed": true,
+          "validation": {
+            "code": "INCONSISTENT_STAGE_TELEMETRY",
+            "ok": false
+          },
+          "written": true
+        }
+      ],
+      "executed": true,
+      "id": "STAGE-TELEMETRY-VALIDATION-01",
+      "name": "Malformed v6 telemetry and inconsistent availability/snapshot pairs fail closed with mutation zero",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "executed": 12,
+  "expectedCount": 12,
+  "failed": 0,
+  "passed": 12,
+  "skipped": 0,
+  "suite": "R3 Stage 7B Visual Identity",
+  "tests": [
+    {
+      "evidence": {
+        "failures": [],
+        "fixturesChecked": 7,
+        "topKeys": [
+          "detail",
+          "materialPath",
+          "meshPath",
+          "metallic",
+          "palette",
+          "recipe",
+          "roughness",
+          "scale",
+          "specId",
+          "trim"
+        ]
+      },
+      "executed": true,
+      "id": "S7B-INSTANCE-DTO-WHITELIST-01",
+      "name": "Every Stage 7 instance fixture exposes the exact ten-key public render DTO and exact nested allowlists",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "freshDtoRestored": true,
+        "privacyFailures": [],
+        "rawRegistryMutation": false
+      },
+      "executed": true,
+      "id": "S7B-INSTANCE-DTO-ISOLATION-02",
+      "name": "Instance DTOs are deep copies with mutation zero and expose no private truth, economy, auction, clue, rarity, reserve or price token",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": [],
+        "pairs": [
+          {
+            "fixture": "freshOptic19x057",
+            "loadable": true,
+            "mesh": "res://assets/artifacts/model_12.obj",
+            "recipe": "OPTIC"
+          },
+          {
+            "fixture": "freshComposite20x059",
+            "loadable": true,
+            "mesh": "res://assets/artifacts/model_14.obj",
+            "recipe": "COMPOSITE"
+          }
+        ]
+      },
+      "executed": true,
+      "id": "S7B-FRESH-PAIR-MAPPING-03",
+      "name": "Only story 19 plus Artifact 057 maps to OPTIC and only story 20 plus Artifact 059 maps to COMPOSITE",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "crossContamination": 0,
+        "failures": [],
+        "rows": [
+          {
+            "fixture": "legacyOptic19x051",
+            "mesh": "res://assets/artifacts/model_06.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          },
+          {
+            "fixture": "legacyComposite20x057",
+            "mesh": "res://assets/artifacts/model_12.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          },
+          {
+            "fixture": "unrelatedOpticStoryWith059",
+            "mesh": "res://assets/artifacts/model_14.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          },
+          {
+            "fixture": "specOnly057",
+            "mesh": "res://assets/artifacts/model_12.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          },
+          {
+            "fixture": "specOnly059",
+            "mesh": "res://assets/artifacts/model_14.obj",
+            "recipe": "DEFAULT",
+            "repeatExact": true
+          }
+        ]
+      },
+      "executed": true,
+      "id": "S7B-LEGACY-DEFAULT-ISOLATION-04",
+      "name": "Legacy story 19 plus 051, story 20 plus 057 and unrelated/spec-only 057/059 remain canonical DEFAULT with cross-contamination zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "missingRecipe": {
+          "diagnostic": true,
+          "emptyDto": true,
+          "exit": 0,
+          "markerFound": true
+        },
+        "unknownRecipe": {
+          "diagnostic": true,
+          "emptyDto": true,
+          "exit": 0,
+          "markerFound": true
+        }
+      },
+      "executed": true,
+      "id": "S7B-REQUIRED-PAIR-FAIL-CLOSED-05",
+      "name": "A required Stage 7 pair with an unknown or missing recipe returns an empty DTO instead of silently using DEFAULT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifactMeshCount": 1,
+        "artifactMeshHidden": true,
+        "expected": {
+          "barrel": 1,
+          "eyepiece": 1,
+          "focusCollar": 1,
+          "mountingYoke": 1,
+          "objectiveHousing": 1,
+          "objectiveLens": 1,
+          "opticalAxis": 1,
+          "supportFoot": 1,
+          "total": 10,
+          "yokeSupports": 2
+        },
+        "forbidden": {
+          "composite": 0,
+          "gauge": 0,
+          "genericTrim": 0,
+          "musicBox": 0,
+          "sextant": 0,
+          "typewriter": 0
+        },
+        "liveMeshPath": "res://assets/artifacts/model_12.obj",
+        "nodes": {
+          "barrel": 1,
+          "eyepiece": 1,
+          "focusCollar": 1,
+          "mountingYoke": 1,
+          "objectiveHousing": 1,
+          "objectiveLens": 1,
+          "opticalAxis": 1,
+          "supportFoot": 1,
+          "total": 10,
+          "yokeSupports": 2
+        }
+      },
+      "executed": true,
+      "id": "S7B-OPTIC-RENDERER-06",
+      "name": "OPTIC hides the legacy gauge base and renders the exact telescope barrel, optics, focus collar, yoke/support and optical-axis silhouette with other recipe residue zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "artifactMeshCount": 1,
+        "artifactMeshHidden": true,
+        "expected": {
+          "adapterJoint": 1,
+          "connector": 1,
+          "dial": 1,
+          "fasteners": 3,
+          "mainBody": 1,
+          "needle": 1,
+          "scaleTicks": 11,
+          "secondary": 1,
+          "secondaryCap": 1,
+          "total": 21
+        },
+        "forbidden": {
+          "gauge": 0,
+          "genericTrim": 0,
+          "musicBox": 0,
+          "optic": 0,
+          "sextant": 0,
+          "typewriter": 0
+        },
+        "liveMeshPath": "res://assets/artifacts/model_14.obj",
+        "nodes": {
+          "adapterJoint": 1,
+          "connector": 1,
+          "dial": 1,
+          "fasteners": 3,
+          "mainBody": 1,
+          "needle": 1,
+          "scaleTicks": 11,
+          "secondary": 1,
+          "secondaryCap": 1,
+          "total": 21
+        }
+      },
+      "executed": true,
+      "id": "S7B-COMPOSITE-RENDERER-07",
+      "name": "COMPOSITE hides the legacy camera base and renders the exact measuring body, graduated dial, secondary module, adapter, connector and mismatched fasteners with other recipe residue zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": [],
+        "portraits": [
+          {
+            "missingFeatures": [],
+            "npc": "victor_hale",
+            "passed": true,
+            "publicRegistryPath": "res://assets/portraits/victor_hale_neutral.svg",
+            "rawRegistryPath": "res://assets/portraits/victor_hale_neutral.svg",
+            "twoCompleteEyes": true
+          },
+          {
+            "missingFeatures": [],
+            "npc": "noah_stern",
+            "passed": true,
+            "publicRegistryPath": "res://assets/portraits/noah_stern_concerned.svg",
+            "rawRegistryPath": "res://assets/portraits/noah_stern_concerned.svg",
+            "twoCompleteEyes": true
+          }
+        ]
+      },
+      "executed": true,
+      "id": "S7B-PORTRAIT-SVG-V2-08",
+      "name": "Victor neutral and Noah concerned resolve explicitly to local SVG V2 busts with two complete eyes and character-specific hair, outfit and occupational props",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": 0,
+        "portraits": [
+          {
+            "assetPath": "res://assets/portraits/victor_hale_neutral.svg",
+            "hairZoneColors": 965,
+            "importedSourceMd5": "f2fe8f230fb0e9dc38b741f3c78ce149",
+            "leftEye": {
+              "chromatic": 193,
+              "dark": 37,
+              "passed": true,
+              "white": 231
+            },
+            "outfitPropZoneColors": 831,
+            "passed": true,
+            "rightEye": {
+              "chromatic": 184,
+              "dark": 37,
+              "passed": true,
+              "white": 231
+            },
+            "sourceImportMatch": true,
+            "sourceMd5": "f2fe8f230fb0e9dc38b741f3c78ce149",
+            "texturePath": "res://assets/portraits/victor_hale_neutral.svg",
+            "textureSize": [
+              256,
+              320
+            ],
+            "uniqueColors": 888
+          },
+          {
+            "assetPath": "res://assets/portraits/noah_stern_concerned.svg",
+            "hairZoneColors": 978,
+            "importedSourceMd5": "13fee80802aa6eb552760e88fc9978ee",
+            "leftEye": {
+              "chromatic": 373,
+              "dark": 59,
+              "passed": true,
+              "white": 253
+            },
+            "outfitPropZoneColors": 1688,
+            "passed": true,
+            "rightEye": {
+              "chromatic": 350,
+              "dark": 59,
+              "passed": true,
+              "white": 253
+            },
+            "sourceImportMatch": true,
+            "sourceMd5": "13fee80802aa6eb552760e88fc9978ee",
+            "texturePath": "res://assets/portraits/noah_stern_concerned.svg",
+            "textureSize": [
+              256,
+              320
+            ],
+            "uniqueColors": 1245
+          }
+        ],
+        "staleGenericImportAllowed": false
+      },
+      "executed": true,
+      "id": "S7B-PORTRAIT-IMPORTED-PIXELS-09",
+      "name": "Victor and Noah loaded textures match current source imports and contain pixel-visible white, chromatic and dark eye systems plus detailed hair/outfit/prop zones",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": [
+          {
+            "artifactCreated": true,
+            "case": "shadow_optic",
+            "discoveredCount": 6,
+            "genericFallbackCount": 0,
+            "hasTexture": true,
+            "lockedFallbackCount": 0,
+            "minimumSize": [
+              96.0,
+              120.0
+            ],
+            "npc": "victor_hale",
+            "npcDiscovered": true,
+            "npcPath": "res://assets/portraits/victor_hale_neutral.svg",
+            "passed": true,
+            "portraitCount": 1,
+            "texturePath": "res://assets/portraits/victor_hale_neutral.svg"
+          },
+          {
+            "artifactCreated": true,
+            "case": "composite_prototype",
+            "discoveredCount": 6,
+            "genericFallbackCount": 0,
+            "hasTexture": true,
+            "lockedFallbackCount": 0,
+            "minimumSize": [
+              96.0,
+              120.0
+            ],
+            "npc": "noah_stern",
+            "npcDiscovered": true,
+            "npcPath": "res://assets/portraits/noah_stern_concerned.svg",
+            "passed": true,
+            "portraitCount": 1,
+            "texturePath": "res://assets/portraits/noah_stern_concerned.svg"
+          }
+        ],
+        "failures": 0
+      },
+      "executed": true,
+      "id": "S7B-PORTRAIT-DOSSIER-10",
+      "name": "The Stage 7 Victor and Noah NPC sources each render one actual textured CaseNpcSourcePortrait at least 96 by 120 with generic fallback zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "allowlist": [
+          "ASTRONOMICAL_REGULATOR",
+          "CHRONOMETER",
+          "COMPOSITE",
+          "DEFAULT",
+          "GAUGE",
+          "MICROSCOPE",
+          "MUSIC_BOX",
+          "OPTIC",
+          "SEXTANT",
+          "SIGNAL_LANTERN",
+          "SPECTROSCOPE",
+          "TYPEWRITER_CIPHER",
+          "WIRE_RECORDER"
+        ],
+        "catalogSize": 80,
+        "counts": {
+          "DEFAULT": 78,
+          "SEXTANT": 1,
+          "TYPEWRITER_CIPHER": 1
+        },
+        "failures": []
+      },
+      "executed": true,
+      "id": "S7B-SPEC-ONLY-DISTRIBUTION-11",
+      "name": "The eighty-spec distribution remains seventy-eight DEFAULT, one cipher and one sextant while all special recipes stay pair-only",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "expected": [
+          "story_artifact_16|artifact_050",
+          "story_artifact_18|artifact_035",
+          "story_artifact_19|artifact_057",
+          "story_artifact_20|artifact_059",
+          "story_artifact_21|artifact_061",
+          "story_artifact_22|artifact_075",
+          "story_artifact_23|artifact_078",
+          "story_artifact_24|artifact_077",
+          "story_artifact_25|artifact_079",
+          "story_artifact_26|artifact_080"
+        ],
+        "futureKeyFound": true,
+        "overrideKeys": [
+          "story_artifact_16|artifact_050",
+          "story_artifact_18|artifact_035",
+          "story_artifact_19|artifact_057",
+          "story_artifact_20|artifact_059",
+          "story_artifact_21|artifact_061",
+          "story_artifact_22|artifact_075",
+          "story_artifact_23|artifact_078",
+          "story_artifact_24|artifact_077",
+          "story_artifact_25|artifact_079",
+          "story_artifact_26|artifact_080"
+        ],
+        "story21Recipe": "CHRONOMETER",
+        "story22Recipe": "MICROSCOPE",
+        "story23Recipe": "WIRE_RECORDER",
+        "story24Recipe": "SIGNAL_LANTERN",
+        "story25Recipe": "SPECTROSCOPE",
+        "story26Recipe": "ASTRONOMICAL_REGULATOR"
+      },
+      "executed": true,
+      "id": "S7B-STAGE8-CONTAINMENT-12",
+      "name": "The exact override table binds only authored later-stage pairs and leaves unrelated combinations on DEFAULT",
+      "passed": true
+    }
+  ]
+}

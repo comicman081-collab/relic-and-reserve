@@ -1,0 +1,275 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage3-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "garage_lamp",
+  "act_id": "ACT_1",
+  "title": {
+    "en": "The Garage Lamp",
+    "ko": "차고의 램프"
+  },
+  "briefing": {
+    "en": "A Gildspire desk lamp from a former motor garage has an early brass shell, a replaced socket, and a cloth-covered cord. The owner calls it untouched; a recent assembler could also have fitted an old shell around newer parts. Establish when the intervention occurred before tightening or polishing anything.",
+    "ko": "옛 자동차 정비소에서 나온 길드스파이어 책상 램프에는 초기 황동 외피와 교체된 소켓, 천으로 감싼 전선이 함께 남아 있다. 소유자는 손대지 않은 물건이라고 하지만, 최근 조립자가 오래된 외피에 새 부품을 끼웠을 가능성도 있다. 조이거나 광택을 내기 전에 개입 시점을 밝혀라."
+  },
+  "central_question": {
+    "en": "Is the lamp untouched, authentically repaired in its working period, or a modern assembly built around an old shell?",
+    "ko": "이 램프는 손대지 않은 원형인가, 사용 당시에 수리된 진품인가, 아니면 오래된 외피로 만든 현대 조립품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, workshops, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 공방과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report preserves the genuine Gildspire body while clearly disclosing its documented period socket repair.",
+    "ko": "보고서는 진품 길드스파이어 몸체를 보존하면서 기록으로 확인된 당대 소켓 수리를 명확히 고지한다."
+  },
+  "failure": {
+    "en": "The lamp remains usable, but Mara reviews the repair sequence before the object can be described with confidence.",
+    "ko": "램프는 계속 다룰 수 있지만, 확신 있게 설명하기 전에 마라와 수리 순서를 다시 검토한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 3 campaign desk.",
+      "ko": "스테이지 3 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "An unsupported repair date is reviewed with Mara and cannot earn a masterful result.",
+        "ko": "근거가 부족한 수리 연대는 마라와 재검토하며 최고 판정을 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_007",
+    "legacy_story_artifact_id": "story_artifact_07",
+    "display_name": {
+      "en": "Gildspire Garage Lamp GL-307",
+      "ko": "길드스파이어 차고 램프 GL-307"
+    },
+    "authoring_truth_hypothesis_id": "hyp.garage_lamp.genuine_period_repair",
+    "player_prompt": {
+      "en": "Record the shell wear, socket joint, and service identity before tightening the hardware.",
+      "ko": "철물을 조이기 전에 외피 마모, 소켓 결합부와 수리 식별 정보를 기록하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.garage_lamp.untouched_original",
+      "label": {"en": "Untouched original", "ko": "손대지 않은 원형"},
+      "claim": {
+        "en": "The shell, socket, wiring, and fasteners all remain as Gildspire first assembled them.",
+        "ko": "외피, 소켓, 배선과 고정 나사가 모두 길드스파이어 출고 당시 그대로 남아 있다."
+      }
+    },
+    {
+      "id": "hyp.garage_lamp.genuine_period_repair",
+      "label": {"en": "Genuine with period repair", "ko": "당대 수리가 있는 진품"},
+      "claim": {
+        "en": "The Gildspire body is genuine and received a documented socket-and-cord repair while the lamp was still in garage service.",
+        "ko": "길드스파이어 몸체는 진품이며 차고에서 사용되던 시기에 기록된 소켓·전선 수리를 받았다."
+      }
+    },
+    {
+      "id": "hyp.garage_lamp.modern_assembly_old_shell",
+      "label": {"en": "Modern assembly, old shell", "ko": "오래된 외피의 현대 조립품"},
+      "claim": {
+        "en": "A recent maker assembled the lamp around an old brass shell using later internal parts and an invented history.",
+        "ko": "최근 제작자가 오래된 황동 외피에 후대 내부 부품을 조립하고 이력을 꾸며 냈다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.garage_lamp.artifact.shell_wear_stamp",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_007",
+      "reliability": "HIGH",
+      "label": {"en": "Shell wear and maker stamp", "ko": "외피 마모와 제작사 각인"},
+      "text": {
+        "en": "The underside carries the struck mark Gildspire GL-307 beneath the same oxidation layer as the base. Repeated bench contact has flattened the rear foot and worn through lacquer gradually; the wear continues across the socket bracket instead of stopping at a newly assembled joint.",
+        "ko": "밑면에는 받침과 같은 산화층 아래에 길드스파이어 GL-307 타각이 남아 있다. 작업대에 반복해서 닿은 뒤쪽 발은 납작해지고 칠이 서서히 닳았으며, 마모는 새로 조립한 경계에서 끊기지 않고 소켓 브래킷까지 이어진다."
+      },
+      "unlock": {"action": "inspect", "target": "base_and_socket_bracket", "requires": []},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "physical_shell_history", "depends_on": []},
+      "citation_id": "cite.garage_lamp.artifact.shell_wear_stamp"
+    },
+    {
+      "source_ref": "src.garage_lamp.artifact.socket_service_marks",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_007",
+      "reliability": "HIGH",
+      "label": {"en": "Socket service marks", "ko": "소켓 수리 흔적"},
+      "text": {
+        "en": "With the socket collar supported, one screw reveals old opposing driver marks sealed beneath a dark shellac ring. The replacement socket and braided cord have age-consistent dust inside the protected channel, while the untouched bracket screws retain parallel factory slots.",
+        "ko": "소켓 고리를 받친 채 확인하자 나사 하나에서 짙은 셸락 고리 아래 봉인된 오래된 반대 방향 드라이버 자국이 드러난다. 교체 소켓과 땋은 전선의 가려진 통로에는 연대에 맞는 먼지가 쌓였고, 손대지 않은 브래킷 나사는 평행한 출고 홈을 유지한다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "socket_collar",
+        "requires": ["src.garage_lamp.artifact.shell_wear_stamp", "precision_screwdriver"]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Support the collar and turn only the marked screw; slipping across the shellac ring will blur the service sequence.",
+          "ko": "고리를 받치고 표시된 나사만 돌려라. 셸락 고리 위로 미끄러지면 수리 순서가 흐려진다."
+        }
+      },
+      "independence": {
+        "group": "internal_socket_sequence",
+        "depends_on": ["src.garage_lamp.artifact.shell_wear_stamp"]
+      },
+      "citation_id": "cite.garage_lamp.artifact.socket_service_marks"
+    },
+    {
+      "source_ref": "src.garage_lamp.document.service_receipt",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_13",
+      "document_id": "doc.garage_lamp.gildspire_service_receipt",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "North Quay garage service receipt", "ko": "북부 부두 차고 수리 영수증"},
+      "text": {
+        "en": "The fictional 1911 receipt identifies lamp GL-307 at North Quay Motor Garage and lists one Gildspire service socket, braided cord, and shellac seal. A later stock check repeats the same lamp number and notes that the original brass body was retained.",
+        "ko": "가상의 1911년 영수증은 북부 부두 자동차 차고의 램프 GL-307을 특정하고 길드스파이어 수리용 소켓, 땋은 전선과 셸락 봉인을 한 개씩 기록한다. 후대 재고 점검표도 같은 램프 번호를 반복하며 원래 황동 몸체를 유지했다고 적는다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "document_13",
+        "requires": ["src.garage_lamp.artifact.shell_wear_stamp"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "garage_service_record",
+        "depends_on": ["src.garage_lamp.artifact.shell_wear_stamp"]
+      },
+      "citation_id": "cite.garage_lamp.document.service_receipt"
+    },
+    {
+      "source_ref": "src.garage_lamp.npc.mara_assessment",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "mara_venn",
+      "npc_id": "mara_venn",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Mara Venn's repair assessment", "ko": "마라 벤의 수리 소견"},
+      "text": {
+        "en": "Mara says the sealed driver marks and protected dust are consistent with an old service intervention, not a recent decorative rebuild. She treats the receipt and socket examination as the evidence, and her judgement only as a conservation cross-check.",
+        "ko": "마라는 봉인된 드라이버 자국과 가려진 먼지가 최근 장식용 재조립이 아니라 오래된 사용 중 수리와 일치한다고 말한다. 다만 영수증과 소켓 검사를 증거로 삼고 자신의 판단은 보존 처리상의 교차 점검으로만 둔다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "mara_venn",
+        "requires": ["src.garage_lamp.artifact.socket_service_marks", "src.garage_lamp.document.service_receipt"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "conservator_cross_check",
+        "depends_on": ["src.garage_lamp.artifact.socket_service_marks", "src.garage_lamp.document.service_receipt"]
+      },
+      "citation_id": "cite.garage_lamp.npc.mara_assessment"
+    },
+    {
+      "source_ref": "src.garage_lamp.reference.gildspire_service_sheet",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "history_07",
+      "reference_id": "ref.gildspire.service_sheet_1908_1912",
+      "reliability": "HIGH",
+      "label": {"en": "Gildspire service sheet, 1908–1912", "ko": "길드스파이어 수리 지침, 1908~1912년"},
+      "text": {
+        "en": "The fictional Gildspire sheet assigns GL-300 service sockets a single opposing screw mark and a dark shellac seal, while preserving the original bracket and body. Its modern-rebuild appendix shows plastic insulation and machine-clean fasteners absent from GL-307.",
+        "ko": "가상의 길드스파이어 지침은 GL-300 계열 수리 소켓에 반대 방향 나사 자국 하나와 짙은 셸락 봉인을 남기되 원래 브래킷과 몸체를 유지하라고 한다. 현대 재조립 부록의 플라스틱 절연재와 기계처럼 깨끗한 고정 나사는 GL-307에서 보이지 않는다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": ["src.garage_lamp.artifact.socket_service_marks", "reference_database"]
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "independent_maker_reference",
+        "depends_on": ["src.garage_lamp.artifact.socket_service_marks"]
+      },
+      "citation_id": "cite.garage_lamp.reference.gildspire_service_sheet"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.garage_lamp.artifact.shell_wear_stamp",
+      "source_ref": "src.garage_lamp.artifact.shell_wear_stamp",
+      "label": {"en": "Object record: shell and GL-307 stamp", "ko": "실물 기록: 외피와 GL-307 각인"},
+      "locator": {"en": "Inspection A-1, base and socket bracket", "ko": "검사 A-1, 받침과 소켓 브래킷"}
+    },
+    {
+      "id": "cite.garage_lamp.artifact.socket_service_marks",
+      "source_ref": "src.garage_lamp.artifact.socket_service_marks",
+      "label": {"en": "Object record: serviced socket", "ko": "실물 기록: 수리된 소켓"},
+      "locator": {"en": "Macro record A-2, socket collar", "ko": "확대 기록 A-2, 소켓 고리"}
+    },
+    {
+      "id": "cite.garage_lamp.document.service_receipt",
+      "source_ref": "src.garage_lamp.document.service_receipt",
+      "label": {"en": "North Quay receipt GL-307", "ko": "북부 부두 영수증 GL-307"},
+      "locator": {"en": "Case document D-13, 1911 service line", "ko": "사건 문서 D-13, 1911년 수리 항목"}
+    },
+    {
+      "id": "cite.garage_lamp.npc.mara_assessment",
+      "source_ref": "src.garage_lamp.npc.mara_assessment",
+      "label": {"en": "Interview with Mara Venn", "ko": "마라 벤 면담"},
+      "locator": {"en": "Conservation interview N-1", "ko": "보존 처리 면담 N-1"}
+    },
+    {
+      "id": "cite.garage_lamp.reference.gildspire_service_sheet",
+      "source_ref": "src.garage_lamp.reference.gildspire_service_sheet",
+      "label": {"en": "Gildspire GL-300 service sheet", "ko": "길드스파이어 GL-300 수리 지침"},
+      "locator": {"en": "Fictional maker archive H-7, service plate 2", "ko": "가상 제작사 기록 H-7, 수리 도판 2"}
+    }
+  ],
+  "evidence_links": [
+    {"id": "link.garage.shell_supports_original", "source_ref": "src.garage_lamp.artifact.shell_wear_stamp", "hypothesis_id": "hyp.garage_lamp.untouched_original", "relation": "SUPPORT", "weight": 0.45, "independence_group": "physical_shell_history", "citation_id": "cite.garage_lamp.artifact.shell_wear_stamp"},
+    {"id": "link.garage.shell_supports_period", "source_ref": "src.garage_lamp.artifact.shell_wear_stamp", "hypothesis_id": "hyp.garage_lamp.genuine_period_repair", "relation": "SUPPORT", "weight": 0.65, "independence_group": "physical_shell_history", "citation_id": "cite.garage_lamp.artifact.shell_wear_stamp"},
+    {"id": "link.garage.shell_refutes_modern", "source_ref": "src.garage_lamp.artifact.shell_wear_stamp", "hypothesis_id": "hyp.garage_lamp.modern_assembly_old_shell", "relation": "REFUTE", "weight": 0.6, "independence_group": "physical_shell_history", "citation_id": "cite.garage_lamp.artifact.shell_wear_stamp"},
+    {"id": "link.garage.socket_supports_period", "source_ref": "src.garage_lamp.artifact.socket_service_marks", "hypothesis_id": "hyp.garage_lamp.genuine_period_repair", "relation": "SUPPORT", "weight": 0.85, "independence_group": "internal_socket_sequence", "citation_id": "cite.garage_lamp.artifact.socket_service_marks"},
+    {"id": "link.garage.socket_refutes_original", "source_ref": "src.garage_lamp.artifact.socket_service_marks", "hypothesis_id": "hyp.garage_lamp.untouched_original", "relation": "REFUTE", "weight": 0.75, "independence_group": "internal_socket_sequence", "citation_id": "cite.garage_lamp.artifact.socket_service_marks"},
+    {"id": "link.garage.socket_refutes_modern", "source_ref": "src.garage_lamp.artifact.socket_service_marks", "hypothesis_id": "hyp.garage_lamp.modern_assembly_old_shell", "relation": "REFUTE", "weight": 0.7, "independence_group": "internal_socket_sequence", "citation_id": "cite.garage_lamp.artifact.socket_service_marks"},
+    {"id": "link.garage.receipt_supports_period", "source_ref": "src.garage_lamp.document.service_receipt", "hypothesis_id": "hyp.garage_lamp.genuine_period_repair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "garage_service_record", "citation_id": "cite.garage_lamp.document.service_receipt"},
+    {"id": "link.garage.receipt_refutes_original", "source_ref": "src.garage_lamp.document.service_receipt", "hypothesis_id": "hyp.garage_lamp.untouched_original", "relation": "REFUTE", "weight": 0.8, "independence_group": "garage_service_record", "citation_id": "cite.garage_lamp.document.service_receipt"},
+    {"id": "link.garage.receipt_refutes_modern", "source_ref": "src.garage_lamp.document.service_receipt", "hypothesis_id": "hyp.garage_lamp.modern_assembly_old_shell", "relation": "REFUTE", "weight": 0.7, "independence_group": "garage_service_record", "citation_id": "cite.garage_lamp.document.service_receipt"},
+    {"id": "link.garage.mara_supports_period", "source_ref": "src.garage_lamp.npc.mara_assessment", "hypothesis_id": "hyp.garage_lamp.genuine_period_repair", "relation": "SUPPORT", "weight": 0.55, "independence_group": "conservator_cross_check", "citation_id": "cite.garage_lamp.npc.mara_assessment"},
+    {"id": "link.garage.mara_refutes_modern", "source_ref": "src.garage_lamp.npc.mara_assessment", "hypothesis_id": "hyp.garage_lamp.modern_assembly_old_shell", "relation": "REFUTE", "weight": 0.45, "independence_group": "conservator_cross_check", "citation_id": "cite.garage_lamp.npc.mara_assessment"},
+    {"id": "link.garage.reference_supports_period", "source_ref": "src.garage_lamp.reference.gildspire_service_sheet", "hypothesis_id": "hyp.garage_lamp.genuine_period_repair", "relation": "SUPPORT", "weight": 0.85, "independence_group": "independent_maker_reference", "citation_id": "cite.garage_lamp.reference.gildspire_service_sheet"},
+    {"id": "link.garage.reference_refutes_original", "source_ref": "src.garage_lamp.reference.gildspire_service_sheet", "hypothesis_id": "hyp.garage_lamp.untouched_original", "relation": "REFUTE", "weight": 0.6, "independence_group": "independent_maker_reference", "citation_id": "cite.garage_lamp.reference.gildspire_service_sheet"},
+    {"id": "link.garage.reference_refutes_modern", "source_ref": "src.garage_lamp.reference.gildspire_service_sheet", "hypothesis_id": "hyp.garage_lamp.modern_assembly_old_shell", "relation": "REFUTE", "weight": 0.75, "independence_group": "independent_maker_reference", "citation_id": "cite.garage_lamp.reference.gildspire_service_sheet"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.garage_lamp.genuine_period_repair",
+    "required_source_refs": [
+      "src.garage_lamp.artifact.shell_wear_stamp",
+      "src.garage_lamp.artifact.socket_service_marks",
+      "src.garage_lamp.document.service_receipt",
+      "src.garage_lamp.reference.gildspire_service_sheet"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings from four independent groups. Separate the genuine body from the replaced socket and date the repair without calling the whole lamp untouched or newly assembled.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 진품 몸체와 교체 소켓을 구분하고 램프 전체를 원형이나 새 조립품으로 단정하지 않도록 수리 시기를 밝혀라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "minimum_citations": 2},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

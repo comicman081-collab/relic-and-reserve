@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" data-character-id="hana_mire_concerned" data-character-name="Hana Mire" data-rendered-expression="NEGATIVE" data-expression-anchor="128,140" data-face-zone="73 55 110 141" data-face-height-ratio="0.441" data-eye-system="sclera-iris-pupil-highlight" data-runtime-reference="220x250" data-head-height-svg="164" data-visible-face-skin-height-svg="108" data-major-face-stroke-svg="3.5" data-expression-geometry-version="2">
+  <title>Hana Mire concerned portrait</title>
+  <desc>Cute big-eyed conservator Hana Mire with a verdigris curly bob, turquoise eyes, a cream conservation smock, a measuring caliper, and a tagged artifact sample.</desc>
+  <path fill="#E8F3E7" d="M18 302V91q0-60 60-60h100q60 0 60 60v211z"/>
+  <path fill="#A8D1C1" d="M28 302V84l20-22 26 14 18-35 33 25 29-33 29 38 25-12 20 25v218z"/>
+  <path fill="#F2D993" d="M39 84l31-23 26 15 31-32 29 29 31-14 30 24v12H39z" opacity=".7"/>
+  <g data-layer="hair" data-feature="verdigris-curly-bob">
+    <path fill="#174F50" d="M67 150Q54 96 76 57q23-40 66-30 39 8 48 48l-3 86-24 31-8-101-59-5-9 83z"/>
+    <g fill="#2A7770">
+      <circle cx="82" cy="70" r="25"/><circle cx="104" cy="48" r="24"/><circle cx="133" cy="43" r="25"/>
+      <circle cx="160" cy="55" r="25"/><circle cx="177" cy="83" r="23"/><circle cx="75" cy="103" r="21"/>
+      <circle cx="181" cy="115" r="20"/><circle cx="77" cy="139" r="19"/><circle cx="177" cy="150" r="20"/>
+    </g>
+    <g fill="#53A491">
+      <circle cx="91" cy="58" r="10"/><circle cx="122" cy="39" r="11"/><circle cx="153" cy="49" r="10"/>
+      <circle cx="174" cy="76" r="9"/><circle cx="71" cy="92" r="9"/><circle cx="183" cy="128" r="8"/>
+    </g>
+    <path fill="#1D5E5A" d="M86 79q24-35 72-21l15 25q-40-14-80 12z"/>
+    <path fill="none" stroke="#80C6B1" stroke-width="4" stroke-linecap="round" d="M93 51q17-13 34-8m20 5q14 3 23 14m-93 39q-5 13 0 24" opacity=".75"/>
+  </g>
+  <g data-layer="face">
+    <ellipse fill="#945D45" cx="75" cy="137" rx="10" ry="17"/>
+    <ellipse fill="#945D45" cx="181" cy="137" rx="10" ry="17"/>
+    <path data-part="face-shape" fill="#B87956" d="M73 91Q87 55 128 58q41-3 55 33l-5 64q-7 35-50 44-43-9-50-44z"/>
+    <path fill="#D99A72" d="M88 98q11-28 40-29 30 1 42 26l-5 54q-10 28-37 35-28-7-37-34z" opacity=".45"/>
+    <g data-part="brows" fill="none" stroke="#3C3833" stroke-width="3.5" stroke-linecap="round">
+      <path d="M89 111q15-12 30-4"/>
+      <path d="M137 107q15-8 30 4"/>
+    </g>
+    <g data-eye="left">
+      <ellipse data-part="sclera" fill="#FFFDF2" cx="104" cy="126" rx="15" ry="10"/>
+      <circle data-part="iris" fill="#3AB3A8" cx="105" cy="127" r="8.3"/>
+      <circle data-part="pupil" fill="#143E42" cx="105" cy="127" r="4.2"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="102" cy="123" r="2.4"/>
+      <circle fill="#A7F1D9" cx="108" cy="130" r="1.4"/>
+      <path fill="none" stroke="#433A34" stroke-width="2" stroke-linecap="round" d="M92 121l-5-2m36 2 5-2"/>
+    </g>
+    <g data-eye="right">
+      <ellipse data-part="sclera" fill="#FFFDF2" cx="152" cy="126" rx="15" ry="10"/>
+      <circle data-part="iris" fill="#3AB3A8" cx="151" cy="127" r="8.3"/>
+      <circle data-part="pupil" fill="#143E42" cx="151" cy="127" r="4.2"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="148" cy="123" r="2.4"/>
+      <circle fill="#A7F1D9" cx="154" cy="130" r="1.4"/>
+      <path fill="none" stroke="#433A34" stroke-width="2" stroke-linecap="round" d="M164 121l5-2m-36 2-5-2"/>
+    </g>
+    <ellipse fill="#A84E54" cx="92" cy="153" rx="10" ry="4.8" opacity=".48"/>
+    <ellipse fill="#A84E54" cx="164" cy="153" rx="10" ry="4.8" opacity=".48"/>
+    <path data-part="nose" fill="#8E5545" d="M124 138l-5 14 9 5 8-5-5-14z"/>
+    <path data-part="mouth" fill="none" stroke="#713C48" stroke-width="3.5" stroke-linecap="round" d="M115 174q13-10 26 0"/>
+    <path fill="none" stroke="#E3A889" stroke-width="2" stroke-linecap="round" d="M120 165q8 3 16 0" opacity=".78"/>
+  </g>
+  <g data-layer="outfit">
+    <path fill="#F1E8CC" d="M42 304l16-80q8-33 49-40l21 22 21-22q41 7 49 40l16 80z"/>
+    <path fill="#D8C998" d="M42 304l49-102 37 45 37-45 49 102z"/>
+    <path fill="#FFF8E9" d="M106 185l22 21 22-21-8 54-14 19-14-19z"/>
+    <path fill="#E46F5A" d="M122 207h12v54h-12z"/>
+    <path fill="#537D71" d="M89 203l30 44-19 57H57zm78 0-30 44 19 57h43z"/>
+    <path fill="none" stroke="#F18B70" stroke-width="4" stroke-linecap="round" d="M58 264h35m70 0h35"/>
+    <path fill="#26766E" stroke="#164E4C" stroke-width="2" d="M153 213h31v19h-31z"/>
+    <path fill="#FFF4C7" d="M159 217h19v3h-19zm0 7h14v3h-14z"/>
+  </g>
+  <g data-layer="prop">
+    <g data-feature="measuring-caliper">
+      <path fill="none" stroke="#314B50" stroke-width="6" stroke-linecap="round" d="M51 244h61"/>
+      <path fill="none" stroke="#6AA6A1" stroke-width="3" stroke-linecap="round" d="M51 244h61"/>
+      <path fill="#E7C66B" stroke="#5B543A" stroke-width="3" d="M57 229h12v44H57zm38 8h12v28H95z"/>
+      <path fill="#F9E5A8" d="M61 233h4v28h-4zm38 8h4v18h-4z"/>
+      <path fill="none" stroke="#374E50" stroke-width="3" d="M63 229v-14m38 22v-14"/>
+      <circle fill="#E9735E" stroke="#704137" stroke-width="2" cx="64" cy="278" r="6"/>
+    </g>
+    <g data-feature="conservation-tag">
+      <path fill="#FFF0B8" stroke="#6B5B3D" stroke-width="3" d="M158 238l37 5-6 49-37-5z"/>
+      <circle fill="#557F75" cx="178" cy="249" r="5"/>
+      <path fill="none" stroke="#405F5B" stroke-width="3" stroke-linecap="round" d="M178 249q-18-25-31-28"/>
+      <path fill="none" stroke="#9A7651" stroke-width="3" stroke-linecap="round" d="M163 260l22 3m-23 8 18 2m-20 8 24 3"/>
+      <path fill="#D85F50" d="M185 282l5 8-9-1z"/>
+    </g>
+  </g>
+  <g data-layer="expression-anchors" fill="none" stroke="none">
+    <path data-expression="NEUTRAL" data-brow-shift-svg="0" data-eye-height-shift-svg="0" data-mouth-corner-shift-svg="0" d="M95 109h25m16 0h25m-39 58h14"/>
+    <path data-expression="POSITIVE" data-brow-shift-svg="-5" data-eye-height-shift-svg="-3" data-mouth-corner-shift-svg="-5" d="M95 105h25m16 0h25m-28 52q9 12 18 0"/>
+    <path data-expression="NEGATIVE" data-brow-shift-svg="5" data-eye-height-shift-svg="3" data-mouth-corner-shift-svg="5" d="M95 114h25m16 0h25m-28 55q9-10 18 0"/>
+  </g>
+</svg>

@@ -1,0 +1,434 @@
+{
+  "executed": 8,
+  "failed": 0,
+  "passed": 8,
+  "skipped": 0,
+  "suite": "R3 MVP save crash injection",
+  "tests": [
+    {
+      "evidence": {
+        "productionGateRejected": true
+      },
+      "executed": true,
+      "id": "MVP-SAVE-CRASH-GATE",
+      "name": "Crash injection cannot be configured outside explicit test mode",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "activeWorkpieceId": "save_old_artifact",
+          "day": 3,
+          "ethics": 55,
+          "generation": "OLD",
+          "inventory": [
+            {
+              "artifactSpecId": "artifact_001",
+              "seed": 12001,
+              "uniqueId": "save_old_artifact"
+            }
+          ],
+          "language": "en",
+          "marketMechanical": 13,
+          "mechanicalMastery": 2,
+          "money": 1111,
+          "ownedUpgrades": [
+            "upgrade_01"
+          ],
+          "profit": 1001,
+          "reputation": 17,
+          "selectedTool": "soft_brush",
+          "transactions": [
+            {
+              "amount": 101,
+              "id": "generation_OLD_transaction"
+            }
+          ]
+        },
+        "avoidedMemoryFallback": true,
+        "completeKnownGeneration": true,
+        "exactGeneration": true,
+        "expectedGeneration": "OLD",
+        "lastLoadError": "",
+        "lastLoadRecovered": false,
+        "layoutBeforeLoad": {
+          "backup": {
+            "exists": false,
+            "generation": "",
+            "valid": false,
+            "validation": "EMPTY_OR_INVALID_JSON"
+          },
+          "current": {
+            "exists": true,
+            "generation": "OLD",
+            "valid": true,
+            "validation": "OK"
+          },
+          "temp": {
+            "exists": true,
+            "generation": "",
+            "valid": false,
+            "validation": "INVALID_MONEY"
+          }
+        },
+        "loadReturned": true,
+        "point": "A_TMP_WRITE_INTERRUPTION",
+        "saveError": "TEST_CRASH_INJECTION:A_TMP_WRITE_INTERRUPTION",
+        "saveReturned": false
+      },
+      "executed": true,
+      "id": "MVP-SAVE-CRASH-A",
+      "name": "A_TMP_WRITE_INTERRUPTION recovers exactly one complete valid generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "activeWorkpieceId": "save_old_artifact",
+          "day": 3,
+          "ethics": 55,
+          "generation": "OLD",
+          "inventory": [
+            {
+              "artifactSpecId": "artifact_001",
+              "seed": 12001,
+              "uniqueId": "save_old_artifact"
+            }
+          ],
+          "language": "en",
+          "marketMechanical": 13,
+          "mechanicalMastery": 2,
+          "money": 1111,
+          "ownedUpgrades": [
+            "upgrade_01"
+          ],
+          "profit": 1001,
+          "reputation": 17,
+          "selectedTool": "soft_brush",
+          "transactions": [
+            {
+              "amount": 101,
+              "id": "generation_OLD_transaction"
+            }
+          ]
+        },
+        "avoidedMemoryFallback": true,
+        "completeKnownGeneration": true,
+        "exactGeneration": true,
+        "expectedGeneration": "OLD",
+        "lastLoadError": "",
+        "lastLoadRecovered": false,
+        "layoutBeforeLoad": {
+          "backup": {
+            "exists": false,
+            "generation": "",
+            "valid": false,
+            "validation": "EMPTY_OR_INVALID_JSON"
+          },
+          "current": {
+            "exists": true,
+            "generation": "OLD",
+            "valid": true,
+            "validation": "OK"
+          },
+          "temp": {
+            "exists": true,
+            "generation": "NEW",
+            "valid": true,
+            "validation": "OK"
+          }
+        },
+        "loadReturned": true,
+        "point": "B_TMP_COMPLETE_BEFORE_VALIDATION",
+        "saveError": "TEST_CRASH_INJECTION:B_TMP_COMPLETE_BEFORE_VALIDATION",
+        "saveReturned": false
+      },
+      "executed": true,
+      "id": "MVP-SAVE-CRASH-B",
+      "name": "B_TMP_COMPLETE_BEFORE_VALIDATION recovers exactly one complete valid generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "activeWorkpieceId": "save_old_artifact",
+          "day": 3,
+          "ethics": 55,
+          "generation": "OLD",
+          "inventory": [
+            {
+              "artifactSpecId": "artifact_001",
+              "seed": 12001,
+              "uniqueId": "save_old_artifact"
+            }
+          ],
+          "language": "en",
+          "marketMechanical": 13,
+          "mechanicalMastery": 2,
+          "money": 1111,
+          "ownedUpgrades": [
+            "upgrade_01"
+          ],
+          "profit": 1001,
+          "reputation": 17,
+          "selectedTool": "soft_brush",
+          "transactions": [
+            {
+              "amount": 101,
+              "id": "generation_OLD_transaction"
+            }
+          ]
+        },
+        "avoidedMemoryFallback": true,
+        "completeKnownGeneration": true,
+        "exactGeneration": true,
+        "expectedGeneration": "OLD",
+        "lastLoadError": "",
+        "lastLoadRecovered": false,
+        "layoutBeforeLoad": {
+          "backup": {
+            "exists": false,
+            "generation": "",
+            "valid": false,
+            "validation": "EMPTY_OR_INVALID_JSON"
+          },
+          "current": {
+            "exists": true,
+            "generation": "OLD",
+            "valid": true,
+            "validation": "OK"
+          },
+          "temp": {
+            "exists": true,
+            "generation": "NEW",
+            "valid": true,
+            "validation": "OK"
+          }
+        },
+        "loadReturned": true,
+        "point": "C_TMP_VALIDATED_BEFORE_BACKUP",
+        "saveError": "TEST_CRASH_INJECTION:C_TMP_VALIDATED_BEFORE_BACKUP",
+        "saveReturned": false
+      },
+      "executed": true,
+      "id": "MVP-SAVE-CRASH-C",
+      "name": "C_TMP_VALIDATED_BEFORE_BACKUP recovers exactly one complete valid generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "activeWorkpieceId": "save_old_artifact",
+          "day": 3,
+          "ethics": 55,
+          "generation": "OLD",
+          "inventory": [
+            {
+              "artifactSpecId": "artifact_001",
+              "seed": 12001,
+              "uniqueId": "save_old_artifact"
+            }
+          ],
+          "language": "en",
+          "marketMechanical": 13,
+          "mechanicalMastery": 2,
+          "money": 1111,
+          "ownedUpgrades": [
+            "upgrade_01"
+          ],
+          "profit": 1001,
+          "reputation": 17,
+          "selectedTool": "soft_brush",
+          "transactions": [
+            {
+              "amount": 101,
+              "id": "generation_OLD_transaction"
+            }
+          ]
+        },
+        "avoidedMemoryFallback": true,
+        "completeKnownGeneration": true,
+        "exactGeneration": true,
+        "expectedGeneration": "OLD",
+        "lastLoadError": "",
+        "lastLoadRecovered": true,
+        "layoutBeforeLoad": {
+          "backup": {
+            "exists": true,
+            "generation": "OLD",
+            "valid": true,
+            "validation": "OK"
+          },
+          "current": {
+            "exists": false,
+            "generation": "",
+            "valid": false,
+            "validation": "EMPTY_OR_INVALID_JSON"
+          },
+          "temp": {
+            "exists": true,
+            "generation": "NEW",
+            "valid": true,
+            "validation": "OK"
+          }
+        },
+        "loadReturned": true,
+        "point": "D_AFTER_BACKUP_BEFORE_PROMOTE",
+        "saveError": "TEST_CRASH_INJECTION:D_AFTER_BACKUP_BEFORE_PROMOTE",
+        "saveReturned": false
+      },
+      "executed": true,
+      "id": "MVP-SAVE-CRASH-D",
+      "name": "D_AFTER_BACKUP_BEFORE_PROMOTE recovers exactly one complete valid generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "activeWorkpieceId": "save_new_artifact",
+          "day": 6,
+          "ethics": 60,
+          "generation": "NEW",
+          "inventory": [
+            {
+              "artifactSpecId": "artifact_002",
+              "seed": 12002,
+              "uniqueId": "save_new_artifact"
+            }
+          ],
+          "language": "ko",
+          "marketMechanical": 26,
+          "mechanicalMastery": 4,
+          "money": 1222,
+          "ownedUpgrades": [
+            "upgrade_02"
+          ],
+          "profit": 2002,
+          "reputation": 24,
+          "selectedTool": "uv_light",
+          "transactions": [
+            {
+              "amount": 202,
+              "id": "generation_NEW_transaction"
+            }
+          ]
+        },
+        "avoidedMemoryFallback": true,
+        "completeKnownGeneration": true,
+        "exactGeneration": true,
+        "expectedGeneration": "NEW",
+        "lastLoadError": "",
+        "lastLoadRecovered": false,
+        "layoutBeforeLoad": {
+          "backup": {
+            "exists": true,
+            "generation": "OLD",
+            "valid": true,
+            "validation": "OK"
+          },
+          "current": {
+            "exists": true,
+            "generation": "NEW",
+            "valid": true,
+            "validation": "OK"
+          },
+          "temp": {
+            "exists": false,
+            "generation": "",
+            "valid": false,
+            "validation": "EMPTY_OR_INVALID_JSON"
+          }
+        },
+        "loadReturned": true,
+        "point": "E_AFTER_PROMOTE_BEFORE_FINAL_VALIDATION",
+        "saveError": "TEST_CRASH_INJECTION:E_AFTER_PROMOTE_BEFORE_FINAL_VALIDATION",
+        "saveReturned": false
+      },
+      "executed": true,
+      "id": "MVP-SAVE-CRASH-E",
+      "name": "E_AFTER_PROMOTE_BEFORE_FINAL_VALIDATION recovers exactly one complete valid generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "actual": {
+          "activeWorkpieceId": "save_old_artifact",
+          "day": 3,
+          "ethics": 55,
+          "generation": "OLD",
+          "inventory": [
+            {
+              "artifactSpecId": "artifact_001",
+              "seed": 12001,
+              "uniqueId": "save_old_artifact"
+            }
+          ],
+          "language": "en",
+          "marketMechanical": 13,
+          "mechanicalMastery": 2,
+          "money": 1111,
+          "ownedUpgrades": [
+            "upgrade_01"
+          ],
+          "profit": 1001,
+          "reputation": 17,
+          "selectedTool": "soft_brush",
+          "transactions": [
+            {
+              "amount": 101,
+              "id": "generation_OLD_transaction"
+            }
+          ]
+        },
+        "avoidedMemoryFallback": true,
+        "completeKnownGeneration": true,
+        "exactGeneration": true,
+        "expectedGeneration": "OLD",
+        "lastLoadError": "",
+        "lastLoadRecovered": true,
+        "layoutBeforeLoad": {
+          "backup": {
+            "exists": true,
+            "generation": "OLD",
+            "valid": true,
+            "validation": "OK"
+          },
+          "current": {
+            "exists": true,
+            "generation": "",
+            "valid": false,
+            "validation": "EMPTY_OR_INVALID_JSON"
+          },
+          "temp": {
+            "exists": false,
+            "generation": "",
+            "valid": false,
+            "validation": "EMPTY_OR_INVALID_JSON"
+          }
+        },
+        "loadReturned": true,
+        "point": "F_CORRUPT_PROMOTED_CURRENT",
+        "saveError": "TEST_CRASH_INJECTION:F_CORRUPT_PROMOTED_CURRENT",
+        "saveReturned": false
+      },
+      "executed": true,
+      "id": "MVP-SAVE-CRASH-F",
+      "name": "F_CORRUPT_PROMOTED_CURRENT recovers exactly one complete valid generation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "backupWritten": true,
+        "currentWritten": true,
+        "lastLoadError": "NO_VALID_SAVE:user://r3_save_crash_both_invalid.json=EMPTY_OR_INVALID_JSON,user://r3_save_crash_both_invalid.json.bak=INVALID_VERSION_TYPE",
+        "lastLoadRecovered": false,
+        "loadReturned": false,
+        "stateUnchanged": true
+      },
+      "executed": true,
+      "id": "MVP-SAVE-NO-SILENT-NEW-GAME",
+      "name": "Both invalid authoritative slots fail explicitly with zero in-memory mutation",
+      "passed": true
+    }
+  ]
+}

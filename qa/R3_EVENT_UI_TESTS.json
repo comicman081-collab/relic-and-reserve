@@ -1,0 +1,65 @@
+{
+  "executed": 3,
+  "failed": 0,
+  "passed": 3,
+  "skipped": 0,
+  "suite": "R3 Event UI",
+  "tests": [
+    {
+      "evidence": {
+        "events": 25,
+        "failures": [],
+        "localizedCopyEntries": 25,
+        "percentFormats": {
+          "event_09": "+12%",
+          "event_11": "+6%",
+          "event_12": "+10%",
+          "event_14": "+5%",
+          "event_16": "+8%",
+          "event_17": "+10%",
+          "event_19": "+4%",
+          "event_25": "+8%"
+        }
+      },
+      "executed": true,
+      "id": "EVENT-UI-01",
+      "name": "All 25 events have compact KO/EN title, description, friendly effect label and type-correct value formatting",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "EVENT-UI-02",
+      "name": "REQUEST and RESOLVE render friendly Korean copy for all 25 events with zero raw snake_case tokens",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "damage": [
+          1,
+          "+1"
+        ],
+        "money": [
+          120,
+          "¤ +120"
+        ],
+        "percent": [
+          0.12,
+          "+12%"
+        ],
+        "slots": [
+          -1,
+          "-1"
+        ],
+        "trust": [
+          2,
+          "+2"
+        ]
+      },
+      "executed": true,
+      "id": "EVENT-UI-03",
+      "name": "Representative authoritative event applications match currency, percent, slot, trust and count displays",
+      "passed": true
+    }
+  ]
+}

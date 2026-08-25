@@ -1,0 +1,472 @@
+{
+  "executed": 18,
+  "failed": 0,
+  "passed": 18,
+  "skipped": 0,
+  "suite": "R3 Portrait Dialogue UI",
+  "tests": [
+    {
+      "evidence": {
+        "characters": [
+          "auctioneer",
+          "shopkeeper",
+          "bidder_01",
+          "bidder_02",
+          "bidder_03",
+          "bidder_04",
+          "bidder_05",
+          "bidder_06",
+          "bidder_07",
+          "bidder_08",
+          "bidder_09",
+          "bidder_10",
+          "bidder_11",
+          "bidder_12",
+          "event_courier",
+          "event_patron",
+          "event_curator",
+          "event_reporter"
+        ],
+        "loadable": true,
+        "profiles": 18
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-01",
+      "name": "CharacterProfile catalog exposes exactly 18 unique loadable base bust portraits",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cueCount": 15,
+        "states": [
+          "INTRO",
+          "CALL",
+          "SOLD",
+          "NO_SALE",
+          "WATCH",
+          "BID",
+          "DROPOUT",
+          "WON",
+          "WELCOME",
+          "OFFER",
+          "PURCHASE_OK",
+          "PURCHASE_FAIL",
+          "REQUEST",
+          "REACTION_POS",
+          "REACTION_NEG"
+        ],
+        "valid": true
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-02",
+      "name": "CharacterCue normalizes all 15 semantic states to three expressions with a 44-character dialogue hard cap",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "accents": [
+          "d9a85fff",
+          "72b6a5ff",
+          "d47a91ff"
+        ],
+        "bands": [
+          "EARLY",
+          "MID",
+          "LATE"
+        ],
+        "identityFixed": true
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-03",
+      "name": "EARLY, MID, and LATE stage bands vary deterministic accent/accessory metadata without changing identity",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "buttons": 10,
+        "enabled": 2,
+        "first": "스테이지 1 · 클리어\n권장 55 · BEST 성장 중 0",
+        "second": "스테이지 2 · 선택 가능\n권장 56 · 첫 도전",
+        "tenth": "스테이지 10 · 잠김\n권장 64 · 첫 도전",
+        "tooltipsValid": true
+      },
+      "executed": true,
+      "id": "MVP-STAGE-UI-01",
+      "name": "New Game stage selector shows ten replay/lock cards with recommendation, first-try or localized best, and an advisory-only goal tooltip",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseButtons": [
+          "Case_leave_patina",
+          "Case_estate_compass",
+          "Case_pawn_watch"
+        ],
+        "cases": [
+          "0 / 3"
+        ],
+        "enabled": [
+          "Case_leave_patina"
+        ],
+        "expectedCases": [
+          "leave_patina",
+          "estate_compass",
+          "pawn_watch"
+        ],
+        "score": [
+          "현재 0 · 권장 56"
+        ],
+        "stage": 2,
+        "status": "RUNNING"
+      },
+      "executed": true,
+      "id": "MVP-STAGE-UI-02",
+      "name": "Selecting Stage 2 starts its checkpoint and shows only current/recommended score and scoped case progress without grade or advice clutter",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "defaultDeclaredEnglish": true,
+        "loadedLanguage": "ko",
+        "payloadLanguage": "ko",
+        "reloaded": true,
+        "stage": 2
+      },
+      "executed": true,
+      "id": "MVP-STAGE-UI-03",
+      "name": "Korean locale survives Stage 2 new-game reset and save/load while a fresh installation keeps English as its declared default",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "above": {
+          "advice": "재도전 팁 · 독립 근거를 더 인용해 보세요",
+          "axes": 3,
+          "copy": "캠페인 — 지역 경매 순회\nDAY 1   ¤ 1335   REP 18   GRADE 1\n스테이지 2\n세월의 흔적과 약속\n성과\n현재 80 · 권장 56\n사건\n3 / 3\n박물관 신뢰 4 • 인맥 0 • 숙련도 6 • 온전성 50\nSTAGE CLEAR\n전문가 · 점수 80\n권장 목표 달성\n다음 스테이지 해금\n신기록 · BEST 80\n근거\n0\n보완 필요\n보존\n—\n기록 없음\n판매\n—\n기록 없음\n판단 기록 · 조사 기록 없음\n재도전 팁 · 독립 근거를 더 인용해 보세요\n\n다음 스테이지 또는 재도전\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어\n",
+          "result": {
+            "best": 80.0,
+            "code": "OK",
+            "highestUnlockedStage": 3,
+            "ok": true,
+            "performance": {
+              "advice": "세월의 흔적과 해로운 손상을 구분해 보세요.",
+              "advisoryOnly": true,
+              "best": 80.0,
+              "completionLabel": "세월의 흔적 묶음 사건을 모두 완료하세요.",
+              "completionMet": true,
+              "completionProgress": 1.0,
+              "current": 80.0,
+              "failureOrSuccess": "성과 목표를 달성했습니다.",
+              "goalLabel": "주장을 검증하며 가치를 보존하세요.",
+              "grade": "전문가",
+              "hasNextStage": true,
+              "isNewBest": true,
+              "metTarget": true,
+              "nextStageUnlocked": true,
+              "progress": 1.0,
+              "stage": 2,
+              "target": 56.0
+            },
+            "stage": 2
+          }
+        },
+        "below": {
+          "advice": "재도전 팁 · 독립 근거를 더 인용해 보세요",
+          "axes": 3,
+          "copy": "캠페인 — 지역 경매 순회\nDAY 1   ¤ 1335   REP 18   GRADE 1\n스테이지 2\n세월의 흔적과 약속\n성과\n현재 40 · 권장 56\n사건\n3 / 3\n박물관 신뢰 4 • 인맥 0 • 숙련도 6 • 온전성 50\nSTAGE CLEAR\n성장 중 · 점수 40\n권장 목표까지 16점\n다음 스테이지 해금\n신기록 · BEST 40\n근거\n0\n보완 필요\n보존\n—\n기록 없음\n판매\n—\n기록 없음\n판단 기록 · 조사 기록 없음\n재도전 팁 · 독립 근거를 더 인용해 보세요\n\n다음 스테이지 또는 재도전\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어\n",
+          "result": {
+            "best": 40.0,
+            "code": "OK",
+            "highestUnlockedStage": 3,
+            "ok": true,
+            "performance": {
+              "advice": "세월의 흔적과 해로운 손상을 구분해 보세요.",
+              "advisoryOnly": true,
+              "best": 40.0,
+              "completionLabel": "세월의 흔적 묶음 사건을 모두 완료하세요.",
+              "completionMet": true,
+              "completionProgress": 1.0,
+              "current": 40.0,
+              "failureOrSuccess": "목표에는 못 미쳤지만 진행 해금은 유지됩니다.",
+              "goalLabel": "주장을 검증하며 가치를 보존하세요.",
+              "grade": "성장 중",
+              "hasNextStage": true,
+              "isNewBest": true,
+              "metTarget": false,
+              "nextStageUnlocked": true,
+              "progress": 0.714285714285714,
+              "stage": 2,
+              "target": 56.0
+            },
+            "stage": 2
+          }
+        }
+      },
+      "executed": true,
+      "id": "MVP-STAGE-UI-06",
+      "name": "Cleared-stage card always leads with STAGE CLEAR, preserves advisory unlock facts, and adds exactly three replay axes plus one actionable one-line tip",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "ack": {
+          "code": "OK",
+          "ok": true,
+          "stage": 2
+        },
+        "act": "GRAND_RESERVE",
+        "cases": [
+          "master_camera",
+          "master_mechanism"
+        ],
+        "reserveButton": true,
+        "route": {
+          "code": "GRAND_RESERVE_READY",
+          "ok": true,
+          "stage": 10
+        },
+        "showcaseLots": 3,
+        "stage": 10
+      },
+      "executed": true,
+      "id": "MVP-STAGE-UI-04",
+      "name": "Stage 10 starts with scoped final cases and showcase lots, then its completion hook opens the existing Grand Reserve UI",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": "final_selection",
+        "before": "final_selection",
+        "ending": "",
+        "status": "그랜드 리저브 요구 조건이 충족되지 않았습니다. · 초대가 필요합니다"
+      },
+      "executed": true,
+      "id": "MVP-STAGE-UI-05",
+      "name": "Failed Grand Reserve preflight stays on the current selection screen and shows a friendly localized error",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "dialogueCaps": true,
+        "facts": [
+          "Lattice Pocket Watch F · ¤564"
+        ],
+        "offerStates": [
+          "오늘의 제안"
+        ],
+        "panels": 1,
+        "portrait": 1,
+        "portraitLoaded": true
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-04",
+      "name": "Market uses a left shopkeeper portrait and short OFFER dialogue beside the lot list with price retained",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "facts": [
+          "구매 불가 · Lattice Pocket Watch F"
+        ],
+        "negativeOverlays": 1,
+        "states": [
+          "구매 불가"
+        ]
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-05",
+      "name": "Failed purchase keeps a visible PURCHASE_FAIL label, unavailable fact, and negative expression overlay",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "aggregateReason": "RESERVE_TOO_HIGH",
+        "dialogues": [
+          "이번에는 물러납니다.",
+          "예약가에 닿지 못해 유찰입니다."
+        ],
+        "faceCentered": true,
+        "facts": [
+          "예약가 미달",
+          "결과 기록 대기"
+        ],
+        "names": [
+          "인테리어 장식가",
+          "경매 진행원"
+        ],
+        "negativeFaceOverlays": 1,
+        "panels": 2,
+        "primaryAction": true,
+        "primaryState": true,
+        "primaryText": "최저가 미달 / 유찰 · 공개 입찰 없음",
+        "reasonCodes": [
+          "RESERVE_TOO_HIGH",
+          "PROVENANCE_UNCERTAIN"
+        ],
+        "reasonLabels": [
+          "예약가 높음"
+        ],
+        "result": [
+          "최저가 미달 / 유찰  ·  수수료 ¤0  ·  정산액 ¤0"
+        ],
+        "states": [
+          "입찰 포기",
+          "유찰"
+        ]
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-06",
+      "name": "A no-sale auction gives the authoritative result/action primary hierarchy, one aggregate reason, and negative character reactions",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "englishNames": [
+          "Design Scholar",
+          "Clockmaker",
+          "Private Collector",
+          "Professional Dealer"
+        ],
+        "englishRecentBidCount": 4,
+        "failures": [],
+        "koreanNames": [
+          "디자인 연구자",
+          "시계공",
+          "개인 수집가",
+          "전문 딜러"
+        ],
+        "koreanRecentBidCount": 4
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-10",
+      "name": "Recent bid rows derive Korean and English bidder names from CharacterProfile displayName instead of the English-only auction payload",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "noSaleAggregateReason": "RESERVE_TOO_HIGH",
+        "noSaleCodes": [
+          "RESERVE_TOO_HIGH",
+          "PROVENANCE_UNCERTAIN"
+        ],
+        "noSaleKorean": [
+          "예약가 높음"
+        ],
+        "soldAggregateReason": "PROVENANCE_STRONG",
+        "soldCodes": [
+          "PROVENANCE_STRONG",
+          "CONDITION_GOOD"
+        ],
+        "soldEnglish": [
+          "Provenance strong"
+        ],
+        "soldKorean": [
+          "출처 근거 충분"
+        ]
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-12",
+      "name": "Sold and no-sale terminal results render exactly one localized chip for the first aggregate public reason without raw or hidden tokens",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "continue": true,
+        "eventId": "event_22",
+        "facts": [
+          "시장 동향 · +10"
+        ],
+        "reactionStates": [
+          "좋은 결과"
+        ],
+        "requestButton": true,
+        "requestPanels": 1
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-07",
+      "name": "Daily event activation shows mapped NPC REQUEST, then a labelled positive/negative reaction and market choice",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "centered": true,
+        "drawingMode": "PORTRAIT_FACE_GEOMETRY",
+        "faceAnchor": [
+          138.15625,
+          125.375
+        ],
+        "faceRect": [
+          89.296875,
+          54.390625,
+          99.5625,
+          127.21875
+        ],
+        "facts": [
+          "보관 손상 · +1"
+        ],
+        "geometry": {
+          "browShiftSvg": 5.0,
+          "changedAxes": [
+            "brow",
+            "eye",
+            "mouth"
+          ],
+          "eyeHeightShiftSvg": -3.0,
+          "mouthCornerShiftSvg": 5.0,
+          "svgToReferenceScale": 0.78125
+        },
+        "mapping": {
+          "characterId": "event_courier",
+          "effectType": "storage_damage",
+          "eventId": "event_08",
+          "familyId": "DELIVERY_STORAGE",
+          "outcomePolarity": "NEGATIVE",
+          "reactionDialogueKey": "event.event_08.result",
+          "requestDialogueKey": "event.event_08.request"
+        },
+        "moodTooltip": "배송 문제",
+        "overlaySize": [
+          280.0,
+          295.0
+        ],
+        "states": [
+          "주의 결과"
+        ]
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-08",
+      "name": "Authoritative event polarity keeps positive-count storage damage negative; overlay consumes three-axis expression geometry and uses a state-label tooltip",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "dataDriven": true,
+        "events": 25,
+        "failures": [],
+        "fractionalEvents": [
+          "event_09",
+          "event_11",
+          "event_12",
+          "event_14",
+          "event_16",
+          "event_17",
+          "event_19",
+          "event_25"
+        ]
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-11",
+      "name": "All 25 event screens use data-driven Korean public copy and friendly effect facts; all eight fractional modifiers render as nonzero percentages",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "noIdRendererBranch": true
+      },
+      "executed": true,
+      "id": "MVP-PORTRAIT-UI-09",
+      "name": "PortraitDialoguePanel renderer is profile-driven with no character-id rendering branch",
+      "passed": true
+    }
+  ]
+}

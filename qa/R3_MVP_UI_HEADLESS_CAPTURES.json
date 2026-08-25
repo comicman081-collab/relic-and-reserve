@@ -1,0 +1,90 @@
+{
+  "captureMode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+  "captures": [
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "01_illustrated_case_dossier_ko",
+      "note": "16개 사건 픽토그램, 접힌 단서 카드, 위험 선행 확인, 가설·보고서 요약",
+      "path": "res://qa/mvp_ui_headless/01_illustrated_case_dossier_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "02_portrait_market_ko",
+      "note": "상점 주인 상반신 초상과 제안/가격 라벨, 우측 유물 목록",
+      "path": "res://qa/mvp_ui_headless/02_portrait_market_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "03_portrait_auction_ko",
+      "note": "좌측 경매 진행원, 중앙 가격·유물, 우측 낙찰자와 공개 판단 근거 칩",
+      "path": "res://qa/mvp_ui_headless/03_portrait_auction_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "04_portrait_event_ko",
+      "note": "이벤트 인물 초상, 부정 결과 라벨, 우측 선택 영역",
+      "path": "res://qa/mvp_ui_headless/04_portrait_event_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "05_stage_select_ko",
+      "note": "1~10 스테이지, 재도전/잠금, 권장 목표와 BEST/첫 도전 요약",
+      "path": "res://qa/mvp_ui_headless/05_stage_select_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "06_portrait_expression_triplet_runtime",
+      "note": "220×250 실제 얼굴 영역에 적용된 NEUTRAL/POSITIVE/NEGATIVE 3축 런타임 오버레이",
+      "path": "res://qa/mvp_ui_headless/06_portrait_expression_triplet_runtime.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "07_portrait_auction_no_sale_reasons_ko",
+      "note": "유찰 결과, 부정 표정, 예약가·출처 판단 근거 칩",
+      "path": "res://qa/mvp_ui_headless/07_portrait_auction_no_sale_reasons_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "08_stage_clear_summary_ko",
+      "note": "STAGE CLEAR, 압축 결과 메타, 근거·보존·판매 3축, 한 줄 재도전 팁",
+      "path": "res://qa/mvp_ui_headless/08_stage_clear_summary_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "09_listing_price_step_ko",
+      "note": "출품 1단계: FAST/BALANCED/HIGH 고정 가격 카드 3개와 공개 재료 배지",
+      "path": "res://qa/mvp_ui_headless/09_listing_price_step_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "10_listing_disclosure_step_ko",
+      "note": "출품 2단계: 공개 근거 배지 1개, 주장 강도·보정 위험 카드 3개, 단일 확정 행동",
+      "path": "res://qa/mvp_ui_headless/10_listing_disclosure_step_ko.png",
+      "resolution": "1280x720"
+    },
+    {
+      "mode": "HEADLESS_SVG_COMPOSITE_PLUS_LOCAL_FONT",
+      "name": "11_tutorial_guidance_rail_ko",
+      "note": "단일 1/6 안내 레일, 한 줄 지시문, 실제 조사 버튼 강조, 내비게이션 비침범",
+      "path": "res://qa/mvp_ui_headless/11_tutorial_guidance_rail_ko.png",
+      "resolution": "1280x720"
+    }
+  ],
+  "count": 11,
+  "heldArtifactsCreated": false,
+  "passed": true,
+  "reason": "Godot headless uses the dummy renderer; source SVG assets and runtime data are rasterized offscreen instead.",
+  "runtimeFramebufferAvailable": false,
+  "suite": "R3 MVP UI Headless Captures",
+  "fontRasterizer": "C:\\Windows\\Fonts\\malgun.ttf",
+  "textLayerVerified": true
+}

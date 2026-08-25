@@ -1,0 +1,407 @@
+{
+  "executed": 4,
+  "failed": 0,
+  "passed": 4,
+  "skipped": 0,
+  "suite": "R3 Tutorial Guidance UI",
+  "tests": [
+    {
+      "evidence": {
+        "accented": true,
+        "counter": "안내 1/6",
+        "dossierLayout": {
+          "horizontalScroll": 0,
+          "ok": true,
+          "widths": {
+            "emptyCitations": 390.0,
+            "prompt": 1168.0,
+            "risk": 373.0,
+            "rows": 1188.0
+          }
+        },
+        "focus": true,
+        "instruction": "위험을 보고 단서 하나를 기록하세요.",
+        "layoutClear": true,
+        "railHeight": 57.0,
+        "rails": 1,
+        "rawHidden": true,
+        "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
+        "targetLayout": {
+          "accented": true,
+          "ok": true,
+          "separated": true,
+          "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
+          "targetRect": [
+            810.0,
+            503.0,
+            410.0,
+            48.0
+          ],
+          "withinContent": true
+        },
+        "title": "단서 하나 조사"
+      },
+      "executed": true,
+      "id": "MVP-TUTORIAL-UI-01",
+      "name": "Stage 1 renders one compact illustrated Korean guidance rail and accents the enabled keyboard target without exposing route identifiers or overlapping navigation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "allLayoutsClear": true,
+        "completed": [
+          "INVESTIGATE",
+          "CITE",
+          "REPORT",
+          "REPAIR",
+          "LIST"
+        ],
+        "discovery": {
+          "appliedRiskPenalty": 3.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.prologue.artifact.backplate_screws",
+          "ok": true,
+          "riskLevel": "HIGH",
+          "sourceId": "physical_fastener_evidence"
+        },
+        "layouts": {
+          "step1": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
+            "targetRect": [
+              810.0,
+              503.0,
+              410.0,
+              48.0
+            ],
+            "withinContent": true
+          },
+          "step2": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "CaseCitation_src_prologue_artifact_backplate_screws",
+            "targetRect": [
+              810.0,
+              481.0,
+              410.0,
+              46.0
+            ],
+            "withinContent": true
+          },
+          "step3_disabled": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "CaseHypothesis_hyp_untouched_original",
+            "targetRect": [
+              42.0,
+              361.0,
+              375.0,
+              58.0
+            ],
+            "withinContent": true
+          },
+          "step3_ready": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "ResolveCaseReport",
+            "targetRect": [
+              52.0,
+              540.0,
+              1168.0,
+              52.0
+            ],
+            "withinContent": true
+          },
+          "step4_case": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "CaseContinue",
+            "targetRect": [
+              1018.0,
+              370.0,
+              210.0,
+              79.0
+            ],
+            "withinContent": true
+          },
+          "step4_dossier_route": {
+            "control": "OpenCaseDossier",
+            "ok": true,
+            "rect": [
+              1068.0,
+              299.0,
+              170.0,
+              42.0
+            ],
+            "separated": true,
+            "withinContent": true
+          },
+          "step4_inspection_columns": {
+            "clueLabels": [
+              "재질",
+              "일련번호",
+              "제작 방식",
+              "소장 이력",
+              "수리 흔적"
+            ],
+            "compactClues": true,
+            "controlsRect": [
+              768.0,
+              157.0,
+              470.0,
+              449.0
+            ],
+            "gap": 24.0,
+            "infoRect": [
+              42.0,
+              157.0,
+              702.0,
+              449.0
+            ],
+            "ok": true
+          },
+          "step4_inventory": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "InspectLot_0",
+            "targetRect": [
+              958.0,
+              524.0,
+              270.0,
+              68.0
+            ],
+            "withinContent": true
+          },
+          "step4_tool_needed": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "RepairTool_precision_screwdriver",
+            "targetRect": [
+              768.0,
+              457.0,
+              220.0,
+              58.0
+            ],
+            "withinContent": true
+          },
+          "step4_tool_ready": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "Tool_repair",
+            "targetRect": [
+              768.0,
+              564.0,
+              120.0,
+              42.0
+            ],
+            "withinContent": true
+          },
+          "step5_authentication": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "AcceptHypothesisButton",
+            "targetRect": [
+              624.0,
+              431.0,
+              614.0,
+              48.0
+            ],
+            "withinContent": true
+          },
+          "step5_confirm": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "ListingConfirmButton",
+            "targetRect": [
+              300.0,
+              550.0,
+              938.0,
+              52.0
+            ],
+            "withinContent": true
+          },
+          "step5_disclosure": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "ListingDisclosure_CERTAIN",
+            "targetRect": [
+              42.0,
+              352.0,
+              370.0,
+              82.0
+            ],
+            "withinContent": true
+          },
+          "step5_inspection": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "AuthenticateButton",
+            "targetRect": [
+              768.0,
+              299.0,
+              292.0,
+              42.0
+            ],
+            "withinContent": true
+          },
+          "step5_price": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "ListingPrice_FAST",
+            "targetRect": [
+              42.0,
+              368.0,
+              370.0,
+              104.0
+            ],
+            "withinContent": true
+          },
+          "step6": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "AuctionCueNext",
+            "targetRect": [
+              52.0,
+              267.0,
+              672.0,
+              42.0
+            ],
+            "withinContent": true
+          },
+          "step6_final": {
+            "accented": true,
+            "ok": true,
+            "separated": true,
+            "target": "HammerButton",
+            "targetRect": [
+              52.0,
+              267.0,
+              672.0,
+              42.0
+            ],
+            "withinContent": true
+          }
+        },
+        "repair": "Mechanism repaired.",
+        "requiredTools": [
+          "precision_screwdriver"
+        ],
+        "resolved": {
+          "citedEvidenceIds": [
+            "src.prologue.artifact.backplate_screws"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.period_repair",
+          "independentSourceCount": 1,
+          "netScore": 2,
+          "ok": true,
+          "outcome": "reviewed_with_mentor",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 2
+        },
+        "targets": {
+          "step1": "CaseEvidence_src_prologue_artifact_backplate_screws",
+          "step2": "CaseCitation_src_prologue_artifact_backplate_screws",
+          "step3_disabled": "CaseHypothesis_hyp_untouched_original",
+          "step3_ready": "ResolveCaseReport",
+          "step4_case": "CaseContinue",
+          "step4_inventory": "InspectLot_0",
+          "step4_tool_needed": "RepairTool_precision_screwdriver",
+          "step4_tool_ready": "Tool_repair",
+          "step5_authentication": "AcceptHypothesisButton",
+          "step5_confirm": "ListingConfirmButton",
+          "step5_disclosure": "ListingDisclosure_CERTAIN",
+          "step5_inspection": "AuthenticateButton",
+          "step5_price": "ListingPrice_FAST",
+          "step6": "AuctionCueNext",
+          "step6_final": "HammerButton"
+        }
+      },
+      "executed": true,
+      "id": "MVP-TUTORIAL-UI-02",
+      "name": "All six authored routes resolve to the nearest visible enabled control; repair, authentication and dossier actions remain above navigation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "completedAfterReplay": [],
+        "hiddenAfterSix": true,
+        "noSkipNext": true,
+        "replayButtons": 1,
+        "replayState": {
+          "icon": "clue_generic",
+          "step": 1,
+          "target": "CaseEvidence_*",
+          "targets": [
+            "CaseEvidence_*",
+            "CaseEvidenceCard_*"
+          ],
+          "text": "위험을 보고 단서 하나를 기록하세요.",
+          "title": "단서 하나 조사",
+          "total": 6,
+          "visible": true
+        }
+      },
+      "executed": true,
+      "id": "MVP-TUTORIAL-UI-03",
+      "name": "Guidance hides after 6/6 and the single compact replay-help action restarts Stage 1 without skip or Next controls mutating authoritative progress",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "counter": "GUIDE 1/6",
+        "dossierLayout": {
+          "horizontalScroll": 0,
+          "ok": true,
+          "widths": {
+            "emptyCitations": 390.0,
+            "prompt": 1168.0,
+            "risk": 373.0,
+            "rows": 1188.0
+          }
+        },
+        "instruction": "Check the risk, then record one clue.",
+        "rails": 1,
+        "rawHidden": true,
+        "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
+        "targetLayout": {
+          "accented": true,
+          "ok": true,
+          "separated": true,
+          "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
+          "targetRect": [
+            810.0,
+            518.0,
+            410.0,
+            48.0
+          ],
+          "withinContent": true
+        },
+        "title": "Inspect one clue"
+      },
+      "executed": true,
+      "id": "MVP-TUTORIAL-UI-04",
+      "name": "Locale refresh rebuilds the same one-rail contract in English with one-line copy, focusable target, public tooltip and no internal route text",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "activeWorkpieceId": "inst_1_3976322376_0001",
+  "auctionHistory": [],
+  "campaign": {
+    "activeCaseId": "",
+    "caseOutcomes": {},
+    "collectorNetwork": 0,
+    "completedActs": {},
+    "completedCases": {},
+    "currentAct": "PROLOGUE",
+    "currentEnding": "",
+    "endingMetrics": {},
+    "endingUnlocked": [],
+    "epilogueSeen": false,
+    "ethics": 60,
+    "grandReserve": {
+      "completed": false,
+      "invited": false,
+      "results": [],
+      "score": {},
+      "selectedLotIds": []
+    },
+    "historicalIntegrity": 50,
+    "mastery": {
+      "DECORATIVE": 0,
+      "DOCUMENTARY": 0,
+      "ELECTRICAL": 0,
+      "MECHANICAL": 0,
+      "OPTICAL": 0,
+      "SCIENTIFIC": 0
+    },
+    "museumTrust": 0,
+    "postGame": false,
+    "relationships": {
+      "dorian_vale": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "elias_rowe": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "hana_mire": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "iris_bell": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "lena_falk": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "mara_venn": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "noah_stern": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "victor_hale": {
+        "relationship": 0,
+        "trust": 0
+      }
+    },
+    "schemaVersion": 1,
+    "storyFlags": {},
+    "unlockedModules": [
+      "basic_bench"
+    ],
+    "workshopGrade": 1
+  },
+  "currentEventId": "event_22",
+  "dailyModifiers": {},
+  "day": 2,
+  "eventHistory": [
+    {
+      "day": 2,
+      "eventId": "event_22",
+      "result": {
+        "appliedAmount": 10.0,
+        "effect": {
+          "amount": 10.0,
+          "target": "decorative_objects",
+          "type": "market_modifier"
+        },
+        "eventId": "event_22",
+        "name": "Local Fair"
+      }
+    }
+  ],
+  "gameVersion": "R3",
+  "instanceCounter": 1,
+  "inventory": [
+    {
+      "acquisitionPrice": 48,
+      "artifactSpecId": "artifact_001",
+      "authenticityTruth": "GENUINE_WITH_MODERN_REPAIR",
+      "caseId": "",
+      "caseResolved": false,
+      "cleanliness": 32.0,
+      "confidence": 0.62,
+      "damageInstances": [
+        "DUST",
+        "CRACK"
+      ],
+      "estimatedValue": 73,
+      "evidence": [
+        {
+          "clueType": "MATERIAL",
+          "confidenceWeight": 0.18,
+          "contradicts": [
+            "modern_material"
+          ],
+          "observation": "material composition recorded",
+          "supports": [
+            "material"
+          ]
+        },
+        {
+          "clueType": "SERIAL_PATTERN",
+          "confidenceWeight": 0.18,
+          "contradicts": [],
+          "observation": "fictional serial sequence narrows era",
+          "supports": [
+            "1900-1912"
+          ]
+        },
+        {
+          "clueType": "CONSTRUCTION_METHOD",
+          "confidenceWeight": 0.14,
+          "contradicts": [
+            "modern_method"
+          ],
+          "observation": "fastener and joinery class inspected",
+          "supports": [
+            "period_method"
+          ]
+        }
+      ],
+      "historicalIntegrity": 78.0,
+      "inspected": true,
+      "knownClues": [
+        "MATERIAL",
+        "CONSTRUCTION_METHOD",
+        "SERIAL_PATTERN"
+      ],
+      "listing": {
+        "confidence": 0.62,
+        "disclosure": "UNCERTAIN",
+        "reserve": 999999,
+        "starting": 1
+      },
+      "mechanicalCondition": 42.0,
+      "originalParts": 3,
+      "partStates": {
+        "body": true,
+        "mechanism": true,
+        "panel": false
+      },
+      "playerHypothesis": "GENUINE_WITH_MODERN_REPAIR",
+      "repaired": false,
+      "replacementParts": 2,
+      "restorationCost": 20.0,
+      "restorationQuality": 4.0,
+      "rotation": 0.0,
+      "seed": 3976322376,
+      "sold": false,
+      "storyArtifactId": "",
+      "structuralCondition": 70.0,
+      "surfaceCondition": 55.0,
+      "uniqueId": "inst_1_3976322376_0001",
+      "zoom": 1.0
+    }
+  ],
+  "language": "ko",
+  "marketRoster": [
+    {
+      "lotId": "day_2_lot_00",
+      "price": 582,
+      "seed": 311519287,
+      "sold": false,
+      "specId": "artifact_031"
+    },
+    {
+      "lotId": "day_2_lot_01",
+      "price": 1010,
+      "seed": 1616441514,
+      "sold": false,
+      "specId": "artifact_044"
+    },
+    {
+      "lotId": "day_2_lot_02",
+      "price": 472,
+      "seed": 1217225029,
+      "sold": false,
+      "specId": "artifact_057"
+    },
+    {
+      "lotId": "day_2_lot_03",
+      "price": 153,
+      "seed": 1970987273,
+      "sold": false,
+      "specId": "artifact_010"
+    },
+    {
+      "lotId": "day_2_lot_04",
+      "price": 341,
+      "seed": 2115685720,
+      "sold": false,
+      "specId": "artifact_023"
+    }
+  ],
+  "marketRosterDay": 2,
+  "marketState": {
+    "ceramics": -4,
+    "decorative_objects": 12,
+    "mechanical_instruments": 10,
+    "office_machines": 8,
+    "optical_devices": 6,
+    "scientific_instruments": 11,
+    "telephony": 7,
+    "vintage_audio": 14
+  },
+  "masterSeed": 481516,
+  "money": 9900,
+  "reputation": 12,
+  "rngState": 4009591132859505173,
+  "saveVersion": 3,
+  "selectedTool": "soft_brush",
+  "statistics": {
+    "authentication_attempts": 1,
+    "authentication_correct": 1,
+    "biggest_loss": 0,
+    "biggest_profit": 0,
+    "commissions": 0,
+    "days_operated": 2,
+    "discoveries": 4,
+    "forgeries_detected": 0,
+    "museum_acquisitions": 0,
+    "no_sales": 0,
+    "original_parts_preserved": 0,
+    "profit": 0,
+    "purchases": 1,
+    "restorations": 1,
+    "sales": 0,
+    "total_auction_revenue": 0
+  },
+  "transactions": [
+    {
+      "amount": -48,
+      "day": 1,
+      "instanceId": "inst_1_3976322376_0001",
+      "item": "Aurelian Mechanical Clock A",
+      "type": "purchase"
+    },
+    {
+      "amount": -100,
+      "day": 1,
+      "item": "Storage Expansion",
+      "type": "upgrade"
+    }
+  ],
+  "upgrades": [
+    "upgrade_01"
+  ]
+}

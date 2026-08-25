@@ -1,0 +1,53 @@
+{
+  "suite": "R3 Ten-Stage Completion and Performance Data Contract",
+  "statusDate": "2026-08-23",
+  "status": "DATA_GATE_PASS_RUNTIME_WIRE_PENDING",
+  "validator": "python tools/validators/validate_stage_mvp.py",
+  "companionValidators": {
+    "validate_data.py": "PASS_82_FILES_326_UNIQUE_IDS",
+    "validate_runtime_references.py": "PASS_60_BASELINE_SPECS",
+    "stageExpansionReferences": "PASS_20_OF_20_BY_STAGE_VALIDATOR"
+  },
+  "result": {
+    "errors": 0,
+    "stageCoverage": "10/10",
+    "localizedGoalCoverage": "10/10 KO+EN",
+    "localizedFailureCoverage": "10/10 KO+EN",
+    "localizedAdviceCoverage": "10/10 KO+EN",
+    "performanceTargets": [55, 56, 57, 58, 59, 60, 61, 62, 63, 64],
+    "targetOrder": "STRICTLY_INCREASING",
+    "targetAchievability": "ALL_TARGETS_AT_OR_BELOW_78",
+    "playerFacingRawIdLeaks": 0,
+    "privateTruthInputs": 0,
+    "perStageCodeOverrides": 0,
+    "repairReachableExpansionArtifacts": "20/20"
+  },
+  "completionContract": {
+    "caseScope": "ALL_STAGE_CASES",
+    "grandReserveRule": "FOLLOW_STAGE_FLAG",
+    "unlockOnCompletion": true,
+    "performanceAffectsUnlock": false,
+    "targetMissCanRelock": false
+  },
+  "performanceContract": {
+    "metric": "public_stage_score",
+    "publicScoreApi": "publicStageScore",
+    "operator": "GTE",
+    "scoreRange": [0, 100],
+    "publicInputs": ["caseOutcomeTierCounts", "scopedCaseCount", "grandReserveBalancedScore"],
+    "gradeIds": ["DEVELOPING", "TARGET", "EXPERT", "MASTER"]
+  },
+  "preservation": {
+    "canonicalCaseOrder": "PASS_26_OF_26_CONTIGUOUS",
+    "introducedArtifactOrder": "PASS_ARTIFACT_061_THROUGH_080",
+    "existingAutoUnlockSemantics": "UNCHANGED_BY_DATA_CONTRACT",
+    "heldArtifactsCreatedOrModified": false
+  },
+  "integrationAcceptance": [
+    "One generic public summary evaluator consumes every stage row.",
+    "A score below target still clears and monotonically unlocks progression.",
+    "The highest reached threshold chooses the localized grade.",
+    "No stage number, case identity or artifact identity receives a performance code branch.",
+    "All twenty expansion repair profiles expose at least one possible fault to the generic Repair action."
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "artifact": "R3 Characterful UI Portrait Asset/Data Gate",
+  "statusDate": "2026-08-24",
+  "status": "ASSET_DATA_GATE_PASS",
+  "assetRevision": "CHIBI_BIG_EYE_V2_METRIC_FINAL_CASE_NPC_STAGE6",
+  "supersedes": "The initial small-feature portrait pass and its contact sheet were rejected and overwritten; only this V2 evidence is current.",
+  "scopeNote": "This proves the redesigned recurring-roster and authored-case NPC portrait contracts through Stage 6, including actual 96x120 runtime evidence. It is not a game-complete declaration.",
+  "validation": {
+    "command": "python tools/validators/validate_character_portraits.py",
+    "result": "PASS",
+    "checks": 1940,
+    "portraitSvgCount": 18,
+    "caseNpcPortraitCount": 5,
+    "characterProfileCount": 18,
+    "bidderCoverage": 12,
+    "eventMappingCoverage": 25,
+    "semanticEventFamilies": 4,
+    "externalBitmapCount": 0,
+    "placeholderBustCount": 0,
+    "uniqueVisualSignatureCount": 18,
+    "faceLegibilityCount": 18,
+    "caseNpcFaceLegibilityCount": 5,
+    "eyeAnatomy": "sclera + iris + pupil + highlight",
+    "faceHeightRatioRange": "0.425-0.434",
+    "referenceDisplay": "220x250",
+    "headIncludingHairPx": "128.12",
+    "visibleFaceSkinPx": "84.38",
+    "eyePxRange": "23.44-25.00 x 14.06-15.62",
+    "irisDiameterPxRange": "11.72-13.28",
+    "pupilDiameterPxRange": "6.25-6.88",
+    "highlightDiameterPxRange": "3.75-3.91",
+    "majorFaceLinePx": "2.73",
+    "grayscaleSilhouetteDistinction": "18/18 authored signature tuples",
+    "pairwiseVariationAxisFloor": 4,
+    "expressionChangedGeometryAxes": 3
+  },
+  "headlessVisualCapture": {
+    "command": "Godot_v4.7.1-stable_win64_console.exe --headless --path RELIC_AND_RESERVE_R3 --script res://tests/capture_character_portrait_contact_sheet.gd",
+    "result": "PASS",
+    "paths": {
+      "neutral": "res://qa/character_portraits/portrait_contact_sheet.png",
+      "grayscale": "res://qa/character_portraits/portrait_contact_sheet_grayscale.png",
+      "expressionTriplets": "res://qa/character_portraits/portrait_expression_triplets.png"
+    },
+    "resolution": "1280x720",
+    "renderer": "Godot CPU SVG loader plus Image compositor",
+    "portraitLabels": "localized profile displayName.en",
+    "compactProofPortraitSize": "122x152 per card; features remain readable below the 220x250 runtime target",
+    "directVisualReview": {
+      "neutralRoster": "PASS - eyes, brows, mouths and role props readable for all 18",
+      "grayscaleRoster": "PASS - 18/18 remain distinguishable by hair, face, shoulder silhouette and prop combinations",
+      "sixCharacterExpressionTriplets": "PASS - NEUTRAL/POSITIVE/NEGATIVE visibly change brow, eye and mouth geometry"
+    },
+    "visibleWindowOpened": false
+  },
+  "fixedRoster": [
+    "auctioneer",
+    "shopkeeper",
+    "bidder_01",
+    "bidder_02",
+    "bidder_03",
+    "bidder_04",
+    "bidder_05",
+    "bidder_06",
+    "bidder_07",
+    "bidder_08",
+    "bidder_09",
+    "bidder_10",
+    "bidder_11",
+    "bidder_12",
+    "event_courier",
+    "event_patron",
+    "event_curator",
+    "event_reporter"
+  ],
+  "authoredCaseNpcPortraits": [
+    {
+      "npcId": "victor_hale",
+      "expression": "concerned",
+      "asset": "res://assets/portraits/victor_hale_concerned.svg",
+      "actualCapture": "res://qa/latest_runtime_viewport/52_stage5_victor_hale_npc_detail_ko.png"
+    },
+    {
+      "npcId": "lena_falk",
+      "expression": "concerned",
+      "asset": "res://assets/portraits/lena_falk_concerned.svg",
+      "actualCapture": "res://qa/latest_runtime_viewport/53_stage5_lena_falk_npc_detail_ko.png"
+    },
+    {
+      "npcId": "hana_mire",
+      "expression": "concerned",
+      "asset": "res://assets/portraits/hana_mire_concerned.svg",
+      "actualCapture": "res://qa/latest_runtime_viewport/65_stage6_hana_mire_npc_detail_ko.png"
+    },
+    {
+      "npcId": "mara_venn",
+      "expression": "concerned",
+      "asset": "res://assets/portraits/mara_venn_concerned.svg",
+      "actualCapture": "res://qa/latest_runtime_viewport/66_stage6_mara_venn_npc_detail_ko.png"
+    },
+    {
+      "npcId": "iris_bell",
+      "expression": "concerned",
+      "asset": "res://assets/portraits/iris_bell_concerned.svg",
+      "actualCapture": "res://qa/latest_runtime_viewport/67_stage6_iris_bell_npc_detail_ko.png"
+    }
+  ],
+  "genericCueSets": {
+    "AUCTIONEER": ["INTRO", "CALL", "SOLD", "NO_SALE"],
+    "BIDDER": ["WATCH", "BID", "DROPOUT", "WON"],
+    "SHOPKEEPER": ["WELCOME", "OFFER", "PURCHASE_OK", "PURCHASE_FAIL"],
+    "EVENT": ["REQUEST", "REACTION_POS", "REACTION_NEG"]
+  },
+  "expressionSet": ["NEUTRAL", "POSITIVE", "NEGATIVE"],
+  "stageBands": {
+    "EARLY": [1, 3],
+    "MID": [4, 7],
+    "LATE": [8, 10]
+  },
+  "eventFamilies": {
+    "DELIVERY_STORAGE": "event_courier",
+    "ESTATE_COLLECTOR_COMMISSION": "event_patron",
+    "MUSEUM_PROVENANCE_INTEGRITY": "event_curator",
+    "MARKET_TREND_DAILY": "event_reporter"
+  },
+  "runtimeIntegrationEvidence": {
+    "uiSuite": {
+      "path": "res://qa/R3_PORTRAIT_DIALOGUE_UI_TESTS.json",
+      "result": "PASS_18_OF_18",
+      "generatedAtLocal": "2026-08-24T00:41:28+09:00",
+      "covers": ["Stage Select 1..10", "public Stage progress and clear summaries", "market shopkeeper", "auctioneer and active bidder", "localized Korean and English recent bid rows", "friendly no-sale state with negative auctioneer face", "sold and no-sale public decision-reason chips", "all 25 localized event request and reaction screens", "all eight fractional event modifiers as nonzero percentages", "face-zone three-axis expression overlay"]
+    },
+    "headlessCaptureReport": "res://qa/R3_MVP_UI_HEADLESS_CAPTURES.json",
+    "captureGeneratedAtLocal": "2026-08-24T00:39:53+09:00",
+    "capturePaths": [
+      "res://qa/mvp_ui_headless/02_portrait_market_ko.png",
+      "res://qa/mvp_ui_headless/03_portrait_auction_ko.png",
+      "res://qa/mvp_ui_headless/04_portrait_event_ko.png",
+      "res://qa/mvp_ui_headless/06_portrait_expression_triplet_runtime.png",
+      "res://qa/mvp_ui_headless/07_portrait_auction_no_sale_reasons_ko.png",
+      "res://qa/mvp_ui_headless/08_stage_clear_summary_ko.png"
+    ],
+    "directVisualReview": "PASS - V2 structural eyes are visible; positive/negative brows, eye height, and mouth geometry differ inside the portrait face zone.",
+    "authoredCaseNpcSuites": {
+      "stage5": "res://qa/R3_STAGE5_VISUAL_IDENTITY_TESTS.json — PASS_10_OF_10",
+      "stage6": "res://qa/R3_STAGE6_VISUAL_IDENTITY_TESTS.json — PASS_12_OF_12",
+      "actualViewport": "res://qa/R3_LATEST_RUNTIME_VIEWPORT_QA.json — PASS_70_OF_70_AND_MANUAL_ORIGINAL_RESOLUTION",
+      "comparisonCaptures": [
+        "res://qa/latest_runtime_viewport/54_stage5_case_npc_portraits_2up.png",
+        "res://qa/latest_runtime_viewport/68_stage6_case_npc_portraits_3up.png"
+      ],
+      "minimumActualDossierSize": "96x120",
+      "staleImportRegression": "PASS - Stage 6 suite checks SVG source MD5 against Godot import metadata and validates loaded raster eye/color complexity."
+    }
+  },
+  "acceptance": {
+    "exactlyEighteenDistinctBaseSvgs": "PASS",
+    "faceHairOutfitAndRolePropPresent": "PASS",
+    "bigEyeFourPartAnatomyAndHighlight": "PASS",
+    "readableBrowsNoseMouthAndCheekBlush": "PASS",
+    "normalizedFaceZoneBetweenThirtyEightAndFortyEightPercent": "PASS",
+    "dotOrSlitEyePortraitCount": 0,
+    "localizedNamesAndAccessibilityLabels": "PASS",
+    "threeExpressionMetadataStates": "PASS",
+    "deterministicStageBandVariants": "PASS",
+    "allExistingBidderIdsMapped": "PASS",
+    "allTwentyFiveEventsDataMapped": "PASS",
+    "headlessEighteenPortraitContactSheet": "PASS",
+    "headlessGrayscaleContactSheet": "PASS",
+    "headlessSixCharacterExpressionTripletSheet": "PASS",
+    "actual220x250MetricGate": "PASS",
+    "grayscaleSilhouetteAtLeastSixteenOfEighteen": "PASS_18_OF_18",
+    "everyPairDiffersOnAtLeastThreeVariationAxes": "PASS_MINIMUM_4",
+    "positiveAndNegativeChangeAtLeastTwoGeometryAxes": "PASS_3_AXES",
+    "auctionShopEventRuntimePresentation": "PASS_UI_SUITE_18_OF_18_AND_CAPTURES_02_03_04_06_07_08",
+    "fiveAuthoredCaseNpcBigEyePortraits": "PASS_5_OF_5",
+    "authoredCaseNpcActual96x120Runtime": "PASS_CAPTURES_52_53_65_66_67",
+    "stage6ThreeCharacterIdentityComparison": "PASS_CAPTURE_68",
+    "stage6ImportedRasterFreshness": "PASS_SOURCE_MD5_AND_PIXEL_GATE",
+    "windowsArtifactsCreatedOrModified": false
+  }
+}

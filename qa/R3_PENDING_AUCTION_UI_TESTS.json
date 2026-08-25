@@ -1,0 +1,1071 @@
+{
+  "executed": 10,
+  "failed": 0,
+  "passed": 10,
+  "skipped": 0,
+  "suite": "R3 Authoritative Pending Auction and Cue UI",
+  "tests": [
+    {
+      "evidence": {
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "BID",
+          "BID",
+          "BID",
+          "DROPOUT",
+          "SOLD"
+        ],
+        "renders": [
+          {
+            "dialogues": 2,
+            "hammer": false,
+            "next": true,
+            "phase": "ENTRY",
+            "portraits": 2,
+            "rawHidden": true,
+            "reaction": true
+          },
+          {
+            "dialogues": 2,
+            "hammer": false,
+            "next": true,
+            "phase": "CALL",
+            "portraits": 2,
+            "rawHidden": true,
+            "reaction": true
+          },
+          {
+            "dialogues": 2,
+            "hammer": false,
+            "next": true,
+            "phase": "BID",
+            "portraits": 2,
+            "rawHidden": true,
+            "reaction": true
+          },
+          {
+            "dialogues": 2,
+            "hammer": false,
+            "next": true,
+            "phase": "BID",
+            "portraits": 2,
+            "rawHidden": true,
+            "reaction": true
+          },
+          {
+            "dialogues": 2,
+            "hammer": false,
+            "next": true,
+            "phase": "BID",
+            "portraits": 2,
+            "rawHidden": true,
+            "reaction": true
+          },
+          {
+            "dialogues": 2,
+            "hammer": false,
+            "next": true,
+            "phase": "DROPOUT",
+            "portraits": 2,
+            "rawHidden": true,
+            "reaction": true
+          },
+          {
+            "dialogues": 2,
+            "hammer": true,
+            "next": false,
+            "phase": "SOLD",
+            "portraits": 2,
+            "rawHidden": true,
+            "reaction": true
+          }
+        ],
+        "transactionId": "auction_1_1246887953_0"
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-01",
+      "name": "Actual UI calls reconstruct a localized two-portrait ENTRY, CALL, BID, optional DROPOUT and SOLD sequence with bounded child reactions",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "copy": "경매 — 데이터 기반 실시간 입찰자\nDAY 1   ¤ 1200   REP 12   GRADE 1\nAurelian Mechanical Clock A\n최저가 미달 / 유찰 · 공개 입찰 없음\n유찰\n4 / 4\n시작가\n¤999999\n예약가\n¤1000000\n입찰 수\n0\n최근 호가\n첫 공개 입찰을 기다리는 중입니다.\n최저가 미달 / 유찰  ·  수수료 ¤0  ·  정산액 ¤0\n초반 2 · 구리 동전\n시세 투기상\n입찰자\n입찰 포기\n이번에는 물러납니다.\n예약가 미달\n핵심 반응\n예약가 높음\n초반 2 · 작은 종\n경매 진행원\n경매 진행\n유찰\n예약가에 닿지 못해 유찰입니다.\n결과 기록 대기\n경매 장면을 진행했습니다.\n낙찰 결과 기록\n경매\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어",
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "DROPOUT",
+          "NO_SALE"
+        ],
+        "result": {
+          "bids": [],
+          "dropouts": [
+            {
+              "bidderId": "bidder_01",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_03",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_04",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_05",
+              "reason": "BUDGET"
+            },
+            {
+              "bidderId": "bidder_06",
+              "reason": "BUDGET"
+            }
+          ],
+          "fee": 0,
+          "hammer": 0,
+          "net": 0,
+          "opening": 999999,
+          "publicFingerprint": "AUC-1423470476",
+          "reserve": 1000000,
+          "saleStatus": "NO_SALE",
+          "transactionId": "auction_1_1878263885_0",
+          "winnerId": ""
+        }
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-02",
+      "name": "A no-bid queue preserves the opening term, records zero hammer and ends in a friendly NO_SALE portrait state",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "disabledGameplayNavs": [
+          "Nav_MARKET",
+          "Nav_INVENTORY",
+          "Nav_UPGRADES",
+          "Nav_COMMISSIONS",
+          "Nav_CAMPAIGN",
+          "Nav_END_DAY"
+        ],
+        "marketLocked": true,
+        "mutation0": true,
+        "navContract": true,
+        "responses": {
+          "beginCase": {},
+          "citation": false,
+          "clean": "Auction result is pending.",
+          "day": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false
+          },
+          "discover": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false
+          },
+          "event": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false
+          },
+          "grandReserve": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false
+          },
+          "hypothesis": false,
+          "market": false,
+          "newGame": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false,
+            "stage": 2
+          },
+          "otherAuction": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false
+          },
+          "otherCreate": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false,
+            "transactionId": "auction_1_1311904905_0"
+          },
+          "otherSell": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "net": 0,
+            "ok": false,
+            "reserve_met": false,
+            "sale_status": "BLOCKED"
+          },
+          "relist": false,
+          "repair": "Auction result is pending.",
+          "report": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false
+          },
+          "startStage": {
+            "code": "PENDING_AUCTION_LOCKED",
+            "ok": false,
+            "stage": 2
+          },
+          "tool": false,
+          "upgrade": false
+        },
+        "resumedScreen": "auction"
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-03",
+      "name": "PENDING freezes day, event, market, upgrade, restoration, relist, other sale, Grand Reserve, new game, stage, tool and case mutations while global navigation exposes only resume, save and locale",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "commitMutation0": true,
+        "failed": {
+          "code": "PENDING_AUCTION_SAVE_FAILED",
+          "ok": false,
+          "transactionId": "auction_1_1851072441_0"
+        },
+        "first": {
+          "bids": [
+            {
+              "amount": 13,
+              "bidderId": "bidder_01"
+            },
+            {
+              "amount": 25,
+              "bidderId": "bidder_02"
+            },
+            {
+              "amount": 37,
+              "bidderId": "bidder_03"
+            },
+            {
+              "amount": 50,
+              "bidderId": "bidder_05"
+            }
+          ],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_04",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_06",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_01",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_03",
+              "reason": "VALUE"
+            }
+          ],
+          "fee": 6,
+          "hammer": 50,
+          "idempotent": false,
+          "net": 44,
+          "ok": true,
+          "opening": 1,
+          "participants": [
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            },
+            {
+              "id": "bidder_04"
+            },
+            {
+              "id": "bidder_05"
+            },
+            {
+              "id": "bidder_06"
+            }
+          ],
+          "publicFingerprint": "AUC-659730828",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_GOOD",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "reserve": 5,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1851072441_0",
+          "winnerId": "bidder_05"
+        },
+        "historyFingerprint": "AUC-659730828",
+        "receiptEqual": true,
+        "rollbackMutation0": true,
+        "second": {
+          "bids": [
+            {
+              "amount": 13,
+              "bidderId": "bidder_01"
+            },
+            {
+              "amount": 25,
+              "bidderId": "bidder_02"
+            },
+            {
+              "amount": 37,
+              "bidderId": "bidder_03"
+            },
+            {
+              "amount": 50,
+              "bidderId": "bidder_05"
+            }
+          ],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_04",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_06",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_01",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_03",
+              "reason": "VALUE"
+            }
+          ],
+          "fee": 6,
+          "hammer": 50,
+          "idempotent": true,
+          "net": 44,
+          "ok": true,
+          "opening": 1,
+          "participants": [
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            },
+            {
+              "id": "bidder_04"
+            },
+            {
+              "id": "bidder_05"
+            },
+            {
+              "id": "bidder_06"
+            }
+          ],
+          "publicFingerprint": "AUC-659730828",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_GOOD",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "reserve": 5,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1851072441_0",
+          "winnerId": "bidder_05"
+        },
+        "stale": {
+          "code": "STALE_PENDING_AUCTION",
+          "ok": false,
+          "publicFingerprint": "AUC-659730828",
+          "transactionId": "auction_1_1851072441_0"
+        },
+        "staleMutation0": true
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-04",
+      "name": "Commit revalidates public fingerprint, rolls back a failed atomic save, then returns one identical idempotent receipt without duplicate history or money",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "continued": true,
+        "cueIndex": 2,
+        "focusAfter": "AuctionCueNext",
+        "focusBefore": "AuctionCueNext",
+        "loaded": {
+          "artifactId": "pending_ui_resume",
+          "code": "OK",
+          "createdDay": 1,
+          "cueIndex": 2,
+          "cueQueue": [
+            {
+              "bidderId": "bidder_03",
+              "phase": "ENTRY",
+              "reasonTags": [],
+              "visibleBids": []
+            },
+            {
+              "amount": 1,
+              "bidderId": "bidder_03",
+              "phase": "CALL",
+              "reasonTags": [],
+              "visibleBids": []
+            },
+            {
+              "amount": 123,
+              "bidderId": "bidder_05",
+              "phase": "BID",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_05"
+                }
+              ]
+            },
+            {
+              "amount": 139,
+              "bidderId": "bidder_04",
+              "phase": "BID",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_05"
+                },
+                {
+                  "amount": 139,
+                  "bidderId": "bidder_04"
+                }
+              ]
+            },
+            {
+              "amount": 156,
+              "bidderId": "bidder_05",
+              "phase": "BID",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_05"
+                },
+                {
+                  "amount": 139,
+                  "bidderId": "bidder_04"
+                },
+                {
+                  "amount": 156,
+                  "bidderId": "bidder_05"
+                }
+              ]
+            },
+            {
+              "bidderId": "bidder_04",
+              "dropoutReason": "VALUE",
+              "phase": "DROPOUT",
+              "reasonTags": [],
+              "visibleBids": [
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_05"
+                },
+                {
+                  "amount": 139,
+                  "bidderId": "bidder_04"
+                },
+                {
+                  "amount": 156,
+                  "bidderId": "bidder_05"
+                }
+              ]
+            },
+            {
+              "amount": 156,
+              "bidderId": "bidder_05",
+              "dropoutReason": "VALUE",
+              "phase": "SOLD",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 107,
+                  "bidderId": "bidder_04"
+                },
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_05"
+                },
+                {
+                  "amount": 139,
+                  "bidderId": "bidder_04"
+                },
+                {
+                  "amount": 156,
+                  "bidderId": "bidder_05"
+                }
+              ]
+            }
+          ],
+          "decisions": {
+            "activeModifiers": {
+              "appraisalPrecision": 0,
+              "auctionFeeReduction": 0,
+              "bidderReach": 0,
+              "displayBonus": 0,
+              "listingBonus": 0,
+              "marketAll": 0,
+              "marketCategory": 10,
+              "stageDifficulty": 1.07
+            },
+            "condition": {
+              "cleanliness": 100,
+              "mechanical": 100,
+              "surface": 100
+            },
+            "day": 1,
+            "disclosure": "CERTAIN",
+            "grandReserve": false,
+            "listingUid": "pending_ui_resume",
+            "provenanceKnown": true,
+            "publicAppraisal": 115,
+            "reportedConfidence": 0.92,
+            "reserve": 5,
+            "reserveRatio": 0.0435,
+            "specId": "artifact_001",
+            "stage": 2,
+            "starting": 1,
+            "startingRatio": 0.0087,
+            "substantiation": "NO_CASE"
+          },
+          "grandReserve": false,
+          "ok": true,
+          "publicFingerprint": "AUC-2007113932",
+          "receipt": {},
+          "result": {
+            "bids": [
+              {
+                "amount": 13,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 25,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 38,
+                "bidderId": "bidder_05"
+              },
+              {
+                "amount": 51,
+                "bidderId": "bidder_06"
+              },
+              {
+                "amount": 64,
+                "bidderId": "bidder_07"
+              },
+              {
+                "amount": 78,
+                "bidderId": "bidder_08"
+              },
+              {
+                "amount": 92,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 107,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 123,
+                "bidderId": "bidder_05"
+              },
+              {
+                "amount": 139,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 156,
+                "bidderId": "bidder_05"
+              }
+            ],
+            "dropouts": [
+              {
+                "bidderId": "bidder_06",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_07",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_08",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_03",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_04",
+                "reason": "VALUE"
+              }
+            ],
+            "fee": 18,
+            "hammer": 156,
+            "net": 138,
+            "opening": 1,
+            "participants": [
+              {
+                "id": "bidder_03"
+              },
+              {
+                "id": "bidder_04"
+              },
+              {
+                "id": "bidder_05"
+              },
+              {
+                "id": "bidder_06"
+              },
+              {
+                "id": "bidder_07"
+              },
+              {
+                "id": "bidder_08"
+              }
+            ],
+            "publicFingerprint": "AUC-2007113932",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_GOOD",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "reserve": 5,
+            "reserve_met": true,
+            "sale_status": "SOLD",
+            "transactionId": "auction_1_1963246187_0",
+            "winnerId": "bidder_05"
+          },
+          "status": "PENDING",
+          "transactionId": "auction_1_1963246187_0"
+        },
+        "localePreserved": true,
+        "phase": "BID",
+        "screen": "auction",
+        "selected": "pending_ui_resume"
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-05",
+      "name": "Locale rebuild and Continue restore the exact pending transaction, public fingerprint, cue, selected lot and keyboard focus",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "event": {
+          "focus": "EventContinueMarket",
+          "locale": true,
+          "restored": true,
+          "state": "REACTION_POS"
+        },
+        "market": {
+          "focus": "MarketOffer_0",
+          "locale": true,
+          "restored": true
+        }
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-06",
+      "name": "Market OFFER and event reaction cues preserve semantic state and keyboard focus across locale rebuild and save-load Continue",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "decisionKeys": [
+          "listingUid",
+          "specId",
+          "stage",
+          "day",
+          "grandReserve",
+          "publicAppraisal",
+          "reportedConfidence",
+          "starting",
+          "reserve",
+          "startingRatio",
+          "reserveRatio",
+          "disclosure",
+          "condition",
+          "provenanceKnown",
+          "substantiation",
+          "activeModifiers"
+        ],
+        "fingerprint": "AUC-1577838221",
+        "forbidden": [
+          "authenticityTruth",
+          "trueRarity",
+          "trueHistoricalSignificance",
+          "baseValue",
+          "originalParts",
+          "replacementParts",
+          "budget",
+          "maxBid",
+          "rngState",
+          "rngCursor"
+        ],
+        "resultKeys": [
+          "opening",
+          "reserve",
+          "bids",
+          "participants",
+          "dropouts",
+          "hammer",
+          "fee",
+          "net",
+          "winnerId",
+          "reserve_met",
+          "sale_status",
+          "reasonTags",
+          "publicFingerprint",
+          "transactionId"
+        ]
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-07",
+      "name": "The persisted public fingerprint contract and renderer result exclude hidden truth, value, originality, bidder secret and RNG fields",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "bidTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "flippedBidTags": [
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "flippedListingTags": [
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "flippedNoSaleTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "forbidden": [
+          "authenticityTruth",
+          "trueRarity",
+          "trueHistoricalSignificance",
+          "baseValue",
+          "originalParts",
+          "replacementParts",
+          "maxBid",
+          "budget"
+        ],
+        "listingTags": [
+          {
+            "category": "CONDITION",
+            "code": "CONDITION_GOOD",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "PROVENANCE",
+            "code": "PROVENANCE_STRONG",
+            "polarity": "POSITIVE"
+          },
+          {
+            "category": "DISCLOSURE",
+            "code": "DISCLOSURE_CLEAR",
+            "polarity": "POSITIVE"
+          }
+        ],
+        "noSaleTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          }
+        ]
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-08",
+      "name": "The listing adapter emits exactly condition, provenance and disclosure status tags in order and ignores hidden truth/value flips",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "aggregateTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          }
+        ],
+        "bidCues": [
+          {
+            "amount": 38,
+            "bidderId": "bidder_11",
+            "phase": "BID",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_GOOD",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "visibleBids": [
+              {
+                "amount": 38,
+                "bidderId": "bidder_11"
+              }
+            ]
+          },
+          {
+            "amount": 51,
+            "bidderId": "bidder_12",
+            "phase": "BID",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_GOOD",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "visibleBids": [
+              {
+                "amount": 38,
+                "bidderId": "bidder_11"
+              },
+              {
+                "amount": 51,
+                "bidderId": "bidder_12"
+              }
+            ]
+          },
+          {
+            "amount": 65,
+            "bidderId": "bidder_10",
+            "phase": "BID",
+            "reasonTags": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "visibleBids": [
+              {
+                "amount": 38,
+                "bidderId": "bidder_11"
+              },
+              {
+                "amount": 51,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 65,
+                "bidderId": "bidder_10"
+              }
+            ]
+          }
+        ],
+        "dropoutCues": [
+          {
+            "bidderId": "bidder_12",
+            "dropoutReason": "VALUE",
+            "phase": "DROPOUT",
+            "reasonTags": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "visibleBids": [
+              {
+                "amount": 38,
+                "bidderId": "bidder_11"
+              },
+              {
+                "amount": 51,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 65,
+                "bidderId": "bidder_10"
+              }
+            ]
+          }
+        ],
+        "rawPhases": [
+          "ENTRY",
+          "CALL",
+          "BID",
+          "BID",
+          "BID",
+          "DROPOUT",
+          "NO_SALE"
+        ],
+        "rawQueueDisplayFree": true,
+        "terminalTags": [
+          {
+            "category": "PRICE",
+            "code": "RESERVE_TOO_HIGH",
+            "polarity": "NEGATIVE"
+          }
+        ]
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-09",
+      "name": "The public adapter alone projects sanitized maximum-two BID/DROPOUT reasons and preserves terminal aggregate ordering",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "diskTextUnchanged": true,
+        "gameRngAfter": "-3378380881708314866",
+        "gameRngBefore": "-3378380881708314866",
+        "globalRng": {
+          "actual": [
+            85918326,
+            1893039753
+          ],
+          "expected": [
+            85918326,
+            1893039753
+          ]
+        },
+        "memoryQueueUnchanged": true,
+        "memoryResultUnchanged": true,
+        "payloadUnchanged": true
+      },
+      "executed": true,
+      "id": "PENDING-AUCTION-UI-10",
+      "name": "Public cause adapters leave the canonical in-memory and on-disk cue/result snapshots plus game/global RNG cursors unchanged",
+      "passed": true
+    }
+  ]
+}

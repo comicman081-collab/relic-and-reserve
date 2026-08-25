@@ -1,0 +1,6 @@
+{
+  "status": "HEADLESS_RUNTIME_VALIDATED",
+  "p0_passed": 30,
+  "p0_failed": 0,
+  "test_log": "qa/runtime_acceptance.log"
+}

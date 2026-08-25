@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "progression": {
+    "stageCount": 10,
+    "difficultyGrowthRate": 0.07,
+    "difficultyFormula": "pow(1.07, stage_id - 1)",
+    "replayPolicy": "new_game_selectable_after_clear",
+    "highestClearedStagePersists": true,
+    "clearedStagesRemainReplayable": true,
+    "finalStageEvent": "GRAND_RESERVE"
+  },
+  "performance_contract": {
+    "schema_version": 1,
+    "public_score_api": "publicStageScore",
+    "score_range": [0, 100],
+    "public_inputs": ["caseOutcomeTierCounts", "scopedCaseCount", "grandReserveBalancedScore"],
+    "operator": "GTE",
+    "completion_relation": "ADVISORY_ONLY",
+    "grade_labels": {
+      "DEVELOPING": {"en": "Developing", "ko": "성장 중"},
+      "TARGET": {"en": "Target Met", "ko": "목표 달성"},
+      "EXPERT": {"en": "Expert", "ko": "전문가"},
+      "MASTER": {"en": "Master", "ko": "마스터"}
+    }
+  },
+  "tutorial_contract": {
+    "schema_version": 1,
+    "stage_id": 1,
+    "max_steps": 6,
+    "replay_policy": "EXPLICIT_HELP_RESET",
+    "steps": [
+      {
+        "step_id": "INVESTIGATE",
+        "order": 1,
+        "trigger": "CASE_DOSSIER_READY",
+        "target_ui_id": "CaseEvidence_*",
+        "route_ui_ids": ["CaseEvidence_*", "CaseEvidenceCard_*"],
+        "complete_when": "EVIDENCE_DISCOVERED",
+        "icon": "clue_generic",
+        "title": {"en": "Inspect one clue", "ko": "단서 하나 조사"},
+        "text": {"en": "Check the risk, then record one clue.", "ko": "위험을 보고 단서 하나를 기록하세요."}
+      },
+      {
+        "step_id": "CITE",
+        "order": 2,
+        "trigger": "EVIDENCE_DISCOVERED",
+        "target_ui_id": "CaseCitation_*",
+        "route_ui_ids": ["CaseCitation_*", "CaseEvidenceCard_*"],
+        "complete_when": "EVIDENCE_CITED",
+        "icon": "citation",
+        "title": {"en": "Cite your evidence", "ko": "근거 인용"},
+        "text": {"en": "Add one found clue to the report.", "ko": "확인한 단서 하나를 보고서에 넣으세요."}
+      },
+      {
+        "step_id": "REPORT",
+        "order": 3,
+        "trigger": "EVIDENCE_CITED",
+        "target_ui_id": "ResolveCaseReport",
+        "route_ui_ids": ["ResolveCaseReport", "CaseHypothesis_*"],
+        "complete_when": "CASE_REPORT_RESOLVED",
+        "icon": "report",
+        "title": {"en": "Submit the report", "ko": "보고서 제출"},
+        "text": {"en": "Choose a claim and submit the cited report.", "ko": "가설을 고르고 인용한 보고서를 제출하세요."}
+      },
+      {
+        "step_id": "REPAIR",
+        "order": 4,
+        "trigger": "CASE_REPORT_RESOLVED",
+        "target_ui_id": "Tool_repair",
+        "route_ui_ids": ["Tool_repair", "RepairTool_*", "InspectLot_*", "Nav_INVENTORY", "CaseContinue"],
+        "complete_when": "REPAIR_COMPLETED",
+        "icon": "tool",
+        "title": {"en": "Repair with restraint", "ko": "필요한 만큼 수리"},
+        "text": {"en": "Use one recommended tool for the needed repair.", "ko": "권장 도구 하나로 필요한 수리만 하세요."}
+      },
+      {
+        "step_id": "LIST",
+        "order": 5,
+        "trigger": "REPAIR_COMPLETED",
+        "target_ui_id": "ListingConfirmButton",
+        "route_ui_ids": ["ListingConfirmButton", "ListingDisclosure_*", "ListingPrice_*", "AcceptHypothesisButton", "AuthenticateButton"],
+        "complete_when": "AUCTION_LISTED",
+        "icon": "objective",
+        "title": {"en": "Choose listing terms", "ko": "출품 조건 선택"},
+        "text": {"en": "Match the reserve and disclosure to what you found.", "ko": "확인한 상태에 맞춰 예약가와 공개 수준을 고르세요."}
+      },
+      {
+        "step_id": "AUCTION",
+        "order": 6,
+        "trigger": "AUCTION_LISTED",
+        "target_ui_id": "HammerButton",
+        "route_ui_ids": ["HammerButton"],
+        "complete_when": "AUCTION_RECORDED",
+        "icon": "artifact",
+        "title": {"en": "Read the result", "ko": "경매 결과 확인"},
+        "text": {"en": "Read the bidder reasons, then record the result.", "ko": "입찰 이유를 보고 결과를 기록하세요."}
+      }
+    ]
+  },
+  "stages": [
+    {
+      "stage_id": 1,
+      "title": {"en": "The First Lot", "ko": "첫 번째 출품"},
+      "case_ids": ["prologue_clock", "silent_radio", "perfect_fake"],
+      "introduced_artifact_ids": ["artifact_061", "artifact_062"],
+      "difficulty_multiplier": 1.0,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case in this opening set.", "ko": "첫 묶음의 모든 사건을 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 55,
+        "goal_label": {"en": "Build a sound evidence habit.", "ko": "탄탄한 증거 습관을 만드세요."},
+        "failure_label": {"en": "The target was missed, but the stage is cleared.", "ko": "목표에는 못 미쳤지만 스테이지는 클리어했습니다."},
+        "advice_label": {"en": "Compare independent clues before reporting.", "ko": "보고 전에 독립된 단서를 대조해 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 55}, {"grade_id": "EXPERT", "min_score": 71}, {"grade_id": "MASTER", "min_score": 90}]
+      }
+    },
+    {
+      "stage_id": 2,
+      "title": {"en": "Patina and Promises", "ko": "세월의 흔적과 약속"},
+      "case_ids": ["leave_patina", "estate_compass", "pawn_watch"],
+      "introduced_artifact_ids": ["artifact_063", "artifact_064"],
+      "difficulty_multiplier": 1.07,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case in the patina set.", "ko": "세월의 흔적 묶음 사건을 모두 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 56,
+        "goal_label": {"en": "Preserve value while testing claims.", "ko": "주장을 검증하며 가치를 보존하세요."},
+        "failure_label": {"en": "The target was missed, but progress remains unlocked.", "ko": "목표에는 못 미쳤지만 진행 해금은 유지됩니다."},
+        "advice_label": {"en": "Separate age marks from harmful damage.", "ko": "세월의 흔적과 해로운 손상을 구분해 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 56}, {"grade_id": "EXPERT", "min_score": 72}, {"grade_id": "MASTER", "min_score": 91}]
+      }
+    },
+    {
+      "stage_id": 3,
+      "title": {"en": "Signals in Dust", "ko": "먼지 속의 신호"},
+      "case_ids": ["garage_lamp", "telephone_trace", "early_camera"],
+      "introduced_artifact_ids": ["artifact_065", "artifact_066"],
+      "difficulty_multiplier": 1.1449,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case in the signal set.", "ko": "신호 묶음의 모든 사건을 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 57,
+        "goal_label": {"en": "Choose tools with deliberate care.", "ko": "도구를 신중하게 골라 사용하세요."},
+        "failure_label": {"en": "The target was missed; the next stage still unlocks.", "ko": "목표에는 못 미쳐도 다음 스테이지는 해금됩니다."},
+        "advice_label": {"en": "Read the risk cue before each inspection.", "ko": "조사 전마다 위험 안내를 확인해 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 57}, {"grade_id": "EXPERT", "min_score": 73}, {"grade_id": "MASTER", "min_score": 92}]
+      }
+    },
+    {
+      "stage_id": 4,
+      "title": {"en": "Paper Trails", "ko": "서류의 흔적"},
+      "case_ids": ["false_invoice", "mislabelled_collection", "observatory_instrument"],
+      "introduced_artifact_ids": ["artifact_067", "artifact_068"],
+      "difficulty_multiplier": 1.225043,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case in the document set.", "ko": "서류 묶음의 모든 사건을 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 58,
+        "goal_label": {"en": "Cross-check documents and objects.", "ko": "서류와 실물을 교차 검증하세요."},
+        "failure_label": {"en": "The target was missed without blocking completion.", "ko": "목표 미달은 완료와 해금을 막지 않습니다."},
+        "advice_label": {"en": "Treat a document as one source, not the answer.", "ko": "서류 하나를 정답이 아닌 출처 하나로 다뤄 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 58}, {"grade_id": "EXPERT", "min_score": 74}, {"grade_id": "MASTER", "min_score": 93}]
+      }
+    },
+    {
+      "stage_id": 5,
+      "title": {"en": "Collector's Eye", "ko": "수집가의 눈"},
+      "case_ids": ["collector_promise", "three_cameras", "shadow_camera"],
+      "introduced_artifact_ids": ["artifact_069", "artifact_070"],
+      "difficulty_multiplier": 1.31079601,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case in the collector set.", "ko": "수집가 묶음의 모든 사건을 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 59,
+        "goal_label": {"en": "Support every conclusion with sources.", "ko": "모든 결론을 출처로 뒷받침하세요."},
+        "failure_label": {"en": "The target was missed, yet the clear remains valid.", "ko": "목표에는 못 미쳤지만 클리어는 유효합니다."},
+        "advice_label": {"en": "Cite evidence that supports and challenges the claim.", "ko": "주장을 지지하고 반박하는 증거를 함께 인용해 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 59}, {"grade_id": "EXPERT", "min_score": 75}, {"grade_id": "MASTER", "min_score": 94}]
+      }
+    },
+    {
+      "stage_id": 6,
+      "title": {"en": "The Shadow Mark", "ko": "그림자 표식"},
+      "case_ids": ["shadow_gauge", "shadow_clock", "shadow_music_box"],
+      "introduced_artifact_ids": ["artifact_071", "artifact_072"],
+      "difficulty_multiplier": 1.4025517307,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case in the shadow set.", "ko": "그림자 묶음의 모든 사건을 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 60,
+        "goal_label": {"en": "Manage risk without losing the trail.", "ko": "단서를 놓치지 않으며 위험을 관리하세요."},
+        "failure_label": {"en": "The target was missed; completed cases still count.", "ko": "목표 미달이어도 완료한 사건은 그대로 인정됩니다."},
+        "advice_label": {"en": "Secure low-risk observations before risky actions.", "ko": "위험한 행동 전에 안전한 관찰부터 확보해 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 60}, {"grade_id": "EXPERT", "min_score": 76}, {"grade_id": "MASTER", "min_score": 95}]
+      }
+    },
+    {
+      "stage_id": 7,
+      "title": {"en": "Composite Truths", "ko": "겹쳐진 진실"},
+      "case_ids": ["shadow_optic", "composite_prototype"],
+      "introduced_artifact_ids": ["artifact_073", "artifact_074"],
+      "difficulty_multiplier": 1.500730351849,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case in the composite set.", "ko": "복합 유물 묶음의 모든 사건을 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 61,
+        "goal_label": {"en": "Separate layered histories clearly.", "ko": "겹쳐진 이력을 명확히 구분하세요."},
+        "failure_label": {"en": "The target was missed, not the completion contract.", "ko": "성과 목표만 미달이며 완료 조건은 충족했습니다."},
+        "advice_label": {"en": "Explain which parts agree and which do not.", "ko": "어떤 부분이 맞고 다른지 나누어 설명해 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 61}, {"grade_id": "EXPERT", "min_score": 77}, {"grade_id": "MASTER", "min_score": 95}]
+      }
+    },
+    {
+      "stage_id": 8,
+      "title": {"en": "Master's Bench I", "ko": "장인의 작업대 I"},
+      "case_ids": ["master_chronometer", "master_optical"],
+      "introduced_artifact_ids": ["artifact_075", "artifact_076"],
+      "difficulty_multiplier": 1.60578147647843,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case at the first master bench.", "ko": "첫 장인 작업대의 모든 사건을 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 62,
+        "goal_label": {"en": "Balance precision and conservation.", "ko": "정밀함과 보존을 균형 있게 다루세요."},
+        "failure_label": {"en": "The target was missed without relocking the route.", "ko": "목표 미달로 진행 경로가 다시 잠기지는 않습니다."},
+        "advice_label": {"en": "Plan the least invasive effective intervention.", "ko": "효과가 있으면서 가장 덜 침습적인 수리를 계획해 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 62}, {"grade_id": "EXPERT", "min_score": 78}, {"grade_id": "MASTER", "min_score": 95}]
+      }
+    },
+    {
+      "stage_id": 9,
+      "title": {"en": "Master's Bench II", "ko": "장인의 작업대 II"},
+      "case_ids": ["master_recorder", "master_gauge"],
+      "introduced_artifact_ids": ["artifact_077", "artifact_078"],
+      "difficulty_multiplier": 1.7181861798319202,
+      "includes_grand_reserve": false,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete every case at the second master bench.", "ko": "두 번째 장인 작업대의 모든 사건을 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 63,
+        "goal_label": {"en": "Turn careful findings into a clear sale plan.", "ko": "신중한 조사 결과를 명확한 판매 계획으로 연결하세요."},
+        "failure_label": {"en": "The target was missed; the earned clear is permanent.", "ko": "목표에는 못 미쳤지만 획득한 클리어는 유지됩니다."},
+        "advice_label": {"en": "Match reserve and disclosure to the documented condition.", "ko": "확인된 상태에 맞춰 시작가와 고지를 조정해 보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 63}, {"grade_id": "EXPERT", "min_score": 79}, {"grade_id": "MASTER", "min_score": 95}]
+      }
+    },
+    {
+      "stage_id": 10,
+      "title": {"en": "The Grand Reserve", "ko": "그랜드 리저브"},
+      "case_ids": ["master_camera", "master_mechanism"],
+      "introduced_artifact_ids": ["artifact_079", "artifact_080"],
+      "difficulty_multiplier": 1.8384592124201547,
+      "includes_grand_reserve": true,
+      "completion_contract": {
+        "case_scope": "ALL_STAGE_CASES", "grand_reserve_rule": "FOLLOW_STAGE_FLAG",
+        "unlock_on_completion": true, "performance_affects_unlock": false,
+        "completion_label": {"en": "Complete both cases and the final reserve event.", "ko": "두 사건과 마지막 리저브 이벤트를 완료하세요."}
+      },
+      "performance_target": {
+        "metric_id": "public_stage_score", "operator": "GTE", "target_score": 64,
+        "goal_label": {"en": "Finish with a balanced reserve result.", "ko": "균형 잡힌 리저브 결과로 마무리하세요."},
+        "failure_label": {"en": "The target was missed, but the final clear stands.", "ko": "목표에는 못 미쳤지만 최종 클리어는 유지됩니다."},
+        "advice_label": {"en": "Balance integrity, disclosure, reserve and buyer fit.", "ko": "보존성, 고지, 시작가, 구매자 적합성을 함께 살펴보세요."},
+        "grade_thresholds": [{"grade_id": "DEVELOPING", "min_score": 0}, {"grade_id": "TARGET", "min_score": 64}, {"grade_id": "EXPERT", "min_score": 80}, {"grade_id": "MASTER", "min_score": 95}]
+      }
+    }
+  ]
+}

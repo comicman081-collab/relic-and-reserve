@@ -1,0 +1,236 @@
+{
+  "executed": 4,
+  "failed": 0,
+  "passed": 4,
+  "skipped": 0,
+  "suite": "R3 Character Micro-Reaction UI",
+  "tests": [
+    {
+      "evidence": {
+        "contracts": [
+          {
+            "durationMs": 120,
+            "finalTransform": {
+              "alpha": 1.0,
+              "positionOffset": [
+                0.0,
+                0.0
+              ],
+              "rotationDegrees": 0.0,
+              "scale": [
+                1.0,
+                1.0
+              ]
+            },
+            "kind": "alpha_settle"
+          },
+          {
+            "durationMs": 160,
+            "finalTransform": {
+              "alpha": 1.0,
+              "positionOffset": [
+                0.0,
+                0.0
+              ],
+              "rotationDegrees": 0.0,
+              "scale": [
+                1.0,
+                1.0
+              ]
+            },
+            "kind": "gentle_pop"
+          },
+          {
+            "durationMs": 140,
+            "finalTransform": {
+              "alpha": 1.0,
+              "positionOffset": [
+                0.0,
+                0.0
+              ],
+              "rotationDegrees": 0.0,
+              "scale": [
+                1.0,
+                1.0
+              ]
+            },
+            "kind": "soft_tilt"
+          }
+        ],
+        "failures": []
+      },
+      "executed": true,
+      "id": "MVP-CHARACTER-REACTION-01",
+      "name": "Neutral, positive and negative portraits expose a named child-only reaction anchor with a public 100-180 ms contract",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "anchorAfter": [
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ],
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ],
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ]
+        ],
+        "anchorBefore": [
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ],
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ],
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ]
+        ],
+        "ctaAfter": [
+          708.0,
+          0.0,
+          160.0,
+          330.0
+        ],
+        "ctaBefore": [
+          708.0,
+          0.0,
+          160.0,
+          330.0
+        ],
+        "panelAfter": [
+          [
+            0.0,
+            0.0,
+            220.0,
+            330.0
+          ],
+          [
+            236.0,
+            0.0,
+            220.0,
+            330.0
+          ],
+          [
+            472.0,
+            0.0,
+            220.0,
+            330.0
+          ]
+        ],
+        "panelBefore": [
+          [
+            0.0,
+            0.0,
+            220.0,
+            330.0
+          ],
+          [
+            236.0,
+            0.0,
+            220.0,
+            330.0
+          ],
+          [
+            472.0,
+            0.0,
+            220.0,
+            330.0
+          ]
+        ],
+        "portraitAfter": [
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ],
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ],
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ]
+        ],
+        "portraitBefore": [
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ],
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ],
+          [
+            0.0,
+            0.0,
+            200.0,
+            150.0
+          ]
+        ],
+        "settled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "executed": true,
+      "id": "MVP-CHARACTER-REACTION-02",
+      "name": "Every reaction settles exactly to opaque unit transform while portrait, panel and sibling CTA layout geometry remain unchanged",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "englishCopy": "EARLY 1 · price-tag cord\nRelic Shopkeeper\nShopkeeper\nPURCHASE COMPLETE\nA fine choice.\n",
+        "koreanCopy": "초반 1 · 작은 종\n경매 진행원\n경매 진행\n경매 시작\n경매를 시작합니다.\n초반 1 · 가격표 끈\n유물 상점 주인\n상점 주인\n구매 완료\n좋은 선택이에요.\n초반 1 · 작은 카메오\n개인 수집가\n입찰자\n입찰 포기\n이번에는 물러납니다.\n계속\n",
+        "rawExpressionHidden": true
+      },
+      "executed": true,
+      "id": "MVP-CHARACTER-REACTION-03",
+      "name": "Micro-reactions retain localized semantic and two-line dialogue copy without exposing expression enums",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "dialogues": 1,
+        "hasTween": false,
+        "liveAnchors": 1,
+        "settled": true
+      },
+      "executed": true,
+      "id": "MVP-CHARACTER-REACTION-04",
+      "name": "Deferred and rapid panel rebuilds leave one settled live anchor with no transform drift or lost dialogue",
+      "passed": true
+    }
+  ]
+}

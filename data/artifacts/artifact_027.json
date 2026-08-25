@@ -1,0 +1,56 @@
+{
+  "id": "artifact_027",
+  "displayName": "Gildspire Telescope A",
+  "category": "optical_devices",
+  "baseModel": "model_12.obj",
+  "maker": "maker_07",
+  "modelName": "Model 126",
+  "era": "1916-1928",
+  "materialSet": [
+    "material_12",
+    "material_15"
+  ],
+  "rarity": "rare",
+  "baseValue": 604,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.30000000000000004
+  },
+  "collectorTags": [
+    "optical_devices",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_027"
+}

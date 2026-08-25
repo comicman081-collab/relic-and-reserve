@@ -1,0 +1,376 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage4-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "observatory_instrument",
+  "act_id": "ACT_2",
+  "title": {
+    "en": "Compass on the Meridian",
+    "ko": "자오선 위의 나침반"
+  },
+  "briefing": {
+    "en": "A Kestrel Model 110 arrived from an observatory and is casually described as a telescope accessory. Its dial and sight establish a meridian-and-azimuth reference compass; determine whether the pivot is untouched, period-repaired, or part of a later display assembly.",
+    "ko": "천문대에서 온 케스트럴 모델 110이 흔히 망원경 부속품으로 소개된다. 그러나 다이얼과 조준기는 자오선·방위 기준 나침반을 가리킨다. 피벗이 원형인지, 당대 수리를 받았는지, 후대 전시 조립품의 일부인지 판단하라."
+  },
+  "central_question": {
+    "en": "Is this observatory compass untouched, a genuine period instrument with a documented pivot repair, or a later display assembly fitted into an old case?",
+    "ko": "이 천문대 나침반은 손대지 않은 원형인가, 기록된 피벗 수리를 받은 진품 당대 기구인가, 아니면 오래된 케이스에 넣은 후대 전시 조립품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, observatories, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 천문대와 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report identifies the object as a genuine Kestrel observatory compass and discloses its period pivot repair without calling it a telescope or later display composite.",
+    "ko": "보고서는 물건을 진품 케스트럴 천문대 나침반으로 확인하고 망원경이나 후대 전시 혼합품으로 오인하지 않으면서 당대 피벗 수리를 고지한다."
+  },
+  "failure": {
+    "en": "The compass remains in review while Dr. Hana Mire revisits instrument function and repair chronology.",
+    "ko": "나침반은 검토 상태로 남고, 하나 미레 박사와 함께 기구의 기능과 수리 순서를 다시 확인한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 4 campaign desk.",
+      "ko": "스테이지 4 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "remove_pivot_cap_without_alignment_capture",
+        "source_ref": "src.observatory_instrument.artifact.pivot_repair_sequence",
+        "warning": {
+          "en": "Removing the pivot cap before recording its alignment can erase the repair sequence.",
+          "ko": "정렬 상태를 기록하기 전에 피벗 캡을 제거하면 수리 순서의 흔적이 사라질 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A report that confuses an observatory compass with a telescope or treats a period repair as a later composite is reviewed with Dr. Mire.",
+        "ko": "천문대 나침반을 망원경으로 혼동하거나 당대 수리를 후대 혼합으로 판단한 보고서는 미레 박사와 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_011",
+    "legacy_story_artifact_id": "story_artifact_12",
+    "display_name": {
+      "en": "Kestrel Compass K",
+      "ko": "케스트럴 나침반 K"
+    },
+    "authoring_truth_hypothesis_id": "hyp.observatory_instrument.genuine_period_pivot_repair",
+    "player_prompt": {
+      "en": "Identify the Model 110 as a meridian-and-azimuth reference compass, then establish the pivot repair's date and scope.",
+      "ko": "모델 110을 자오선·방위 기준 나침반으로 식별한 뒤 피벗 수리의 시기와 범위를 확인하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.observatory_instrument.untouched_observatory_compass",
+      "label": {"en": "Untouched observatory compass", "ko": "손대지 않은 천문대 나침반"},
+      "claim": {
+        "en": "The Kestrel compass remains exactly as produced, including its original pivot and jewel bearing.",
+        "ko": "케스트럴 나침반은 원래 피벗과 보석 베어링을 포함해 출고 당시 그대로 남아 있다."
+      }
+    },
+    {
+      "id": "hyp.observatory_instrument.genuine_period_pivot_repair",
+      "label": {"en": "Genuine with period pivot repair", "ko": "당대 피벗 수리를 받은 진품"},
+      "claim": {
+        "en": "The Model 110 observatory compass is genuine, and its worn pivot and jewel bearing were repaired during its working life with period Kestrel parts.",
+        "ko": "모델 110 천문대 나침반은 진품이며 닳은 피벗과 보석 베어링은 사용 시기에 당대 케스트럴 부품으로 수리되었다."
+      }
+    },
+    {
+      "id": "hyp.observatory_instrument.later_display_assembly_old_case",
+      "label": {"en": "Later display assembly in an old case", "ko": "오래된 케이스의 후대 전시 조립품"},
+      "claim": {
+        "en": "A later display maker installed unrelated directional parts in an old case and presented the result as an observatory instrument.",
+        "ko": "후대 전시 제작자가 오래된 케이스에 무관한 방향 측정 부품을 넣고 천문대 기구로 소개했다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.observatory_instrument.artifact.meridian_dial_material",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_011",
+      "reliability": "HIGH",
+      "label": {"en": "Meridian dial", "ko": "자오선 다이얼"},
+      "short_observation": {
+        "en": "The dial and sight form a period azimuth compass.",
+        "ko": "다이얼과 조준기가 당대 방위 나침반을 이룬다."
+      },
+      "text": {
+        "en": "A calibrated material scan finds one period alloy family across the Model 110 case, azimuth ring, meridian sight, and compass bowl. The sight reads a horizontal bearing against the meridian mark; there is no lens tube or optical focus path, so this is not a telescope.",
+        "ko": "보정된 재료 스캔에서 모델 110 케이스, 방위 고리, 자오선 조준기와 나침반 그릇이 하나의 당대 합금 계열로 확인된다. 조준기는 자오선 표시에 맞춰 수평 방위를 읽으며 렌즈 통이나 광학 초점 경로가 없어 망원경이 아니다."
+      },
+      "unlock": {
+        "action": "scan_material",
+        "target": "meridian_dial_and_case",
+        "requires": ["material_scanner"],
+        "action_label": {"en": "Scan dial materials", "ko": "다이얼 재료 스캔"},
+        "target_label": {"en": "Meridian dial and case", "ko": "자오선 다이얼과 케이스"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Use one low-power pass around the painted meridian mark to avoid warming its binder.",
+          "ko": "도료 결합제가 달아오르지 않도록 자오선 표시 둘레를 저출력으로 한 번만 스캔하라."
+        }
+      },
+      "independence": {"group": "physical_observatory_identity", "depends_on": []},
+      "citation_id": "cite.observatory_instrument.artifact.meridian_dial_material"
+    },
+    {
+      "source_ref": "src.observatory_instrument.artifact.pivot_repair_sequence",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_011",
+      "reliability": "HIGH",
+      "label": {"en": "Pivot repair", "ko": "피벗 수리"},
+      "short_observation": {
+        "en": "Period tool marks reveal a fitted pivot and jewel.",
+        "ko": "당대 공구 흔적이 맞춤 피벗과 보석 베어링을 드러낸다."
+      },
+      "text": {
+        "en": "After the cap alignment is photographed, precision disassembly reveals an older seating scar beneath a fitted pivot and jewel bearing. Matching oxidation bridges the replacement parts and surrounding plate, while Kestrel service punch marks predate the final working wear.",
+        "ko": "캡 정렬을 촬영한 뒤 정밀 분해하자 맞춤 피벗과 보석 베어링 아래에 이전 안착 흔적이 드러난다. 교체 부품과 주변 판을 잇는 산화가 일치하고 케스트럴 정비 타각은 마지막 사용 마모보다 앞선다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "pivot_cap",
+        "requires": [
+          "src.observatory_instrument.artifact.meridian_dial_material",
+          "precision_screwdriver"
+        ],
+        "action_label": {"en": "Open pivot cap", "ko": "피벗 캡 열기"},
+        "target_label": {"en": "Compass pivot cap", "ko": "나침반 피벗 캡"}
+      },
+      "risk": {
+        "destroyed_by": ["remove_pivot_cap_without_alignment_capture"],
+        "player_warning": {
+          "en": "Photograph the cap alignment before loosening it; a shifted index can erase the repair sequence.",
+          "ko": "캡을 풀기 전에 정렬 상태를 촬영하라. 기준점이 움직이면 수리 순서를 판별할 흔적이 사라질 수 있다."
+        }
+      },
+      "independence": {
+        "group": "internal_pivot_sequence",
+        "depends_on": ["src.observatory_instrument.artifact.meridian_dial_material"]
+      },
+      "citation_id": "cite.observatory_instrument.artifact.pivot_repair_sequence"
+    },
+    {
+      "source_ref": "src.observatory_instrument.document.auction_receipt",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_23",
+      "document_id": "doc.observatory_instrument.observatory_transfer_receipt",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Observatory transfer receipt", "ko": "천문대 이관 영수증"},
+      "short_observation": {
+        "en": "The receipt tracks the numbered compass from its observatory.",
+        "ko": "영수증이 번호가 있는 나침반의 천문대 이력을 잇는다."
+      },
+      "text": {
+        "en": "The fictional transfer receipt lists a Kestrel Model 110 meridian-and-azimuth compass by its case number and observatory station. It records the same dent and dial range seen today and calls the object a compass, not a telescope.",
+        "ko": "가상의 이관 영수증은 케이스 번호와 천문대 관측 지점으로 케스트럴 모델 110 자오선·방위 나침반을 특정한다. 현재와 같은 찌그러짐과 다이얼 범위를 기록하며 물건을 망원경이 아니라 나침반이라고 부른다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "observatory_transfer_receipt",
+        "requires": [],
+        "action_label": {"en": "Read transfer receipt", "ko": "이관 영수증 읽기"},
+        "target_label": {"en": "Observatory transfer receipt", "ko": "천문대 이관 영수증"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "observatory_transfer_chain", "depends_on": []},
+      "citation_id": "cite.observatory_instrument.document.auction_receipt"
+    },
+    {
+      "source_ref": "src.observatory_instrument.document.pivot_service_card",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_24",
+      "document_id": "doc.observatory_instrument.pivot_service_card",
+      "reliability": "HIGH",
+      "label": {"en": "Pivot service card", "ko": "피벗 정비 카드"},
+      "short_observation": {
+        "en": "The service card dates the pivot repair to working life.",
+        "ko": "정비 카드가 피벗 수리를 사용 시기로 확정한다."
+      },
+      "text": {
+        "en": "The fictional Kestrel service card matches the punch sequence exposed beneath the cap. It records fitting a new pivot and jewel bearing during the compass's working life, but contains no ownership transfer and therefore is not provenance.",
+        "ko": "가상의 케스트럴 정비 카드는 캡 아래에서 확인한 타각 순서와 일치한다. 나침반 사용 시기에 새 피벗과 보석 베어링을 맞췄다고 기록하지만 소유권 이전 내용이 없어 소장 이력 증거는 아니다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "pivot_service_card",
+        "requires": [
+          "src.observatory_instrument.artifact.pivot_repair_sequence",
+          "src.observatory_instrument.document.auction_receipt"
+        ],
+        "action_label": {"en": "Match service card", "ko": "정비 카드 대조"},
+        "target_label": {"en": "Pivot service card", "ko": "피벗 정비 카드"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "period_service_record",
+        "depends_on": [
+          "src.observatory_instrument.artifact.pivot_repair_sequence",
+          "src.observatory_instrument.document.auction_receipt"
+        ]
+      },
+      "citation_id": "cite.observatory_instrument.document.pivot_service_card"
+    },
+    {
+      "source_ref": "src.observatory_instrument.npc.hana_meridian_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "hana_mire",
+      "npc_id": "hana_mire",
+      "expression": "positive",
+      "reliability": "MEDIUM",
+      "label": {"en": "Dr. Hana Mire's instrument review", "ko": "하나 미레 박사의 기구 검토"},
+      "short_observation": {
+        "en": "Dr. Hana Mire confirms compass function and limited repair scope.",
+        "ko": "하나 미레 박사가 나침반 기능과 제한된 수리 범위를 확인한다."
+      },
+      "text": {
+        "en": "Dr. Hana Mire explains that an observatory used this compass to transfer a meridian reference and check azimuth before other observations. The receipt establishes custody; the service card and physical punch marks independently limit the intervention to the pivot assembly.",
+        "ko": "하나 미레 박사는 천문대가 다른 관측에 앞서 자오선 기준을 옮기고 방위를 확인하는 데 이 나침반을 사용했다고 설명한다. 이관 영수증은 소장 이력을, 정비 카드와 실물 타각은 수리가 피벗 조립부에 한정됐음을 각각 보여 준다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "hana_mire",
+        "requires": [
+          "src.observatory_instrument.document.auction_receipt",
+          "src.observatory_instrument.document.pivot_service_card"
+        ],
+        "action_label": {"en": "Ask Dr. Mire", "ko": "미레 박사에게 묻기"},
+        "target_label": {"en": "Dr. Hana Mire", "ko": "하나 미레 박사"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "curator_instrument_context",
+        "depends_on": [
+          "src.observatory_instrument.document.auction_receipt",
+          "src.observatory_instrument.document.pivot_service_card"
+        ]
+      },
+      "citation_id": "cite.observatory_instrument.npc.hana_meridian_context"
+    },
+    {
+      "source_ref": "src.observatory_instrument.reference.kestrel_model110_guide",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "history_11",
+      "reference_id": "ref.kestrel.model110_observatory_guide",
+      "reliability": "HIGH",
+      "label": {"en": "Kestrel model guide", "ko": "케스트럴 모델 안내서"},
+      "short_observation": {
+        "en": "The guide matches compass construction and period repair marks.",
+        "ko": "안내서가 나침반 구조와 당대 수리 표식을 확인한다."
+      },
+      "text": {
+        "en": "The fictional Kestrel guide identifies Model 110 as a meridian-and-azimuth reference compass and matches its case, sight, and dial construction. A service appendix illustrates the same period pivot punch pattern; later display copies use a decorative optical tube absent here.",
+        "ko": "가상의 케스트럴 안내서는 모델 110을 자오선·방위 기준 나침반으로 분류하고 케이스, 조준기와 다이얼 구조를 실물과 연결한다. 정비 부록은 같은 당대 피벗 타각 방식을 보여 주며 후대 전시 복제품에는 이 실물에 없는 장식용 광학 통이 달려 있다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": [
+          "src.observatory_instrument.artifact.meridian_dial_material",
+          "reference_database"
+        ],
+        "action_label": {"en": "Search model guide", "ko": "모델 안내서 검색"},
+        "target_label": {"en": "Kestrel maker archive", "ko": "케스트럴 제작사 기록"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "independent_model_reference",
+        "depends_on": ["src.observatory_instrument.artifact.meridian_dial_material"]
+      },
+      "citation_id": "cite.observatory_instrument.reference.kestrel_model110_guide"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.observatory_instrument.artifact.meridian_dial_material",
+      "source_ref": "src.observatory_instrument.artifact.meridian_dial_material",
+      "label": {"en": "Object scan: meridian compass construction", "ko": "실물 스캔: 자오선 나침반 구조"},
+      "locator": {"en": "Material record A-1, dial and meridian sight", "ko": "재료 기록 A-1, 다이얼과 자오선 조준기"}
+    },
+    {
+      "id": "cite.observatory_instrument.artifact.pivot_repair_sequence",
+      "source_ref": "src.observatory_instrument.artifact.pivot_repair_sequence",
+      "label": {"en": "Object record: pivot repair sequence", "ko": "실물 기록: 피벗 수리 순서"},
+      "locator": {"en": "Precision record A-2, aligned pivot cap", "ko": "정밀 기록 A-2, 정렬된 피벗 캡"}
+    },
+    {
+      "id": "cite.observatory_instrument.document.auction_receipt",
+      "source_ref": "src.observatory_instrument.document.auction_receipt",
+      "label": {"en": "Observatory transfer receipt", "ko": "천문대 이관 영수증"},
+      "locator": {"en": "Case document D-23, numbered instrument entry", "ko": "사건 문서 D-23, 기구 번호 항목"}
+    },
+    {
+      "id": "cite.observatory_instrument.document.pivot_service_card",
+      "source_ref": "src.observatory_instrument.document.pivot_service_card",
+      "label": {"en": "Kestrel pivot service card", "ko": "케스트럴 피벗 정비 카드"},
+      "locator": {"en": "Case document D-24, pivot and jewel line", "ko": "사건 문서 D-24, 피벗과 보석 베어링 항목"}
+    },
+    {
+      "id": "cite.observatory_instrument.npc.hana_meridian_context",
+      "source_ref": "src.observatory_instrument.npc.hana_meridian_context",
+      "label": {"en": "Interview with Dr. Hana Mire", "ko": "하나 미레 박사 면담"},
+      "locator": {"en": "Curatorial interview N-23", "ko": "큐레이터 면담 N-23"}
+    },
+    {
+      "id": "cite.observatory_instrument.reference.kestrel_model110_guide",
+      "source_ref": "src.observatory_instrument.reference.kestrel_model110_guide",
+      "label": {"en": "Kestrel Model 110 observatory guide", "ko": "케스트럴 모델 110 천문대 안내서"},
+      "locator": {"en": "Fictional maker archive H-11, compass plate 2", "ko": "가상 제작사 기록 H-11, 나침반 도판 2"}
+    }
+  ],
+  "evidence_links": [
+    {"id": "link.observatory.dial_supports_untouched", "source_ref": "src.observatory_instrument.artifact.meridian_dial_material", "hypothesis_id": "hyp.observatory_instrument.untouched_observatory_compass", "relation": "SUPPORT", "weight": 0.45, "independence_group": "physical_observatory_identity", "citation_id": "cite.observatory_instrument.artifact.meridian_dial_material"},
+    {"id": "link.observatory.dial_supports_repair", "source_ref": "src.observatory_instrument.artifact.meridian_dial_material", "hypothesis_id": "hyp.observatory_instrument.genuine_period_pivot_repair", "relation": "SUPPORT", "weight": 0.8, "independence_group": "physical_observatory_identity", "citation_id": "cite.observatory_instrument.artifact.meridian_dial_material"},
+    {"id": "link.observatory.dial_refutes_display", "source_ref": "src.observatory_instrument.artifact.meridian_dial_material", "hypothesis_id": "hyp.observatory_instrument.later_display_assembly_old_case", "relation": "REFUTE", "weight": 0.9, "independence_group": "physical_observatory_identity", "citation_id": "cite.observatory_instrument.artifact.meridian_dial_material"},
+    {"id": "link.observatory.pivot_refutes_untouched", "source_ref": "src.observatory_instrument.artifact.pivot_repair_sequence", "hypothesis_id": "hyp.observatory_instrument.untouched_observatory_compass", "relation": "REFUTE", "weight": 1.0, "independence_group": "internal_pivot_sequence", "citation_id": "cite.observatory_instrument.artifact.pivot_repair_sequence"},
+    {"id": "link.observatory.pivot_supports_repair", "source_ref": "src.observatory_instrument.artifact.pivot_repair_sequence", "hypothesis_id": "hyp.observatory_instrument.genuine_period_pivot_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "internal_pivot_sequence", "citation_id": "cite.observatory_instrument.artifact.pivot_repair_sequence"},
+    {"id": "link.observatory.pivot_refutes_display", "source_ref": "src.observatory_instrument.artifact.pivot_repair_sequence", "hypothesis_id": "hyp.observatory_instrument.later_display_assembly_old_case", "relation": "REFUTE", "weight": 0.85, "independence_group": "internal_pivot_sequence", "citation_id": "cite.observatory_instrument.artifact.pivot_repair_sequence"},
+    {"id": "link.observatory.receipt_supports_untouched", "source_ref": "src.observatory_instrument.document.auction_receipt", "hypothesis_id": "hyp.observatory_instrument.untouched_observatory_compass", "relation": "SUPPORT", "weight": 0.35, "independence_group": "observatory_transfer_chain", "citation_id": "cite.observatory_instrument.document.auction_receipt"},
+    {"id": "link.observatory.receipt_supports_repair", "source_ref": "src.observatory_instrument.document.auction_receipt", "hypothesis_id": "hyp.observatory_instrument.genuine_period_pivot_repair", "relation": "SUPPORT", "weight": 0.8, "independence_group": "observatory_transfer_chain", "citation_id": "cite.observatory_instrument.document.auction_receipt"},
+    {"id": "link.observatory.receipt_refutes_display", "source_ref": "src.observatory_instrument.document.auction_receipt", "hypothesis_id": "hyp.observatory_instrument.later_display_assembly_old_case", "relation": "REFUTE", "weight": 0.9, "independence_group": "observatory_transfer_chain", "citation_id": "cite.observatory_instrument.document.auction_receipt"},
+    {"id": "link.observatory.service_refutes_untouched", "source_ref": "src.observatory_instrument.document.pivot_service_card", "hypothesis_id": "hyp.observatory_instrument.untouched_observatory_compass", "relation": "REFUTE", "weight": 0.95, "independence_group": "period_service_record", "citation_id": "cite.observatory_instrument.document.pivot_service_card"},
+    {"id": "link.observatory.service_supports_repair", "source_ref": "src.observatory_instrument.document.pivot_service_card", "hypothesis_id": "hyp.observatory_instrument.genuine_period_pivot_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "period_service_record", "citation_id": "cite.observatory_instrument.document.pivot_service_card"},
+    {"id": "link.observatory.service_refutes_display", "source_ref": "src.observatory_instrument.document.pivot_service_card", "hypothesis_id": "hyp.observatory_instrument.later_display_assembly_old_case", "relation": "REFUTE", "weight": 0.75, "independence_group": "period_service_record", "citation_id": "cite.observatory_instrument.document.pivot_service_card"},
+    {"id": "link.observatory.hana_refutes_untouched", "source_ref": "src.observatory_instrument.npc.hana_meridian_context", "hypothesis_id": "hyp.observatory_instrument.untouched_observatory_compass", "relation": "REFUTE", "weight": 0.75, "independence_group": "curator_instrument_context", "citation_id": "cite.observatory_instrument.npc.hana_meridian_context"},
+    {"id": "link.observatory.hana_supports_repair", "source_ref": "src.observatory_instrument.npc.hana_meridian_context", "hypothesis_id": "hyp.observatory_instrument.genuine_period_pivot_repair", "relation": "SUPPORT", "weight": 0.8, "independence_group": "curator_instrument_context", "citation_id": "cite.observatory_instrument.npc.hana_meridian_context"},
+    {"id": "link.observatory.guide_supports_repair", "source_ref": "src.observatory_instrument.reference.kestrel_model110_guide", "hypothesis_id": "hyp.observatory_instrument.genuine_period_pivot_repair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "independent_model_reference", "citation_id": "cite.observatory_instrument.reference.kestrel_model110_guide"},
+    {"id": "link.observatory.guide_refutes_display", "source_ref": "src.observatory_instrument.reference.kestrel_model110_guide", "hypothesis_id": "hyp.observatory_instrument.later_display_assembly_old_case", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_model_reference", "citation_id": "cite.observatory_instrument.reference.kestrel_model110_guide"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.observatory_instrument.genuine_period_pivot_repair",
+    "required_source_refs": [
+      "src.observatory_instrument.artifact.meridian_dial_material",
+      "src.observatory_instrument.artifact.pivot_repair_sequence",
+      "src.observatory_instrument.document.auction_receipt",
+      "src.observatory_instrument.document.pivot_service_card"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings from four independent groups. Identify the instrument as a meridian-and-azimuth compass, establish its observatory continuity, and distinguish a period pivot repair from untouched condition or later display assembly.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 기구를 자오선·방위 나침반으로 식별하고 천문대 이력의 연속성을 밝히며 당대 피벗 수리를 원형 상태나 후대 전시 조립과 구분하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "minimum_citations": 2},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "algorithm": "SHA-256",
+  "policy": "Authored-v2 files are immutable to generated-content scripts. Intentional editorial changes require an explicit lock update.",
+  "files": [
+    {
+      "path": "data/cases/authored_v2/false_invoice.json",
+      "case_id": "false_invoice",
+      "sha256": "b6c8086791ae7f1dbd3adba41dfa80d044b242477d8a9a3efe663d355ae3bf41"
+    },
+    {
+      "path": "data/cases/authored_v2/prologue.json",
+      "case_id": "prologue_clock",
+      "sha256": "5a3bd4378fe982e4552bfcc917b2c63bcf7c63b315aa9348790fadcf276c5e59"
+    },
+    {
+      "path": "data/cases/authored_v2/shadow_camera.json",
+      "case_id": "shadow_camera",
+      "sha256": "09fd2bc681ae4897b1d2cac324996bda80f4f21d07f0d5d0823a1cb07acf0664"
+    },
+    {
+      "path": "data/cases/authored_v2/estate_compass.json",
+      "case_id": "estate_compass",
+      "sha256": "d16b88839f1ec22a8bd5512fcdd7bd8ca58f388d0346fc1d3752ad4c01d6bc78"
+    },
+    {
+      "path": "data/cases/authored_v2/leave_patina.json",
+      "case_id": "leave_patina",
+      "sha256": "019fef2b531746a9a3a29fd558a648b78c00595e3524f8f9397f55b2dd35eabc"
+    },
+    {
+      "path": "data/cases/authored_v2/pawn_watch.json",
+      "case_id": "pawn_watch",
+      "sha256": "f8f5e4ed89ec65e6e7bf502fa3e2844eceaf478a8e2c6d798a8dccf8dba45130"
+    },
+    {
+      "path": "data/cases/authored_v2/garage_lamp.json",
+      "case_id": "garage_lamp",
+      "sha256": "0f5fc9eda831b085a6743ca2d8073052b9b72d6b6e5545afda248c7868cc584c"
+    },
+    {
+      "path": "data/cases/authored_v2/telephone_trace.json",
+      "case_id": "telephone_trace",
+      "sha256": "4ac02c4b7717846970687498c4f3e6af689b742aabf1197dbb2d0a191ae23a7d"
+    },
+    {
+      "path": "data/cases/authored_v2/early_camera.json",
+      "case_id": "early_camera",
+      "sha256": "dbccd5507e2671f3b677956c6411f4e2a604f38ce35b3d95c78f4bbe2e9ccb8e"
+    },
+    {
+      "path": "data/cases/authored_v2/mislabelled_collection.json",
+      "case_id": "mislabelled_collection",
+      "sha256": "97c58af4fabe6e501c324adc88768b2ea381eed02974689be6e7655cd6e0425f"
+    },
+    {
+      "path": "data/cases/authored_v2/observatory_instrument.json",
+      "case_id": "observatory_instrument",
+      "sha256": "1c2f10e9a9d1cf86a287adadd817209385f8b0cb3fca5fcddd932702ccef7c7e"
+    },
+    {
+      "path": "data/cases/authored_v2/collector_promise.json",
+      "case_id": "collector_promise",
+      "sha256": "93884aa79b70dc26a816a814e17a5cda85cb76e6c7c1a659448a04f2b9b7102c"
+    },
+    {
+      "path": "data/cases/authored_v2/three_cameras.json",
+      "case_id": "three_cameras",
+      "sha256": "17b80e4e9ccaf82d35a38c5cba6b80ae7f41fd1af1a0413a5110947c6f09bd25"
+    },
+    {
+      "path": "data/cases/authored_v2/shadow_gauge.json",
+      "case_id": "shadow_gauge",
+      "sha256": "23959a9ffe1cd3467acc575abc4ca0625039aa761030f7104161b7b77dde50ab"
+    },
+    {
+      "path": "data/cases/authored_v2/shadow_clock.json",
+      "case_id": "shadow_clock",
+      "sha256": "9ec3201b3e2a813a29dce69317448d006076dbb506d8df07da66aad824b99f4f"
+    },
+    {
+      "path": "data/cases/authored_v2/shadow_music_box.json",
+      "case_id": "shadow_music_box",
+      "sha256": "ce37e91db41df048f9a78f59db7163816c2a70324094ae5758700641875e8acd"
+    },
+    {
+      "path": "data/cases/authored_v2/shadow_optic.json",
+      "case_id": "shadow_optic",
+      "sha256": "811aadf5b6e5b95b012fbb47647b983ba3a2a345a789c67768f836645635ee8c"
+    },
+    {
+      "path": "data/cases/authored_v2/composite_prototype.json",
+      "case_id": "composite_prototype",
+      "sha256": "0bef63f495ec04ef3942e51b487f38269608aa0b9affb1bf6088b572b7d3e79d"
+    },
+    {
+      "path": "data/cases/authored_v2/master_chronometer.json",
+      "case_id": "master_chronometer",
+      "sha256": "4e193e421c7d3584f9a5069988ea961223d7e28ad925664bb0494ae4708f7f74"
+    },
+    {
+      "path": "data/cases/authored_v2/master_optical.json",
+      "case_id": "master_optical",
+      "sha256": "6dc4561574c32a3b9ad4a217797806cbe4fb15776e5dce39e30bd2213d4f26af"
+    },
+    {
+      "path": "data/cases/authored_v2/master_recorder.json",
+      "case_id": "master_recorder",
+      "sha256": "2967ce77b4c295bbf7a18539f3623de1a9a297459cf62b0226cd90449e08c2df"
+    },
+    {
+      "path": "data/cases/authored_v2/master_gauge.json",
+      "case_id": "master_gauge",
+      "sha256": "e60877979752b6cdb9d245f2d7551e3f92658c3ab73eab59cdd389ec375f32ee"
+    }
+  ]
+}

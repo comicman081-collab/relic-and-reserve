@@ -1,0 +1,145 @@
+{
+  "low_vertex_meshes": [
+    {
+      "path": "assets/artifacts/model_01.obj",
+      "vertices": 280,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_02.obj",
+      "vertices": 280,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_03.obj",
+      "vertices": 96,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_04.obj",
+      "vertices": 208,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_05.obj",
+      "vertices": 208,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_06.obj",
+      "vertices": 104,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_07.obj",
+      "vertices": 256,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_08.obj",
+      "vertices": 356,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_09.obj",
+      "vertices": 384,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_10.obj",
+      "vertices": 80,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_11.obj",
+      "vertices": 72,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_12.obj",
+      "vertices": 200,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_13.obj",
+      "vertices": 280,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_14.obj",
+      "vertices": 280,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/model_15.obj",
+      "vertices": 96,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/clock.obj",
+      "vertices": 280,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/camera.obj",
+      "vertices": 280,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/radio.obj",
+      "vertices": 96,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/music_box.obj",
+      "vertices": 208,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/typewriter.obj",
+      "vertices": 208,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/telephone.obj",
+      "vertices": 104,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/watch.obj",
+      "vertices": 256,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/vase.obj",
+      "vertices": 356,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/binoculars.obj",
+      "vertices": 384,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/record_player.obj",
+      "vertices": 80,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/compass.obj",
+      "vertices": 72,
+      "placeholder": false
+    },
+    {
+      "path": "assets/artifacts/gauge.obj",
+      "vertices": 200,
+      "placeholder": false
+    }
+  ],
+  "duplicate_svg_hashes": [],
+  "zero_byte_files": [
+    "qa/R2_REPORT_SUMMARY.json",
+    ".godot/editor/script_editor_cache.cfg"
+  ],
+  "stub_scripts": []
+}

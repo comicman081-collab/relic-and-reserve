@@ -1,0 +1,55 @@
+{
+  "id": "artifact_044",
+  "displayName": "Dovetail Vintage Fan R",
+  "category": "mechanical_instruments",
+  "baseModel": "model_14.obj",
+  "maker": "maker_04",
+  "modelName": "Model 143",
+  "era": "1908-1920",
+  "materialSet": [
+    "material_14",
+    "material_02"
+  ],
+  "rarity": "very_rare",
+  "baseValue": 927,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.5
+  },
+  "collectorTags": [
+    "mechanical_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_044"
+}

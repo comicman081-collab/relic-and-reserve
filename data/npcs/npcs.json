@@ -1,0 +1,178 @@
+[
+  {
+    "id": "mara_venn",
+    "displayName": "Mara Venn",
+    "role": "Veteran Restorer",
+    "specialties": [
+      "mechanical"
+    ],
+    "budgetTier": 3,
+    "personality": "measured",
+    "riskTolerance": 0.45,
+    "authenticityPriority": 0.75,
+    "historicalIntegrityPriority": 0.78,
+    "restorationPreference": "minimal intervention",
+    "startingRelationship": 0,
+    "startingTrust": 0,
+    "expressions": {
+      "neutral": "res://assets/portraits/mara_venn_neutral.svg",
+      "positive": "res://assets/portraits/mara_venn_positive.svg",
+      "concerned": "res://assets/portraits/mara_venn_concerned.svg",
+      "surprised": "res://assets/portraits/mara_venn_surprised.svg"
+    }
+  },
+  {
+    "id": "elias_rowe",
+    "displayName": "Elias Rowe",
+    "role": "Regional Auctioneer",
+    "specialties": [
+      "auction"
+    ],
+    "budgetTier": 3,
+    "personality": "energetic",
+    "riskTolerance": 0.45,
+    "authenticityPriority": 0.75,
+    "historicalIntegrityPriority": 0.78,
+    "restorationPreference": "minimal intervention",
+    "startingRelationship": 0,
+    "startingTrust": 0,
+    "expressions": {
+      "neutral": "res://assets/portraits/elias_rowe_neutral.svg",
+      "positive": "res://assets/portraits/elias_rowe_positive.svg",
+      "concerned": "res://assets/portraits/elias_rowe_concerned.svg",
+      "surprised": "res://assets/portraits/elias_rowe_surprised.svg"
+    }
+  },
+  {
+    "id": "hana_mire",
+    "displayName": "Dr. Hana Mire",
+    "role": "Museum Curator",
+    "specialties": [
+      "scientific"
+    ],
+    "budgetTier": 3,
+    "personality": "precise",
+    "riskTolerance": 0.45,
+    "authenticityPriority": 0.75,
+    "historicalIntegrityPriority": 0.78,
+    "restorationPreference": "minimal intervention",
+    "startingRelationship": 0,
+    "startingTrust": 0,
+    "expressions": {
+      "neutral": "res://assets/portraits/hana_mire_neutral.svg",
+      "positive": "res://assets/portraits/hana_mire_positive.svg",
+      "concerned": "res://assets/portraits/hana_mire_concerned.svg",
+      "surprised": "res://assets/portraits/hana_mire_surprised.svg"
+    }
+  },
+  {
+    "id": "victor_hale",
+    "displayName": "Victor Hale",
+    "role": "Collector",
+    "specialties": [
+      "optical"
+    ],
+    "budgetTier": 3,
+    "personality": "formal",
+    "riskTolerance": 0.45,
+    "authenticityPriority": 0.75,
+    "historicalIntegrityPriority": 0.78,
+    "restorationPreference": "minimal intervention",
+    "startingRelationship": 0,
+    "startingTrust": 0,
+    "expressions": {
+      "neutral": "res://assets/portraits/victor_hale_neutral.svg",
+      "positive": "res://assets/portraits/victor_hale_positive.svg",
+      "concerned": "res://assets/portraits/victor_hale_concerned.svg",
+      "surprised": "res://assets/portraits/victor_hale_surprised.svg"
+    }
+  },
+  {
+    "id": "noah_stern",
+    "displayName": "Noah Stern",
+    "role": "Archive Researcher",
+    "specialties": [
+      "documentary"
+    ],
+    "budgetTier": 3,
+    "personality": "curious",
+    "riskTolerance": 0.45,
+    "authenticityPriority": 0.75,
+    "historicalIntegrityPriority": 0.78,
+    "restorationPreference": "minimal intervention",
+    "startingRelationship": 0,
+    "startingTrust": 0,
+    "expressions": {
+      "neutral": "res://assets/portraits/noah_stern_neutral.svg",
+      "positive": "res://assets/portraits/noah_stern_positive.svg",
+      "concerned": "res://assets/portraits/noah_stern_concerned.svg",
+      "surprised": "res://assets/portraits/noah_stern_surprised.svg"
+    }
+  },
+  {
+    "id": "lena_falk",
+    "displayName": "Lena Falk",
+    "role": "Dealer / Rival",
+    "specialties": [
+      "market"
+    ],
+    "budgetTier": 3,
+    "personality": "direct",
+    "riskTolerance": 0.45,
+    "authenticityPriority": 0.75,
+    "historicalIntegrityPriority": 0.78,
+    "restorationPreference": "minimal intervention",
+    "startingRelationship": 0,
+    "startingTrust": 0,
+    "expressions": {
+      "neutral": "res://assets/portraits/lena_falk_neutral.svg",
+      "positive": "res://assets/portraits/lena_falk_positive.svg",
+      "concerned": "res://assets/portraits/lena_falk_concerned.svg",
+      "surprised": "res://assets/portraits/lena_falk_surprised.svg"
+    }
+  },
+  {
+    "id": "iris_bell",
+    "displayName": "Iris Bell",
+    "role": "Conservation Specialist",
+    "specialties": [
+      "decorative"
+    ],
+    "budgetTier": 3,
+    "personality": "warm",
+    "riskTolerance": 0.45,
+    "authenticityPriority": 0.75,
+    "historicalIntegrityPriority": 0.78,
+    "restorationPreference": "minimal intervention",
+    "startingRelationship": 0,
+    "startingTrust": 0,
+    "expressions": {
+      "neutral": "res://assets/portraits/iris_bell_neutral.svg",
+      "positive": "res://assets/portraits/iris_bell_positive.svg",
+      "concerned": "res://assets/portraits/iris_bell_concerned.svg",
+      "surprised": "res://assets/portraits/iris_bell_surprised.svg"
+    }
+  },
+  {
+    "id": "dorian_vale",
+    "displayName": "Dorian Vale",
+    "role": "Grand Reserve Representative",
+    "specialties": [
+      "reserve"
+    ],
+    "budgetTier": 3,
+    "personality": "ceremonial",
+    "riskTolerance": 0.45,
+    "authenticityPriority": 0.75,
+    "historicalIntegrityPriority": 0.78,
+    "restorationPreference": "minimal intervention",
+    "startingRelationship": 0,
+    "startingTrust": 0,
+    "expressions": {
+      "neutral": "res://assets/portraits/dorian_vale_neutral.svg",
+      "positive": "res://assets/portraits/dorian_vale_positive.svg",
+      "concerned": "res://assets/portraits/dorian_vale_concerned.svg",
+      "surprised": "res://assets/portraits/dorian_vale_surprised.svg"
+    }
+  }
+]

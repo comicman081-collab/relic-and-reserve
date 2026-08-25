@@ -1,0 +1,59 @@
+{
+  "id": "artifact_018",
+  "displayName": "Rook Slide Projector R",
+  "category": "optical_devices",
+  "baseModel": "model_03.obj",
+  "maker": "maker_18",
+  "modelName": "Model 117",
+  "era": "1940-1952",
+  "materialSet": [
+    "material_03",
+    "material_06"
+  ],
+  "rarity": "uncommon",
+  "baseValue": 433,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR",
+    "WATER_DAMAGE",
+    "TARNISH",
+    "PAINT_LOSS",
+    "FADING"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.4
+  },
+  "collectorTags": [
+    "optical_devices",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_018"
+}

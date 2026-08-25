@@ -1,0 +1,1965 @@
+{
+  "executed": 10,
+  "expectedCount": 10,
+  "failed": 0,
+  "passed": 10,
+  "skipped": 0,
+  "suite": "R3 Repeated Core Compact UI",
+  "tests": [
+    {
+      "evidence": {
+        "missingGameState": [],
+        "missingMain": [],
+        "viewport1280x720": true
+      },
+      "executed": true,
+      "id": "REPEATED-CORE-API-01",
+      "name": "Repeated core screens expose the required public routes and the 1280x720 target",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "contract": {
+          "cardCount": 8,
+          "cards": [
+            {
+              "global": 0,
+              "icon": true,
+              "lines": [
+                "Aurelian Mechanical Clock A",
+                "¤110",
+                "손상 2 · 단서 2"
+              ],
+              "local": 0,
+              "ok": true
+            },
+            {
+              "global": 1,
+              "icon": true,
+              "lines": [
+                "Brasswell Pocket Watch B",
+                "¤129",
+                "손상 1 · 단서 1"
+              ],
+              "local": 1,
+              "ok": true
+            },
+            {
+              "global": 2,
+              "icon": true,
+              "lines": [
+                "Cindervale Film Camera C",
+                "¤148",
+                "손상 2 · 단서 1"
+              ],
+              "local": 2,
+              "ok": true
+            },
+            {
+              "global": 3,
+              "icon": true,
+              "lines": [
+                "Dovetail Vintage Radio D",
+                "¤167",
+                "손상 1 · 단서 2"
+              ],
+              "local": 3,
+              "ok": true
+            },
+            {
+              "global": 4,
+              "icon": true,
+              "lines": [
+                "Eldermere Music Box E",
+                "¤186",
+                "손상 2 · 단서 1"
+              ],
+              "local": 4,
+              "ok": true
+            },
+            {
+              "global": 5,
+              "icon": true,
+              "lines": [
+                "Fallow Binoculars F",
+                "¤205",
+                "손상 1 · 단서 1"
+              ],
+              "local": 5,
+              "ok": true
+            },
+            {
+              "global": 6,
+              "icon": true,
+              "lines": [
+                "Gildspire Desk Lamp G",
+                "¤224",
+                "손상 2 · 단서 2"
+              ],
+              "local": 6,
+              "ok": true
+            },
+            {
+              "global": 7,
+              "icon": true,
+              "lines": [
+                "Hearthline Typewriter H",
+                "¤243",
+                "손상 1 · 단서 1"
+              ],
+              "local": 7,
+              "ok": true
+            }
+          ],
+          "density": {
+            "buttons": 20,
+            "caps": [
+              20,
+              24,
+              1100
+            ],
+            "characters": 486,
+            "labels": 8,
+            "ok": true
+          },
+          "detail": {
+            "case": "시장 입수 유물",
+            "name": "Aurelian Mechanical Clock A",
+            "stats": "손상 2 · 단서 2 · ¤110"
+          },
+          "expectedCardCount": 8,
+          "geometry": {
+            "avoidsForbidden": true,
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  136.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  634.0,
+                  136.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  213.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  634.0,
+                  213.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  290.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  634.0,
+                  290.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  367.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  634.0,
+                  367.0,
+                  584.0,
+                  71.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "noScroll": true,
+          "ok": true,
+          "page": "1 / 2",
+          "pageCount": 2,
+          "pageIndex": 0,
+          "pagerLabel": {
+            "autowrapOff": true,
+            "expected": "1/2",
+            "heightOk": true,
+            "horizontalCentered": true,
+            "maxLinesVisible": 1,
+            "minimumWidth": 54.0,
+            "normalizedText": "1/2",
+            "ok": true,
+            "present": true,
+            "rect": [
+              1034.0,
+              90.0,
+              64.0,
+              36.0
+            ],
+            "renderedLineCount": 1,
+            "text": "1 / 2",
+            "textExact": true,
+            "textLineCount": 1,
+            "verticalCentered": true,
+            "widthOk": true
+          },
+          "pagerOk": true,
+          "primary": "InspectLot_0",
+          "progress": "유물 11 · 쪽 1 / 2"
+        },
+        "rawTokenLeaks": []
+      },
+      "executed": true,
+      "id": "REPEATED-INVENTORY-KO-01",
+      "name": "Korean Inventory shows at most eight icon cards in a 2x4 grid, exactly three public lines, one shared detail and one Inspect action without scrolling",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "activeWorkpieceId": "repeated_inventory_08",
+        "inspectOtherStateMutation0": true,
+        "inspectRngMutation0": true,
+        "inspectRouteOk": true,
+        "linkedDetailOk": true,
+        "pageDetailRngMutation0": true,
+        "pageDetailStateMutation0": true,
+        "pageTwo": {
+          "cardCount": 3,
+          "cards": [
+            {
+              "global": 8,
+              "icon": true,
+              "lines": [
+                "Iver Ceramic Vase I",
+                "¤262",
+                "손상 2 · 단서 1"
+              ],
+              "local": 0,
+              "ok": true
+            },
+            {
+              "global": 9,
+              "icon": true,
+              "lines": [
+                "Juniper Mechanical Toy J",
+                "¤281",
+                "손상 1 · 단서 2"
+              ],
+              "local": 1,
+              "ok": true
+            },
+            {
+              "global": 10,
+              "icon": true,
+              "lines": [
+                "Kestrel Compass K",
+                "¤300",
+                "손상 2 · 단서 1"
+              ],
+              "local": 2,
+              "ok": true
+            }
+          ],
+          "density": {
+            "buttons": 15,
+            "caps": [
+              20,
+              24,
+              1100
+            ],
+            "characters": 272,
+            "labels": 8,
+            "ok": true
+          },
+          "detail": {
+            "case": "사건 · 닫힌 공방",
+            "name": "Iver Ceramic Vase I",
+            "stats": "손상 2 · 단서 1 · ¤262"
+          },
+          "expectedCardCount": 3,
+          "geometry": {
+            "avoidsForbidden": true,
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  136.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  634.0,
+                  136.0,
+                  584.0,
+                  71.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  213.0,
+                  584.0,
+                  71.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "noScroll": true,
+          "ok": true,
+          "page": "2 / 2",
+          "pageCount": 2,
+          "pageIndex": 1,
+          "pagerLabel": {
+            "autowrapOff": true,
+            "expected": "2/2",
+            "heightOk": true,
+            "horizontalCentered": true,
+            "maxLinesVisible": 1,
+            "minimumWidth": 54.0,
+            "normalizedText": "2/2",
+            "ok": true,
+            "present": true,
+            "rect": [
+              1034.0,
+              90.0,
+              64.0,
+              36.0
+            ],
+            "renderedLineCount": 1,
+            "text": "2 / 2",
+            "textExact": true,
+            "textLineCount": 1,
+            "verticalCentered": true,
+            "widthOk": true
+          },
+          "pagerOk": true,
+          "primary": "InspectLot_8",
+          "progress": "유물 11 · 쪽 2 / 2"
+        },
+        "selectedUid": "repeated_inventory_08"
+      },
+      "executed": true,
+      "id": "REPEATED-INVENTORY-AUTHORITY-01",
+      "name": "Inventory pagination and card detail selection mutate no game state or RNG, while only the global Inspect primary opens the selected artifact",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "contract": {
+          "cardCount": 3,
+          "cards": [
+            {
+              "global": 8,
+              "icon": true,
+              "lines": [
+                "Iver Ceramic Vase I",
+                "¤262",
+                "DAMAGE 2 · CLUES 1"
+              ],
+              "local": 0,
+              "ok": true
+            },
+            {
+              "global": 9,
+              "icon": true,
+              "lines": [
+                "Juniper Mechanical Toy J",
+                "¤281",
+                "DAMAGE 1 · CLUES 2"
+              ],
+              "local": 1,
+              "ok": true
+            },
+            {
+              "global": 10,
+              "icon": true,
+              "lines": [
+                "Kestrel Compass K",
+                "¤300",
+                "DAMAGE 2 · CLUES 1"
+              ],
+              "local": 2,
+              "ok": true
+            }
+          ],
+          "density": {
+            "buttons": 15,
+            "caps": [
+              20,
+              24,
+              1100
+            ],
+            "characters": 389,
+            "labels": 8,
+            "ok": true
+          },
+          "detail": {
+            "case": "CASE · The Closed Workshop",
+            "name": "Iver Ceramic Vase I",
+            "stats": "DAMAGE 2 · CLUES 1 · ¤262"
+          },
+          "expectedCardCount": 3,
+          "geometry": {
+            "avoidsForbidden": true,
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  136.0,
+                  584.0,
+                  70.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  634.0,
+                  136.0,
+                  584.0,
+                  70.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  212.0,
+                  584.0,
+                  70.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "noScroll": true,
+          "ok": true,
+          "page": "2 / 2",
+          "pageCount": 2,
+          "pageIndex": 1,
+          "pagerLabel": {
+            "autowrapOff": true,
+            "expected": "2/2",
+            "heightOk": true,
+            "horizontalCentered": true,
+            "maxLinesVisible": 1,
+            "minimumWidth": 54.0,
+            "normalizedText": "2/2",
+            "ok": true,
+            "present": true,
+            "rect": [
+              1034.0,
+              90.0,
+              64.0,
+              36.0
+            ],
+            "renderedLineCount": 1,
+            "text": "2 / 2",
+            "textExact": true,
+            "textLineCount": 1,
+            "verticalCentered": true,
+            "widthOk": true
+          },
+          "pagerOk": true,
+          "primary": "InspectLot_8",
+          "progress": "RELICS 11 · PAGE 2 / 2"
+        },
+        "copyChanged": true,
+        "rawTokenLeaks": [],
+        "rngMutation0": true,
+        "stateMutation0": true
+      },
+      "executed": true,
+      "id": "REPEATED-INVENTORY-EN-01",
+      "name": "English Inventory refresh preserves page, detail, bounds and authoritative state while changing only localized copy",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "contract": {
+          "acceptCount": 1,
+          "acceptDisabled": true,
+          "confidence": "증거 신뢰도: 78%",
+          "density": {
+            "buttons": 24,
+            "caps": [
+              18,
+              24,
+              1300
+            ],
+            "characters": 407,
+            "labels": 12,
+            "ok": true
+          },
+          "evidenceCards": [
+            {
+              "index": 0,
+              "ok": true,
+              "text": "제작자 표식\n관찰 · 신뢰 미평가"
+            },
+            {
+              "index": 1,
+              "ok": true,
+              "text": "일련번호 패턴\n관찰 · 신뢰 미평가"
+            },
+            {
+              "index": 2,
+              "ok": true,
+              "text": "재질\n관찰 · 신뢰 미평가"
+            },
+            {
+              "index": 3,
+              "ok": true,
+              "text": "제작 방식\n관찰 · 신뢰 미평가"
+            },
+            {
+              "index": 4,
+              "ok": true,
+              "text": "부품 양식\n관찰 · 신뢰 미평가"
+            },
+            {
+              "index": 5,
+              "ok": true,
+              "text": "수리 흔적\n관찰 · 신뢰 미평가"
+            }
+          ],
+          "evidenceCount": 6,
+          "evidenceGeometry": {
+            "avoidsForbidden": true,
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  163.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  322.0,
+                  163.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  226.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  322.0,
+                  226.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  289.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  322.0,
+                  289.0,
+                  274.0,
+                  58.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "evidencePager": {
+            "autowrapOff": true,
+            "expected": "1/2",
+            "heightOk": true,
+            "horizontalCentered": true,
+            "maxLinesVisible": 1,
+            "minimumWidth": 48.0,
+            "normalizedText": "1/2",
+            "ok": true,
+            "present": true,
+            "rect": [
+              510.0,
+              126.0,
+              54.0,
+              30.0
+            ],
+            "renderedLineCount": 1,
+            "text": "1 / 2",
+            "textExact": true,
+            "textLineCount": 1,
+            "verticalCentered": true,
+            "widthOk": true
+          },
+          "hypotheses": [
+            {
+              "icon": true,
+              "id": "GENUINE",
+              "ok": true,
+              "text": "진품\n지지 0 · 반박 0"
+            },
+            {
+              "icon": true,
+              "id": "GENUINE_WITH_PERIOD_REPAIR",
+              "ok": true,
+              "text": "시대 수리 진품\n지지 0 · 반박 0"
+            },
+            {
+              "icon": true,
+              "id": "GENUINE_WITH_MODERN_REPAIR",
+              "ok": true,
+              "text": "현대 수리 진품\n지지 0 · 반박 0"
+            },
+            {
+              "icon": true,
+              "id": "REPRODUCTION",
+              "ok": true,
+              "text": "복제품\n지지 0 · 반박 0"
+            },
+            {
+              "icon": true,
+              "id": "FORGERY",
+              "ok": true,
+              "text": "위조품\n지지 0 · 반박 0"
+            },
+            {
+              "icon": true,
+              "id": "UNKNOWN",
+              "ok": true,
+              "text": "판단 보류\n지지 0 · 반박 0"
+            }
+          ],
+          "hypothesisCount": 6,
+          "hypothesisGeometry": {
+            "avoidsForbidden": true,
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  624.0,
+                  154.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  824.0,
+                  154.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  1024.0,
+                  154.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  624.0,
+                  232.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  824.0,
+                  232.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  1024.0,
+                  232.0,
+                  194.0,
+                  72.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "noScroll": true,
+          "observation": "공개 관찰 1에서 시대와 맞는 표면 특징을 기록했습니다.",
+          "observationMaxLines": 2,
+          "ok": true
+        },
+        "rawTokenLeaks": []
+      },
+      "executed": true,
+      "id": "REPEATED-AUTH-KO-01",
+      "name": "Korean Authentication shows six evidence cards in 2x3, one two-line observation detail, six icon hypotheses in 3x2 and exactly one Accept",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "draft": "GENUINE_WITH_PERIOD_REPAIR",
+        "draftBoundaryOk": true,
+        "enContract": {
+          "acceptCount": 1,
+          "acceptDisabled": false,
+          "confidence": "Evidence confidence: 78%",
+          "density": {
+            "buttons": 24,
+            "caps": [
+              18,
+              24,
+              1300
+            ],
+            "characters": 790,
+            "labels": 12,
+            "ok": true
+          },
+          "evidenceCards": [
+            {
+              "index": 0,
+              "ok": true,
+              "text": "maker mark\nOBSERVED · trust ungraded"
+            },
+            {
+              "index": 1,
+              "ok": true,
+              "text": "serial pattern\nOBSERVED · trust ungraded"
+            },
+            {
+              "index": 2,
+              "ok": true,
+              "text": "material\nOBSERVED · trust ungraded"
+            },
+            {
+              "index": 3,
+              "ok": true,
+              "text": "construction method\nOBSERVED · trust ungraded"
+            },
+            {
+              "index": 4,
+              "ok": true,
+              "text": "component style\nOBSERVED · trust ungraded"
+            },
+            {
+              "index": 5,
+              "ok": true,
+              "text": "repair trace\nOBSERVED · trust ungraded"
+            }
+          ],
+          "evidenceCount": 6,
+          "evidenceGeometry": {
+            "avoidsForbidden": true,
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  163.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  322.0,
+                  163.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  226.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  322.0,
+                  226.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  42.0,
+                  289.0,
+                  274.0,
+                  58.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  322.0,
+                  289.0,
+                  274.0,
+                  58.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "evidencePager": {
+            "autowrapOff": true,
+            "expected": "1/2",
+            "heightOk": true,
+            "horizontalCentered": true,
+            "maxLinesVisible": 1,
+            "minimumWidth": 48.0,
+            "normalizedText": "1/2",
+            "ok": true,
+            "present": true,
+            "rect": [
+              510.0,
+              126.0,
+              54.0,
+              30.0
+            ],
+            "renderedLineCount": 1,
+            "text": "1 / 2",
+            "textExact": true,
+            "textLineCount": 1,
+            "verticalCentered": true,
+            "widthOk": true
+          },
+          "hypotheses": [
+            {
+              "icon": true,
+              "id": "GENUINE",
+              "ok": true,
+              "text": "GENUINE\nSUP 0 · REF 0"
+            },
+            {
+              "icon": true,
+              "id": "GENUINE_WITH_PERIOD_REPAIR",
+              "ok": true,
+              "text": "PERIOD REPAIR\nSUP 0 · REF 0"
+            },
+            {
+              "icon": true,
+              "id": "GENUINE_WITH_MODERN_REPAIR",
+              "ok": true,
+              "text": "MODERN REPAIR\nSUP 0 · REF 0"
+            },
+            {
+              "icon": true,
+              "id": "REPRODUCTION",
+              "ok": true,
+              "text": "REPRODUCTION\nSUP 0 · REF 0"
+            },
+            {
+              "icon": true,
+              "id": "FORGERY",
+              "ok": true,
+              "text": "FORGERY\nSUP 0 · REF 0"
+            },
+            {
+              "icon": true,
+              "id": "UNKNOWN",
+              "ok": true,
+              "text": "UNDECIDED\nSUP 0 · REF 0"
+            }
+          ],
+          "hypothesisCount": 6,
+          "hypothesisGeometry": {
+            "avoidsForbidden": true,
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  624.0,
+                  153.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  824.0,
+                  153.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  1024.0,
+                  153.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  624.0,
+                  231.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  824.0,
+                  231.0,
+                  194.0,
+                  72.0
+                ]
+              },
+              {
+                "inside1280x720": true,
+                "present": true,
+                "rect": [
+                  1024.0,
+                  231.0,
+                  194.0,
+                  72.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "noScroll": true,
+          "observation": "Public observation 6 records a period-consistent surface detail.",
+          "observationMaxLines": 2,
+          "ok": true
+        },
+        "evidenceDetailOk": true,
+        "localeStateMutation0": true,
+        "rawTokenLeaks": [],
+        "rngMutation0": true
+      },
+      "executed": true,
+      "id": "REPEATED-AUTH-DRAFT-01",
+      "name": "Evidence/detail selection and KO/EN refresh are mutation-zero, while a hypothesis card changes only the established immediate draft field before Accept",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "attempts": [
+          0,
+          1
+        ],
+        "correct": [
+          0,
+          1
+        ],
+        "forgeries": [
+          0,
+          0
+        ],
+        "inventoryUnchanged": true,
+        "moneyUnchanged": true,
+        "rngMutation0": true,
+        "screen": "appraisal",
+        "transactionsUnchanged": true
+      },
+      "executed": true,
+      "id": "REPEATED-AUTH-ACCEPT-01",
+      "name": "Exactly one enabled Accept commits the existing draft once, updates only authentication authority, and routes to appraisal with RNG0",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failures": [],
+        "pages": [
+          {
+            "contract": {
+              "cardCount": 6,
+              "cards": [
+                {
+                  "global": 0,
+                  "icon": true,
+                  "id": "upgrade_01",
+                  "local": 0,
+                  "ok": true,
+                  "text": "저장 공간 확장\n¤100 · 구매\n보관 +2"
+                },
+                {
+                  "global": 1,
+                  "icon": true,
+                  "id": "upgrade_02",
+                  "local": 1,
+                  "ok": true,
+                  "text": "개선 조명\n¤185 · 구매\n조사 신뢰 +4%"
+                },
+                {
+                  "global": 2,
+                  "icon": true,
+                  "id": "upgrade_03",
+                  "local": 2,
+                  "ok": true,
+                  "text": "고급 스캐너\n¤270 · 구매\n단서 품질 +5%"
+                },
+                {
+                  "global": 3,
+                  "icon": true,
+                  "id": "upgrade_04",
+                  "local": 3,
+                  "ok": true,
+                  "text": "정밀 도구 세트\n¤355 · 구매\n도구 위험 −12%"
+                },
+                {
+                  "global": 4,
+                  "icon": true,
+                  "id": "upgrade_05",
+                  "local": 4,
+                  "ok": true,
+                  "text": "촬영 스튜디오\n¤440 · 구매\n출품 효과 +6%"
+                },
+                {
+                  "global": 5,
+                  "icon": true,
+                  "id": "upgrade_06",
+                  "local": 5,
+                  "ok": true,
+                  "text": "경매 단말기\n¤525 · 구매\n경매 수수료 −2%"
+                }
+              ],
+              "density": {
+                "buttons": 18,
+                "caps": [
+                  18,
+                  22,
+                  1000
+                ],
+                "characters": 314,
+                "labels": 7,
+                "ok": true
+              },
+              "detail": {
+                "effect": "보관 +2 · 보유 유물을 둘 공간이 늘어납니다.",
+                "effectMaxLines": 2,
+                "name": "저장 공간 확장"
+              },
+              "expectedCardCount": 6,
+              "geometry": {
+                "avoidsForbidden": true,
+                "inside": true,
+                "ok": true,
+                "rects": [
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      230.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      230.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      324.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      324.0,
+                      584.0,
+                      88.0
+                    ]
+                  }
+                ],
+                "separate": true
+              },
+              "noScroll": true,
+              "ok": true,
+              "page": "1 / 5",
+              "pageCount": 5,
+              "pageIndex": 0,
+              "pagerLabel": {
+                "autowrapOff": true,
+                "expected": "1/5",
+                "heightOk": true,
+                "horizontalCentered": true,
+                "maxLinesVisible": 1,
+                "minimumWidth": 54.0,
+                "normalizedText": "1/5",
+                "ok": true,
+                "present": true,
+                "rect": [
+                  1034.0,
+                  90.0,
+                  64.0,
+                  36.0
+                ],
+                "renderedLineCount": 1,
+                "text": "1 / 5",
+                "textExact": true,
+                "textLineCount": 1,
+                "verticalCentered": true,
+                "widthOk": true
+              },
+              "pagerOk": true,
+              "primary": "Upgrade_upgrade_01",
+              "progress": "설비 25 · 쪽 1 / 5"
+            },
+            "page": 1
+          },
+          {
+            "contract": {
+              "cardCount": 6,
+              "cards": [
+                {
+                  "global": 6,
+                  "icon": true,
+                  "id": "upgrade_07",
+                  "local": 0,
+                  "ok": true,
+                  "text": "추가 작업대\n¤610 · 구매\n작업대 +1"
+                },
+                {
+                  "global": 7,
+                  "icon": true,
+                  "id": "upgrade_08",
+                  "local": 1,
+                  "ok": true,
+                  "text": "전시 진열장\n¤695 · 구매\n전시 효과 +3%"
+                },
+                {
+                  "global": 8,
+                  "icon": true,
+                  "id": "upgrade_09",
+                  "local": 2,
+                  "ok": true,
+                  "text": "부품 보관장\n¤780 · 구매\n복원 비용 −8%"
+                },
+                {
+                  "global": 9,
+                  "icon": true,
+                  "id": "upgrade_10",
+                  "local": 3,
+                  "ok": true,
+                  "text": "복원 작업대\n¤865 · 구매\n수리 효율 +10%"
+                },
+                {
+                  "global": 10,
+                  "icon": true,
+                  "id": "upgrade_11",
+                  "local": 4,
+                  "ok": true,
+                  "text": "참고 자료실\n¤950 · 구매\n평가 정밀도 +8%"
+                },
+                {
+                  "global": 11,
+                  "icon": true,
+                  "id": "upgrade_12",
+                  "local": 5,
+                  "ok": true,
+                  "text": "공방 보험\n¤1035 · 구매\n사건 손실 −15%"
+                }
+              ],
+              "density": {
+                "buttons": 18,
+                "caps": [
+                  18,
+                  22,
+                  1000
+                ],
+                "characters": 313,
+                "labels": 7,
+                "ok": true
+              },
+              "detail": {
+                "effect": "작업대 +1 · 사용 가능한 작업대 자리가 늘어납니다.",
+                "effectMaxLines": 2,
+                "name": "추가 작업대"
+              },
+              "expectedCardCount": 6,
+              "geometry": {
+                "avoidsForbidden": true,
+                "inside": true,
+                "ok": true,
+                "rects": [
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      230.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      230.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      324.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      324.0,
+                      584.0,
+                      88.0
+                    ]
+                  }
+                ],
+                "separate": true
+              },
+              "noScroll": true,
+              "ok": true,
+              "page": "2 / 5",
+              "pageCount": 5,
+              "pageIndex": 1,
+              "pagerLabel": {
+                "autowrapOff": true,
+                "expected": "2/5",
+                "heightOk": true,
+                "horizontalCentered": true,
+                "maxLinesVisible": 1,
+                "minimumWidth": 54.0,
+                "normalizedText": "2/5",
+                "ok": true,
+                "present": true,
+                "rect": [
+                  1034.0,
+                  90.0,
+                  64.0,
+                  36.0
+                ],
+                "renderedLineCount": 1,
+                "text": "2 / 5",
+                "textExact": true,
+                "textLineCount": 1,
+                "verticalCentered": true,
+                "widthOk": true
+              },
+              "pagerOk": true,
+              "primary": "Upgrade_upgrade_07",
+              "progress": "설비 25 · 쪽 2 / 5"
+            },
+            "page": 2
+          },
+          {
+            "contract": {
+              "cardCount": 6,
+              "cards": [
+                {
+                  "global": 12,
+                  "icon": true,
+                  "id": "upgrade_13",
+                  "local": 0,
+                  "ok": true,
+                  "text": "신속 배송\n¤1120 · 구매\n시장 유물 +1"
+                },
+                {
+                  "global": 13,
+                  "icon": true,
+                  "id": "upgrade_14",
+                  "local": 1,
+                  "ok": true,
+                  "text": "보호 포장\n¤1205 · 구매\n운송 비용 −10%"
+                },
+                {
+                  "global": 14,
+                  "icon": true,
+                  "id": "upgrade_15",
+                  "local": 2,
+                  "ok": true,
+                  "text": "명성 간판\n¤1290 · 구매\n명성 +2"
+                },
+                {
+                  "global": 15,
+                  "icon": true,
+                  "id": "upgrade_16",
+                  "local": 3,
+                  "ok": true,
+                  "text": "항온 보관장\n¤1375 · 구매\n손상 위험 −12%"
+                },
+                {
+                  "global": 16,
+                  "icon": true,
+                  "id": "upgrade_17",
+                  "local": 4,
+                  "ok": true,
+                  "text": "전문가 데스크\n¤1460 · 구매\n숙련 획득 +10%"
+                },
+                {
+                  "global": 17,
+                  "icon": true,
+                  "id": "upgrade_18",
+                  "local": 5,
+                  "ok": true,
+                  "text": "보안 기록실\n¤1545 · 구매\n소장 이력 +6%"
+                }
+              ],
+              "density": {
+                "buttons": 18,
+                "caps": [
+                  18,
+                  22,
+                  1000
+                ],
+                "characters": 315,
+                "labels": 7,
+                "ok": true
+              },
+              "detail": {
+                "effect": "시장 유물 +1 · 일일 시장 제안이 하나 늘어납니다.",
+                "effectMaxLines": 2,
+                "name": "신속 배송"
+              },
+              "expectedCardCount": 6,
+              "geometry": {
+                "avoidsForbidden": true,
+                "inside": true,
+                "ok": true,
+                "rects": [
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      230.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      230.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      324.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      324.0,
+                      584.0,
+                      88.0
+                    ]
+                  }
+                ],
+                "separate": true
+              },
+              "noScroll": true,
+              "ok": true,
+              "page": "3 / 5",
+              "pageCount": 5,
+              "pageIndex": 2,
+              "pagerLabel": {
+                "autowrapOff": true,
+                "expected": "3/5",
+                "heightOk": true,
+                "horizontalCentered": true,
+                "maxLinesVisible": 1,
+                "minimumWidth": 54.0,
+                "normalizedText": "3/5",
+                "ok": true,
+                "present": true,
+                "rect": [
+                  1034.0,
+                  90.0,
+                  64.0,
+                  36.0
+                ],
+                "renderedLineCount": 1,
+                "text": "3 / 5",
+                "textExact": true,
+                "textLineCount": 1,
+                "verticalCentered": true,
+                "widthOk": true
+              },
+              "pagerOk": true,
+              "primary": "Upgrade_upgrade_13",
+              "progress": "설비 25 · 쪽 3 / 5"
+            },
+            "page": 3
+          },
+          {
+            "contract": {
+              "cardCount": 6,
+              "cards": [
+                {
+                  "global": 18,
+                  "icon": true,
+                  "id": "upgrade_19",
+                  "local": 0,
+                  "ok": true,
+                  "text": "시장 연감\n¤1630 · 구매\n시장 예보 +1"
+                },
+                {
+                  "global": 19,
+                  "icon": true,
+                  "id": "upgrade_20",
+                  "local": 1,
+                  "ok": true,
+                  "text": "중고품 네트워크\n¤1715 · 구매\n입찰자 범위 +1"
+                },
+                {
+                  "global": 20,
+                  "icon": true,
+                  "id": "upgrade_21",
+                  "local": 2,
+                  "ok": true,
+                  "text": "박물관 연락관\n¤1800 · 구매\n박물관 신뢰 +3"
+                },
+                {
+                  "global": 21,
+                  "icon": true,
+                  "id": "upgrade_22",
+                  "local": 3,
+                  "ok": true,
+                  "text": "희귀 부품함\n¤1885 · 구매\n수리 위험 −8%"
+                },
+                {
+                  "global": 22,
+                  "icon": true,
+                  "id": "upgrade_23",
+                  "local": 4,
+                  "ok": true,
+                  "text": "고급 카메라\n¤1970 · 구매\n출품 효과 +8%"
+                },
+                {
+                  "global": 23,
+                  "icon": true,
+                  "id": "upgrade_24",
+                  "local": 5,
+                  "ok": true,
+                  "text": "보존 후드\n¤2055 · 구매\n온전성 보호 +12%"
+                }
+              ],
+              "density": {
+                "buttons": 18,
+                "caps": [
+                  18,
+                  22,
+                  1000
+                ],
+                "characters": 322,
+                "labels": 7,
+                "ok": true
+              },
+              "detail": {
+                "effect": "시장 예보 +1 · 시장 흐름을 한 단계 더 내다봅니다.",
+                "effectMaxLines": 2,
+                "name": "시장 연감"
+              },
+              "expectedCardCount": 6,
+              "geometry": {
+                "avoidsForbidden": true,
+                "inside": true,
+                "ok": true,
+                "rects": [
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      230.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      230.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      324.0,
+                      584.0,
+                      88.0
+                    ]
+                  },
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      634.0,
+                      324.0,
+                      584.0,
+                      88.0
+                    ]
+                  }
+                ],
+                "separate": true
+              },
+              "noScroll": true,
+              "ok": true,
+              "page": "4 / 5",
+              "pageCount": 5,
+              "pageIndex": 3,
+              "pagerLabel": {
+                "autowrapOff": true,
+                "expected": "4/5",
+                "heightOk": true,
+                "horizontalCentered": true,
+                "maxLinesVisible": 1,
+                "minimumWidth": 54.0,
+                "normalizedText": "4/5",
+                "ok": true,
+                "present": true,
+                "rect": [
+                  1034.0,
+                  90.0,
+                  64.0,
+                  36.0
+                ],
+                "renderedLineCount": 1,
+                "text": "4 / 5",
+                "textExact": true,
+                "textLineCount": 1,
+                "verticalCentered": true,
+                "widthOk": true
+              },
+              "pagerOk": true,
+              "primary": "Upgrade_upgrade_19",
+              "progress": "설비 25 · 쪽 4 / 5"
+            },
+            "page": 4
+          },
+          {
+            "contract": {
+              "cardCount": 1,
+              "cards": [
+                {
+                  "global": 24,
+                  "icon": true,
+                  "id": "upgrade_25",
+                  "local": 0,
+                  "ok": true,
+                  "text": "공방 보조원\n¤2140 · 구매\n작업 효율 +10%"
+                }
+              ],
+              "density": {
+                "buttons": 13,
+                "caps": [
+                  18,
+                  22,
+                  1000
+                ],
+                "characters": 187,
+                "labels": 7,
+                "ok": true
+              },
+              "detail": {
+                "effect": "작업 효율 +10% · 일상 공방 작업 효율을 높입니다.",
+                "effectMaxLines": 2,
+                "name": "공방 보조원"
+              },
+              "expectedCardCount": 1,
+              "geometry": {
+                "avoidsForbidden": true,
+                "inside": true,
+                "ok": true,
+                "rects": [
+                  {
+                    "inside1280x720": true,
+                    "present": true,
+                    "rect": [
+                      42.0,
+                      136.0,
+                      584.0,
+                      88.0
+                    ]
+                  }
+                ],
+                "separate": true
+              },
+              "noScroll": true,
+              "ok": true,
+              "page": "5 / 5",
+              "pageCount": 5,
+              "pageIndex": 4,
+              "pagerLabel": {
+                "autowrapOff": true,
+                "expected": "5/5",
+                "heightOk": true,
+                "horizontalCentered": true,
+                "maxLinesVisible": 1,
+                "minimumWidth": 54.0,
+                "normalizedText": "5/5",
+                "ok": true,
+                "present": true,
+                "rect": [
+                  1034.0,
+                  90.0,
+                  64.0,
+                  36.0
+                ],
+                "renderedLineCount": 1,
+                "text": "5 / 5",
+                "textExact": true,
+                "textLineCount": 1,
+                "verticalCentered": true,
+                "widthOk": true
+              },
+              "pagerOk": true,
+              "primary": "Upgrade_upgrade_25",
+              "progress": "설비 25 · 쪽 5 / 5"
+            },
+            "page": 5
+          }
+        ],
+        "rawTokenLeaks": [],
+        "rngMutation0": true,
+        "seen": [
+          "upgrade_01",
+          "upgrade_02",
+          "upgrade_03",
+          "upgrade_04",
+          "upgrade_05",
+          "upgrade_06",
+          "upgrade_07",
+          "upgrade_08",
+          "upgrade_09",
+          "upgrade_10",
+          "upgrade_11",
+          "upgrade_12",
+          "upgrade_13",
+          "upgrade_14",
+          "upgrade_15",
+          "upgrade_16",
+          "upgrade_17",
+          "upgrade_18",
+          "upgrade_19",
+          "upgrade_20",
+          "upgrade_21",
+          "upgrade_22",
+          "upgrade_23",
+          "upgrade_24",
+          "upgrade_25"
+        ],
+        "stateMutation0": true
+      },
+      "executed": true,
+      "id": "REPEATED-UPGRADES-KO-01",
+      "name": "Korean Upgrades traverses five no-scroll 2x3 pages and exposes all 25 icon cards with localized one-line effects and two-line-maximum detail",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "allEffectsLocalized": true,
+        "copyChanged": true,
+        "failures": [],
+        "rawTokenLeaks": [],
+        "rngMutation0": true,
+        "seen": [
+          "upgrade_01",
+          "upgrade_02",
+          "upgrade_03",
+          "upgrade_04",
+          "upgrade_05",
+          "upgrade_06",
+          "upgrade_07",
+          "upgrade_08",
+          "upgrade_09",
+          "upgrade_10",
+          "upgrade_11",
+          "upgrade_12",
+          "upgrade_13",
+          "upgrade_14",
+          "upgrade_15",
+          "upgrade_16",
+          "upgrade_17",
+          "upgrade_18",
+          "upgrade_19",
+          "upgrade_20",
+          "upgrade_21",
+          "upgrade_22",
+          "upgrade_23",
+          "upgrade_24",
+          "upgrade_25"
+        ],
+        "stateMutation0": true
+      },
+      "executed": true,
+      "id": "REPEATED-UPGRADES-EN-01",
+      "name": "English refresh and five-page detail navigation localize every upgrade while preserving money, ownership, profile, save state and RNG",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "duplicateBlocked": true,
+        "duplicateDisabled": true,
+        "effect": [
+          0.0,
+          2.0
+        ],
+        "money": [
+          100000,
+          99900
+        ],
+        "owned": [
+          "upgrade_01"
+        ],
+        "purchaseExact": true,
+        "rngMutation0": true,
+        "transactions": [
+          0,
+          1
+        ],
+        "upgrade": "upgrade_01"
+      },
+      "executed": true,
+      "id": "REPEATED-UPGRADES-BUY-01",
+      "name": "Upgrade card selection never buys; its single detail primary charges and applies exactly once, then the same purchase is disabled and duplicate-blocked",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,670 @@
+{
+  "executed": 10,
+  "failed": 0,
+  "passed": 10,
+  "skipped": 0,
+  "suite": "R3 Prologue Golden Case",
+  "tests": [
+    {
+      "evidence": {
+        "errors": [],
+        "evidence": 5,
+        "hypotheses": 3
+      },
+      "executed": true,
+      "id": "M2-DATA-01",
+      "name": "Protected authored-v2 Prologue loads with valid runtime source indexes",
+      "passed": true
+    },
+    {
+      "evidence": [
+        "ok",
+        "code",
+        "caseId",
+        "title",
+        "artifactDisplayName",
+        "briefing",
+        "centralQuestion",
+        "fictionNotice",
+        "reportPrompt",
+        "success",
+        "failure",
+        "hypotheses",
+        "evidence",
+        "availableEvidence",
+        "discoveredEvidence",
+        "selectedHypothesisId",
+        "citedEvidenceIds",
+        "resolved",
+        "resolutionResult",
+        "artifactId"
+      ],
+      "executed": true,
+      "id": "M2-PRIVACY-01",
+      "name": "Player case state excludes canonical answer and hidden valuation fields",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": 75.0,
+        "before": 78.0,
+        "evidenceId": "src.prologue.artifact.backplate_screws",
+        "result": {
+          "appliedRiskPenalty": 3.0,
+          "code": "DISCOVERED",
+          "evidenceId": "src.prologue.artifact.backplate_screws",
+          "ok": true,
+          "riskLevel": "HIGH",
+          "sourceId": "physical_fastener_evidence"
+        }
+      },
+      "executed": true,
+      "id": "M2-RISK-01",
+      "name": "Risk is public before action and the warned investigation applies its authored consequence",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "code": "EVIDENCE_LOCKED",
+        "ok": false,
+        "requires": [
+          "src.prologue.artifact.backplate_screws"
+        ]
+      },
+      "executed": true,
+      "id": "M2-UNLOCK-01",
+      "name": "Cross-source document discovery is locked until its physical prerequisite is recorded",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "discoveries": [
+          "src.prologue.artifact.backplate_screws",
+          "src.prologue.artifact.bridge_stamp",
+          "src.prologue.document.service_card",
+          "src.prologue.reference.factory_plate",
+          "src.prologue.npc.mara_statement"
+        ],
+        "sources": [
+          "ARTIFACT",
+          "ARTIFACT",
+          "DOCUMENT",
+          "NPC",
+          "REFERENCE"
+        ]
+      },
+      "executed": true,
+      "id": "M2-LEDGER-01",
+      "name": "Golden Case discovers artifact, document, NPC, and reference evidence into a persistent ledger",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citedEvidenceIds": [
+          "src.prologue.artifact.backplate_screws",
+          "src.prologue.artifact.bridge_stamp",
+          "src.prologue.document.service_card"
+        ],
+        "code": "OK",
+        "conclusionAccurate": true,
+        "hypothesisId": "hyp.period_repair",
+        "independentSourceCount": 3,
+        "netScore": 5,
+        "ok": true,
+        "outcome": "masterful",
+        "refuteScore": 0,
+        "requiredSourcesMet": true,
+        "substantiated": true,
+        "substantiation": "STRONG",
+        "supportScore": 5
+      },
+      "executed": true,
+      "id": "M2-REPORT-01",
+      "name": "Correct conclusion with required independent evidence earns masterful substantiation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citedEvidenceIds": [
+          "src.prologue.artifact.backplate_screws",
+          "src.prologue.document.service_card"
+        ],
+        "code": "OK",
+        "conclusionAccurate": true,
+        "hypothesisId": "hyp.period_repair",
+        "independentSourceCount": 2,
+        "netScore": 4,
+        "ok": true,
+        "outcome": "credible",
+        "refuteScore": 0,
+        "requiredSourcesMet": true,
+        "substantiated": false,
+        "substantiation": "PLAUSIBLE",
+        "supportScore": 4
+      },
+      "executed": true,
+      "id": "M2-REPORT-02",
+      "name": "Correct conclusion with thinner evidence stays credible rather than masterful",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "citedEvidenceIds": [
+          "src.prologue.artifact.bridge_stamp"
+        ],
+        "code": "OK",
+        "conclusionAccurate": false,
+        "hypothesisId": "hyp.untouched_original",
+        "independentSourceCount": 1,
+        "netScore": 1,
+        "ok": true,
+        "outcome": "reviewed_with_mentor",
+        "refuteScore": 0,
+        "requiredSourcesMet": false,
+        "substantiated": false,
+        "substantiation": "INCONCLUSIVE",
+        "supportScore": 1
+      },
+      "executed": true,
+      "id": "M2-REPORT-03",
+      "name": "One-citation wrong claim reaches the authored mentor fallback; mistaken requires two cited findings",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "loaded": true,
+        "public": {
+          "artifactDisplayName": {
+            "en": "Venn Workshop Mantel Clock IV-417",
+            "ko": "벤 공방 탁상시계 IV-417"
+          },
+          "artifactId": "case_prologue_clock",
+          "availableEvidence": [
+            {
+              "citationAllowed": true,
+              "citationLocator": {},
+              "cited": false,
+              "discovered": false,
+              "entryId": "src.prologue.artifact.bridge_stamp",
+              "id": "src.prologue.artifact.bridge_stamp",
+              "npcPortrait": {},
+              "relations": [],
+              "reliability": "UNSPECIFIED",
+              "requiredTools": [
+                "precision_screwdriver"
+              ],
+              "requires": [],
+              "riskLevel": "LOW",
+              "riskWarning": {
+                "en": "Use the precision screwdriver to avoid marking the screw slots.",
+                "ko": "나사 홈에 새 흔적을 남기지 않도록 정밀 드라이버를 사용하라."
+              },
+              "shortObservation": {},
+              "sourceDisplayName": {
+                "en": "Escapement bridge stamp",
+                "ko": "탈진기 브리지 각인"
+              },
+              "sourceId": "physical_manufacture_evidence",
+              "sourceKind": "ARTIFACT",
+              "sourceRef": "artifact_001",
+              "text": {
+                "en": "Escapement bridge stamp",
+                "ko": "탈진기 브리지 각인"
+              },
+              "unlockActionLabel": {
+                "en": "Open carefully",
+                "ko": "조심히 열기"
+              },
+              "unlockTargetLabel": {
+                "en": "the object area",
+                "ko": "유물 부위"
+              },
+              "unlocked": true
+            },
+            {
+              "citationAllowed": true,
+              "citationLocator": {},
+              "cited": false,
+              "discovered": false,
+              "entryId": "src.prologue.document.service_card",
+              "id": "src.prologue.document.service_card",
+              "npcPortrait": {},
+              "relations": [],
+              "reliability": "UNSPECIFIED",
+              "requiredTools": [],
+              "requires": [
+                "src.prologue.artifact.backplate_screws"
+              ],
+              "riskLevel": "LOW",
+              "riskWarning": {
+                "en": "A document is a claim; compare its serial and repair detail with the object.",
+                "ko": "문서는 하나의 주장일 뿐이다. 일련번호와 수리 내용을 실물과 대조하라."
+              },
+              "shortObservation": {},
+              "sourceDisplayName": {
+                "en": "Folded service card dated 14 October 1937",
+                "ko": "1937년 10월 14일자 접힌 수리표"
+              },
+              "sourceId": "workshop_documentary_evidence",
+              "sourceKind": "DOCUMENT",
+              "sourceRef": "document_01",
+              "text": {
+                "en": "Folded service card dated 14 October 1937",
+                "ko": "1937년 10월 14일자 접힌 수리표"
+              },
+              "unlockActionLabel": {
+                "en": "Search",
+                "ko": "찾아보기"
+              },
+              "unlockTargetLabel": {
+                "en": "the document",
+                "ko": "문서"
+              },
+              "unlocked": true
+            }
+          ],
+          "briefing": {
+            "en": "Mara Venn has opened the workshop that belonged to her late mentor. A mantel clock was left on the bench beside a sale tag claiming it had never been opened. One mismatched screw and a folded service card challenge that claim. Establish what is original, what was changed, and what must be disclosed before the clock is offered for sale.",
+            "ko": "마라 벤은 세상을 떠난 스승의 공방을 다시 열었다. 작업대에는 한 번도 열어 본 적이 없다는 판매표가 붙은 탁상시계가 남아 있다. 그러나 서로 다른 나사 하나와 접힌 수리표가 그 주장을 흔든다. 시계의 어떤 부분이 원형이고 무엇이 바뀌었는지, 판매 전에 무엇을 밝혀야 하는지 확인하라."
+          },
+          "caseId": "prologue_clock",
+          "centralQuestion": {
+            "en": "Is the clock an untouched factory original, an authentic clock with a period repair, or a later rebuild?",
+            "ko": "이 시계는 출고 당시 그대로인 진품인가, 당대 수리를 거친 진품인가, 아니면 후대에 다시 조립한 물건인가?"
+          },
+          "citedEvidenceIds": [
+            "src.prologue.artifact.backplate_screws"
+          ],
+          "code": "OK",
+          "discoveredEvidence": [
+            {
+              "citationAllowed": true,
+              "citationLocator": {
+                "en": "Inspection photograph A-1 and oxidation sketch",
+                "ko": "검사 사진 A-1 및 산화 경계 스케치"
+              },
+              "cited": true,
+              "discovered": true,
+              "entryId": "src.prologue.artifact.backplate_screws",
+              "id": "src.prologue.artifact.backplate_screws",
+              "npcPortrait": {},
+              "relations": [
+                {
+                  "hypothesis_id": "hyp.untouched_original",
+                  "stance": "REFUTE",
+                  "strength": 2
+                },
+                {
+                  "hypothesis_id": "hyp.period_repair",
+                  "stance": "SUPPORT",
+                  "strength": 2
+                },
+                {
+                  "hypothesis_id": "hyp.later_rebuild",
+                  "stance": "REFUTE",
+                  "strength": 1
+                }
+              ],
+              "reliability": "UNSPECIFIED",
+              "requiredTools": [],
+              "requires": [],
+              "riskLevel": "HIGH",
+              "riskWarning": {
+                "en": "Photograph and record the oxidation boundary before polishing.",
+                "ko": "연마하기 전에 산화 경계를 촬영하고 기록하라."
+              },
+              "shortObservation": {
+                "en": "Rear-plate screw mismatch",
+                "ko": "후면판 나사의 불일치"
+              },
+              "sourceDisplayName": {
+                "en": "Rear-plate screw mismatch",
+                "ko": "후면판 나사의 불일치"
+              },
+              "sourceId": "physical_fastener_evidence",
+              "sourceKind": "ARTIFACT",
+              "sourceRef": "artifact_001",
+              "text": {
+                "en": "Beneath the dust, three rear-plate screws are brass. The upper-right screw is blued steel and its slot was filed by hand. A dark oxidation ring continues beneath its head, showing that it was installed long ago rather than during a recent rebuild.",
+                "ko": "먼지 아래에서 후면판 나사 세 개는 황동으로 확인된다. 오른쪽 위 나사만 청색 열처리 강철이며 홈은 손으로 다듬었다. 나사 머리 아래까지 짙은 산화 고리가 이어져 있어 최근 재조립 때가 아니라 오래전에 장착되었음을 보여 준다."
+              },
+              "unlockActionLabel": {
+                "en": "Inspect",
+                "ko": "살펴보기"
+              },
+              "unlockTargetLabel": {
+                "en": "the object area",
+                "ko": "유물 부위"
+              },
+              "unlocked": true
+            }
+          ],
+          "evidence": [
+            {
+              "citationAllowed": true,
+              "citationLocator": {
+                "en": "Inspection photograph A-1 and oxidation sketch",
+                "ko": "검사 사진 A-1 및 산화 경계 스케치"
+              },
+              "cited": true,
+              "discovered": true,
+              "entryId": "src.prologue.artifact.backplate_screws",
+              "id": "src.prologue.artifact.backplate_screws",
+              "npcPortrait": {},
+              "relations": [
+                {
+                  "hypothesis_id": "hyp.untouched_original",
+                  "stance": "REFUTE",
+                  "strength": 2
+                },
+                {
+                  "hypothesis_id": "hyp.period_repair",
+                  "stance": "SUPPORT",
+                  "strength": 2
+                },
+                {
+                  "hypothesis_id": "hyp.later_rebuild",
+                  "stance": "REFUTE",
+                  "strength": 1
+                }
+              ],
+              "reliability": "UNSPECIFIED",
+              "requiredTools": [],
+              "requires": [],
+              "riskLevel": "HIGH",
+              "riskWarning": {
+                "en": "Photograph and record the oxidation boundary before polishing.",
+                "ko": "연마하기 전에 산화 경계를 촬영하고 기록하라."
+              },
+              "shortObservation": {
+                "en": "Rear-plate screw mismatch",
+                "ko": "후면판 나사의 불일치"
+              },
+              "sourceDisplayName": {
+                "en": "Rear-plate screw mismatch",
+                "ko": "후면판 나사의 불일치"
+              },
+              "sourceId": "physical_fastener_evidence",
+              "sourceKind": "ARTIFACT",
+              "sourceRef": "artifact_001",
+              "text": {
+                "en": "Beneath the dust, three rear-plate screws are brass. The upper-right screw is blued steel and its slot was filed by hand. A dark oxidation ring continues beneath its head, showing that it was installed long ago rather than during a recent rebuild.",
+                "ko": "먼지 아래에서 후면판 나사 세 개는 황동으로 확인된다. 오른쪽 위 나사만 청색 열처리 강철이며 홈은 손으로 다듬었다. 나사 머리 아래까지 짙은 산화 고리가 이어져 있어 최근 재조립 때가 아니라 오래전에 장착되었음을 보여 준다."
+              },
+              "unlockActionLabel": {
+                "en": "Inspect",
+                "ko": "살펴보기"
+              },
+              "unlockTargetLabel": {
+                "en": "the object area",
+                "ko": "유물 부위"
+              },
+              "unlocked": true
+            },
+            {
+              "citationAllowed": true,
+              "citationLocator": {},
+              "cited": false,
+              "discovered": false,
+              "entryId": "src.prologue.artifact.bridge_stamp",
+              "id": "src.prologue.artifact.bridge_stamp",
+              "npcPortrait": {},
+              "relations": [],
+              "reliability": "UNSPECIFIED",
+              "requiredTools": [
+                "precision_screwdriver"
+              ],
+              "requires": [],
+              "riskLevel": "LOW",
+              "riskWarning": {
+                "en": "Use the precision screwdriver to avoid marking the screw slots.",
+                "ko": "나사 홈에 새 흔적을 남기지 않도록 정밀 드라이버를 사용하라."
+              },
+              "shortObservation": {},
+              "sourceDisplayName": {
+                "en": "Escapement bridge stamp",
+                "ko": "탈진기 브리지 각인"
+              },
+              "sourceId": "physical_manufacture_evidence",
+              "sourceKind": "ARTIFACT",
+              "sourceRef": "artifact_001",
+              "text": {
+                "en": "Escapement bridge stamp",
+                "ko": "탈진기 브리지 각인"
+              },
+              "unlockActionLabel": {
+                "en": "Open carefully",
+                "ko": "조심히 열기"
+              },
+              "unlockTargetLabel": {
+                "en": "the object area",
+                "ko": "유물 부위"
+              },
+              "unlocked": true
+            },
+            {
+              "citationAllowed": true,
+              "citationLocator": {},
+              "cited": false,
+              "discovered": false,
+              "entryId": "src.prologue.document.service_card",
+              "id": "src.prologue.document.service_card",
+              "npcPortrait": {},
+              "relations": [],
+              "reliability": "UNSPECIFIED",
+              "requiredTools": [],
+              "requires": [
+                "src.prologue.artifact.backplate_screws"
+              ],
+              "riskLevel": "LOW",
+              "riskWarning": {
+                "en": "A document is a claim; compare its serial and repair detail with the object.",
+                "ko": "문서는 하나의 주장일 뿐이다. 일련번호와 수리 내용을 실물과 대조하라."
+              },
+              "shortObservation": {},
+              "sourceDisplayName": {
+                "en": "Folded service card dated 14 October 1937",
+                "ko": "1937년 10월 14일자 접힌 수리표"
+              },
+              "sourceId": "workshop_documentary_evidence",
+              "sourceKind": "DOCUMENT",
+              "sourceRef": "document_01",
+              "text": {
+                "en": "Folded service card dated 14 October 1937",
+                "ko": "1937년 10월 14일자 접힌 수리표"
+              },
+              "unlockActionLabel": {
+                "en": "Search",
+                "ko": "찾아보기"
+              },
+              "unlockTargetLabel": {
+                "en": "the document",
+                "ko": "문서"
+              },
+              "unlocked": true
+            },
+            {
+              "citationAllowed": true,
+              "citationLocator": {},
+              "cited": false,
+              "discovered": false,
+              "entryId": "src.prologue.npc.mara_statement",
+              "id": "src.prologue.npc.mara_statement",
+              "npcPortrait": {},
+              "relations": [],
+              "reliability": "UNSPECIFIED",
+              "requiredTools": [],
+              "requires": [
+                "src.prologue.document.service_card"
+              ],
+              "riskLevel": "LOW",
+              "riskWarning": {
+                "en": "Mara openly marks the limit of her firsthand knowledge.",
+                "ko": "마라는 자신이 직접 아는 범위의 한계를 분명히 밝힌다."
+              },
+              "shortObservation": {},
+              "sourceDisplayName": {
+                "en": "Witness clue",
+                "ko": "인물 단서"
+              },
+              "sourceId": "oral_history_context",
+              "sourceKind": "NPC",
+              "sourceRef": "mara_venn",
+              "text": {
+                "en": "Witness clue",
+                "ko": "인물 단서"
+              },
+              "unlockActionLabel": {
+                "en": "Ask",
+                "ko": "물어보기"
+              },
+              "unlockTargetLabel": {
+                "en": "the witness",
+                "ko": "인물"
+              },
+              "unlocked": false
+            },
+            {
+              "citationAllowed": true,
+              "citationLocator": {},
+              "cited": false,
+              "discovered": false,
+              "entryId": "src.prologue.reference.factory_plate",
+              "id": "src.prologue.reference.factory_plate",
+              "npcPortrait": {},
+              "relations": [],
+              "reliability": "UNSPECIFIED",
+              "requiredTools": [],
+              "requires": [
+                "src.prologue.artifact.bridge_stamp"
+              ],
+              "riskLevel": "LOW",
+              "riskWarning": {
+                "en": "The reference establishes the expected factory configuration, not the history of this individual clock.",
+                "ko": "이 참고자료는 공장 출고 사양을 보여 줄 뿐, 이 개별 시계의 이력을 직접 증명하지는 않는다."
+              },
+              "shortObservation": {},
+              "sourceDisplayName": {
+                "en": "Reference clue",
+                "ko": "참고 단서"
+              },
+              "sourceId": "independent_factory_reference",
+              "sourceKind": "REFERENCE",
+              "sourceRef": "period_ref_01",
+              "text": {
+                "en": "Reference clue",
+                "ko": "참고 단서"
+              },
+              "unlockActionLabel": {
+                "en": "Compare",
+                "ko": "대조하기"
+              },
+              "unlockTargetLabel": {
+                "en": "the reference catalogue",
+                "ko": "참고 자료"
+              },
+              "unlocked": false
+            }
+          ],
+          "failure": {
+            "en": "An unsupported conclusion is reviewed with Mara instead of ending the campaign, but it cannot earn a masterful result.",
+            "ko": "근거가 부족한 결론은 캠페인을 끝내지 않고 마라와 함께 재검토하지만, 최고 판정은 받을 수 없다."
+          },
+          "fictionNotice": {
+            "en": "All makers, records, people, and dates in this case are fictional in-world material.",
+            "ko": "이 사건의 제작사, 기록, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+          },
+          "hypotheses": [
+            {
+              "claim": {
+                "en": "The clock and all visible fasteners remain exactly as they left the Arclight factory in 1931.",
+                "ko": "시계와 눈에 보이는 모든 체결 부품은 1931년 아크라이트 공장에서 출고된 상태 그대로다."
+              },
+              "id": "hyp.untouched_original",
+              "label": {
+                "en": "Untouched factory original",
+                "ko": "출고 상태 그대로인 진품"
+              }
+            },
+            {
+              "claim": {
+                "en": "The main clock is authentic, but a documented repair replaced one rear-plate screw several years after manufacture.",
+                "ko": "시계 본체는 진품이지만 제작 후 몇 년 뒤 기록된 수리 과정에서 후면판 나사 하나가 교체되었다."
+              },
+              "id": "hyp.period_repair",
+              "label": {
+                "en": "Authentic with a period repair",
+                "ko": "당대 수리를 거친 진품"
+              }
+            },
+            {
+              "claim": {
+                "en": "The clock was assembled substantially later from unrelated or modern parts and should not be presented as an authentic period object.",
+                "ko": "서로 무관하거나 현대적인 부품을 훨씬 후대에 조립한 물건이므로 당대 진품으로 소개해서는 안 된다."
+              },
+              "id": "hyp.later_rebuild",
+              "label": {
+                "en": "Later rebuild",
+                "ko": "후대 재조립품"
+              }
+            }
+          ],
+          "ok": true,
+          "reportPrompt": {
+            "en": "Choose one hypothesis and cite at least three findings from three independent source groups. Your report must include both the rear-plate observation and the service card.",
+            "ko": "가설 하나를 선택하고 서로 독립된 세 출처 집단에서 최소 세 가지 근거를 인용하라. 보고서에는 후면판 관찰과 수리표를 반드시 포함해야 한다."
+          },
+          "resolutionResult": {},
+          "resolved": false,
+          "selectedHypothesisId": "hyp.period_repair",
+          "success": {
+            "en": "The evidence-backed report is accepted into the case record.",
+            "ko": "증거에 근거한 보고서가 사건 기록에 등록되었다."
+          },
+          "title": {
+            "en": "The Closed Workshop",
+            "ko": "닫힌 공방"
+          }
+        },
+        "saved": true
+      },
+      "executed": true,
+      "id": "M2-SAVE-01",
+      "name": "Evidence ledger, hypothesis, citations, and issued artifact identity survive save/reload",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "buttons": [
+          "CaseEvidenceCard_src_prologue_artifact_backplate_screws",
+          "CaseEvidenceCard_src_prologue_artifact_bridge_stamp",
+          "CaseEvidenceCard_src_prologue_document_service_card",
+          "CaseEvidenceCard_src_prologue_npc_mara_statement",
+          "CaseEvidenceCard_src_prologue_reference_factory_plate",
+          "CaseEvidence_src_prologue_artifact_backplate_screws",
+          "CaseHypothesis_hyp_untouched_original",
+          "CaseHypothesis_hyp_period_repair",
+          "CaseHypothesis_hyp_later_rebuild",
+          "ResolveCaseReport",
+          "Nav_WORKSHOP",
+          "Nav_MARKET",
+          "Nav_INVENTORY",
+          "Nav_UPGRADES",
+          "Nav_COMMISSIONS",
+          "Nav_CAMPAIGN",
+          "Nav_END_DAY",
+          "Nav_SAVE",
+          "Nav_LANGUAGE"
+        ],
+        "evidenceButton": true,
+        "reportButton": true,
+        "screen": "case_dossier",
+        "warning": true
+      },
+      "executed": true,
+      "id": "M2-UI-01",
+      "name": "Case dossier exposes evidence actions, pre-action risk, report control, and survives locale refresh",
+      "passed": true
+    }
+  ]
+}

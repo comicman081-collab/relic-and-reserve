@@ -1,0 +1,330 @@
+{
+  "executed": 5,
+  "failed": 0,
+  "passed": 5,
+  "skipped": 0,
+  "suite": "R3 authored-v2 MVP policy",
+  "tests": [
+    {
+      "evidence": {
+        "authored": [
+          "collector_promise",
+          "composite_prototype",
+          "early_camera",
+          "estate_compass",
+          "false_invoice",
+          "garage_lamp",
+          "leave_patina",
+          "master_chronometer",
+          "master_gauge",
+          "master_optical",
+          "master_recorder",
+          "mislabelled_collection",
+          "observatory_instrument",
+          "pawn_watch",
+          "prologue_clock",
+          "shadow_camera",
+          "shadow_clock",
+          "shadow_gauge",
+          "shadow_music_box",
+          "shadow_optic",
+          "telephone_trace",
+          "three_cameras"
+        ],
+        "campaignCases": 26,
+        "errors": []
+      },
+      "executed": true,
+      "id": "MVP-DATA-01",
+      "name": "The three protected authored-v2 contrast cases remain registered as later stages gain authored content",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "falseInvoiceBranch": false,
+        "shadowCameraBranch": false
+      },
+      "executed": true,
+      "id": "MVP-GENERIC-01",
+      "name": "MVP cases use the generic production resolver and UI with no case-id gameplay branch",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "evidenceAverage": 8.0,
+        "evidenceRuns": [
+          {
+            "caseId": "prologue_clock",
+            "discoveries": [
+              "src.prologue.artifact.backplate_screws",
+              "src.prologue.artifact.bridge_stamp",
+              "src.prologue.document.service_card",
+              "src.prologue.npc.mara_statement",
+              "src.prologue.reference.factory_plate"
+            ],
+            "mode": "evidence_first",
+            "money": 1308,
+            "ok": true,
+            "report": {
+              "citations": [
+                "src.prologue.artifact.backplate_screws",
+                "src.prologue.artifact.bridge_stamp",
+                "src.prologue.document.service_card",
+                "src.prologue.npc.mara_statement",
+                "src.prologue.reference.factory_plate"
+              ],
+              "hypothesisId": "hyp.period_repair",
+              "visibleScore": 7
+            },
+            "resolution": {
+              "citedEvidenceIds": [
+                "src.prologue.artifact.backplate_screws",
+                "src.prologue.artifact.bridge_stamp",
+                "src.prologue.document.service_card",
+                "src.prologue.npc.mara_statement",
+                "src.prologue.reference.factory_plate"
+              ],
+              "code": "OK",
+              "conclusionAccurate": true,
+              "hypothesisId": "hyp.period_repair",
+              "independentSourceCount": 5,
+              "netScore": 7,
+              "ok": true,
+              "outcome": "masterful",
+              "refuteScore": 0,
+              "requiredSourcesMet": true,
+              "substantiated": true,
+              "substantiation": "STRONG",
+              "supportScore": 7
+            },
+            "score": 9.0
+          },
+          {
+            "caseId": "false_invoice",
+            "discoveries": [
+              "src.false_invoice.artifact.box_joinery",
+              "src.false_invoice.document.invoice_face",
+              "src.false_invoice.document.reverse_provenance",
+              "src.false_invoice.artifact.carbon_transfer",
+              "src.false_invoice.npc.noah_ledger",
+              "src.false_invoice.reference.reserve_numbering"
+            ],
+            "mode": "evidence_first",
+            "money": 1398,
+            "ok": true,
+            "report": {
+              "citations": [
+                "src.false_invoice.artifact.box_joinery",
+                "src.false_invoice.artifact.carbon_transfer",
+                "src.false_invoice.npc.noah_ledger",
+                "src.false_invoice.reference.reserve_numbering"
+              ],
+              "hypothesisId": "hyp.authentic_box_false_invoice",
+              "visibleScore": 6
+            },
+            "resolution": {
+              "citedEvidenceIds": [
+                "src.false_invoice.artifact.box_joinery",
+                "src.false_invoice.artifact.carbon_transfer",
+                "src.false_invoice.npc.noah_ledger",
+                "src.false_invoice.reference.reserve_numbering"
+              ],
+              "code": "OK",
+              "conclusionAccurate": true,
+              "hypothesisId": "hyp.authentic_box_false_invoice",
+              "independentSourceCount": 4,
+              "netScore": 8,
+              "ok": true,
+              "outcome": "credible",
+              "refuteScore": 0,
+              "requiredSourcesMet": false,
+              "substantiated": false,
+              "substantiation": "PLAUSIBLE",
+              "supportScore": 8
+            },
+            "score": 6.0
+          },
+          {
+            "caseId": "shadow_camera",
+            "discoveries": [
+              "src.shadow_camera.artifact.mount_wear",
+              "src.shadow_camera.artifact.uv_shadow_mark",
+              "src.shadow_camera.artifact.internal_spacer",
+              "src.shadow_camera.document.repair_leaf",
+              "src.shadow_camera.npc.lena_invoice_account",
+              "src.shadow_camera.reference.model147_material_note"
+            ],
+            "mode": "evidence_first",
+            "money": 1510,
+            "ok": true,
+            "report": {
+              "citations": [
+                "src.shadow_camera.artifact.mount_wear",
+                "src.shadow_camera.artifact.uv_shadow_mark",
+                "src.shadow_camera.artifact.internal_spacer",
+                "src.shadow_camera.document.repair_leaf",
+                "src.shadow_camera.npc.lena_invoice_account",
+                "src.shadow_camera.reference.model147_material_note"
+              ],
+              "hypothesisId": "hyp.late_composite",
+              "visibleScore": 9
+            },
+            "resolution": {
+              "citedEvidenceIds": [
+                "src.shadow_camera.artifact.mount_wear",
+                "src.shadow_camera.artifact.uv_shadow_mark",
+                "src.shadow_camera.artifact.internal_spacer",
+                "src.shadow_camera.document.repair_leaf",
+                "src.shadow_camera.npc.lena_invoice_account",
+                "src.shadow_camera.reference.model147_material_note"
+              ],
+              "code": "OK",
+              "conclusionAccurate": true,
+              "hypothesisId": "hyp.late_composite",
+              "independentSourceCount": 6,
+              "netScore": 9,
+              "ok": true,
+              "outcome": "masterful",
+              "refuteScore": 0,
+              "requiredSourcesMet": true,
+              "substantiated": true,
+              "substantiation": "STRONG",
+              "supportScore": 9
+            },
+            "score": 9.0
+          }
+        ],
+        "randomAverage": 1.57777777777778,
+        "rushAverage": 0.0,
+        "rushRuns": [
+          {
+            "caseId": "prologue_clock",
+            "discoveries": [
+              "src.prologue.artifact.backplate_screws",
+              "src.prologue.artifact.bridge_stamp"
+            ],
+            "mode": "rush",
+            "money": 1231,
+            "ok": true,
+            "report": {
+              "citations": [
+                "src.prologue.artifact.backplate_screws",
+                "src.prologue.artifact.bridge_stamp"
+              ],
+              "hypothesisId": "hyp.untouched_original"
+            },
+            "resolution": {
+              "citedEvidenceIds": [
+                "src.prologue.artifact.backplate_screws",
+                "src.prologue.artifact.bridge_stamp"
+              ],
+              "code": "OK",
+              "conclusionAccurate": false,
+              "hypothesisId": "hyp.untouched_original",
+              "independentSourceCount": 1,
+              "netScore": -1,
+              "ok": true,
+              "outcome": "mistaken",
+              "refuteScore": 2,
+              "requiredSourcesMet": false,
+              "substantiated": false,
+              "substantiation": "INCONCLUSIVE",
+              "supportScore": 1
+            },
+            "score": 0.0
+          },
+          {
+            "caseId": "false_invoice",
+            "discoveries": [
+              "src.false_invoice.artifact.box_joinery",
+              "src.false_invoice.document.invoice_face"
+            ],
+            "mode": "rush",
+            "money": 1269,
+            "ok": true,
+            "report": {
+              "citations": [
+                "src.false_invoice.artifact.box_joinery",
+                "src.false_invoice.document.invoice_face"
+              ],
+              "hypothesisId": "hyp.genuine_1927_invoice"
+            },
+            "resolution": {
+              "citedEvidenceIds": [
+                "src.false_invoice.artifact.box_joinery",
+                "src.false_invoice.document.invoice_face"
+              ],
+              "code": "OK",
+              "conclusionAccurate": false,
+              "hypothesisId": "hyp.genuine_1927_invoice",
+              "independentSourceCount": 2,
+              "netScore": 2,
+              "ok": true,
+              "outcome": "mistaken",
+              "refuteScore": 0,
+              "requiredSourcesMet": false,
+              "substantiated": false,
+              "substantiation": "INCONCLUSIVE",
+              "supportScore": 2
+            },
+            "score": 0.0
+          },
+          {
+            "caseId": "shadow_camera",
+            "discoveries": [
+              "src.shadow_camera.artifact.mount_wear",
+              "src.shadow_camera.artifact.uv_shadow_mark"
+            ],
+            "mode": "rush",
+            "money": 1290,
+            "ok": true,
+            "report": {
+              "citations": [
+                "src.shadow_camera.artifact.mount_wear",
+                "src.shadow_camera.artifact.uv_shadow_mark"
+              ],
+              "hypothesisId": "hyp.factory_shadow_camera"
+            },
+            "resolution": {
+              "citedEvidenceIds": [
+                "src.shadow_camera.artifact.mount_wear",
+                "src.shadow_camera.artifact.uv_shadow_mark"
+              ],
+              "code": "OK",
+              "conclusionAccurate": false,
+              "hypothesisId": "hyp.factory_shadow_camera",
+              "independentSourceCount": 0,
+              "netScore": -4,
+              "ok": true,
+              "outcome": "mistaken",
+              "refuteScore": 4,
+              "requiredSourcesMet": false,
+              "substantiated": false,
+              "substantiation": "INCONCLUSIVE",
+              "supportScore": 0
+            },
+            "score": 0.0
+          }
+        ]
+      },
+      "executed": true,
+      "id": "MVP-POLICY-01",
+      "name": "Player-visible Evidence-first policy outperforms Rush and Random-valid across all three reasoning topologies",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "MVP-PRIVACY-01",
+      "name": "Hidden canonical truth flip cannot change public state or the visible-policy next action",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "MVP-DETERMINISM-01",
+      "name": "Same seed and visible action sequence produce deterministic report and reward results",
+      "passed": true
+    }
+  ]
+}

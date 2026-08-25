@@ -1,0 +1,55 @@
+{
+  "id": "artifact_002",
+  "displayName": "Brasswell Pocket Watch B",
+  "category": "mechanical_instruments",
+  "baseModel": "model_02.obj",
+  "maker": "maker_02",
+  "modelName": "Model 101",
+  "era": "1908-1920",
+  "materialSet": [
+    "material_02",
+    "material_05"
+  ],
+  "rarity": "uncommon",
+  "baseValue": 129,
+  "compatibleDamages": [
+    "DUST",
+    "GRIME",
+    "RUST",
+    "SCRATCH",
+    "DENT",
+    "CRACK",
+    "BROKEN_PART",
+    "MISSING_PART",
+    "MECHANICAL_WEAR"
+  ],
+  "possibleFaults": [
+    "DUST",
+    "GRIME",
+    "TARNISH"
+  ],
+  "possibleClues": [
+    "SERIAL_PATTERN",
+    "CONSTRUCTION_METHOD",
+    "MATERIAL",
+    "MECHANISM",
+    "COMPONENT_STYLE",
+    "WEAR_PATTERN",
+    "LABEL",
+    "PATINA",
+    "REPAIR_TRACE",
+    "PROVENANCE",
+    "TOOL_MARK"
+  ],
+  "restorationProfile": {
+    "cleaning": 0.7,
+    "repair": 0.6,
+    "patinaRisk": 0.30000000000000004
+  },
+  "collectorTags": [
+    "mechanical_instruments",
+    "period",
+    "workshop"
+  ],
+  "visualVariant": "variant_002"
+}

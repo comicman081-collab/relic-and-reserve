@@ -1,0 +1,16 @@
+{
+  "status": "SIMULATED",
+  "auctions": 1000,
+  "scenarios": [
+    "no bidders",
+    "single bidder",
+    "multiple bidders",
+    "rare item",
+    "fake",
+    "damaged item",
+    "excellent restoration",
+    "over-restoration",
+    "high demand",
+    "low demand"
+  ]
+}

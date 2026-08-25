@@ -1,0 +1,962 @@
+[
+  {
+    "id": "variant_001",
+    "material": "brass",
+    "materialPath": "res://assets/materials/brass.tres",
+    "primaryColor": "#b8893f",
+    "trimColor": "#705038",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.960,
+      1.025,
+      1.02
+    ],
+    "trimShape": "band",
+    "signature": "model_01|brass|0|1"
+  },
+  {
+    "id": "variant_002",
+    "material": "black_leather",
+    "materialPath": "res://assets/materials/black_leather.tres",
+    "primaryColor": "#343236",
+    "trimColor": "#7f8b91",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.05,
+      0.98
+    ],
+    "trimShape": "band",
+    "signature": "model_02|black_leather|0|2"
+  },
+  {
+    "id": "variant_003",
+    "material": "ceramic",
+    "materialPath": "res://assets/materials/ceramic.tres",
+    "primaryColor": "#d7c7a1",
+    "trimColor": "#8fb8bf",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.0,
+      1.02
+    ],
+    "trimShape": "band",
+    "signature": "model_03|ceramic|0|3"
+  },
+  {
+    "id": "variant_004",
+    "material": "wood_dark",
+    "materialPath": "res://assets/materials/wood_dark.tres",
+    "primaryColor": "#705038",
+    "trimColor": "#496b73",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.025,
+      0.98
+    ],
+    "trimShape": "band",
+    "signature": "model_04|wood_dark|0|4"
+  },
+  {
+    "id": "variant_005",
+    "material": "steel",
+    "materialPath": "res://assets/materials/steel.tres",
+    "primaryColor": "#7f8b91",
+    "trimColor": "#5c3f2a",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.05,
+      1.02
+    ],
+    "trimShape": "band",
+    "signature": "model_05|steel|0|5"
+  },
+  {
+    "id": "variant_006",
+    "material": "glass",
+    "materialPath": "res://assets/materials/glass.tres",
+    "primaryColor": "#8fb8bf",
+    "trimColor": "#80612e",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.0,
+      0.98
+    ],
+    "trimShape": "band",
+    "signature": "model_06|glass|0|6"
+  },
+  {
+    "id": "variant_007",
+    "material": "painted_metal",
+    "materialPath": "res://assets/materials/painted_metal.tres",
+    "primaryColor": "#496b73",
+    "trimColor": "#704a32",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.025,
+      1.02
+    ],
+    "trimShape": "band",
+    "signature": "model_07|painted_metal|0|7"
+  },
+  {
+    "id": "variant_008",
+    "material": "aged_wood",
+    "materialPath": "res://assets/materials/aged_wood.tres",
+    "primaryColor": "#5c3f2a",
+    "trimColor": "#b99d70",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.05,
+      0.98
+    ],
+    "trimShape": "band",
+    "signature": "model_08|aged_wood|0|8"
+  },
+  {
+    "id": "variant_009",
+    "material": "tarnished_brass",
+    "materialPath": "res://assets/materials/tarnished_brass.tres",
+    "primaryColor": "#80612e",
+    "trimColor": "#7d3e2f",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.0,
+      1.02
+    ],
+    "trimShape": "band",
+    "signature": "model_09|tarnished_brass|0|9"
+  },
+  {
+    "id": "variant_010",
+    "material": "brown_leather",
+    "materialPath": "res://assets/materials/brown_leather.tres",
+    "primaryColor": "#704a32",
+    "trimColor": "#5c6571",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.025,
+      0.98
+    ],
+    "trimShape": "band",
+    "signature": "model_10|brown_leather|0|10"
+  },
+  {
+    "id": "variant_011",
+    "material": "paper",
+    "materialPath": "res://assets/materials/paper.tres",
+    "primaryColor": "#b99d70",
+    "trimColor": "#a5774f",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.05,
+      1.02
+    ],
+    "trimShape": "band",
+    "signature": "model_11|paper|0|11"
+  },
+  {
+    "id": "variant_012",
+    "material": "rusted_steel",
+    "materialPath": "res://assets/materials/rusted_steel.tres",
+    "primaryColor": "#7d3e2f",
+    "trimColor": "#34383b",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.0,
+      0.98
+    ],
+    "trimShape": "band",
+    "signature": "model_12|rusted_steel|0|12"
+  },
+  {
+    "id": "variant_013",
+    "material": "aged_paint",
+    "materialPath": "res://assets/materials/aged_paint.tres",
+    "primaryColor": "#5c6571",
+    "trimColor": "#b8893f",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.025,
+      1.02
+    ],
+    "trimShape": "band",
+    "signature": "model_13|aged_paint|0|13"
+  },
+  {
+    "id": "variant_014",
+    "material": "wood_light",
+    "materialPath": "res://assets/materials/wood_light.tres",
+    "primaryColor": "#a5774f",
+    "trimColor": "#343236",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.05,
+      0.98
+    ],
+    "trimShape": "band",
+    "signature": "model_14|wood_light|0|14"
+  },
+  {
+    "id": "variant_015",
+    "material": "rubber",
+    "materialPath": "res://assets/materials/rubber.tres",
+    "primaryColor": "#34383b",
+    "trimColor": "#d7c7a1",
+    "metallic": 0.12,
+    "roughness": 0.72,
+    "scale": [
+      0.96,
+      1.0,
+      1.02
+    ],
+    "trimShape": "band",
+    "signature": "model_15|rubber|0|15"
+  },
+  {
+    "id": "variant_016",
+    "material": "brass",
+    "materialPath": "res://assets/materials/brass.tres",
+    "primaryColor": "#b8893f",
+    "trimColor": "#7f8b91",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.025,
+      0.98
+    ],
+    "trimShape": "stud",
+    "signature": "model_01|brass|1|16"
+  },
+  {
+    "id": "variant_017",
+    "material": "black_leather",
+    "materialPath": "res://assets/materials/black_leather.tres",
+    "primaryColor": "#343236",
+    "trimColor": "#8fb8bf",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.05,
+      1.02
+    ],
+    "trimShape": "stud",
+    "signature": "model_02|black_leather|1|17"
+  },
+  {
+    "id": "variant_018",
+    "material": "ceramic",
+    "materialPath": "res://assets/materials/ceramic.tres",
+    "primaryColor": "#d7c7a1",
+    "trimColor": "#496b73",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.0,
+      0.98
+    ],
+    "trimShape": "stud",
+    "signature": "model_03|ceramic|1|18"
+  },
+  {
+    "id": "variant_019",
+    "material": "wood_dark",
+    "materialPath": "res://assets/materials/wood_dark.tres",
+    "primaryColor": "#705038",
+    "trimColor": "#5c3f2a",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.025,
+      1.02
+    ],
+    "trimShape": "stud",
+    "signature": "model_04|wood_dark|1|19"
+  },
+  {
+    "id": "variant_020",
+    "material": "steel",
+    "materialPath": "res://assets/materials/steel.tres",
+    "primaryColor": "#7f8b91",
+    "trimColor": "#80612e",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.05,
+      0.98
+    ],
+    "trimShape": "stud",
+    "signature": "model_05|steel|1|20"
+  },
+  {
+    "id": "variant_021",
+    "material": "glass",
+    "materialPath": "res://assets/materials/glass.tres",
+    "primaryColor": "#8fb8bf",
+    "trimColor": "#704a32",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.0,
+      1.02
+    ],
+    "trimShape": "stud",
+    "signature": "model_06|glass|1|21"
+  },
+  {
+    "id": "variant_022",
+    "material": "painted_metal",
+    "materialPath": "res://assets/materials/painted_metal.tres",
+    "primaryColor": "#496b73",
+    "trimColor": "#b99d70",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.025,
+      0.98
+    ],
+    "trimShape": "stud",
+    "signature": "model_07|painted_metal|1|22"
+  },
+  {
+    "id": "variant_023",
+    "material": "aged_wood",
+    "materialPath": "res://assets/materials/aged_wood.tres",
+    "primaryColor": "#5c3f2a",
+    "trimColor": "#7d3e2f",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.05,
+      1.02
+    ],
+    "trimShape": "stud",
+    "signature": "model_08|aged_wood|1|23"
+  },
+  {
+    "id": "variant_024",
+    "material": "tarnished_brass",
+    "materialPath": "res://assets/materials/tarnished_brass.tres",
+    "primaryColor": "#80612e",
+    "trimColor": "#5c6571",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.0,
+      0.98
+    ],
+    "trimShape": "stud",
+    "signature": "model_09|tarnished_brass|1|24"
+  },
+  {
+    "id": "variant_025",
+    "material": "brown_leather",
+    "materialPath": "res://assets/materials/brown_leather.tres",
+    "primaryColor": "#704a32",
+    "trimColor": "#a5774f",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.025,
+      1.02
+    ],
+    "trimShape": "stud",
+    "signature": "model_10|brown_leather|1|25"
+  },
+  {
+    "id": "variant_026",
+    "material": "paper",
+    "materialPath": "res://assets/materials/paper.tres",
+    "primaryColor": "#b99d70",
+    "trimColor": "#34383b",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.05,
+      0.98
+    ],
+    "trimShape": "stud",
+    "signature": "model_11|paper|1|26"
+  },
+  {
+    "id": "variant_027",
+    "material": "rusted_steel",
+    "materialPath": "res://assets/materials/rusted_steel.tres",
+    "primaryColor": "#7d3e2f",
+    "trimColor": "#b8893f",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.0,
+      1.02
+    ],
+    "trimShape": "stud",
+    "signature": "model_12|rusted_steel|1|27"
+  },
+  {
+    "id": "variant_028",
+    "material": "aged_paint",
+    "materialPath": "res://assets/materials/aged_paint.tres",
+    "primaryColor": "#5c6571",
+    "trimColor": "#343236",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.025,
+      0.98
+    ],
+    "trimShape": "stud",
+    "signature": "model_13|aged_paint|1|28"
+  },
+  {
+    "id": "variant_029",
+    "material": "wood_light",
+    "materialPath": "res://assets/materials/wood_light.tres",
+    "primaryColor": "#a5774f",
+    "trimColor": "#d7c7a1",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.05,
+      1.02
+    ],
+    "trimShape": "stud",
+    "signature": "model_14|wood_light|1|29"
+  },
+  {
+    "id": "variant_030",
+    "material": "rubber",
+    "materialPath": "res://assets/materials/rubber.tres",
+    "primaryColor": "#34383b",
+    "trimColor": "#705038",
+    "metallic": 0.29,
+    "roughness": 0.61,
+    "scale": [
+      0.995,
+      1.0,
+      0.98
+    ],
+    "trimShape": "stud",
+    "signature": "model_15|rubber|1|30"
+  },
+  {
+    "id": "variant_031",
+    "material": "brass",
+    "materialPath": "res://assets/materials/brass.tres",
+    "primaryColor": "#b8893f",
+    "trimColor": "#8fb8bf",
+    "metallic": 0.46,
+    "roughness": 0.50,
+    "scale": [
+      1.030,
+      1.025,
+      1.02
+    ],
+    "trimShape": "plate",
+    "signature": "model_01|brass|2|31"
+  },
+  {
+    "id": "variant_032",
+    "material": "black_leather",
+    "materialPath": "res://assets/materials/black_leather.tres",
+    "primaryColor": "#343236",
+    "trimColor": "#496b73",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.05,
+      0.98
+    ],
+    "trimShape": "plate",
+    "signature": "model_02|black_leather|2|32"
+  },
+  {
+    "id": "variant_033",
+    "material": "ceramic",
+    "materialPath": "res://assets/materials/ceramic.tres",
+    "primaryColor": "#d7c7a1",
+    "trimColor": "#5c3f2a",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.0,
+      1.02
+    ],
+    "trimShape": "plate",
+    "signature": "model_03|ceramic|2|33"
+  },
+  {
+    "id": "variant_034",
+    "material": "wood_dark",
+    "materialPath": "res://assets/materials/wood_dark.tres",
+    "primaryColor": "#705038",
+    "trimColor": "#80612e",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.025,
+      0.98
+    ],
+    "trimShape": "plate",
+    "signature": "model_04|wood_dark|2|34"
+  },
+  {
+    "id": "variant_035",
+    "material": "steel",
+    "materialPath": "res://assets/materials/steel.tres",
+    "primaryColor": "#7f8b91",
+    "trimColor": "#704a32",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.05,
+      1.02
+    ],
+    "trimShape": "plate",
+    "signature": "model_05|steel|2|35"
+  },
+  {
+    "id": "variant_036",
+    "material": "glass",
+    "materialPath": "res://assets/materials/glass.tres",
+    "primaryColor": "#8fb8bf",
+    "trimColor": "#b99d70",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.0,
+      0.98
+    ],
+    "trimShape": "plate",
+    "signature": "model_06|glass|2|36"
+  },
+  {
+    "id": "variant_037",
+    "material": "painted_metal",
+    "materialPath": "res://assets/materials/painted_metal.tres",
+    "primaryColor": "#496b73",
+    "trimColor": "#7d3e2f",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.025,
+      1.02
+    ],
+    "trimShape": "plate",
+    "signature": "model_07|painted_metal|2|37"
+  },
+  {
+    "id": "variant_038",
+    "material": "aged_wood",
+    "materialPath": "res://assets/materials/aged_wood.tres",
+    "primaryColor": "#5c3f2a",
+    "trimColor": "#5c6571",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.05,
+      0.98
+    ],
+    "trimShape": "plate",
+    "signature": "model_08|aged_wood|2|38"
+  },
+  {
+    "id": "variant_039",
+    "material": "tarnished_brass",
+    "materialPath": "res://assets/materials/tarnished_brass.tres",
+    "primaryColor": "#80612e",
+    "trimColor": "#a5774f",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.0,
+      1.02
+    ],
+    "trimShape": "plate",
+    "signature": "model_09|tarnished_brass|2|39"
+  },
+  {
+    "id": "variant_040",
+    "material": "brown_leather",
+    "materialPath": "res://assets/materials/brown_leather.tres",
+    "primaryColor": "#704a32",
+    "trimColor": "#34383b",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.025,
+      0.98
+    ],
+    "trimShape": "plate",
+    "signature": "model_10|brown_leather|2|40"
+  },
+  {
+    "id": "variant_041",
+    "material": "paper",
+    "materialPath": "res://assets/materials/paper.tres",
+    "primaryColor": "#b99d70",
+    "trimColor": "#b8893f",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.05,
+      1.02
+    ],
+    "trimShape": "plate",
+    "signature": "model_11|paper|2|41"
+  },
+  {
+    "id": "variant_042",
+    "material": "rusted_steel",
+    "materialPath": "res://assets/materials/rusted_steel.tres",
+    "primaryColor": "#7d3e2f",
+    "trimColor": "#343236",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.0,
+      0.98
+    ],
+    "trimShape": "plate",
+    "signature": "model_12|rusted_steel|2|42"
+  },
+  {
+    "id": "variant_043",
+    "material": "aged_paint",
+    "materialPath": "res://assets/materials/aged_paint.tres",
+    "primaryColor": "#5c6571",
+    "trimColor": "#d7c7a1",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.025,
+      1.02
+    ],
+    "trimShape": "plate",
+    "signature": "model_13|aged_paint|2|43"
+  },
+  {
+    "id": "variant_044",
+    "material": "wood_light",
+    "materialPath": "res://assets/materials/wood_light.tres",
+    "primaryColor": "#a5774f",
+    "trimColor": "#705038",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.05,
+      0.98
+    ],
+    "trimShape": "plate",
+    "signature": "model_14|wood_light|2|44"
+  },
+  {
+    "id": "variant_045",
+    "material": "rubber",
+    "materialPath": "res://assets/materials/rubber.tres",
+    "primaryColor": "#34383b",
+    "trimColor": "#7f8b91",
+    "metallic": 0.46,
+    "roughness": 0.5,
+    "scale": [
+      1.03,
+      1.0,
+      1.02
+    ],
+    "trimShape": "plate",
+    "signature": "model_15|rubber|2|45"
+  },
+  {
+    "id": "variant_046",
+    "material": "brass",
+    "materialPath": "res://assets/materials/brass.tres",
+    "primaryColor": "#b8893f",
+    "trimColor": "#496b73",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.025,
+      0.98
+    ],
+    "trimShape": "ring",
+    "signature": "model_01|brass|3|46"
+  },
+  {
+    "id": "variant_047",
+    "material": "black_leather",
+    "materialPath": "res://assets/materials/black_leather.tres",
+    "primaryColor": "#343236",
+    "trimColor": "#5c3f2a",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.05,
+      1.02
+    ],
+    "trimShape": "ring",
+    "signature": "model_02|black_leather|3|47"
+  },
+  {
+    "id": "variant_048",
+    "material": "ceramic",
+    "materialPath": "res://assets/materials/ceramic.tres",
+    "primaryColor": "#d7c7a1",
+    "trimColor": "#80612e",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.0,
+      0.98
+    ],
+    "trimShape": "ring",
+    "signature": "model_03|ceramic|3|48"
+  },
+  {
+    "id": "variant_049",
+    "material": "wood_dark",
+    "materialPath": "res://assets/materials/wood_dark.tres",
+    "primaryColor": "#705038",
+    "trimColor": "#704a32",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.025,
+      1.02
+    ],
+    "trimShape": "ring",
+    "signature": "model_04|wood_dark|3|49"
+  },
+  {
+    "id": "variant_050",
+    "material": "steel",
+    "materialPath": "res://assets/materials/steel.tres",
+    "primaryColor": "#7f8b91",
+    "trimColor": "#b99d70",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.05,
+      0.98
+    ],
+    "trimShape": "ring",
+    "signature": "model_05|steel|3|50"
+  },
+  {
+    "id": "variant_051",
+    "material": "glass",
+    "materialPath": "res://assets/materials/glass.tres",
+    "primaryColor": "#8fb8bf",
+    "trimColor": "#7d3e2f",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.0,
+      1.02
+    ],
+    "trimShape": "ring",
+    "signature": "model_06|glass|3|51"
+  },
+  {
+    "id": "variant_052",
+    "material": "painted_metal",
+    "materialPath": "res://assets/materials/painted_metal.tres",
+    "primaryColor": "#496b73",
+    "trimColor": "#5c6571",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.025,
+      0.98
+    ],
+    "trimShape": "ring",
+    "signature": "model_07|painted_metal|3|52"
+  },
+  {
+    "id": "variant_053",
+    "material": "aged_wood",
+    "materialPath": "res://assets/materials/aged_wood.tres",
+    "primaryColor": "#5c3f2a",
+    "trimColor": "#a5774f",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.05,
+      1.02
+    ],
+    "trimShape": "ring",
+    "signature": "model_08|aged_wood|3|53"
+  },
+  {
+    "id": "variant_054",
+    "material": "tarnished_brass",
+    "materialPath": "res://assets/materials/tarnished_brass.tres",
+    "primaryColor": "#80612e",
+    "trimColor": "#34383b",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.0,
+      0.98
+    ],
+    "trimShape": "ring",
+    "signature": "model_09|tarnished_brass|3|54"
+  },
+  {
+    "id": "variant_055",
+    "material": "brown_leather",
+    "materialPath": "res://assets/materials/brown_leather.tres",
+    "primaryColor": "#704a32",
+    "trimColor": "#b8893f",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.025,
+      1.02
+    ],
+    "trimShape": "ring",
+    "signature": "model_10|brown_leather|3|55"
+  },
+  {
+    "id": "variant_056",
+    "material": "paper",
+    "materialPath": "res://assets/materials/paper.tres",
+    "primaryColor": "#b99d70",
+    "trimColor": "#343236",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.05,
+      0.98
+    ],
+    "trimShape": "ring",
+    "signature": "model_11|paper|3|56"
+  },
+  {
+    "id": "variant_057",
+    "material": "rusted_steel",
+    "materialPath": "res://assets/materials/rusted_steel.tres",
+    "primaryColor": "#7d3e2f",
+    "trimColor": "#d7c7a1",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.0,
+      1.02
+    ],
+    "trimShape": "ring",
+    "signature": "model_12|rusted_steel|3|57"
+  },
+  {
+    "id": "variant_058",
+    "material": "aged_paint",
+    "materialPath": "res://assets/materials/aged_paint.tres",
+    "primaryColor": "#5c6571",
+    "trimColor": "#705038",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.025,
+      0.98
+    ],
+    "trimShape": "ring",
+    "signature": "model_13|aged_paint|3|58"
+  },
+  {
+    "id": "variant_059",
+    "material": "wood_light",
+    "materialPath": "res://assets/materials/wood_light.tres",
+    "primaryColor": "#a5774f",
+    "trimColor": "#7f8b91",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.05,
+      1.02
+    ],
+    "trimShape": "ring",
+    "signature": "model_14|wood_light|3|59"
+  },
+  {
+    "id": "variant_060",
+    "material": "rubber",
+    "materialPath": "res://assets/materials/rubber.tres",
+    "primaryColor": "#34383b",
+    "trimColor": "#8fb8bf",
+    "metallic": 0.63,
+    "roughness": 0.39,
+    "scale": [
+      1.065,
+      1.0,
+      0.98
+    ],
+    "trimShape": "ring",
+    "signature": "model_15|rubber|3|60"
+  }
+]

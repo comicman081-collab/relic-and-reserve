@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-18 Asia/Seoul",
+  "verdict": "SOURCE_QA_PASS_WINDOWS_ACCEPTANCE_HELD",
+  "godot": "4.7.1.stable.official.a13da4feb",
+  "mainScene": "res://scenes/Main.tscn",
+  "renderer": "gl_compatibility",
+  "systems": [
+    {
+      "name": "ArtifactSpec runtime binding",
+      "status": "PASS",
+      "code": "scripts/runtime_registry.gd + scripts/game_state.gd",
+      "tests": [
+        "R3-DATA-02",
+        "R3-DATA-03"
+      ]
+    },
+    {
+      "name": "60 visible variants",
+      "status": "PASS",
+      "code": "data/visual_variants.json + scripts/main3d.gd",
+      "tests": [
+        "R3-VIS-01",
+        "R3-VIS-02"
+      ]
+    },
+    {
+      "name": "Deterministic market/day loop",
+      "status": "PASS",
+      "code": "scripts/game_state.gd",
+      "tests": [
+        "R3-MARKET-01",
+        "R3-MARKET-02",
+        "R3-MARKET-03",
+        "R3-MARKET-04"
+      ]
+    },
+    {
+      "name": "Live restoration/disassembly visuals",
+      "status": "PASS",
+      "code": "scripts/main3d.gd::refresh_workpiece_visuals",
+      "tests": [
+        "R3-RESTORE-01",
+        "R3-RESTORE-02",
+        "R3-DISASSEMBLY-01",
+        "R3-DISASSEMBLY-02"
+      ]
+    },
+    {
+      "name": "Six-choice authentication UI",
+      "status": "PASS",
+      "code": "scripts/main3d.gd::show_authentication",
+      "tests": [
+        "R3-AUTH-01",
+        "R3-AUTH-02",
+        "R3-AUTH-03"
+      ]
+    },
+    {
+      "name": "Bidder AI and reserve semantics",
+      "status": "PASS",
+      "code": "scripts/game_state.gd::auction/sell",
+      "tests": [
+        "R3-AUCTION-01",
+        "R3-AUCTION-02",
+        "R3-BIDDER-01",
+        "R3-BIDDER-02",
+        "R3-BIDDER-03"
+      ]
+    },
+    {
+      "name": "25 events",
+      "status": "PASS",
+      "code": "data/events/events.json + scripts/game_state.gd",
+      "tests": [
+        "R3-EVENT-01",
+        "R3-EVENT-02"
+      ]
+    },
+    {
+      "name": "25 upgrades",
+      "status": "PASS",
+      "code": "data/upgrades/upgrades.json + scripts/game_state.gd",
+      "tests": [
+        "R3-UPGRADE-01",
+        "R3-UPGRADE-02"
+      ]
+    },
+    {
+      "name": "Save/load and R2 migration",
+      "status": "PASS",
+      "code": "scripts/game_state.gd",
+      "tests": [
+        "R3-SAVE-01",
+        "R3-SAVE-02",
+        "CAMP-SAVE-01",
+        "CAMP-SAVE-02"
+      ]
+    },
+    {
+      "name": "EN/KO current-screen refresh",
+      "status": "PASS",
+      "code": "localization/*.json + scripts/main3d.gd",
+      "tests": [
+        "R3-LOC-01",
+        "R3-LOC-02",
+        "R3-LOC-03",
+        "R3-LOC-04"
+      ]
+    },
+    {
+      "name": "Full campaign through postgame",
+      "status": "PASS",
+      "code": "data/campaign/*.json + scripts/game_state.gd + scripts/main3d.gd",
+      "tests": [
+        "CAMP-FAST-01",
+        "CAMP-END-01"
+      ]
+    },
+    {
+      "name": "Windows executable E2E",
+      "status": "UNVERIFIED_HELD",
+      "reason": "User explicitly prohibited EXE/PCK/archive creation until a later instruction."
+    }
+  ],
+  "testTotals": {
+    "core": {
+      "executed": 34,
+      "passed": 34,
+      "failed": 0,
+      "skipped": 0
+    },
+    "campaign": {
+      "executed": 23,
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0
+    },
+    "endings": {
+      "executed": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "economyRuns": 1000
+  }
+}

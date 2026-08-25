@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" data-character-id="lena_falk_concerned" data-character-name="Lena Falk" data-rendered-expression="NEGATIVE" data-expression-anchor="128,140" data-face-zone="73 55 110 141" data-face-height-ratio="0.441" data-eye-system="sclera-iris-pupil-highlight" data-runtime-reference="220x250" data-head-height-svg="164" data-visible-face-skin-height-svg="108" data-major-face-stroke-svg="3.5" data-expression-geometry-version="2">
+  <title>Lena Falk concerned portrait</title>
+  <desc>Cute big-eyed dealer Lena Falk with an asymmetrical auburn bob, blue-violet eyes, a rust coat, an invoice folder, and a wax-seal ribbon.</desc>
+  <path fill="#F4E9E3" d="M18 302V91q0-60 60-60h100q60 0 60 60v211z"/>
+  <path fill="#D9A691" d="M28 302V84l24-23 24 16 21-36 30 27 31-34 25 39 25-13 20 24v218z"/>
+  <path fill="#F2CC9D" d="M37 83l35-22 25 15 30-31 31 28 31-13 30 23v12H37z" opacity=".72"/>
+  <g data-layer="hair" data-feature="asymmetrical-auburn-bob">
+    <path fill="#552F2B" d="M67 142Q55 91 78 55q25-37 70-25 37 10 43 53l-2 89-24 37-7-116-66-5-9 72z"/>
+    <path fill="#843F32" d="M74 82q20-52 70-53 29 1 45 29-33-9-65 11l42 2q-37 15-81 18l-8 51-16-29z"/>
+    <path fill="#A9583E" d="M93 52q32-29 64-16l-24 25 40-13-25 27 34-6q-38 25-91 23z"/>
+    <path fill="#68332E" d="M157 78q31 16 31 52v75q-9 16-27 24l5-91-14-48z"/>
+    <path fill="none" stroke="#C47955" stroke-width="4" stroke-linecap="round" d="M103 47q23-14 45-9m-57 29q23-12 46-11" opacity=".65"/>
+  </g>
+  <g data-layer="face">
+    <ellipse fill="#C97D62" cx="75" cy="137" rx="10" ry="17"/>
+    <ellipse fill="#C97D62" cx="180" cy="137" rx="10" ry="17"/>
+    <path data-part="face-shape" fill="#DF9D7D" d="M75 90Q89 58 128 58q40 0 53 32l-6 65q-11 35-47 42-36-7-48-42z"/>
+    <path fill="#F0B99A" d="M88 98q11-28 40-29 31 0 42 26l-5 54q-9 29-37 35-28-6-37-34z" opacity=".46"/>
+    <g data-part="brows" fill="none" stroke="#613A3D" stroke-width="3.5" stroke-linecap="round">
+      <path d="M90 111q15-12 29-4"/>
+      <path d="M137 107q14-8 29 4"/>
+    </g>
+    <g data-eye="left">
+      <ellipse data-part="sclera" fill="#FFF8FC" cx="105" cy="126" rx="15.5" ry="10"/>
+      <circle data-part="iris" fill="#7462B7" cx="106" cy="127" r="8.3"/>
+      <circle data-part="pupil" fill="#342D5C" cx="106" cy="127" r="4.2"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="103" cy="123" r="2.4"/>
+      <circle fill="#B8A7F2" cx="109" cy="130" r="1.4"/>
+      <path fill="none" stroke="#633D42" stroke-width="2" stroke-linecap="round" d="M92 121l-5-2m36 2 5-2"/>
+    </g>
+    <g data-eye="right">
+      <ellipse data-part="sclera" fill="#FFF8FC" cx="151" cy="126" rx="15.5" ry="10"/>
+      <circle data-part="iris" fill="#7462B7" cx="150" cy="127" r="8.3"/>
+      <circle data-part="pupil" fill="#342D5C" cx="150" cy="127" r="4.2"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="147" cy="123" r="2.4"/>
+      <circle fill="#B8A7F2" cx="153" cy="130" r="1.4"/>
+      <path fill="none" stroke="#633D42" stroke-width="2" stroke-linecap="round" d="M164 121l5-2m-36 2-5-2"/>
+    </g>
+    <ellipse fill="#C86568" cx="93" cy="153" rx="10" ry="4.8" opacity=".6"/>
+    <ellipse fill="#C86568" cx="163" cy="153" rx="10" ry="4.8" opacity=".6"/>
+    <path data-part="nose" fill="#B96C59" d="M124 138l-5 14 9 5 8-5-5-14z"/>
+    <path data-part="mouth" fill="none" stroke="#783F50" stroke-width="3.5" stroke-linecap="round" d="M115 174q13-10 26 0"/>
+    <path fill="none" stroke="#F7C5AC" stroke-width="2" stroke-linecap="round" d="M119 165q9 2 18 0" opacity=".75"/>
+  </g>
+  <g data-layer="outfit">
+    <path fill="#803B2F" d="M43 304l15-78q7-34 49-42l21 22 21-22q42 8 49 42l15 78z"/>
+    <path fill="#B95538" d="M43 304l49-102 36 45 36-45 49 102z"/>
+    <path fill="#FFF0DA" d="M106 185l22 21 22-21-8 54-14 19-14-19z"/>
+    <path fill="#D9963E" d="M122 206h12v54h-12z"/>
+    <path fill="#672D2A" d="M89 204l30 43-19 57H57zm78 0-30 43 19 57h43z"/>
+    <path fill="none" stroke="#D8784D" stroke-width="4" d="M58 264h37m66 0h37"/>
+  </g>
+  <g data-layer="prop">
+    <g data-feature="invoice-folder">
+      <path fill="#E7C484" stroke="#704B37" stroke-width="3" d="M45 236h67v67H45z"/>
+      <path fill="#F8EACB" d="M52 229h55v61H52z"/>
+      <path fill="#B9583F" d="M52 229h21l6 8h28v9H52z"/>
+      <path fill="none" stroke="#85664F" stroke-width="3" stroke-linecap="round" d="M61 255h37m-37 11h30m-30 11h34"/>
+      <path fill="#486C72" d="M58 250h7v7h-7z"/>
+    </g>
+    <g data-feature="seal-ribbon">
+      <path fill="#E2AD42" d="M163 239h16v50l-8-8-8 8z"/>
+      <circle fill="#A9433D" stroke="#6F302F" stroke-width="3" cx="171" cy="239" r="14"/>
+      <path fill="#F1C46A" d="M171 230l3 6 6 1-5 5 1 7-5-3-6 3 1-7-5-5 7-1z"/>
+      <path fill="none" stroke="#F7D68D" stroke-width="2" d="M165 238q6-6 12 0"/>
+    </g>
+  </g>
+  <g data-layer="expression-anchors" fill="none" stroke="none">
+    <path data-expression="NEUTRAL" data-brow-shift-svg="0" data-eye-height-shift-svg="0" data-mouth-corner-shift-svg="0" d="M95 109h25m16 0h25m-39 58h14"/>
+    <path data-expression="POSITIVE" data-brow-shift-svg="-5" data-eye-height-shift-svg="-3" data-mouth-corner-shift-svg="-5" d="M95 105h25m16 0h25m-28 52q9 12 18 0"/>
+    <path data-expression="NEGATIVE" data-brow-shift-svg="5" data-eye-height-shift-svg="3" data-mouth-corner-shift-svg="5" d="M95 114h25m16 0h25m-28 55q9-10 18 0"/>
+  </g>
+</svg>

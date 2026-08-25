@@ -1,0 +1,194 @@
+[
+  {
+    "id": "soft_brush",
+    "name": "Soft Brush",
+    "category": "cleaning",
+    "strength": 14,
+    "speed": 0.8,
+    "risk": 0.02,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 25,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "cleaning_cloth",
+    "name": "Cleaning Cloth",
+    "category": "cleaning",
+    "strength": 18,
+    "speed": 0.7,
+    "risk": 0.03,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 40,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "cotton_swab",
+    "name": "Cotton Swab",
+    "category": "cleaning",
+    "strength": 10,
+    "speed": 0.55,
+    "risk": 0.01,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 55,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "mild_cleaner",
+    "name": "Mild Cleaner",
+    "category": "cleaning",
+    "strength": 24,
+    "speed": 0.9,
+    "risk": 0.12,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 70,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "rust_treatment",
+    "name": "Rust Treatment",
+    "category": "restoration",
+    "strength": 28,
+    "speed": 0.75,
+    "risk": 0.18,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 85,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "polishing_pad",
+    "name": "Polishing Pad",
+    "category": "cleaning",
+    "strength": 30,
+    "speed": 0.85,
+    "risk": 0.22,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 100,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "precision_screwdriver",
+    "name": "Precision Screwdriver",
+    "category": "disassembly",
+    "strength": 20,
+    "speed": 0.65,
+    "risk": 0.08,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 115,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "repair_toolkit",
+    "name": "Repair Toolkit",
+    "category": "repair",
+    "strength": 34,
+    "speed": 0.8,
+    "risk": 0.1,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 130,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "uv_lamp",
+    "name": "UV Inspection Lamp",
+    "category": "inspection",
+    "strength": 0,
+    "speed": 0.5,
+    "risk": 0,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 145,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "material_scanner",
+    "name": "Material Scanner",
+    "category": "inspection",
+    "strength": 0,
+    "speed": 0.5,
+    "risk": 0,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 160,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "precision_scale",
+    "name": "Precision Scale",
+    "category": "inspection",
+    "strength": 0,
+    "speed": 0.5,
+    "risk": 0,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 175,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  },
+  {
+    "id": "reference_database",
+    "name": "Reference Database",
+    "category": "inspection",
+    "strength": 0,
+    "speed": 0.5,
+    "risk": 0,
+    "precision": 0.8,
+    "unlockLevel": 1,
+    "price": 190,
+    "effectiveDamage": [
+      "DUST",
+      "GRIME",
+      "RUST"
+    ]
+  }
+]

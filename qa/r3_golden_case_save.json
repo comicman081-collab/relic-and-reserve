@@ -1,0 +1,317 @@
+{
+  "activeWorkpieceId": "",
+  "auctionHistory": [],
+  "campaign": {
+    "activeCaseId": "prologue_clock",
+    "caseArtifactLedger": {
+      "prologue_clock": {
+        "artifactUid": "case_prologue_clock",
+        "disposition": "INVENTORY",
+        "issued": true,
+        "publicAppraisalSnapshot": 0,
+        "publicConditionSnapshot": {},
+        "saleTransactionId": ""
+      }
+    },
+    "caseOutcomes": {},
+    "caseStates": {
+      "prologue_clock": {
+        "citedEvidenceIds": [
+          "src.prologue.artifact.backplate_screws"
+        ],
+        "discoveredEvidenceIds": [
+          "src.prologue.artifact.backplate_screws"
+        ],
+        "resolutionResult": {},
+        "resolved": false,
+        "selectedHypothesisId": "hyp.period_repair"
+      }
+    },
+    "collectorNetwork": 0,
+    "commissionArtifactUses": {},
+    "completedActs": {},
+    "completedCases": {},
+    "completedCommissionIds": [],
+    "currentAct": "PROLOGUE",
+    "currentEnding": "",
+    "endingMetrics": {},
+    "endingUnlocked": [],
+    "epilogueSeen": false,
+    "ethics": 60,
+    "grandReserve": {
+      "completed": false,
+      "invited": false,
+      "results": [],
+      "score": {},
+      "selectedLotIds": []
+    },
+    "historicalIntegrity": 50,
+    "mastery": {
+      "DECORATIVE": 0,
+      "DOCUMENTARY": 0,
+      "ELECTRICAL": 0,
+      "MECHANICAL": 0,
+      "OPTICAL": 0,
+      "SCIENTIFIC": 0
+    },
+    "museumTrust": 0,
+    "postGame": false,
+    "relationships": {
+      "dorian_vale": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "elias_rowe": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "hana_mire": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "iris_bell": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "lena_falk": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "mara_venn": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "noah_stern": {
+        "relationship": 0,
+        "trust": 0
+      },
+      "victor_hale": {
+        "relationship": 0,
+        "trust": 0
+      }
+    },
+    "schemaVersion": 2,
+    "storyFlags": {},
+    "unlockedModules": [
+      "basic_bench"
+    ],
+    "workshopGrade": 1
+  },
+  "currentEventId": "",
+  "currentStage": 1,
+  "dailyModifiers": {},
+  "day": 1,
+  "eventHistory": [],
+  "gameVersion": "R3",
+  "grandReserveSession": {
+    "activeArtifact": {},
+    "activeTransactionId": "",
+    "currentLotIndex": -1,
+    "finalizationReceiptId": "",
+    "lotUids": [],
+    "phase": "IDLE",
+    "receipts": [],
+    "reserveRunId": "",
+    "schemaVersion": 1
+  },
+  "instanceCounter": 0,
+  "inventory": [
+    {
+      "acquisitionPrice": 44,
+      "artifactSpecId": "artifact_001",
+      "authenticityTruth": "hyp.period_repair",
+      "caseId": "prologue_clock",
+      "caseResolved": false,
+      "cleanliness": 18.0,
+      "confidence": 0.23,
+      "damageInstances": [
+        "DUST",
+        "RUST",
+        "CRACK"
+      ],
+      "estimatedValue": 110,
+      "evidence": [
+        {
+          "clueType": "src.prologue.artifact.backplate_screws",
+          "confidenceWeight": 0.12,
+          "contradicts": [],
+          "observation": {
+            "en": "Beneath the dust, three rear-plate screws are brass. The upper-right screw is blued steel and its slot was filed by hand. A dark oxidation ring continues beneath its head, showing that it was installed long ago rather than during a recent rebuild.",
+            "ko": "먼지 아래에서 후면판 나사 세 개는 황동으로 확인된다. 오른쪽 위 나사만 청색 열처리 강철이며 홈은 손으로 다듬었다. 나사 머리 아래까지 짙은 산화 고리가 이어져 있어 최근 재조립 때가 아니라 오래전에 장착되었음을 보여 준다."
+          },
+          "supports": []
+        }
+      ],
+      "historicalIntegrity": 75.0,
+      "inspected": false,
+      "knownClues": [
+        "src.prologue.artifact.backplate_screws"
+      ],
+      "listing": {
+        "confidence": 0.0,
+        "disclosure": "UNCERTAIN",
+        "reserve": 0,
+        "starting": 0
+      },
+      "mechanicalCondition": 42.0,
+      "originalParts": 2,
+      "partStates": {
+        "body": true,
+        "mechanism": true,
+        "panel": true
+      },
+      "playerHypothesis": "UNKNOWN",
+      "possibleClues": [
+        "MATERIAL",
+        "SERIAL_PATTERN",
+        "CONSTRUCTION_METHOD",
+        "PROVENANCE",
+        "REPAIR_TRACE"
+      ],
+      "repaired": false,
+      "replacementParts": 1,
+      "restorationCost": 0.0,
+      "restorationQuality": 0.0,
+      "rotation": 0.0,
+      "seed": 137088124,
+      "sold": false,
+      "storyArtifactId": "story_artifact_01",
+      "structuralCondition": 70.0,
+      "surfaceCondition": 55.0,
+      "uniqueId": "case_prologue_clock",
+      "zoom": 1.0
+    }
+  ],
+  "language": "en",
+  "marketRoster": [
+    {
+      "lotId": "day_1_lot_00",
+      "price": 564,
+      "seed": 4820145,
+      "sold": false,
+      "specId": "artifact_032"
+    },
+    {
+      "lotId": "day_1_lot_01",
+      "price": 453,
+      "seed": 26052978,
+      "sold": false,
+      "specId": "artifact_045"
+    },
+    {
+      "lotId": "day_1_lot_02",
+      "price": 625,
+      "seed": 883218431,
+      "sold": false,
+      "specId": "artifact_058"
+    },
+    {
+      "lotId": "day_1_lot_03",
+      "price": 126,
+      "seed": 910890388,
+      "sold": false,
+      "specId": "artifact_009"
+    },
+    {
+      "lotId": "day_1_lot_04",
+      "price": 266,
+      "seed": 679390032,
+      "sold": false,
+      "specId": "artifact_022"
+    }
+  ],
+  "marketRosterDay": 1,
+  "marketState": {
+    "ceramics": -4,
+    "decorative_objects": 2,
+    "mechanical_instruments": 10,
+    "office_machines": 8,
+    "optical_devices": 6,
+    "scientific_instruments": 11,
+    "telephony": 7,
+    "vintage_audio": 14
+  },
+  "masterSeed": 481516,
+  "money": 1200,
+  "pendingAuction": {
+    "artifactId": "",
+    "createdDay": 0,
+    "cueIndex": 0,
+    "cueQueue": [],
+    "decisions": {},
+    "grandReserve": false,
+    "publicFingerprint": "",
+    "receipt": {},
+    "result": {},
+    "schemaVersion": 1,
+    "status": "NONE",
+    "transactionId": ""
+  },
+  "reputation": 12,
+  "rngState": -3378380881708314866,
+  "rngStateExact": "-3378380881708314866",
+  "saveVersion": 6,
+  "selectedTool": "soft_brush",
+  "stageRunState": {
+    "caseIds": [
+      "prologue_clock",
+      "silent_radio",
+      "perfect_fake"
+    ],
+    "completedAtDay": 0,
+    "difficultyMultiplier": 1.0,
+    "grandReserveRequired": false,
+    "lastPerformance": {},
+    "score": 0.0,
+    "stageClearAcknowledged": false,
+    "stageId": 1,
+    "stageReplayFeedbackSnapshot": {},
+    "stageReplayTelemetrySnapshot": {},
+    "startedAtDay": 0,
+    "status": "NOT_STARTED",
+    "telemetry": {
+      "artifactSalesCount": 0,
+      "auctionCount": 0,
+      "budgetBasis": 1200,
+      "investigationActions": 0,
+      "investigationRiskActions": 0,
+      "investigationRiskWeightSum": 0.0,
+      "listingStrategyCounts": {
+        "AUTO_GRAND_RESERVE": 0,
+        "BALANCED": 0,
+        "CUSTOM": 0,
+        "FAST": 0,
+        "HIGH": 0,
+        "LEGACY_UNKNOWN": 0
+      },
+      "noSaleCount": 0,
+      "relistCount": 0,
+      "repairActions": 0,
+      "repairCostAccrued": 0.0,
+      "repairToolUseCounts": {}
+    },
+    "telemetryAvailable": true,
+    "telemetrySeenIds": [],
+    "tutorialCompletedSteps": []
+  },
+  "statistics": {
+    "authentication_attempts": 0,
+    "authentication_correct": 0,
+    "biggest_loss": 0,
+    "biggest_profit": 0,
+    "commissions": 0,
+    "days_operated": 1,
+    "discoveries": 1,
+    "forgeries_detected": 0,
+    "museum_acquisitions": 0,
+    "no_sales": 0,
+    "original_parts_preserved": 0,
+    "profit": 0,
+    "purchases": 0,
+    "restorations": 0,
+    "sales": 0,
+    "total_auction_revenue": 0
+  },
+  "transactions": [],
+  "upgrades": []
+}

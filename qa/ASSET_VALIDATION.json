@@ -1,0 +1,20 @@
+{
+  "status": "STATIC_VALIDATED",
+  "counts": {
+    "artifact_base_meshes": 15,
+    "artifact_specs": 60,
+    "visible_variants": 60,
+    "generated_instances": 150,
+    "fictional_makers": 20,
+    "workshop_props": 35,
+    "materials": 15,
+    "damage_types": 14,
+    "tools": 12,
+    "bidder_archetypes": 12,
+    "events": 25,
+    "upgrades": 25,
+    "ui_icons": 100,
+    "sfx": 20
+  },
+  "errors": []
+}

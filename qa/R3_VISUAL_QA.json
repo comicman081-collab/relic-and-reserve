@@ -1,0 +1,346 @@
+{
+  "buildHash": "SOURCE_PRE_BUILD",
+  "captures": [
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "01_title",
+      "note": "Title menu",
+      "path": "res://qa/r3_renders/01_title.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "launch project"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "02_workshop",
+      "note": "Real 3D workshop and campaign metrics",
+      "path": "res://qa/r3_renders/02_workshop.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "NEW GAME",
+        "WORKSHOP"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "03_market_day1",
+      "note": "Seeded day-one roster",
+      "path": "res://qa/r3_renders/03_market_day1.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "NEW GAME",
+        "MARKET"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "04_inventory",
+      "note": "Purchased lot is owned",
+      "path": "res://qa/r3_renders/04_inventory.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "MARKET",
+        "click BUY",
+        "INVENTORY"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "05_inspection_dirty",
+      "note": "Dirty 3D workpiece with three live damage markers",
+      "path": "res://qa/r3_renders/05_inspection_dirty.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "test prerequisite: supported clock acquired",
+        "PLACE / INSPECT"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "06_cleaning_live_after_action",
+      "note": "No hidden load_artifact refresh; UI callback performed synchronization",
+      "path": "res://qa/r3_renders/06_cleaning_live_after_action.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "PLACE / INSPECT",
+        "click SOFT BRUSH"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "07_disassembly_supported",
+      "note": "Supported panel hidden immediately",
+      "path": "res://qa/r3_renders/07_disassembly_supported.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "click DISASSEMBLE PANEL"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "08_authentication_all_6_visible",
+      "note": "All six hypotheses visible in a 3x2 GridContainer",
+      "path": "res://qa/r3_renders/08_authentication_all_6_visible.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "inspect MATERIAL",
+        "inspect SERIAL_PATTERN",
+        "inspect CONSTRUCTION_METHOD",
+        "click AUTHENTICATE"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "09_appraisal",
+      "note": "Accepted player hypothesis and evidence-based estimate",
+      "path": "res://qa/r3_renders/09_appraisal.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "click hypothesis GENUINE_WITH_MODERN_REPAIR",
+        "click ACCEPT HYPOTHESIS"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "10_auction_reserve_met",
+      "note": "Reserve-met preview using bidder profiles",
+      "path": "res://qa/r3_renders/10_auction_reserve_met.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "LIST with reserve 1",
+        "open LIVE AUCTION"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "11_auction_reserve_not_met",
+      "note": "Reserve-not-met state shown before recording; item remains owned",
+      "path": "res://qa/r3_renders/11_auction_reserve_not_met.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "relist same owned lot with unreachable reserve",
+        "open LIVE AUCTION"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "12_upgrades_scroll_owned_effect",
+      "note": "Scrollable 25-upgrade list with owned state",
+      "path": "res://qa/r3_renders/12_upgrades_scroll_owned_effect.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "UPGRADES",
+        "buy Storage Expansion"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "13_market_day2_changed",
+      "note": "Day-two roster is visibly changed",
+      "path": "res://qa/r3_renders/13_market_day2_changed.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "click END DAY"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "14_korean_core_screen",
+      "note": "Current screen refreshed in Korean",
+      "path": "res://qa/r3_renders/14_korean_core_screen.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "MARKET day 2",
+        "click EN / 한국어"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "15_save_reload_restored",
+      "note": "Reload restored money 9900 and inventory",
+      "path": "res://qa/r3_renders/15_save_reload_restored.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "save R3 state",
+        "mutate memory",
+        "load R3 state",
+        "open INVENTORY"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "16_prologue_workshop",
+      "note": "Prologue in the Closed Workshop",
+      "path": "res://qa/r3_renders/16_prologue_workshop.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "NEW GAME",
+        "begin prologue_clock"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "17_act1_market",
+      "note": "Act 1 local circuit",
+      "path": "res://qa/r3_renders/17_act1_market.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "complete prologue through core APIs",
+        "open Act 1 market"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "18_act2_archive",
+      "note": "Act 2 archive location identity",
+      "path": "res://qa/r3_renders/18_act2_archive.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "complete 8 Act 1 cases",
+        "open campaign"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "19_act3_collector",
+      "note": "Act 3 collector relationship state",
+      "path": "res://qa/r3_renders/19_act3_collector.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "complete provenance cases",
+        "open campaign"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "20_act4_forgery_case",
+      "note": "Act 4 connected forgery cases",
+      "path": "res://qa/r3_renders/20_act4_forgery_case.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "complete collector cases",
+        "open campaign"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "21_act5_master_workshop",
+      "note": "Act 5 master restoration list",
+      "path": "res://qa/r3_renders/21_act5_master_workshop.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "complete shadow cases and composite prototype",
+        "open Grade IV/V workshop"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "22_final_lot_selection",
+      "note": "Eligible owned instance IDs are selectable",
+      "path": "res://qa/r3_renders/22_final_lot_selection.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "complete six master cases",
+        "receive invitation",
+        "open final lot selection"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "23_grand_reserve_hall",
+      "note": "Distinct real 3D Grand Reserve hall and three selected IDs",
+      "path": "res://qa/r3_renders/23_grand_reserve_hall.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "select three distinct owned lots"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "24_grand_reserve_auction",
+      "note": "Real auction UI with Grand Reserve 3D environment",
+      "path": "res://qa/r3_renders/24_grand_reserve_auction.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "prepare selected final lot",
+        "run real bidder auction preview in Grand Reserve hall"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "25_ending_screen",
+      "note": "Ending tier, scores, and exact three result snapshots",
+      "path": "res://qa/r3_renders/25_ending_screen.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "complete three Grand Reserve auctions",
+        "evaluate ending"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "26_epilogue_statistics",
+      "note": "Campaign statistics and credits reference",
+      "path": "res://qa/r3_renders/26_epilogue_statistics.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "view ending epilogue statistics"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 editor/headless runtime",
+      "name": "27_postgame",
+      "note": "Endless workshop and ending gallery",
+      "path": "res://qa/r3_renders/27_postgame.png",
+      "resolution": "1280x720",
+      "sequence": [
+        "click CONTINUE — POSTGAME"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    },
+    {
+      "mode": "Godot 4.7.1 runtime batch",
+      "name": "60_spec_contact_sheet",
+      "note": "10x6 proof of all runtime visual signatures",
+      "path": "res://qa/r3_renders/60_spec_contact_sheet.png",
+      "resolution": "1800x720",
+      "sequence": [
+        "instantiate each of 60 ArtifactSpecs",
+        "apply runtime mesh/material/trim variant",
+        "capture thumbnail"
+      ],
+      "status": "PASS_VISUALLY_REVIEWED"
+    }
+  ],
+  "count": 28,
+  "reviewedAt": "2026-08-18 Asia/Seoul",
+  "reviewSummary": "All 27 flow screens were reviewed together in screen_contact_sheet.png; authentication, upgrades, Korean UI, Grand Reserve, ending, postgame, and the 60-spec sheet were also inspected at full size. No overlap, crop, tofu, or hidden-reload evidence remained.",
+  "windowsExecutableStatus": "HELD_UNVERIFIED_BY_USER_INSTRUCTION"
+}

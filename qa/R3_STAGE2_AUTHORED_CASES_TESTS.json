@@ -1,0 +1,1339 @@
+{
+  "executed": 10,
+  "expectedCount": 10,
+  "failed": 0,
+  "passed": 10,
+  "skipped": 0,
+  "suite": "R3 Stage 2 Authored Cases",
+  "tests": [
+    {
+      "evidence": {
+        "authoredCount": 22,
+        "caseOrder": [
+          "leave_patina",
+          "estate_compass",
+          "pawn_watch"
+        ],
+        "fallbackCount": 0,
+        "missingMethods": [],
+        "multiplier": 1.07,
+        "protected": {
+          "false_invoice": {
+            "canonical": "hyp.authentic_box_false_invoice",
+            "evidenceCount": 6,
+            "ok": true,
+            "sha256": "b6c8086791ae7f1dbd3adba41dfa80d044b242477d8a9a3efe663d355ae3bf41"
+          },
+          "prologue_clock": {
+            "canonical": "hyp.period_repair",
+            "evidenceCount": 5,
+            "ok": true,
+            "sha256": "5a3bd4378fe982e4552bfcc917b2c63bcf7c63b315aa9348790fadcf276c5e59"
+          },
+          "shadow_camera": {
+            "canonical": "hyp.late_composite",
+            "evidenceCount": 6,
+            "ok": true,
+            "sha256": "09fd2bc681ae4897b1d2cac324996bda80f4f21d07f0d5d0823a1cb07acf0664"
+          }
+        },
+        "registryErrors": []
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-DATA-01",
+      "name": "Stage 2 resolves exactly three authored-v2 cases in order with no fallback while the three protected authored results remain exact",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "estate_compass": {
+          "collectiveStances": [
+            "REFUTE",
+            "SUPPORT"
+          ],
+          "dependencyRows": [
+            "src.estate_compass.artifact.internal_balance",
+            "src.estate_compass.document.inventory_entry",
+            "src.estate_compass.npc.lena_recollection",
+            "src.estate_compass.reference.kestrel_guide"
+          ],
+          "everyHypothesisLinked": true,
+          "groups": [
+            "physical_dial_identity",
+            "internal_assembly_sequence",
+            "estate_inventory_chain",
+            "family_oral_context",
+            "independent_production_reference"
+          ],
+          "hypotheses": 3,
+          "lockedResult": {
+            "code": "EVIDENCE_LOCKED",
+            "ok": false,
+            "requires": [
+              "src.estate_compass.artifact.dial_serial"
+            ]
+          },
+          "ok": true,
+          "oneSourceStrongImpossible": true,
+          "relations": {
+            "hyp.estate_compass.assembled_later": [
+              "REFUTE"
+            ],
+            "hyp.estate_compass.matched_provenance": [
+              "REFUTE",
+              "SUPPORT"
+            ],
+            "hyp.estate_compass.misdated_provenance": [
+              "SUPPORT"
+            ]
+          },
+          "sourceKinds": [
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ]
+        },
+        "leave_patina": {
+          "collectiveStances": [
+            "SUPPORT",
+            "REFUTE"
+          ],
+          "dependencyRows": [
+            "src.leave_patina.artifact.hidden_finish_boundary",
+            "src.leave_patina.document.service_note",
+            "src.leave_patina.npc.iris_assessment",
+            "src.leave_patina.reference.eldemere_finish"
+          ],
+          "everyHypothesisLinked": true,
+          "groups": [
+            "physical_wear_sequence",
+            "protected_finish_layer",
+            "household_treatment_record",
+            "conservator_assessment",
+            "independent_period_reference"
+          ],
+          "hypotheses": 3,
+          "lockedResult": {
+            "code": "EVIDENCE_LOCKED",
+            "ok": false,
+            "requires": [
+              "src.leave_patina.artifact.wear_gradient"
+            ]
+          },
+          "ok": true,
+          "oneSourceStrongImpossible": true,
+          "relations": {
+            "hyp.leave_patina.artificial_aging": [
+              "REFUTE"
+            ],
+            "hyp.leave_patina.later_contamination": [
+              "REFUTE",
+              "SUPPORT"
+            ],
+            "hyp.leave_patina.natural_patina": [
+              "SUPPORT"
+            ]
+          },
+          "sourceKinds": [
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ]
+        },
+        "pawn_watch": {
+          "collectiveStances": [
+            "SUPPORT",
+            "REFUTE"
+          ],
+          "dependencyRows": [
+            "src.pawn_watch.artifact.bridge_service_marks",
+            "src.pawn_watch.artifact.escape_wheel_measurement",
+            "src.pawn_watch.document.pawn_ticket",
+            "src.pawn_watch.npc.lena_ticket_context",
+            "src.pawn_watch.reference.brasswell_service_gauge"
+          ],
+          "everyHypothesisLinked": true,
+          "groups": [
+            "external_case_identity",
+            "internal_service_sequence",
+            "component_measurement",
+            "pawn_service_record",
+            "family_custody_context",
+            "independent_service_reference"
+          ],
+          "hypotheses": 3,
+          "lockedResult": {
+            "code": "EVIDENCE_LOCKED",
+            "ok": false,
+            "requires": [
+              "src.pawn_watch.artifact.case_wear_serial"
+            ]
+          },
+          "ok": true,
+          "oneSourceStrongImpossible": true,
+          "relations": {
+            "hyp.pawn_watch.modern_parts": [
+              "REFUTE"
+            ],
+            "hyp.pawn_watch.mostly_original": [
+              "SUPPORT",
+              "REFUTE"
+            ],
+            "hyp.pawn_watch.period_repair": [
+              "SUPPORT"
+            ]
+          },
+          "sourceKinds": [
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-STRUCTURE-01",
+      "name": "Every Stage 2 case has four source kinds, three contested hypotheses, independent groups, a runtime dependency, and no one-source STRONG path",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "estate_compass": {
+          "documentIds": [
+            "document_09",
+            "document_10"
+          ],
+          "npcId": "lena_falk",
+          "ok": true,
+          "rewardSpecId": "artifact_011",
+          "rewards": {
+            "historicalIntegrity": 1.0,
+            "mastery": 3.0,
+            "money": 138.0,
+            "museumTrust": 1.0,
+            "reputation": 2.0
+          },
+          "storyArtifactId": "story_artifact_05",
+          "storyBaseSpecId": "artifact_011"
+        },
+        "leave_patina": {
+          "documentIds": [
+            "document_07",
+            "document_08"
+          ],
+          "npcId": "iris_bell",
+          "ok": true,
+          "rewardSpecId": "artifact_005",
+          "rewards": {
+            "historicalIntegrity": 1.0,
+            "mastery": 3.0,
+            "money": 126.0,
+            "museumTrust": 1.0,
+            "reputation": 2.0
+          },
+          "storyArtifactId": "story_artifact_04",
+          "storyBaseSpecId": "artifact_005"
+        },
+        "pawn_watch": {
+          "documentIds": [
+            "document_11",
+            "document_12"
+          ],
+          "npcId": "lena_falk",
+          "ok": true,
+          "rewardSpecId": "artifact_002",
+          "rewards": {
+            "historicalIntegrity": 1.0,
+            "mastery": 3.0,
+            "money": 150.0,
+            "museumTrust": 1.0,
+            "reputation": 2.0
+          },
+          "storyArtifactId": "story_artifact_06",
+          "storyBaseSpecId": "artifact_002"
+        }
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-CAMPAIGN-01",
+      "name": "Stage 2 keeps exact NPC, document and reward arrays; only Estate Compass moves to reward/story base spec 011",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "fresh": {
+          "artifactSpecId": "artifact_011",
+          "baseModel": "model_11.obj",
+          "baseValue": 300,
+          "ok": true
+        },
+        "legacy": {
+          "artifactSpecId": "artifact_009",
+          "caseStateExact": true,
+          "inventoryCount": 1,
+          "ledgerExact": true,
+          "ok": true,
+          "rngMutation0": true,
+          "stateMutation0": true,
+          "uid": "case_estate_compass"
+        }
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-ISSUANCE-01",
+      "name": "Fresh Estate Compass issues artifact 011/model 11/value 300, while a simulated pre-patch artifact 009 ledger, UID and case state are preserved exactly",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "estate_compass": {
+          "counts": {
+            "HIGH": 0,
+            "LOW": 1
+          },
+          "expected": {
+            "HIGH": 0,
+            "LOW": 1
+          },
+          "ok": true,
+          "runtime": [
+            {
+              "actualPenalty": 1.07,
+              "duplicate": {
+                "code": "ALREADY_DISCOVERED",
+                "evidenceId": "src.estate_compass.artifact.internal_balance",
+                "ok": true,
+                "sourceId": "internal_assembly_sequence"
+              },
+              "duplicateRngMutation0": true,
+              "duplicateStateMutation0": true,
+              "duplicateTelemetryMutation0": true,
+              "evidenceId": "src.estate_compass.artifact.internal_balance",
+              "expectedPenalty": 1.07,
+              "firstOk": true,
+              "integrity": [
+                78.0,
+                76.93
+              ],
+              "level": "LOW",
+              "ok": true
+            }
+          ],
+          "toolGates": [
+            {
+              "evidenceId": "src.estate_compass.artifact.internal_balance",
+              "ok": true,
+              "required": [
+                "precision_screwdriver"
+              ],
+              "result": {
+                "code": "TOOL_REQUIRED",
+                "ok": false,
+                "requiredTools": [
+                  "precision_screwdriver"
+                ],
+                "selectedTool": "soft_brush"
+              },
+              "rngMutation0": true,
+              "stateMutation0": true,
+              "wrongTool": "soft_brush"
+            }
+          ]
+        },
+        "leave_patina": {
+          "counts": {
+            "HIGH": 0,
+            "LOW": 1
+          },
+          "expected": {
+            "HIGH": 0,
+            "LOW": 1
+          },
+          "ok": true,
+          "runtime": [
+            {
+              "actualPenalty": 1.07,
+              "duplicate": {
+                "code": "ALREADY_DISCOVERED",
+                "evidenceId": "src.leave_patina.artifact.hidden_finish_boundary",
+                "ok": true,
+                "sourceId": "protected_finish_layer"
+              },
+              "duplicateRngMutation0": true,
+              "duplicateStateMutation0": true,
+              "duplicateTelemetryMutation0": true,
+              "evidenceId": "src.leave_patina.artifact.hidden_finish_boundary",
+              "expectedPenalty": 1.07,
+              "firstOk": true,
+              "integrity": [
+                78.0,
+                76.93
+              ],
+              "level": "LOW",
+              "ok": true
+            }
+          ],
+          "toolGates": [
+            {
+              "evidenceId": "src.leave_patina.artifact.hidden_finish_boundary",
+              "ok": true,
+              "required": [
+                "cleaning_cloth"
+              ],
+              "result": {
+                "code": "TOOL_REQUIRED",
+                "ok": false,
+                "requiredTools": [
+                  "cleaning_cloth"
+                ],
+                "selectedTool": "soft_brush"
+              },
+              "rngMutation0": true,
+              "stateMutation0": true,
+              "wrongTool": "soft_brush"
+            }
+          ]
+        },
+        "pawn_watch": {
+          "counts": {
+            "HIGH": 1,
+            "LOW": 1
+          },
+          "expected": {
+            "HIGH": 1,
+            "LOW": 1
+          },
+          "ok": true,
+          "runtime": [
+            {
+              "actualPenalty": 3.21,
+              "duplicate": {
+                "code": "ALREADY_DISCOVERED",
+                "evidenceId": "src.pawn_watch.artifact.bridge_service_marks",
+                "ok": true,
+                "sourceId": "internal_service_sequence"
+              },
+              "duplicateRngMutation0": true,
+              "duplicateStateMutation0": true,
+              "duplicateTelemetryMutation0": true,
+              "evidenceId": "src.pawn_watch.artifact.bridge_service_marks",
+              "expectedPenalty": 3.21,
+              "firstOk": true,
+              "integrity": [
+                78.0,
+                74.79
+              ],
+              "level": "HIGH",
+              "ok": true
+            },
+            {
+              "actualPenalty": 1.07,
+              "duplicate": {
+                "code": "ALREADY_DISCOVERED",
+                "evidenceId": "src.pawn_watch.artifact.escape_wheel_measurement",
+                "ok": true,
+                "sourceId": "component_measurement"
+              },
+              "duplicateRngMutation0": true,
+              "duplicateStateMutation0": true,
+              "duplicateTelemetryMutation0": true,
+              "evidenceId": "src.pawn_watch.artifact.escape_wheel_measurement",
+              "expectedPenalty": 1.07,
+              "firstOk": true,
+              "integrity": [
+                74.79,
+                73.72
+              ],
+              "level": "LOW",
+              "ok": true
+            }
+          ],
+          "toolGates": [
+            {
+              "evidenceId": "src.pawn_watch.artifact.bridge_service_marks",
+              "ok": true,
+              "required": [
+                "precision_screwdriver"
+              ],
+              "result": {
+                "code": "TOOL_REQUIRED",
+                "ok": false,
+                "requiredTools": [
+                  "precision_screwdriver"
+                ],
+                "selectedTool": "soft_brush"
+              },
+              "rngMutation0": true,
+              "stateMutation0": true,
+              "wrongTool": "soft_brush"
+            }
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-RISK-01",
+      "name": "Stage 2 applies exact 1.07/3.21 LOW/HIGH pressure behind selected-tool gates and duplicate discovery is state, telemetry and RNG zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "estate_compass": {
+          "discovered": [
+            "src.estate_compass.artifact.dial_serial",
+            "src.estate_compass.artifact.internal_balance",
+            "src.estate_compass.document.inventory_entry",
+            "src.estate_compass.npc.lena_recollection",
+            "src.estate_compass.reference.kestrel_guide"
+          ],
+          "evaluationRngMutation0": true,
+          "evaluationStateMutation0": true,
+          "foreign": {
+            "code": "CROSS_CASE_EVIDENCE",
+            "evidenceId": "src.pawn_watch.artifact.case_wear_serial",
+            "ok": false
+          },
+          "intended": {
+            "citedEvidenceIds": [
+              "src.estate_compass.artifact.dial_serial",
+              "src.estate_compass.artifact.internal_balance",
+              "src.estate_compass.document.inventory_entry",
+              "src.estate_compass.npc.lena_recollection",
+              "src.estate_compass.reference.kestrel_guide"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.estate_compass.misdated_provenance",
+            "independentSourceCount": 5,
+            "netScore": 5,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 5
+          },
+          "ok": true,
+          "oneGroupStrong": [],
+          "rejectionMutation0": true,
+          "unseen": {
+            "code": "EVIDENCE_NOT_DISCOVERED",
+            "evidenceId": "src.estate_compass.artifact.dial_serial",
+            "ok": false
+          },
+          "wrong": {
+            "citedEvidenceIds": [
+              "src.estate_compass.artifact.dial_serial",
+              "src.estate_compass.artifact.internal_balance",
+              "src.estate_compass.document.inventory_entry",
+              "src.estate_compass.npc.lena_recollection",
+              "src.estate_compass.reference.kestrel_guide"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.estate_compass.matched_provenance",
+            "independentSourceCount": 1,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 3,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 1
+          }
+        },
+        "leave_patina": {
+          "discovered": [
+            "src.leave_patina.artifact.wear_gradient",
+            "src.leave_patina.artifact.hidden_finish_boundary",
+            "src.leave_patina.document.service_note",
+            "src.leave_patina.npc.iris_assessment",
+            "src.leave_patina.reference.eldemere_finish"
+          ],
+          "evaluationRngMutation0": true,
+          "evaluationStateMutation0": true,
+          "foreign": {
+            "code": "CROSS_CASE_EVIDENCE",
+            "evidenceId": "src.estate_compass.artifact.dial_serial",
+            "ok": false
+          },
+          "intended": {
+            "citedEvidenceIds": [
+              "src.leave_patina.artifact.wear_gradient",
+              "src.leave_patina.artifact.hidden_finish_boundary",
+              "src.leave_patina.document.service_note",
+              "src.leave_patina.npc.iris_assessment",
+              "src.leave_patina.reference.eldemere_finish"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.leave_patina.natural_patina",
+            "independentSourceCount": 5,
+            "netScore": 5,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 5
+          },
+          "ok": true,
+          "oneGroupStrong": [],
+          "rejectionMutation0": true,
+          "unseen": {
+            "code": "EVIDENCE_NOT_DISCOVERED",
+            "evidenceId": "src.leave_patina.artifact.wear_gradient",
+            "ok": false
+          },
+          "wrong": {
+            "citedEvidenceIds": [
+              "src.leave_patina.artifact.wear_gradient",
+              "src.leave_patina.artifact.hidden_finish_boundary",
+              "src.leave_patina.document.service_note",
+              "src.leave_patina.npc.iris_assessment",
+              "src.leave_patina.reference.eldemere_finish"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.leave_patina.later_contamination",
+            "independentSourceCount": 1,
+            "netScore": -1,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 1
+          }
+        },
+        "pawn_watch": {
+          "discovered": [
+            "src.pawn_watch.artifact.case_wear_serial",
+            "src.pawn_watch.artifact.bridge_service_marks",
+            "src.pawn_watch.document.pawn_ticket",
+            "src.pawn_watch.artifact.escape_wheel_measurement",
+            "src.pawn_watch.npc.lena_ticket_context",
+            "src.pawn_watch.reference.brasswell_service_gauge"
+          ],
+          "evaluationRngMutation0": true,
+          "evaluationStateMutation0": true,
+          "foreign": {
+            "code": "CROSS_CASE_EVIDENCE",
+            "evidenceId": "src.leave_patina.artifact.wear_gradient",
+            "ok": false
+          },
+          "intended": {
+            "citedEvidenceIds": [
+              "src.pawn_watch.artifact.case_wear_serial",
+              "src.pawn_watch.artifact.bridge_service_marks",
+              "src.pawn_watch.document.pawn_ticket",
+              "src.pawn_watch.artifact.escape_wheel_measurement",
+              "src.pawn_watch.npc.lena_ticket_context",
+              "src.pawn_watch.reference.brasswell_service_gauge"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.pawn_watch.period_repair",
+            "independentSourceCount": 5,
+            "netScore": 5,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 5
+          },
+          "ok": true,
+          "oneGroupStrong": [],
+          "rejectionMutation0": true,
+          "unseen": {
+            "code": "EVIDENCE_NOT_DISCOVERED",
+            "evidenceId": "src.pawn_watch.artifact.case_wear_serial",
+            "ok": false
+          },
+          "wrong": {
+            "citedEvidenceIds": [
+              "src.pawn_watch.artifact.case_wear_serial",
+              "src.pawn_watch.artifact.bridge_service_marks",
+              "src.pawn_watch.document.pawn_ticket",
+              "src.pawn_watch.artifact.escape_wheel_measurement",
+              "src.pawn_watch.npc.lena_ticket_context",
+              "src.pawn_watch.reference.brasswell_service_gauge"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.pawn_watch.mostly_original",
+            "independentSourceCount": 1,
+            "netScore": -1,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 1
+          }
+        }
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-REPORT-01",
+      "name": "Unseen and cross-case citations fail closed; sufficient independent citations are masterful, wrong claims stay mistaken, and one source never becomes STRONG",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "estate_compass": {
+          "before": {
+            "attempts": 3,
+            "collectorNetwork": 0,
+            "correct": 2,
+            "forgeries": 0,
+            "historicalIntegrity": 50,
+            "mastery": 1,
+            "money": 1335,
+            "museumTrust": 4,
+            "relationship": 0,
+            "reputation": 18,
+            "trust": 0
+          },
+          "expectedDeltas": {
+            "mastery": 4,
+            "money": 166,
+            "museumTrust": 1,
+            "reputation": 2
+          },
+          "ok": true,
+          "onceRngMutation0": true,
+          "onceStateMutation0": true,
+          "resolved": {
+            "citedEvidenceIds": [
+              "src.estate_compass.artifact.dial_serial",
+              "src.estate_compass.artifact.internal_balance",
+              "src.estate_compass.document.inventory_entry",
+              "src.estate_compass.npc.lena_recollection",
+              "src.estate_compass.reference.kestrel_guide"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.estate_compass.misdated_provenance",
+            "independentSourceCount": 5,
+            "netScore": 5,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 5
+          },
+          "rewardData": {
+            "historicalIntegrity": 1.0,
+            "mastery": 3.0,
+            "money": 138.0,
+            "museumTrust": 1.0,
+            "reputation": 2.0
+          },
+          "second": {
+            "code": "CASE_ALREADY_RESOLVED",
+            "ok": false
+          }
+        },
+        "leave_patina": {
+          "before": {
+            "attempts": 3,
+            "collectorNetwork": 0,
+            "correct": 2,
+            "forgeries": 0,
+            "historicalIntegrity": 50,
+            "mastery": 1,
+            "money": 1335,
+            "museumTrust": 4,
+            "relationship": 0,
+            "reputation": 18,
+            "trust": 0
+          },
+          "expectedDeltas": {
+            "mastery": 4,
+            "money": 151,
+            "museumTrust": 1,
+            "reputation": 2
+          },
+          "ok": true,
+          "onceRngMutation0": true,
+          "onceStateMutation0": true,
+          "resolved": {
+            "citedEvidenceIds": [
+              "src.leave_patina.artifact.wear_gradient",
+              "src.leave_patina.artifact.hidden_finish_boundary",
+              "src.leave_patina.document.service_note",
+              "src.leave_patina.npc.iris_assessment",
+              "src.leave_patina.reference.eldemere_finish"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.leave_patina.natural_patina",
+            "independentSourceCount": 5,
+            "netScore": 5,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 5
+          },
+          "rewardData": {
+            "historicalIntegrity": 1.0,
+            "mastery": 3.0,
+            "money": 126.0,
+            "museumTrust": 1.0,
+            "reputation": 2.0
+          },
+          "second": {
+            "code": "CASE_ALREADY_RESOLVED",
+            "ok": false
+          }
+        },
+        "pawn_watch": {
+          "before": {
+            "attempts": 3,
+            "collectorNetwork": 0,
+            "correct": 2,
+            "forgeries": 0,
+            "historicalIntegrity": 50,
+            "mastery": 1,
+            "money": 1335,
+            "museumTrust": 4,
+            "relationship": 0,
+            "reputation": 18,
+            "trust": 0
+          },
+          "expectedDeltas": {
+            "mastery": 4,
+            "money": 180,
+            "museumTrust": 1,
+            "reputation": 2
+          },
+          "ok": true,
+          "onceRngMutation0": true,
+          "onceStateMutation0": true,
+          "resolved": {
+            "citedEvidenceIds": [
+              "src.pawn_watch.artifact.case_wear_serial",
+              "src.pawn_watch.artifact.bridge_service_marks",
+              "src.pawn_watch.document.pawn_ticket",
+              "src.pawn_watch.artifact.escape_wheel_measurement",
+              "src.pawn_watch.npc.lena_ticket_context",
+              "src.pawn_watch.reference.brasswell_service_gauge"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.pawn_watch.period_repair",
+            "independentSourceCount": 5,
+            "netScore": 5,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 5
+          },
+          "rewardData": {
+            "historicalIntegrity": 1.0,
+            "mastery": 3.0,
+            "money": 150.0,
+            "museumTrust": 1.0,
+            "reputation": 2.0
+          },
+          "second": {
+            "code": "CASE_ALREADY_RESOLVED",
+            "ok": false
+          }
+        }
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-RESOLUTION-01",
+      "name": "Each intended report resolves once with exact authored rewards, mastery, relationship, trust and authentication boundaries; repeat resolution is mutation-zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": {
+          "estate_compass": {
+            "afterListingTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "afterReasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "beforeListingTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "beforeReasonTags": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "discovery": {
+              "appliedRiskPenalty": 0.0,
+              "code": "DISCOVERED",
+              "evidenceId": "src.estate_compass.document.inventory_entry",
+              "ok": true,
+              "riskLevel": "NONE",
+              "sourceId": "estate_inventory_chain"
+            },
+            "duplicate": {
+              "code": "ALREADY_DISCOVERED",
+              "evidenceId": "src.estate_compass.document.inventory_entry",
+              "ok": true,
+              "sourceId": "estate_inventory_chain"
+            },
+            "duplicateMutation0": true,
+            "hiddenTruthReasonInvariant": true,
+            "knownClueCount": 1,
+            "nonTaggedNoAdditionalProvenance": true,
+            "nonTaggedRows": [
+              {
+                "dependencyIncludesProvenance": true,
+                "id": "src.estate_compass.npc.lena_recollection",
+                "knownAfter": 1,
+                "knownBefore": 1,
+                "ok": true,
+                "result": {
+                  "appliedRiskPenalty": 0.0,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.estate_compass.npc.lena_recollection",
+                  "ok": true,
+                  "riskLevel": "NONE",
+                  "sourceId": "family_oral_context"
+                },
+                "sourceKind": "NPC"
+              },
+              {
+                "dependencyIncludesProvenance": false,
+                "id": "src.estate_compass.reference.kestrel_guide",
+                "knownAfter": 0,
+                "knownBefore": 0,
+                "ok": true,
+                "result": {
+                  "appliedRiskPenalty": 0.0,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.estate_compass.reference.kestrel_guide",
+                  "ok": true,
+                  "riskLevel": "NONE",
+                  "sourceId": "independent_production_reference"
+                },
+                "sourceKind": "REFERENCE"
+              }
+            ],
+            "ok": true,
+            "rawPublicFieldHidden": true,
+            "reload": {
+              "executed": false
+            },
+            "reloadExact": true,
+            "taggedRows": [
+              {
+                "id": "src.estate_compass.document.inventory_entry",
+                "publicClueId": "PROVENANCE",
+                "sourceKind": "DOCUMENT"
+              }
+            ]
+          },
+          "leave_patina": {
+            "afterListingTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "afterReasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "beforeListingTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "beforeReasonTags": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "discovery": {
+              "appliedRiskPenalty": 0.0,
+              "code": "DISCOVERED",
+              "evidenceId": "src.leave_patina.document.service_note",
+              "ok": true,
+              "riskLevel": "NONE",
+              "sourceId": "household_treatment_record"
+            },
+            "duplicate": {
+              "code": "ALREADY_DISCOVERED",
+              "evidenceId": "src.leave_patina.document.service_note",
+              "ok": true,
+              "sourceId": "household_treatment_record"
+            },
+            "duplicateMutation0": true,
+            "hiddenTruthReasonInvariant": true,
+            "knownClueCount": 1,
+            "nonTaggedNoAdditionalProvenance": true,
+            "nonTaggedRows": [
+              {
+                "dependencyIncludesProvenance": true,
+                "id": "src.leave_patina.npc.iris_assessment",
+                "knownAfter": 1,
+                "knownBefore": 1,
+                "ok": true,
+                "result": {
+                  "appliedRiskPenalty": 0.0,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.leave_patina.npc.iris_assessment",
+                  "ok": true,
+                  "riskLevel": "NONE",
+                  "sourceId": "conservator_assessment"
+                },
+                "sourceKind": "NPC"
+              },
+              {
+                "dependencyIncludesProvenance": false,
+                "id": "src.leave_patina.reference.eldemere_finish",
+                "knownAfter": 0,
+                "knownBefore": 0,
+                "ok": true,
+                "result": {
+                  "appliedRiskPenalty": 0.0,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.leave_patina.reference.eldemere_finish",
+                  "ok": true,
+                  "riskLevel": "NONE",
+                  "sourceId": "independent_period_reference"
+                },
+                "sourceKind": "REFERENCE"
+              }
+            ],
+            "ok": true,
+            "rawPublicFieldHidden": true,
+            "reload": {
+              "clueExact": true,
+              "executed": true,
+              "ledgerExact": true,
+              "loadError": "",
+              "loaded": true,
+              "payloadExact": true,
+              "profileExact": true,
+              "publicExact": true,
+              "rngExact": true,
+              "saved": true,
+              "telemetryExact": true,
+              "uidExact": true
+            },
+            "reloadExact": true,
+            "taggedRows": [
+              {
+                "id": "src.leave_patina.document.service_note",
+                "publicClueId": "PROVENANCE",
+                "sourceKind": "DOCUMENT"
+              }
+            ]
+          },
+          "pawn_watch": {
+            "afterListingTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "afterReasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "beforeListingTags": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "beforeReasonTags": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "discovery": {
+              "appliedRiskPenalty": 0.0,
+              "code": "DISCOVERED",
+              "evidenceId": "src.pawn_watch.document.pawn_ticket",
+              "ok": true,
+              "riskLevel": "NONE",
+              "sourceId": "pawn_service_record"
+            },
+            "duplicate": {
+              "code": "ALREADY_DISCOVERED",
+              "evidenceId": "src.pawn_watch.document.pawn_ticket",
+              "ok": true,
+              "sourceId": "pawn_service_record"
+            },
+            "duplicateMutation0": true,
+            "hiddenTruthReasonInvariant": true,
+            "knownClueCount": 1,
+            "nonTaggedNoAdditionalProvenance": true,
+            "nonTaggedRows": [
+              {
+                "dependencyIncludesProvenance": true,
+                "id": "src.pawn_watch.npc.lena_ticket_context",
+                "knownAfter": 1,
+                "knownBefore": 1,
+                "ok": true,
+                "result": {
+                  "appliedRiskPenalty": 0.0,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.pawn_watch.npc.lena_ticket_context",
+                  "ok": true,
+                  "riskLevel": "NONE",
+                  "sourceId": "family_custody_context"
+                },
+                "sourceKind": "NPC"
+              },
+              {
+                "dependencyIncludesProvenance": false,
+                "id": "src.pawn_watch.reference.brasswell_service_gauge",
+                "knownAfter": 0,
+                "knownBefore": 0,
+                "ok": true,
+                "result": {
+                  "appliedRiskPenalty": 0.0,
+                  "code": "DISCOVERED",
+                  "evidenceId": "src.pawn_watch.reference.brasswell_service_gauge",
+                  "ok": true,
+                  "riskLevel": "NONE",
+                  "sourceId": "independent_service_reference"
+                },
+                "sourceKind": "REFERENCE"
+              }
+            ],
+            "ok": true,
+            "rawPublicFieldHidden": true,
+            "reload": {
+              "executed": false
+            },
+            "reloadExact": true,
+            "taggedRows": [
+              {
+                "id": "src.pawn_watch.document.pawn_ticket",
+                "publicClueId": "PROVENANCE",
+                "sourceKind": "DOCUMENT"
+              }
+            ]
+          }
+        },
+        "reloadExecuted": true
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-BRIDGE-01",
+      "name": "Designated provenance discovery bridges once to public listing/auction reasons, non-tagged sources do not, hidden truth is irrelevant, and exact save/reload preserves the issued case",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "estate_compass": {
+          "copyChanged": true,
+          "copyComplete": true,
+          "enCharacters": 1077,
+          "enLeaks": [],
+          "koCharacters": 697,
+          "koLeaks": [],
+          "ok": true,
+          "publicPrivateHidden": true,
+          "rngMutation0": true,
+          "screen": "case_dossier",
+          "stateMutation0": true
+        },
+        "leave_patina": {
+          "copyChanged": true,
+          "copyComplete": true,
+          "enCharacters": 1071,
+          "enLeaks": [],
+          "koCharacters": 662,
+          "koLeaks": [],
+          "ok": true,
+          "publicPrivateHidden": true,
+          "rngMutation0": true,
+          "screen": "case_dossier",
+          "stateMutation0": true
+        },
+        "pawn_watch": {
+          "copyChanged": true,
+          "copyComplete": true,
+          "enCharacters": 1131,
+          "enLeaks": [],
+          "koCharacters": 716,
+          "koLeaks": [],
+          "ok": true,
+          "publicPrivateHidden": true,
+          "rngMutation0": true,
+          "screen": "case_dossier",
+          "stateMutation0": true
+        }
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-LOCALE-01",
+      "name": "All Stage 2 authored copy is complete in Korean and English through the public dossier without raw templates, IDs, bridge metadata, or hidden truth",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseIdHits": {
+          "estate_compass": {
+            "gameState": false,
+            "main3d": false
+          },
+          "leave_patina": {
+            "gameState": false,
+            "main3d": false
+          },
+          "pawn_watch": {
+            "gameState": false,
+            "main3d": false
+          }
+        },
+        "gameStatePublicClueAdapter": true,
+        "genericMethods": {
+          "caseDefinition": true,
+          "publicState": true,
+          "rendererScene": true,
+          "resolve": true
+        },
+        "registryPublicClueNormalization": true
+      },
+      "executed": true,
+      "id": "S2-AUTHORED-GENERIC-01",
+      "name": "Stage 2 authored cases use the generic registry, public dossier and resolver with no case-id branches in GameState or Main",
+      "passed": true
+    }
+  ]
+}

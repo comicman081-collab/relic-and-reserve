@@ -1,0 +1,196 @@
+{
+  "executed": 4,
+  "failed": 0,
+  "passed": 4,
+  "skipped": 0,
+  "suite": "R3 Stage Replay Illustrated UI",
+  "tests": [
+    {
+      "evidence": {
+        "advice": "재도전 팁 · 준비한 유물을 경매에 올려 보세요",
+        "copy": "STAGE CLEAR\n성장 중 · 점수 53\n권장 목표까지 2점\n다음 스테이지 해금\n신기록 · BEST 53\n근거\n78\n좋음\n보존\n92\n좋음\n판매\n—\n기록 없음\n재도전 팁 · 준비한 유물을 경매에 올려 보세요\n",
+        "layout": {
+          "avoidsChrome": true,
+          "cardRect": [
+            42.0,
+            211.0,
+            1196.0,
+            183.0
+          ],
+          "compactCard": true,
+          "ctaClear": true,
+          "ctaRect": [
+            42.0,
+            404.0,
+            1196.0,
+            58.0
+          ],
+          "labels": [
+            "근거",
+            "보존",
+            "판매"
+          ],
+          "mutuallySeparate": true,
+          "ok": true,
+          "rowChildren": 3,
+          "scores": [
+            "78",
+            "92",
+            "—"
+          ],
+          "states": [
+            "좋음",
+            "좋음",
+            "기록 없음"
+          ],
+          "tileRects": [
+            [
+              52.0,
+              287.0,
+              386.0,
+              72.0
+            ],
+            [
+              446.0,
+              287.0,
+              387.0,
+              72.0
+            ],
+            [
+              841.0,
+              287.0,
+              387.0,
+              72.0
+            ]
+          ],
+          "withinBounds": true
+        }
+      },
+      "executed": true,
+      "id": "MVP-STAGE-REPLAY-UI-01",
+      "name": "Korean Stage Clear renders exactly three illustrated axes with rounded large scores and an explicit no-record sale instead of zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "en": [
+          "Cite more independent evidence.",
+          "Use fewer interventions and preserve condition.",
+          "List a prepared relic at auction.",
+          "Adjust the reserve and public claim."
+        ],
+        "ko": [
+          "독립 근거를 더 인용해 보세요",
+          "개입을 줄이고 상태를 보존해 보세요",
+          "준비한 유물을 경매에 올려 보세요",
+          "예약가와 공개 주장을 조정해 보세요"
+        ]
+      },
+      "executed": true,
+      "id": "MVP-STAGE-REPLAY-UI-02",
+      "name": "Each weakest-axis state maps to one localized actionable sentence without exposing axis or advice enums",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "copy": "STAGE CLEAR\nGROWING · SCORE 53\n2 points to the recommendation\nNEXT STAGE UNLOCKED\nNEW RECORD · BEST 53\nEVIDENCE\n78\nGOOD\nPRESERVE\n92\nGOOD\nSALE\n—\nNO RECORD\nREPLAY TIP · List a prepared relic at auction.\n",
+        "firstChild": "StageClearPrimaryRow",
+        "layout": {
+          "avoidsChrome": true,
+          "cardRect": [
+            42.0,
+            211.0,
+            1196.0,
+            182.0
+          ],
+          "compactCard": true,
+          "ctaClear": true,
+          "ctaRect": [
+            42.0,
+            403.0,
+            1196.0,
+            58.0
+          ],
+          "labels": [
+            "EVIDENCE",
+            "PRESERVE",
+            "SALE"
+          ],
+          "mutuallySeparate": true,
+          "ok": true,
+          "rowChildren": 3,
+          "scores": [
+            "78",
+            "92",
+            "—"
+          ],
+          "states": [
+            "GOOD",
+            "GOOD",
+            "NO RECORD"
+          ],
+          "tileRects": [
+            [
+              52.0,
+              287.0,
+              386.0,
+              72.0
+            ],
+            [
+              446.0,
+              287.0,
+              387.0,
+              72.0
+            ],
+            [
+              841.0,
+              287.0,
+              387.0,
+              72.0
+            ]
+          ],
+          "withinBounds": true
+        },
+        "publicSemantics": true
+      },
+      "executed": true,
+      "id": "MVP-STAGE-REPLAY-UI-03",
+      "name": "English 1280x720 layout keeps all three tiles, one replay hint and the advisory-only next-stage action above navigation with STAGE CLEAR first",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "apiAvailable": true,
+        "feedback": {
+          "adviceCode": "STRENGTHEN_EVIDENCE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 0.0
+            },
+            "preservation": {
+              "available": false,
+              "statusCode": "UNAVAILABLE",
+              "value": 0.0
+            },
+            "sale": {
+              "available": false,
+              "statusCode": "NO_ATTEMPTS",
+              "value": null
+            }
+          },
+          "stage": 1,
+          "weakest": "investigation"
+        },
+        "integratedCopy": "캠페인 — 닫힌 공방\nDAY 1   ¤ 1200   REP 12   GRADE 1\n스테이지 1\n첫 번째 출품\n성과\n현재 53 · 권장 55\n사건\n0 / 3\n박물관 신뢰 0 • 인맥 0 • 숙련도 0 • 온전성 50\nSTAGE CLEAR\n성장 중 · 점수 53\n권장 목표까지 2점\n다음 스테이지 해금\n신기록 · BEST 0\n근거\n0\n보완 필요\n보존\n—\n기록 없음\n판매\n—\n기록 없음\n재도전 팁 · 독립 근거를 더 인용해 보세요\n\n다음 스테이지 또는 재도전\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어\n",
+        "integratedPublic": true,
+        "integratedTiles": 3
+      },
+      "executed": true,
+      "id": "MVP-STAGE-REPLAY-UI-04",
+      "name": "Cleared Campaign consumes the public GameState replay contract and renders three localized axes without runtime identifiers",
+      "passed": true
+    }
+  ]
+}

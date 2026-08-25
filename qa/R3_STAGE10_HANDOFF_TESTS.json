@@ -1,0 +1,1315 @@
+{
+  "executed": 8,
+  "failed": 0,
+  "passed": 8,
+  "skipped": 0,
+  "suite": "R3 Stage 10 Clear To Ending Handoff",
+  "tests": [
+    {
+      "evidence": {
+        "missing": [],
+        "required": [
+          "stage_clear_pending",
+          "acknowledge_stage_clear",
+          "stage_replay_feedback",
+          "grand_reserve_public_state",
+          "save_game",
+          "load_game",
+          "prepare_case_for_test"
+        ]
+      },
+      "executed": true,
+      "id": "STAGE10-HANDOFF-API-01",
+      "name": "Stage-clear handoff exposes every required public GameState API",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "missing": [],
+        "required": [
+          "show_campaign",
+          "show_final_lot_selection",
+          "select_final_lot_from_ui",
+          "run_grand_reserve_from_ui",
+          "auction_public_cue_state",
+          "continue_from_ui",
+          "toggle_language"
+        ]
+      },
+      "executed": true,
+      "id": "STAGE10-HANDOFF-API-02",
+      "name": "Stage-clear handoff exposes every required public UI route",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": false,
+        "beginReady": true,
+        "card": true,
+        "cta": true,
+        "ending": "ENDING_B",
+        "fixture": {
+          "eligible": [
+            {
+              "acquisitionPrice": 2336,
+              "actualEra": "1928-1935",
+              "artifactSpecId": "artifact_077",
+              "auctionProfile": {
+                "conditionSensitivity": 0.78,
+                "disclosureScrutiny": 0.89,
+                "preferredBidderTags": [
+                  "interior_decorator",
+                  "historian"
+                ],
+                "provenanceScrutiny": 0.91,
+                "reserveStrategy": {
+                  "appraisalRatio": 0.65,
+                  "mode": "industrial_patina"
+                }
+              },
+              "authenticityTruth": "ASSEMBLED_FROM_PERIOD_PARTS",
+              "baseModel": "telephone.obj",
+              "baseValue": 2870,
+              "caseId": "",
+              "caseResolved": false,
+              "category": "railway_signaling",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "decorative_objects",
+                "railway_history",
+                "industrial_design"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "CORROSION",
+                "CRACK",
+                "PAINT_LOSS"
+              ],
+              "confidence": 0.82,
+              "damageInstances": [
+                "CRACK",
+                "RUST",
+                "DUST"
+              ],
+              "displayName": "Enamel Railway Signal Lantern",
+              "estimatedValue": 2870,
+              "evidence": [],
+              "historicalIntegrity": 78.0,
+              "inspected": true,
+              "inspectionObservable": {
+                "en": "Red and green lenses share soot at the upper vents, but only the red lens has heat crazing around its retaining clip.",
+                "ko": "빨강과 초록 렌즈 모두 위쪽 환기구에 그을음이 있으나 빨강 렌즈만 고정 클립 주위에 열 균열이 있다."
+              },
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "CONSTRUCTION_METHOD"
+              ],
+              "listing": {
+                "confidence": 0.82,
+                "disclosure": "CERTAIN",
+                "publicAppraisal": 2870,
+                "reserve": 2008,
+                "starting": 1664
+              },
+              "maker": "maker_17",
+              "materialSet": [
+                "material_03",
+                "material_06",
+                "material_09"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "ERSL Junction Pattern",
+              "originalParts": 2,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "MATERIAL",
+                "LABEL",
+                "PATINA",
+                "PROVENANCE",
+                "CONSTRUCTION_METHOD"
+              ],
+              "possibleFaults": [
+                "RUST",
+                "CRACK",
+                "PAINT_LOSS"
+              ],
+              "rarity": "rare",
+              "repairProfile": {
+                "costPressure": 1.34,
+                "interventionTradeoff": {
+                  "en": "Replacing the crazed lens improves safety, while retaining it preserves evidence of asymmetric duty use.",
+                  "ko": "갈라진 렌즈를 바꾸면 안전하지만 그대로 두면 서로 다른 운용 빈도의 증거가 보존된다."
+                },
+                "requiredTools": [
+                  "rust_treatment",
+                  "cleaning_cloth",
+                  "material_scanner"
+                ],
+                "toleranceMm": 0.2
+              },
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 0.0,
+              "restorationProfile": {
+                "cleaning": 0.76,
+                "patinaRisk": 0.66,
+                "repair": 0.58
+              },
+              "restorationQuality": 0.0,
+              "rotation": 0.0,
+              "seed": 838063558,
+              "sold": false,
+              "storyArtifactId": "",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.2485,
+              "trueMarketBaseline": 2870,
+              "trueRarity": 1.65,
+              "uniqueId": "stage_10_checkpoint_01",
+              "visualSignature": "telephone.obj|stage_variant_077|telephone|aged_paint|signal-green-red|093-109-114|vented_crown|lens_pair",
+              "visualVariant": "stage_variant_077",
+              "zoom": 1.0
+            },
+            {
+              "acquisitionPrice": 3190,
+              "actualEra": "1930-1937",
+              "artifactSpecId": "artifact_078",
+              "auctionProfile": {
+                "conditionSensitivity": 0.96,
+                "disclosureScrutiny": 0.98,
+                "preferredBidderTags": [
+                  "archive_curator",
+                  "professional_dealer"
+                ],
+                "provenanceScrutiny": 0.99,
+                "reserveStrategy": {
+                  "appraisalRatio": 0.77,
+                  "mode": "recording_provenance"
+                }
+              },
+              "authenticityTruth": "REPRODUCTION",
+              "baseModel": "model_02.obj",
+              "baseValue": 2995,
+              "caseId": "",
+              "caseResolved": false,
+              "category": "magnetic_recorders",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "vintage_audio",
+                "broadcast_history",
+                "portable_recording"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "TARNISH",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE",
+                "FADING"
+              ],
+              "confidence": 0.82,
+              "damageInstances": [
+                "GRIME",
+                "TARNISH",
+                "WATER_DAMAGE"
+              ],
+              "displayName": "Leather Field Wire Recorder",
+              "estimatedValue": 2995,
+              "evidence": [],
+              "historicalIntegrity": 78.0,
+              "inspected": true,
+              "inspectionObservable": {
+                "en": "The take-up spindle has spiral scoring that changes pitch exactly where the leather case shows a water tide mark.",
+                "ko": "권취 스핀들의 나선 흠집 간격은 가죽 케이스의 물자국 높이에서 정확히 달라진다."
+              },
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "CONSTRUCTION_METHOD"
+              ],
+              "listing": {
+                "confidence": 0.82,
+                "disclosure": "CERTAIN",
+                "publicAppraisal": 2995,
+                "reserve": 2096,
+                "starting": 1737
+              },
+              "maker": "maker_18",
+              "materialSet": [
+                "material_11",
+                "material_05",
+                "material_12"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "LFWR Correspondent",
+              "originalParts": 1,
+              "partStates": {},
+              "playerHypothesis": "REPRODUCTION",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "LABEL",
+                "REPAIR_TRACE",
+                "PROVENANCE"
+              ],
+              "possibleFaults": [
+                "WATER_DAMAGE",
+                "FADING",
+                "MECHANICAL_WEAR"
+              ],
+              "rarity": "very_rare",
+              "repairProfile": {
+                "costPressure": 1.36,
+                "interventionTradeoff": {
+                  "en": "Polishing the spindle protects new wire, but its scoring records how water exposure changed the transport.",
+                  "ko": "스핀들을 연마하면 새 와이어는 보호되지만 흠집은 침수가 이송계에 준 변화를 기록한다."
+                },
+                "requiredTools": [
+                  "repair_toolkit",
+                  "precision_screwdriver",
+                  "mild_cleaner"
+                ],
+                "toleranceMm": 0.065
+              },
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 0.0,
+              "restorationProfile": {
+                "cleaning": 0.54,
+                "patinaRisk": 0.47,
+                "repair": 0.88
+              },
+              "restorationQuality": 0.0,
+              "rotation": 0.0,
+              "seed": 1022617367,
+              "sold": false,
+              "storyArtifactId": "",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.28,
+              "trueMarketBaseline": 2995,
+              "trueRarity": 2.2,
+              "uniqueId": "stage_10_checkpoint_02",
+              "visualSignature": "model_02.obj|stage_variant_078|model02|brown_leather|saddle-steel|107-088-113|reel_guard|spiral_wire",
+              "visualVariant": "stage_variant_078",
+              "zoom": 1.0
+            },
+            {
+              "acquisitionPrice": 2110,
+              "actualEra": "1924-1931",
+              "artifactSpecId": "artifact_075",
+              "auctionProfile": {
+                "conditionSensitivity": 0.97,
+                "disclosureScrutiny": 0.97,
+                "preferredBidderTags": [
+                  "museum_buyer",
+                  "restoration_collector"
+                ],
+                "provenanceScrutiny": 0.98,
+                "reserveStrategy": {
+                  "appraisalRatio": 0.76,
+                  "mode": "collection_link"
+                }
+              },
+              "authenticityTruth": "ASSEMBLED_FROM_PERIOD_PARTS",
+              "baseModel": "binoculars.obj",
+              "baseValue": 2640,
+              "caseId": "",
+              "caseResolved": false,
+              "category": "microscopy_instruments",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "scientific_instruments",
+                "natural_history",
+                "microscopy"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "TARNISH",
+                "CRACK",
+                "MECHANICAL_WEAR",
+                "MISSING_PART"
+              ],
+              "confidence": 0.82,
+              "damageInstances": [
+                "MECHANICAL_WEAR",
+                "MISSING_PART",
+                "TARNISH"
+              ],
+              "displayName": "Velvet Entomology Microscope",
+              "estimatedValue": 2640,
+              "evidence": [],
+              "historicalIntegrity": 78.0,
+              "inspected": true,
+              "inspectionObservable": {
+                "en": "The fine-focus knob binds near its midpoint, where wing-scale dust is trapped beneath a clear lacquer touch-up.",
+                "ko": "미세 초점 노브는 중간에서 걸리며 투명 보수칠 아래에 나비 날개 비늘 가루가 갇혀 있다."
+              },
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "CONSTRUCTION_METHOD"
+              ],
+              "listing": {
+                "confidence": 0.82,
+                "disclosure": "CERTAIN",
+                "publicAppraisal": 2640,
+                "reserve": 1847,
+                "starting": 1531
+              },
+              "maker": "maker_15",
+              "materialSet": [
+                "material_01",
+                "material_09",
+                "material_14"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "VEM Cabinet Naturalist",
+              "originalParts": 1,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "MATERIAL",
+                "COMPONENT_STYLE",
+                "MECHANISM",
+                "PROVENANCE",
+                "PATINA"
+              ],
+              "possibleFaults": [
+                "CRACK",
+                "MECHANICAL_WEAR",
+                "MISSING_PART"
+              ],
+              "rarity": "very_rare",
+              "repairProfile": {
+                "costPressure": 1.3,
+                "interventionTradeoff": {
+                  "en": "Removing the lacquer frees focus travel but destroys residue that may tie the instrument to a collection.",
+                  "ko": "보수칠을 제거하면 초점 이동은 회복되지만 특정 수집품과 연결할 잔류물이 사라진다."
+                },
+                "requiredTools": [
+                  "uv_lamp",
+                  "cotton_swab",
+                  "precision_screwdriver"
+                ],
+                "toleranceMm": 0.02
+              },
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 0.0,
+              "restorationProfile": {
+                "cleaning": 0.49,
+                "patinaRisk": 0.63,
+                "repair": 0.86
+              },
+              "restorationQuality": 0.0,
+              "rotation": 0.0,
+              "seed": 804508320,
+              "sold": true,
+              "storyArtifactId": "",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1855,
+              "trueMarketBaseline": 2640,
+              "trueRarity": 2.2,
+              "uniqueId": "stage_10_checkpoint_03",
+              "visualSignature": "binoculars.obj|stage_variant_075|binoculars|brass|burgundy-cream|090-118-098|objective_turret|wing_scale_speckle",
+              "visualVariant": "stage_variant_075",
+              "zoom": 1.0
+            },
+            {
+              "acquisitionPrice": 2814,
+              "actualEra": "1932-1939",
+              "artifactSpecId": "artifact_079",
+              "auctionProfile": {
+                "conditionSensitivity": 0.98,
+                "disclosureScrutiny": 0.99,
+                "preferredBidderTags": [
+                  "museum_buyer",
+                  "design_scholar"
+                ],
+                "provenanceScrutiny": 0.97,
+                "reserveStrategy": {
+                  "appraisalRatio": 0.79,
+                  "mode": "optical_benchmark"
+                }
+              },
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_05.obj",
+              "baseValue": 3130,
+              "caseId": "master_camera",
+              "caseResolved": true,
+              "category": "spectroscopy_instruments",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "scientific_instruments",
+                "spectroscopy",
+                "laboratory_optics"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "TARNISH",
+                "CRACK",
+                "SCRATCH",
+                "MISSING_PART"
+              ],
+              "confidence": 0.56,
+              "damageInstances": [
+                "DUST",
+                "CRACK",
+                "SCRATCH"
+              ],
+              "displayName": "Glass Prism Spectroscope",
+              "estimatedValue": 3130,
+              "evidence": [
+                {
+                  "clueType": "master_camera:material",
+                  "confidenceWeight": 0.12,
+                  "contradicts": [],
+                  "observation": {
+                    "en": "Material inspection recorded for the case file.",
+                    "ko": "Material 조사 결과를 사건 기록에 남겼습니다."
+                  },
+                  "supports": []
+                },
+                {
+                  "clueType": "master_camera:mechanism",
+                  "confidenceWeight": 0.12,
+                  "contradicts": [],
+                  "observation": {
+                    "en": "Mechanism inspection recorded for the case file.",
+                    "ko": "Mechanism 조사 결과를 사건 기록에 남겼습니다."
+                  },
+                  "supports": []
+                },
+                {
+                  "clueType": "master_camera:tool_mark",
+                  "confidenceWeight": 0.12,
+                  "contradicts": [],
+                  "observation": {
+                    "en": "Tool Mark inspection recorded for the case file.",
+                    "ko": "Tool Mark 조사 결과를 사건 기록에 남겼습니다."
+                  },
+                  "supports": []
+                },
+                {
+                  "clueType": "master_camera:construction_method",
+                  "confidenceWeight": 0.12,
+                  "contradicts": [],
+                  "observation": {
+                    "en": "Construction Method inspection recorded for the case file.",
+                    "ko": "Construction Method 조사 결과를 사건 기록에 남겼습니다."
+                  },
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 76.1615407875798,
+              "inspected": false,
+              "inspectionObservable": {
+                "en": "A tiny edge chip sits outside the light path, while the prism clamp bears two incompatible screwdriver widths.",
+                "ko": "작은 모서리 깨짐은 광로 밖에 있고 프리즘 고정쇠에는 폭이 다른 두 종류의 드라이버 자국이 남아 있다."
+              },
+              "knownClues": [
+                "MATERIAL",
+                "MECHANISM",
+                "TOOL_MARK",
+                "CONSTRUCTION_METHOD"
+              ],
+              "listing": {
+                "confidence": 0.0,
+                "disclosure": "UNCERTAIN",
+                "reserve": 0,
+                "starting": 0
+              },
+              "maker": "maker_19",
+              "materialSet": [
+                "material_09",
+                "material_01",
+                "material_04"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "GPS Laboratory Compact",
+              "originalParts": 3,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "MATERIAL",
+                "MECHANISM",
+                "TOOL_MARK",
+                "CONSTRUCTION_METHOD"
+              ],
+              "possibleFaults": [
+                "CRACK",
+                "SCRATCH",
+                "MISSING_PART"
+              ],
+              "rarity": "very_rare",
+              "repairProfile": {
+                "costPressure": 1.38,
+                "interventionTradeoff": {
+                  "en": "Re-seating the prism sharpens spectra, but disturbing the clamp can erase the sequence of prior interventions.",
+                  "ko": "프리즘을 재장착하면 스펙트럼은 선명해지지만 고정쇠를 건드리면 과거 개입 순서가 사라질 수 있다."
+                },
+                "requiredTools": [
+                  "material_scanner",
+                  "uv_lamp"
+                ],
+                "toleranceMm": 0.015
+              },
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 0.0,
+              "restorationProfile": {
+                "cleaning": 0.45,
+                "patinaRisk": 0.71,
+                "repair": 0.9
+              },
+              "restorationQuality": 0.0,
+              "rotation": 0.0,
+              "seed": 2115101782,
+              "sold": false,
+              "storyArtifactId": "story_artifact_25",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 3130,
+              "trueRarity": 2.2,
+              "uniqueId": "case_master_camera",
+              "visualSignature": "model_05.obj|stage_variant_079|model05|glass|cyan-charcoal|085-115-106|prism_cradle|spectral_fan",
+              "visualVariant": "stage_variant_079",
+              "zoom": 1.0
+            },
+            {
+              "acquisitionPrice": 3628,
+              "actualEra": "1934-1941",
+              "artifactSpecId": "artifact_080",
+              "auctionProfile": {
+                "conditionSensitivity": 1.0,
+                "disclosureScrutiny": 1.0,
+                "preferredBidderTags": [
+                  "clockmaker",
+                  "museum_buyer",
+                  "speculator"
+                ],
+                "provenanceScrutiny": 1.0,
+                "reserveStrategy": {
+                  "appraisalRatio": 0.82,
+                  "mode": "grand_reserve_tier"
+                }
+              },
+              "authenticityTruth": "GENUINE",
+              "baseModel": "watch.obj",
+              "baseValue": 3280,
+              "caseId": "master_mechanism",
+              "caseResolved": true,
+              "category": "precision_regulators",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "mechanical_instruments",
+                "grand_reserve",
+                "observatory_timekeeping"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "TARNISH",
+                "CORROSION",
+                "MECHANICAL_WEAR",
+                "BROKEN_PART",
+                "MISSING_PART"
+              ],
+              "confidence": 0.56,
+              "damageInstances": [
+                "DUST",
+                "CORROSION",
+                "MECHANICAL_WEAR"
+              ],
+              "displayName": "Grand Reserve Astronomical Regulator",
+              "estimatedValue": 3280,
+              "evidence": [
+                {
+                  "clueType": "master_mechanism:material",
+                  "confidenceWeight": 0.12,
+                  "contradicts": [],
+                  "observation": {
+                    "en": "Material inspection recorded for the case file.",
+                    "ko": "Material 조사 결과를 사건 기록에 남겼습니다."
+                  },
+                  "supports": []
+                },
+                {
+                  "clueType": "master_mechanism:mechanism",
+                  "confidenceWeight": 0.12,
+                  "contradicts": [],
+                  "observation": {
+                    "en": "Mechanism inspection recorded for the case file.",
+                    "ko": "Mechanism 조사 결과를 사건 기록에 남겼습니다."
+                  },
+                  "supports": []
+                },
+                {
+                  "clueType": "master_mechanism:wear_pattern",
+                  "confidenceWeight": 0.12,
+                  "contradicts": [],
+                  "observation": {
+                    "en": "Wear Pattern inspection recorded for the case file.",
+                    "ko": "Wear Pattern 조사 결과를 사건 기록에 남겼습니다."
+                  },
+                  "supports": []
+                },
+                {
+                  "clueType": "master_mechanism:provenance",
+                  "confidenceWeight": 0.12,
+                  "contradicts": [],
+                  "observation": {
+                    "en": "Provenance inspection recorded for the case file.",
+                    "ko": "Provenance 조사 결과를 사건 기록에 남겼습니다."
+                  },
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 70.6461631503194,
+              "inspected": false,
+              "inspectionObservable": {
+                "en": "The mercury-compensation scale is intact, but its zero line sits beneath a later lacquer layer and beside an unrecorded jewel setting.",
+                "ko": "수은 보정 눈금은 온전하지만 영점선은 후대 옻칠 아래에 있고 기록에 없는 보석 받침과 맞닿아 있다."
+              },
+              "knownClues": [
+                "MATERIAL",
+                "MECHANISM",
+                "WEAR_PATTERN",
+                "PROVENANCE"
+              ],
+              "listing": {
+                "confidence": 0.0,
+                "disclosure": "UNCERTAIN",
+                "reserve": 0,
+                "starting": 0
+              },
+              "maker": "maker_20",
+              "materialSet": [
+                "material_01",
+                "material_09",
+                "material_04",
+                "material_13"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "GRAR Observatory Standard",
+              "originalParts": 1,
+              "partStates": {},
+              "playerHypothesis": "GENUINE",
+              "possibleClues": [
+                "MATERIAL",
+                "MECHANISM",
+                "WEAR_PATTERN",
+                "PROVENANCE"
+              ],
+              "possibleFaults": [
+                "CORROSION",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR"
+              ],
+              "rarity": "very_rare",
+              "repairProfile": {
+                "costPressure": 1.4,
+                "interventionTradeoff": {
+                  "en": "Full regulation maximizes auction performance, but partial conservation better preserves the disputed jewel and lacquer chronology.",
+                  "ko": "완전 조정은 경매 성능을 높이지만 최소 보존은 논쟁적인 보석 받침과 옻칠 연대 순서를 더 잘 지킨다."
+                },
+                "requiredTools": [
+                  "precision_scale",
+                  "precision_screwdriver",
+                  "reference_database"
+                ],
+                "toleranceMm": 0.01
+              },
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 0.0,
+              "restorationProfile": {
+                "cleaning": 0.52,
+                "patinaRisk": 0.77,
+                "repair": 0.94
+              },
+              "restorationQuality": 0.0,
+              "rotation": 0.0,
+              "seed": 870234692,
+              "sold": false,
+              "storyArtifactId": "story_artifact_26",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.154,
+              "trueMarketBaseline": 3280,
+              "trueRarity": 2.2,
+              "uniqueId": "case_master_mechanism",
+              "visualSignature": "watch.obj|stage_variant_080|watch|tarnished_brass|midnight-gold|118-116-084|mercury_pendulum|star_grid",
+              "visualVariant": "stage_variant_080",
+              "zoom": 1.0
+            }
+          ],
+          "failedCases": [],
+          "ok": true,
+          "preparedCases": [
+            {
+              "case": "master_camera",
+              "prepared": true
+            },
+            {
+              "case": "master_mechanism",
+              "prepared": true
+            }
+          ],
+          "started": {
+            "code": "OK",
+            "difficultyMultiplier": 1.83845921242015,
+            "ok": true,
+            "stage": 10
+          }
+        },
+        "liveFlow": {
+          "code": "OK",
+          "hammerCount": 3,
+          "lots": [
+            {
+              "cuePhases": [
+                "ENTRY",
+                "CALL",
+                "BID",
+                "DROPOUT",
+                "NO_SALE"
+              ],
+              "lot": 1,
+              "ok": true,
+              "phaseAfterHammer": "BETWEEN_LOTS",
+              "receiptCount": 1,
+              "transactionId": "auction_1_676651165_0"
+            },
+            {
+              "cuePhases": [
+                "ENTRY",
+                "CALL",
+                "DROPOUT",
+                "NO_SALE"
+              ],
+              "lot": 2,
+              "ok": true,
+              "phaseAfterHammer": "BETWEEN_LOTS",
+              "receiptCount": 2,
+              "transactionId": "auction_1_1641216154_1"
+            },
+            {
+              "cuePhases": [
+                "ENTRY",
+                "CALL",
+                "BID",
+                "BID",
+                "BID",
+                "DROPOUT",
+                "SOLD"
+              ],
+              "lot": 3,
+              "ok": true,
+              "phaseAfterHammer": "FINALIZED",
+              "receiptCount": 3,
+              "transactionId": "auction_1_1426811284_2"
+            }
+          ],
+          "nextLotCount": 2,
+          "ok": true,
+          "session": {
+            "activeArtifact": {
+              "artifactSpecId": "artifact_075",
+              "category": "microscopy_instruments",
+              "damageInstances": [
+                "MECHANICAL_WEAR",
+                "MISSING_PART",
+                "TARNISH"
+              ],
+              "displayName": "Velvet Entomology Microscope",
+              "instanceId": "stage_10_checkpoint_03",
+              "partStates": {},
+              "specId": "artifact_075",
+              "uniqueId": "stage_10_checkpoint_03",
+              "visualSignature": {}
+            },
+            "activeTransactionId": "",
+            "code": "OK",
+            "currentLotIndex": 2,
+            "finalizationReceiptId": "gr_final_112284871",
+            "lotUids": [
+              "stage_10_checkpoint_01",
+              "stage_10_checkpoint_02",
+              "stage_10_checkpoint_03"
+            ],
+            "ok": true,
+            "phase": "FINALIZED",
+            "receipts": [
+              {
+                "artifact": {
+                  "artifactSpecId": "artifact_077",
+                  "category": "railway_signaling",
+                  "damageInstances": [
+                    "CRACK",
+                    "RUST",
+                    "DUST"
+                  ],
+                  "displayName": "Enamel Railway Signal Lantern",
+                  "instanceId": "stage_10_checkpoint_01",
+                  "partStates": {},
+                  "specId": "artifact_077",
+                  "uniqueId": "stage_10_checkpoint_01",
+                  "visualSignature": {}
+                },
+                "auction": {
+                  "bids": [
+                    {
+                      "amount": 1747,
+                      "bidderId": "bidder_12"
+                    }
+                  ],
+                  "dropouts": [
+                    {
+                      "bidderId": "bidder_01",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_02",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_03",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_04",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_05",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_06",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_07",
+                      "reason": "BUDGET"
+                    }
+                  ],
+                  "fee": 0,
+                  "hammer": 1747,
+                  "net": 0,
+                  "opening": 1664,
+                  "participants": [
+                    {
+                      "id": "bidder_12"
+                    },
+                    {
+                      "id": "bidder_01"
+                    },
+                    {
+                      "id": "bidder_02"
+                    },
+                    {
+                      "id": "bidder_03"
+                    },
+                    {
+                      "id": "bidder_04"
+                    },
+                    {
+                      "id": "bidder_05"
+                    },
+                    {
+                      "id": "bidder_06"
+                    },
+                    {
+                      "id": "bidder_07"
+                    }
+                  ],
+                  "publicFingerprint": "AUC-504302644",
+                  "reasonTags": [
+                    {
+                      "category": "PRICE",
+                      "code": "RESERVE_TOO_HIGH",
+                      "polarity": "NEGATIVE"
+                    },
+                    {
+                      "category": "CONDITION",
+                      "code": "CONDITION_RISK",
+                      "polarity": "NEGATIVE"
+                    }
+                  ],
+                  "reserve": 2008,
+                  "reserve_met": false,
+                  "sale_status": "NO_SALE",
+                  "transactionId": "auction_1_676651165_0",
+                  "winnerId": "bidder_12"
+                }
+              },
+              {
+                "artifact": {
+                  "artifactSpecId": "artifact_078",
+                  "category": "magnetic_recorders",
+                  "damageInstances": [
+                    "GRIME",
+                    "TARNISH",
+                    "WATER_DAMAGE"
+                  ],
+                  "displayName": "Leather Field Wire Recorder",
+                  "instanceId": "stage_10_checkpoint_02",
+                  "partStates": {},
+                  "specId": "artifact_078",
+                  "uniqueId": "stage_10_checkpoint_02",
+                  "visualSignature": {}
+                },
+                "auction": {
+                  "bids": [],
+                  "dropouts": [
+                    {
+                      "bidderId": "bidder_11",
+                      "reason": "VALUE"
+                    },
+                    {
+                      "bidderId": "bidder_12",
+                      "reason": "VALUE"
+                    },
+                    {
+                      "bidderId": "bidder_01",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_02",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_03",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_04",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_05",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_06",
+                      "reason": "BUDGET"
+                    }
+                  ],
+                  "fee": 0,
+                  "hammer": 0,
+                  "net": 0,
+                  "opening": 1737,
+                  "participants": [
+                    {
+                      "id": "bidder_11"
+                    },
+                    {
+                      "id": "bidder_12"
+                    },
+                    {
+                      "id": "bidder_01"
+                    },
+                    {
+                      "id": "bidder_02"
+                    },
+                    {
+                      "id": "bidder_03"
+                    },
+                    {
+                      "id": "bidder_04"
+                    },
+                    {
+                      "id": "bidder_05"
+                    },
+                    {
+                      "id": "bidder_06"
+                    }
+                  ],
+                  "publicFingerprint": "AUC-1812873807",
+                  "reasonTags": [
+                    {
+                      "category": "PRICE",
+                      "code": "RESERVE_TOO_HIGH",
+                      "polarity": "NEGATIVE"
+                    },
+                    {
+                      "category": "CONDITION",
+                      "code": "CONDITION_RISK",
+                      "polarity": "NEGATIVE"
+                    }
+                  ],
+                  "reserve": 2096,
+                  "reserve_met": false,
+                  "sale_status": "NO_SALE",
+                  "transactionId": "auction_1_1641216154_1",
+                  "winnerId": ""
+                }
+              },
+              {
+                "artifact": {
+                  "artifactSpecId": "artifact_075",
+                  "category": "microscopy_instruments",
+                  "damageInstances": [
+                    "MECHANICAL_WEAR",
+                    "MISSING_PART",
+                    "TARNISH"
+                  ],
+                  "displayName": "Velvet Entomology Microscope",
+                  "instanceId": "stage_10_checkpoint_03",
+                  "partStates": {},
+                  "specId": "artifact_075",
+                  "uniqueId": "stage_10_checkpoint_03",
+                  "visualSignature": {}
+                },
+                "auction": {
+                  "bids": [
+                    {
+                      "amount": 1603,
+                      "bidderId": "bidder_10"
+                    },
+                    {
+                      "amount": 1681,
+                      "bidderId": "bidder_11"
+                    },
+                    {
+                      "amount": 1765,
+                      "bidderId": "bidder_12"
+                    },
+                    {
+                      "amount": 1850,
+                      "bidderId": "bidder_11"
+                    },
+                    {
+                      "amount": 1941,
+                      "bidderId": "bidder_12"
+                    }
+                  ],
+                  "dropouts": [
+                    {
+                      "bidderId": "bidder_01",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_02",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_03",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_04",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_05",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_10",
+                      "reason": "BUDGET"
+                    },
+                    {
+                      "bidderId": "bidder_11",
+                      "reason": "BUDGET"
+                    }
+                  ],
+                  "fee": 232,
+                  "hammer": 1941,
+                  "net": 1709,
+                  "opening": 1531,
+                  "participants": [
+                    {
+                      "id": "bidder_10"
+                    },
+                    {
+                      "id": "bidder_11"
+                    },
+                    {
+                      "id": "bidder_12"
+                    },
+                    {
+                      "id": "bidder_01"
+                    },
+                    {
+                      "id": "bidder_02"
+                    },
+                    {
+                      "id": "bidder_03"
+                    },
+                    {
+                      "id": "bidder_04"
+                    },
+                    {
+                      "id": "bidder_05"
+                    }
+                  ],
+                  "publicFingerprint": "AUC-326008088",
+                  "reasonTags": [
+                    {
+                      "category": "PROVENANCE",
+                      "code": "PROVENANCE_STRONG",
+                      "polarity": "POSITIVE"
+                    }
+                  ],
+                  "reserve": 1847,
+                  "reserve_met": true,
+                  "sale_status": "SOLD",
+                  "transactionId": "auction_1_1426811284_2",
+                  "winnerId": "bidder_12"
+                }
+              }
+            ],
+            "reserveRunId": "grand_reserve_10_1_1647592183",
+            "schemaVersion": 1
+          }
+        },
+        "pending": true,
+        "screen": "campaign",
+        "snapshot": {
+          "adviceCode": "IMPROVE_SALE",
+          "axes": {
+            "investigation": {
+              "available": true,
+              "statusCode": "STRONG",
+              "value": 100.0
+            },
+            "preservation": {
+              "available": true,
+              "statusCode": "STEADY",
+              "value": 67.1958371131506
+            },
+            "sale": {
+              "available": true,
+              "statusCode": "FRAGILE",
+              "value": 41.3685770750988
+            }
+          },
+          "stage": 10,
+          "weakest": "sale"
+        },
+        "stageStatus": "CLEARED"
+      },
+      "executed": true,
+      "id": "STAGE10-HANDOFF-GRAND-RESERVE-01",
+      "name": "Grand Reserve UI success freezes three replay axes and shows Stage Clear before the ending",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "firstLocaleOk": true,
+        "liveChanged": true,
+        "renderedAfterMutation": [
+          "100",
+          "67",
+          "41"
+        ],
+        "renderedBefore": [
+          "100",
+          "67",
+          "41"
+        ],
+        "secondLocaleOk": true,
+        "snapshotStable": true
+      },
+      "executed": true,
+      "id": "STAGE10-HANDOFF-FROZEN-LOCALE-01",
+      "name": "Frozen Stage Clear feedback survives public-state mutation and KO/EN refresh without acknowledging the ending",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "acknowledged": true,
+        "beforeAckRoute": true,
+        "loaded": true,
+        "pending": false,
+        "saved": true,
+        "screenAfterCta": "ending"
+      },
+      "executed": true,
+      "id": "STAGE10-HANDOFF-CTA-01",
+      "name": "Continue before acknowledgement restores Stage Clear and its CTA acknowledges before showing the ending",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "afterAckRoute": true,
+        "epilogueAcknowledged": true,
+        "loadedAfterAck": true,
+        "loadedPostgame": true,
+        "postgameRoute": true,
+        "savedAfterAck": true,
+        "savedPostgame": true,
+        "screen": "postgame"
+      },
+      "executed": true,
+      "id": "STAGE10-HANDOFF-CONTINUE-01",
+      "name": "Continue restores ending after the CTA and postgame after epilogue acknowledgement without regressing to Stage Clear",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "pending": {
+          "loaded": true,
+          "routeOk": true,
+          "valid": true,
+          "written": true
+        },
+        "postgame": {
+          "loaded": true,
+          "routeOk": true,
+          "valid": true,
+          "written": true
+        }
+      },
+      "executed": true,
+      "id": "STAGE10-HANDOFF-LEGACY-01",
+      "name": "Legacy cleared Stage 10 saves show the one-time card unless they had already reached postgame",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "executed": true,
+      "id": "STAGE10-HANDOFF-EARLIER-STAGES-01",
+      "name": "Stages 1-9 keep the replay/next-stage CTA and never enter the Stage 10 ending handoff",
+      "passed": true
+    }
+  ]
+}

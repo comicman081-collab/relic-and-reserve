@@ -1,0 +1,317 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage5-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "three_cameras",
+  "act_id": "ACT_3",
+  "title": {
+    "en": "The Camera Between Two Pictures",
+    "ko": "두 사진 사이의 카메라"
+  },
+  "briefing": {
+    "en": "Only one disputed third camera was physically received; the two comparison cameras exist only in records and photographs. Determine whether the received Marrow Model 132 is one documented original, an undocumented period third camera, or a modern reproduction copied from the reference pair.",
+    "ko": "실물로 인수된 것은 분쟁 중인 세 번째 카메라 한 대뿐이며, 비교 대상 두 카메라는 기록과 사진으로만 존재한다. 인수한 매로 모델 132가 기록된 원본 중 하나인지, 기록에 없는 당대의 세 번째 카메라인지, 비교 대상 두 대를 베낀 현대 복제품인지 판단하라."
+  },
+  "central_question": {
+    "en": "Does the single received camera belong to the photographed reference pair, represent a lost period third build, or copy features and repair marks from both recorded cameras?",
+    "ko": "실물로 받은 카메라 한 대는 사진 속 비교 대상 두 대 중 하나인가, 사라졌던 당대의 세 번째 제작품인가, 아니면 기록된 두 카메라의 구조와 수리 흔적을 함께 베낀 것인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, cameras, records, photographs, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 카메라, 기록, 사진, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report identifies the sole received object as a modern reproduction and keeps the two record-only comparison cameras out of the physical inventory.",
+    "ko": "보고서는 유일하게 인수한 실물을 현대 복제품으로 판별하고 기록에만 있는 비교 카메라 두 대를 실물 재고와 분리한다."
+  },
+  "failure": {
+    "en": "The received camera remains in review while Victor Hale rebuilds the inventory as one physical lot plus two record-and-photo references.",
+    "ko": "인수한 카메라는 검토 상태로 남고, 빅터 헤일은 재고를 실물 한 점과 기록·사진 참고자료 두 점으로 다시 정리한다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open the case file from the Stage 5 campaign desk after resolving the collector's barometer.",
+      "ko": "수집가의 기압계 사건을 해결한 뒤 스테이지 5 캠페인 책상에서 사건 서류를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A report that turns two photographed comparisons into received objects, or overlooks their copied marks, is reviewed with Victor Hale.",
+        "ko": "사진 속 비교 대상 두 대를 인수한 실물로 바꾸거나 그 흔적을 베낀 사실을 놓친 보고서는 빅터 헤일과 재검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_033",
+    "legacy_story_artifact_id": "story_artifact_14",
+    "display_name": {
+      "en": "Marrow Model 132 Film Camera",
+      "ko": "매로 모델 132 필름 카메라"
+    },
+    "authoring_truth_hypothesis_id": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair",
+    "player_prompt": {
+      "en": "Inspect the one camera physically received, then compare it with the two cameras known only through records and photographs.",
+      "ko": "실물로 인수한 카메라 한 대를 조사한 뒤 기록과 사진으로만 아는 비교 카메라 두 대와 대조하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.three_cameras.documented_reference_pair_original",
+      "label": {"en": "One documented original resurfaced", "ko": "기록된 원본 한 대의 재등장"},
+      "claim": {
+        "en": "The single received camera is one of the two photographed Marrow originals, and a later inventory mistake made it appear to be a third object.",
+        "ko": "실물로 받은 카메라 한 대는 사진에 남은 매로 원본 두 대 중 하나이며, 후대 재고 오류 때문에 세 번째 물건처럼 보이게 되었다."
+      }
+    },
+    {
+      "id": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair",
+      "label": {"en": "Modern copy of the reference pair", "ko": "비교 대상 두 대를 베낀 현대 복제품"},
+      "claim": {
+        "en": "The sole received camera is a modern reproduction that combines construction details and repair marks copied from the two cameras preserved only in records and photographs.",
+        "ko": "유일하게 인수한 카메라는 기록과 사진으로만 남은 비교 카메라 두 대의 구조와 수리 흔적을 합쳐 베낀 현대 복제품이다."
+      }
+    },
+    {
+      "id": "hyp.three_cameras.undocumented_period_third_camera",
+      "label": {"en": "Undocumented period third camera", "ko": "기록에 없는 당대의 세 번째 카메라"},
+      "claim": {
+        "en": "The received object is a separate third Model 132 made in the same period workshop but omitted from the surviving records.",
+        "ko": "인수한 물건은 같은 당대 작업장에서 제작됐지만 남은 기록에서 빠진 별도의 세 번째 모델 132다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.three_cameras.artifact.received_camera_body",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_033",
+      "reliability": "HIGH",
+      "label": {"en": "Sole received camera", "ko": "유일하게 인수한 카메라"},
+      "short_observation": {
+        "en": "Only one disputed camera is present for physical inspection.",
+        "ko": "실물 조사 대상은 분쟁 중인 카메라 한 대뿐이다."
+      },
+      "text": {
+        "en": "The intake seal, scale record, and continuous examination photographs cover one disputed Model 132 camera only. Its body repeats the first reference camera's finder spacing but the second reference camera's unusual replacement-winder outline; both comparison cameras remain record-and-photo references and were never physically received in this case.",
+        "ko": "인수 봉인, 계량 기록과 이어진 조사 사진은 분쟁 중인 모델 132 카메라 한 대만을 가리킨다. 몸체는 첫 번째 비교 카메라의 파인더 간격과 두 번째 비교 카메라의 특이한 교체 와인더 윤곽을 함께 반복하지만, 비교 대상 두 대는 기록과 사진 속 참고자료일 뿐 이 사건에서 실물로 인수되지 않았다."
+      },
+      "unlock": {
+        "action": "inspect",
+        "target": "received_camera_body",
+        "requires": [],
+        "action_label": {"en": "Inspect received camera", "ko": "인수 카메라 조사"},
+        "target_label": {"en": "Single sealed camera lot", "ko": "봉인된 단일 카메라 물품"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "single_physical_intake", "depends_on": []},
+      "citation_id": "cite.three_cameras.artifact.received_camera_body"
+    },
+    {
+      "source_ref": "src.three_cameras.artifact.copied_repair_surface",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_033",
+      "reliability": "HIGH",
+      "label": {"en": "Copied repair surface", "ko": "베껴 만든 수리 표면"},
+      "short_observation": {
+        "en": "Modern layers imitate two different cameras' repair marks.",
+        "ko": "현대식 층이 서로 다른 두 카메라의 수리 흔적을 흉내 냈다."
+      },
+      "text": {
+        "en": "One calibrated material scan finds recent epoxy filler and acrylic toning beneath the apparent wear. The filled scratch copies a line visible only on reference photograph A, while the moulded winder dent copies photograph B; their identical shallow depth shows that both old-looking repairs were transferred onto this modern body.",
+        "ko": "한 차례의 보정된 재료 스캔에서 겉보기 마모 아래의 최근 에폭시 충전재와 아크릴 색맞춤 층이 확인된다. 메운 흠집은 비교 사진 A에만 보이는 선을, 성형한 와인더 찌그러짐은 사진 B의 흔적을 베꼈으며 똑같이 얕은 깊이는 두 오래돼 보이는 수리 흔적이 이 현대식 몸체로 옮겨졌음을 보여 준다."
+      },
+      "unlock": {
+        "action": "scan_material",
+        "target": "copied_repair_layers",
+        "requires": [
+          "src.three_cameras.artifact.received_camera_body",
+          "material_scanner"
+        ],
+        "action_label": {"en": "Scan repair layers", "ko": "수리 층 스캔"},
+        "target_label": {"en": "Scratch and winder impressions", "ko": "흠집과 와인더 자국"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Use one low-power pass before cleaning; abrasion could flatten the shallow copied repair marks.",
+          "ko": "세척 전에 저출력으로 한 번만 스캔하라. 마찰은 얕게 베낀 수리 흔적을 평평하게 만들 수 있다."
+        }
+      },
+      "independence": {
+        "group": "modern_copied_surface_layers",
+        "depends_on": ["src.three_cameras.artifact.received_camera_body"]
+      },
+      "citation_id": "cite.three_cameras.artifact.copied_repair_surface"
+    },
+    {
+      "source_ref": "src.three_cameras.document.reference_pair_photo_ledger",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_27",
+      "document_id": "doc.three_cameras.reference_pair_photo_ledger",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Reference-pair photo ledger", "ko": "비교 대상 두 대의 사진 대장"},
+      "short_observation": {
+        "en": "The ledger records two comparison cameras and one separate shipment.",
+        "ko": "대장은 비교 카메라 두 대와 별도의 실물 한 대를 구분한다."
+      },
+      "text": {
+        "en": "Fictional Document 27 lists two historical Model 132 cameras as comparison entries A and B, each represented here only by a record card and photograph. A separate signed intake line states that one disputed third camera was physically received; its shipping seal and unlisted serial match the sole object on the examination table.",
+        "ko": "가상 문서 27은 역사적 모델 132 두 대를 비교 항목 A와 B로 기록하며, 이 사건에는 각각 기록 카드와 사진으로만 존재한다. 별도의 서명된 인수 항목은 분쟁 중인 세 번째 카메라 한 대만 실물로 받았다고 명시하고, 운송 봉인과 미등재 일련번호는 조사대 위의 유일한 물건과 일치한다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "reference_pair_photo_ledger",
+        "requires": [],
+        "action_label": {"en": "Read photo ledger", "ko": "사진 대장 읽기"},
+        "target_label": {"en": "Reference-pair photo ledger", "ko": "비교 대상 사진 대장"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "documented_pair_and_single_intake", "depends_on": []},
+      "citation_id": "cite.three_cameras.document.reference_pair_photo_ledger"
+    },
+    {
+      "source_ref": "src.three_cameras.npc.victor_single_lot_account",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "victor_hale",
+      "npc_id": "victor_hale",
+      "expression": "neutral",
+      "reliability": "MEDIUM",
+      "label": {"en": "Victor Hale's intake account", "ko": "빅터 헤일의 인수 설명"},
+      "short_observation": {
+        "en": "Victor Hale confirms one physical lot and two photo references.",
+        "ko": "빅터 헤일은 실물 한 점과 사진 참고자료 두 점을 확인한다."
+      },
+      "text": {
+        "en": "Victor Hale confirms: 'Only one disputed third camera was physically received; the two comparison cameras exist only in records and photographs.' He says the seller called the received object a lost sibling, but discloses that a third original would increase his collection's prestige and offers no second physical object as corroboration.",
+        "ko": "빅터 헤일은 '실물로 인수된 것은 분쟁 중인 세 번째 카메라 한 대뿐이며, 비교 대상 두 카메라는 기록과 사진으로만 존재합니다'라고 확인한다. 그는 판매자가 인수품을 사라진 형제 모델이라고 불렀지만 세 번째 원본이 자신의 소장품 위상을 높인다는 이해관계를 밝히고, 이를 뒷받침할 두 번째 실물은 제시하지 못한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "victor_hale",
+        "requires": ["src.three_cameras.document.reference_pair_photo_ledger"],
+        "action_label": {"en": "Ask Victor Hale", "ko": "빅터 헤일에게 묻기"},
+        "target_label": {"en": "Victor Hale", "ko": "빅터 헤일"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "interested_intake_witness",
+        "depends_on": ["src.three_cameras.document.reference_pair_photo_ledger"]
+      },
+      "citation_id": "cite.three_cameras.npc.victor_single_lot_account"
+    },
+    {
+      "source_ref": "src.three_cameras.reference.marrow_model132_history",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "history_33",
+      "reference_id": "ref.marrow.model132_camera_history",
+      "reliability": "HIGH",
+      "label": {"en": "Marrow model history", "ko": "매로 모델 이력"},
+      "short_observation": {
+        "en": "The maker history separates two originals from the copied third body.",
+        "ko": "제작사 이력이 원본 두 대와 베낀 세 번째 몸체를 구분한다."
+      },
+      "text": {
+        "en": "The fictional Marrow archive matches the two photographed cameras to distinct listed serials and separate workshop finish notes. It records no third Model 132 and shows period pinned joints and blackened brass pressure plates absent from the received object's cast replicas, modern polymer shims, and combined A-and-B repair pattern.",
+        "ko": "가상의 매로 기록은 사진 속 두 카메라를 서로 다른 등재 일련번호와 개별 작업장 마감 기록에 연결한다. 세 번째 모델 132는 기록하지 않으며, 인수품의 주조 복제부, 현대 고분자 심과 A·B 혼합 수리 무늬에는 없는 당대 핀 결합과 흑착 황동 압판을 보여 준다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": [
+          "src.three_cameras.artifact.received_camera_body",
+          "src.three_cameras.document.reference_pair_photo_ledger",
+          "reference_database"
+        ],
+        "action_label": {"en": "Search maker history", "ko": "제작사 이력 검색"},
+        "target_label": {"en": "Marrow camera archive", "ko": "매로 카메라 기록"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {
+        "group": "independent_model_and_serial_history",
+        "depends_on": [
+          "src.three_cameras.artifact.received_camera_body",
+          "src.three_cameras.document.reference_pair_photo_ledger"
+        ]
+      },
+      "citation_id": "cite.three_cameras.reference.marrow_model132_history"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.three_cameras.artifact.received_camera_body",
+      "source_ref": "src.three_cameras.artifact.received_camera_body",
+      "label": {"en": "Object record: sole received camera", "ko": "실물 기록: 유일하게 인수한 카메라"},
+      "locator": {"en": "Object sheet A-1, intake seal and body", "ko": "실물 조사표 A-1, 인수 봉인과 몸체"}
+    },
+    {
+      "id": "cite.three_cameras.artifact.copied_repair_surface",
+      "source_ref": "src.three_cameras.artifact.copied_repair_surface",
+      "label": {"en": "Material record: copied repair layers", "ko": "재료 기록: 베껴 만든 수리 층"},
+      "locator": {"en": "Material scan A-2, scratch and winder", "ko": "재료 스캔 A-2, 흠집과 와인더"}
+    },
+    {
+      "id": "cite.three_cameras.document.reference_pair_photo_ledger",
+      "source_ref": "src.three_cameras.document.reference_pair_photo_ledger",
+      "label": {"en": "Reference-pair photo ledger", "ko": "비교 대상 두 대의 사진 대장"},
+      "locator": {"en": "Case document D-27, entries A, B, and intake C", "ko": "사건 문서 D-27, A·B 항목과 인수 C 항목"}
+    },
+    {
+      "id": "cite.three_cameras.npc.victor_single_lot_account",
+      "source_ref": "src.three_cameras.npc.victor_single_lot_account",
+      "label": {"en": "Interview with Victor Hale", "ko": "빅터 헤일 면담"},
+      "locator": {"en": "Collector interview N-27, single-lot statement", "ko": "수집가 면담 N-27, 단일 물품 진술"}
+    },
+    {
+      "id": "cite.three_cameras.reference.marrow_model132_history",
+      "source_ref": "src.three_cameras.reference.marrow_model132_history",
+      "label": {"en": "Marrow Model 132 production history", "ko": "매로 모델 132 생산 이력"},
+      "locator": {"en": "Fictional maker archive H-33, serial and joint plates", "ko": "가상 제작사 기록 H-33, 일련번호와 결합 도판"}
+    }
+  ],
+  "evidence_links": [
+    {"id": "link.cameras.body_refutes_pair", "source_ref": "src.three_cameras.artifact.received_camera_body", "hypothesis_id": "hyp.three_cameras.documented_reference_pair_original", "relation": "REFUTE", "weight": 0.7, "independence_group": "single_physical_intake", "citation_id": "cite.three_cameras.artifact.received_camera_body"},
+    {"id": "link.cameras.body_supports_copy", "source_ref": "src.three_cameras.artifact.received_camera_body", "hypothesis_id": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair", "relation": "SUPPORT", "weight": 0.85, "independence_group": "single_physical_intake", "citation_id": "cite.three_cameras.artifact.received_camera_body"},
+    {"id": "link.cameras.body_refutes_period_third", "source_ref": "src.three_cameras.artifact.received_camera_body", "hypothesis_id": "hyp.three_cameras.undocumented_period_third_camera", "relation": "REFUTE", "weight": 0.65, "independence_group": "single_physical_intake", "citation_id": "cite.three_cameras.artifact.received_camera_body"},
+    {"id": "link.cameras.surface_refutes_pair", "source_ref": "src.three_cameras.artifact.copied_repair_surface", "hypothesis_id": "hyp.three_cameras.documented_reference_pair_original", "relation": "REFUTE", "weight": 1.0, "independence_group": "modern_copied_surface_layers", "citation_id": "cite.three_cameras.artifact.copied_repair_surface"},
+    {"id": "link.cameras.surface_supports_copy", "source_ref": "src.three_cameras.artifact.copied_repair_surface", "hypothesis_id": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "modern_copied_surface_layers", "citation_id": "cite.three_cameras.artifact.copied_repair_surface"},
+    {"id": "link.cameras.surface_refutes_period_third", "source_ref": "src.three_cameras.artifact.copied_repair_surface", "hypothesis_id": "hyp.three_cameras.undocumented_period_third_camera", "relation": "REFUTE", "weight": 1.0, "independence_group": "modern_copied_surface_layers", "citation_id": "cite.three_cameras.artifact.copied_repair_surface"},
+    {"id": "link.cameras.ledger_refutes_pair", "source_ref": "src.three_cameras.document.reference_pair_photo_ledger", "hypothesis_id": "hyp.three_cameras.documented_reference_pair_original", "relation": "REFUTE", "weight": 0.9, "independence_group": "documented_pair_and_single_intake", "citation_id": "cite.three_cameras.document.reference_pair_photo_ledger"},
+    {"id": "link.cameras.ledger_supports_copy", "source_ref": "src.three_cameras.document.reference_pair_photo_ledger", "hypothesis_id": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair", "relation": "SUPPORT", "weight": 0.9, "independence_group": "documented_pair_and_single_intake", "citation_id": "cite.three_cameras.document.reference_pair_photo_ledger"},
+    {"id": "link.cameras.ledger_refutes_period_third", "source_ref": "src.three_cameras.document.reference_pair_photo_ledger", "hypothesis_id": "hyp.three_cameras.undocumented_period_third_camera", "relation": "REFUTE", "weight": 0.8, "independence_group": "documented_pair_and_single_intake", "citation_id": "cite.three_cameras.document.reference_pair_photo_ledger"},
+    {"id": "link.cameras.victor_refutes_pair", "source_ref": "src.three_cameras.npc.victor_single_lot_account", "hypothesis_id": "hyp.three_cameras.documented_reference_pair_original", "relation": "REFUTE", "weight": 0.75, "independence_group": "interested_intake_witness", "citation_id": "cite.three_cameras.npc.victor_single_lot_account"},
+    {"id": "link.cameras.victor_supports_copy", "source_ref": "src.three_cameras.npc.victor_single_lot_account", "hypothesis_id": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair", "relation": "SUPPORT", "weight": 0.8, "independence_group": "interested_intake_witness", "citation_id": "cite.three_cameras.npc.victor_single_lot_account"},
+    {"id": "link.cameras.victor_supports_period_third", "source_ref": "src.three_cameras.npc.victor_single_lot_account", "hypothesis_id": "hyp.three_cameras.undocumented_period_third_camera", "relation": "SUPPORT", "weight": 0.25, "independence_group": "interested_intake_witness", "citation_id": "cite.three_cameras.npc.victor_single_lot_account"},
+    {"id": "link.cameras.history_refutes_pair", "source_ref": "src.three_cameras.reference.marrow_model132_history", "hypothesis_id": "hyp.three_cameras.documented_reference_pair_original", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_model_and_serial_history", "citation_id": "cite.three_cameras.reference.marrow_model132_history"},
+    {"id": "link.cameras.history_supports_copy", "source_ref": "src.three_cameras.reference.marrow_model132_history", "hypothesis_id": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "independent_model_and_serial_history", "citation_id": "cite.three_cameras.reference.marrow_model132_history"},
+    {"id": "link.cameras.history_refutes_period_third", "source_ref": "src.three_cameras.reference.marrow_model132_history", "hypothesis_id": "hyp.three_cameras.undocumented_period_third_camera", "relation": "REFUTE", "weight": 0.95, "independence_group": "independent_model_and_serial_history", "citation_id": "cite.three_cameras.reference.marrow_model132_history"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair",
+    "required_source_refs": [
+      "src.three_cameras.artifact.received_camera_body",
+      "src.three_cameras.artifact.copied_repair_surface",
+      "src.three_cameras.document.reference_pair_photo_ledger",
+      "src.three_cameras.reference.marrow_model132_history"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings from four independent groups. Keep the one physically received camera separate from the two record-and-photo comparisons, then explain how their distinct features were copied into a modern reproduction.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 최소 네 가지 근거를 인용하라. 실물로 인수한 카메라 한 대를 기록·사진 속 비교 대상 두 대와 구분하고, 서로 다른 특징이 현대 복제품에 어떻게 베껴졌는지 설명하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "minimum_citations": 2},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

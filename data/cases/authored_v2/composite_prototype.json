@@ -1,0 +1,272 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage7-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "composite_prototype",
+  "act_id": "ACT_4",
+  "title": {"en": "The Composite Prototype", "ko": "복합 시제품"},
+  "briefing": {
+    "en": "Noah Stern presents a Solenne measuring instrument assembled from a dial body, drafting carriage, and compact counter. A crate tag calls it an experimental prototype, but the joints may record a different purpose.",
+    "ko": "노아 스턴은 다이얼 몸체, 제도용 이동대와 소형 계수기를 결합한 솔렌 측정 기구를 내놓았다. 상자 표찰은 실험 시제품이라 부르지만 접합부는 다른 목적을 드러낼 수 있다."
+  },
+  "central_question": {
+    "en": "Is this a genuine experimental prototype, a genuine instrument with one later adapter, or a composite forgery built from mixed parts?",
+    "ko": "이 물건은 진짜 실험 시제품인가, 후대 어댑터 하나가 붙은 진품인가, 아니면 서로 다른 부품으로 만든 복합 위조품인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, records, people, marks, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 기록, 인물, 표식과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "The report identifies a deliberate composite forgery and distinguishes coordinated artificial aging from a legitimate later repair.",
+    "ko": "보고서는 의도적으로 만든 복합 위조품을 밝혀내고, 함께 꾸민 인공 노화를 정당한 후대 수리와 구분한다."
+  },
+  "failure": {
+    "en": "The instrument remains in review while Noah helps separate an appealing prototype story from independently dated construction evidence.",
+    "ko": "기구는 검토 상태로 남고, 노아는 매력적인 시제품 이야기와 독립적으로 연대를 판단한 제작 근거를 구분하도록 돕는다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the composite file from the Stage 7 campaign desk.", "ko": "스테이지 7 캠페인 책상에서 복합 시제품 사건 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": ["adapter_sequence_if_opened_unrecorded"],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A conclusion that treats every mixed assembly as a prototype is reviewed with Noah.",
+        "ko": "서로 다른 부품의 조합을 모두 시제품으로 보는 결론은 노아와 다시 검토한다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_059",
+    "legacy_story_artifact_id": "story_artifact_20",
+    "display_name": {"en": "Solenne Model 158 Composite Instrument", "ko": "솔렌 모델 158 복합 측정 기구"},
+    "authoring_truth_hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+    "player_prompt": {
+      "en": "Compare component mass, hidden adapters, custody, catalog construction, and period measuring practice.",
+      "ko": "부품 질량, 숨은 어댑터, 소장 기록, 카탈로그 제작법과 당대 측정 기구 관행을 대조하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.composite_prototype.genuine_experimental_prototype",
+      "label": {"en": "Genuine experimental prototype", "ko": "진짜 실험 시제품"},
+      "claim": {
+        "en": "Solenne built the dial, carriage, counter, and base together as one undocumented experimental instrument.",
+        "ko": "솔렌이 다이얼, 이동대, 계수기와 받침을 하나의 미기록 실험 기구로 함께 제작했다."
+      }
+    },
+    {
+      "id": "hyp.composite_prototype.genuine_instrument_with_later_adapter",
+      "label": {"en": "Genuine instrument, later adapter", "ko": "진품 기구와 후대 어댑터"},
+      "claim": {
+        "en": "A genuine Solenne measuring body received one limited later adapter while its original mechanism remained intact.",
+        "ko": "진짜 솔렌 측정 기구 몸체에 제한적인 후대 어댑터 하나가 붙었고 원래 기구부는 온전히 남았다."
+      }
+    },
+    {
+      "id": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+      "label": {"en": "Composite forgery from mixed parts", "ko": "서로 다른 부품의 복합 위조품"},
+      "claim": {
+        "en": "Parts from different instruments and dates were joined with modern adapters, renumbered, and aged together to imitate a rare prototype.",
+        "ko": "서로 다른 기구와 연대의 부품을 현대 어댑터로 잇고 번호와 노화를 함께 꾸며 희귀 시제품처럼 만들었다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.composite_prototype.artifact.mixed_period_components",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_059",
+      "reliability": "HIGH",
+      "label": {"en": "Component balance survey", "ko": "부품 균형 조사"},
+      "short_observation": {"en": "Three assemblies divide into incompatible weight families.", "ko": "세 조립부가 맞지 않는 질량 계열로 나뉜다."},
+      "text": {
+        "en": "Supported precision measurements separate the dial body, drafting carriage, and counter into three incompatible mass and balance families. Their shared brown coating hides distinct wear edges, and only the base follows the claimed Solenne proportion.",
+        "ko": "각 부품을 받친 정밀 측정에서 다이얼 몸체, 제도용 이동대와 계수기가 서로 맞지 않는 세 질량·균형 계열로 갈린다. 공통 갈색 도막은 서로 다른 마모 가장자리를 가리고, 받침만 주장된 솔렌 비례를 따른다."
+      },
+      "unlock": {
+        "action": "measure",
+        "target": "dial_carriage_and_counter",
+        "requires": ["precision_scale"],
+        "action_label": {"en": "Measure components", "ko": "부품 측정"},
+        "target_label": {"en": "Dial, carriage, and counter", "ko": "다이얼, 이동대와 계수기"}
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {"en": "Support every joint before shifting the instrument.", "ko": "기구를 옮기기 전에 모든 접합부를 받쳐라."}
+      },
+      "independence": {"group": "component_mass_mismatch", "depends_on": []},
+      "citation_id": "cite.composite_prototype.artifact.mixed_period_components"
+    },
+    {
+      "source_ref": "src.composite_prototype.artifact.modern_adapter_construction",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_059",
+      "reliability": "HIGH",
+      "label": {"en": "Hidden adapter network", "ko": "숨은 어댑터 구조"},
+      "short_observation": {"en": "Modern adapters join three unrelated numbering systems.", "ko": "현대 어댑터가 서로 다른 세 번호 체계를 잇는다."},
+      "text": {
+        "en": "After every joint is photographed, the repair toolkit exposes machine-cut shims, fresh epoxy, and three unrelated numbering sequences beneath the base. The adapters join all major modules at once rather than marking one limited repair, and the applied grime continues across the new seams.",
+        "ko": "모든 접합부를 촬영한 뒤 수리 도구로 받침을 열자 기계 절단 심, 새 에폭시와 서로 다른 세 번호 배열이 드러난다. 어댑터는 제한적인 수리 한 곳이 아니라 주요 모듈 전체를 한꺼번에 잇고, 덧바른 오염도 새 이음새를 가로질러 이어진다."
+      },
+      "unlock": {
+        "action": "disassemble",
+        "target": "indexed_composite_base",
+        "requires": ["src.composite_prototype.artifact.mixed_period_components", "repair_toolkit"],
+        "action_label": {"en": "Open the indexed base", "ko": "기준 표시 받침 열기"},
+        "target_label": {"en": "Shims, epoxy, and numbering", "ko": "심, 에폭시와 번호 배열"}
+      },
+      "risk": {
+        "destroyed_by": ["open_base_without_joint_capture"],
+        "player_warning": {"en": "Photograph every joint before loosening the base.", "ko": "받침을 풀기 전에 모든 접합부를 촬영하라."}
+      },
+      "independence": {"group": "modern_adapter_network", "depends_on": ["src.composite_prototype.artifact.mixed_period_components"]},
+      "citation_id": "cite.composite_prototype.artifact.modern_adapter_construction"
+    },
+    {
+      "source_ref": "src.composite_prototype.document.archive_custody_record",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_09",
+      "document_id": "doc.composite_prototype.archive_custody_record",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Recent archive custody record", "ko": "최근 보관 소장 기록"},
+      "short_observation": {"en": "The signed chain starts after the composite already existed.", "ko": "서명된 소장 경로가 복합 조립 이후에 시작된다."},
+      "text": {
+        "en": "Fictional Archive Record 09 first describes the complete composite in a recent unverified donation, then follows it through signed storage transfers. It proves custody only from that intake and contains no workshop entry or earlier owner; this is the case's sole provenance record.",
+        "ko": "가상 보관 기록 09는 최근의 미검증 기증에서 완성된 복합 기구를 처음 적고 이후 서명된 보관 이관을 잇는다. 이 기록은 그 입고 시점 이후의 소장만 증명하고 공방 입고나 이전 소유자는 담지 않으며, 이것이 이 사건의 유일한 소장 이력 기록이다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "recent_archive_custody_record",
+        "requires": [],
+        "action_label": {"en": "Read custody record", "ko": "소장 기록 읽기"},
+        "target_label": {"en": "Signed archive transfers", "ko": "서명된 보관 이관"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "composite_archive_chain", "depends_on": []},
+      "citation_id": "cite.composite_prototype.document.archive_custody_record"
+    },
+    {
+      "source_ref": "src.composite_prototype.document.reserve_catalog_entry",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_20",
+      "document_id": "doc.composite_prototype.reserve_catalog_entry",
+      "reliability": "MEDIUM",
+      "label": {"en": "Model 158 catalog entry", "ko": "모델 158 카탈로그 항목"},
+      "short_observation": {"en": "The catalog shows one cast frame and one serial sequence.", "ko": "카탈로그는 단일 주조 프레임과 번호 배열을 보여 준다."},
+      "text": {
+        "en": "Fictional Reserve Catalog 20 diagrams the Model 158 as one cast measuring frame with an integrated carriage and a single serial sequence. It lists no detachable counter, shimmed joints, or experimental composite version. The entry describes construction only and is not provenance.",
+        "ko": "가상 보관소 카탈로그 20은 모델 158을 이동대가 통합된 단일 주조 측정 프레임과 하나의 일련번호 배열로 도해한다. 분리형 계수기, 심을 댄 접합부나 실험용 복합판은 적혀 있지 않다. 이 항목은 제작법만 설명하며 소장 이력은 아니다."
+      },
+      "unlock": {
+        "action": "compare_records",
+        "target": "model158_catalog_entry",
+        "requires": ["src.composite_prototype.artifact.mixed_period_components"],
+        "action_label": {"en": "Compare catalog", "ko": "카탈로그 대조"},
+        "target_label": {"en": "Model 158 construction plate", "ko": "모델 158 제작 도판"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "composite_reserve_catalog", "depends_on": ["src.composite_prototype.artifact.mixed_period_components"]},
+      "citation_id": "cite.composite_prototype.document.reserve_catalog_entry"
+    },
+    {
+      "source_ref": "src.composite_prototype.npc.noah_prototype_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "noah_stern",
+      "npc_id": "noah_stern",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Noah's acquisition account", "ko": "노아의 입수 경위"},
+      "short_observation": {"en": "The prototype claim came from an unsigned crate tag.", "ko": "시제품 주장은 서명 없는 상자 표찰에서 나왔다."},
+      "text": {
+        "en": "Noah says the broker called the object a prototype because an unsigned crate tag used that word. He has no maker letter or earlier owner and asks that the component measurements, hidden joints, catalog, and signed custody record carry the conclusion.",
+        "ko": "노아는 서명 없는 상자 표찰에 시제품이라는 말이 있어 중개상이 그렇게 불렀다고 말한다. 제작사 편지나 이전 소유자는 없으며, 부품 측정, 숨은 접합부, 카탈로그와 서명된 소장 기록으로 결론을 내려 달라고 요청한다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "noah_stern",
+        "requires": ["src.composite_prototype.document.archive_custody_record"],
+        "action_label": {"en": "Ask Noah", "ko": "노아에게 묻기"},
+        "target_label": {"en": "Noah Stern", "ko": "노아 스턴"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "noah_prototype_account", "depends_on": ["src.composite_prototype.document.archive_custody_record"]},
+      "citation_id": "cite.composite_prototype.npc.noah_prototype_context"
+    },
+    {
+      "source_ref": "src.composite_prototype.reference.period_measuring_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_13",
+      "reference_id": "ref.composite_prototype.period_measuring_standard",
+      "reliability": "HIGH",
+      "label": {"en": "Period measuring standard", "ko": "당대 측정 기구 기준"},
+      "short_observation": {"en": "The standard separates every module's date and purpose.", "ko": "기준 자료가 각 모듈의 연대와 용도를 구분한다."},
+      "text": {
+        "en": "The fictional 1932–1943 measuring standard matches the base alone to Solenne practice. The dial body, carriage, and counter follow three different workshop systems, while the machine-cut shims, epoxy, transferred number, and uniform grime are later joining methods rather than period experimentation.",
+        "ko": "가상의 1932~1943년 측정 기구 기준에서 받침만 솔렌 관행에 맞는다. 다이얼 몸체, 이동대와 계수기는 서로 다른 세 공방 체계를 따르고, 기계 절단 심, 에폭시, 전사 번호와 균일한 오염은 당대 실험이 아닌 후대 결합 방식이다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": ["src.composite_prototype.artifact.mixed_period_components", "reference_database"],
+        "action_label": {"en": "Check period standard", "ko": "당대 기준 확인"},
+        "target_label": {"en": "Measuring construction guide", "ko": "측정 기구 제작 안내서"}
+      },
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_measuring_standard", "depends_on": ["src.composite_prototype.artifact.mixed_period_components"]},
+      "citation_id": "cite.composite_prototype.reference.period_measuring_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.composite_prototype.artifact.mixed_period_components", "source_ref": "src.composite_prototype.artifact.mixed_period_components", "label": {"en": "Object survey: component balance", "ko": "실물 조사: 부품 균형"}, "locator": {"en": "Object record A-1, three assemblies", "ko": "실물 기록 A-1, 세 조립부"}},
+    {"id": "cite.composite_prototype.artifact.modern_adapter_construction", "source_ref": "src.composite_prototype.artifact.modern_adapter_construction", "label": {"en": "Object record: hidden adapters", "ko": "실물 기록: 숨은 어댑터"}, "locator": {"en": "Internal record A-2, base joints", "ko": "내부 기록 A-2, 받침 접합부"}},
+    {"id": "cite.composite_prototype.document.archive_custody_record", "source_ref": "src.composite_prototype.document.archive_custody_record", "label": {"en": "Recent archive custody record", "ko": "최근 보관 소장 기록"}, "locator": {"en": "Archive sheet 09, signed transfers", "ko": "보관 문서 09, 서명된 이관 항목"}},
+    {"id": "cite.composite_prototype.document.reserve_catalog_entry", "source_ref": "src.composite_prototype.document.reserve_catalog_entry", "label": {"en": "Model 158 catalog entry", "ko": "모델 158 카탈로그 항목"}, "locator": {"en": "Reserve catalog 20, construction plate", "ko": "보관소 카탈로그 20, 제작 도판"}},
+    {"id": "cite.composite_prototype.npc.noah_prototype_context", "source_ref": "src.composite_prototype.npc.noah_prototype_context", "label": {"en": "Interview with Noah Stern", "ko": "노아 스턴 면담"}, "locator": {"en": "Acquisition interview N-20", "ko": "입수 경위 면담 N-20"}},
+    {"id": "cite.composite_prototype.reference.period_measuring_standard", "source_ref": "src.composite_prototype.reference.period_measuring_standard", "label": {"en": "Period measuring standard", "ko": "당대 측정 기구 기준"}, "locator": {"en": "Fictional period reference 13, plate 5", "ko": "가상 시대 참고 13, 도판 5"}}
+  ],
+  "evidence_links": [
+    {"id": "link.composite_prototype.mass_refutes_prototype", "source_ref": "src.composite_prototype.artifact.mixed_period_components", "hypothesis_id": "hyp.composite_prototype.genuine_experimental_prototype", "relation": "REFUTE", "weight": 0.9, "independence_group": "component_mass_mismatch", "citation_id": "cite.composite_prototype.artifact.mixed_period_components"},
+    {"id": "link.composite_prototype.mass_supports_adapter", "source_ref": "src.composite_prototype.artifact.mixed_period_components", "hypothesis_id": "hyp.composite_prototype.genuine_instrument_with_later_adapter", "relation": "SUPPORT", "weight": 0.45, "independence_group": "component_mass_mismatch", "citation_id": "cite.composite_prototype.artifact.mixed_period_components"},
+    {"id": "link.composite_prototype.mass_supports_forgery", "source_ref": "src.composite_prototype.artifact.mixed_period_components", "hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts", "relation": "SUPPORT", "weight": 0.9, "independence_group": "component_mass_mismatch", "citation_id": "cite.composite_prototype.artifact.mixed_period_components"},
+    {"id": "link.composite_prototype.adapters_refute_prototype", "source_ref": "src.composite_prototype.artifact.modern_adapter_construction", "hypothesis_id": "hyp.composite_prototype.genuine_experimental_prototype", "relation": "REFUTE", "weight": 1.0, "independence_group": "modern_adapter_network", "citation_id": "cite.composite_prototype.artifact.modern_adapter_construction"},
+    {"id": "link.composite_prototype.adapters_refute_single_repair", "source_ref": "src.composite_prototype.artifact.modern_adapter_construction", "hypothesis_id": "hyp.composite_prototype.genuine_instrument_with_later_adapter", "relation": "REFUTE", "weight": 0.95, "independence_group": "modern_adapter_network", "citation_id": "cite.composite_prototype.artifact.modern_adapter_construction"},
+    {"id": "link.composite_prototype.adapters_support_forgery", "source_ref": "src.composite_prototype.artifact.modern_adapter_construction", "hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts", "relation": "SUPPORT", "weight": 1.0, "independence_group": "modern_adapter_network", "citation_id": "cite.composite_prototype.artifact.modern_adapter_construction"},
+    {"id": "link.composite_prototype.custody_supports_forgery", "source_ref": "src.composite_prototype.document.archive_custody_record", "hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts", "relation": "SUPPORT", "weight": 0.85, "independence_group": "composite_archive_chain", "citation_id": "cite.composite_prototype.document.archive_custody_record"},
+    {"id": "link.composite_prototype.catalog_refutes_prototype", "source_ref": "src.composite_prototype.document.reserve_catalog_entry", "hypothesis_id": "hyp.composite_prototype.genuine_experimental_prototype", "relation": "REFUTE", "weight": 0.9, "independence_group": "composite_reserve_catalog", "citation_id": "cite.composite_prototype.document.reserve_catalog_entry"},
+    {"id": "link.composite_prototype.catalog_refutes_single_repair", "source_ref": "src.composite_prototype.document.reserve_catalog_entry", "hypothesis_id": "hyp.composite_prototype.genuine_instrument_with_later_adapter", "relation": "REFUTE", "weight": 0.8, "independence_group": "composite_reserve_catalog", "citation_id": "cite.composite_prototype.document.reserve_catalog_entry"},
+    {"id": "link.composite_prototype.catalog_supports_forgery", "source_ref": "src.composite_prototype.document.reserve_catalog_entry", "hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts", "relation": "SUPPORT", "weight": 0.95, "independence_group": "composite_reserve_catalog", "citation_id": "cite.composite_prototype.document.reserve_catalog_entry"},
+    {"id": "link.composite_prototype.noah_supports_forgery", "source_ref": "src.composite_prototype.npc.noah_prototype_context", "hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts", "relation": "SUPPORT", "weight": 0.75, "independence_group": "noah_prototype_account", "citation_id": "cite.composite_prototype.npc.noah_prototype_context"},
+    {"id": "link.composite_prototype.standard_refutes_prototype", "source_ref": "src.composite_prototype.reference.period_measuring_standard", "hypothesis_id": "hyp.composite_prototype.genuine_experimental_prototype", "relation": "REFUTE", "weight": 0.95, "independence_group": "independent_measuring_standard", "citation_id": "cite.composite_prototype.reference.period_measuring_standard"},
+    {"id": "link.composite_prototype.standard_refutes_single_repair", "source_ref": "src.composite_prototype.reference.period_measuring_standard", "hypothesis_id": "hyp.composite_prototype.genuine_instrument_with_later_adapter", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_measuring_standard", "citation_id": "cite.composite_prototype.reference.period_measuring_standard"},
+    {"id": "link.composite_prototype.standard_supports_forgery", "source_ref": "src.composite_prototype.reference.period_measuring_standard", "hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts", "relation": "SUPPORT", "weight": 0.95, "independence_group": "independent_measuring_standard", "citation_id": "cite.composite_prototype.reference.period_measuring_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.composite_prototype.composite_forgery_from_mixed_parts",
+    "required_source_refs": [
+      "src.composite_prototype.artifact.mixed_period_components",
+      "src.composite_prototype.artifact.modern_adapter_construction",
+      "src.composite_prototype.document.archive_custody_record",
+      "src.composite_prototype.reference.period_measuring_standard"
+    ],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite four findings from four independent groups. Explain the component mismatch, adapter network, custody limit, and period construction standard.",
+      "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 부품 불일치, 어댑터 구조, 소장 기록의 한계와 당대 제작 기준을 설명하라."
+    },
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

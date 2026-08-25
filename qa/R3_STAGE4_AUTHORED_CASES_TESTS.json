@@ -1,0 +1,750 @@
+{
+  "executed": 7,
+  "expectedCount": 7,
+  "failed": 0,
+  "passed": 7,
+  "skipped": 0,
+  "suite": "R3 Stage 4 Authored Cases",
+  "tests": [
+    {
+      "evidence": {
+        "authoredCount": 22,
+        "caseOrder": [
+          "false_invoice",
+          "mislabelled_collection",
+          "observatory_instrument"
+        ],
+        "difficultyMultiplier": 1.225043,
+        "fallbackCount": 0,
+        "missingMethods": [],
+        "registryErrors": []
+      },
+      "executed": true,
+      "id": "S4-AUTHORED-DATA-01",
+      "name": "Stage 4 resolves false invoice then both new authored-v2 cases in order with zero new-case fallback",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authorityMutation0": true,
+        "campaignMutation0": true,
+        "caseIdHits": {
+          "mislabelled_collection": {
+            "gameState": false,
+            "main3d": false,
+            "runtimeRegistry": false
+          },
+          "observatory_instrument": {
+            "gameState": false,
+            "main3d": false,
+            "runtimeRegistry": false
+          }
+        },
+        "runtimeExact": true,
+        "stageMutation0": true
+      },
+      "executed": true,
+      "id": "S4-AUTHORED-GENERIC-02",
+      "name": "Both new cases use generic registry/public paths without changing save, economy, auction, RNG, campaign schema, or case order",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "mislabelled_collection": {
+          "authoredSpec": "artifact_018",
+          "campaignSpec": "artifact_018",
+          "ok": true,
+          "pressureMutation0": true,
+          "runtimeSpec": "artifact_018",
+          "story": "story_artifact_11",
+          "storySpec": "artifact_018",
+          "uid": "case_mislabelled_collection"
+        },
+        "observatory_instrument": {
+          "authoredSpec": "artifact_011",
+          "campaignSpec": "artifact_011",
+          "ok": true,
+          "pressureMutation0": true,
+          "runtimeSpec": "artifact_011",
+          "story": "story_artifact_12",
+          "storySpec": "artifact_011",
+          "uid": "case_observatory_instrument"
+        }
+      },
+      "executed": true,
+      "id": "S4-AUTHORED-IDENTITY-03",
+      "name": "Fresh Stage 4 issuance keeps artifact 018 and 011 identities exact with economy, auction, RNG, campaign schema, and order mutation-zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "mislabelled_collection": {
+          "credible": {
+            "correctness": "CORRECT",
+            "fallback": false,
+            "minimum_citations": 3,
+            "minimum_independent_groups": 3,
+            "minimum_net_support": 3,
+            "outcome_id": "credible",
+            "requires_all_required_sources": false
+          },
+          "dependencies": [
+            "src.mislabelled_collection.artifact.accession_label_layer",
+            "src.mislabelled_collection.document.collection_invoice",
+            "src.mislabelled_collection.npc.hana_accession_review",
+            "src.mislabelled_collection.reference.rook_model117_history"
+          ],
+          "evidence": 6,
+          "groups": [
+            "physical_projector_identity",
+            "label_material_chronology",
+            "maker_catalog_specification",
+            "accession_invoice_chain",
+            "curator_accession_review",
+            "independent_model_history"
+          ],
+          "hypotheses": 3,
+          "lockedResult": {
+            "code": "EVIDENCE_LOCKED",
+            "ok": false,
+            "requires": [
+              "src.mislabelled_collection.artifact.chassis_serial_optical_path"
+            ]
+          },
+          "ok": true,
+          "oneSourceCredibleImpossible": true,
+          "relations": {
+            "hyp.mislabelled_collection.genuine_projector_swapped_accession_label": [
+              "SUPPORT"
+            ],
+            "hyp.mislabelled_collection.later_composite_false_identity": [
+              "REFUTE"
+            ],
+            "hyp.mislabelled_collection.matched_collection_label": [
+              "SUPPORT",
+              "REFUTE"
+            ]
+          },
+          "sourceKinds": [
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ]
+        },
+        "observatory_instrument": {
+          "credible": {
+            "correctness": "CORRECT",
+            "fallback": false,
+            "minimum_citations": 3,
+            "minimum_independent_groups": 3,
+            "minimum_net_support": 3,
+            "outcome_id": "credible",
+            "requires_all_required_sources": false
+          },
+          "dependencies": [
+            "src.observatory_instrument.artifact.pivot_repair_sequence",
+            "src.observatory_instrument.document.pivot_service_card",
+            "src.observatory_instrument.npc.hana_meridian_context",
+            "src.observatory_instrument.reference.kestrel_model110_guide"
+          ],
+          "evidence": 6,
+          "groups": [
+            "physical_observatory_identity",
+            "internal_pivot_sequence",
+            "observatory_transfer_chain",
+            "period_service_record",
+            "curator_instrument_context",
+            "independent_model_reference"
+          ],
+          "hypotheses": 3,
+          "lockedResult": {
+            "code": "EVIDENCE_LOCKED",
+            "ok": false,
+            "requires": [
+              "src.observatory_instrument.artifact.meridian_dial_material"
+            ]
+          },
+          "ok": true,
+          "oneSourceCredibleImpossible": true,
+          "relations": {
+            "hyp.observatory_instrument.genuine_period_pivot_repair": [
+              "SUPPORT"
+            ],
+            "hyp.observatory_instrument.later_display_assembly_old_case": [
+              "REFUTE"
+            ],
+            "hyp.observatory_instrument.untouched_observatory_compass": [
+              "SUPPORT",
+              "REFUTE"
+            ]
+          },
+          "sourceKinds": [
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S4-AUTHORED-STRUCTURE-04",
+      "name": "Each new case has six independent sources across four kinds, contested relations, a real lock, and no one-source credible path",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": {
+          "mislabelled_collection": {
+            "counts": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 5
+            },
+            "expectedCounts": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 5
+            },
+            "expectedTools": {
+              "HIGH": [],
+              "LOW": [
+                "material_scanner"
+              ]
+            },
+            "ok": true,
+            "runtime": [
+              {
+                "actualPenalty": 1.225043,
+                "expectedPenalty": 1.225043,
+                "id": "src.mislabelled_collection.artifact.accession_label_layer",
+                "integrity": [
+                  78.0,
+                  76.774957
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ],
+            "toolsByLevel": {
+              "HIGH": [],
+              "LOW": [
+                "material_scanner"
+              ]
+            }
+          },
+          "observatory_instrument": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedCounts": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedTools": {
+              "HIGH": [
+                "precision_screwdriver"
+              ],
+              "LOW": [
+                "material_scanner"
+              ]
+            },
+            "ok": true,
+            "runtime": [
+              {
+                "actualPenalty": 1.225043,
+                "expectedPenalty": 1.225043,
+                "id": "src.observatory_instrument.artifact.meridian_dial_material",
+                "integrity": [
+                  78.0,
+                  76.774957
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              },
+              {
+                "actualPenalty": 3.675129,
+                "expectedPenalty": 3.675129,
+                "id": "src.observatory_instrument.artifact.pivot_repair_sequence",
+                "integrity": [
+                  76.774957,
+                  73.099828
+                ],
+                "level": "HIGH",
+                "ok": true,
+                "tools": [
+                  "precision_screwdriver"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "precision_screwdriver"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ],
+            "toolsByLevel": {
+              "HIGH": [
+                "precision_screwdriver"
+              ],
+              "LOW": [
+                "material_scanner"
+              ]
+            }
+          }
+        },
+        "multiplier": 1.225043
+      },
+      "executed": true,
+      "id": "S4-AUTHORED-RISK-05",
+      "name": "Stage 4 applies exact NONE/LOW/HIGH gates and 1.225043-scaled LOW/HIGH integrity penalties with wrong-tool mutation-zero",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "mislabelled_collection": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.mislabelled_collection.document.collection_invoice",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "accession_invoice_chain"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.mislabelled_collection.document.collection_invoice",
+            "ok": true,
+            "sourceId": "accession_invoice_chain"
+          },
+          "evidenceId": "src.mislabelled_collection.document.collection_invoice",
+          "expectedId": "src.mislabelled_collection.document.collection_invoice",
+          "knownClueCount": 1,
+          "ok": true,
+          "publicPrivacy": true,
+          "reliability": "HIGH",
+          "sourceKind": "DOCUMENT",
+          "taggedCount": 1
+        },
+        "observatory_instrument": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.observatory_instrument.document.auction_receipt",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "observatory_transfer_chain"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.observatory_instrument.document.auction_receipt",
+            "ok": true,
+            "sourceId": "observatory_transfer_chain"
+          },
+          "evidenceId": "src.observatory_instrument.document.auction_receipt",
+          "expectedId": "src.observatory_instrument.document.auction_receipt",
+          "knownClueCount": 1,
+          "ok": true,
+          "publicPrivacy": true,
+          "reliability": "HIGH",
+          "sourceKind": "DOCUMENT",
+          "taggedCount": 1
+        }
+      },
+      "executed": true,
+      "id": "S4-AUTHORED-PROVENANCE-06",
+      "name": "Each new case has exactly one strong-document PROVENANCE source whose discovery bridges public listing and auction reasons exactly once",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "mislabelled_collection": {
+          "canonical": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+          "correct1": {
+            "citedEvidenceIds": [
+              "src.mislabelled_collection.artifact.chassis_serial_optical_path"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "correct3": {
+            "citedEvidenceIds": [
+              "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+              "src.mislabelled_collection.artifact.accession_label_layer",
+              "src.mislabelled_collection.document.model117_catalog"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "correct4": {
+            "citedEvidenceIds": [
+              "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+              "src.mislabelled_collection.artifact.accession_label_layer",
+              "src.mislabelled_collection.document.model117_catalog",
+              "src.mislabelled_collection.document.collection_invoice"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.mislabelled_collection.genuine_projector_swapped_accession_label",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "correctCitations": [
+            "src.mislabelled_collection.artifact.chassis_serial_optical_path",
+            "src.mislabelled_collection.artifact.accession_label_layer",
+            "src.mislabelled_collection.document.model117_catalog",
+            "src.mislabelled_collection.document.collection_invoice"
+          ],
+          "discovered": 6,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "evaluationMutation0": true,
+          "evidence": 6,
+          "ok": true,
+          "rulesExact": true,
+          "wrong": "hyp.mislabelled_collection.matched_collection_label",
+          "wrong1": {
+            "citedEvidenceIds": [
+              "src.mislabelled_collection.artifact.accession_label_layer"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.mislabelled_collection.matched_collection_label",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 2,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrong2": {
+            "citedEvidenceIds": [
+              "src.mislabelled_collection.artifact.accession_label_layer",
+              "src.mislabelled_collection.document.collection_invoice"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.mislabelled_collection.matched_collection_label",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrongCitations": [
+            "src.mislabelled_collection.artifact.accession_label_layer",
+            "src.mislabelled_collection.document.collection_invoice"
+          ]
+        },
+        "observatory_instrument": {
+          "canonical": "hyp.observatory_instrument.genuine_period_pivot_repair",
+          "correct1": {
+            "citedEvidenceIds": [
+              "src.observatory_instrument.artifact.meridian_dial_material"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.observatory_instrument.genuine_period_pivot_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "correct3": {
+            "citedEvidenceIds": [
+              "src.observatory_instrument.artifact.meridian_dial_material",
+              "src.observatory_instrument.artifact.pivot_repair_sequence",
+              "src.observatory_instrument.document.auction_receipt"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.observatory_instrument.genuine_period_pivot_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "correct4": {
+            "citedEvidenceIds": [
+              "src.observatory_instrument.artifact.meridian_dial_material",
+              "src.observatory_instrument.artifact.pivot_repair_sequence",
+              "src.observatory_instrument.document.auction_receipt",
+              "src.observatory_instrument.document.pivot_service_card"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.observatory_instrument.genuine_period_pivot_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "correctCitations": [
+            "src.observatory_instrument.artifact.meridian_dial_material",
+            "src.observatory_instrument.artifact.pivot_repair_sequence",
+            "src.observatory_instrument.document.auction_receipt",
+            "src.observatory_instrument.document.pivot_service_card"
+          ],
+          "discovered": 6,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "evaluationMutation0": true,
+          "evidence": 6,
+          "ok": true,
+          "rulesExact": true,
+          "wrong": "hyp.observatory_instrument.untouched_observatory_compass",
+          "wrong1": {
+            "citedEvidenceIds": [
+              "src.observatory_instrument.artifact.pivot_repair_sequence"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.observatory_instrument.untouched_observatory_compass",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 2,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrong2": {
+            "citedEvidenceIds": [
+              "src.observatory_instrument.artifact.pivot_repair_sequence",
+              "src.observatory_instrument.document.pivot_service_card"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.observatory_instrument.untouched_observatory_compass",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrongCitations": [
+            "src.observatory_instrument.artifact.pivot_repair_sequence",
+            "src.observatory_instrument.document.pivot_service_card"
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S4-AUTHORED-OUTCOMES-07",
+      "name": "Both new cases execute ordered 4/4 masterful, 3/3 credible, wrong+1 mentor, wrong+2 mistaken, and fail-closed fallback rules without one-source credible",
+      "passed": true
+    }
+  ]
+}

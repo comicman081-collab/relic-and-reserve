@@ -1,0 +1,123 @@
+{
+  "auditFindings": [],
+  "checks": [
+    {
+      "evidence": {
+        "expectedProfit": -1,
+        "moneyAfterRepair": 1112,
+        "moneyBeforeRepair": 1200,
+        "observedProfit": -1,
+        "repairCashDelta": -88,
+        "repairTransactionTypes": [
+          "restoration"
+        ],
+        "restorationCostAccrued": 88,
+        "saleCashDelta": 137,
+        "saleNet": 137,
+        "saleReceiptCount": 1
+      },
+      "executed": true,
+      "id": "AUDIT-ECON-01",
+      "name": "Repair cash debit, restoration ledger, actual SOLD settlement, profit accounting, and receipt count execute against the same artifact",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "caseReward": {
+          "moneyDelta": 90,
+          "transactionDelta": 1
+        },
+        "event": {
+          "eventHistoryCount": 1,
+          "id": "event_01",
+          "moneyDelta": 120,
+          "transactionDelta": 1
+        }
+      },
+      "executed": true,
+      "id": "AUDIT-ECON-02",
+      "name": "Authoritative event and case-reward money paths expose a traceable ledger delta",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "accepted": [
+          {
+            "id": "commission_01",
+            "net": 127,
+            "ok": true,
+            "quality": 0.84165
+          },
+          {
+            "id": "commission_02",
+            "net": 0,
+            "ok": false,
+            "quality": 0.0
+          },
+          {
+            "id": "commission_03",
+            "net": 0,
+            "ok": false,
+            "quality": 0.0
+          },
+          {
+            "id": "commission_04",
+            "net": 0,
+            "ok": false,
+            "quality": 0.0
+          },
+          {
+            "id": "commission_05",
+            "net": 0,
+            "ok": false,
+            "quality": 0.0
+          }
+        ],
+        "acceptedCount": 1,
+        "blockedCount": 4,
+        "duplicate": {
+          "code": "COMMISSION_ALREADY_COMPLETED",
+          "net": 0,
+          "ok": false
+        },
+        "moneyDelta": 127,
+        "uiRoutePresent": true
+      },
+      "executed": true,
+      "id": "AUDIT-COMMISSION-01",
+      "name": "Commission authority accepts one eligible unsold artifact once, rejects reuse and unmet contracts, and exposes a main3d route",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "difficultyErrors": [],
+        "newGame": {
+          "code": "OK",
+          "difficultyMultiplier": 1.1449,
+          "ok": true,
+          "stage": 3
+        },
+        "profilePreserved": true
+      },
+      "executed": true,
+      "id": "AUDIT-PROFILE-01",
+      "name": "NEW GAME resets the run but preserves unlocked stages, stageBest, and the data-driven 7-percent Stage curve",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authoredCases": 22,
+        "outcomeRuleErrors": [],
+        "provenanceErrors": []
+      },
+      "executed": true,
+      "id": "AUDIT-AUTH-01",
+      "name": "Every authored PROVENANCE bridge is a DOCUMENT and every authored matcher ends in a mentor fallback",
+      "passed": true
+    }
+  ],
+  "executed": 5,
+  "failed": 0,
+  "passed": 5,
+  "suite": "R3 MVP Integrity Audit"
+}

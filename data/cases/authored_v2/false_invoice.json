@@ -1,0 +1,574 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.1.0-m3-false-invoice",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "false_invoice",
+  "act_id": "ACT_2",
+  "title": {
+    "en": "The False Invoice",
+    "ko": "거짓 송장"
+  },
+  "briefing": {
+    "en": "A Peregrine jewelry box arrives with a reserve-house invoice dated 1927 and a penciled ownership chain on its reverse. Noah Stern warns that the invoice number belongs to a later ledger block. Determine whether the document is genuine, whether the box is genuine, and which provenance claim may be disclosed at auction.",
+    "ko": "페레그린 보석함에 1927년 날짜가 적힌 경매사 송장과 뒷면의 연필 소장 이력이 딸려 왔다. 노아 스턴은 송장 번호가 더 후대의 장부 구간에 속한다고 경고한다. 문서와 보석함이 각각 진짜인지, 경매에서 어떤 출처 주장을 공개할 수 있는지 판정하라."
+  },
+  "central_question": {
+    "en": "Does the invoice prove the box's 1927 sale, conceal a later provenance fabrication attached to an authentic box, or accompany a modern reproduction?",
+    "ko": "이 송장은 보석함의 1927년 판매를 증명하는가, 진품 보석함에 붙인 후대의 출처 조작인가, 아니면 현대 복제품과 함께 만든 문서인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, auction houses, records, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 경매사, 기록, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "success": {
+    "en": "Noah files the report with the box and invoice assessed separately, preserving the authentic object without laundering the document's claim.",
+    "ko": "노아는 보석함과 송장을 분리해 평가한 보고서를 보관한다. 진품 물건은 지키되 문서의 거짓 주장을 정당화하지 않았다."
+  },
+  "failure": {
+    "en": "Noah marks the unsupported provenance claim for mentor review before the lot can be represented to buyers.",
+    "ko": "노아는 근거가 부족한 출처 주장을 표시하고, 구매자에게 소개하기 전에 멘토 재검토로 넘긴다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {
+      "en": "Open Noah Stern's Act II archive request from the campaign desk.",
+      "ko": "캠페인 책상에서 노아 스턴의 2막 기록 조사 의뢰를 연다."
+    }
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "clean_invoice_before_uv_capture",
+        "source_ref": "src.false_invoice.artifact.carbon_transfer",
+        "warning": {
+          "en": "Cleaning the invoice before ultraviolet capture can erase the weak carbon-transfer boundary.",
+          "ko": "자외선 촬영 전에 송장을 세척하면 희미한 먹지 전사 경계가 사라질 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "Treating two statements on one invoice as independent proof triggers mentor review and cannot earn a masterful result.",
+        "ko": "한 송장에 적힌 두 문구를 독립된 증거로 취급하면 멘토 재검토가 이루어지며 최고 판정을 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_016",
+    "legacy_story_artifact_id": "story_artifact_10",
+    "display_name": {
+      "en": "Peregrine Jewelry Box PF-73",
+      "ko": "페레그린 보석함 PF-73"
+    },
+    "authoring_truth_hypothesis_id": "hyp.authentic_box_false_invoice",
+    "player_prompt": {
+      "en": "Assess the box and the invoice as separate objects, then test whether their dates and provenance actually intersect.",
+      "ko": "보석함과 송장을 서로 다른 물건으로 평가한 뒤, 두 물건의 연대와 출처가 실제로 맞물리는지 검증하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.genuine_1927_invoice",
+      "label": {
+        "en": "Genuine 1927 invoice and box",
+        "ko": "1927년 진본 송장과 보석함"
+      },
+      "claim": {
+        "en": "The invoice is an original 1927 reserve-house record for this authentic Peregrine box, and its written ownership chain is reliable.",
+        "ko": "송장은 이 진품 페레그린 보석함에 관해 1927년에 작성된 경매사의 원본 기록이며, 적힌 소장 이력도 신뢰할 수 있다."
+      }
+    },
+    {
+      "id": "hyp.authentic_box_false_invoice",
+      "label": {
+        "en": "Authentic box, fabricated provenance",
+        "ko": "진품 보석함과 조작된 출처"
+      },
+      "claim": {
+        "en": "The box is a genuine period object, but a later hand altered an old invoice form and added an unsupported ownership chain to raise its value.",
+        "ko": "보석함은 당대의 진품이지만, 후대의 누군가가 오래된 송장 용지를 고치고 근거 없는 소장 이력을 덧붙여 가치를 높이려 했다."
+      }
+    },
+    {
+      "id": "hyp.modern_reproduction_bundle",
+      "label": {
+        "en": "Modern reproduction bundle",
+        "ko": "현대 복제품 묶음"
+      },
+      "claim": {
+        "en": "Both the jewelry box and its invoice were produced recently as a coordinated reproduction and have no period provenance.",
+        "ko": "보석함과 송장은 모두 최근에 한 벌로 제작된 복제품이며 당대 출처가 전혀 없다."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.false_invoice.artifact.box_joinery",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_016",
+      "reliability": "HIGH",
+      "label": {
+        "en": "PF-73 drawer joinery and finish",
+        "ko": "PF-73 서랍 짜임과 마감"
+      },
+      "text": {
+        "en": "The drawer uses narrow hand-cut dovetails beneath an uninterrupted oxidized shellac layer. The PF-73 cartouche was struck before that finish aged. Two bright hinge screws are later replacements, but the casework itself is period manufacture.",
+        "ko": "서랍은 산화된 셸락층 아래에 좁은 수제 주먹장 짜임을 사용했다. PF-73 명판은 마감이 노화되기 전에 찍혔다. 밝은 경첩 나사 두 개는 후대 교체품이지만 몸체 자체는 당대 제작품이다."
+      },
+      "unlock": {
+        "action": "inspect",
+        "target": "drawer_and_hinges",
+        "requires": []
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Record the finish boundary before any cleaning or hinge work.",
+          "ko": "세척이나 경첩 작업 전에 마감 경계를 기록하라."
+        }
+      },
+      "independence": {
+        "group": "physical_box_construction",
+        "depends_on": []
+      },
+      "citation_id": "cite.false_invoice.artifact.box_joinery"
+    },
+    {
+      "source_ref": "src.false_invoice.document.invoice_face",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_10",
+      "document_id": "doc.false_invoice.reserve_invoice_copy",
+      "reliability": "MEDIUM",
+      "label": {
+        "en": "Reserve House invoice 4817, face",
+        "ko": "리저브 하우스 송장 4817 앞면"
+      },
+      "text": {
+        "en": "The face reads: '14 May 1927 — Peregrine box PF-73 — consigned by A. Vale.' The paper, blind stamp, and preprinted terms appear old, but the item line is an unsworn claim with no matching seller signature.",
+        "ko": "앞면에는 ‘1927년 5월 14일 — 페레그린 보석함 PF-73 — A. 베일 위탁’이라고 적혀 있다. 종이와 압인, 인쇄된 약관은 오래돼 보이지만 물품 기재는 일치하는 판매자 서명이 없는 미확인 주장이다."
+      },
+      "unlock": {
+        "action": "read_document",
+        "target": "invoice_face",
+        "requires": []
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "An old form does not prove that every mark on it was made at the same time.",
+          "ko": "오래된 서식이라고 해서 그 위의 모든 표시가 같은 때 작성됐다는 뜻은 아니다."
+        }
+      },
+      "independence": {
+        "group": "reserve_invoice_document_10",
+        "depends_on": []
+      },
+      "citation_id": "cite.false_invoice.document.invoice_face"
+    },
+    {
+      "source_ref": "src.false_invoice.document.reverse_provenance",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_10",
+      "document_id": "doc.false_invoice.reserve_invoice_copy",
+      "reliability": "LOW",
+      "label": {
+        "en": "Penciled ownership chain on invoice reverse",
+        "ko": "송장 뒷면의 연필 소장 이력"
+      },
+      "text": {
+        "en": "A different hand lists three owners from 1927 to 1981, but supplies no addresses, accession numbers, signatures, or linked records. The note repeats PF-73 from the invoice face and therefore is not independent corroboration.",
+        "ko": "다른 필체로 1927년부터 1981년까지 소유자 세 명을 적었지만 주소, 등록 번호, 서명이나 연결 기록이 없다. 이 메모는 앞면의 PF-73을 그대로 반복하므로 독립된 뒷받침이 아니다."
+      },
+      "unlock": {
+        "action": "turn_document",
+        "target": "invoice_reverse",
+        "requires": [
+          "src.false_invoice.document.invoice_face"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "This anonymous note is low-reliability provenance and echoes the same document.",
+          "ko": "이 익명 메모는 신뢰도가 낮은 출처 주장이고 같은 문서의 내용을 되풀이한다."
+        }
+      },
+      "independence": {
+        "group": "reserve_invoice_document_10",
+        "depends_on": [
+          "src.false_invoice.document.invoice_face"
+        ]
+      },
+      "citation_id": "cite.false_invoice.document.reverse_provenance"
+    },
+    {
+      "source_ref": "src.false_invoice.artifact.carbon_transfer",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_016",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Ultraviolet carbon-transfer boundary",
+        "ko": "자외선으로 확인한 먹지 전사 경계"
+      },
+      "text": {
+        "en": "Under ultraviolet light, the preprinted terms and blind stamp fluoresce evenly with the old paper. The PF-73 item line sits over a chemically erased entry and its carbon transfer crosses a crease formed after the sheet had already aged.",
+        "ko": "자외선 아래에서 인쇄 약관과 압인은 오래된 종이와 고르게 형광을 보인다. 그러나 PF-73 물품 기재는 화학적으로 지운 문구 위에 있고, 먹지 전사가 종이가 이미 노화된 뒤 생긴 접힘선을 가로지른다."
+      },
+      "unlock": {
+        "action": "inspect_uv",
+        "target": "invoice_item_line",
+        "requires": [
+          "src.false_invoice.document.invoice_face",
+          "uv_lamp"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [
+          "clean_invoice_before_uv_capture"
+        ],
+        "player_warning": {
+          "en": "Capture the ultraviolet boundary before cleaning the paper.",
+          "ko": "종이를 세척하기 전에 자외선 경계를 촬영하라."
+        }
+      },
+      "independence": {
+        "group": "physical_document_forensics",
+        "depends_on": []
+      },
+      "citation_id": "cite.false_invoice.artifact.carbon_transfer"
+    },
+    {
+      "source_ref": "src.false_invoice.npc.noah_ledger",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "noah_stern",
+      "npc_id": "noah_stern",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {
+        "en": "Noah Stern's ledger-block comparison",
+        "ko": "노아 스턴의 장부 번호 구간 대조"
+      },
+      "text": {
+        "en": "In Noah's transcription, Reserve House used invoice numbers 4700–4899 only from late 1935. He has not handled the missing original ledger, so his date is useful archival context rather than primary proof.",
+        "ko": "노아의 전사 기록에 따르면 리저브 하우스는 4700~4899번 송장을 1935년 말부터 사용했다. 그는 분실된 원본 장부를 직접 다루지 못했으므로 이 연대는 유용한 기록 정황이지만 1차 증거는 아니다."
+      },
+      "unlock": {
+        "action": "ask_npc",
+        "target": "noah_stern",
+        "requires": [
+          "src.false_invoice.document.invoice_face"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "Noah distinguishes his transcription from the missing primary ledger.",
+          "ko": "노아는 자신의 전사 기록과 분실된 1차 장부를 구분한다."
+        }
+      },
+      "independence": {
+        "group": "independent_archive_transcription",
+        "depends_on": []
+      },
+      "citation_id": "cite.false_invoice.npc.noah_ledger"
+    },
+    {
+      "source_ref": "src.false_invoice.reference.reserve_numbering",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_12",
+      "reference_id": "ref.reserve_house.numbering_1928_1939",
+      "reliability": "HIGH",
+      "label": {
+        "en": "Reserve House numbering circular, 1928–1939",
+        "ko": "리저브 하우스 번호 체계 회람, 1928~1939년"
+      },
+      "text": {
+        "en": "The fictional period circular dates invoice block 4800 to 1935–1936 and records a revised blind stamp introduced in 1934. The form can be old while the 1927 item entry is impossible as written.",
+        "ko": "가상의 당대 회람은 4800번대 송장을 1935~1936년으로 분류하고 1934년에 새 압인을 도입했다고 기록한다. 서식은 오래된 것일 수 있지만 적힌 1927년 물품 기재는 성립할 수 없다."
+      },
+      "unlock": {
+        "action": "query_reference",
+        "target": "reference_database",
+        "requires": [
+          "src.false_invoice.npc.noah_ledger"
+        ]
+      },
+      "risk": {
+        "destroyed_by": [],
+        "player_warning": {
+          "en": "The circular dates the form series; it does not authenticate the box by itself.",
+          "ko": "회람은 서식의 연대를 정할 뿐, 그 자체로 보석함을 진품으로 증명하지는 않는다."
+        }
+      },
+      "independence": {
+        "group": "independent_period_reference",
+        "depends_on": []
+      },
+      "citation_id": "cite.false_invoice.reference.reserve_numbering"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite.false_invoice.artifact.box_joinery",
+      "source_ref": "src.false_invoice.artifact.box_joinery",
+      "label": {
+        "en": "Object record: PF-73 drawer and hinge edge",
+        "ko": "실물 기록: PF-73 서랍과 경첩 가장자리"
+      },
+      "locator": {
+        "en": "Inspection photographs A-1 through A-3",
+        "ko": "검사 사진 A-1~A-3"
+      }
+    },
+    {
+      "id": "cite.false_invoice.document.invoice_face",
+      "source_ref": "src.false_invoice.document.invoice_face",
+      "label": {
+        "en": "Reserve House invoice 4817, face",
+        "ko": "리저브 하우스 송장 4817 앞면"
+      },
+      "locator": {
+        "en": "Case document D-10, face, item line 2",
+        "ko": "사건 문서 D-10 앞면, 물품 기재 2행"
+      }
+    },
+    {
+      "id": "cite.false_invoice.document.reverse_provenance",
+      "source_ref": "src.false_invoice.document.reverse_provenance",
+      "label": {
+        "en": "Invoice 4817, penciled reverse note",
+        "ko": "송장 4817 뒷면 연필 메모"
+      },
+      "locator": {
+        "en": "Case document D-10, reverse",
+        "ko": "사건 문서 D-10 뒷면"
+      }
+    },
+    {
+      "id": "cite.false_invoice.artifact.carbon_transfer",
+      "source_ref": "src.false_invoice.artifact.carbon_transfer",
+      "label": {
+        "en": "Forensic record: invoice carbon-transfer boundary",
+        "ko": "감식 기록: 송장 먹지 전사 경계"
+      },
+      "locator": {
+        "en": "Ultraviolet photograph A-4",
+        "ko": "자외선 사진 A-4"
+      }
+    },
+    {
+      "id": "cite.false_invoice.npc.noah_ledger",
+      "source_ref": "src.false_invoice.npc.noah_ledger",
+      "label": {
+        "en": "Interview with Noah Stern",
+        "ko": "노아 스턴 면담"
+      },
+      "locator": {
+        "en": "Case interview N-10 and transcription note T-4",
+        "ko": "사건 면담 N-10 및 전사 기록 T-4"
+      }
+    },
+    {
+      "id": "cite.false_invoice.reference.reserve_numbering",
+      "source_ref": "src.false_invoice.reference.reserve_numbering",
+      "label": {
+        "en": "Reserve House numbering circular",
+        "ko": "리저브 하우스 번호 체계 회람"
+      },
+      "locator": {
+        "en": "Fictional reference archive R-12, table 3",
+        "ko": "가상 참고자료 보관함 R-12, 표 3"
+      }
+    }
+  ],
+  "evidence_links": [
+    {
+      "id": "link.false_invoice.joinery_supports_genuine",
+      "source_ref": "src.false_invoice.artifact.box_joinery",
+      "hypothesis_id": "hyp.genuine_1927_invoice",
+      "relation": "SUPPORT",
+      "weight": 0.45,
+      "independence_group": "physical_box_construction",
+      "citation_id": "cite.false_invoice.artifact.box_joinery"
+    },
+    {
+      "id": "link.false_invoice.joinery_supports_false_invoice",
+      "source_ref": "src.false_invoice.artifact.box_joinery",
+      "hypothesis_id": "hyp.authentic_box_false_invoice",
+      "relation": "SUPPORT",
+      "weight": 0.9,
+      "independence_group": "physical_box_construction",
+      "citation_id": "cite.false_invoice.artifact.box_joinery"
+    },
+    {
+      "id": "link.false_invoice.joinery_refutes_modern",
+      "source_ref": "src.false_invoice.artifact.box_joinery",
+      "hypothesis_id": "hyp.modern_reproduction_bundle",
+      "relation": "REFUTE",
+      "weight": 0.9,
+      "independence_group": "physical_box_construction",
+      "citation_id": "cite.false_invoice.artifact.box_joinery"
+    },
+    {
+      "id": "link.false_invoice.face_supports_genuine",
+      "source_ref": "src.false_invoice.document.invoice_face",
+      "hypothesis_id": "hyp.genuine_1927_invoice",
+      "relation": "SUPPORT",
+      "weight": 0.55,
+      "independence_group": "reserve_invoice_document_10",
+      "citation_id": "cite.false_invoice.document.invoice_face"
+    },
+    {
+      "id": "link.false_invoice.face_refutes_false_invoice",
+      "source_ref": "src.false_invoice.document.invoice_face",
+      "hypothesis_id": "hyp.authentic_box_false_invoice",
+      "relation": "REFUTE",
+      "weight": 0.45,
+      "independence_group": "reserve_invoice_document_10",
+      "citation_id": "cite.false_invoice.document.invoice_face"
+    },
+    {
+      "id": "link.false_invoice.reverse_supports_genuine",
+      "source_ref": "src.false_invoice.document.reverse_provenance",
+      "hypothesis_id": "hyp.genuine_1927_invoice",
+      "relation": "SUPPORT",
+      "weight": 0.35,
+      "independence_group": "reserve_invoice_document_10",
+      "citation_id": "cite.false_invoice.document.reverse_provenance"
+    },
+    {
+      "id": "link.false_invoice.reverse_refutes_false_invoice",
+      "source_ref": "src.false_invoice.document.reverse_provenance",
+      "hypothesis_id": "hyp.authentic_box_false_invoice",
+      "relation": "REFUTE",
+      "weight": 0.25,
+      "independence_group": "reserve_invoice_document_10",
+      "citation_id": "cite.false_invoice.document.reverse_provenance"
+    },
+    {
+      "id": "link.false_invoice.carbon_refutes_genuine",
+      "source_ref": "src.false_invoice.artifact.carbon_transfer",
+      "hypothesis_id": "hyp.genuine_1927_invoice",
+      "relation": "REFUTE",
+      "weight": 0.95,
+      "independence_group": "physical_document_forensics",
+      "citation_id": "cite.false_invoice.artifact.carbon_transfer"
+    },
+    {
+      "id": "link.false_invoice.carbon_supports_false_invoice",
+      "source_ref": "src.false_invoice.artifact.carbon_transfer",
+      "hypothesis_id": "hyp.authentic_box_false_invoice",
+      "relation": "SUPPORT",
+      "weight": 1.0,
+      "independence_group": "physical_document_forensics",
+      "citation_id": "cite.false_invoice.artifact.carbon_transfer"
+    },
+    {
+      "id": "link.false_invoice.carbon_refutes_modern",
+      "source_ref": "src.false_invoice.artifact.carbon_transfer",
+      "hypothesis_id": "hyp.modern_reproduction_bundle",
+      "relation": "REFUTE",
+      "weight": 0.55,
+      "independence_group": "physical_document_forensics",
+      "citation_id": "cite.false_invoice.artifact.carbon_transfer"
+    },
+    {
+      "id": "link.false_invoice.noah_refutes_genuine",
+      "source_ref": "src.false_invoice.npc.noah_ledger",
+      "hypothesis_id": "hyp.genuine_1927_invoice",
+      "relation": "REFUTE",
+      "weight": 0.8,
+      "independence_group": "independent_archive_transcription",
+      "citation_id": "cite.false_invoice.npc.noah_ledger"
+    },
+    {
+      "id": "link.false_invoice.noah_supports_false_invoice",
+      "source_ref": "src.false_invoice.npc.noah_ledger",
+      "hypothesis_id": "hyp.authentic_box_false_invoice",
+      "relation": "SUPPORT",
+      "weight": 0.8,
+      "independence_group": "independent_archive_transcription",
+      "citation_id": "cite.false_invoice.npc.noah_ledger"
+    },
+    {
+      "id": "link.false_invoice.noah_refutes_modern",
+      "source_ref": "src.false_invoice.npc.noah_ledger",
+      "hypothesis_id": "hyp.modern_reproduction_bundle",
+      "relation": "REFUTE",
+      "weight": 0.45,
+      "independence_group": "independent_archive_transcription",
+      "citation_id": "cite.false_invoice.npc.noah_ledger"
+    },
+    {
+      "id": "link.false_invoice.reference_refutes_genuine",
+      "source_ref": "src.false_invoice.reference.reserve_numbering",
+      "hypothesis_id": "hyp.genuine_1927_invoice",
+      "relation": "REFUTE",
+      "weight": 0.95,
+      "independence_group": "independent_period_reference",
+      "citation_id": "cite.false_invoice.reference.reserve_numbering"
+    },
+    {
+      "id": "link.false_invoice.reference_supports_false_invoice",
+      "source_ref": "src.false_invoice.reference.reserve_numbering",
+      "hypothesis_id": "hyp.authentic_box_false_invoice",
+      "relation": "SUPPORT",
+      "weight": 0.95,
+      "independence_group": "independent_period_reference",
+      "citation_id": "cite.false_invoice.reference.reserve_numbering"
+    },
+    {
+      "id": "link.false_invoice.reference_refutes_modern",
+      "source_ref": "src.false_invoice.reference.reserve_numbering",
+      "hypothesis_id": "hyp.modern_reproduction_bundle",
+      "relation": "REFUTE",
+      "weight": 0.6,
+      "independence_group": "independent_period_reference",
+      "citation_id": "cite.false_invoice.reference.reserve_numbering"
+    }
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.authentic_box_false_invoice",
+    "required_source_refs": [
+      "src.false_invoice.artifact.box_joinery",
+      "src.false_invoice.document.invoice_face",
+      "src.false_invoice.npc.noah_ledger",
+      "src.false_invoice.reference.reserve_numbering"
+    ],
+    "minimum_independent_groups": 3,
+    "minimum_citations": 4,
+    "report_prompt": {
+      "en": "Choose one hypothesis and cite at least four findings spanning three independent source groups. Include the box construction, the invoice's own claim, Noah's ledger comparison, and the independent numbering reference. Two entries from invoice 4817 still count as one source group.",
+      "ko": "가설 하나를 선택하고 서로 독립된 세 출처 집단에 걸쳐 최소 네 가지 근거를 인용하라. 보석함 구조, 송장 자체의 주장, 노아의 장부 대조, 독립된 번호 체계 참고자료를 포함하라. 송장 4817의 두 항목은 여전히 하나의 출처 집단으로 계산한다."
+    },
+    "outcome_rules": [
+      {
+        "outcome": "masterful",
+        "requires_correct_hypothesis": true,
+        "requires_all_required_sources": true,
+        "minimum_independent_groups": 3,
+        "minimum_citations": 4
+      },
+      {
+        "outcome": "credible",
+        "requires_correct_hypothesis": true,
+        "requires_all_required_sources": false,
+        "minimum_independent_groups": 2,
+        "minimum_citations": 2
+      },
+      {
+        "outcome": "mistaken",
+        "requires_correct_hypothesis": false,
+        "minimum_citations": 2
+      },
+      {
+        "outcome": "reviewed_with_mentor",
+        "fallback": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,965 @@
+{
+  "schemaVersion": 1,
+  "acts": [
+    {
+      "id": "PROLOGUE",
+      "title": "The Closed Workshop",
+      "location": "small_workshop",
+      "unlock": {
+        "op": "always"
+      }
+    },
+    {
+      "id": "ACT_1",
+      "title": "The Local Circuit",
+      "location": "local_market",
+      "unlock": {
+        "metric": "case.prologue_clock",
+        "op": "==",
+        "value": true
+      }
+    },
+    {
+      "id": "ACT_2",
+      "title": "Provenance",
+      "location": "archive_room",
+      "unlock": {
+        "metric": "act_completed.ACT_1",
+        "op": "==",
+        "value": true
+      }
+    },
+    {
+      "id": "ACT_3",
+      "title": "The Collectors",
+      "location": "collector_home",
+      "unlock": {
+        "metric": "case.observatory_instrument",
+        "op": "==",
+        "value": true
+      }
+    },
+    {
+      "id": "ACT_4",
+      "title": "The Forger's Shadow",
+      "location": "premium_showroom",
+      "unlock": {
+        "metric": "case.three_cameras",
+        "op": "==",
+        "value": true
+      }
+    },
+    {
+      "id": "ACT_5",
+      "title": "Master Conservator",
+      "location": "museum_room",
+      "unlock": {
+        "metric": "case.composite_prototype",
+        "op": "==",
+        "value": true
+      }
+    },
+    {
+      "id": "GRAND_RESERVE",
+      "title": "The Grand Reserve",
+      "location": "grand_reserve_hall",
+      "unlock": {
+        "op": "all",
+        "conditions": [
+          {
+            "metric": "act_completed.ACT_5",
+            "op": "==",
+            "value": true
+          },
+          {
+            "metric": "eligible_lots",
+            "op": ">=",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "EPILOGUE",
+      "title": "Epilogue",
+      "location": "upgraded_workshop",
+      "unlock": {
+        "metric": "grand_reserve.completed",
+        "op": "==",
+        "value": true
+      }
+    },
+    {
+      "id": "POSTGAME",
+      "title": "Endless Workshop",
+      "location": "upgraded_workshop",
+      "unlock": {
+        "metric": "epilogue_seen",
+        "op": "==",
+        "value": true
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "prologue_clock",
+      "act": "PROLOGUE",
+      "title": "The Closed Workshop",
+      "npcId": "mara_venn",
+      "storyArtifactId": "story_artifact_01",
+      "rewardSpecId": "artifact_001",
+      "documentIds": [
+        "document_01",
+        "document_02"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Closed Workshop.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 90,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "silent_radio",
+      "act": "ACT_1",
+      "title": "The Silent Radio",
+      "npcId": "mara_venn",
+      "storyArtifactId": "story_artifact_02",
+      "rewardSpecId": "artifact_004",
+      "documentIds": [
+        "document_03",
+        "document_04"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Silent Radio.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 102,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "perfect_fake",
+      "act": "ACT_1",
+      "title": "The Perfect Fake",
+      "npcId": "elias_rowe",
+      "storyArtifactId": "story_artifact_03",
+      "rewardSpecId": "artifact_003",
+      "documentIds": [
+        "document_05",
+        "document_06"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Perfect Fake.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 114,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "leave_patina",
+      "act": "ACT_1",
+      "title": "Leave the Patina",
+      "npcId": "iris_bell",
+      "storyArtifactId": "story_artifact_04",
+      "rewardSpecId": "artifact_005",
+      "documentIds": [
+        "document_07",
+        "document_08"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Leave the Patina.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 126,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "estate_compass",
+      "act": "ACT_1",
+      "title": "The Estate Compass",
+      "npcId": "lena_falk",
+      "storyArtifactId": "story_artifact_05",
+      "rewardSpecId": "artifact_011",
+      "documentIds": [
+        "document_09",
+        "document_10"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Estate Compass.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 138,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "pawn_watch",
+      "act": "ACT_1",
+      "title": "The Pawn Broker Watch",
+      "npcId": "lena_falk",
+      "storyArtifactId": "story_artifact_06",
+      "rewardSpecId": "artifact_002",
+      "documentIds": [
+        "document_11",
+        "document_12"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Pawn Broker Watch.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 150,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "garage_lamp",
+      "act": "ACT_1",
+      "title": "The Garage Lamp",
+      "npcId": "mara_venn",
+      "storyArtifactId": "story_artifact_07",
+      "rewardSpecId": "artifact_007",
+      "documentIds": [
+        "document_13",
+        "document_14"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Garage Lamp.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 162,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "telephone_trace",
+      "act": "ACT_1",
+      "title": "A Voice in Bakelite",
+      "npcId": "noah_stern",
+      "storyArtifactId": "story_artifact_08",
+      "rewardSpecId": "artifact_015",
+      "documentIds": [
+        "document_15",
+        "document_16"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in A Voice in Bakelite.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 174,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "early_camera",
+      "act": "ACT_1",
+      "title": "The Early Mechanical Camera",
+      "npcId": "hana_mire",
+      "storyArtifactId": "story_artifact_09",
+      "rewardSpecId": "artifact_003",
+      "documentIds": [
+        "document_17",
+        "document_18"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Early Mechanical Camera.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 186,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "false_invoice",
+      "act": "ACT_2",
+      "title": "The False Invoice",
+      "npcId": "noah_stern",
+      "storyArtifactId": "story_artifact_10",
+      "rewardSpecId": "artifact_016",
+      "documentIds": [
+        "document_19",
+        "document_20"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The False Invoice.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 198,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "mislabelled_collection",
+      "act": "ACT_2",
+      "title": "The Mislabelled Collection",
+      "npcId": "hana_mire",
+      "storyArtifactId": "story_artifact_11",
+      "rewardSpecId": "artifact_018",
+      "documentIds": [
+        "document_21",
+        "document_22"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Mislabelled Collection.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 210,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "observatory_instrument",
+      "act": "ACT_2",
+      "title": "The Observatory Instrument",
+      "npcId": "hana_mire",
+      "storyArtifactId": "story_artifact_12",
+      "rewardSpecId": "artifact_011",
+      "documentIds": [
+        "document_23",
+        "document_24"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Observatory Instrument.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 222,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "collector_promise",
+      "act": "ACT_3",
+      "title": "The Collector Promise",
+      "npcId": "victor_hale",
+      "storyArtifactId": "story_artifact_13",
+      "rewardSpecId": "artifact_021",
+      "documentIds": [
+        "document_25",
+        "document_26"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Collector Promise.",
+      "evidenceRisks": {
+        "REPAIR_TRACE": {
+          "level": "LOW",
+          "warning": {
+            "en": "Record the altered fastener before repair.",
+            "ko": "수리 전에 교체 체결 흔적을 기록하세요."
+          }
+        }
+      },
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 234,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "three_cameras",
+      "act": "ACT_3",
+      "title": "The Three Cameras",
+      "npcId": "victor_hale",
+      "storyArtifactId": "story_artifact_14",
+      "rewardSpecId": "artifact_033",
+      "documentIds": [
+        "document_27",
+        "document_28"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Three Cameras.",
+      "evidenceRisks": {
+        "REPAIR_TRACE": {
+          "level": "LOW",
+          "warning": {
+            "en": "Record the shared repair marks before cleaning.",
+            "ko": "세척 전에 공통 수리 흔적을 기록하세요."
+          }
+        }
+      },
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 246,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "shadow_camera",
+      "act": "ACT_4",
+      "title": "Shadow Mark: Camera",
+      "npcId": "lena_falk",
+      "storyArtifactId": "story_artifact_15",
+      "rewardSpecId": "artifact_048",
+      "documentIds": [
+        "document_29",
+        "document_30"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Camera.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 258,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "shadow_gauge",
+      "act": "ACT_4",
+      "title": "Shadow Mark: Gauge",
+      "npcId": "hana_mire",
+      "storyArtifactId": "story_artifact_16",
+      "rewardSpecId": "artifact_050",
+      "documentIds": [
+        "document_01",
+        "document_02"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Gauge.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 270,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "shadow_clock",
+      "act": "ACT_4",
+      "title": "Shadow Mark: Clock",
+      "npcId": "mara_venn",
+      "storyArtifactId": "story_artifact_17",
+      "rewardSpecId": "artifact_031",
+      "documentIds": [
+        "document_03",
+        "document_04"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Clock.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 282,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "shadow_music_box",
+      "act": "ACT_4",
+      "title": "Shadow Mark: Music Box",
+      "npcId": "iris_bell",
+      "storyArtifactId": "story_artifact_18",
+      "rewardSpecId": "artifact_035",
+      "documentIds": [
+        "document_05",
+        "document_06"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Music Box.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 294,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "shadow_optic",
+      "act": "ACT_4",
+      "title": "Shadow Mark: Optic",
+      "npcId": "victor_hale",
+      "storyArtifactId": "story_artifact_19",
+      "rewardSpecId": "artifact_057",
+      "documentIds": [
+        "document_07",
+        "document_08"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Shadow Mark: Optic.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 306,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "composite_prototype",
+      "act": "ACT_4",
+      "title": "The Composite Prototype",
+      "npcId": "noah_stern",
+      "storyArtifactId": "story_artifact_20",
+      "rewardSpecId": "artifact_059",
+      "documentIds": [
+        "document_09",
+        "document_10"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in The Composite Prototype.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 318,
+        "reputation": 2,
+        "mastery": 3,
+        "museumTrust": 1,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "master_chronometer",
+      "act": "ACT_5",
+      "title": "Master Work: Chronometer",
+      "npcId": "mara_venn",
+      "storyArtifactId": "story_artifact_21",
+      "rewardSpecId": "artifact_061",
+      "documentIds": [
+        "document_11",
+        "document_12"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Master Work: Chronometer.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 330,
+        "reputation": 4,
+        "mastery": 7,
+        "museumTrust": 3,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "master_optical",
+      "act": "ACT_5",
+      "title": "Master Work: Optical Engine",
+      "npcId": "victor_hale",
+      "storyArtifactId": "story_artifact_22",
+      "rewardSpecId": "artifact_075",
+      "documentIds": [
+        "document_13",
+        "document_14"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Master Work: Optical Engine.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 342,
+        "reputation": 4,
+        "mastery": 7,
+        "museumTrust": 3,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "master_recorder",
+      "act": "ACT_5",
+      "title": "Master Work: Field Recorder",
+      "npcId": "iris_bell",
+      "storyArtifactId": "story_artifact_23",
+      "rewardSpecId": "artifact_078",
+      "documentIds": [
+        "document_15",
+        "document_16"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Master Work: Field Recorder.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 354,
+        "reputation": 4,
+        "mastery": 7,
+        "museumTrust": 3,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "master_gauge",
+      "act": "ACT_5",
+      "title": "Master Work: Signal Lantern",
+      "npcId": "hana_mire",
+      "storyArtifactId": "story_artifact_24",
+      "rewardSpecId": "artifact_077",
+      "documentIds": [
+        "document_17",
+        "document_18"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Master Work: Signal Lantern.",
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 366,
+        "reputation": 4,
+        "mastery": 7,
+        "museumTrust": 3,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "master_camera",
+      "act": "ACT_5",
+      "title": "Master Work: Prism Spectroscope",
+      "npcId": "lena_falk",
+      "storyArtifactId": "story_artifact_25",
+      "rewardSpecId": "artifact_079",
+      "documentIds": [
+        "document_19",
+        "document_20"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Master Work: Prism Spectroscope.",
+      "evidenceRisks": {
+        "CONSTRUCTION_METHOD": {
+          "level": "LOW",
+          "warning": {
+            "en": "Map the prism clamp before opening the optical body.",
+            "ko": "광학 몸체를 열기 전에 프리즘 고정쇠를 기록하세요."
+          }
+        }
+      },
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 378,
+        "reputation": 4,
+        "mastery": 7,
+        "museumTrust": 3,
+        "historicalIntegrity": 1
+      }
+    },
+    {
+      "id": "master_mechanism",
+      "act": "ACT_5",
+      "title": "Master Work: Astronomical Regulator",
+      "npcId": "dorian_vale",
+      "storyArtifactId": "story_artifact_26",
+      "rewardSpecId": "artifact_080",
+      "documentIds": [
+        "document_21",
+        "document_22"
+      ],
+      "summary": "Inspect, conserve, authenticate, and disclose the fictional evidence in Master Work: Astronomical Regulator.",
+      "evidenceRisks": {
+        "MATERIAL": {
+          "level": "LOW",
+          "warning": {
+            "en": "Record the regulator's patina boundary before surface work.",
+            "ko": "표면 작업 전에 조속기의 녹청 경계를 기록하세요."
+          }
+        },
+        "MECHANISM": {
+          "level": "HIGH",
+          "warning": {
+            "en": "Immobilize the escapement before testing the mechanism.",
+            "ko": "기구를 시험하기 전에 탈진기를 고정하세요."
+          }
+        }
+      },
+      "recoveryOutcome": "reviewed_with_mentor",
+      "outcomes": [
+        "masterful",
+        "credible",
+        "mistaken",
+        "reviewed_with_mentor"
+      ],
+      "rewards": {
+        "money": 390,
+        "reputation": 4,
+        "mastery": 7,
+        "museumTrust": 3,
+        "historicalIntegrity": 1
+      }
+    }
+  ],
+  "qualification": {
+    "workshopGrade": 5,
+    "reputation": 45,
+    "authenticationAccuracy": 0.6,
+    "museumTrust": 24,
+    "masteryTotal": 42,
+    "eligibleLots": 3
+  },
+  "endings": [
+    {
+      "id": "ENDING_D",
+      "title": "Disgraced Expert",
+      "priority": 100,
+      "conditions": {
+        "op": "any",
+        "conditions": [
+          {
+            "metric": "ethics",
+            "op": "<=",
+            "value": 20
+          },
+          {
+            "metric": "collectorTrust",
+            "op": "<=",
+            "value": "-15"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ENDING_S",
+      "title": "Master of the Reserve",
+      "priority": 90,
+      "conditions": {
+        "op": "all",
+        "conditions": [
+          {
+            "metric": "balancedScore",
+            "op": ">=",
+            "value": 82
+          },
+          {
+            "metric": "authenticationAccuracy",
+            "op": ">=",
+            "value": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "ENDING_A",
+      "title": "Master Restorer",
+      "priority": 50,
+      "pillar": "restoration"
+    },
+    {
+      "id": "ENDING_B",
+      "title": "Auction Powerhouse",
+      "priority": 40,
+      "pillar": "financial"
+    },
+    {
+      "id": "ENDING_C",
+      "title": "Museum Conservator",
+      "priority": 30,
+      "pillar": "integrity"
+    }
+  ],
+  "environments": [
+    {
+      "id": "small_workshop",
+      "name": "Small Workshop",
+      "mode": "3d_workshop"
+    },
+    {
+      "id": "upgraded_workshop",
+      "name": "Upgraded Workshop",
+      "mode": "3d_workshop"
+    },
+    {
+      "id": "local_market",
+      "name": "Local Market",
+      "mode": "presentation"
+    },
+    {
+      "id": "estate_storage",
+      "name": "Estate Storage",
+      "mode": "presentation"
+    },
+    {
+      "id": "archive_room",
+      "name": "Archive / Reference Room",
+      "mode": "presentation"
+    },
+    {
+      "id": "regional_auction",
+      "name": "Regional Auction House",
+      "mode": "presentation"
+    },
+    {
+      "id": "museum_room",
+      "name": "Museum Consultation Room",
+      "mode": "presentation"
+    },
+    {
+      "id": "premium_showroom",
+      "name": "Premium Dealer Showroom",
+      "mode": "presentation"
+    },
+    {
+      "id": "grand_reserve_hall",
+      "name": "Grand Reserve Auction Hall",
+      "mode": "3d_grand_reserve"
+    }
+  ]
+}

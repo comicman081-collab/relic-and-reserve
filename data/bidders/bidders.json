@@ -1,0 +1,182 @@
+[
+  {
+    "id": "bidder_01",
+    "name": "Private Collector",
+    "budget": 650,
+    "preferredCategories": [
+      "mechanical_instruments"
+    ],
+    "rarityBias": 1.0,
+    "conditionBias": 0.8,
+    "originalityBias": 0.9,
+    "authenticityBias": 0.9,
+    "riskTolerance": 0.35,
+    "competitionAggression": 0.5,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_02",
+    "name": "Professional Dealer",
+    "budget": 780,
+    "preferredCategories": [
+      "mechanical_instruments"
+    ],
+    "rarityBias": 1.15,
+    "conditionBias": 0.92,
+    "originalityBias": 1.02,
+    "authenticityBias": 1.04,
+    "riskTolerance": 0.44999999999999996,
+    "competitionAggression": 0.58,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_03",
+    "name": "Museum Buyer",
+    "budget": 910,
+    "preferredCategories": [
+      "optical_devices"
+    ],
+    "rarityBias": 1.3,
+    "conditionBias": 1.04,
+    "originalityBias": 1.1400000000000001,
+    "authenticityBias": 1.1800000000000002,
+    "riskTolerance": 0.55,
+    "competitionAggression": 0.66,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_04",
+    "name": "Interior Decorator",
+    "budget": 1040,
+    "preferredCategories": [
+      "vintage_audio"
+    ],
+    "rarityBias": 1.45,
+    "conditionBias": 1.1600000000000001,
+    "originalityBias": 1.26,
+    "authenticityBias": 1.32,
+    "riskTolerance": 0.65,
+    "competitionAggression": 0.74,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_05",
+    "name": "Mechanical Enthusiast",
+    "budget": 1170,
+    "preferredCategories": [
+      "mechanical_instruments"
+    ],
+    "rarityBias": 1.0,
+    "conditionBias": 1.28,
+    "originalityBias": 1.38,
+    "authenticityBias": 0.9,
+    "riskTolerance": 0.75,
+    "competitionAggression": 0.8200000000000001,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_06",
+    "name": "Speculator",
+    "budget": 1300,
+    "preferredCategories": [
+      "optical_devices"
+    ],
+    "rarityBias": 1.15,
+    "conditionBias": 0.8,
+    "originalityBias": 1.5,
+    "authenticityBias": 1.04,
+    "riskTolerance": 0.35,
+    "competitionAggression": 0.9,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_07",
+    "name": "Historian",
+    "budget": 1430,
+    "preferredCategories": [
+      "decorative_objects"
+    ],
+    "rarityBias": 1.3,
+    "conditionBias": 0.92,
+    "originalityBias": 0.9,
+    "authenticityBias": 1.1800000000000002,
+    "riskTolerance": 0.44999999999999996,
+    "competitionAggression": 0.5,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_08",
+    "name": "Restoration Collector",
+    "budget": 1560,
+    "preferredCategories": [
+      "office_machines"
+    ],
+    "rarityBias": 1.45,
+    "conditionBias": 1.04,
+    "originalityBias": 1.02,
+    "authenticityBias": 1.32,
+    "riskTolerance": 0.55,
+    "competitionAggression": 0.58,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_09",
+    "name": "Archive Curator",
+    "budget": 1690,
+    "preferredCategories": [
+      "ceramics"
+    ],
+    "rarityBias": 1.0,
+    "conditionBias": 1.1600000000000001,
+    "originalityBias": 1.1400000000000001,
+    "authenticityBias": 0.9,
+    "riskTolerance": 0.65,
+    "competitionAggression": 0.66,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_10",
+    "name": "Estate Broker",
+    "budget": 1820,
+    "preferredCategories": [
+      "mechanical_instruments"
+    ],
+    "rarityBias": 1.15,
+    "conditionBias": 1.28,
+    "originalityBias": 1.26,
+    "authenticityBias": 1.04,
+    "riskTolerance": 0.75,
+    "competitionAggression": 0.74,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_11",
+    "name": "Design Scholar",
+    "budget": 1950,
+    "preferredCategories": [
+      "scientific_instruments"
+    ],
+    "rarityBias": 1.3,
+    "conditionBias": 0.8,
+    "originalityBias": 1.38,
+    "authenticityBias": 1.1800000000000002,
+    "riskTolerance": 0.35,
+    "competitionAggression": 0.8200000000000001,
+    "dropoutBehavior": "budget_or_value"
+  },
+  {
+    "id": "bidder_12",
+    "name": "Clockmaker",
+    "budget": 2080,
+    "preferredCategories": [
+      "vintage_audio"
+    ],
+    "rarityBias": 1.45,
+    "conditionBias": 0.92,
+    "originalityBias": 1.5,
+    "authenticityBias": 1.32,
+    "riskTolerance": 0.44999999999999996,
+    "competitionAggression": 0.9,
+    "dropoutBehavior": "budget_or_value"
+  }
+]

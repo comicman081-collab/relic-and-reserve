@@ -1,0 +1,202 @@
+[
+  {
+    "makerId": "maker_01",
+    "name": "Aurelian Works",
+    "country": "Veyra",
+    "activeEra": "1890-1940",
+    "specialty": "horology",
+    "collectorReputation": 40,
+    "rarityBias": 0.35,
+    "visualLanguage": "brushed brass"
+  },
+  {
+    "makerId": "maker_02",
+    "name": "Brasswell Works",
+    "country": "North Kest",
+    "activeEra": "1900-1950",
+    "specialty": "optics",
+    "collectorReputation": 47,
+    "rarityBias": 0.44,
+    "visualLanguage": "ebonite"
+  },
+  {
+    "makerId": "maker_03",
+    "name": "Cindervale Works",
+    "country": "Lunaris",
+    "activeEra": "1910-1960",
+    "specialty": "audio",
+    "collectorReputation": 54,
+    "rarityBias": 0.53,
+    "visualLanguage": "ivory enamel"
+  },
+  {
+    "makerId": "maker_04",
+    "name": "Dovetail Works",
+    "country": "Orsane",
+    "activeEra": "1920-1970",
+    "specialty": "ceramics",
+    "collectorReputation": 61,
+    "rarityBias": 0.62,
+    "visualLanguage": "oxidized copper"
+  },
+  {
+    "makerId": "maker_05",
+    "name": "Eldermere Works",
+    "country": "Aster Vale",
+    "activeEra": "1890-1980",
+    "specialty": "scientific instruments",
+    "collectorReputation": 68,
+    "rarityBias": 0.71,
+    "visualLanguage": "brushed brass"
+  },
+  {
+    "makerId": "maker_06",
+    "name": "Fallow Works",
+    "country": "Merrow",
+    "activeEra": "1900-1940",
+    "specialty": "office machines",
+    "collectorReputation": 75,
+    "rarityBias": 0.8,
+    "visualLanguage": "ebonite"
+  },
+  {
+    "makerId": "maker_07",
+    "name": "Gildspire Works",
+    "country": "Caelport",
+    "activeEra": "1910-1950",
+    "specialty": "telephony",
+    "collectorReputation": 82,
+    "rarityBias": 0.35,
+    "visualLanguage": "ivory enamel"
+  },
+  {
+    "makerId": "maker_08",
+    "name": "Hearthline Works",
+    "country": "Darsin",
+    "activeEra": "1920-1960",
+    "specialty": "mechanisms",
+    "collectorReputation": 89,
+    "rarityBias": 0.44,
+    "visualLanguage": "oxidized copper"
+  },
+  {
+    "makerId": "maker_09",
+    "name": "Iver & Co Works",
+    "country": "Veyra",
+    "activeEra": "1890-1970",
+    "specialty": "horology",
+    "collectorReputation": 96,
+    "rarityBias": 0.53,
+    "visualLanguage": "brushed brass"
+  },
+  {
+    "makerId": "maker_10",
+    "name": "Juniper Works",
+    "country": "North Kest",
+    "activeEra": "1900-1980",
+    "specialty": "optics",
+    "collectorReputation": 43,
+    "rarityBias": 0.62,
+    "visualLanguage": "ebonite"
+  },
+  {
+    "makerId": "maker_11",
+    "name": "Kestrel Works",
+    "country": "Lunaris",
+    "activeEra": "1910-1940",
+    "specialty": "audio",
+    "collectorReputation": 50,
+    "rarityBias": 0.71,
+    "visualLanguage": "ivory enamel"
+  },
+  {
+    "makerId": "maker_12",
+    "name": "Lattice Works",
+    "country": "Orsane",
+    "activeEra": "1920-1950",
+    "specialty": "ceramics",
+    "collectorReputation": 57,
+    "rarityBias": 0.8,
+    "visualLanguage": "oxidized copper"
+  },
+  {
+    "makerId": "maker_13",
+    "name": "Marrow Works",
+    "country": "Aster Vale",
+    "activeEra": "1890-1960",
+    "specialty": "scientific instruments",
+    "collectorReputation": 64,
+    "rarityBias": 0.35,
+    "visualLanguage": "brushed brass"
+  },
+  {
+    "makerId": "maker_14",
+    "name": "Nightingale Works",
+    "country": "Merrow",
+    "activeEra": "1900-1970",
+    "specialty": "office machines",
+    "collectorReputation": 71,
+    "rarityBias": 0.44,
+    "visualLanguage": "ebonite"
+  },
+  {
+    "makerId": "maker_15",
+    "name": "Orchard Works",
+    "country": "Caelport",
+    "activeEra": "1910-1980",
+    "specialty": "telephony",
+    "collectorReputation": 78,
+    "rarityBias": 0.53,
+    "visualLanguage": "ivory enamel"
+  },
+  {
+    "makerId": "maker_16",
+    "name": "Peregrine Works",
+    "country": "Darsin",
+    "activeEra": "1920-1940",
+    "specialty": "mechanisms",
+    "collectorReputation": 85,
+    "rarityBias": 0.62,
+    "visualLanguage": "oxidized copper"
+  },
+  {
+    "makerId": "maker_17",
+    "name": "Quillmark Works",
+    "country": "Veyra",
+    "activeEra": "1890-1950",
+    "specialty": "horology",
+    "collectorReputation": 92,
+    "rarityBias": 0.71,
+    "visualLanguage": "brushed brass"
+  },
+  {
+    "makerId": "maker_18",
+    "name": "Rook & Finch Works",
+    "country": "North Kest",
+    "activeEra": "1900-1960",
+    "specialty": "optics",
+    "collectorReputation": 99,
+    "rarityBias": 0.8,
+    "visualLanguage": "ebonite"
+  },
+  {
+    "makerId": "maker_19",
+    "name": "Solenne Works",
+    "country": "Lunaris",
+    "activeEra": "1910-1970",
+    "specialty": "audio",
+    "collectorReputation": 46,
+    "rarityBias": 0.35,
+    "visualLanguage": "ivory enamel"
+  },
+  {
+    "makerId": "maker_20",
+    "name": "Tarnwell Works",
+    "country": "Orsane",
+    "activeEra": "1920-1980",
+    "specialty": "ceramics",
+    "collectorReputation": 53,
+    "rarityBias": 0.44,
+    "visualLanguage": "oxidized copper"
+  }
+]

@@ -1,0 +1,352 @@
+{
+  "meshes": [
+    {
+      "path": "assets/artifacts/model_01.obj",
+      "vertices": 280,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/model_02.obj",
+      "vertices": 280,
+      "groups": 5
+    },
+    {
+      "path": "assets/artifacts/model_03.obj",
+      "vertices": 96,
+      "groups": 5
+    },
+    {
+      "path": "assets/artifacts/model_04.obj",
+      "vertices": 208,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/model_05.obj",
+      "vertices": 208,
+      "groups": 4
+    },
+    {
+      "path": "assets/artifacts/model_06.obj",
+      "vertices": 104,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/model_07.obj",
+      "vertices": 256,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/model_08.obj",
+      "vertices": 356,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/model_09.obj",
+      "vertices": 384,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/model_10.obj",
+      "vertices": 80,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/model_11.obj",
+      "vertices": 72,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/model_12.obj",
+      "vertices": 200,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/model_13.obj",
+      "vertices": 280,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/model_14.obj",
+      "vertices": 280,
+      "groups": 5
+    },
+    {
+      "path": "assets/artifacts/model_15.obj",
+      "vertices": 96,
+      "groups": 5
+    },
+    {
+      "path": "assets/artifacts/clock.obj",
+      "vertices": 280,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/camera.obj",
+      "vertices": 280,
+      "groups": 5
+    },
+    {
+      "path": "assets/artifacts/radio.obj",
+      "vertices": 96,
+      "groups": 5
+    },
+    {
+      "path": "assets/artifacts/music_box.obj",
+      "vertices": 208,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/typewriter.obj",
+      "vertices": 208,
+      "groups": 4
+    },
+    {
+      "path": "assets/artifacts/telephone.obj",
+      "vertices": 104,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/watch.obj",
+      "vertices": 256,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/vase.obj",
+      "vertices": 356,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/binoculars.obj",
+      "vertices": 384,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/record_player.obj",
+      "vertices": 80,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/compass.obj",
+      "vertices": 72,
+      "groups": 3
+    },
+    {
+      "path": "assets/artifacts/gauge.obj",
+      "vertices": 200,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/workbench.obj",
+      "vertices": 208,
+      "groups": 3
+    },
+    {
+      "path": "assets/workshop_props/shelf.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/tool_cabinet.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/inspection_lamp.obj",
+      "vertices": 40,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/desk_lamp.obj",
+      "vertices": 176,
+      "groups": 3
+    },
+    {
+      "path": "assets/workshop_props/storage_crate.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/parts_tray.obj",
+      "vertices": 48,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/tool_rack.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/stool.obj",
+      "vertices": 176,
+      "groups": 3
+    },
+    {
+      "path": "assets/workshop_props/photo_backdrop.obj",
+      "vertices": 40,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/tripod.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/computer_terminal.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/display_cabinet.obj",
+      "vertices": 208,
+      "groups": 3
+    },
+    {
+      "path": "assets/workshop_props/magnifier_stand.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/packaging_box.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/waste_bin.obj",
+      "vertices": 40,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/desk.obj",
+      "vertices": 176,
+      "groups": 3
+    },
+    {
+      "path": "assets/workshop_props/drawer_unit.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/inspection_mat.obj",
+      "vertices": 48,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/storage_bin.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/delivery_cart.obj",
+      "vertices": 176,
+      "groups": 3
+    },
+    {
+      "path": "assets/workshop_props/floor_lamp.obj",
+      "vertices": 40,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/catalog_stand.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/workshop_props/padded_case.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/clock_body.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/clock_panel.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/clock_mechanism.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/clock_lens.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/clock_dial.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/clock_speaker.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/camera_body.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/camera_panel.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/camera_mechanism.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/camera_lens.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/camera_dial.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/camera_speaker.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/radio_body.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/radio_panel.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/radio_mechanism.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/radio_lens.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/radio_dial.obj",
+      "vertices": 16,
+      "groups": 2
+    },
+    {
+      "path": "assets/artifacts/parts/radio_speaker.obj",
+      "vertices": 16,
+      "groups": 2
+    }
+  ],
+  "duplicate_svg_hashes": [],
+  "zero_byte": [],
+  "stubs": []
+}

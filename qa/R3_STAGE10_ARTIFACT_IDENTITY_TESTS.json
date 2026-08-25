@@ -1,0 +1,113 @@
+{
+  "executed": 4,
+  "expectedCount": 4,
+  "failed": 0,
+  "passed": 4,
+  "suite": "R3 Stage 10 Artifact Identity",
+  "tests": [
+    {
+      "evidence": {
+        "cases": {
+          "master_camera": {
+            "caseInventoryCount": 1,
+            "ok": true,
+            "repeatSame": true,
+            "spec": "artifact_079",
+            "story": "story_artifact_25",
+            "truth": "GENUINE_WITH_PERIOD_REPAIR",
+            "uid": "case_master_camera"
+          },
+          "master_mechanism": {
+            "caseInventoryCount": 1,
+            "ok": true,
+            "repeatSame": true,
+            "spec": "artifact_080",
+            "story": "story_artifact_26",
+            "truth": "GENUINE",
+            "uid": "case_master_mechanism"
+          }
+        },
+        "stage": {
+          "code": "OK",
+          "difficultyMultiplier": 1.83845921242015,
+          "ok": true,
+          "stage": 10
+        }
+      },
+      "executed": true,
+      "id": "S10-ISSUE-01",
+      "name": "Stage 10 cases issue the fresh 079/080 identities once with the canonical 7-percent curve",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_camera": {
+          "evidence": 4,
+          "leaks": [],
+          "ok": true,
+          "risk": {
+            "HIGH": 0,
+            "LOW": 1,
+            "NONE": 3
+          }
+        },
+        "master_mechanism": {
+          "evidence": 4,
+          "leaks": [],
+          "ok": true,
+          "risk": {
+            "HIGH": 1,
+            "LOW": 1,
+            "NONE": 2
+          }
+        }
+      },
+      "executed": true,
+      "id": "S10-CASE-02",
+      "name": "Fresh Stage 10 case conditions expose the intended low/high risk pressure without hidden story/spec identifiers",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_camera": {
+          "mesh": "res://assets/artifacts/model_05.obj",
+          "ok": true,
+          "recipe": "SPECTROSCOPE"
+        },
+        "master_mechanism": {
+          "mesh": "res://assets/artifacts/watch.obj",
+          "ok": true,
+          "recipe": "ASTRONOMICAL_REGULATOR"
+        },
+        "pairIsolation": {
+          "swappedPrism": "DEFAULT",
+          "swappedRegulator": "DEFAULT"
+        }
+      },
+      "executed": true,
+      "id": "S10-VISUAL-03",
+      "name": "Stage 10 fresh artifacts use distinct local spectroscope/regulator recipes and swapped pairs fail closed to DEFAULT",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_camera": {
+          "loaded": true,
+          "ok": true,
+          "spec": "artifact_056",
+          "story": ""
+        },
+        "master_mechanism": {
+          "loaded": true,
+          "ok": true,
+          "spec": "artifact_060",
+          "story": ""
+        }
+      },
+      "executed": true,
+      "id": "S10-LEGACY-04",
+      "name": "Previously issued 056/060 artifacts remain exact and are never silently rebound to fresh 079/080",
+      "passed": true
+    }
+  ]
+}

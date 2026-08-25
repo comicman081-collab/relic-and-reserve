@@ -1,0 +1,33 @@
+{
+  "generated": [
+    "assets\\artifacts\\binoculars.obj",
+    "assets\\artifacts\\camera.obj",
+    "assets\\artifacts\\clock.obj",
+    "assets\\artifacts\\compass.obj",
+    "assets\\artifacts\\gauge.obj",
+    "assets\\artifacts\\model_01.obj",
+    "assets\\artifacts\\model_02.obj",
+    "assets\\artifacts\\model_03.obj",
+    "assets\\artifacts\\model_04.obj",
+    "assets\\artifacts\\model_05.obj",
+    "assets\\artifacts\\model_06.obj",
+    "assets\\artifacts\\model_07.obj",
+    "assets\\artifacts\\model_08.obj",
+    "assets\\artifacts\\model_09.obj",
+    "assets\\artifacts\\model_10.obj",
+    "assets\\artifacts\\model_11.obj",
+    "assets\\artifacts\\model_12.obj",
+    "assets\\artifacts\\model_13.obj",
+    "assets\\artifacts\\model_14.obj",
+    "assets\\artifacts\\model_15.obj",
+    "assets\\artifacts\\music_box.obj",
+    "assets\\artifacts\\radio.obj",
+    "assets\\artifacts\\record_player.obj",
+    "assets\\artifacts\\sextant.obj",
+    "assets\\artifacts\\telephone.obj",
+    "assets\\artifacts\\typewriter.obj",
+    "assets\\artifacts\\vase.obj",
+    "assets\\artifacts\\watch.obj"
+  ],
+  "backend": "procedural_obj_fallback"
+}

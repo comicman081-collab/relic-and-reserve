@@ -1,0 +1,2866 @@
+{
+  "executed": 11,
+  "expectedCount": 11,
+  "failed": 0,
+  "passed": 11,
+  "skipped": 0,
+  "suite": "R3 Stage 5 Authored Cases",
+  "tests": [
+    {
+      "evidence": {
+        "authoredCount": 22,
+        "caseOrder": [
+          "collector_promise",
+          "three_cameras",
+          "shadow_camera"
+        ],
+        "difficultyMultiplier": 1.31079601,
+        "fallbackCount": 0,
+        "missingMethods": [],
+        "registryErrors": [],
+        "shadowSha256": "09fd2bc681ae4897b1d2cac324996bda80f4f21d07f0d5d0823a1cb07acf0664"
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-DATA-01",
+      "name": "Stage 5 resolves Collector Promise, Three Cameras, then protected Shadow Camera with the exact multiplier and zero fallback",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authorityMutation0": true,
+        "campaignMutation0": true,
+        "caseIdHits": {
+          "collector_promise": {
+            "gameState": false,
+            "main3d": false,
+            "runtimeRegistry": false
+          },
+          "three_cameras": {
+            "gameState": false,
+            "main3d": false,
+            "runtimeRegistry": false
+          }
+        },
+        "runtimeExact": true,
+        "stageMutation0": true
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-GENERIC-02",
+      "name": "Both new cases use generic registry/public paths without save, economy, auction, RNG, campaign, or stage mutation",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "collector_promise": {
+          "authoredSpec": "artifact_021",
+          "campaignSpec": "artifact_021",
+          "canonical": "hyp.collector_promise.genuine_barometer_modern_capsule_repair",
+          "ok": true,
+          "pressureMutation0": true,
+          "priorCasesReady": true,
+          "runtimeSpec": "artifact_021",
+          "story": "story_artifact_13",
+          "storySpec": "artifact_021",
+          "uid": "case_collector_promise"
+        },
+        "shadow_camera": {
+          "authoredSpec": "artifact_048",
+          "campaignSpec": "artifact_048",
+          "canonical": "hyp.late_composite",
+          "ok": true,
+          "pressureMutation0": true,
+          "priorCasesReady": true,
+          "runtimeSpec": "artifact_048",
+          "story": "story_artifact_15",
+          "storySpec": "artifact_048",
+          "uid": "case_shadow_camera"
+        },
+        "three_cameras": {
+          "authoredSpec": "artifact_033",
+          "campaignSpec": "artifact_033",
+          "canonical": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair",
+          "ok": true,
+          "pressureMutation0": true,
+          "priorCasesReady": true,
+          "runtimeSpec": "artifact_033",
+          "story": "story_artifact_14",
+          "storySpec": "artifact_033",
+          "uid": "case_three_cameras"
+        }
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-IDENTITY-03",
+      "name": "All Stage 5 definitions, campaign records, story artifacts, and fresh runtime artifacts preserve exact identities",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "collector_promise": {
+          "groups": [
+            "physical_barometer_identity",
+            "localized_capsule_repair",
+            "documented_transfer_and_repair",
+            "interested_collector_account",
+            "independent_model_history"
+          ],
+          "kinds": [
+            "ARTIFACT",
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "ok": true,
+          "outcomeRules": [
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 4,
+              "minimum_independent_groups": 4,
+              "minimum_net_support": 4,
+              "outcome_id": "masterful",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 3,
+              "minimum_independent_groups": 3,
+              "minimum_net_support": 3,
+              "outcome_id": "credible",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "INCORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "mistaken",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "ANY",
+              "fallback": true,
+              "minimum_citations": 0,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "reviewed_with_mentor",
+              "requires_all_required_sources": false
+            }
+          ],
+          "relations": {
+            "hyp.collector_promise.genuine_barometer_modern_capsule_repair": [
+              "SUPPORT"
+            ],
+            "hyp.collector_promise.later_reproduction_with_old_promise": [
+              "REFUTE"
+            ],
+            "hyp.collector_promise.untouched_original_barometer": [
+              "SUPPORT",
+              "REFUTE"
+            ]
+          },
+          "sources": [
+            "src.collector_promise.artifact.period_body_identity",
+            "src.collector_promise.artifact.modern_capsule_repair",
+            "src.collector_promise.document.transfer_repair_receipt",
+            "src.collector_promise.npc.victor_promise_context",
+            "src.collector_promise.reference.aurelian_model120_history"
+          ]
+        },
+        "shadow_camera": {
+          "groups": [
+            "physical_surface_sequence",
+            "concealed_uv_imaging",
+            "internal_construction_sequence",
+            "archival_service_record",
+            "interested_owner_memory",
+            "independent_period_material_reference"
+          ],
+          "kinds": [
+            "ARTIFACT",
+            "ARTIFACT",
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "ok": true,
+          "outcomeRules": [
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 4,
+              "minimum_independent_groups": 4,
+              "minimum_net_support": 4,
+              "outcome_id": "masterful",
+              "requires_all_required_sources": true
+            },
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 2,
+              "minimum_net_support": 1,
+              "outcome_id": "credible",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "INCORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "mistaken",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "ANY",
+              "fallback": true,
+              "minimum_citations": 0,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "reviewed_with_mentor",
+              "requires_all_required_sources": false
+            }
+          ],
+          "relations": {
+            "hyp.factory_shadow_camera": [
+              "REFUTE"
+            ],
+            "hyp.late_composite": [
+              "SUPPORT"
+            ],
+            "hyp.period_studio_conversion": [
+              "SUPPORT",
+              "REFUTE"
+            ]
+          },
+          "sources": [
+            "src.shadow_camera.artifact.mount_wear",
+            "src.shadow_camera.artifact.uv_shadow_mark",
+            "src.shadow_camera.artifact.internal_spacer",
+            "src.shadow_camera.document.repair_leaf",
+            "src.shadow_camera.npc.lena_invoice_account",
+            "src.shadow_camera.reference.model147_material_note"
+          ]
+        },
+        "three_cameras": {
+          "groups": [
+            "single_physical_intake",
+            "modern_copied_surface_layers",
+            "documented_pair_and_single_intake",
+            "interested_intake_witness",
+            "independent_model_and_serial_history"
+          ],
+          "kinds": [
+            "ARTIFACT",
+            "ARTIFACT",
+            "DOCUMENT",
+            "NPC",
+            "REFERENCE"
+          ],
+          "ok": true,
+          "outcomeRules": [
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 4,
+              "minimum_independent_groups": 4,
+              "minimum_net_support": 4,
+              "outcome_id": "masterful",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "CORRECT",
+              "fallback": false,
+              "minimum_citations": 3,
+              "minimum_independent_groups": 3,
+              "minimum_net_support": 3,
+              "outcome_id": "credible",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "INCORRECT",
+              "fallback": false,
+              "minimum_citations": 2,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "mistaken",
+              "requires_all_required_sources": false
+            },
+            {
+              "correctness": "ANY",
+              "fallback": true,
+              "minimum_citations": 0,
+              "minimum_independent_groups": 0,
+              "minimum_net_support": 0,
+              "outcome_id": "reviewed_with_mentor",
+              "requires_all_required_sources": false
+            }
+          ],
+          "relations": {
+            "hyp.three_cameras.documented_reference_pair_original": [
+              "REFUTE"
+            ],
+            "hyp.three_cameras.modern_reproduction_copied_from_reference_pair": [
+              "SUPPORT"
+            ],
+            "hyp.three_cameras.undocumented_period_third_camera": [
+              "REFUTE",
+              "SUPPORT"
+            ]
+          },
+          "sources": [
+            "src.three_cameras.artifact.received_camera_body",
+            "src.three_cameras.artifact.copied_repair_surface",
+            "src.three_cameras.document.reference_pair_photo_ledger",
+            "src.three_cameras.npc.victor_single_lot_account",
+            "src.three_cameras.reference.marrow_model132_history"
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-SOURCES-04",
+      "name": "Stage 5 source IDs, independent groups, source kinds, contested relations, and case-specific outcome thresholds are exact",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "enPresent": true,
+        "koPresent": true,
+        "publicPrivacy": true,
+        "runtimeArtifactSpec": "artifact_033",
+        "runtimeUid": "case_three_cameras"
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-ONE-PHYSICAL-05",
+      "name": "Three Cameras bilingual public copy states that only the disputed third camera is physical and the comparison pair is documentary",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "aggregateCounts": {
+          "HIGH": 1,
+          "LOW": 7,
+          "NONE": 8
+        },
+        "cases": {
+          "collector_promise": {
+            "counts": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedCounts": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedRiskRows": {
+              "src.collector_promise.artifact.modern_capsule_repair": {
+                "level": "LOW",
+                "tools": [
+                  "precision_screwdriver"
+                ]
+              }
+            },
+            "ok": true,
+            "riskRows": {
+              "src.collector_promise.artifact.modern_capsule_repair": {
+                "level": "LOW",
+                "tools": [
+                  "precision_screwdriver"
+                ]
+              }
+            },
+            "runtime": [
+              {
+                "actualPenalty": 1.31079601,
+                "expectedPenalty": 1.31079601,
+                "id": "src.collector_promise.artifact.modern_capsule_repair",
+                "integrity": [
+                  78.0,
+                  76.68920399
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "precision_screwdriver"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "precision_screwdriver"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ]
+          },
+          "shadow_camera": {
+            "counts": {
+              "HIGH": 1,
+              "LOW": 5,
+              "NONE": 0
+            },
+            "expectedCounts": {
+              "HIGH": 1,
+              "LOW": 5,
+              "NONE": 0
+            },
+            "expectedRiskRows": {
+              "src.shadow_camera.artifact.internal_spacer": {
+                "level": "LOW",
+                "tools": [
+                  "precision_screwdriver"
+                ]
+              },
+              "src.shadow_camera.artifact.mount_wear": {
+                "level": "LOW",
+                "tools": []
+              },
+              "src.shadow_camera.artifact.uv_shadow_mark": {
+                "level": "HIGH",
+                "tools": [
+                  "uv_lamp"
+                ]
+              },
+              "src.shadow_camera.document.repair_leaf": {
+                "level": "LOW",
+                "tools": []
+              },
+              "src.shadow_camera.npc.lena_invoice_account": {
+                "level": "LOW",
+                "tools": []
+              },
+              "src.shadow_camera.reference.model147_material_note": {
+                "level": "LOW",
+                "tools": [
+                  "reference_database"
+                ]
+              }
+            },
+            "ok": true,
+            "riskRows": {
+              "src.shadow_camera.artifact.internal_spacer": {
+                "level": "LOW",
+                "tools": [
+                  "precision_screwdriver"
+                ]
+              },
+              "src.shadow_camera.artifact.mount_wear": {
+                "level": "LOW",
+                "tools": []
+              },
+              "src.shadow_camera.artifact.uv_shadow_mark": {
+                "level": "HIGH",
+                "tools": [
+                  "uv_lamp"
+                ]
+              },
+              "src.shadow_camera.document.repair_leaf": {
+                "level": "LOW",
+                "tools": []
+              },
+              "src.shadow_camera.npc.lena_invoice_account": {
+                "level": "LOW",
+                "tools": []
+              },
+              "src.shadow_camera.reference.model147_material_note": {
+                "level": "LOW",
+                "tools": [
+                  "reference_database"
+                ]
+              }
+            },
+            "runtime": [
+              {
+                "actualPenalty": 1.31079601,
+                "expectedPenalty": 1.31079601,
+                "id": "src.shadow_camera.artifact.mount_wear",
+                "integrity": [
+                  78.0,
+                  76.68920399
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "NOT_APPLICABLE"
+                }
+              },
+              {
+                "actualPenalty": 3.93238803,
+                "expectedPenalty": 3.93238803,
+                "id": "src.shadow_camera.artifact.uv_shadow_mark",
+                "integrity": [
+                  76.68920399,
+                  72.75681596
+                ],
+                "level": "HIGH",
+                "ok": true,
+                "tools": [
+                  "uv_lamp"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "uv_lamp"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              },
+              {
+                "actualPenalty": 1.31079601,
+                "expectedPenalty": 1.31079601,
+                "id": "src.shadow_camera.artifact.internal_spacer",
+                "integrity": [
+                  72.75681596,
+                  71.44601995
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "precision_screwdriver"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "precision_screwdriver"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              },
+              {
+                "actualPenalty": 1.31079601,
+                "expectedPenalty": 1.31079601,
+                "id": "src.shadow_camera.document.repair_leaf",
+                "integrity": [
+                  76.68920399,
+                  75.37840798
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "NOT_APPLICABLE"
+                }
+              },
+              {
+                "actualPenalty": 1.31079601,
+                "expectedPenalty": 1.31079601,
+                "id": "src.shadow_camera.npc.lena_invoice_account",
+                "integrity": [
+                  75.37840798,
+                  74.06761197
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "NOT_APPLICABLE"
+                }
+              },
+              {
+                "actualPenalty": 1.31079601,
+                "expectedPenalty": 1.31079601,
+                "id": "src.shadow_camera.reference.model147_material_note",
+                "integrity": [
+                  71.44601995,
+                  70.13522394
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "reference_database"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "reference_database"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ]
+          },
+          "three_cameras": {
+            "counts": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedCounts": {
+              "HIGH": 0,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "expectedRiskRows": {
+              "src.three_cameras.artifact.copied_repair_surface": {
+                "level": "LOW",
+                "tools": [
+                  "material_scanner"
+                ]
+              }
+            },
+            "ok": true,
+            "riskRows": {
+              "src.three_cameras.artifact.copied_repair_surface": {
+                "level": "LOW",
+                "tools": [
+                  "material_scanner"
+                ]
+              }
+            },
+            "runtime": [
+              {
+                "actualPenalty": 1.31079601,
+                "expectedPenalty": 1.31079601,
+                "id": "src.three_cameras.artifact.copied_repair_surface",
+                "integrity": [
+                  78.0,
+                  76.68920399
+                ],
+                "level": "LOW",
+                "ok": true,
+                "tools": [
+                  "material_scanner"
+                ],
+                "wrongMutation0": true,
+                "wrongResult": {
+                  "code": "TOOL_REQUIRED",
+                  "ok": false,
+                  "requiredTools": [
+                    "material_scanner"
+                  ],
+                  "selectedTool": "soft_brush"
+                }
+              }
+            ]
+          }
+        },
+        "multiplier": 1.31079601,
+        "weightedPerAction": 0.81924750625,
+        "weightedTotal": 13.1079601
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-RISK-06",
+      "name": "Stage 5 preserves 16 evidence actions, exact sparse case risks, protected Shadow pressure, and 1.31079601-scaled tool-gated penalties",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "collector_promise": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.collector_promise.document.transfer_repair_receipt",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "documented_transfer_and_repair"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.collector_promise.document.transfer_repair_receipt",
+            "ok": true,
+            "sourceId": "documented_transfer_and_repair"
+          },
+          "expectedId": "src.collector_promise.document.transfer_repair_receipt",
+          "knownClueCount": 1,
+          "ok": true,
+          "publicPrivacy": true,
+          "taggedCount": 1
+        },
+        "shadow_camera": {
+          "after": {
+            "auction": [],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_UNCLEAR",
+                "polarity": "NEGATIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "code": "NOT_APPLICABLE"
+          },
+          "duplicate": {
+            "code": "NOT_APPLICABLE"
+          },
+          "expectedId": "",
+          "knownClueCount": 0,
+          "ok": true,
+          "publicPrivacy": true,
+          "taggedCount": 0
+        },
+        "three_cameras": {
+          "after": {
+            "auction": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "before": {
+            "auction": [
+              {
+                "category": "PRICE",
+                "code": "RESERVE_TOO_HIGH",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              }
+            ],
+            "listing": [
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_RISK",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_UNCERTAIN",
+                "polarity": "NEGATIVE"
+              },
+              {
+                "category": "DISCLOSURE",
+                "code": "DISCLOSURE_CLEAR",
+                "polarity": "POSITIVE"
+              }
+            ]
+          },
+          "discovery": {
+            "appliedRiskPenalty": 0.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.three_cameras.document.reference_pair_photo_ledger",
+            "ok": true,
+            "riskLevel": "NONE",
+            "sourceId": "documented_pair_and_single_intake"
+          },
+          "duplicate": {
+            "code": "ALREADY_DISCOVERED",
+            "evidenceId": "src.three_cameras.document.reference_pair_photo_ledger",
+            "ok": true,
+            "sourceId": "documented_pair_and_single_intake"
+          },
+          "expectedId": "src.three_cameras.document.reference_pair_photo_ledger",
+          "knownClueCount": 1,
+          "ok": true,
+          "publicPrivacy": true,
+          "taggedCount": 1
+        }
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-PROVENANCE-07",
+      "name": "The two new strong-document provenance sources bridge exactly once while protected Shadow Camera remains explicitly unbridged",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "collector_promise": {
+          "canonical": "hyp.collector_promise.genuine_barometer_modern_capsule_repair",
+          "correct1": {
+            "citedEvidenceIds": [
+              "src.collector_promise.artifact.period_body_identity"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.collector_promise.genuine_barometer_modern_capsule_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "correctCitations": [
+            "src.collector_promise.artifact.period_body_identity",
+            "src.collector_promise.artifact.modern_capsule_repair",
+            "src.collector_promise.document.transfer_repair_receipt",
+            "src.collector_promise.npc.victor_promise_context"
+          ],
+          "credible": {
+            "citedEvidenceIds": [
+              "src.collector_promise.artifact.period_body_identity",
+              "src.collector_promise.artifact.modern_capsule_repair",
+              "src.collector_promise.document.transfer_repair_receipt"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.collector_promise.genuine_barometer_modern_capsule_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "credibleCitations": [
+            "src.collector_promise.artifact.period_body_identity",
+            "src.collector_promise.artifact.modern_capsule_repair",
+            "src.collector_promise.document.transfer_repair_receipt"
+          ],
+          "discovered": 5,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "evaluationMutation0": true,
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.collector_promise.artifact.period_body_identity",
+              "src.collector_promise.artifact.modern_capsule_repair",
+              "src.collector_promise.document.transfer_repair_receipt",
+              "src.collector_promise.npc.victor_promise_context"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.collector_promise.genuine_barometer_modern_capsule_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "ok": true,
+          "rulesExact": true,
+          "wrong": "hyp.collector_promise.untouched_original_barometer",
+          "wrong1": {
+            "citedEvidenceIds": [
+              "src.collector_promise.artifact.modern_capsule_repair"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.collector_promise.untouched_original_barometer",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 2,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrong2": {
+            "citedEvidenceIds": [
+              "src.collector_promise.artifact.modern_capsule_repair",
+              "src.collector_promise.document.transfer_repair_receipt"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.collector_promise.untouched_original_barometer",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrongCitations": [
+            "src.collector_promise.artifact.modern_capsule_repair",
+            "src.collector_promise.document.transfer_repair_receipt"
+          ]
+        },
+        "shadow_camera": {
+          "canonical": "hyp.late_composite",
+          "correct1": {
+            "citedEvidenceIds": [
+              "src.shadow_camera.artifact.uv_shadow_mark"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.late_composite",
+            "independentSourceCount": 1,
+            "netScore": 1,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 1
+          },
+          "correctCitations": [
+            "src.shadow_camera.artifact.uv_shadow_mark",
+            "src.shadow_camera.artifact.internal_spacer",
+            "src.shadow_camera.document.repair_leaf",
+            "src.shadow_camera.reference.model147_material_note"
+          ],
+          "credible": {
+            "citedEvidenceIds": [
+              "src.shadow_camera.artifact.uv_shadow_mark",
+              "src.shadow_camera.artifact.internal_spacer"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.late_composite",
+            "independentSourceCount": 2,
+            "netScore": 3,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 3
+          },
+          "credibleCitations": [
+            "src.shadow_camera.artifact.uv_shadow_mark",
+            "src.shadow_camera.artifact.internal_spacer"
+          ],
+          "discovered": 6,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "evaluationMutation0": true,
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.shadow_camera.artifact.uv_shadow_mark",
+              "src.shadow_camera.artifact.internal_spacer",
+              "src.shadow_camera.document.repair_leaf",
+              "src.shadow_camera.reference.model147_material_note"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.late_composite",
+            "independentSourceCount": 4,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 6
+          },
+          "ok": true,
+          "rulesExact": true,
+          "wrong": "hyp.factory_shadow_camera",
+          "wrong1": {
+            "citedEvidenceIds": [
+              "src.shadow_camera.artifact.mount_wear"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.factory_shadow_camera",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 2,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrong2": {
+            "citedEvidenceIds": [
+              "src.shadow_camera.artifact.mount_wear",
+              "src.shadow_camera.artifact.uv_shadow_mark"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.factory_shadow_camera",
+            "independentSourceCount": 0,
+            "netScore": -4,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 4,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrongCitations": [
+            "src.shadow_camera.artifact.mount_wear",
+            "src.shadow_camera.artifact.uv_shadow_mark"
+          ]
+        },
+        "three_cameras": {
+          "canonical": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair",
+          "correct1": {
+            "citedEvidenceIds": [
+              "src.three_cameras.artifact.received_camera_body"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "correctCitations": [
+            "src.three_cameras.artifact.received_camera_body",
+            "src.three_cameras.artifact.copied_repair_surface",
+            "src.three_cameras.document.reference_pair_photo_ledger",
+            "src.three_cameras.npc.victor_single_lot_account"
+          ],
+          "credible": {
+            "citedEvidenceIds": [
+              "src.three_cameras.artifact.received_camera_body",
+              "src.three_cameras.artifact.copied_repair_surface",
+              "src.three_cameras.document.reference_pair_photo_ledger"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "credibleCitations": [
+            "src.three_cameras.artifact.received_camera_body",
+            "src.three_cameras.artifact.copied_repair_surface",
+            "src.three_cameras.document.reference_pair_photo_ledger"
+          ],
+          "discovered": 5,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "evaluationMutation0": true,
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.three_cameras.artifact.received_camera_body",
+              "src.three_cameras.artifact.copied_repair_surface",
+              "src.three_cameras.document.reference_pair_photo_ledger",
+              "src.three_cameras.npc.victor_single_lot_account"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.three_cameras.modern_reproduction_copied_from_reference_pair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "ok": true,
+          "rulesExact": true,
+          "wrong": "hyp.three_cameras.documented_reference_pair_original",
+          "wrong1": {
+            "citedEvidenceIds": [
+              "src.three_cameras.artifact.received_camera_body"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.three_cameras.documented_reference_pair_original",
+            "independentSourceCount": 0,
+            "netScore": -1,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 1,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrong2": {
+            "citedEvidenceIds": [
+              "src.three_cameras.artifact.received_camera_body",
+              "src.three_cameras.artifact.copied_repair_surface"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.three_cameras.documented_reference_pair_original",
+            "independentSourceCount": 0,
+            "netScore": -3,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 3,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "wrongCitations": [
+            "src.three_cameras.artifact.received_camera_body",
+            "src.three_cameras.artifact.copied_repair_surface"
+          ]
+        }
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-OUTCOMES-08",
+      "name": "All Stage 5 cases execute their exact masterful, credible, mistaken, mentor fallback, and empty-report fail-closed contracts",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cases": {
+          "collector_promise": {
+            "actual": {
+              "citedEvidenceIds": [
+                "src.collector_promise.artifact.period_body_identity",
+                "src.collector_promise.artifact.modern_capsule_repair"
+              ],
+              "discoveredEvidenceIds": [
+                "src.collector_promise.artifact.modern_capsule_repair",
+                "src.collector_promise.artifact.period_body_identity"
+              ],
+              "migrationSentinel": {
+                "keep": [
+                  3.0,
+                  1.0,
+                  4.0
+                ],
+                "marker": "collector_promise"
+              },
+              "resolutionResult": {},
+              "resolved": false,
+              "selectedHypothesisId": ""
+            },
+            "citedSubsetDiscoveredSubsetDefinition": true,
+            "definitionIds": [
+              "src.collector_promise.artifact.period_body_identity",
+              "src.collector_promise.artifact.modern_capsule_repair",
+              "src.collector_promise.document.transfer_repair_receipt",
+              "src.collector_promise.npc.victor_promise_context",
+              "src.collector_promise.reference.aurelian_model120_history"
+            ],
+            "expectedCited": [
+              "src.collector_promise.artifact.period_body_identity",
+              "src.collector_promise.artifact.modern_capsule_repair"
+            ],
+            "expectedDiscovered": [
+              "src.collector_promise.artifact.modern_capsule_repair",
+              "src.collector_promise.artifact.period_body_identity"
+            ],
+            "ok": true
+          },
+          "three_cameras": {
+            "actual": {
+              "citedEvidenceIds": [
+                "src.three_cameras.artifact.received_camera_body",
+                "src.three_cameras.artifact.copied_repair_surface"
+              ],
+              "discoveredEvidenceIds": [
+                "src.three_cameras.artifact.copied_repair_surface",
+                "src.three_cameras.artifact.received_camera_body"
+              ],
+              "migrationSentinel": {
+                "keep": [
+                  3.0,
+                  1.0,
+                  4.0
+                ],
+                "marker": "three_cameras"
+              },
+              "resolutionResult": {},
+              "resolved": false,
+              "selectedHypothesisId": ""
+            },
+            "citedSubsetDiscoveredSubsetDefinition": true,
+            "definitionIds": [
+              "src.three_cameras.artifact.received_camera_body",
+              "src.three_cameras.artifact.copied_repair_surface",
+              "src.three_cameras.document.reference_pair_photo_ledger",
+              "src.three_cameras.npc.victor_single_lot_account",
+              "src.three_cameras.reference.marrow_model132_history"
+            ],
+            "expectedCited": [
+              "src.three_cameras.artifact.received_camera_body",
+              "src.three_cameras.artifact.copied_repair_surface"
+            ],
+            "expectedDiscovered": [
+              "src.three_cameras.artifact.copied_repair_surface",
+              "src.three_cameras.artifact.received_camera_body"
+            ],
+            "ok": true
+          }
+        },
+        "loaded": true,
+        "saved": true
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-MIGRATION-09",
+      "name": "Unresolved Stage 5 colon-ID saves retain only ordered current evidence with cited subset discovered subset definition and clear stale conclusions",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": {
+          "auction": {
+            "listings": [
+              {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249.0,
+                "starting": 181.0
+              },
+              {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249.0,
+                "starting": 181.0
+              }
+            ],
+            "pending": {
+              "artifactId": "",
+              "createdDay": 0,
+              "cueIndex": 0,
+              "cueQueue": [],
+              "decisions": {},
+              "grandReserve": false,
+              "publicFingerprint": "",
+              "receipt": {},
+              "result": {},
+              "schemaVersion": 1,
+              "status": "NONE",
+              "transactionId": ""
+            }
+          },
+          "campaignWithoutCaseStates": {
+            "activeCaseId": "collector_promise",
+            "caseArtifactLedger": {
+              "collector_promise": {
+                "artifactUid": "case_collector_promise",
+                "disposition": "INVENTORY",
+                "issued": true,
+                "migrationSentinel": "ledger:collector_promise",
+                "publicAppraisalSnapshot": 490.0,
+                "publicConditionSnapshot": {
+                  "historicalIntegrity": 62.25
+                },
+                "saleTransactionId": ""
+              },
+              "three_cameras": {
+                "artifactUid": "case_three_cameras",
+                "disposition": "INVENTORY",
+                "issued": true,
+                "migrationSentinel": "ledger:three_cameras",
+                "publicAppraisalSnapshot": 718.0,
+                "publicConditionSnapshot": {
+                  "historicalIntegrity": 63.25
+                },
+                "saleTransactionId": ""
+              }
+            },
+            "caseOutcomes": {},
+            "collectorNetwork": 0.0,
+            "commissionArtifactUses": {},
+            "completedActs": {},
+            "completedCases": {},
+            "completedCommissionIds": [],
+            "currentAct": "PROLOGUE",
+            "currentEnding": "",
+            "endingMetrics": {},
+            "endingUnlocked": [],
+            "epilogueSeen": false,
+            "ethics": 60.0,
+            "grandReserve": {
+              "completed": false,
+              "invited": false,
+              "results": [],
+              "score": {},
+              "selectedLotIds": []
+            },
+            "historicalIntegrity": 50.0,
+            "mastery": {
+              "DECORATIVE": 0.0,
+              "DOCUMENTARY": 0.0,
+              "ELECTRICAL": 0.0,
+              "MECHANICAL": 0.0,
+              "OPTICAL": 0.0,
+              "SCIENTIFIC": 0.0
+            },
+            "museumTrust": 0.0,
+            "postGame": false,
+            "relationships": {
+              "dorian_vale": {
+                "relationship": 0.0,
+                "trust": 0.0
+              },
+              "elias_rowe": {
+                "relationship": 0.0,
+                "trust": 0.0
+              },
+              "hana_mire": {
+                "relationship": 0.0,
+                "trust": 0.0
+              },
+              "iris_bell": {
+                "relationship": 0.0,
+                "trust": 0.0
+              },
+              "lena_falk": {
+                "relationship": 0.0,
+                "trust": 0.0
+              },
+              "mara_venn": {
+                "relationship": 0.0,
+                "trust": 0.0
+              },
+              "noah_stern": {
+                "relationship": 0.0,
+                "trust": 0.0
+              },
+              "victor_hale": {
+                "relationship": 0.0,
+                "trust": 0.0
+              }
+            },
+            "schemaVersion": 2,
+            "storyFlags": {
+              "stage5MigrationSentinel": "campaign-preserve"
+            },
+            "unlockedModules": [
+              "basic_bench"
+            ],
+            "workshopGrade": 1.0
+          },
+          "economy": {
+            "day": 7,
+            "money": 3579,
+            "ownedUpgrades": [
+              "upgrade_01"
+            ],
+            "reputation": 41
+          },
+          "inventory": [
+            {
+              "acquisitionPrice": 206.0,
+              "actualEra": "1916-1928",
+              "artifactSpecId": "artifact_021",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_06.obj",
+              "baseValue": 490,
+              "caseId": "collector_promise",
+              "caseResolved": false,
+              "category": "scientific_instruments",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "scientific_instruments",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "SCRATCH",
+                "MECHANICAL_WEAR",
+                "MISSING_PART"
+              ],
+              "displayName": "Aurelian Barometer U",
+              "estimatedValue": 490.0,
+              "evidence": [
+                {
+                  "clueType": "collector_promise:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 62.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "collector_promise:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249.0,
+                "starting": 181.0
+              },
+              "maker": "maker_01",
+              "materialSet": [
+                "material_06",
+                "material_09"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 120",
+              "originalParts": 1.0,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "common",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 0.0,
+              "restorationCost": 52.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.2,
+                "repair": 0.6
+              },
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 950100.0,
+              "sold": false,
+              "storyArtifactId": "story_artifact_13",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 490,
+              "trueRarity": 1.0,
+              "uniqueId": "case_collector_promise",
+              "visualSignature": "model_06.obj|variant_021|model_06|glass|1|21",
+              "visualVariant": "variant_021",
+              "zoom": 1.0
+            },
+            {
+              "acquisitionPrice": 285.0,
+              "actualEra": "1916-1928",
+              "artifactSpecId": "artifact_033",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_03.obj",
+              "baseValue": 718,
+              "caseId": "three_cameras",
+              "caseResolved": false,
+              "category": "optical_devices",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "optical_devices",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "WATER_DAMAGE",
+                "BROKEN_PART",
+                "MECHANICAL_WEAR"
+              ],
+              "displayName": "Marrow Film Camera G",
+              "estimatedValue": 718.0,
+              "evidence": [
+                {
+                  "clueType": "three_cameras:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 63.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "three_cameras:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249.0,
+                "starting": 181.0
+              },
+              "maker": "maker_13",
+              "materialSet": [
+                "material_03",
+                "material_06"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 132",
+              "originalParts": 1.0,
+              "partStates": {
+                "body": true,
+                "mechanism": true,
+                "panel": true
+              },
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "common",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 1.0,
+              "restorationCost": 53.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.4,
+                "repair": 0.6
+              },
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 950101.0,
+              "sold": false,
+              "storyArtifactId": "story_artifact_14",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": true,
+                "part_family": "camera",
+                "parts": [
+                  "body",
+                  "panel",
+                  "mechanism"
+                ]
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 718,
+              "trueRarity": 1.0,
+              "uniqueId": "case_three_cameras",
+              "visualSignature": "model_03.obj|variant_033|model_03|ceramic|2|33",
+              "visualVariant": "variant_033",
+              "zoom": 1.0
+            }
+          ],
+          "knownClues": [
+            [
+              "PROVENANCE",
+              "MATERIAL",
+              "collector_promise:legacy_visible"
+            ],
+            [
+              "PROVENANCE",
+              "MATERIAL",
+              "three_cameras:legacy_visible"
+            ]
+          ],
+          "ledger": {
+            "collector_promise": {
+              "artifactUid": "case_collector_promise",
+              "disposition": "INVENTORY",
+              "issued": true,
+              "migrationSentinel": "ledger:collector_promise",
+              "publicAppraisalSnapshot": 490.0,
+              "publicConditionSnapshot": {
+                "historicalIntegrity": 62.25
+              },
+              "saleTransactionId": ""
+            },
+            "three_cameras": {
+              "artifactUid": "case_three_cameras",
+              "disposition": "INVENTORY",
+              "issued": true,
+              "migrationSentinel": "ledger:three_cameras",
+              "publicAppraisalSnapshot": 718.0,
+              "publicConditionSnapshot": {
+                "historicalIntegrity": 63.25
+              },
+              "saleTransactionId": ""
+            }
+          },
+          "profile": {
+            "clearedStages": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "highestUnlockedStage": 5,
+            "schema_version": 1,
+            "stageBest": {
+              "1": 55.0,
+              "2": 58.0,
+              "3": 61.0,
+              "4": 64.0
+            },
+            "tutorialCompletedSteps": []
+          },
+          "repair": [
+            {
+              "cost": 52.5,
+              "integrity": 62.25,
+              "quality": 27.0
+            },
+            {
+              "cost": 53.5,
+              "integrity": 63.25,
+              "quality": 27.0
+            }
+          ],
+          "rng": -3378380881708314866,
+          "telemetry": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "budgetBasis": 1200,
+            "investigationActions": 17,
+            "investigationRiskActions": 6,
+            "investigationRiskWeightSum": 8.75,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 0,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairToolUseCounts": {}
+          },
+          "tutorial": [
+            "INVESTIGATE",
+            "CITE"
+          ]
+        },
+        "artifacts": {
+          "collector_promise": {
+            "after": {
+              "acquisitionPrice": 206.0,
+              "actualEra": "1916-1928",
+              "artifactSpecId": "artifact_021",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_06.obj",
+              "baseValue": 490,
+              "caseId": "collector_promise",
+              "caseResolved": false,
+              "category": "scientific_instruments",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "scientific_instruments",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "SCRATCH",
+                "MECHANICAL_WEAR",
+                "MISSING_PART"
+              ],
+              "displayName": "Aurelian Barometer U",
+              "estimatedValue": 490.0,
+              "evidence": [
+                {
+                  "clueType": "collector_promise:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 62.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "collector_promise:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249.0,
+                "starting": 181.0
+              },
+              "maker": "maker_01",
+              "materialSet": [
+                "material_06",
+                "material_09"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 120",
+              "originalParts": 1.0,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "common",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 0.0,
+              "restorationCost": 52.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.2,
+                "repair": 0.6
+              },
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 950100.0,
+              "sold": false,
+              "storyArtifactId": "story_artifact_13",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 490,
+              "trueRarity": 1.0,
+              "uniqueId": "case_collector_promise",
+              "visualSignature": "model_06.obj|variant_021|model_06|glass|1|21",
+              "visualVariant": "variant_021",
+              "zoom": 1.0
+            },
+            "before": {
+              "acquisitionPrice": 206,
+              "actualEra": "1916-1928",
+              "artifactSpecId": "artifact_021",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_06.obj",
+              "baseValue": 490,
+              "caseId": "collector_promise",
+              "caseResolved": false,
+              "category": "scientific_instruments",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "scientific_instruments",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "SCRATCH",
+                "MECHANICAL_WEAR",
+                "MISSING_PART"
+              ],
+              "displayName": "Aurelian Barometer U",
+              "estimatedValue": 490,
+              "evidence": [
+                {
+                  "clueType": "collector_promise:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 62.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "collector_promise:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249,
+                "starting": 181
+              },
+              "maker": "maker_01",
+              "materialSet": [
+                "material_06",
+                "material_09"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 120",
+              "originalParts": 1,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "common",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 52.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.2,
+                "repair": 0.6
+              },
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 950100,
+              "sold": false,
+              "storyArtifactId": "story_artifact_13",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 490,
+              "trueRarity": 1.0,
+              "uniqueId": "case_collector_promise",
+              "visualSignature": "model_06.obj|variant_021|model_06|glass|1|21",
+              "visualVariant": "variant_021",
+              "zoom": 1.0
+            },
+            "ok": true
+          },
+          "three_cameras": {
+            "after": {
+              "acquisitionPrice": 285.0,
+              "actualEra": "1916-1928",
+              "artifactSpecId": "artifact_033",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_03.obj",
+              "baseValue": 718,
+              "caseId": "three_cameras",
+              "caseResolved": false,
+              "category": "optical_devices",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "optical_devices",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "WATER_DAMAGE",
+                "BROKEN_PART",
+                "MECHANICAL_WEAR"
+              ],
+              "displayName": "Marrow Film Camera G",
+              "estimatedValue": 718.0,
+              "evidence": [
+                {
+                  "clueType": "three_cameras:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 63.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "three_cameras:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249.0,
+                "starting": 181.0
+              },
+              "maker": "maker_13",
+              "materialSet": [
+                "material_03",
+                "material_06"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 132",
+              "originalParts": 1.0,
+              "partStates": {
+                "body": true,
+                "mechanism": true,
+                "panel": true
+              },
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "common",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 1.0,
+              "restorationCost": 53.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.4,
+                "repair": 0.6
+              },
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 950101.0,
+              "sold": false,
+              "storyArtifactId": "story_artifact_14",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": true,
+                "part_family": "camera",
+                "parts": [
+                  "body",
+                  "panel",
+                  "mechanism"
+                ]
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 718,
+              "trueRarity": 1.0,
+              "uniqueId": "case_three_cameras",
+              "visualSignature": "model_03.obj|variant_033|model_03|ceramic|2|33",
+              "visualVariant": "variant_033",
+              "zoom": 1.0
+            },
+            "before": {
+              "acquisitionPrice": 285,
+              "actualEra": "1916-1928",
+              "artifactSpecId": "artifact_033",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_03.obj",
+              "baseValue": 718,
+              "caseId": "three_cameras",
+              "caseResolved": false,
+              "category": "optical_devices",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "optical_devices",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "WATER_DAMAGE",
+                "BROKEN_PART",
+                "MECHANICAL_WEAR"
+              ],
+              "displayName": "Marrow Film Camera G",
+              "estimatedValue": 718,
+              "evidence": [
+                {
+                  "clueType": "three_cameras:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 63.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "three_cameras:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249,
+                "starting": 181
+              },
+              "maker": "maker_13",
+              "materialSet": [
+                "material_03",
+                "material_06"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 132",
+              "originalParts": 1,
+              "partStates": {
+                "body": true,
+                "mechanism": true,
+                "panel": true
+              },
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "common",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 53.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.4,
+                "repair": 0.6
+              },
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 950101,
+              "sold": false,
+              "storyArtifactId": "story_artifact_14",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": true,
+                "part_family": "camera",
+                "parts": [
+                  "body",
+                  "panel",
+                  "mechanism"
+                ]
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 718,
+              "trueRarity": 1.0,
+              "uniqueId": "case_three_cameras",
+              "visualSignature": "model_03.obj|variant_033|model_03|ceramic|2|33",
+              "visualVariant": "variant_033",
+              "zoom": 1.0
+            },
+            "ok": true
+          }
+        },
+        "before": {
+          "auction": {
+            "listings": [
+              {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249,
+                "starting": 181
+              },
+              {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249,
+                "starting": 181
+              }
+            ],
+            "pending": {
+              "artifactId": "",
+              "createdDay": 0,
+              "cueIndex": 0,
+              "cueQueue": [],
+              "decisions": {},
+              "grandReserve": false,
+              "publicFingerprint": "",
+              "receipt": {},
+              "result": {},
+              "schemaVersion": 1,
+              "status": "NONE",
+              "transactionId": ""
+            }
+          },
+          "campaignWithoutCaseStates": {
+            "activeCaseId": "collector_promise",
+            "caseArtifactLedger": {
+              "collector_promise": {
+                "artifactUid": "case_collector_promise",
+                "disposition": "INVENTORY",
+                "issued": true,
+                "migrationSentinel": "ledger:collector_promise",
+                "publicAppraisalSnapshot": 490,
+                "publicConditionSnapshot": {
+                  "historicalIntegrity": 62.25
+                },
+                "saleTransactionId": ""
+              },
+              "three_cameras": {
+                "artifactUid": "case_three_cameras",
+                "disposition": "INVENTORY",
+                "issued": true,
+                "migrationSentinel": "ledger:three_cameras",
+                "publicAppraisalSnapshot": 718,
+                "publicConditionSnapshot": {
+                  "historicalIntegrity": 63.25
+                },
+                "saleTransactionId": ""
+              }
+            },
+            "caseOutcomes": {},
+            "collectorNetwork": 0,
+            "commissionArtifactUses": {},
+            "completedActs": {},
+            "completedCases": {},
+            "completedCommissionIds": [],
+            "currentAct": "PROLOGUE",
+            "currentEnding": "",
+            "endingMetrics": {},
+            "endingUnlocked": [],
+            "epilogueSeen": false,
+            "ethics": 60,
+            "grandReserve": {
+              "completed": false,
+              "invited": false,
+              "results": [],
+              "score": {},
+              "selectedLotIds": []
+            },
+            "historicalIntegrity": 50,
+            "mastery": {
+              "DECORATIVE": 0,
+              "DOCUMENTARY": 0,
+              "ELECTRICAL": 0,
+              "MECHANICAL": 0,
+              "OPTICAL": 0,
+              "SCIENTIFIC": 0
+            },
+            "museumTrust": 0,
+            "postGame": false,
+            "relationships": {
+              "dorian_vale": {
+                "relationship": 0,
+                "trust": 0
+              },
+              "elias_rowe": {
+                "relationship": 0,
+                "trust": 0
+              },
+              "hana_mire": {
+                "relationship": 0,
+                "trust": 0
+              },
+              "iris_bell": {
+                "relationship": 0,
+                "trust": 0
+              },
+              "lena_falk": {
+                "relationship": 0,
+                "trust": 0
+              },
+              "mara_venn": {
+                "relationship": 0,
+                "trust": 0
+              },
+              "noah_stern": {
+                "relationship": 0,
+                "trust": 0
+              },
+              "victor_hale": {
+                "relationship": 0,
+                "trust": 0
+              }
+            },
+            "schemaVersion": 2,
+            "storyFlags": {
+              "stage5MigrationSentinel": "campaign-preserve"
+            },
+            "unlockedModules": [
+              "basic_bench"
+            ],
+            "workshopGrade": 1
+          },
+          "economy": {
+            "day": 7,
+            "money": 3579,
+            "ownedUpgrades": [
+              "upgrade_01"
+            ],
+            "reputation": 41
+          },
+          "inventory": [
+            {
+              "acquisitionPrice": 206,
+              "actualEra": "1916-1928",
+              "artifactSpecId": "artifact_021",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_06.obj",
+              "baseValue": 490,
+              "caseId": "collector_promise",
+              "caseResolved": false,
+              "category": "scientific_instruments",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "scientific_instruments",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "SCRATCH",
+                "MECHANICAL_WEAR",
+                "MISSING_PART"
+              ],
+              "displayName": "Aurelian Barometer U",
+              "estimatedValue": 490,
+              "evidence": [
+                {
+                  "clueType": "collector_promise:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 62.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "collector_promise:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249,
+                "starting": 181
+              },
+              "maker": "maker_01",
+              "materialSet": [
+                "material_06",
+                "material_09"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 120",
+              "originalParts": 1,
+              "partStates": {},
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "common",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 0,
+              "restorationCost": 52.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.2,
+                "repair": 0.6
+              },
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 950100,
+              "sold": false,
+              "storyArtifactId": "story_artifact_13",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": false,
+                "part_family": "",
+                "parts": []
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 490,
+              "trueRarity": 1.0,
+              "uniqueId": "case_collector_promise",
+              "visualSignature": "model_06.obj|variant_021|model_06|glass|1|21",
+              "visualVariant": "variant_021",
+              "zoom": 1.0
+            },
+            {
+              "acquisitionPrice": 285,
+              "actualEra": "1916-1928",
+              "artifactSpecId": "artifact_033",
+              "auctionProfile": {},
+              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "baseModel": "model_03.obj",
+              "baseValue": 718,
+              "caseId": "three_cameras",
+              "caseResolved": false,
+              "category": "optical_devices",
+              "cleanliness": 18.0,
+              "collectorTags": [
+                "optical_devices",
+                "period",
+                "workshop"
+              ],
+              "compatibleDamages": [
+                "DUST",
+                "GRIME",
+                "RUST",
+                "SCRATCH",
+                "DENT",
+                "CRACK",
+                "BROKEN_PART",
+                "MISSING_PART",
+                "MECHANICAL_WEAR",
+                "WATER_DAMAGE"
+              ],
+              "confidence": 0.73,
+              "damageInstances": [
+                "WATER_DAMAGE",
+                "BROKEN_PART",
+                "MECHANICAL_WEAR"
+              ],
+              "displayName": "Marrow Film Camera G",
+              "estimatedValue": 718,
+              "evidence": [
+                {
+                  "clueType": "three_cameras:legacy",
+                  "confidenceWeight": 0.37,
+                  "contradicts": [],
+                  "observation": "preserve",
+                  "supports": []
+                }
+              ],
+              "historicalIntegrity": 63.25,
+              "inspected": false,
+              "inspectionObservable": {},
+              "knownClues": [
+                "PROVENANCE",
+                "MATERIAL",
+                "three_cameras:legacy_visible"
+              ],
+              "listing": {
+                "confidence": 0.71,
+                "disclosure": "LIKELY",
+                "reserve": 249,
+                "starting": 181
+              },
+              "maker": "maker_13",
+              "materialSet": [
+                "material_03",
+                "material_06"
+              ],
+              "mechanicalCondition": 42.0,
+              "modelName": "Model 132",
+              "originalParts": 1,
+              "partStates": {
+                "body": true,
+                "mechanism": true,
+                "panel": true
+              },
+              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "possibleClues": [
+                "SERIAL_PATTERN",
+                "CONSTRUCTION_METHOD",
+                "MATERIAL",
+                "MECHANISM",
+                "COMPONENT_STYLE",
+                "WEAR_PATTERN",
+                "LABEL",
+                "PATINA",
+                "REPAIR_TRACE",
+                "PROVENANCE",
+                "TOOL_MARK"
+              ],
+              "possibleFaults": [
+                "DUST",
+                "GRIME",
+                "TARNISH"
+              ],
+              "rarity": "common",
+              "repairProfile": {},
+              "repaired": false,
+              "replacementParts": 1,
+              "restorationCost": 53.5,
+              "restorationProfile": {
+                "cleaning": 0.7,
+                "patinaRisk": 0.4,
+                "repair": 0.6
+              },
+              "restorationQuality": 27.0,
+              "rotation": 0.0,
+              "seed": 950101,
+              "sold": false,
+              "storyArtifactId": "story_artifact_14",
+              "structuralCondition": 70.0,
+              "supportedOperations": {
+                "disassembly": true,
+                "part_family": "camera",
+                "parts": [
+                  "body",
+                  "panel",
+                  "mechanism"
+                ]
+              },
+              "surfaceCondition": 55.0,
+              "trueHistoricalSignificance": 1.1225,
+              "trueMarketBaseline": 718,
+              "trueRarity": 1.0,
+              "uniqueId": "case_three_cameras",
+              "visualSignature": "model_03.obj|variant_033|model_03|ceramic|2|33",
+              "visualVariant": "variant_033",
+              "zoom": 1.0
+            }
+          ],
+          "knownClues": [
+            [
+              "PROVENANCE",
+              "MATERIAL",
+              "collector_promise:legacy_visible"
+            ],
+            [
+              "PROVENANCE",
+              "MATERIAL",
+              "three_cameras:legacy_visible"
+            ]
+          ],
+          "ledger": {
+            "collector_promise": {
+              "artifactUid": "case_collector_promise",
+              "disposition": "INVENTORY",
+              "issued": true,
+              "migrationSentinel": "ledger:collector_promise",
+              "publicAppraisalSnapshot": 490,
+              "publicConditionSnapshot": {
+                "historicalIntegrity": 62.25
+              },
+              "saleTransactionId": ""
+            },
+            "three_cameras": {
+              "artifactUid": "case_three_cameras",
+              "disposition": "INVENTORY",
+              "issued": true,
+              "migrationSentinel": "ledger:three_cameras",
+              "publicAppraisalSnapshot": 718,
+              "publicConditionSnapshot": {
+                "historicalIntegrity": 63.25
+              },
+              "saleTransactionId": ""
+            }
+          },
+          "profile": {
+            "clearedStages": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "highestUnlockedStage": 5,
+            "schema_version": 1,
+            "stageBest": {
+              "1": 55.0,
+              "2": 58.0,
+              "3": 61.0,
+              "4": 64.0
+            },
+            "tutorialCompletedSteps": []
+          },
+          "repair": [
+            {
+              "cost": 52.5,
+              "integrity": 62.25,
+              "quality": 27.0
+            },
+            {
+              "cost": 53.5,
+              "integrity": 63.25,
+              "quality": 27.0
+            }
+          ],
+          "rng": -3378380881708314866,
+          "telemetry": {
+            "artifactSalesCount": 0,
+            "auctionCount": 0,
+            "budgetBasis": 1200,
+            "investigationActions": 17,
+            "investigationRiskActions": 6,
+            "investigationRiskWeightSum": 8.75,
+            "listingStrategyCounts": {
+              "AUTO_GRAND_RESERVE": 0,
+              "BALANCED": 0,
+              "CUSTOM": 0,
+              "FAST": 0,
+              "HIGH": 0,
+              "LEGACY_UNKNOWN": 0
+            },
+            "noSaleCount": 0,
+            "relistCount": 0,
+            "repairActions": 0,
+            "repairCostAccrued": 0.0,
+            "repairToolUseCounts": {}
+          },
+          "tutorial": [
+            "INVESTIGATE",
+            "CITE"
+          ]
+        },
+        "protectedExact": true
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-MIGRATION-SCOPE-10",
+      "name": "Canonicalization mutates no artifact, ledger, economy, RNG, known clue, repair, auction, tutorial, telemetry, profile, or campaign state outside caseStates",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after": {
+          "citedEvidenceIds": [
+            "shadow_camera:material"
+          ],
+          "discoveredEvidenceIds": [
+            "shadow_camera:material",
+            "shadow_camera:provenance"
+          ],
+          "migrationSentinel": {
+            "keep": [
+              9.0,
+              2.0,
+              6.0
+            ],
+            "resolved": true
+          },
+          "resolutionResult": {
+            "historicalReceipt": "keep-exact",
+            "outcome": "masterful"
+          },
+          "resolved": true,
+          "selectedHypothesisId": "FORGERY"
+        },
+        "before": {
+          "citedEvidenceIds": [
+            "shadow_camera:material"
+          ],
+          "discoveredEvidenceIds": [
+            "shadow_camera:material",
+            "shadow_camera:provenance"
+          ],
+          "migrationSentinel": {
+            "keep": [
+              9,
+              2,
+              6
+            ],
+            "resolved": true
+          },
+          "resolutionResult": {
+            "historicalReceipt": "keep-exact",
+            "outcome": "masterful"
+          },
+          "resolved": true,
+          "selectedHypothesisId": "FORGERY"
+        }
+      },
+      "executed": true,
+      "id": "S5-AUTHORED-RESOLVED-HISTORY-11",
+      "name": "Resolved Shadow Camera history remains semantically exact even when it contains pre-authored colon identifiers",
+      "passed": true
+    }
+  ]
+}

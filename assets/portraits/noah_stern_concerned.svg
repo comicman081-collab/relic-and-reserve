@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" data-character-id="noah_stern_concerned" data-character-name="Noah Stern" data-rendered-expression="NEGATIVE" data-expression-anchor="128,140" data-face-zone="73 55 110 141" data-face-height-ratio="0.441" data-eye-system="sclera-iris-pupil-highlight" data-runtime-reference="220x250" data-head-height-svg="164" data-visible-face-skin-height-svg="108" data-major-face-stroke-svg="3.5" data-expression-geometry-version="2">
+  <title>Noah Stern concerned portrait</title>
+  <desc>Cute big-eyed archive researcher Noah Stern with chestnut pageboy hair, blue eyes, an indigo cardigan, a tabbed folio, index card, and archival magnifier.</desc>
+  <path fill="#EDF1E8" d="M18 302V91q0-60 60-60h100q60 0 60 60v211z"/>
+  <path fill="#B8C9B9" d="M28 302V84l24-21 23 15 22-37 31 26 28-34 29 39 24-12 19 24v218z"/>
+  <path fill="#DCA64E" d="M39 85l34-24 23 16 32-32 29 29 29-15 31 24v12H39z" opacity=".64"/>
+  <g data-layer="hair" data-feature="chestnut-pageboy-hair">
+    <path fill="#4A2E2A" d="M65 156Q53 101 74 60q22-43 65-37 41 6 54 45l-4 101-25 28-4-103-65-3-4 105-27-25z"/>
+    <path fill="#704435" d="M70 91q8-54 54-66 36-8 61 23l5 28-31-18-58 30-9 60-25-14z"/>
+    <path fill="#8D5A40" d="M82 69q17-37 53-40l-9 18 30-13-14 22 31-8q-35 29-82 39z"/>
+    <path fill="#382425" d="M70 133q10 20 22 26v39l-26-25zm118-4q-8 22-25 31v38l27-27z"/>
+    <path fill="none" stroke="#B57A52" stroke-width="4" stroke-linecap="round" d="M96 47q21-14 42-12m-53 38q23-15 44-18m45 12q9 20 7 47" opacity=".72"/>
+    <path fill="#704435" d="M128 28q-7-18 9-20 15 6 3 22z"/>
+  </g>
+  <g data-layer="face">
+    <ellipse fill="#C58B68" cx="75" cy="137" rx="10" ry="17"/>
+    <ellipse fill="#C58B68" cx="181" cy="137" rx="10" ry="17"/>
+    <path data-part="face-shape" fill="#E1AB83" d="M74 91Q87 57 128 58q41-1 54 33l-7 65q-12 33-47 42-35-9-47-42z"/>
+    <path fill="#F2C7A3" d="M88 99q10-29 40-30 31 1 42 26l-6 56q-11 27-36 34-26-7-36-34z" opacity=".5"/>
+    <g data-part="brows" fill="none" stroke="#4B3734" stroke-width="3.5" stroke-linecap="round">
+      <path d="M89 111q15-12 30-4"/>
+      <path d="M137 107q15-8 30 4"/>
+    </g>
+    <g data-eye="left">
+      <ellipse data-part="sclera" fill="#FFFDF7" cx="105" cy="126" rx="15.5" ry="10"/>
+      <circle data-part="iris" fill="#4E9DC1" cx="106" cy="127" r="8.3"/>
+      <circle data-part="pupil" fill="#203B4B" cx="106" cy="127" r="4.2"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="103" cy="123" r="2.4"/>
+      <circle fill="#A8E4ED" cx="109" cy="130" r="1.4"/>
+      <path fill="none" stroke="#493936" stroke-width="2" stroke-linecap="round" d="M92 121l-5-2m36 2 5-2"/>
+    </g>
+    <g data-eye="right">
+      <ellipse data-part="sclera" fill="#FFFDF7" cx="151" cy="126" rx="15.5" ry="10"/>
+      <circle data-part="iris" fill="#4E9DC1" cx="150" cy="127" r="8.3"/>
+      <circle data-part="pupil" fill="#203B4B" cx="150" cy="127" r="4.2"/>
+      <circle data-part="highlight" fill="#FFFFFF" cx="147" cy="123" r="2.4"/>
+      <circle fill="#A8E4ED" cx="153" cy="130" r="1.4"/>
+      <path fill="none" stroke="#493936" stroke-width="2" stroke-linecap="round" d="M164 121l5-2m-36 2-5-2"/>
+    </g>
+    <ellipse fill="#CB7370" cx="92" cy="153" rx="10" ry="4.8" opacity=".48"/>
+    <ellipse fill="#CB7370" cx="164" cy="153" rx="10" ry="4.8" opacity=".48"/>
+    <g fill="#9B684F" opacity=".7"><circle cx="98" cy="151" r="1.3"/><circle cx="104" cy="154" r="1.2"/><circle cx="158" cy="151" r="1.3"/><circle cx="152" cy="154" r="1.2"/></g>
+    <path data-part="nose" fill="#B8755C" d="M124 138l-5 14 9 5 8-5-5-14z"/>
+    <path data-part="mouth" fill="none" stroke="#7B4651" stroke-width="3.5" stroke-linecap="round" d="M115 174q13-10 26 0"/>
+    <path fill="none" stroke="#F7D0B1" stroke-width="2" stroke-linecap="round" d="M120 164q8 3 16 0" opacity=".82"/>
+  </g>
+  <g data-layer="outfit">
+    <path fill="#263E62" d="M42 304l16-80q8-33 49-40l21 22 21-22q41 7 49 40l16 80z"/>
+    <path fill="#3E5D83" d="M42 304l49-102 37 45 37-45 49 102z"/>
+    <path fill="#FFF2D2" d="M106 185l22 21 22-21-8 55-14 18-14-18z"/>
+    <path fill="#C88B31" d="M122 208h12v55h-12z"/>
+    <path fill="#D6A84C" d="M111 213l17 12 17-12-5 23-12 8-12-8z"/>
+    <path fill="none" stroke="#8CA7BE" stroke-width="4" stroke-linecap="round" d="M60 265h35m66 0h35"/>
+    <path fill="#75909F" d="M157 211h29v20h-29z"/><path fill="#F8EBC8" d="M162 216h19v3h-19zm0 7h14v3h-14z"/>
+  </g>
+  <g data-layer="prop">
+    <g data-feature="folio-index-card">
+      <path fill="#456B59" stroke="#263F38" stroke-width="3" d="M39 230l69-8 9 77-69 8z"/>
+      <path fill="#E7B94E" d="M47 228l19-2 4 8-22 3z"/>
+      <path fill="#FFF4D2" stroke="#715F48" stroke-width="3" d="M56 244l51-3 4 43-51 4z"/>
+      <path fill="#D35F50" d="M62 250h43v8H62z"/>
+      <path fill="none" stroke="#8D7758" stroke-width="3" stroke-linecap="round" d="M65 265h35m-34 9h27"/><circle fill="#4E8CA6" cx="101" cy="280" r="5"/>
+    </g>
+    <g data-feature="archival-magnifier">
+      <circle fill="#A8DDE0" fill-opacity=".45" stroke="#D9B85F" stroke-width="5" cx="177" cy="250" r="20"/>
+      <circle fill="none" stroke="#FFF4C4" stroke-width="2" cx="177" cy="250" r="13"/>
+      <path fill="none" stroke="#684831" stroke-width="8" stroke-linecap="round" d="M191 265l19 27"/>
+      <path fill="none" stroke="#D9B85F" stroke-width="3" stroke-linecap="round" d="M192 264l18 26"/>
+      <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" d="M166 241q8-8 16-5" opacity=".75"/>
+    </g>
+  </g>
+  <g data-layer="expression-anchors" fill="none" stroke="none">
+    <path data-expression="NEUTRAL" data-brow-shift-svg="0" data-eye-height-shift-svg="0" data-mouth-corner-shift-svg="0" d="M95 109h25m16 0h25m-39 58h14"/>
+    <path data-expression="POSITIVE" data-brow-shift-svg="-5" data-eye-height-shift-svg="-3" data-mouth-corner-shift-svg="-5" d="M95 105h25m16 0h25m-28 52q9 12 18 0"/>
+    <path data-expression="NEGATIVE" data-brow-shift-svg="5" data-eye-height-shift-svg="3" data-mouth-corner-shift-svg="5" d="M95 114h25m16 0h25m-28 55q9-10 18 0"/>
+  </g>
+</svg>
