@@ -68,6 +68,36 @@ jobs:
           test -s assets/fonts/NanumGothic-OFL.txt
           grep -Fq 'theme/custom_font="res://assets/fonts/NanumGothic-Regular.ttf"' project.godot
 
+      - name: Verify mobile presentation and audio assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq 'MobileWebLayout="*res://scripts/mobile_web_layout.gd"' project.godot
+          grep -Fq 'window/stretch/mode="canvas_items"' project.godot
+          grep -Fq 'window/stretch/aspect="expand"' project.godot
+          test -s scripts/mobile_web_layout.gd
+          test -s audio/ui_click.wav
+          test -s audio/title/relic_reserve_title/01_first_bell_sunshine.mp3
+          for track in \
+            001_morning_hallway.mp3 \
+            002_lunch_break_laughs.mp3 \
+            005_library_sunbeams.mp3 \
+            007_festival_lanterns.mp3 \
+            008_exam_night_window.mp3 \
+            010_graduation_rehearsal.mp3; do
+            test -s "audio/bgm/relic_reserve_bgm/${track}"
+          done
+          for track in \
+            01_see_you_tomorrow.mp3 \
+            02_the_memory_we_keep.mp3 \
+            03_after_the_final_bell.mp3 \
+            04_summer_never_ends.mp3 \
+            05_our_next_adventure.mp3 \
+            06_the_sky_is_still_blue.mp3; do
+            test -s "audio/endings/relic_reserve_endings/${track}"
+          done
+          echo "Portrait stretch settings, mobile layout bridge, click SFX, screen BGM, and ending BGM assets are present."
+
       - name: Import resources and export Web
         shell: bash
         run: |
@@ -107,7 +137,7 @@ jobs:
           grep -Fq "\"${WEB_BASE}.wasm\"" web-build/index.html
           test ! -e web-build/index.pck
           test ! -e web-build/index.wasm
-          echo "Web export contains the Korean-capable project font and commit-versioned Godot assets."
+          echo "Web export contains Korean font support, responsive portrait settings, audio assets, and commit-versioned Godot assets."
 
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
