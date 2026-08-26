@@ -1,7 +1,9 @@
-name: Deploy Godot Web to GitHub Pages
+name: Build and Deploy Godot Web to GitHub Pages
 
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -11,24 +13,103 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  GODOT_VERSION: "4.7.1"
+  NANUM_GOTHIC_COMMIT: "6a003b5eb672dc8bf5bff5937cf5863f8b175445"
+
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Godot 4.7.1 with export templates
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: false
+          include-templates: true
+
+      - name: Prepare bundled Korean web font
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 \
+            "https://raw.githubusercontent.com/google/fonts/${NANUM_GOTHIC_COMMIT}/ofl/nanumgothic/NanumGothic-Regular.ttf" \
+            --output assets/fonts/NanumGothic-Regular.ttf
+          curl --fail --location --retry 3 \
+            "https://raw.githubusercontent.com/google/fonts/${NANUM_GOTHIC_COMMIT}/ofl/nanumgothic/OFL.txt" \
+            --output assets/fonts/NanumGothic-OFL.txt
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          project = Path("project.godot")
+          text = project.read_text(encoding="utf-8")
+          setting = 'theme/custom_font="res://assets/fonts/NanumGothic-Regular.ttf"'
+
+          if setting not in text:
+              if "[gui]" in text:
+                  text = text.replace("[gui]\n", f"[gui]\n\n{setting}\n", 1)
+              else:
+                  marker = "\n[rendering]\n"
+                  if marker not in text:
+                      raise SystemExit("project.godot has no [rendering] marker for GUI font injection")
+                  text = text.replace(marker, f"\n[gui]\n\n{setting}\n{marker}", 1)
+              project.write_text(text, encoding="utf-8")
+          PY
+
+          test -s assets/fonts/NanumGothic-Regular.ttf
+          test -s assets/fonts/NanumGothic-OFL.txt
+          grep -Fq 'theme/custom_font="res://assets/fonts/NanumGothic-Regular.ttf"' project.godot
+
+      - name: Import resources and export Web
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf web-build
+          mkdir -p web-build
+          godot --headless --path . --import
+          godot --headless --path . --export-release "Web" web-build/index.html
+          touch web-build/.nojekyll
+          cp assets/fonts/NanumGothic-OFL.txt web-build/NanumGothic-OFL.txt
+
+      - name: Verify Web export
+        shell: bash
+        run: |
+          set -euo pipefail
+          godot --version
+          test -s web-build/index.html
+          test -s web-build/index.js
+          test -s web-build/index.pck
+          test -s web-build/index.wasm
+          test -s web-build/NanumGothic-OFL.txt
+          grep -Fq '<meta charset="utf-8">' web-build/index.html
+          echo "Web export contains a bundled Korean-capable project font and UTF-8 HTML shell."
+
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Web export for Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web-build
+
   deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-      - name: Upload Web export
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
