@@ -1,5 +1,6 @@
 extends SceneTree
 
+# Runtime regression gate for the same portrait shape reported from Android Chrome.
 var failures: Array[String] = []
 
 
