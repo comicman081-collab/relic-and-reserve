@@ -98,6 +98,13 @@ jobs:
           done
           echo "Portrait stretch settings, mobile layout bridge, click SFX, screen BGM, and ending BGM assets are present."
 
+      - name: Verify 390x700 portrait runtime geometry
+        shell: bash
+        run: |
+          set -euo pipefail
+          godot --headless --path . --import
+          godot --headless --path . --resolution 390x700 --script tests/mobile_portrait_runtime_tests.gd
+
       - name: Import resources and export Web
         shell: bash
         run: |
