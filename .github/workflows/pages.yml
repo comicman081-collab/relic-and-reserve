@@ -74,8 +74,19 @@ jobs:
           set -euo pipefail
           rm -rf web-build
           mkdir -p web-build
+
+          WEB_BASE="relic-${GITHUB_SHA:0:12}"
+          echo "WEB_BASE=${WEB_BASE}" >> "$GITHUB_ENV"
+
           godot --headless --path . --import
-          godot --headless --path . --export-release "Web" web-build/index.html
+          godot --headless --path . --export-release "Web" "web-build/${WEB_BASE}.html"
+
+          # Keep the public entry point stable while every heavy Godot asset gets
+          # a commit-specific filename. Mobile browsers therefore cannot reuse an
+          # older cached .pck/.wasm after a new deployment.
+          cp "web-build/${WEB_BASE}.html" web-build/index.html
+          rm "web-build/${WEB_BASE}.html"
+
           touch web-build/.nojekyll
           cp assets/fonts/NanumGothic-OFL.txt web-build/NanumGothic-OFL.txt
 
@@ -85,12 +96,18 @@ jobs:
           set -euo pipefail
           godot --version
           test -s web-build/index.html
-          test -s web-build/index.js
-          test -s web-build/index.pck
-          test -s web-build/index.wasm
+          test -s "web-build/${WEB_BASE}.js"
+          test -s "web-build/${WEB_BASE}.pck"
+          test -s "web-build/${WEB_BASE}.wasm"
           test -s web-build/NanumGothic-OFL.txt
           grep -Fq '<meta charset="utf-8">' web-build/index.html
-          echo "Web export contains a bundled Korean-capable project font and UTF-8 HTML shell."
+          grep -Fq "src=\"${WEB_BASE}.js\"" web-build/index.html
+          grep -Fq "\"executable\":\"${WEB_BASE}\"" web-build/index.html
+          grep -Fq "\"${WEB_BASE}.pck\"" web-build/index.html
+          grep -Fq "\"${WEB_BASE}.wasm\"" web-build/index.html
+          test ! -e web-build/index.pck
+          test ! -e web-build/index.wasm
+          echo "Web export contains the Korean-capable project font and commit-versioned Godot assets."
 
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
