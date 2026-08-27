@@ -164,7 +164,7 @@ jobs:
           test ! -e web-build/index.wasm
           echo "Web export contains Korean font support, responsive portrait settings, audio assets, and commit-versioned Godot assets."
 
-      - name: Capture real 390x700 Web portrait smoke
+      - name: Capture and verify real 390x700 Web portrait
         shell: bash
         run: |
           set -euo pipefail
@@ -192,22 +192,116 @@ jobs:
             exit 1
           fi
 
-          # The Web package is large and the 3D scene must finish WASM/resource
-          # initialization before a screenshot proves anything. A 30s virtual
-          # budget captured only Godot's loader, so allow up to two minutes.
-          timeout 170s "$CHROME" \
+          # Give the large Godot package more time than the previous 120s budget.
+          # The screenshot is validated below, so a loader image cannot pass just
+          # because Chrome produced a PNG file.
+          timeout 280s "$CHROME" \
             --headless=new \
             --no-sandbox \
             --disable-gpu \
             --hide-scrollbars \
             --force-device-scale-factor=1 \
             --window-size=390,700 \
-            --virtual-time-budget=120000 \
+            --virtual-time-budget=240000 \
             --screenshot=qa-web/mobile-390x700.png \
             "http://127.0.0.1:8765/?qa=${GITHUB_SHA}"
 
           test -s qa-web/mobile-390x700.png
           file qa-web/mobile-390x700.png
+
+          # Decode the PNG with the Python standard library only. A real title
+          # screen contains the gold RELIC & RESERVE title and no large Godot-blue
+          # progress bar. The old false-positive loader screenshot had 0 gold
+          # pixels and thousands of blue progress-bar pixels.
+          python3 - <<'PY'
+          from pathlib import Path
+          import struct
+          import zlib
+
+          path = Path("qa-web/mobile-390x700.png")
+          data = path.read_bytes()
+          signature = b"\x89PNG\r\n\x1a\n"
+          if not data.startswith(signature):
+              raise SystemExit("Web smoke screenshot is not a PNG")
+
+          pos = len(signature)
+          width = height = bit_depth = color_type = interlace = None
+          compressed = bytearray()
+          while pos + 12 <= len(data):
+              length = struct.unpack(">I", data[pos:pos + 4])[0]
+              kind = data[pos + 4:pos + 8]
+              payload = data[pos + 8:pos + 8 + length]
+              pos += 12 + length
+              if kind == b"IHDR":
+                  width, height, bit_depth, color_type, _comp, _filter, interlace = struct.unpack(">IIBBBBB", payload)
+              elif kind == b"IDAT":
+                  compressed.extend(payload)
+              elif kind == b"IEND":
+                  break
+
+          if (width, height) != (390, 700):
+              raise SystemExit(f"Unexpected Web smoke size: {width}x{height}")
+          if bit_depth != 8 or color_type not in (2, 6) or interlace != 0:
+              raise SystemExit(f"Unsupported PNG format bit_depth={bit_depth} color_type={color_type} interlace={interlace}")
+
+          channels = 3 if color_type == 2 else 4
+          stride = width * channels
+          raw = zlib.decompress(bytes(compressed))
+          expected = height * (stride + 1)
+          if len(raw) != expected:
+              raise SystemExit(f"Unexpected decompressed PNG size: {len(raw)} != {expected}")
+
+          def paeth(a, b, c):
+              p = a + b - c
+              pa = abs(p - a)
+              pb = abs(p - b)
+              pc = abs(p - c)
+              if pa <= pb and pa <= pc:
+                  return a
+              if pb <= pc:
+                  return b
+              return c
+
+          previous = bytearray(stride)
+          gold = 0
+          loader_blue = 0
+          offset = 0
+          for _y in range(height):
+              filter_type = raw[offset]
+              offset += 1
+              scan = bytearray(raw[offset:offset + stride])
+              offset += stride
+              for i in range(stride):
+                  left = scan[i - channels] if i >= channels else 0
+                  up = previous[i]
+                  up_left = previous[i - channels] if i >= channels else 0
+                  if filter_type == 1:
+                      scan[i] = (scan[i] + left) & 0xFF
+                  elif filter_type == 2:
+                      scan[i] = (scan[i] + up) & 0xFF
+                  elif filter_type == 3:
+                      scan[i] = (scan[i] + ((left + up) >> 1)) & 0xFF
+                  elif filter_type == 4:
+                      scan[i] = (scan[i] + paeth(left, up, up_left)) & 0xFF
+                  elif filter_type != 0:
+                      raise SystemExit(f"Unsupported PNG filter {filter_type}")
+
+              for x in range(width):
+                  base = x * channels
+                  r, g, b = scan[base], scan[base + 1], scan[base + 2]
+                  if r >= 150 and 105 <= g <= 220 and b <= 140 and r >= int(g * 0.9):
+                      gold += 1
+                  if b >= 150 and g >= 70 and r <= 120 and b >= int(r * 1.5):
+                      loader_blue += 1
+              previous = scan
+
+          print(f"WEB_PORTRAIT_PIXEL_QA gold={gold} loader_blue={loader_blue}")
+          if gold < 500:
+              raise SystemExit("Real title screen not detected: insufficient gold title pixels")
+          if loader_blue > 1500:
+              raise SystemExit("Godot loader/progress bar still dominates the screenshot")
+          print("WEB_PORTRAIT_PIXEL_QA: PASS")
+          PY
 
       - name: Upload portrait Web smoke evidence
         uses: actions/upload-artifact@v4
