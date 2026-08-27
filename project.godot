@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 RuntimeRegistry="*res://scripts/runtime_registry.gd"
 GameState="*res://scripts/game_state.gd"
 MobileWebLayout="*res://scripts/mobile_web_layout.gd"
+MobileUXAssistant="*res://scripts/mobile_ux_assistant.gd"
 
 [display]
 
