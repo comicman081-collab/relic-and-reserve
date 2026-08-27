@@ -242,8 +242,8 @@ func _layout_title_menu(portrait: bool) -> void:
 		return
 
 	# Portrait title geometry is absolute. Detach it from its authored center
-	# anchors first; otherwise changing the tall parent size can translate the
-	# menu again after we place it and recreate the off-screen regression.
+	# anchors and pin all four offsets explicitly. Using position/size here left
+	# stale center-anchor offsets that later container sorting expanded to >3000px.
 	menu.anchor_left = 0.0
 	menu.anchor_top = 0.0
 	menu.anchor_right = 0.0
@@ -253,8 +253,10 @@ func _layout_title_menu(portrait: bool) -> void:
 	var menu_height := minf(790.0, maxf(620.0, interface.size.y * 0.34))
 	var menu_x := maxf(24.0, (interface.size.x - menu_width) * 0.5)
 	var menu_y := maxf(48.0, minf(interface.size.y * 0.10, 260.0))
-	menu.position = Vector2(menu_x, menu_y)
-	menu.size = Vector2(menu_width, menu_height)
+	menu.offset_left = menu_x
+	menu.offset_top = menu_y
+	menu.offset_right = menu_x + menu_width
+	menu.offset_bottom = menu_y + menu_height
 	menu.alignment = BoxContainer.ALIGNMENT_CENTER
 	menu.add_theme_constant_override("separation", 30)
 
