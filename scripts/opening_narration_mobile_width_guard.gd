@@ -71,17 +71,27 @@ func _apply_portrait_constraints() -> void:
 	if panel == null:
 		return
 
-	# Pin the dialog to real interface edges. The old fixed width could be wider
-	# than the effective Web canvas after mobile safe-area/browser scaling.
 	var side_margin := clampf(interface.size.x * 0.055, 30.0, 58.0)
+	var panel_width := maxf(320.0, interface.size.x - side_margin * 2.0)
+	var inner_width := maxf(260.0, panel_width - 64.0)
+	var card_text_width := maxf(220.0, inner_width - 56.0)
+
+	# The expert-skip button used to be one very long single line. Button's
+	# intrinsic minimum width then forced the whole panel to 1365 logical px on
+	# a 1280 logical px portrait viewport. Use an explicit two-line mobile label
+	# before applying panel constraints so the combined minimum can shrink.
+	var expert_skip := panel.find_child("OpeningExpertSkip", true, false) as Button
+	if expert_skip != null:
+		expert_skip.text = "게임 방법을 이미 안다면\n전체 튜토리얼 건너뛰기" if String(GameState.language) == "ko" else "Already know how to play?\nSkip the full tutorial"
+		expert_skip.custom_minimum_size = Vector2(inner_width, 88.0)
+		expert_skip.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
+	# Pin the dialog to the real interface edges after all child minimum widths
+	# have been constrained.
 	panel.anchor_left = 0.0
 	panel.anchor_right = 1.0
 	panel.offset_left = side_margin
 	panel.offset_right = -side_margin
-
-	var panel_width := maxf(320.0, interface.size.x - side_margin * 2.0)
-	var inner_width := maxf(260.0, panel_width - 64.0)
-	var card_text_width := maxf(220.0, inner_width - 56.0)
 
 	var content := panel.find_child(CONTENT_NAME, true, false) as VBoxContainer
 	if content != null:
@@ -130,4 +140,4 @@ func _apply_portrait_constraints() -> void:
 		var ui_rect := interface.get_global_rect()
 		var panel_rect := panel.get_global_rect()
 		if panel_rect.end.x > ui_rect.end.x + 1.0:
-			print("OPENING_WIDTH_DEBUG ui=", ui_rect, " panel=", panel_rect, " panel_min=", panel.get_combined_minimum_size(), " content_min=", content.get_combined_minimum_size() if content != null else Vector2.ZERO)
+			print("OPENING_WIDTH_DEBUG ui=", ui_rect, " panel=", panel_rect, " panel_min=", panel.get_combined_minimum_size(), " content_min=", content.get_combined_minimum_size() if content != null else Vector2.ZERO, " skip_min=", expert_skip.get_combined_minimum_size() if expert_skip != null else Vector2.ZERO)
