@@ -28,9 +28,6 @@ func _inside_vertical_bounds(control: Control, parent_height: float, label: Stri
 
 
 func _run() -> void:
-	# Approximate the usable browser canvas on a 390 px wide portrait phone after
-	# status/address/navigation chrome is excluded. Project stretch should expose
-	# a tall 1280-based logical canvas rather than a 1280x720 letterbox.
 	DisplayServer.window_set_size(Vector2i(390, 700))
 	root.size = Vector2i(390, 700)
 	await process_frame
@@ -65,12 +62,10 @@ func _run() -> void:
 	_check(ui.size.y >= 1800.0, "portrait logical height must expand well beyond 720 instead of letterboxing")
 	_check(ui.size.y > ui.size.x * 1.45, "portrait logical canvas must be materially taller than wide")
 
-	# TITLE: this is the regression the previous QA missed. TitleMenu uses center
-	# anchors, so treating Control.position as an anchor offset produces a negative
-	# x coordinate even though the logical canvas dimensions are correct.
 	var title_menu := ui.find_child("TitleMenu", true, false) as Control
 	_check(title_menu != null, "portrait title menu must exist")
 	if title_menu != null:
+		print("MOBILE_PORTRAIT_QA title pos=", title_menu.position, " size=", title_menu.size, " min=", title_menu.get_combined_minimum_size(), " anchors=", Vector4(title_menu.anchor_left, title_menu.anchor_top, title_menu.anchor_right, title_menu.anchor_bottom), " offsets=", Vector4(title_menu.offset_left, title_menu.offset_top, title_menu.offset_right, title_menu.offset_bottom))
 		_inside_horizontal_bounds(title_menu, ui.size.x, "TitleMenu")
 		_inside_vertical_bounds(title_menu, ui.size.y, "TitleMenu")
 		var title_center_x := title_menu.position.x + title_menu.size.x * 0.5
@@ -92,7 +87,6 @@ func _run() -> void:
 		var scene_camera := cameras[0] as Camera3D
 		_check(scene_camera != null and scene_camera.keep_aspect == Camera3D.KEEP_WIDTH, "portrait camera must preserve the authored horizontal composition")
 
-	# NORMAL SHELL: exercise the actual workshop shell after title verification.
 	scene.call("show_workshop")
 	for _frame in range(8):
 		await process_frame
