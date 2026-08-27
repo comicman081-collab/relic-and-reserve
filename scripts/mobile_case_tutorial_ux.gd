@@ -475,6 +475,7 @@ func _tutorial_explanation(step: int) -> String:
 			return _copy(
 				"Read the public bids and bidder reasons. Advance the cues to the final result, then use the hammer/record action to commit the sale result.",
 				"공개 호가와 입찰자 이유를 읽으세요. 마지막 결과까지 장면을 진행한 뒤 [망치/결과 기록]을 눌러 판매 결과를 확정합니다."
+			)
 		_:
 			return _copy(
 				"Follow the highlighted control. The guide advances only when that gameplay action really succeeds.",
