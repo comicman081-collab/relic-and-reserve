@@ -125,3 +125,9 @@ func _apply_portrait_constraints() -> void:
 		title.custom_minimum_size.x = card_text_width
 		title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
+	if DisplayServer.get_name() == "headless":
+		var ui_rect := interface.get_global_rect()
+		var panel_rect := panel.get_global_rect()
+		if panel_rect.end.x > ui_rect.end.x + 1.0:
+			print("OPENING_WIDTH_DEBUG ui=", ui_rect, " panel=", panel_rect, " panel_min=", panel.get_combined_minimum_size(), " content_min=", content.get_combined_minimum_size() if content != null else Vector2.ZERO)
