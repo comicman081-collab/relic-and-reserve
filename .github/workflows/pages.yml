@@ -1,7 +1,9 @@
-name: Deploy Godot Web to GitHub Pages
+name: Build and Deploy Godot Web to GitHub Pages
 
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -11,35 +13,334 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  GODOT_VERSION: "4.7.1"
+  NANUM_GOTHIC_COMMIT: "6a003b5eb672dc8bf5bff5937cf5863f8b175445"
+
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate and stage exact Web runtime
+
+      - name: Validate committed Web runtime against source
         run: >-
           python tools/validators/validate_web_release.py
           --project-root .
           --export-dir docs
           --require-manifest
-          --stage-dir _site
+
+      - name: Setup Godot 4.7.1 with export templates
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: false
+          include-templates: true
+
+      - name: Prepare bundled Korean web font
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 \
+            "https://raw.githubusercontent.com/google/fonts/${NANUM_GOTHIC_COMMIT}/ofl/nanumgothic/NanumGothic-Regular.ttf" \
+            --output assets/fonts/NanumGothic-Regular.ttf
+          curl --fail --location --retry 3 \
+            "https://raw.githubusercontent.com/google/fonts/${NANUM_GOTHIC_COMMIT}/ofl/nanumgothic/OFL.txt" \
+            --output assets/fonts/NanumGothic-OFL.txt
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          project = Path("project.godot")
+          text = project.read_text(encoding="utf-8")
+          setting = 'theme/custom_font="res://assets/fonts/NanumGothic-Regular.ttf"'
+          if setting not in text:
+              if "[gui]" in text:
+                  text = text.replace("[gui]\n", f"[gui]\n\n{setting}\n", 1)
+              else:
+                  marker = "\n[rendering]\n"
+                  if marker not in text:
+                      raise SystemExit("project.godot has no [rendering] marker for GUI font injection")
+                  text = text.replace(marker, f"\n[gui]\n\n{setting}\n{marker}", 1)
+              project.write_text(text, encoding="utf-8")
+          PY
+
+          test -s assets/fonts/NanumGothic-Regular.ttf
+          test -s assets/fonts/NanumGothic-OFL.txt
+          grep -Fq 'theme/custom_font="res://assets/fonts/NanumGothic-Regular.ttf"' project.godot
+
+      - name: Verify mobile presentation and audio assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq 'MobileWebLayout="*res://scripts/mobile_web_layout.gd"' project.godot
+          grep -Fq 'MobileUXAssistant="*res://scripts/mobile_ux_assistant.gd"' project.godot
+          grep -Fq 'MobileFullTextRestore="*res://scripts/mobile_full_text_restore.gd"' project.godot
+          grep -Fq 'TutorialSpotlightDirector="*res://scripts/tutorial_spotlight_director.gd"' project.godot
+          grep -Fq 'OpeningNarrationDirector="*res://scripts/opening_narration_director.gd"' project.godot
+          grep -Fq 'window/stretch/mode="canvas_items"' project.godot
+          grep -Fq 'window/stretch/aspect="expand"' project.godot
+          grep -Fq 'interface.resized' scripts/mobile_web_layout.gd
+          test -s scripts/mobile_web_layout.gd
+          test -s scripts/mobile_ux_assistant.gd
+          test -s scripts/mobile_full_text_restore.gd
+          test -s scripts/tutorial_spotlight_director.gd
+          test -s scripts/opening_narration_director.gd
+          test -s tests/mobile_portrait_runtime_tests.gd
+          test -s tests/mobile_readability_runtime_tests.gd
+          test -s tests/tutorial_spotlight_runtime_tests.gd
+          test -s tests/opening_narration_runtime_tests.gd
+          test -s tests/verify_mobile_web_screenshot.py
+          test -s audio/ui_click.wav
+          test -s audio/title/relic_reserve_title/01_first_bell_sunshine.mp3
+          for track in \
+            001_morning_hallway.mp3 \
+            002_lunch_break_laughs.mp3 \
+            005_library_sunbeams.mp3 \
+            007_festival_lanterns.mp3 \
+            008_exam_night_window.mp3 \
+            010_graduation_rehearsal.mp3; do
+            test -s "audio/bgm/relic_reserve_bgm/${track}"
+          done
+          for track in \
+            01_see_you_tomorrow.mp3 \
+            02_the_memory_we_keep.mp3 \
+            03_after_the_final_bell.mp3 \
+            04_summer_never_ends.mp3 \
+            05_our_next_adventure.mp3 \
+            06_the_sky_is_still_blue.mp3; do
+            test -s "audio/endings/relic_reserve_endings/${track}"
+          done
+          echo "Portrait layout, story opening, menu guide, spotlight tutorial, readable touch details, Korean font, click SFX, screen BGM, and ending BGM assets are present."
+
+      - name: Verify 390x700 portrait runtime geometry
+        shell: bash
+        run: |
+          set -euo pipefail
+          godot --headless --path . --import > /tmp/relic-import.log 2>&1 || {
+            cat /tmp/relic-import.log
+            exit 1
+          }
+
+          set +e
+          godot --headless --path . --resolution 390x700 --script tests/mobile_portrait_runtime_tests.gd 2>&1 | tee /tmp/relic-mobile-runtime.log
+          runtime_status=${PIPESTATUS[0]}
+          set -e
+
+          if [ "$runtime_status" -ne 0 ]; then
+            echo "Portrait runtime exited with status ${runtime_status}."
+            exit "$runtime_status"
+          fi
+          if grep -Eq 'SCRIPT ERROR:|Invalid access to property or key' /tmp/relic-mobile-runtime.log; then
+            echo "Portrait runtime emitted a GDScript error; refusing a false PASS."
+            exit 1
+          fi
+          grep -Fq 'MOBILE_PORTRAIT_RUNTIME_QA: PASS' /tmp/relic-mobile-runtime.log
+
+      - name: Verify readable mobile tutorial UX
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          godot --headless --path . --resolution 390x700 --script tests/mobile_readability_runtime_tests.gd 2>&1 | tee /tmp/relic-mobile-readability.log
+          readability_status=${PIPESTATUS[0]}
+          set -e
+
+          if [ "$readability_status" -ne 0 ]; then
+            echo "Mobile readability runtime exited with status ${readability_status}."
+            exit "$readability_status"
+          fi
+          if grep -Eq 'SCRIPT ERROR:|Invalid access to property or key' /tmp/relic-mobile-readability.log; then
+            echo "Mobile readability runtime emitted a GDScript error; refusing deployment."
+            exit 1
+          fi
+          grep -Fq 'MOBILE_READABILITY_RUNTIME_QA: PASS' /tmp/relic-mobile-readability.log
+
+      - name: Verify beginner spotlight tutorial
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          godot --headless --path . --resolution 390x700 --script tests/tutorial_spotlight_runtime_tests.gd 2>&1 | tee /tmp/relic-tutorial-spotlight.log
+          spotlight_status=${PIPESTATUS[0]}
+          set -e
+
+          if [ "$spotlight_status" -ne 0 ]; then
+            echo "Tutorial spotlight runtime exited with status ${spotlight_status}."
+            exit "$spotlight_status"
+          fi
+          if grep -Eq 'SCRIPT ERROR:|Invalid access to property or key' /tmp/relic-tutorial-spotlight.log; then
+            echo "Tutorial spotlight runtime emitted a GDScript error; refusing deployment."
+            exit 1
+          fi
+          grep -Fq 'TUTORIAL_SPOTLIGHT_RUNTIME_QA: PASS' /tmp/relic-tutorial-spotlight.log
+
+      - name: Verify opening narration and menu guide
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          godot --headless --path . --resolution 390x700 --script tests/opening_narration_runtime_tests.gd 2>&1 | tee /tmp/relic-opening-onboarding.log
+          opening_status=${PIPESTATUS[0]}
+          set -e
+
+          if [ "$opening_status" -ne 0 ]; then
+            echo "Opening onboarding runtime exited with status ${opening_status}."
+            exit "$opening_status"
+          fi
+          if grep -Eq 'SCRIPT ERROR:|Invalid access to property or key' /tmp/relic-opening-onboarding.log; then
+            echo "Opening onboarding emitted a GDScript error; refusing deployment."
+            exit 1
+          fi
+          grep -Fq 'OPENING_ONBOARDING_RUNTIME_QA: PASS' /tmp/relic-opening-onboarding.log
+
+      - name: Import resources and export Web
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf web-build
+          mkdir -p web-build
+
+          WEB_BASE="relic-${GITHUB_SHA:0:12}"
+          echo "WEB_BASE=${WEB_BASE}" >> "$GITHUB_ENV"
+
+          godot --headless --path . --import
+          godot --headless --path . --export-release "Web" "web-build/${WEB_BASE}.html"
+
+          cp "web-build/${WEB_BASE}.html" web-build/index.html
+          rm "web-build/${WEB_BASE}.html"
+          touch web-build/.nojekyll
+          cp assets/fonts/NanumGothic-OFL.txt web-build/NanumGothic-OFL.txt
+
+      - name: Verify Web export
+        shell: bash
+        run: |
+          set -euo pipefail
+          godot --version
+          test -s web-build/index.html
+          test -s "web-build/${WEB_BASE}.js"
+          test -s "web-build/${WEB_BASE}.pck"
+          test -s "web-build/${WEB_BASE}.wasm"
+          test -s web-build/NanumGothic-OFL.txt
+          grep -Fq '<meta charset="utf-8">' web-build/index.html
+          grep -Fq "src=\"${WEB_BASE}.js\"" web-build/index.html
+          grep -Fq "\"executable\":\"${WEB_BASE}\"" web-build/index.html
+          grep -Fq "\"${WEB_BASE}.pck\"" web-build/index.html
+          grep -Fq "\"${WEB_BASE}.wasm\"" web-build/index.html
+          test ! -e web-build/index.pck
+          test ! -e web-build/index.wasm
+          echo "Web export contains Korean font support, responsive portrait settings, story opening, menu onboarding, beginner spotlight tutorial, audio assets, and commit-versioned Godot assets."
+
+      - name: Capture and verify real 390x700 Web portrait
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p qa-web
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)"
+          if [ -z "$CHROME" ]; then
+            echo "No Chromium-compatible browser is available on the runner."
+            exit 1
+          fi
+          "$CHROME" --version
+
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory web-build > /tmp/relic-web-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" >/dev/null 2>&1 || true' EXIT
+
+          ready=0
+          for _attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8765/index.html >/dev/null; then
+              ready=1
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" -ne 1 ]; then
+            cat /tmp/relic-web-server.log
+            exit 1
+          fi
+
+          capture_pass=0
+          for attempt in 1 2 3; do
+            echo "Web portrait capture attempt ${attempt}/3"
+            rm -f qa-web/mobile-390x700.png
+            rm -rf "/tmp/relic-chrome-${attempt}"
+
+            set +e
+            timeout 200s "$CHROME" \
+              --headless=new \
+              --no-sandbox \
+              --disable-dev-shm-usage \
+              --enable-unsafe-swiftshader \
+              --use-gl=angle \
+              --use-angle=swiftshader \
+              --hide-scrollbars \
+              --force-device-scale-factor=1 \
+              --window-size=390,700 \
+              --virtual-time-budget=150000 \
+              --user-data-dir="/tmp/relic-chrome-${attempt}" \
+              --screenshot=qa-web/mobile-390x700.png \
+              "http://127.0.0.1:8765/?qa=${GITHUB_SHA}-${attempt}"
+            chrome_status=$?
+            set -e
+
+            if [ "$chrome_status" -ne 0 ]; then
+              echo "Chrome capture attempt ${attempt} exited with status ${chrome_status}."
+            fi
+
+            if test -s qa-web/mobile-390x700.png; then
+              file qa-web/mobile-390x700.png
+              if python3 tests/verify_mobile_web_screenshot.py qa-web/mobile-390x700.png; then
+                capture_pass=1
+                break
+              fi
+            else
+              echo "Capture attempt ${attempt} produced no screenshot."
+            fi
+            sleep 3
+          done
+
+          if [ "$capture_pass" -ne 1 ]; then
+            echo "No verified real title screenshot after 3 attempts."
+            exit 1
+          fi
+
+      - name: Upload portrait Web smoke evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: mobile-portrait-web-smoke-${{ github.sha }}
+          path: qa-web/mobile-390x700.png
+          if-no-files-found: error
+          retention-days: 2
+
       - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
-      - name: Upload Web export
+
+      - name: Upload Web export for Pages
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: web-build
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-24.04
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

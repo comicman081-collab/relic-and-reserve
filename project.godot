@@ -3,8 +3,7 @@
 ; since the parameters that go here are not all obvious.
 ;
 ; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
+;   [section] ; section between []
 
 config_version=5
 
@@ -22,6 +21,17 @@ default_bus_layout="res://default_bus_layout.tres"
 
 RuntimeRegistry="*res://scripts/runtime_registry.gd"
 GameState="*res://scripts/game_state.gd"
+MobileWebLayout="*res://scripts/mobile_web_layout.gd"
+MobileUXAssistant="*res://scripts/mobile_ux_assistant.gd"
+MobileFullTextRestore="*res://scripts/mobile_full_text_restore.gd"
+MobileCaseTutorialUX="*res://scripts/mobile_case_tutorial_ux.gd"
+TutorialSpotlightDirector="*res://scripts/tutorial_spotlight_director.gd"
+TutorialSpotlightLayoutGuard="*res://scripts/tutorial_spotlight_layout_guard.gd"
+OpeningNarrationDirector="*res://scripts/opening_narration_director.gd"
+OpeningNarrationOverlayGuard="*res://scripts/opening_narration_overlay_guard.gd"
+OpeningNarrationMobileWidthGuard="*res://scripts/opening_narration_mobile_width_guard.gd"
+OpeningNarrationInputGuard="*res://scripts/opening_narration_input_guard.gd"
+TutorialReplayLauncher="*res://scripts/tutorial_replay_launcher.gd"
 
 [display]
 
@@ -29,6 +39,9 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/window_width_override=1280
 window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/stretch/scale_mode="fractional"
 
 [rendering]
 
