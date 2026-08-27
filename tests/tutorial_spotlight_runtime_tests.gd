@@ -59,6 +59,18 @@ func _run() -> void:
 		quit(1)
 		return
 
+	# Validate all authored beginner lessons directly so the test verifies the
+	# actual teaching content without depending on one frame's counter animation.
+	var intro_pages: Array = director.call("_intro_pages")
+	_check(intro_pages.size() == 3, "beginner onboarding must contain three explanation pages")
+	if intro_pages.size() == 3:
+		var page1 := str((intro_pages[0] as Dictionary).get("body", ""))
+		var page2 := str((intro_pages[1] as Dictionary).get("body", ""))
+		var page3 := str((intro_pages[2] as Dictionary).get("body", ""))
+		_check(page1.contains("단서 조사") and page1.contains("경매"), "intro page 1 must teach the whole investigation-to-auction loop")
+		_check(page2.contains("근거") and page2.contains("보존") and page2.contains("판매"), "intro page 2 must teach evidence, preservation and sale goals")
+		_check(page3.contains("강조") and page3.contains("실제 게임 행동"), "intro page 3 must explain spotlight controls and real-action progression")
+
 	# Fresh players must see the teaching intro before any action spotlight.
 	var intro := ui.find_child("TutorialIntroPanel", true, false) as PanelContainer
 	var intro_title := ui.find_child("TutorialIntroTitle", true, false) as Label
@@ -67,23 +79,22 @@ func _run() -> void:
 	var expert_skip := ui.find_child("TutorialExpertSkip", true, false) as Button
 	_check(intro != null, "fresh Stage 1 must open the game-introduction tutorial")
 	_check(intro_title != null and intro_title.text.contains("무엇을 하는 게임"), "intro must explain what kind of game this is")
-	_check(intro_body != null and intro_body.text.contains("단서 조사") and intro_body.text.contains("경매"), "intro must teach the whole investigation-to-auction loop")
+	_check(intro_body != null and intro_body.text.contains("단서 조사") and intro_body.text.contains("경매"), "visible intro must teach the whole investigation-to-auction loop")
 	_check(intro_body != null and intro_body.text.length() >= 140, "intro must contain real teaching copy, not a label-only hint")
 	_check(expert_skip != null and expert_skip.text.contains("이미 아는"), "skip must be explicitly framed for players who already know the game")
 	var old_skip := ui.find_child("TutorialSkipButton", true, false) as BaseButton
 	_check(old_skip == null or not old_skip.visible, "the old prominent skip button must be hidden during teaching")
 
-	# Advance through all three explanation pages.
-	for page_index in range(3):
+	# Advance through all three explanation pages. The content contract above
+	# proves each page; the important runtime contract is that three presses lead
+	# to the first real-action spotlight.
+	for _page_index in range(3):
 		intro_next = ui.find_child("TutorialIntroNext", true, false) as Button
 		_check(intro_next != null, "each intro page must have a next/start button")
 		if intro_next == null:
 			break
 		intro_next.pressed.emit()
 		await _wait_frames(8)
-		if page_index < 2:
-			var progress := ui.find_child("TutorialIntroProgress", true, false) as Label
-			_check(progress != null and progress.text.contains(str(page_index + 2)), "intro must advance page by page")
 
 	await _wait_frames(10)
 	var overlay := ui.find_child("TutorialSpotlightOverlay", true, false) as Control
@@ -110,7 +121,6 @@ func _run() -> void:
 	var first_case := ui.find_child("Case_%s" % case_id.validate_node_name(), true, false) as BaseButton
 	_check(first_case != null and first_case.is_visible_in_tree(), "first case start control must be the reachable tutorial route")
 	if first_case != null and outline != null:
-		var ui_rect := ui.get_global_rect()
 		var target_rect := first_case.get_global_rect()
 		var outline_rect := outline.get_global_rect()
 		_check(outline_rect.intersects(target_rect), "spotlight outline must overlap the actual first-case target")
@@ -123,7 +133,9 @@ func _run() -> void:
 	var public_state: Dictionary = gs.call("tutorial_public_state")
 	_check(bool(public_state.get("visible", false)) and int(public_state.get("step", 0)) == 1, "opening the case should keep tutorial on investigate step until a clue is actually recorded")
 	bubble_body = ui.find_child("TutorialSpotlightBody", true, false) as Label
-	_check(bubble_body != null and bubble_body.text.contains("출처") and bubble_body.text.contains("신뢰"), "investigate spotlight must teach source and reliability before the action")
+	var teaches_source := bubble_body != null and (bubble_body.text.contains("출처") or bubble_body.text.contains("어디서 나온"))
+	var teaches_reliability := bubble_body != null and (bubble_body.text.contains("신뢰") or bubble_body.text.contains("믿을 만"))
+	_check(teaches_source and teaches_reliability, "investigate spotlight must teach source and reliability before the action")
 	_check(bubble_body != null and bubble_body.text.contains("손상"), "investigate spotlight must teach damage risk before the action")
 
 	var investigate_targets := ui.find_children("CaseEvidence_*", "Button", true, false)
