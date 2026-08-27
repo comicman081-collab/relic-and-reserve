@@ -36,6 +36,31 @@ func _tab_titles(ui: Control) -> Array[String]:
 	return titles
 
 
+func _check_tab_page_geometry(ui: Control, context: String) -> void:
+	var panel := ui.find_child("OpeningNarrationPanel", true, false) as Control
+	_check(panel != null, context + ": onboarding panel must exist")
+	if panel == null:
+		return
+	var ui_rect := ui.get_global_rect()
+	var panel_rect := panel.get_global_rect()
+	_check(panel_rect.position.x >= ui_rect.position.x - 1.0, context + ": panel left edge must stay on-screen")
+	_check(panel_rect.end.x <= ui_rect.end.x + 1.0, context + ": panel right edge must stay on-screen")
+	for index in range(1, 4):
+		var card := ui.find_child("OpeningTabCard_%d" % index, true, false) as Control
+		var body := ui.find_child("OpeningTabBody_%d" % index, true, false) as Label
+		var title := ui.find_child("OpeningTabTitle_%d" % index, true, false) as Label
+		_check(card != null and body != null and title != null, "%s: card %d controls must exist" % [context, index])
+		if card == null or body == null or title == null:
+			continue
+		var card_rect := card.get_global_rect()
+		var body_rect := body.get_global_rect()
+		var title_rect := title.get_global_rect()
+		_check(card_rect.end.x <= panel_rect.end.x + 1.0, "%s: card %d must not overflow panel right edge" % [context, index])
+		_check(body_rect.end.x <= card_rect.end.x + 1.0, "%s: card %d body must wrap inside card instead of clipping right" % [context, index])
+		_check(title_rect.end.x <= card_rect.end.x + 1.0, "%s: card %d title must stay inside card" % [context, index])
+		_check(body.autowrap_mode != TextServer.AUTOWRAP_OFF and body.max_lines_visible == -1 and not body.clip_text, "%s: card %d body must allow unlimited wrapped text" % [context, index])
+
+
 func _run() -> void:
 	DisplayServer.window_set_size(Vector2i(390, 700))
 	root.size = Vector2i(390, 700)
@@ -100,23 +125,26 @@ func _run() -> void:
 	_check(third_body.contains("목표") and third_body.contains("닫힌 공방") and third_body.contains("탁상시계"), "opening page 3 must state the player's goal and lead directly into the first case")
 
 	opening.call("_advance_page")
-	await _wait_frames(4)
+	await _wait_frames(5)
 	_check(_page_text(ui, "OpeningNarrationProgress").contains("공방 메뉴 안내") and _page_text(ui, "OpeningNarrationProgress").contains("1 / 3"), "after the story, the navigation guide must begin as three pages")
 	var group1 := _tab_titles(ui)
 	_check(group1 == ["공방", "시장", "보관함"], "menu guide page 1 must explain workshop, market and inventory together")
 	for index in range(1, 4):
 		_check(_page_text(ui, "OpeningTabBody_%d" % index).length() >= 35, "every menu card must contain a useful explanation")
+	_check_tab_page_geometry(ui, "menu guide 1/3")
 
 	opening.call("_advance_page")
-	await _wait_frames(4)
+	await _wait_frames(5)
 	var group2 := _tab_titles(ui)
 	_check(group2 == ["업그레이드", "의뢰", "캠페인"], "menu guide page 2 must explain upgrades, commissions and campaign together")
+	_check_tab_page_geometry(ui, "menu guide 2/3 — user-reported 5/6 page")
 
 	opening.call("_advance_page")
-	await _wait_frames(4)
+	await _wait_frames(5)
 	var group3 := _tab_titles(ui)
 	_check(group3 == ["하루 마치기", "저장", "EN / 한국어"], "menu guide page 3 must explain end day, save and language together")
 	_check(_page_text(ui, "OpeningNarrationOverallProgress").contains("6 / 6"), "story plus menu onboarding must total six tap-through pages")
+	_check_tab_page_geometry(ui, "menu guide 3/3")
 
 	opening.call("_advance_page")
 	await _wait_frames(14)
