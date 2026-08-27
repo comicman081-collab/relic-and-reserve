@@ -3,21 +3,22 @@ extends Node
 # Mobile portrait presentation bridge.
 # The gameplay UI is authored against a 1280x720 landscape baseline. On a
 # portrait Web viewport Godot's canvas_items + expand stretch exposes extra
-# vertical logical space. This autoload fills that space without changing any
-# gameplay/save authority, then restores the original geometry in landscape.
+# vertical logical space. This bridge fills that space without changing any
+# gameplay/save authority and restores the authored geometry in landscape.
 
-const PORTRAIT_LABEL_SCALE := 2.15
-const PORTRAIT_BUTTON_FONT_SCALE := 2.35
-const PORTRAIT_ICON_SCALE := 1.25
+const PORTRAIT_LABEL_SCALE := 2.40
+const PORTRAIT_BUTTON_FONT_SCALE := 3.00
+const PORTRAIT_ICON_SCALE := 1.30
 const PORTRAIT_SIDE_PAD := 36.0
-const PORTRAIT_TOP_PAD := 30.0
-const PORTRAIT_BOTTOM_PAD := 42.0
-const PORTRAIT_HEADER_HEIGHT := 174.0
-const PORTRAIT_CONTENT_TOP := 220.0
-const PORTRAIT_STATUS_HEIGHT := 70.0
+const PORTRAIT_TOP_PAD := 28.0
+const PORTRAIT_BOTTOM_PAD := 34.0
+const PORTRAIT_HEADER_HEIGHT := 190.0
+const PORTRAIT_CONTENT_TOP := 238.0
+const PORTRAIT_STATUS_HEIGHT := 82.0
 const PORTRAIT_NAV_COLUMNS := 3
-const PORTRAIT_NAV_BUTTON_HEIGHT := 148.0
+const PORTRAIT_NAV_BUTTON_HEIGHT := 156.0
 const PORTRAIT_NAV_GAP := 12.0
+const PORTRAIT_TITLE_HIDDEN_PROPS := ["Shelf", "Cabinet", "Lamp"]
 
 const META_BASE_FONT := &"mobile_base_font_size"
 const META_BASE_MIN := &"mobile_base_minimum_size"
@@ -25,7 +26,9 @@ const META_BASE_ICON_MAX := &"mobile_base_icon_max_width"
 const META_BASE_COLUMNS := &"mobile_base_grid_columns"
 const META_BASE_POSITION := &"mobile_base_position"
 const META_BASE_SIZE := &"mobile_base_size"
+const META_BASE_ANCHORS := &"mobile_base_anchors"
 const META_BASE_SEPARATION := &"mobile_base_separation"
+const META_CAMERA_KEEP_ASPECT := &"mobile_base_camera_keep_aspect"
 
 var interface: Control
 var layout_queued := false
@@ -57,10 +60,13 @@ func _on_node_added(node: Node) -> void:
 
 
 func _attach_interface(candidate: Control) -> void:
+	if interface != null and is_instance_valid(interface) and interface != candidate:
+		if interface.resized.is_connected(_on_interface_resized):
+			interface.resized.disconnect(_on_interface_resized)
 	interface = candidate
 	interface.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	if not interface.size_changed.is_connected(_on_interface_size_changed):
-		interface.size_changed.connect(_on_interface_size_changed)
+	if not interface.resized.is_connected(_on_interface_resized):
+		interface.resized.connect(_on_interface_resized)
 	_queue_layout()
 
 
@@ -70,7 +76,7 @@ func _on_root_size_changed() -> void:
 	_queue_layout()
 
 
-func _on_interface_size_changed() -> void:
+func _on_interface_resized() -> void:
 	_queue_layout()
 
 
@@ -92,6 +98,8 @@ func _apply_layout_deferred() -> void:
 	_apply_responsive_style(interface, portrait)
 	_layout_title_menu(portrait)
 	_layout_screen_shell(portrait)
+	_layout_camera_for_portrait(portrait)
+	_layout_title_background(portrait)
 
 
 func is_portrait_layout() -> bool:
@@ -119,9 +127,6 @@ func _input(event: InputEvent) -> void:
 
 
 func _resume_mobile_web_audio() -> void:
-	# Mobile browsers may keep WebAudio suspended until the first explicit user
-	# gesture. The title screen has already assigned its stream by then, so one
-	# in-gesture play is enough; later screen changes use the normal game router.
 	var scene := get_tree().current_scene
 	if scene == null:
 		return
@@ -152,14 +157,14 @@ func _style_control(control: Control, portrait: bool) -> void:
 		var base_button_min: Vector2 = control.get_meta(META_BASE_MIN)
 		control.add_theme_font_size_override("font_size", maxi(1, roundi(float(base_button_font) * (PORTRAIT_BUTTON_FONT_SCALE if portrait else 1.0))))
 		if portrait:
-			control.custom_minimum_size = Vector2(base_button_min.x, maxf(base_button_min.y * 1.65, 108.0))
+			control.custom_minimum_size = Vector2(base_button_min.x, maxf(base_button_min.y * 1.8, 144.0))
 		else:
 			control.custom_minimum_size = base_button_min
 		if control.has_theme_constant_override("icon_max_width") or control.has_meta(META_BASE_ICON_MAX):
 			if not control.has_meta(META_BASE_ICON_MAX):
 				control.set_meta(META_BASE_ICON_MAX, control.get_theme_constant("icon_max_width"))
 			var base_icon_max := int(control.get_meta(META_BASE_ICON_MAX))
-			control.add_theme_constant_override("icon_max_width", maxi(1, roundi(float(base_icon_max) * (1.55 if portrait else 1.0))))
+			control.add_theme_constant_override("icon_max_width", maxi(1, roundi(float(base_icon_max) * (1.60 if portrait else 1.0))))
 	elif control is TextureRect:
 		if not control.has_meta(META_BASE_MIN):
 			control.set_meta(META_BASE_MIN, control.custom_minimum_size)
@@ -176,9 +181,7 @@ func _style_control(control: Control, portrait: bool) -> void:
 func _portrait_grid_columns(grid: GridContainer, base_columns: int) -> int:
 	if base_columns <= 1:
 		return 1
-	if base_columns >= 4:
-		return 2
-	if base_columns == 3:
+	if base_columns >= 3:
 		return 2
 	return base_columns
 
@@ -190,6 +193,11 @@ func _remember_rect(control: Control) -> void:
 		control.set_meta(META_BASE_SIZE, control.size)
 
 
+func _remember_anchors(control: Control) -> void:
+	if not control.has_meta(META_BASE_ANCHORS):
+		control.set_meta(META_BASE_ANCHORS, Vector4(control.anchor_left, control.anchor_top, control.anchor_right, control.anchor_bottom))
+
+
 func _restore_rect(control: Control) -> void:
 	if control.has_meta(META_BASE_POSITION):
 		var base_position: Vector2 = control.get_meta(META_BASE_POSITION)
@@ -197,6 +205,16 @@ func _restore_rect(control: Control) -> void:
 	if control.has_meta(META_BASE_SIZE):
 		var base_size: Vector2 = control.get_meta(META_BASE_SIZE)
 		control.size = base_size
+
+
+func _restore_anchors(control: Control) -> void:
+	if not control.has_meta(META_BASE_ANCHORS):
+		return
+	var anchors: Vector4 = control.get_meta(META_BASE_ANCHORS)
+	control.anchor_left = anchors.x
+	control.anchor_top = anchors.y
+	control.anchor_right = anchors.z
+	control.anchor_bottom = anchors.w
 
 
 func _remember_separation(container: BoxContainer) -> void:
@@ -217,19 +235,29 @@ func _layout_title_menu(portrait: bool) -> void:
 		return
 	var menu := candidate as VBoxContainer
 	_remember_rect(menu)
+	_remember_anchors(menu)
 	_remember_separation(menu)
 	if not portrait:
+		_restore_anchors(menu)
 		_restore_rect(menu)
 		_restore_separation(menu)
 		return
-	var menu_width := minf(interface.size.x - 120.0, 1080.0)
-	var menu_height := minf(maxf(650.0, interface.size.y * 0.48), 1080.0)
-	menu.size = Vector2(menu_width, menu_height)
-	# TitleMenu keeps its authored center anchors. Position is therefore the
-	# offset from the center anchor, not an absolute screen coordinate.
-	menu.position = Vector2(-menu_width * 0.5, -menu_height * 0.5)
+
+	menu.anchor_left = 0.0
+	menu.anchor_top = 0.0
+	menu.anchor_right = 0.0
+	menu.anchor_bottom = 0.0
+
+	var menu_width := maxf(280.0, minf(interface.size.x - 96.0, 1040.0))
+	var menu_height := minf(790.0, maxf(620.0, interface.size.y * 0.34))
+	var menu_x := maxf(24.0, (interface.size.x - menu_width) * 0.5)
+	var menu_y := maxf(48.0, minf(interface.size.y * 0.10, 260.0))
+	menu.offset_left = menu_x
+	menu.offset_top = menu_y
+	menu.offset_right = menu_x + menu_width
+	menu.offset_bottom = menu_y + menu_height
 	menu.alignment = BoxContainer.ALIGNMENT_CENTER
-	menu.add_theme_constant_override("separation", 34)
+	menu.add_theme_constant_override("separation", 30)
 
 
 func _layout_screen_shell(portrait: bool) -> void:
@@ -266,7 +294,7 @@ func _layout_screen_shell(portrait: bool) -> void:
 				_restore_rect(child)
 		return
 
-	var available_width := maxf(400.0, interface.size.x - PORTRAIT_SIDE_PAD * 2.0)
+	var available_width := maxf(280.0, interface.size.x - PORTRAIT_SIDE_PAD * 2.0)
 	var available_height := maxf(900.0, interface.size.y)
 
 	header.position = Vector2(PORTRAIT_SIDE_PAD, PORTRAIT_TOP_PAD)
@@ -302,18 +330,18 @@ func _layout_portrait_header(header: Control) -> void:
 	if labels.size() > 0:
 		var title_label := labels[0] as Label
 		title_label.position = Vector2.ZERO
-		title_label.size = Vector2(header.size.x, 84.0)
+		title_label.size = Vector2(header.size.x, 88.0)
 		title_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	if labels.size() > 1:
 		var stats_label := labels[1] as Label
-		var skip_width := 320.0 if skip_button != null else 0.0
-		stats_label.position = Vector2(0.0, 90.0)
-		stats_label.size = Vector2(maxf(260.0, header.size.x - skip_width - (18.0 if skip_button != null else 0.0)), 72.0)
+		var skip_width := 330.0 if skip_button != null else 0.0
+		stats_label.position = Vector2(0.0, 98.0)
+		stats_label.size = Vector2(maxf(250.0, header.size.x - skip_width - (18.0 if skip_button != null else 0.0)), 78.0)
 		stats_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		stats_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	if skip_button != null:
-		skip_button.position = Vector2(header.size.x - 320.0, 92.0)
-		skip_button.size = Vector2(320.0, 70.0)
+		skip_button.position = Vector2(header.size.x - 330.0, 98.0)
+		skip_button.size = Vector2(330.0, 78.0)
 
 
 func _layout_portrait_navigation(navigation: Control) -> void:
@@ -323,9 +351,42 @@ func _layout_portrait_navigation(navigation: Control) -> void:
 		if not child is Control:
 			continue
 		var column := button_index % PORTRAIT_NAV_COLUMNS
-		var row := button_index / PORTRAIT_NAV_COLUMNS
+		var row := floori(float(button_index) / float(PORTRAIT_NAV_COLUMNS))
 		child.position = Vector2(
 			float(column) * (button_width + PORTRAIT_NAV_GAP),
 			float(row) * (PORTRAIT_NAV_BUTTON_HEIGHT + PORTRAIT_NAV_GAP)
 		)
 		child.size = Vector2(button_width, PORTRAIT_NAV_BUTTON_HEIGHT)
+
+
+func _layout_camera_for_portrait(portrait: bool) -> void:
+	var scene := get_tree().current_scene
+	if scene == null:
+		return
+	var cameras := scene.find_children("*", "Camera3D", true, false)
+	if cameras.is_empty():
+		return
+	var scene_camera := cameras[0] as Camera3D
+	if scene_camera == null:
+		return
+	if not scene_camera.has_meta(META_CAMERA_KEEP_ASPECT):
+		scene_camera.set_meta(META_CAMERA_KEEP_ASPECT, int(scene_camera.keep_aspect))
+	if portrait:
+		scene_camera.keep_aspect = Camera3D.KEEP_WIDTH
+	else:
+		scene_camera.keep_aspect = int(scene_camera.get_meta(META_CAMERA_KEEP_ASPECT))
+
+
+func _layout_title_background(portrait: bool) -> void:
+	var scene := get_tree().current_scene
+	if scene == null:
+		return
+	var screen_name := String(scene.get("screen"))
+	var workshop := scene.find_child("WorkshopEnvironment3D", true, false)
+	if workshop == null:
+		return
+	var hide_for_title := portrait and screen_name == "title"
+	for prop_name in PORTRAIT_TITLE_HIDDEN_PROPS:
+		var prop := workshop.get_node_or_null(NodePath(prop_name))
+		if prop != null:
+			prop.visible = not hide_for_title
