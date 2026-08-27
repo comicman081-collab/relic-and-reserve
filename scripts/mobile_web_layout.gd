@@ -25,6 +25,7 @@ const META_BASE_ICON_MAX := &"mobile_base_icon_max_width"
 const META_BASE_COLUMNS := &"mobile_base_grid_columns"
 const META_BASE_POSITION := &"mobile_base_position"
 const META_BASE_SIZE := &"mobile_base_size"
+const META_BASE_ANCHORS := &"mobile_base_anchors"
 const META_BASE_SEPARATION := &"mobile_base_separation"
 const META_CAMERA_KEEP_ASPECT := &"mobile_base_camera_keep_aspect"
 
@@ -124,9 +125,6 @@ func _input(event: InputEvent) -> void:
 
 
 func _resume_mobile_web_audio() -> void:
-	# Mobile browsers may keep WebAudio suspended until the first explicit user
-	# gesture. The title screen has already assigned its stream by then, so one
-	# in-gesture play is enough; later screen changes use the normal game router.
 	var scene := get_tree().current_scene
 	if scene == null:
 		return
@@ -193,6 +191,11 @@ func _remember_rect(control: Control) -> void:
 		control.set_meta(META_BASE_SIZE, control.size)
 
 
+func _remember_anchors(control: Control) -> void:
+	if not control.has_meta(META_BASE_ANCHORS):
+		control.set_meta(META_BASE_ANCHORS, Vector4(control.anchor_left, control.anchor_top, control.anchor_right, control.anchor_bottom))
+
+
 func _restore_rect(control: Control) -> void:
 	if control.has_meta(META_BASE_POSITION):
 		var base_position: Vector2 = control.get_meta(META_BASE_POSITION)
@@ -200,6 +203,16 @@ func _restore_rect(control: Control) -> void:
 	if control.has_meta(META_BASE_SIZE):
 		var base_size: Vector2 = control.get_meta(META_BASE_SIZE)
 		control.size = base_size
+
+
+func _restore_anchors(control: Control) -> void:
+	if not control.has_meta(META_BASE_ANCHORS):
+		return
+	var anchors: Vector4 = control.get_meta(META_BASE_ANCHORS)
+	control.anchor_left = anchors.x
+	control.anchor_top = anchors.y
+	control.anchor_right = anchors.z
+	control.anchor_bottom = anchors.w
 
 
 func _remember_separation(container: BoxContainer) -> void:
@@ -220,15 +233,22 @@ func _layout_title_menu(portrait: bool) -> void:
 		return
 	var menu := candidate as VBoxContainer
 	_remember_rect(menu)
+	_remember_anchors(menu)
 	_remember_separation(menu)
 	if not portrait:
+		_restore_anchors(menu)
 		_restore_rect(menu)
 		_restore_separation(menu)
 		return
 
-	# Control.position is an absolute parent-local position even when the Control
-	# has center anchors. The previous implementation treated it like an anchor
-	# offset and wrote -width/2, which placed most of TitleMenu off the left edge.
+	# Portrait title geometry is absolute. Detach it from its authored center
+	# anchors first; otherwise changing the tall parent size can translate the
+	# menu again after we place it and recreate the off-screen regression.
+	menu.anchor_left = 0.0
+	menu.anchor_top = 0.0
+	menu.anchor_right = 0.0
+	menu.anchor_bottom = 0.0
+
 	var menu_width := maxf(280.0, minf(interface.size.x - 96.0, 1040.0))
 	var menu_height := minf(790.0, maxf(620.0, interface.size.y * 0.34))
 	var menu_x := maxf(24.0, (interface.size.x - menu_width) * 0.5)
@@ -351,8 +371,6 @@ func _layout_camera_for_portrait(portrait: bool) -> void:
 	if not scene_camera.has_meta(META_CAMERA_KEEP_ASPECT):
 		scene_camera.set_meta(META_CAMERA_KEEP_ASPECT, int(scene_camera.keep_aspect))
 	if portrait:
-		# Preserve the authored horizontal composition on a narrow phone. Keeping
-		# height would crop the sides and make the workbench/lamp look massively zoomed.
 		scene_camera.keep_aspect = Camera3D.KEEP_WIDTH
 	else:
 		scene_camera.keep_aspect = int(scene_camera.get_meta(META_CAMERA_KEEP_ASPECT))
