@@ -82,7 +82,7 @@ func _apply_portrait_constraints() -> void:
 	# before applying panel constraints so the combined minimum can shrink.
 	var expert_skip := panel.find_child("OpeningExpertSkip", true, false) as Button
 	if expert_skip != null:
-		expert_skip.text = "게임 방법을 이미 안다면\n전체 튜토리얼 건너뛰기" if String(GameState.language) == "ko" else "Already know how to play?\nSkip the full tutorial"
+		expert_skip.text = "게임을 이미 아는 분만\n전체 튜토리얼 건너뛰기" if String(GameState.language) == "ko" else "Already know how to play?\nSkip the full tutorial"
 		expert_skip.custom_minimum_size = Vector2(inner_width, 88.0)
 		expert_skip.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 
