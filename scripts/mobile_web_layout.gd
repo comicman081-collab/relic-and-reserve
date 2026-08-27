@@ -18,6 +18,7 @@ const PORTRAIT_STATUS_HEIGHT := 82.0
 const PORTRAIT_NAV_COLUMNS := 3
 const PORTRAIT_NAV_BUTTON_HEIGHT := 156.0
 const PORTRAIT_NAV_GAP := 12.0
+const PORTRAIT_TITLE_HIDDEN_PROPS := ["Shelf", "Cabinet", "Lamp"]
 
 const META_BASE_FONT := &"mobile_base_font_size"
 const META_BASE_MIN := &"mobile_base_minimum_size"
@@ -98,6 +99,7 @@ func _apply_layout_deferred() -> void:
 	_layout_title_menu(portrait)
 	_layout_screen_shell(portrait)
 	_layout_camera_for_portrait(portrait)
+	_layout_title_background(portrait)
 
 
 func is_portrait_layout() -> bool:
@@ -241,9 +243,6 @@ func _layout_title_menu(portrait: bool) -> void:
 		_restore_separation(menu)
 		return
 
-	# Portrait title geometry is absolute. Detach it from its authored center
-	# anchors and pin all four offsets explicitly. Using position/size here left
-	# stale center-anchor offsets that later container sorting expanded to >3000px.
 	menu.anchor_left = 0.0
 	menu.anchor_top = 0.0
 	menu.anchor_right = 0.0
@@ -376,3 +375,18 @@ func _layout_camera_for_portrait(portrait: bool) -> void:
 		scene_camera.keep_aspect = Camera3D.KEEP_WIDTH
 	else:
 		scene_camera.keep_aspect = int(scene_camera.get_meta(META_CAMERA_KEEP_ASPECT))
+
+
+func _layout_title_background(portrait: bool) -> void:
+	var scene := get_tree().current_scene
+	if scene == null:
+		return
+	var screen_name := String(scene.get("screen"))
+	var workshop := scene.find_child("WorkshopEnvironment3D", true, false)
+	if workshop == null:
+		return
+	var hide_for_title := portrait and screen_name == "title"
+	for prop_name in PORTRAIT_TITLE_HIDDEN_PROPS:
+		var prop := workshop.get_node_or_null(NodePath(prop_name))
+		if prop != null:
+			prop.visible = not hide_for_title
