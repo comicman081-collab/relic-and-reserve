@@ -192,14 +192,17 @@ jobs:
             exit 1
           fi
 
-          timeout 70s "$CHROME" \
+          # The Web package is large and the 3D scene must finish WASM/resource
+          # initialization before a screenshot proves anything. A 30s virtual
+          # budget captured only Godot's loader, so allow up to two minutes.
+          timeout 170s "$CHROME" \
             --headless=new \
             --no-sandbox \
             --disable-gpu \
             --hide-scrollbars \
             --force-device-scale-factor=1 \
             --window-size=390,700 \
-            --virtual-time-budget=30000 \
+            --virtual-time-budget=120000 \
             --screenshot=qa-web/mobile-390x700.png \
             "http://127.0.0.1:8765/?qa=${GITHUB_SHA}"
 
