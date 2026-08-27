@@ -1,7 +1,7 @@
 {
   "base_path": "./",
   "deployment": {
-    ".github/workflows/pages.yml": "ebd0d7a704d9a50f720762b99549e2ccfcce68b6ea6ab99b064b1c5486a35429",
+    ".github/workflows/pages.yml": "d512e8539f58aca923d3532a77133095b9ccb732d11c0c6c7fc36041cebb70b1",
     "export_presets.cfg": "2eb3a1e0ecccc5ba6f18a670dc59a49651438f47c16e95627863268dddf861ec",
     "tools/validators/validate_web_release.py": "124300628bb8a641021fe876095873cac38662f2a9358a22b0728cf06d560652"
   },
