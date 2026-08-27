@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage10-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "master_mechanism",
+  "act_id": "ACT_5",
+  "title": {"en": "Master Work: Astronomical Regulator", "ko": "장인 과제: 천문 조속기"},
+  "briefing": {
+    "en": "Dorian Vale presents an astronomical regulator selected for the final Grand Reserve bench. Its mercury-compensation scale, observatory stamp, and escapement show long service, but a jewel setting and lacquer boundary do not appear in the maker catalog. Establish whether those differences belong to the regulator's working history or expose a later rebuild.",
+    "ko": "도리안 베일은 최종 그랜드 리저브 작업대로 선정된 천문 조속기를 제시한다. 수은 보정 눈금과 천문대 각인, 탈진기는 오랜 사용을 보여 주지만 보석 받침과 옻칠 경계는 제작사 목록에 나오지 않는다. 이 차이가 조속기의 사용 역사에 속하는지 후대 재조립을 드러내는지 판별하라."
+  },
+  "central_question": {
+    "en": "Is the regulator a continuous observatory instrument with an in-service jewel setting, a genuine body altered by a later undocumented rebuild, or a reserve-era reproduction?",
+    "ko": "이 조속기는 운용 중 보석 받침을 설치한 연속된 천문대 기기인가, 후대에 기록 없이 재조립한 진품 몸체인가, 아니면 리저브 시대 복제품인가?"
+  },
+  "fiction_notice": {
+    "en": "All observatories, makers, registers, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 천문대, 제작사, 등록부, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the regulator file from the Stage 10 master bench.", "ko": "스테이지 10 장인 작업대에서 조속기 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "test_escapement_before_immobilizing",
+        "source_ref": "src.master_mechanism.artifact.escapement_jewel_sequence",
+        "warning": {
+          "en": "Running the escapement before immobilizing it can polish the tooth faces and overwrite the service sequence around the jewel setting.",
+          "ko": "탈진기를 고정하기 전에 작동시키면 톱니 면이 새로 연마되어 보석 받침 주변의 정비 순서가 덮일 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "Dorian returns an unsupported final report for mentor review; it cannot earn a masterful result.",
+        "ko": "도리안은 근거가 부족한 최종 보고서를 재검토로 돌리며 최고 판정은 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_080",
+    "legacy_story_artifact_id": "story_artifact_26",
+    "display_name": {"en": "Meridian Observatory Regulator OR-118", "ko": "메리디언 천문대 조속기 OR-118"},
+    "authoring_truth_hypothesis_id": "hyp.master_mechanism.genuine_observatory_regulator",
+    "player_prompt": {
+      "en": "Map the patina boundary and immobilize the escapement before testing or regulating the mechanism.",
+      "ko": "기구를 시험하거나 조정하기 전에 녹청 경계를 기록하고 탈진기를 고정하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.master_mechanism.genuine_observatory_regulator",
+      "label": {"en": "Genuine observatory regulator", "ko": "진품 천문대 조속기"},
+      "claim": {"en": "The regulator is a continuous observatory instrument, and the disputed jewel setting is a documented in-service intervention that preserves its identity.", "ko": "조속기는 연속된 천문대 진품이며 논쟁적인 보석 받침은 정체성을 유지한 기록된 운용 중 개입이다."}
+    },
+    {
+      "id": "hyp.master_mechanism.genuine_body_with_later_rebuild",
+      "label": {"en": "Genuine body with a later rebuild", "ko": "후대 재조립을 거친 진품 몸체"},
+      "claim": {"en": "An authentic case and scale survive, but a much later undocumented escapement and jewel assembly changed the mechanism's identity.", "ko": "진품 케이스와 눈금은 남았지만 훨씬 후대의 기록 없는 탈진기와 보석 조립체가 기구의 정체성을 바꾸었다."}
+    },
+    {
+      "id": "hyp.master_mechanism.reserve_era_reproduction",
+      "label": {"en": "Reserve-era reproduction", "ko": "리저브 시대 복제품"},
+      "claim": {"en": "The observatory appearance, patina, and service story were assembled later for the premium market.", "ko": "천문대 외형과 녹청, 정비 이야기는 프리미엄 시장을 위해 후대에 조립되었다."}
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.master_mechanism.artifact.patina_zero_line",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_080",
+      "reliability": "HIGH",
+      "label": {"en": "Patina and zero-line boundary", "ko": "녹청과 영점선 경계"},
+      "short_observation": {"en": "The observatory stamp and zero line sit beneath one continuous aged lacquer system.", "ko": "천문대 각인과 영점선이 하나의 연속된 오래된 옻칠층 아래에 있다."},
+      "text": {"en": "Material mapping shows the OR-118 stamp and mercury-compensation zero line beneath the earliest lacquer. A second period lacquer was brushed around, but not beneath, the jewel access. The boundary records intervention without a replaced case.", "ko": "재료 매핑에서 OR-118 각인과 수은 보정 영점선이 가장 이른 옻칠 아래에 확인된다. 두 번째 당대 옻칠은 보석 접근부 주변에는 발렸지만 그 아래에는 없다. 이 경계는 케이스 교체가 아닌 개입을 기록한다."},
+      "unlock": {"action": "scan_material", "target": "compensation_scale_and_lacquer", "requires": ["material_scanner"], "action_label": {"en": "Map the patina boundary", "ko": "녹청 경계 기록"}, "target_label": {"en": "Zero line and jewel access", "ko": "영점선과 보석 접근부"}},
+      "risk": {"destroyed_by": [], "player_warning": {"en": "Record the lacquer edge before any surface work.", "ko": "표면 작업 전에 옻칠 가장자리를 기록하라."}},
+      "independence": {"group": "regulator_case_history", "depends_on": []},
+      "citation_id": "cite.master_mechanism.artifact.patina_zero_line"
+    },
+    {
+      "source_ref": "src.master_mechanism.artifact.escapement_jewel_sequence",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_080",
+      "reliability": "HIGH",
+      "label": {"en": "Escapement and jewel sequence", "ko": "탈진기와 보석 받침 순서"},
+      "short_observation": {"en": "Tooth polish crosses the jewel service once and then ages continuously.", "ko": "톱니 연마가 보석 정비를 한 번 가로지른 뒤 연속해서 노화했다."},
+      "text": {"en": "With the escapement immobilized, magnification shows tooth-face polish stopping at one historical correction and continuing evenly afterward. The jewel seat tool marks carry the same embedded observatory dust as the adjacent bridge, placing the service within working life rather than a recent rebuild.", "ko": "탈진기를 고정하고 확대하면 톱니 면 연마가 한 번의 역사적 수정 지점에서 끊겼다가 이후 고르게 이어진다. 보석 받침 도구 자국에는 옆 브리지와 같은 천문대 먼지가 박혀 있어 최근 재조립이 아니라 운용 기간 중 정비였음을 보여 준다."},
+      "unlock": {"action": "immobilize_and_inspect", "target": "escapement_and_jewel_seat", "requires": ["src.master_mechanism.artifact.patina_zero_line", "precision_screwdriver", "precision_scale"], "action_label": {"en": "Immobilize and inspect the escapement", "ko": "탈진기 고정 후 조사"}, "target_label": {"en": "Tooth polish and jewel seat", "ko": "톱니 연마와 보석 받침"}},
+      "risk": {"destroyed_by": ["test_escapement_before_immobilizing"], "player_warning": {"en": "Immobilize the escapement before measuring tooth and jewel wear.", "ko": "톱니와 보석 마모를 측정하기 전에 탈진기를 고정하라."}},
+      "independence": {"group": "regulator_mechanism_sequence", "depends_on": ["src.master_mechanism.artifact.patina_zero_line"]},
+      "citation_id": "cite.master_mechanism.artifact.escapement_jewel_sequence"
+    },
+    {
+      "source_ref": "src.master_mechanism.document.observatory_inventory",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_21",
+      "document_id": "doc.master_mechanism.observatory_inventory",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Observatory inventory register", "ko": "천문대 자산 등록부"},
+      "short_observation": {"en": "Signed entries follow OR-118 from installation through deaccession.", "ko": "서명된 항목이 OR-118의 설치부터 이관까지 이어진다."},
+      "text": {"en": "Fictional Observatory Register 21 installs OR-118 in 1936, records its position checks, notes a 1941 jewel service, and follows the same stamped case through deaccession to the Grand Reserve office.", "ko": "가상 천문대 등록부 21은 OR-118을 1936년에 설치하고 위치 점검을 기록하며 1941년 보석 정비와 같은 각인 케이스가 그랜드 리저브 사무국으로 이관된 과정을 잇는다."},
+      "unlock": {"action": "read_document", "target": "observatory_inventory_register", "requires": [], "action_label": {"en": "Read the observatory register", "ko": "천문대 등록부 읽기"}, "target_label": {"en": "Signed OR-118 history", "ko": "서명된 OR-118 이력"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "regulator_custody_record", "depends_on": []},
+      "citation_id": "cite.master_mechanism.document.observatory_inventory"
+    },
+    {
+      "source_ref": "src.master_mechanism.document.jewel_service_log",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_22",
+      "document_id": "doc.master_mechanism.jewel_service_log",
+      "reliability": "MEDIUM",
+      "label": {"en": "Jewel service log", "ko": "보석 정비 기록"},
+      "short_observation": {"en": "The service log explains the unlisted jewel setting and limited lacquer work.", "ko": "정비 기록이 목록에 없는 보석 받침과 제한된 옻칠 작업을 설명한다."},
+      "text": {"en": "The fictional service log records an observatory-made jewel seat after pivot wear, followed by local lacquer protection around the access. It orders retention of the original escapement and prohibits polishing the compensation scale.", "ko": "가상의 정비 기록은 피벗 마모 뒤 천문대에서 보석 받침을 제작하고 접근부 주변만 옻칠로 보호했다고 적는다. 원래 탈진기는 보존하고 보정 눈금은 연마하지 말라고 지시한다."},
+      "unlock": {"action": "compare_document", "target": "jewel_service_log", "requires": [], "action_label": {"en": "Compare the jewel service log", "ko": "보석 정비 기록 대조"}, "target_label": {"en": "1941 observatory intervention", "ko": "1941년 천문대 개입"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "regulator_service_document", "depends_on": []},
+      "citation_id": "cite.master_mechanism.document.jewel_service_log"
+    },
+    {
+      "source_ref": "src.master_mechanism.npc.dorian_reserve_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "dorian_vale",
+      "npc_id": "dorian_vale",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Dorian's Reserve account", "ko": "도리안의 리저브 설명"},
+      "short_observation": {"en": "Dorian distinguishes invitation prestige from proof of authenticity.", "ko": "도리안이 초청의 명성과 진위 증명을 구분한다."},
+      "text": {"en": "Dorian says the Reserve office received OR-118 under seal but never authenticated the jewel setting. Grand Reserve selection is not proof; he expects the workshop to reconcile the object, signed register, and service standard independently.", "ko": "도리안은 리저브 사무국이 OR-118을 봉인 상태로 인수했지만 보석 받침의 진위를 판정하지 않았다고 말한다. 그랜드 리저브 선정은 증명이 아니며 공방이 실물과 서명 등록부, 정비 기준을 독립적으로 대조해야 한다고 강조한다."},
+      "unlock": {"action": "ask_npc", "target": "dorian_vale", "requires": ["src.master_mechanism.document.observatory_inventory"], "action_label": {"en": "Ask Dorian", "ko": "도리안에게 묻기"}, "target_label": {"en": "Dorian Vale", "ko": "도리안 베일"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "dorian_regulator_account", "depends_on": ["src.master_mechanism.document.observatory_inventory"]},
+      "citation_id": "cite.master_mechanism.npc.dorian_reserve_context"
+    },
+    {
+      "source_ref": "src.master_mechanism.reference.observatory_regulator_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_20",
+      "reference_id": "ref.master_mechanism.observatory_regulator_standard",
+      "reliability": "HIGH",
+      "label": {"en": "Observatory regulator service standard", "ko": "천문대 조속기 정비 기준"},
+      "short_observation": {"en": "The standard permits an observatory jewel seat while retaining regulator identity.", "ko": "기준이 조속기 정체성을 유지한 천문대 보석 받침 설치를 허용한다."},
+      "text": {"en": "The fictional period standard matches the OR-118 scale geometry, escapement tooth form, mercury-compensation layout, and in-service jewel correction. The examined sequence conforms to that practice and not to a later reserve reproduction.", "ko": "가상의 당대 기준은 OR-118 눈금 형상과 탈진기 톱니 형태, 수은 보정 배치와 운용 중 보석 수정법에 맞는다. 조사한 순서는 후대 리저브 복제품이 아니라 이 관행에 부합한다."},
+      "unlock": {"action": "query_reference", "target": "reference_database", "requires": ["src.master_mechanism.artifact.escapement_jewel_sequence", "reference_database"], "action_label": {"en": "Check the regulator standard", "ko": "조속기 기준 확인"}, "target_label": {"en": "Period observatory practice", "ko": "당대 천문대 관행"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_regulator_standard", "depends_on": ["src.master_mechanism.artifact.escapement_jewel_sequence"]},
+      "citation_id": "cite.master_mechanism.reference.observatory_regulator_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.master_mechanism.artifact.patina_zero_line", "source_ref": "src.master_mechanism.artifact.patina_zero_line", "label": {"en": "Patina and zero-line boundary", "ko": "녹청과 영점선 경계"}, "locator": {"en": "Object record A-1, compensation scale", "ko": "실물 기록 A-1, 보정 눈금"}},
+    {"id": "cite.master_mechanism.artifact.escapement_jewel_sequence", "source_ref": "src.master_mechanism.artifact.escapement_jewel_sequence", "label": {"en": "Escapement and jewel sequence", "ko": "탈진기와 보석 받침 순서"}, "locator": {"en": "Object record A-2, escapement bridge", "ko": "실물 기록 A-2, 탈진기 브리지"}},
+    {"id": "cite.master_mechanism.document.observatory_inventory", "source_ref": "src.master_mechanism.document.observatory_inventory", "label": {"en": "Observatory inventory register", "ko": "천문대 자산 등록부"}, "locator": {"en": "Fictional register 21, OR-118 entries", "ko": "가상 등록부 21, OR-118 항목"}},
+    {"id": "cite.master_mechanism.document.jewel_service_log", "source_ref": "src.master_mechanism.document.jewel_service_log", "label": {"en": "Jewel service log", "ko": "보석 정비 기록"}, "locator": {"en": "Service log 22, 1941 intervention", "ko": "정비 기록 22, 1941년 개입"}},
+    {"id": "cite.master_mechanism.npc.dorian_reserve_context", "source_ref": "src.master_mechanism.npc.dorian_reserve_context", "label": {"en": "Interview with Dorian Vale", "ko": "도리안 베일 면담"}, "locator": {"en": "Reserve interview N-26", "ko": "리저브 면담 N-26"}},
+    {"id": "cite.master_mechanism.reference.observatory_regulator_standard", "source_ref": "src.master_mechanism.reference.observatory_regulator_standard", "label": {"en": "Observatory regulator standard", "ko": "천문대 조속기 기준"}, "locator": {"en": "Fictional period reference 20, plate 10", "ko": "가상 시대 참고 20, 도판 10"}}
+  ],
+  "evidence_links": [
+    {"id": "link.master_mechanism.patina_supports_genuine", "source_ref": "src.master_mechanism.artifact.patina_zero_line", "hypothesis_id": "hyp.master_mechanism.genuine_observatory_regulator", "relation": "SUPPORT", "weight": 1.0, "independence_group": "regulator_case_history", "citation_id": "cite.master_mechanism.artifact.patina_zero_line"},
+    {"id": "link.master_mechanism.patina_refutes_reproduction", "source_ref": "src.master_mechanism.artifact.patina_zero_line", "hypothesis_id": "hyp.master_mechanism.reserve_era_reproduction", "relation": "REFUTE", "weight": 0.95, "independence_group": "regulator_case_history", "citation_id": "cite.master_mechanism.artifact.patina_zero_line"},
+    {"id": "link.master_mechanism.escapement_supports_genuine", "source_ref": "src.master_mechanism.artifact.escapement_jewel_sequence", "hypothesis_id": "hyp.master_mechanism.genuine_observatory_regulator", "relation": "SUPPORT", "weight": 1.0, "independence_group": "regulator_mechanism_sequence", "citation_id": "cite.master_mechanism.artifact.escapement_jewel_sequence"},
+    {"id": "link.master_mechanism.escapement_refutes_later_rebuild", "source_ref": "src.master_mechanism.artifact.escapement_jewel_sequence", "hypothesis_id": "hyp.master_mechanism.genuine_body_with_later_rebuild", "relation": "REFUTE", "weight": 0.9, "independence_group": "regulator_mechanism_sequence", "citation_id": "cite.master_mechanism.artifact.escapement_jewel_sequence"},
+    {"id": "link.master_mechanism.inventory_supports_genuine", "source_ref": "src.master_mechanism.document.observatory_inventory", "hypothesis_id": "hyp.master_mechanism.genuine_observatory_regulator", "relation": "SUPPORT", "weight": 1.0, "independence_group": "regulator_custody_record", "citation_id": "cite.master_mechanism.document.observatory_inventory"},
+    {"id": "link.master_mechanism.log_supports_genuine", "source_ref": "src.master_mechanism.document.jewel_service_log", "hypothesis_id": "hyp.master_mechanism.genuine_observatory_regulator", "relation": "SUPPORT", "weight": 0.9, "independence_group": "regulator_service_document", "citation_id": "cite.master_mechanism.document.jewel_service_log"},
+    {"id": "link.master_mechanism.dorian_supports_custody", "source_ref": "src.master_mechanism.npc.dorian_reserve_context", "hypothesis_id": "hyp.master_mechanism.genuine_observatory_regulator", "relation": "SUPPORT", "weight": 0.55, "independence_group": "dorian_regulator_account", "citation_id": "cite.master_mechanism.npc.dorian_reserve_context"},
+    {"id": "link.master_mechanism.standard_supports_genuine", "source_ref": "src.master_mechanism.reference.observatory_regulator_standard", "hypothesis_id": "hyp.master_mechanism.genuine_observatory_regulator", "relation": "SUPPORT", "weight": 1.0, "independence_group": "independent_regulator_standard", "citation_id": "cite.master_mechanism.reference.observatory_regulator_standard"},
+    {"id": "link.master_mechanism.standard_refutes_reproduction", "source_ref": "src.master_mechanism.reference.observatory_regulator_standard", "hypothesis_id": "hyp.master_mechanism.reserve_era_reproduction", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_regulator_standard", "citation_id": "cite.master_mechanism.reference.observatory_regulator_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.master_mechanism.genuine_observatory_regulator",
+    "required_source_refs": ["src.master_mechanism.artifact.patina_zero_line", "src.master_mechanism.artifact.escapement_jewel_sequence", "src.master_mechanism.document.observatory_inventory", "src.master_mechanism.reference.observatory_regulator_standard"],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {"en": "Choose one hypothesis and cite four findings from four independent groups. Explain the lacquer boundary, escapement sequence, signed observatory history, and period regulator standard.", "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 옻칠 경계, 탈진기 순서, 서명된 천문대 이력과 당대 조속기 기준을 설명하라."},
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": true, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

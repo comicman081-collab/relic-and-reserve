@@ -311,11 +311,11 @@
     "assetId": "assets_portraits_mara_venn_positive_svg",
     "assetType": "npc_portrait",
     "path": "assets/portraits/mara_venn_positive.svg",
-    "sha256": "6032c31285460817c00c65a5a2bfe8ff6302b739311dc47b2db93783f6f01f67",
-    "sourceType": "PROJECT_GENERATED_OR_SUPPLIED_R2",
+    "sha256": "82edba0fb1680a25d84d689954fd01ff2543d95c46ee7739f0bbbe6e0088bb75",
+    "sourceType": "PROJECT_GENERATED",
     "creator": "RELIC & RESERVE project",
-    "license": "RIGHTS_REVIEW_REQUIRED",
-    "rightsReviewStatus": "UNVERIFIED",
+    "license": "PROJECT_GENERATED",
+    "rightsReviewStatus": "PROJECT_GENERATED",
     "runtimeStatus": "USED_OR_CATALOGUED"
   },
   {

@@ -1,30 +1,44 @@
-# RELIC & RESERVE
+# RELIC & RESERVE — R3
 
-A playable Godot 4.7.1 prototype of an artifact restoration and auction simulator.
+A data-driven artifact investigation, restoration, and auction game built with Godot 4.7.1.
 
-## Run
-Open this folder in Godot 4.7.1 and press Play. New Game → Market → Buy → Inventory → Inspection → Clean/Repair → Authenticate → Auction → Hammer.
+## Play
 
-## Tests
-Run `RUN_TESTS.sh`. Windows users can use `RUN_TESTS.bat`.
-
-## Controls
-Click panels and buttons. Drag during inspection to orbit the artifact. Escape returns to the workshop.
-
-## Build
-`BUILD_WINDOWS.sh` attempts a Windows Desktop export when templates are available.
-
-## Play / Download
 Web: https://comicman081-collab.github.io/relic-and-reserve/
 
-Windows: see the latest GitHub Release for the user-only R3 MVP build. Start a
-New Game to enter the next uncleared Stage; cleared Stages can be replayed from
-the progress screen.
+Start **New Game** to enter the tutorial and the next uncleared Stage. The guide can be skipped from the upper-right corner. Clearing a Stage unlocks the next one; cleared Stages remain available for replay.
 
-## Layout
-`scenes/` contains the canonical scene; `scripts/` contains state and UI; `data/` is data-driven content; `assets/` contains procedural originals; `tools/` contains generators, validators, and simulations; `qa/` contains reports.
+## Local source
 
-## Known issues
-This R1 uses a stylized 2.5D workshop renderer rather than a fully modeled 3D environment. Blender was not available in the cloud, so OBJ/SVG procedural fallbacks are canonical. Windows runtime is not verified inside Linux.
+Open this folder in Godot 4.7.1 and run `scenes/Main.tscn`. Godot and Blender validation for this project is performed headlessly/background-only.
 
-Cloud note: export templates are not bundled; install Godot 4.7.1 export templates for platform builds.
+The core loop is:
+
+`acquire → investigate → cite → report → appraise → restore → list → auction → settle`
+
+## QA
+
+Run the canonical PowerShell suites from the repository root:
+
+```powershell
+.\RUN_R3_IMPORT.ps1
+.\RUN_R3_TESTS.ps1
+.\RUN_R3_VIEWPORT_QA.ps1
+```
+
+Automated PASS is a technical source milestone, not a declaration that the game is complete.
+
+## Controls
+
+Use the mouse or keyboard focus to select panels and actions. Drag during artifact inspection to orbit the object. Escape returns to the workshop where supported. Audio, text size, portrait motion, display mode, and language are available under Settings.
+
+## Repository layout
+
+- `scenes/` and `scripts/`: canonical runtime scene and source
+- `data/`: authored cases, artifacts, characters, events, and progression data
+- `assets/`: repo-native visual and audio assets
+- `tests/` and `qa/`: deterministic validation and visual evidence
+- `tools/`: validators and release helpers
+- `docs/`: verified GitHub Pages Web export
+
+Existing Windows release artifacts are intentionally left untouched unless a new Windows packaging instruction is given. The Web URL above is the current deploy target for this source revision.

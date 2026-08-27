@@ -411,13 +411,16 @@ func run() -> void:
 		"atLeastTwoViableAuctionStrategiesEveryStage": at_least_two_strategies,
 		"pairedAuctionControlsStable": paired_controls_stable
 	}
-	var risk_values_exact: bool = approximately(pressure_1, 0.466667) \
+	# The exact baseline includes the two authored Stage 1 bookends and the two
+	# Stage 10 master cases. Passive opening observations are safe; each new case
+	# retains one genuinely destructive HIGH-risk follow-up.
+	var risk_values_exact: bool = approximately(pressure_1, 0.764706) \
 		and approximately(pressure_5, 0.819248) \
-		and approximately(pressure_10, 1.149037) \
+		and approximately(pressure_10, 1.225639) \
 		and pressure_10 > pressure_5 and pressure_5 > pressure_1
 	var stage5_fallback_risk_exact: bool = case_risk_counts(stage_reports, 5, "collector_promise") == {"NONE": 4, "LOW": 1, "HIGH": 0} \
 		and case_risk_counts(stage_reports, 5, "three_cameras") == {"NONE": 4, "LOW": 1, "HIGH": 0}
-	var stage10_risk_exact: bool = stage_reports.get("10", {}).get("evidencePressure", {}).get("opportunitiesByRisk", {}) == {"NONE": 5, "LOW": 2, "HIGH": 1}
+	var stage10_risk_exact: bool = stage_reports.get("10", {}).get("evidencePressure", {}).get("opportunitiesByRisk", {}) == {"NONE": 8, "LOW": 2, "HIGH": 2}
 	var risk_sparsity_exact: bool = stage5_fallback_risk_exact and stage10_risk_exact
 	var tool_routes_exact: bool = spec_required_tools(stage_reports, 5, "artifact_069") == ["precision_screwdriver", "reference_database"] \
 		and spec_required_tools(stage_reports, 5, "artifact_070") == ["cleaning_cloth", "precision_scale", "repair_toolkit"] \
@@ -434,7 +437,7 @@ func run() -> void:
 			and int(strategies.get("HIGH", {}).get("soldCount", -1)) == 45 \
 			and bool(stage_reports.get(str(stage_id), {}).get("controlledAuction", {}).get("pairedControlStable", false))
 	var scope_identity_and_execution: bool = execution_errors.is_empty() \
-		and stage_reports.get("1", {}).get("evidencePressure", {}).get("opportunitiesByRisk", {}) == {"NONE": 10, "LOW": 4, "HIGH": 1} \
+		and stage_reports.get("1", {}).get("evidencePressure", {}).get("opportunitiesByRisk", {}) == {"NONE": 10, "LOW": 4, "HIGH": 3} \
 		and registry.get_stage_definition(5).get("case_ids", []) == ["collector_promise", "three_cameras", "shadow_camera"] \
 		and registry.get_stage_definition(10).get("case_ids", []) == ["master_camera", "master_mechanism"] \
 		and registry.get_stage_definition(5).get("introduced_artifact_ids", []) == ["artifact_069", "artifact_070"] \

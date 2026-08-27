@@ -56,10 +56,17 @@ var authentication_evidence_page := 0
 var authentication_evidence_index := 0
 var upgrade_page := 0
 var selected_upgrade_id := ""
+var master_volume_db := 0.0
+var bgm_volume_db := -14.0
+var sfx_volume_db := -4.0
+var ui_text_scale := 1.0
+var reduced_motion := false
+var settings_return_screen := "title"
 
 const CASE_ICON_ROOT := "res://assets/ui/case_icons/"
 const CHARACTER_CATALOG_PATH := "res://data/characters/characters.json"
 const PORTRAIT_EXPRESSION_OVERLAY := preload("res://scripts/portrait_expression_overlay.gd")
+const PLAYER_SETTINGS_PATH := "user://relic_reserve_settings.cfg"
 const BGM_ROOT := "res://audio/bgm/relic_reserve_bgm/"
 const TITLE_ROOT := "res://audio/title/relic_reserve_title/"
 const ENDING_ROOT := "res://audio/endings/relic_reserve_endings/"
@@ -89,8 +96,10 @@ const LISTING_PRICE_PRESETS := {
 
 
 func _ready() -> void:
+	load_player_settings()
 	build_world()
 	build_ui()
+	apply_player_settings()
 	language = GameState.language
 	show_title()
 
@@ -124,10 +133,11 @@ func build_world() -> void:
 	camera.look_at_from_position(camera.position, Vector3(0, 1.0, 0))
 	audio = AudioStreamPlayer.new()
 	audio.name = "AudioManager"
+	audio.bus = "SFX"
 	add_child(audio)
 	bgm = AudioStreamPlayer.new()
 	bgm.name = "BGMManager"
-	bgm.volume_db = -14.0
+	bgm.bus = "BGM"
 	bgm.finished.connect(_on_bgm_finished)
 	add_child(bgm)
 
@@ -270,6 +280,8 @@ func bgm_key_for_screen(screen_name: String) -> String:
 			return String(GameState.campaign_state.get("currentEnding", "ENDING_S"))
 		"postgame":
 			return "POSTGAME"
+		"settings":
+			return bgm_key_for_screen(settings_return_screen) if settings_return_screen != "settings" else "workshop"
 		_:
 			return "workshop"
 
@@ -1075,6 +1087,46 @@ func build_ui() -> void:
 	layer.add_child(ui)
 
 
+func load_player_settings() -> void:
+	var config := ConfigFile.new()
+	if config.load(PLAYER_SETTINGS_PATH) != OK:
+		return
+	master_volume_db = clampf(float(config.get_value("audio", "master_db", 0.0)), -80.0, 0.0)
+	bgm_volume_db = clampf(float(config.get_value("audio", "music_db", -14.0)), -80.0, 0.0)
+	sfx_volume_db = clampf(float(config.get_value("audio", "effects_db", -4.0)), -80.0, 0.0)
+	ui_text_scale = clampf(float(config.get_value("accessibility", "text_scale", 1.0)), 1.0, 1.16)
+	reduced_motion = bool(config.get_value("accessibility", "reduced_motion", false))
+
+
+func save_player_settings() -> bool:
+	var config := ConfigFile.new()
+	config.set_value("audio", "master_db", master_volume_db)
+	config.set_value("audio", "music_db", bgm_volume_db)
+	config.set_value("audio", "effects_db", sfx_volume_db)
+	config.set_value("accessibility", "text_scale", ui_text_scale)
+	config.set_value("accessibility", "reduced_motion", reduced_motion)
+	return config.save(PLAYER_SETTINGS_PATH) == OK
+
+
+func apply_player_settings() -> void:
+	var master_bus := AudioServer.get_bus_index("Master")
+	if master_bus >= 0:
+		AudioServer.set_bus_volume_db(master_bus, master_volume_db)
+		AudioServer.set_bus_mute(master_bus, master_volume_db <= -79.0)
+	var bgm_bus := AudioServer.get_bus_index("BGM")
+	if bgm_bus >= 0:
+		AudioServer.set_bus_volume_db(bgm_bus, bgm_volume_db)
+		AudioServer.set_bus_mute(bgm_bus, bgm_volume_db <= -79.0)
+	var sfx_bus := AudioServer.get_bus_index("SFX")
+	if sfx_bus >= 0:
+		AudioServer.set_bus_volume_db(sfx_bus, sfx_volume_db)
+		AudioServer.set_bus_mute(sfx_bus, sfx_volume_db <= -79.0)
+
+
+func scaled_font_size(base_size: int) -> int:
+	return maxi(1, roundi(float(base_size) * ui_text_scale))
+
+
 func text_for(key: String) -> String:
 	return RuntimeRegistry.tr_key(language, key)
 
@@ -1110,7 +1162,7 @@ func clear_ui() -> void:
 func make_label(text_value: String, font_size: int = 18, color: Color = Color("#f2e8cf")) -> Label:
 	var label := Label.new()
 	label.text = text_value
-	label.add_theme_font_size_override("font_size", font_size)
+	label.add_theme_font_size_override("font_size", scaled_font_size(font_size))
 	label.add_theme_color_override("font_color", color)
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	return label
@@ -1120,12 +1172,99 @@ func make_button(text_value: String, callback: Callable, node_name: String = "")
 	var button := Button.new()
 	button.text = text_value
 	button.custom_minimum_size = Vector2(120, 42)
+	button.add_theme_font_size_override("font_size", scaled_font_size(15))
+	button.add_theme_color_override("font_color", Color("#e9e3d5"))
+	button.add_theme_color_override("font_hover_color", Color("#fff4d6"))
+	button.add_theme_color_override("font_pressed_color", Color("#f4ddb0"))
+	button.add_theme_color_override("font_disabled_color", Color("#727c7a"))
+	button.add_theme_stylebox_override("normal", case_panel_style(Color("#131b1ee8"), Color("#465653")))
+	button.add_theme_stylebox_override("hover", case_panel_style(Color("#1d2b2be8"), Color("#9fd6bd"), 2))
+	button.add_theme_stylebox_override("focus", case_panel_style(Color("#1b2728ed"), Color("#e3c681"), 2))
+	button.add_theme_stylebox_override("pressed", case_panel_style(Color("#24352fed"), Color("#d1b66f"), 2))
+	button.add_theme_stylebox_override("disabled", case_panel_style(Color("#111719b8"), Color("#303b3a")))
 	if not node_name.is_empty():
 		button.name = node_name
 	button.pressed.connect(func() -> void:
 		play_sfx("ui_click")
 		callback.call()
 	)
+	return button
+
+
+func make_compact_navigation_button(text_value: String, callback: Callable, node_name: String, icon_name: String = "objective") -> TextureButton:
+	# TextureButton keeps the route keyboard-focusable while allowing one compact
+	# icon-and-label control to coexist with the dense authentication decision grid.
+	var button := TextureButton.new()
+	button.name = node_name
+	button.focus_mode = Control.FOCUS_ALL
+	button.custom_minimum_size = Vector2(120, 42)
+	button.tooltip_text = text_value
+	button.pressed.connect(func() -> void:
+		play_sfx("ui_click")
+		callback.call()
+	)
+	var face := PanelContainer.new()
+	face.name = "CompactNavFace"
+	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	face.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	face.add_theme_stylebox_override("panel", case_panel_style(Color("#131b1ee8"), Color("#465653")))
+	button.add_child(face)
+	var row := HBoxContainer.new()
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.add_theme_constant_override("separation", 7)
+	face.add_child(row)
+	var icon := TextureRect.new()
+	icon.texture = case_icon(icon_name)
+	icon.custom_minimum_size = Vector2(22, 22)
+	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	row.add_child(icon)
+	var label := RichTextLabel.new()
+	label.name = "CompactNavLabel"
+	label.text = text_value
+	label.bbcode_enabled = false
+	label.fit_content = true
+	label.scroll_active = false
+	label.custom_minimum_size = Vector2(34, 22)
+	label.add_theme_font_size_override("normal_font_size", scaled_font_size(13))
+	label.add_theme_color_override("default_color", Color("#e9e3d5"))
+	label.autowrap_mode = TextServer.AUTOWRAP_OFF
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	row.add_child(label)
+	button.set_meta("compact_face", face)
+	button.mouse_entered.connect(func() -> void:
+		if not button.disabled:
+			face.add_theme_stylebox_override("panel", case_panel_style(Color("#1d2b2be8"), Color("#9fd6bd"), 2))
+	)
+	button.mouse_exited.connect(func() -> void:
+		face.add_theme_stylebox_override("panel", case_panel_style(Color("#111719b8"), Color("#303b3a")) if button.disabled else case_panel_style(Color("#131b1ee8"), Color("#465653")))
+	)
+	button.focus_entered.connect(func() -> void:
+		if not button.disabled:
+			face.add_theme_stylebox_override("panel", case_panel_style(Color("#1b2728ed"), Color("#e3c681"), 2))
+	)
+	button.focus_exited.connect(func() -> void:
+		face.add_theme_stylebox_override("panel", case_panel_style(Color("#111719b8"), Color("#303b3a")) if button.disabled else case_panel_style(Color("#131b1ee8"), Color("#465653")))
+	)
+	return button
+
+
+func refresh_compact_navigation_button(button: TextureButton) -> void:
+	var face_value: Variant = button.get_meta("compact_face", null)
+	if face_value is PanelContainer:
+		(face_value as PanelContainer).add_theme_stylebox_override("panel", case_panel_style(Color("#111719b8"), Color("#303b3a")) if button.disabled else case_panel_style(Color("#131b1ee8"), Color("#465653")))
+
+
+func mark_primary_action(button: Button) -> Button:
+	# Visual hierarchy only: this never changes the callback, disabled state or
+	# authority boundary of the existing commit action.
+	button.set_meta("ui_role", "primary")
+	button.add_theme_stylebox_override("normal", case_panel_style(Color("#254238"), Color("#e3c681"), 2))
+	button.add_theme_stylebox_override("hover", case_panel_style(Color("#315548"), Color("#f2d891"), 2))
+	button.add_theme_stylebox_override("pressed", case_panel_style(Color("#1d352d"), Color("#c9ae6d"), 2))
+	button.add_theme_stylebox_override("disabled", case_panel_style(Color("#1b2423"), Color("#59635f"), 1))
+	button.add_theme_color_override("font_color", Color("#fff4d6"))
 	return button
 
 
@@ -1148,15 +1287,99 @@ func case_panel_style(fill: Color, border: Color = Color("#6e685c"), border_widt
 	style.bg_color = fill
 	style.border_color = border
 	style.set_border_width_all(border_width)
-	style.corner_radius_top_left = 10
-	style.corner_radius_top_right = 10
-	style.corner_radius_bottom_left = 10
-	style.corner_radius_bottom_right = 10
+	style.corner_radius_top_left = 12
+	style.corner_radius_top_right = 12
+	style.corner_radius_bottom_left = 12
+	style.corner_radius_bottom_right = 12
 	style.content_margin_left = 10
 	style.content_margin_right = 10
 	style.content_margin_top = 8
 	style.content_margin_bottom = 8
+	style.anti_aliasing = true
 	return style
+
+
+func title_card_style() -> StyleBoxFlat:
+	var style := case_panel_style(Color("#101a1bed"), Color("#e3c681"), 2)
+	style.corner_radius_top_left = 24
+	style.corner_radius_top_right = 24
+	style.corner_radius_bottom_left = 24
+	style.corner_radius_bottom_right = 24
+	style.content_margin_left = 34
+	style.content_margin_right = 34
+	style.content_margin_top = 24
+	style.content_margin_bottom = 24
+	style.shadow_color = Color("#00000088")
+	style.shadow_size = 14
+	style.shadow_offset = Vector2(0, 8)
+	return style
+
+
+func make_title_badge(icon_name: String, tint: Color, node_name: String) -> PanelContainer:
+	var badge := PanelContainer.new()
+	badge.name = node_name
+	badge.custom_minimum_size = Vector2(58, 58)
+	var style := case_panel_style(Color(tint, 0.18), Color(tint, 0.90), 2)
+	style.corner_radius_top_left = 29
+	style.corner_radius_top_right = 29
+	style.corner_radius_bottom_left = 29
+	style.corner_radius_bottom_right = 29
+	style.content_margin_left = 10
+	style.content_margin_right = 10
+	style.content_margin_top = 10
+	style.content_margin_bottom = 10
+	badge.add_theme_stylebox_override("panel", style)
+	var icon := TextureRect.new()
+	icon.texture = case_icon(icon_name)
+	icon.custom_minimum_size = Vector2(36, 36)
+	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	badge.add_child(icon)
+	return badge
+
+
+func make_title_character(character_id: String, node_name: String) -> PanelContainer:
+	var profile := character_profile(character_id)
+	var palette: Array = profile.get("basePalette", ["#e3c681"])
+	var accent := Color(String(palette[0])) if not palette.is_empty() else Color("#e3c681")
+	var frame := PanelContainer.new()
+	frame.name = node_name
+	frame.custom_minimum_size = Vector2(128, 168)
+	var style := case_panel_style(Color(accent, 0.12), Color(accent, 0.82), 2)
+	style.corner_radius_top_left = 20
+	style.corner_radius_top_right = 20
+	style.corner_radius_bottom_left = 20
+	style.corner_radius_bottom_right = 20
+	style.content_margin_left = 8
+	style.content_margin_right = 8
+	style.content_margin_top = 8
+	style.content_margin_bottom = 6
+	frame.add_theme_stylebox_override("panel", style)
+	var column := VBoxContainer.new()
+	column.add_theme_constant_override("separation", 2)
+	frame.add_child(column)
+	var portrait := TextureRect.new()
+	portrait.name = "TitleCharacterPortrait"
+	portrait.custom_minimum_size = Vector2(112, 130)
+	portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	var portrait_path := String(profile.get("portraitAssetId", ""))
+	if not portrait_path.is_empty() and ResourceLoader.exists(portrait_path):
+		portrait.texture = load(portrait_path)
+	portrait.tooltip_text = localized_value(profile.get("accessibilityLabel", profile.get("displayName", "")))
+	portrait.mouse_filter = Control.MOUSE_FILTER_PASS
+	column.add_child(portrait)
+	var identity_text := localized_value(profile.get("displayName", ""))
+	var identity := make_label(identity_text, 12, Color("#f2e8cf"))
+	identity.name = "TitleCharacterName"
+	identity.tooltip_text = localized_value(profile.get("displayName", ""))
+	identity.max_lines_visible = 1
+	identity.autowrap_mode = TextServer.AUTOWRAP_OFF
+	identity.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	identity.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	column.add_child(identity)
+	return frame
 
 
 func make_case_tile(icon_name: String, heading: String, value: Variant, tooltip_value: String = "") -> PanelContainer:
@@ -1203,7 +1426,7 @@ func make_case_icon_button(icon_name: String, text_value: String, callback: Call
 	button.clip_text = true
 	button.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	button.custom_minimum_size = minimum_size
-	button.add_theme_font_size_override("font_size", 14)
+	button.add_theme_font_size_override("font_size", scaled_font_size(14))
 	button.add_theme_constant_override("icon_max_width", 40)
 	button.add_theme_stylebox_override("normal", case_panel_style(Color("#151b1fe8"), Color("#5d625f")))
 	button.add_theme_stylebox_override("hover", case_panel_style(Color("#222b2fe8"), Color("#e3c681"), 2))
@@ -1426,6 +1649,10 @@ func character_cue(character_id: String, semantic_state: String, dialogue_overri
 	var accent_value: String = String(stage_variant.get("accentColor", ""))
 	var accent := Color(accent_value) if not accent_value.is_empty() else (Color(String(palette[0])) if not palette.is_empty() else Color("#e3c681"))
 	var dialogue_value: Variant = dialogue_override if not dialogue_override.is_empty() else cue_spec.get("dialogue", {"en": character_state_label(semantic_state), "ko": character_state_label(semantic_state)})
+	if dialogue_override.is_empty() and String(profile.get("role", "")) == "BIDDER":
+		var identity_dialogue: Variant = profile.get("auctionDialogue", {}).get(semantic_state, {})
+		if identity_dialogue is Dictionary and not identity_dialogue.is_empty():
+			dialogue_value = identity_dialogue
 	return {
 		"profile": profile,
 		"characterId": character_id,
@@ -1484,6 +1711,9 @@ func finish_portrait_micro_reaction(anchor: Control) -> void:
 
 
 func play_portrait_micro_reaction(anchor: Control, contract: Dictionary) -> void:
+	if reduced_motion:
+		finish_portrait_micro_reaction(anchor)
+		return
 	# Let containers resolve their rectangles first. A panel cleared during this
 	# frame simply exits here; tweens are also bound to the surviving child.
 	await get_tree().process_frame
@@ -1573,7 +1803,7 @@ func make_portrait_dialogue_panel(cue: Dictionary, panel_width: float, portrait_
 	band_badge.text = "%s %d · %s" % [stage_band_label(cue.stageBand), int(GameState.current_stage), accessory]
 	band_badge.position = Vector2(8, portrait_height - 29)
 	band_badge.size = Vector2(panel_width - 36, 24)
-	band_badge.add_theme_font_size_override("font_size", 12)
+	band_badge.add_theme_font_size_override("font_size", scaled_font_size(12))
 	band_badge.add_theme_color_override("font_color", Color("#fff5d9"))
 	band_badge.add_theme_stylebox_override("normal", case_panel_style(Color(accent, 0.82), accent, 0))
 	portrait_stack.add_child(band_badge)
@@ -1725,6 +1955,14 @@ func stabilize_tutorial_target_scroll(target: Control, scroll: ScrollContainer, 
 	# The dossier is intentionally vertical-only.  ensure_control_visible may
 	# still alter a hidden horizontal scrollbar, so pin it to the public layout.
 	scroll.scroll_horizontal = 0
+	# Godot applies ensure_control_visible during the following container-layout
+	# pass. Measuring sooner can see the pre-scroll rect, then the deferred ensure
+	# overrides our correction and leaves a citation button clipped behind the
+	# tutorial rail. Let that one authoritative ensure settle before enforcing
+	# the visible viewport bounds.
+	await get_tree().process_frame
+	if render_serial != tutorial_render_serial or target == null or scroll == null or not is_instance_valid(target) or not is_instance_valid(scroll):
+		return
 	var target_rect := target.get_global_rect()
 	var visible_rect := scroll.get_global_rect()
 	if target_rect.position.y < visible_rect.position.y:
@@ -1781,6 +2019,110 @@ func resolve_tutorial_guidance_target(render_serial: int) -> void:
 		stabilize_tutorial_target_scroll(target, target_scroll, render_serial)
 
 
+func journey_public_facts() -> Dictionary:
+	return GameState.workflow_public_facts(String(selected.get("uniqueId", "")))
+
+
+func journey_phase_index(screen_name: String = screen) -> int:
+	if screen_name in ["title", "stage_select", "settings", "ending", "postgame"] or GameState.stage_clear_pending():
+		return -1
+	var facts := journey_public_facts()
+	if not bool(facts.get("artifactPresent", false)):
+		return 0
+	if String(facts.get("auctionStatus", "NONE")) in ["PENDING", "COMMITTED"] or GameState.grand_reserve_active():
+		return 5
+	if not bool(facts.get("investigated", false)):
+		return 1
+	if bool(facts.get("caseBound", false)) and not bool(facts.get("caseResolved", false)):
+		return 2
+	if not bool(facts.get("hypothesisPrepared", false)):
+		return 2
+	if bool(facts.get("repairRequired", false)) and not bool(facts.get("repairCompleted", false)):
+		return 3
+	if not bool(facts.get("listed", false)):
+		return 4
+	return 5
+
+
+func journey_step_copy(step_index: int) -> Dictionary:
+	var steps := [
+		{"icon": "artifact", "en": "FIND", "ko": "유물"},
+		{"icon": "clue_generic", "en": "INSPECT", "ko": "조사"},
+		{"icon": "citation", "en": "DECIDE", "ko": "판단"},
+		{"icon": "tool", "en": "PRESERVE", "ko": "보존"},
+		{"icon": "report", "en": "LIST", "ko": "출품"},
+		{"icon": "support", "en": "AUCTION", "ko": "경매"}
+	]
+	return steps[clampi(step_index, 0, steps.size() - 1)]
+
+
+func make_journey_rail() -> PanelContainer:
+	var active_index := journey_phase_index()
+	var rail := PanelContainer.new()
+	rail.name = "JourneyRail"
+	rail.custom_minimum_size = Vector2(0, 36)
+	rail.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	rail.add_theme_stylebox_override("panel", case_panel_style(Color("#101619df"), Color("#4d5b58")))
+	var row := HBoxContainer.new()
+	row.name = "JourneySteps"
+	row.add_theme_constant_override("separation", 5)
+	rail.add_child(row)
+	for step_index in range(6):
+		var step := journey_step_copy(step_index)
+		var active := step_index == active_index
+		var completed := active_index >= 0 and step_index < active_index
+		var step_panel := PanelContainer.new()
+		step_panel.name = "JourneyStep_%d" % step_index
+		step_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		step_panel.add_theme_stylebox_override("panel", case_panel_style(
+			Color("#1b2b25") if active else Color("#151b1ee8"),
+			Color("#e3c681") if active else (Color("#6fae98") if completed else Color("#394548")),
+			2 if active else 1
+		))
+		var step_row := HBoxContainer.new()
+		step_row.add_theme_constant_override("separation", 5)
+		step_panel.add_child(step_row)
+		var icon := TextureRect.new()
+		icon.texture = case_icon(String(step.icon))
+		icon.custom_minimum_size = Vector2(20, 20)
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		step_row.add_child(icon)
+		var prefix := "● " if active else ("✓ " if completed else "")
+		var label := make_label(prefix + bilingual(String(step.en), String(step.ko)), 12, Color("#f2e8cf") if active else Color("#aab7b5"))
+		label.name = "JourneyStepLabel_%d" % step_index
+		label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		label.max_lines_visible = 1
+		label.autowrap_mode = TextServer.AUTOWRAP_OFF
+		label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		step_row.add_child(label)
+		step_panel.tooltip_text = bilingual(
+			"Relic workflow step %d of 6" % [step_index + 1],
+			"유물 작업 흐름 %d / 6" % [step_index + 1]
+		)
+		row.add_child(step_panel)
+	return rail
+
+
+func should_show_journey_rail() -> bool:
+	if bool(tutorial_guidance_state.get("visible", false)) or journey_phase_index() < 0:
+		return false
+	# Auction already presents the active step, price and primary action in its
+	# own hierarchy. Repeating the six-step rail here steals the exact vertical
+	# space needed for terminal receipts at the 116% accessibility size.
+	if screen == "auction":
+		return false
+	if screen == "inventory":
+		var pending := GameState.pending_auction_public_state()
+		if bool(pending.get("ok", false)) \
+			and String(pending.get("status", "")) == "COMMITTED" \
+			and not bool(pending.get("grandReserve", false)):
+			return false
+	return true
+
+
 func screen_shell(title_value: String, world_mode: String = "workshop") -> VBoxContainer:
 	clear_ui()
 	play_bgm_for_screen(screen)
@@ -1796,26 +2138,38 @@ func screen_shell(title_value: String, world_mode: String = "workshop") -> VBoxC
 	var header := Control.new()
 	header.name = "Header"
 	header.position = Vector2(28, 18)
-	header.size = Vector2(1224, 52)
+	# The right edge follows the same 34px safe area as the content/navigation
+	# chrome so the optional tutorial action never touches the 1280px boundary.
+	header.size = Vector2(1218, 52)
 	ui.add_child(header)
+	var header_row := HBoxContainer.new()
+	header_row.name = "HeaderRow"
+	header_row.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	header_row.add_theme_constant_override("separation", 10)
+	header.add_child(header_row)
 	var title_label := make_label(title_value, 28, Color("#e3c681"))
-	title_label.position = Vector2.ZERO
-	title_label.size = Vector2(650, 52)
-	header.add_child(title_label)
-	var header_stats := make_label("DAY %d   ¤ %d   REP %d   GRADE %d" % [GameState.day, GameState.money, GameState.reputation, int(GameState.campaign_state.workshopGrade)], 15)
-	header_stats.position = Vector2(660 if tutorial_active else 790, 4)
-	header_stats.size = Vector2(350 if tutorial_active else 434, 42)
+	title_label.name = "HeaderTitle"
+	title_label.custom_minimum_size = Vector2(560, 52)
+	title_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	title_label.max_lines_visible = 1
+	title_label.autowrap_mode = TextServer.AUTOWRAP_OFF
+	title_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	title_label.tooltip_text = title_value
+	header_row.add_child(title_label)
+	var header_stats := make_label("%s %d   ¤ %d   %s %d   %s %d" % [bilingual("DAY", "일차"), GameState.day, GameState.money, bilingual("REP", "평판"), GameState.reputation, bilingual("GRADE", "등급"), int(GameState.campaign_state.workshopGrade)], 14)
+	header_stats.name = "HeaderStats"
+	header_stats.custom_minimum_size = Vector2(320 if tutorial_active else 420, 42)
 	header_stats.autowrap_mode = TextServer.AUTOWRAP_OFF
+	header_stats.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	header_stats.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	header.add_child(header_stats)
+	header_stats.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	header_row.add_child(header_stats)
 	if tutorial_active:
 		var skip_button := make_button(bilingual("SKIP GUIDE", "튜토리얼 건너뛰기"), skip_tutorial_from_ui, "TutorialSkipButton")
-		skip_button.position = Vector2(1030, 4)
-		skip_button.size = Vector2(188, 42)
-		skip_button.custom_minimum_size = Vector2.ZERO
+		skip_button.custom_minimum_size = Vector2(188, 42)
 		skip_button.clip_text = true
 		skip_button.tooltip_text = bilingual("Skip the guide and remember this choice for future NEW GAME sessions.", "튜토리얼을 건너뛰며 다음 새 게임부터도 이 선택을 기억합니다.")
-		header.add_child(skip_button)
+		header_row.add_child(skip_button)
 
 	var margin := MarginContainer.new()
 	margin.name = "ContentMargin"
@@ -1834,6 +2188,8 @@ func screen_shell(title_value: String, world_mode: String = "workshop") -> VBoxC
 	var current_tutorial_serial := tutorial_render_serial
 	if bool(tutorial_guidance_state.get("visible", false)):
 		body.add_child(make_tutorial_guidance_rail(tutorial_guidance_state))
+	elif should_show_journey_rail():
+		body.add_child(make_journey_rail())
 
 	var nav := Control.new()
 	nav.name = "Navigation"
@@ -1848,28 +2204,46 @@ func screen_shell(title_value: String, world_mode: String = "workshop") -> VBoxC
 		["AUCTION", resume_grand_reserve_from_ui if grand_reserve_lock else resume_pending_auction_from_ui] if transaction_lock else ["WORKSHOP", show_workshop],
 		["MARKET", show_market], ["INVENTORY", show_inventory],
 		["UPGRADES", show_upgrades], ["COMMISSIONS", show_commissions], ["CAMPAIGN", show_campaign],
-		["END_DAY", end_day_from_ui], ["SAVE", save_from_ui], ["LANGUAGE", toggle_language]
+		["SAVE", save_from_ui], ["SETTINGS", open_settings_from_ui], ["LANGUAGE", toggle_language]
 	]
-	var nav_width := 134.0 if nav_entries.size() >= 9 else 146.0
+	# Keep the global route and selector stable on every screen. Authentication
+	# renders this one route as a compact BaseButton so its 2x3 decision boards
+	# retain the established density ceiling without removing keyboard access.
+	nav_entries.insert(6, ["END_DAY", end_day_from_ui])
+	var nav_width := 122.0 if nav_entries.size() >= 10 else (134.0 if nav_entries.size() >= 9 else 146.0)
 	for nav_index: int in nav_entries.size():
 		var entry: Array = nav_entries[nav_index]
-		var nav_button := make_button(text_for(entry[0]), entry[1], "Nav_%s" % entry[0])
+		var nav_label := text_for(entry[0])
+		if String(entry[0]) == "COMMISSIONS":
+			nav_label = bilingual("JOBS", "의뢰")
+		var nav_button: BaseButton
+		if screen == "authentication" and String(entry[0]) == "END_DAY":
+			nav_button = make_compact_navigation_button(bilingual("END", "마감"), entry[1], "Nav_END_DAY", "objective")
+			nav_button.tooltip_text = text_for("END_DAY")
+		else:
+			nav_button = make_button(nav_label, entry[1], "Nav_%s" % entry[0])
 		nav_button.position = Vector2(nav_index * nav_width, 0)
 		nav_button.size = Vector2(nav_width - 4.0, 46)
 		nav_button.custom_minimum_size = Vector2.ZERO
-		nav_button.clip_text = true
-		if transaction_lock and String(entry[0]) not in ["AUCTION", "SAVE", "LANGUAGE"]:
+		if nav_button is Button:
+			(nav_button as Button).clip_text = true
+		if transaction_lock and String(entry[0]) not in ["AUCTION", "SAVE", "SETTINGS", "LANGUAGE"]:
 			nav_button.disabled = true
 			nav_button.tooltip_text = friendly_pending_auction_error("PENDING_AUCTION_LOCKED")
 		elif transaction_lock and String(entry[0]) == "AUCTION" and screen == "auction":
 			nav_button.disabled = true
 			nav_button.tooltip_text = bilingual("Current auction", "현재 경매")
-		elif stage_clear_lock and String(entry[0]) not in ["CAMPAIGN", "SAVE", "LANGUAGE"]:
+		elif stage_clear_lock and String(entry[0]) not in ["CAMPAIGN", "SAVE", "SETTINGS", "LANGUAGE"]:
 			nav_button.disabled = true
 			nav_button.tooltip_text = bilingual("Review the Stage result first.", "스테이지 결과를 먼저 확인하세요.")
 		elif stage_clear_lock and String(entry[0]) == "CAMPAIGN" and screen == "campaign":
 			nav_button.disabled = true
 			nav_button.tooltip_text = bilingual("Current Stage result", "현재 스테이지 결과")
+		elif String(entry[0]) == "SETTINGS" and screen == "settings":
+			nav_button.disabled = true
+			nav_button.tooltip_text = bilingual("Current settings", "현재 설정")
+		if nav_button is TextureButton:
+			refresh_compact_navigation_button(nav_button as TextureButton)
 		nav.add_child(nav_button)
 
 	status = make_label("", 15, Color("#9fd6bd"))
@@ -1880,6 +2254,162 @@ func screen_shell(title_value: String, world_mode: String = "workshop") -> VBoxC
 	if bool(tutorial_guidance_state.get("visible", false)):
 		resolve_tutorial_guidance_target.call_deferred(current_tutorial_serial)
 	return body
+
+
+func open_settings_from_ui() -> void:
+	if screen != "settings":
+		# Settings is a presentation overlay. Freeze the resumable market/event/
+		# auction mirror before changing the local screen name so Settings,
+		# locale changes and saves cannot replace it with an unrestorable token.
+		sync_public_interaction_state()
+		settings_return_screen = screen
+	show_settings()
+
+
+func settings_back_from_ui() -> void:
+	var target := settings_return_screen
+	if target.is_empty() or target == "settings":
+		target = "title"
+	screen = target
+	refresh_current_screen()
+
+
+func volume_level_label(option_index: int) -> String:
+	return localized_value([
+		{"en": "OFF", "ko": "끄기"},
+		{"en": "LOW", "ko": "작게"},
+		{"en": "NORMAL", "ko": "보통"},
+		{"en": "HIGH", "ko": "크게"}
+	][clampi(option_index, 0, 3)])
+
+
+func setting_option_button(text_value: String, callback: Callable, selected_option: bool, node_name: String) -> Button:
+	var button := make_button(text_value, callback, node_name)
+	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	button.custom_minimum_size = Vector2(0, 42)
+	button.add_theme_stylebox_override("normal", case_panel_style(
+		Color("#213029") if selected_option else Color("#151b1fe8"),
+		Color("#e3c681") if selected_option else Color("#5d625f"),
+		2 if selected_option else 1
+	))
+	button.tooltip_text = bilingual("Current choice" if selected_option else "Apply this choice", "현재 선택" if selected_option else "이 설정 적용")
+	return button
+
+
+func make_setting_group(title_value: String, description: String, options: Array) -> PanelContainer:
+	var panel := PanelContainer.new()
+	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	panel.add_theme_stylebox_override("panel", case_panel_style(Color("#151b1fe8"), Color("#5d625f")))
+	var column := VBoxContainer.new()
+	column.add_theme_constant_override("separation", 6)
+	panel.add_child(column)
+	var heading := make_label(title_value, 16, Color("#e3c681"))
+	heading.max_lines_visible = 1
+	heading.autowrap_mode = TextServer.AUTOWRAP_OFF
+	column.add_child(heading)
+	var help := make_label(description, 12, Color("#aab7b5"))
+	help.max_lines_visible = 1
+	help.autowrap_mode = TextServer.AUTOWRAP_OFF
+	help.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	column.add_child(help)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 5)
+	column.add_child(row)
+	for option_value: Variant in options:
+		if option_value is Control:
+			row.add_child(option_value)
+	return panel
+
+
+func set_audio_setting(channel: String, value: float) -> void:
+	match channel:
+		"master": master_volume_db = value
+		"music": bgm_volume_db = value
+		"effects": sfx_volume_db = value
+	apply_player_settings()
+	var saved := save_player_settings()
+	show_settings()
+	status.text = bilingual("Audio setting saved.", "오디오 설정을 저장했습니다.") if saved else bilingual("The setting could not be saved.", "설정을 저장하지 못했습니다.")
+
+
+func set_text_scale_from_ui(value: float) -> void:
+	ui_text_scale = clampf(value, 1.0, 1.16)
+	var saved := save_player_settings()
+	show_settings()
+	status.text = bilingual("Text size saved.", "글자 크기를 저장했습니다.") if saved else bilingual("The setting could not be saved.", "설정을 저장하지 못했습니다.")
+
+
+func set_reduced_motion_from_ui(value: bool) -> void:
+	reduced_motion = value
+	var saved := save_player_settings()
+	show_settings()
+	status.text = bilingual("Motion preference saved.", "동작 효과 설정을 저장했습니다.") if saved else bilingual("The setting could not be saved.", "설정을 저장하지 못했습니다.")
+
+
+func toggle_display_mode_from_ui() -> void:
+	if DisplayServer.get_name().to_lower() == "headless":
+		status.text = bilingual("Display mode is unavailable in headless mode.", "헤드리스 모드에서는 화면 모드를 바꿀 수 없습니다.")
+		return
+	var fullscreen := DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED if fullscreen else DisplayServer.WINDOW_MODE_FULLSCREEN)
+	show_settings()
+	status.text = bilingual("Window mode updated.", "화면 모드를 변경했습니다.")
+
+
+func show_settings() -> void:
+	screen = "settings"
+	var body := screen_shell(bilingual("PLAYER SETTINGS", "플레이 설정"))
+	var intro := make_label(bilingual("Tune sound and readability. Your campaign progress and auction choices stay unchanged.", "소리와 읽기 편의를 조정합니다. 캠페인 진행과 경매 선택은 그대로 유지됩니다."), 14, Color("#b7c4c8"))
+	intro.max_lines_visible = 1
+	intro.autowrap_mode = TextServer.AUTOWRAP_OFF
+	intro.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	body.add_child(intro)
+	var grid := GridContainer.new()
+	grid.name = "SettingsGrid"
+	grid.columns = 2
+	grid.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	grid.add_theme_constant_override("h_separation", 10)
+	grid.add_theme_constant_override("v_separation", 10)
+	body.add_child(grid)
+
+	var master_options: Array = []
+	var master_values: Array = [-80.0, -12.0, -6.0, 0.0]
+	for option_index in master_values.size():
+		var value := float(master_values[option_index])
+		master_options.append(setting_option_button(volume_level_label(option_index), set_audio_setting.bind("master", value), is_equal_approx(master_volume_db, value), "SettingsMaster_%d" % option_index))
+	grid.add_child(make_setting_group(bilingual("MASTER", "전체 음량"), bilingual("Overall game volume", "게임 전체 소리"), master_options))
+
+	var music_options: Array = []
+	var music_values: Array = [-80.0, -20.0, -14.0, -8.0]
+	for option_index in music_values.size():
+		var value := float(music_values[option_index])
+		music_options.append(setting_option_button(volume_level_label(option_index), set_audio_setting.bind("music", value), is_equal_approx(bgm_volume_db, value), "SettingsMusic_%d" % option_index))
+	grid.add_child(make_setting_group(bilingual("MUSIC", "배경 음악"), bilingual("Title, workshop and ending music", "타이틀·공방·엔딩 음악"), music_options))
+
+	var effects_options: Array = []
+	var effects_values: Array = [-80.0, -12.0, -6.0, -4.0]
+	for option_index in effects_values.size():
+		var value := float(effects_values[option_index])
+		effects_options.append(setting_option_button(volume_level_label(option_index), set_audio_setting.bind("effects", value), is_equal_approx(sfx_volume_db, value), "SettingsEffects_%d" % option_index))
+	grid.add_child(make_setting_group(bilingual("EFFECTS", "효과음"), bilingual("Buttons, tools and auction cues", "버튼·도구·경매 효과음"), effects_options))
+
+	var text_options: Array = []
+	for value: float in [1.0, 1.08, 1.16]:
+		text_options.append(setting_option_button("%d%%" % roundi(value * 100.0), set_text_scale_from_ui.bind(value), is_equal_approx(ui_text_scale, value), "SettingsText_%d" % roundi(value * 100.0)))
+	grid.add_child(make_setting_group(bilingual("TEXT SIZE", "글자 크기"), bilingual("Readable labels and dialogue", "라벨과 대화 글자 크기"), text_options))
+
+	var motion_options: Array = [
+		setting_option_button(bilingual("STANDARD", "기본"), set_reduced_motion_from_ui.bind(false), not reduced_motion, "SettingsMotionStandard"),
+		setting_option_button(bilingual("REDUCED", "줄임"), set_reduced_motion_from_ui.bind(true), reduced_motion, "SettingsMotionReduced")
+	]
+	grid.add_child(make_setting_group(bilingual("PORTRAIT MOTION", "초상화 움직임"), bilingual("Reduce decorative reactions", "장식 동작 효과 줄이기"), motion_options))
+
+	var fullscreen := DisplayServer.get_name().to_lower() != "headless" and DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
+	var display_options: Array = [setting_option_button(bilingual("WINDOWED" if fullscreen else "FULLSCREEN", "창 모드" if fullscreen else "전체 화면"), toggle_display_mode_from_ui, false, "SettingsDisplayToggle")]
+	grid.add_child(make_setting_group(bilingual("DISPLAY", "화면"), bilingual("Switch the current window mode", "현재 화면 모드 전환"), display_options))
+
+	var back := mark_primary_action(make_case_icon_button("objective", text_for("BACK"), settings_back_from_ui, "SettingsBack", Vector2(0, 46)))
+	body.add_child(back)
 
 
 func toggle_language() -> void:
@@ -1914,7 +2444,10 @@ func restore_focus_by_name(focus_name: String) -> void:
 
 
 func sync_public_interaction_state(focus_override: String = "") -> Dictionary:
-	var previous: Dictionary = GameState.campaign_state.get("publicInteraction", {})
+	var previous_value: Variant = GameState.campaign_state.get("publicInteraction", {})
+	var previous: Dictionary = previous_value if previous_value is Dictionary else {}
+	if screen == "settings":
+		return previous.duplicate(true)
 	var focus_name := focus_override
 	if focus_name.is_empty():
 		focus_name = current_focus_control_name()
@@ -1994,7 +2527,8 @@ func resume_grand_reserve_from_ui() -> void:
 
 
 func restore_public_interaction_state() -> bool:
-	var public_state: Dictionary = GameState.campaign_state.get("publicInteraction", {})
+	var public_value: Variant = GameState.campaign_state.get("publicInteraction", {})
+	var public_state: Dictionary = public_value if public_value is Dictionary else {}
 	var restored_screen := String(public_state.get("screen", ""))
 	var focus_name := String(public_state.get("focusName", ""))
 	# A PENDING auction is the authoritative resumable interaction even if an
@@ -2021,7 +2555,8 @@ func restore_public_interaction_state() -> bool:
 			# must never generate a free second preview on Continue.
 			return false
 		"market":
-			var market_state: Dictionary = public_state.get("market", {})
+			var market_value: Variant = public_state.get("market", {})
+			var market_state: Dictionary = market_value if market_value is Dictionary else {}
 			market_character_state = String(market_state.get("state", "WELCOME"))
 			if not market_character_state in ["WELCOME", "OFFER", "PURCHASE_OK", "PURCHASE_FAIL"]:
 				market_character_state = "WELCOME"
@@ -2030,7 +2565,8 @@ func restore_public_interaction_state() -> bool:
 			market_character_fact = ""
 			show_market()
 		"event":
-			var event_state: Dictionary = public_state.get("event", {})
+			var event_value: Variant = public_state.get("event", {})
+			var event_state: Dictionary = event_value if event_value is Dictionary else {}
 			event_cue_state = String(event_state.get("state", "REQUEST"))
 			if not event_cue_state in ["REQUEST", "REACTION_POS", "REACTION_NEG"]:
 				event_cue_state = "REQUEST"
@@ -2092,6 +2628,7 @@ func refresh_current_screen() -> void:
 		"grand_reserve": show_grand_reserve()
 		"ending": show_ending()
 		"postgame": show_postgame()
+		"settings": show_settings()
 		_: show_workshop()
 
 
@@ -2215,7 +2752,7 @@ func show_event_dialogue(event_result: Dictionary = {}) -> void:
 	else:
 		var positive := event_cue_state == "REACTION_POS"
 		choice_column.add_child(make_case_tile("support" if positive else "risk", bilingual("RESULT", "결과"), fact))
-		var continue_button := make_case_icon_button("objective", bilingual("CONTINUE TO MARKET", "시장으로 이동"), show_market, "EventContinueMarket", Vector2(0, 58))
+		var continue_button := mark_primary_action(make_case_icon_button("objective", bilingual("CONTINUE TO MARKET", "시장으로 이동"), show_market, "EventContinueMarket", Vector2(0, 58)))
 		choice_column.add_child(continue_button)
 	sync_public_interaction_state()
 
@@ -2240,23 +2777,86 @@ func show_title() -> void:
 	clear_ui()
 	play_bgm_for_screen(screen)
 	set_world_mode("workshop")
+	var veil := ColorRect.new()
+	veil.name = "TitleBackdropVeil"
+	veil.color = Color("#071014c9")
+	veil.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	veil.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	ui.add_child(veil)
+	var card := PanelContainer.new()
+	card.name = "TitleCard"
+	card.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	card.position = Vector2(-380, -250)
+	card.size = Vector2(760, 500)
+	card.add_theme_stylebox_override("panel", title_card_style())
+	ui.add_child(card)
 	var center := VBoxContainer.new()
 	center.name = "TitleMenu"
-	center.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-	center.position = Vector2(-230, -160)
-	center.size = Vector2(460, 320)
-	center.add_theme_constant_override("separation", 16)
-	ui.add_child(center)
-	var game_title := make_label("RELIC & RESERVE", 48, Color("#e3c681"))
+	center.add_theme_constant_override("separation", 10)
+	card.add_child(center)
+	var eyebrow := make_label(bilingual("A LITTLE HOUSE OF RELIC STORIES", "작은 유물 이야기 경매소"), 12, Color("#9fd6bd"))
+	eyebrow.name = "TitleEyebrow"
+	eyebrow.max_lines_visible = 1
+	eyebrow.autowrap_mode = TextServer.AUTOWRAP_OFF
+	eyebrow.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	center.add_child(eyebrow)
+	var hero := HBoxContainer.new()
+	hero.name = "TitleHero"
+	hero.add_theme_constant_override("separation", 16)
+	center.add_child(hero)
+	hero.add_child(make_title_character("shopkeeper", "TitleShopkeeper"))
+	var title_words := VBoxContainer.new()
+	title_words.name = "TitleWords"
+	title_words.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	title_words.alignment = BoxContainer.ALIGNMENT_CENTER
+	title_words.add_theme_constant_override("separation", 8)
+	hero.add_child(title_words)
+	var game_title := make_label("RELIC & RESERVE", 46, Color("#f0ce80"))
+	game_title.name = "TitleLogoText"
+	game_title.add_theme_constant_override("outline_size", 5)
+	game_title.add_theme_color_override("font_outline_color", Color("#16130f"))
+	game_title.max_lines_visible = 1
+	game_title.autowrap_mode = TextServer.AUTOWRAP_OFF
 	game_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	center.add_child(game_title)
-	var subtitle := make_label(text_for("TITLE_SUBTITLE"), 18)
+	title_words.add_child(game_title)
+	var charm_row := HBoxContainer.new()
+	charm_row.name = "TitleCharmRow"
+	charm_row.alignment = BoxContainer.ALIGNMENT_CENTER
+	charm_row.add_theme_constant_override("separation", 10)
+	charm_row.add_child(make_title_badge("clue_generic", Color("#9fd6bd"), "TitleCharmClue"))
+	charm_row.add_child(make_title_badge("artifact", Color("#e3c681"), "TitleCharmArtifact"))
+	charm_row.add_child(make_title_badge("support", Color("#d79a86"), "TitleCharmAuction"))
+	title_words.add_child(charm_row)
+	var subtitle := make_label(text_for("TITLE_SUBTITLE"), 16, Color("#e8e0cf"))
+	subtitle.name = "TitleSubtitle"
+	subtitle.max_lines_visible = 2
 	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	center.add_child(subtitle)
-	center.add_child(make_button(text_for("NEW_GAME"), start_progression_game_from_ui, "NewGameButton"))
+	title_words.add_child(subtitle)
+	hero.add_child(make_title_character("auctioneer", "TitleAuctioneer"))
+	var loop_copy := make_label(bilingual("COLLECT  ·  INVESTIGATE  ·  RESTORE  ·  AUCTION", "수집  ·  조사  ·  복원  ·  경매"), 12, Color("#8fa5aa"))
+	loop_copy.name = "TitleLoopCopy"
+	loop_copy.max_lines_visible = 1
+	loop_copy.autowrap_mode = TextServer.AUTOWRAP_OFF
+	loop_copy.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	center.add_child(loop_copy)
+	var new_game_button := mark_primary_action(make_button(text_for("NEW_GAME"), start_progression_game_from_ui, "NewGameButton"))
+	new_game_button.custom_minimum_size = Vector2(0, 52)
+	center.add_child(new_game_button)
 	var continue_button := make_button(text_for("CONTINUE"), continue_from_ui, "ContinueButton")
+	continue_button.custom_minimum_size = Vector2(0, 46)
 	center.add_child(continue_button)
-	center.add_child(make_button(text_for("LANGUAGE"), toggle_language, "TitleLanguageButton"))
+	var utility_row := HBoxContainer.new()
+	utility_row.name = "TitleUtilityRow"
+	utility_row.add_theme_constant_override("separation", 8)
+	center.add_child(utility_row)
+	var settings_button := make_button(text_for("SETTINGS"), open_settings_from_ui, "TitleSettingsButton")
+	settings_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	settings_button.custom_minimum_size = Vector2(0, 42)
+	utility_row.add_child(settings_button)
+	var language_button := make_button(text_for("LANGUAGE"), toggle_language, "TitleLanguageButton")
+	language_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	language_button.custom_minimum_size = Vector2(0, 42)
+	utility_row.add_child(language_button)
 
 
 func stage_score_text(value: Variant) -> String:
@@ -2264,14 +2864,14 @@ func stage_score_text(value: Variant) -> String:
 	return str(roundi(score_value)) if is_equal_approx(score_value, float(roundi(score_value))) else "%.1f" % score_value
 
 
-func stage_select_tooltip(definition: Dictionary, public_summary: Dictionary, unlocked: bool) -> String:
+func stage_select_tooltip(definition: Dictionary, public_summary: Dictionary, replayable: bool) -> String:
 	var lines := [
 		compact_case_text(definition.get("title", ""), 42),
 		compact_case_text(public_summary.get("goalLabel", ""), 72),
 		bilingual("The recommendation never blocks a clear or unlock.", "권장 기준이며 클리어·해금을 막지 않습니다.")
 	]
-	if not unlocked:
-		lines.append(bilingual("Clear the previous stage first.", "이전 스테이지를 먼저 클리어하세요."))
+	if not replayable:
+		lines.append(bilingual("Clear this Stage in the main journey before replaying it here.", "본편에서 이 스테이지를 클리어하면 여기서 재도전할 수 있습니다."))
 	return "\n".join(lines)
 
 
@@ -2347,7 +2947,7 @@ func make_stage_replay_axis_tile(axis_id: String, axis_state: Dictionary) -> Pan
 	score.autowrap_mode = TextServer.AUTOWRAP_OFF
 	score.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	score_row.add_child(score)
-	var state := make_label(stage_replay_axis_status(axis_id, axis_state), 11, Color("#9fd6bd") if bool(axis_state.get("available", false)) else Color("#e59b7a"))
+	var state := make_label(stage_replay_axis_status(axis_id, axis_state), 12, Color("#9fd6bd") if bool(axis_state.get("available", false)) else Color("#e59b7a"))
 	state.name = "StageReplayAxisStatus_%s" % axis_id
 	state.max_lines_visible = 1
 	state.autowrap_mode = TextServer.AUTOWRAP_OFF
@@ -2518,17 +3118,17 @@ func show_stage_select() -> void:
 	body.add_child(grid)
 	for stage_id in range(1, 11):
 		var definition := RuntimeRegistry.get_stage_definition(stage_id)
-		var unlocked := GameState.can_select_stage(stage_id)
 		var completed := cleared.has(stage_id)
+		var replayable := completed
 		var best_score := float(profile.get("stageBest", {}).get(str(stage_id), 0.0))
 		var public_summary := GameState.stage_public_summary(stage_id, best_score if completed else null)
-		var state_text := bilingual("CLEARED", "클리어") if completed else (bilingual("OPEN", "선택 가능") if unlocked else bilingual("LOCKED", "잠김"))
+		var state_text := bilingual("CLEARED", "클리어") if completed else bilingual("STORY LOCKED", "본편 잠김")
 		var attempt_text := "BEST %s %s" % [String(public_summary.get("grade", "")), stage_score_text(best_score)] if completed else bilingual("FIRST TRY", "첫 도전")
 		var caption := "%s %d · %s\n%s %s · %s" % [bilingual("STAGE", "스테이지"), stage_id, state_text, bilingual("RECOMMENDED", "권장"), stage_score_text(public_summary.get("target", 0.0)), attempt_text]
-		var icon_name := "support" if completed else ("objective" if unlocked else "locked")
+		var icon_name := "support" if completed else "locked"
 		var button := make_case_icon_button(icon_name, caption, func(): start_stage_from_ui(stage_id), "StageSelect_%02d" % stage_id, Vector2(225, 94))
-		button.disabled = not unlocked
-		button.tooltip_text = stage_select_tooltip(definition, public_summary, unlocked)
+		button.disabled = not replayable
+		button.tooltip_text = stage_select_tooltip(definition, public_summary, replayable)
 		grid.add_child(button)
 	var footer := HBoxContainer.new()
 	footer.add_theme_constant_override("separation", 10)
@@ -2745,39 +3345,52 @@ func inspect_inventory_selection_from_ui() -> void:
 	show_inspection()
 
 
-func make_inventory_card(artifact: Dictionary, slot_index: int, is_selected: bool) -> Button:
+func make_inventory_card(artifact: Dictionary, slot_index: int, is_selected: bool, compact: bool = false) -> Button:
 	var damage_count: int = artifact.get("damageInstances", []).size() if artifact.get("damageInstances", []) is Array else 0
 	var clue_count: int = artifact.get("knownClues", []).size() if artifact.get("knownClues", []) is Array else 0
-	var card_text := "%s\n¤%d\n%s %d · %s %d" % [
+	var card_text := "%s\n¤%d · %s %d · %s %d" % [
+		String(artifact.get("displayName", bilingual("Relic", "유물"))),
+		int(artifact.get("estimatedValue", 0)),
+		bilingual("DAMAGE", "손상"), damage_count,
+		bilingual("CLUES", "단서"), clue_count
+	] if compact else "%s\n¤%d\n%s %d · %s %d" % [
 		String(artifact.get("displayName", bilingual("Relic", "유물"))),
 		int(artifact.get("estimatedValue", 0)),
 		bilingual("DAMAGE", "손상"), damage_count,
 		bilingual("CLUES", "단서"), clue_count
 	]
 	var instance_id := String(artifact.get("uniqueId", ""))
-	var card := make_case_icon_button("artifact", card_text, func(): select_inventory_card(instance_id), "InventoryCard_%d" % slot_index, Vector2(584, 68))
-	card.add_theme_font_size_override("font_size", 13)
-	card.add_theme_constant_override("icon_max_width", 42)
-	card.add_theme_stylebox_override("normal", case_panel_style(
+	var card := make_case_icon_button("artifact", card_text, func(): select_inventory_card(instance_id), "InventoryCard_%d" % slot_index, Vector2(584, 58 if compact else 68))
+	card.add_theme_font_size_override("font_size", scaled_font_size(12 if compact else 13))
+	card.add_theme_constant_override("icon_max_width", 32 if compact else 42)
+	var normal_style := case_panel_style(
 		Color("#17231fe8") if is_selected else Color("#151b1fe8"),
 		Color("#9fd6bd") if is_selected else Color("#5d625f"),
 		2 if is_selected else 1
-	))
+	)
+	if compact:
+		normal_style.content_margin_top = 4
+		normal_style.content_margin_bottom = 4
+	card.add_theme_stylebox_override("normal", normal_style)
 	card.tooltip_text = "%s\n%s · ¤%d" % [String(artifact.get("displayName", "")), friendly_artifact_visual(artifact), int(artifact.get("estimatedValue", 0))]
 	return card
 
 
-func make_inventory_detail(artifact: Dictionary, artifact_index: int) -> PanelContainer:
+func make_inventory_detail(artifact: Dictionary, artifact_index: int, compact: bool = false) -> PanelContainer:
 	var panel := PanelContainer.new()
 	panel.name = "InventoryDetailPanel"
-	panel.custom_minimum_size = Vector2(0, 84)
-	panel.add_theme_stylebox_override("panel", case_panel_style(Color("#17201ee8"), Color("#e3c681"), 2))
+	panel.custom_minimum_size = Vector2(0, 72 if compact else 84)
+	var panel_style := case_panel_style(Color("#17201ee8"), Color("#e3c681"), 2)
+	if compact:
+		panel_style.content_margin_top = 5
+		panel_style.content_margin_bottom = 5
+	panel.add_theme_stylebox_override("panel", panel_style)
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 10)
 	panel.add_child(row)
 	var icon := TextureRect.new()
 	icon.texture = case_icon("artifact")
-	icon.custom_minimum_size = Vector2(54, 54)
+	icon.custom_minimum_size = Vector2(44, 44) if compact else Vector2(54, 54)
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -2786,7 +3399,7 @@ func make_inventory_detail(artifact: Dictionary, artifact_index: int) -> PanelCo
 	words.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	words.add_theme_constant_override("separation", 1)
 	row.add_child(words)
-	var name_label := make_label(String(artifact.get("displayName", bilingual("Relic", "유물"))), 17, Color("#e3c681"))
+	var name_label := make_label(String(artifact.get("displayName", bilingual("Relic", "유물"))), 15 if compact else 17, Color("#e3c681"))
 	name_label.name = "InventoryDetailName"
 	name_label.max_lines_visible = 1
 	name_label.autowrap_mode = TextServer.AUTOWRAP_OFF
@@ -2794,7 +3407,7 @@ func make_inventory_detail(artifact: Dictionary, artifact_index: int) -> PanelCo
 	words.add_child(name_label)
 	var case_id := String(artifact.get("caseId", ""))
 	var case_text := "%s · %s" % [bilingual("CASE", "사건"), friendly_case_name(case_id)] if not case_id.is_empty() else bilingual("OPEN MARKET RELIC", "시장 입수 유물")
-	var case_label := make_label(case_text, 13, Color("#b7c4c8"))
+	var case_label := make_label(case_text, 12 if compact else 13, Color("#b7c4c8"))
 	case_label.name = "InventoryDetailCase"
 	case_label.max_lines_visible = 1
 	case_label.autowrap_mode = TextServer.AUTOWRAP_OFF
@@ -2802,19 +3415,31 @@ func make_inventory_detail(artifact: Dictionary, artifact_index: int) -> PanelCo
 	words.add_child(case_label)
 	var damage_count: int = artifact.get("damageInstances", []).size() if artifact.get("damageInstances", []) is Array else 0
 	var clue_count: int = artifact.get("knownClues", []).size() if artifact.get("knownClues", []) is Array else 0
-	var stats := make_label("%s %d · %s %d · ¤%d" % [bilingual("DAMAGE", "손상"), damage_count, bilingual("CLUES", "단서"), clue_count, int(artifact.get("estimatedValue", 0))], 13, Color("#9fd6bd"))
+	var stats := make_label("%s %d · %s %d · ¤%d" % [bilingual("DAMAGE", "손상"), damage_count, bilingual("CLUES", "단서"), clue_count, int(artifact.get("estimatedValue", 0))], 12 if compact else 13, Color("#9fd6bd"))
 	stats.name = "InventoryDetailStats"
 	stats.max_lines_visible = 1
 	stats.autowrap_mode = TextServer.AUTOWRAP_OFF
 	words.add_child(stats)
-	var inspect_button := make_case_icon_button("objective", text_for("PLACE_INSPECT"), inspect_inventory_selection_from_ui, "InspectLot_%d" % artifact_index, Vector2(270, 54))
+	var inspect_button := make_case_icon_button("objective", text_for("PLACE_INSPECT"), inspect_inventory_selection_from_ui, "InspectLot_%d" % artifact_index, Vector2(250, 50) if compact else Vector2(270, 54))
+	if compact:
+		inspect_button.add_theme_font_size_override("font_size", scaled_font_size(12))
+		inspect_button.add_theme_constant_override("icon_max_width", 32)
 	row.add_child(inspect_button)
 	return panel
 
 
 func show_inventory() -> void:
 	screen = "inventory"
+	var pending := GameState.pending_auction_public_state()
+	var dense_receipt := bool(pending.get("ok", false)) and String(pending.get("status", "")) == "COMMITTED" and not bool(pending.get("grandReserve", false))
 	var body := screen_shell("%s — %s" % [text_for("INVENTORY"), text_for("WORKBENCH_PLACEMENT")])
+	if dense_receipt:
+		# One illustrated line keeps the exactly-once receipt visible without
+		# pushing an 8-card page and its Inspect action under navigation.
+		var receipt_recap := make_auction_causal_recap(true)
+		receipt_recap.name = "InventoryAuctionReceiptRecap"
+		receipt_recap.tooltip_text = bilingual("Latest auction receipt: choice, bidder response, frozen result.", "최근 경매 기록: 내 선택, 입찰자 반응, 확정 결과.")
+		body.add_child(receipt_recap)
 	if GameState.inventory.is_empty():
 		inventory_page = 0
 		inventory_selected_uid = ""
@@ -2862,10 +3487,10 @@ func show_inventory() -> void:
 	var page_end := mini(page_start + 8, GameState.inventory.size())
 	for artifact_index in range(page_start, page_end):
 		var artifact: Dictionary = GameState.inventory[artifact_index]
-		grid.add_child(make_inventory_card(artifact, artifact_index - page_start, String(artifact.get("uniqueId", "")) == inventory_selected_uid))
+		grid.add_child(make_inventory_card(artifact, artifact_index - page_start, String(artifact.get("uniqueId", "")) == inventory_selected_uid, dense_receipt))
 	var detail_artifact := inventory_artifact_by_uid(inventory_selected_uid)
 	if not detail_artifact.is_empty():
-		body.add_child(make_inventory_detail(detail_artifact, inventory_artifact_index(inventory_selected_uid)))
+		body.add_child(make_inventory_detail(detail_artifact, inventory_artifact_index(inventory_selected_uid), dense_receipt))
 
 
 func show_inspection() -> void:
@@ -3060,7 +3685,7 @@ func make_authentication_evidence_card(evidence: Dictionary, public_state: Dicti
 		"AuthenticationEvidenceCard_%d" % slot_index,
 		Vector2(274, 58)
 	)
-	card.add_theme_font_size_override("font_size", 12)
+	card.add_theme_font_size_override("font_size", scaled_font_size(12))
 	card.add_theme_constant_override("icon_max_width", 34)
 	var is_selected := evidence_index == authentication_evidence_index
 	card.add_theme_stylebox_override("normal", case_panel_style(
@@ -3238,7 +3863,7 @@ func show_authentication() -> void:
 		var button := make_case_icon_button("hypothesis", hypothesis_card_text(hypothesis, public_state), func(): choose_hypothesis_from_ui(hypothesis), "Hypothesis_%s" % hypothesis, Vector2(194, 72))
 		button.toggle_mode = true
 		button.button_pressed = String(selected.get("playerHypothesis", "UNKNOWN")) == hypothesis
-		button.add_theme_font_size_override("font_size", 12)
+		button.add_theme_font_size_override("font_size", scaled_font_size(12))
 		button.add_theme_constant_override("icon_max_width", 32)
 		button.tooltip_text = text_for("HYP_" + hypothesis)
 		grid.add_child(button)
@@ -3254,7 +3879,7 @@ func show_authentication() -> void:
 	requirement.max_lines_visible = 1
 	requirement.autowrap_mode = TextServer.AUTOWRAP_OFF
 	hypothesis_column.add_child(requirement)
-	hypothesis_accept_button = make_case_icon_button("support", text_for("AUTH_ACCEPT"), accept_hypothesis_from_ui, "AcceptHypothesisButton", Vector2(0, 48))
+	hypothesis_accept_button = mark_primary_action(make_case_icon_button("support", text_for("AUTH_ACCEPT"), accept_hypothesis_from_ui, "AcceptHypothesisButton", Vector2(0, 48)))
 	hypothesis_accept_button.disabled = selected_hypothesis == "UNKNOWN"
 	hypothesis_column.add_child(hypothesis_accept_button)
 
@@ -3528,7 +4153,7 @@ func show_appraisal() -> void:
 	actions.add_theme_constant_override("separation", 8)
 	body.add_child(actions)
 	actions.add_child(make_case_icon_button("objective", bilingual("← CHANGE PRICE", "← 가격 변경"), listing_back_to_price, "ListingBackToPrice", Vector2(250, 52)))
-	var confirm_button := make_case_icon_button("report", bilingual("CONFIRM LISTING", "출품 확정"), confirm_listing_from_ui, "ListingConfirmButton", Vector2(0, 52))
+	var confirm_button := mark_primary_action(make_case_icon_button("report", bilingual("CONFIRM LISTING", "출품 확정"), confirm_listing_from_ui, "ListingConfirmButton", Vector2(0, 52)))
 	confirm_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	confirm_button.disabled = listing_disclosure.is_empty()
 	actions.add_child(confirm_button)
@@ -4090,8 +4715,9 @@ func show_case_dossier(case_id: String = "") -> void:
 		var result_summary := make_label(compact_case_text(public_state.get("success", "") if bool(result.get("conclusionAccurate", false)) else public_state.get("failure", ""), 88), 14)
 		result_summary.max_lines_visible = 2
 		result_words.add_child(result_summary)
-		var continue_button := make_case_icon_button("objective", bilingual("CONTINUE CAMPAIGN", "캠페인 계속"), show_campaign, "CaseContinue", Vector2(210, 54))
+		var continue_button := mark_primary_action(make_case_icon_button("objective", bilingual("CONTINUE CAMPAIGN", "캠페인 계속"), show_campaign, "CaseContinue", Vector2(210, 54)))
 		result_row.add_child(continue_button)
+		rows.add_child(make_case_relationship_reaction(case_id, result))
 		return
 
 	if case_detail_evidence_id.is_empty() and not public_state.get("evidence", []).is_empty():
@@ -4218,7 +4844,7 @@ func show_case_dossier(case_id: String = "") -> void:
 			if not citation_locator.is_empty():
 				citation_button.tooltip_text += "\n%s · %s" % [bilingual("Source location", "출처 위치"), citation_locator]
 			citation_grid.add_child(citation_button)
-	var submit_button := make_case_icon_button("report", bilingual("SUBMIT EVIDENCE-BACKED REPORT", "증거 기반 보고서 제출"), func(): resolve_case_report_from_ui(resolved_case_id), "ResolveCaseReport", Vector2(0, 52))
+	var submit_button := mark_primary_action(make_case_icon_button("report", bilingual("SUBMIT EVIDENCE-BACKED REPORT", "증거 기반 보고서 제출"), func(): resolve_case_report_from_ui(resolved_case_id), "ResolveCaseReport", Vector2(0, 52)))
 	submit_button.disabled = String(public_state.get("selectedHypothesisId", "")).is_empty() or public_state.get("citedEvidenceIds", []).is_empty()
 	submit_button.tooltip_text = bilingual("Choose one hypothesis and at least one citation.", "가설 하나와 인용할 단서를 선택하세요.")
 	report_column.add_child(submit_button)
@@ -4336,12 +4962,19 @@ func auction_primary_public_state(cue_state: Dictionary) -> Dictionary:
 
 func make_auction_primary_state(cue_state: Dictionary) -> PanelContainer:
 	var public_state := auction_primary_public_state(cue_state)
+	var terminal := bool(public_state.get("terminal", false))
 	var panel := PanelContainer.new()
 	panel.name = "AuctionPrimaryState"
+	# Preserve the established 58px dominant-result target even in compact
+	# terminal layout; space is recovered from secondary price/portrait chrome.
 	panel.custom_minimum_size = Vector2(0, 58)
 	var accent := Color("#9fd6bd") if bool(public_state.get("positive", false)) else (Color("#e59b7a") if bool(public_state.get("terminal", false)) else Color("#e3c681"))
-	panel.add_theme_stylebox_override("panel", case_panel_style(Color("#17201ee8"), accent, 2))
-	var label := make_label(String(public_state.get("text", "")), 30, accent)
+	var panel_style := case_panel_style(Color("#17201ee8"), accent, 2)
+	if terminal:
+		panel_style.content_margin_top = 5
+		panel_style.content_margin_bottom = 5
+	panel.add_theme_stylebox_override("panel", panel_style)
+	var label := make_label(String(public_state.get("text", "")), 26 if terminal else 30, accent)
 	label.name = "AuctionPrimaryText"
 	label.max_lines_visible = 1
 	label.autowrap_mode = TextServer.AUTOWRAP_OFF
@@ -4391,6 +5024,101 @@ func grand_reserve_progress_text(session: Dictionary) -> String:
 	return "%s   %s" % [text_for("GRAND_RESERVE"), "   ".join(marks)]
 
 
+func auction_causal_recap_data() -> Dictionary:
+	var pending := GameState.pending_auction_public_state()
+	if not bool(pending.get("ok", false)):
+		return {}
+	var cue := auction_public_cue_state()
+	var terminal_visible := String(cue.get("phase", "")) in ["SOLD", "NO_SALE"] or String(pending.get("status", "")) == "COMMITTED"
+	if not terminal_visible:
+		return {}
+	var decisions: Dictionary = pending.get("decisions", {}) if pending.get("decisions", {}) is Dictionary else {}
+	var public_result: Dictionary = pending.get("result", {}) if pending.get("result", {}) is Dictionary else {}
+	var strategy_id := String(GameState.listing_strategy_id_from_decisions(decisions, bool(pending.get("grandReserve", false)))) if GameState.has_method("listing_strategy_id_from_decisions") else ""
+	var disclosure_id := String(decisions.get("disclosure", "UNCERTAIN"))
+	var strategy_label := bilingual("RESERVE PLAN", "예약가 전략") if strategy_id == "AUTO_GRAND_RESERVE" else listing_price_label(strategy_id)
+	if strategy_label.is_empty():
+		strategy_label = bilingual("CUSTOM TERMS", "직접 설정")
+	var choice_copy := "%s · %s" % [
+		strategy_label,
+		listing_disclosure_label(disclosure_id)
+	]
+	var primary_reason := auction_terminal_primary_reason(public_result)
+	var reaction_copy := auction_reason_label(String(primary_reason.get("code", "")))
+	if reaction_copy.is_empty():
+		reaction_copy = bilingual("Public terms reviewed", "공개 조건 검토")
+	var result_copy := "%s · %s ¤%d" % [
+		text_for("SOLD") if bool(public_result.get("reserve_met", false)) else text_for("NO_SALE"),
+		bilingual("NET", "정산"),
+		int(public_result.get("net", 0))
+	]
+	return {"choice": choice_copy, "reaction": reaction_copy, "result": result_copy, "sold": bool(public_result.get("reserve_met", false))}
+
+
+func make_compact_auction_causal_step(icon_name: String, heading: String, summary_text: String, preserve_case_tile_contract: bool = false) -> PanelContainer:
+	var tile := PanelContainer.new()
+	if preserve_case_tile_contract:
+		tile.name = "CaseTile_%s" % icon_name
+	tile.custom_minimum_size = Vector2(0, 52)
+	tile.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var style := case_panel_style(Color("#171d21e8"), Color("#75664b"))
+	style.content_margin_left = 7
+	style.content_margin_right = 7
+	style.content_margin_top = 5
+	style.content_margin_bottom = 5
+	tile.add_theme_stylebox_override("panel", style)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 6)
+	tile.add_child(row)
+	var icon_rect := TextureRect.new()
+	icon_rect.texture = case_icon(icon_name)
+	icon_rect.custom_minimum_size = Vector2(30, 30)
+	icon_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	icon_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icon_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	row.add_child(icon_rect)
+	var words := VBoxContainer.new()
+	words.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	words.add_theme_constant_override("separation", 0)
+	row.add_child(words)
+	var heading_label := make_label(heading, 12, Color("#e3c681"))
+	heading_label.max_lines_visible = 1
+	heading_label.autowrap_mode = TextServer.AUTOWRAP_OFF
+	heading_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	words.add_child(heading_label)
+	var summary := make_label(compact_case_text(summary_text, 34), 12, Color("#e8e0cf"))
+	if preserve_case_tile_contract:
+		summary.name = "CaseTileSummary_%s" % icon_name
+	summary.max_lines_visible = 1
+	summary.autowrap_mode = TextServer.AUTOWRAP_OFF
+	summary.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	words.add_child(summary)
+	tile.tooltip_text = "%s · %s" % [heading, summary_text]
+	return tile
+
+
+func make_auction_causal_recap(compact: bool = false) -> GridContainer:
+	var recap := GridContainer.new()
+	recap.name = "AuctionCausalRecap"
+	recap.columns = 3
+	recap.add_theme_constant_override("h_separation", 6)
+	var data := auction_causal_recap_data()
+	if data.is_empty():
+		recap.visible = false
+		return recap
+	var choice := make_compact_auction_causal_step("objective", bilingual("YOUR CHOICE", "내 선택"), String(data.choice)) if compact else make_case_tile("objective", bilingual("YOUR CHOICE", "내 선택"), data.choice)
+	choice.name = "AuctionCausalChoice"
+	recap.add_child(choice)
+	var reaction := make_compact_auction_causal_step("citation", bilingual("BIDDER RESPONSE", "입찰자 반응"), String(data.reaction)) if compact else make_case_tile("citation", bilingual("BIDDER RESPONSE", "입찰자 반응"), data.reaction)
+	reaction.name = "AuctionCausalReaction"
+	recap.add_child(reaction)
+	var result_icon := "support" if bool(data.get("sold", false)) else "risk"
+	var result := make_compact_auction_causal_step(result_icon, bilingual("FROZEN RESULT", "확정 결과"), String(data.result)) if compact else make_case_tile(result_icon, bilingual("FROZEN RESULT", "확정 결과"), data.result)
+	result.name = "AuctionCausalOutcome"
+	recap.add_child(result)
+	return recap
+
+
 func show_auction() -> void:
 	screen = "auction"
 	ensure_auction_cue_sequence()
@@ -4426,7 +5154,11 @@ func show_auction() -> void:
 		auctioneer_state = phase
 		auctioneer_fact = bilingual("RESULT READY", "결과 기록 대기")
 	var auctioneer_cue := character_cue("auctioneer", auctioneer_state, "", auctioneer_fact)
-	var auctioneer_panel := make_portrait_dialogue_panel(auctioneer_cue, 220, 250)
+	# Terminal copy adds both result and causal receipt. A 220px portrait remains
+	# comfortably above the face-legibility contract while keeping Grand Reserve
+	# progress and reason chips clear of the fixed navigation bar.
+	var auction_portrait_height := 220.0 if final_phase else 250.0
+	var auctioneer_panel := make_portrait_dialogue_panel(auctioneer_cue, 220, auction_portrait_height)
 
 	var center_panel := PanelContainer.new()
 	center_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -4440,13 +5172,15 @@ func show_auction() -> void:
 	var primary_action := VBoxContainer.new()
 	primary_action.name = "AuctionPrimaryAction"
 	center_column.add_child(primary_action)
+	var auction_action: Button
 	if final_phase:
 		if is_grand_reserve and reserve_phase == "BETWEEN_LOTS":
-			primary_action.add_child(make_button(bilingual("NEXT LOT", "다음 유물"), advance_grand_reserve_lot_from_ui, "GrandReserveNextLot"))
+			auction_action = make_button(bilingual("NEXT LOT", "다음 유물"), advance_grand_reserve_lot_from_ui, "GrandReserveNextLot")
 		else:
-			primary_action.add_child(make_button(text_for("HAMMER_RECORD"), finalize_sale_from_ui, "HammerButton"))
+			auction_action = make_button(text_for("HAMMER_RECORD"), finalize_sale_from_ui, "HammerButton")
 	else:
-		primary_action.add_child(make_button(bilingual("NEXT CUE", "다음 장면"), advance_auction_cue, "AuctionCueNext"))
+		auction_action = make_button(bilingual("NEXT CUE", "다음 장면"), advance_auction_cue, "AuctionCueNext")
+	primary_action.add_child(mark_primary_action(auction_action))
 	var cue_panel := PanelContainer.new()
 	cue_panel.name = "AuctionCuePanel"
 	cue_panel.add_theme_stylebox_override("panel", case_panel_style(Color("#18231fe8"), Color("#9fd6bd")))
@@ -4463,27 +5197,56 @@ func show_auction() -> void:
 	progress_label.autowrap_mode = TextServer.AUTOWRAP_OFF
 	cue_row.add_child(progress_label)
 	var price_grid := GridContainer.new()
+	price_grid.name = "AuctionPriceGrid"
 	price_grid.columns = 3
 	price_grid.add_theme_constant_override("h_separation", 6)
 	center_column.add_child(price_grid)
-	price_grid.add_child(make_case_tile("objective", bilingual("OPEN", "시작가"), "¤%d" % int(last_auction_result.get("opening", 0))))
-	price_grid.add_child(make_case_tile("risk", bilingual("RESERVE", "예약가"), "¤%d" % int(last_auction_result.get("reserve", 0))))
-	price_grid.add_child(make_case_tile("report", bilingual("BIDS", "입찰 수"), "%d" % last_auction_result.get("bids", []).size()))
-	center_column.add_child(make_label(bilingual("RECENT CALLS", "최근 호가"), 15, Color("#8fa5aa")))
-	var bid_list := VBoxContainer.new()
+	var visible_bids: Array = cue_state.get("visibleBids", [])
+	if final_phase:
+		price_grid.add_child(make_compact_auction_causal_step("objective", bilingual("OPEN", "시작가"), "¤%d" % int(last_auction_result.get("opening", 0)), true))
+		price_grid.add_child(make_compact_auction_causal_step("risk", bilingual("RESERVE", "예약가"), "¤%d" % int(last_auction_result.get("reserve", 0)), true))
+		price_grid.add_child(make_compact_auction_causal_step("report", bilingual("BIDS", "입찰 수"), "%d" % visible_bids.size(), true))
+	else:
+		price_grid.add_child(make_case_tile("objective", bilingual("OPEN", "시작가"), "¤%d" % int(last_auction_result.get("opening", 0))))
+		price_grid.add_child(make_case_tile("risk", bilingual("RESERVE", "예약가"), "¤%d" % int(last_auction_result.get("reserve", 0))))
+		price_grid.add_child(make_case_tile("report", bilingual("BIDS", "입찰 수"), "%d" % visible_bids.size()))
+	var calls_heading := bilingual("RECENT CALLS", "최근 호가")
+	if final_phase:
+		calls_heading += " · %d" % visible_bids.size()
+	center_column.add_child(make_label(calls_heading, 15, Color("#8fa5aa")))
+	var bid_list: Container
+	if final_phase:
+		var terminal_bid_grid := GridContainer.new()
+		terminal_bid_grid.columns = 2
+		terminal_bid_grid.add_theme_constant_override("h_separation", 10)
+		terminal_bid_grid.add_theme_constant_override("v_separation", 2)
+		bid_list = terminal_bid_grid
+	else:
+		var live_bid_list := VBoxContainer.new()
+		live_bid_list.add_theme_constant_override("separation", 2)
+		bid_list = live_bid_list
 	bid_list.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	center_column.add_child(bid_list)
-	var visible_bids: Array = cue_state.get("visibleBids", [])
 	if visible_bids.is_empty():
 		bid_list.add_child(make_label(bilingual("Waiting for the first public bid.", "첫 공개 입찰을 기다리는 중입니다."), 14, Color("#8fa5aa")))
 	else:
-		for bid: Dictionary in visible_bids:
-			bid_list.add_child(make_label("%s  ·  ¤%d" % [auction_bidder_display_name(String(bid.get("bidderId", ""))), int(bid.get("amount", 0))], 14))
+		# Keep all four public recent calls without stealing terminal receipt
+		# height: the terminal state uses a compact two-column, two-row grid.
+		var first_visible_bid := maxi(0, visible_bids.size() - 4) if final_phase else 0
+		for bid_value: Variant in visible_bids.slice(first_visible_bid):
+			var bid: Dictionary = bid_value if bid_value is Dictionary else {}
+			var bid_label := make_label("%s  ·  ¤%d" % [auction_bidder_display_name(String(bid.get("bidderId", ""))), int(bid.get("amount", 0))], 13)
+			bid_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			bid_label.max_lines_visible = 1
+			bid_label.autowrap_mode = TextServer.AUTOWRAP_OFF
+			bid_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+			bid_list.add_child(bid_label)
 	if final_phase:
 		var result_color := Color("#9fd6bd") if bool(last_auction_result.get("reserve_met", false)) else Color("#e59b7a")
 		var result_label := make_label("%s  ·  %s ¤%d  ·  %s ¤%d" % [text_for("SOLD") if bool(last_auction_result.get("reserve_met", false)) else text_for("NO_SALE"), bilingual("FEE", "수수료"), int(last_auction_result.get("fee", 0)), bilingual("NET", "정산액"), int(last_auction_result.get("net", 0))], 17, result_color)
 		result_label.name = "AuctionResultFact"
 		center_column.add_child(result_label)
+		center_column.add_child(make_auction_causal_recap(true))
 	else:
 		var cue_fact := make_label("%s · %s" % [auction_phase_label(phase), bilingual("Follow the public call.", "공개 호가를 확인하세요.")], 15, Color("#9fd6bd"))
 		cue_fact.name = "AuctionCueFact"
@@ -4510,7 +5273,7 @@ func show_auction() -> void:
 	bidder_column.custom_minimum_size = Vector2(260, 0)
 	bidder_column.add_theme_constant_override("separation", 6)
 	layout.add_child(bidder_column)
-	bidder_column.add_child(make_portrait_dialogue_panel(bidder_cue, 260, 250))
+	bidder_column.add_child(make_portrait_dialogue_panel(bidder_cue, 260, auction_portrait_height))
 	var rendered_reasons: Array = [auction_terminal_primary_reason(last_auction_result)] if final_phase else cue_state.get("reasonTags", []).slice(0, mini(2, cue_state.get("reasonTags", []).size()))
 	rendered_reasons = rendered_reasons.filter(func(reason_value: Variant): return reason_value is Dictionary and not auction_reason_label(String(reason_value.get("code", ""))).is_empty())
 	if not rendered_reasons.is_empty():
@@ -4719,7 +5482,7 @@ func make_upgrade_card(upgrade: Dictionary, slot_index: int, is_selected: bool) 
 		friendly_upgrade_effect_summary(upgrade)
 	]
 	var card := make_case_icon_button(upgrade_role_icon(upgrade), card_text, func(): select_upgrade_card(upgrade_id), "UpgradeCard_%d" % slot_index, Vector2(584, 88))
-	card.add_theme_font_size_override("font_size", 13)
+	card.add_theme_font_size_override("font_size", scaled_font_size(13))
 	card.add_theme_constant_override("icon_max_width", 42)
 	card.add_theme_stylebox_override("normal", case_panel_style(
 		Color("#17231fe8") if is_selected else Color("#151b1fe8"),
@@ -4963,16 +5726,160 @@ func show_commissions() -> void:
 		grid.add_child(panel)
 
 
+func friendly_npc_name(npc_id: String) -> String:
+	var ko_names := {
+		"mara_venn": "마라 벤", "elias_rowe": "일라이어스 로",
+		"hana_mire": "하나 마이어", "victor_hale": "빅터 헤일",
+		"noah_stern": "노아 스턴", "lena_falk": "레나 포크",
+		"iris_bell": "아이리스 벨", "dorian_vale": "도리안 베일"
+	}
+	if language == "ko" and ko_names.has(npc_id):
+		return String(ko_names[npc_id])
+	return String(RuntimeRegistry.npcs.get(npc_id, {}).get("displayName", bilingual("Workshop contact", "공방 인연")))
+
+
+func make_case_relationship_reaction(case_id: String, resolution: Dictionary) -> PanelContainer:
+	# The resolution transaction already applied the authoritative relationship
+	# delta. This compact card explains that public consequence without estimating
+	# or reapplying any state change.
+	var case_definition := RuntimeRegistry.get_case(case_id)
+	var npc_id := String(case_definition.get("npcId", ""))
+	var outcome := String(resolution.get("outcome", "reviewed_with_mentor"))
+	var semantic := "NEUTRAL"
+	var expression := "concerned"
+	var reaction_copy := bilingual("We will review the conclusion together.", "결론을 함께 다시 살펴봅니다.")
+	if outcome in ["masterful", "credible"]:
+		semantic = "POSITIVE"
+		expression = "positive"
+		reaction_copy = bilingual("Trust grew through careful evidence.", "꼼꼼한 근거로 신뢰가 깊어졌습니다.")
+	elif outcome == "mistaken":
+		semantic = "NEGATIVE"
+		reaction_copy = bilingual("Concern remains about this conclusion.", "이번 결론에 대한 우려가 남았습니다.")
+	var relationships_value: Variant = GameState.campaign_state.get("relationships", {})
+	var relationships: Dictionary = relationships_value if relationships_value is Dictionary else {}
+	var relationship: Dictionary = relationships.get(npc_id, {}) if relationships.get(npc_id, {}) is Dictionary else {}
+	var trust := int(relationship.get("trust", 0))
+	var panel := PanelContainer.new()
+	panel.name = "CaseRelationshipReaction"
+	panel.add_theme_stylebox_override("panel", case_panel_style(
+		Color("#17251f") if semantic == "POSITIVE" else (Color("#271d1b") if semantic == "NEGATIVE" else Color("#1a2226")),
+		Color("#9fd6bd") if semantic == "POSITIVE" else (Color("#e59b7a") if semantic == "NEGATIVE" else Color("#8fa5aa"))
+	))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 10)
+	panel.add_child(row)
+	var portrait := TextureRect.new()
+	portrait.name = "CaseRelationshipPortrait"
+	portrait.custom_minimum_size = Vector2(96, 120)
+	portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	portrait.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var presentation := RuntimeRegistry.authored_npc_portrait_presentation(npc_id, expression)
+	var asset_path := String(presentation.get("asset_path", ""))
+	if not asset_path.is_empty() and ResourceLoader.exists(asset_path):
+		portrait.texture = load(asset_path)
+		portrait.tooltip_text = localized_value(presentation.get("accessibility_name", friendly_npc_name(npc_id)))
+	else:
+		portrait.texture = case_icon("npc")
+		portrait.tooltip_text = bilingual("Character portrait unavailable", "인물 초상을 불러올 수 없음")
+	row.add_child(portrait)
+	var words := VBoxContainer.new()
+	words.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	words.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.add_child(words)
+	var heading := make_label("%s · %s" % [friendly_npc_name(npc_id), relationship_band_label(trust)], 16, Color("#e3c681"))
+	heading.name = "CaseRelationshipHeading"
+	heading.max_lines_visible = 1
+	words.add_child(heading)
+	var reaction := make_label(reaction_copy, 14, Color("#d9d1bd"))
+	reaction.name = "CaseRelationshipCopy"
+	reaction.max_lines_visible = 2
+	words.add_child(reaction)
+	var semantic_label := make_label(bilingual("RELATIONSHIP RESPONSE", "관계 반응"), 12, Color("#8fa5aa"))
+	semantic_label.name = "CaseRelationshipSemantic_%s" % semantic
+	semantic_label.max_lines_visible = 1
+	words.add_child(semantic_label)
+	return panel
+
+
+func strongest_relationship_public() -> Dictionary:
+	var best := {"npcId": "", "trust": 0, "relationship": 0}
+	var relationships: Dictionary = GameState.campaign_state.get("relationships", {}) if GameState.campaign_state.get("relationships", {}) is Dictionary else {}
+	for npc_value: Variant in relationships.keys():
+		var npc_id := String(npc_value)
+		var row: Dictionary = relationships.get(npc_value, {}) if relationships.get(npc_value, {}) is Dictionary else {}
+		var trust := int(row.get("trust", 0))
+		var relationship := int(row.get("relationship", 0))
+		# Default profile rows mean "not met", not eight equally strong ties.
+		if trust == 0 and relationship == 0:
+			continue
+		if String(best.npcId).is_empty() or trust > int(best.trust) or (trust == int(best.trust) and npc_id < String(best.npcId)):
+			best = {"npcId": npc_id, "trust": trust, "relationship": relationship}
+	return best
+
+
+func relationship_band_label(trust: int) -> String:
+	if trust >= 6:
+		return bilingual("TRUSTED", "깊은 신뢰")
+	if trust >= 2:
+		return bilingual("GROWING", "신뢰 형성")
+	if trust < 0:
+		return bilingual("STRAINED", "관계 주의")
+	return bilingual("NEW", "새 인연")
+
+
+func make_relationship_compass() -> PanelContainer:
+	var strongest := strongest_relationship_public()
+	var panel := PanelContainer.new()
+	panel.name = "RelationshipCompass"
+	panel.custom_minimum_size = Vector2(0, 36)
+	panel.add_theme_stylebox_override("panel", case_panel_style(Color("#151d22e8"), Color("#6f8390")))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	panel.add_child(row)
+	var icon := TextureRect.new()
+	icon.texture = case_icon("support")
+	icon.custom_minimum_size = Vector2(24, 24)
+	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	row.add_child(icon)
+	var npc_id := String(strongest.get("npcId", ""))
+	var trust := int(strongest.get("trust", 0))
+	var connection := bilingual("No recurring contact yet", "아직 이어진 인연 없음") if npc_id.is_empty() else "%s · %s" % [friendly_npc_name(npc_id), relationship_band_label(trust)]
+	var label := make_label("%s · %s   |   %s %d   |   %s %d" % [
+		bilingual("STRONGEST CONNECTION", "이어진 인연"), connection,
+		bilingual("ETHICS", "윤리"), int(GameState.campaign_state.get("ethics", 0)),
+		bilingual("MUSEUM", "박물관"), int(GameState.campaign_state.get("museumTrust", 0))
+	], 12, Color("#d9d1bd"))
+	label.name = "RelationshipCompassText"
+	label.max_lines_visible = 1
+	label.autowrap_mode = TextServer.AUTOWRAP_OFF
+	label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(label)
+	panel.tooltip_text = bilingual("Relationships and ethics shape the final reserve outcome.", "인연과 윤리적 선택은 마지막 리저브 결과에 이어집니다.")
+	return panel
+
+
 func show_campaign() -> void:
 	screen = "campaign"
 	var current_act: String = GameState.campaign_state.currentAct
 	var act := RuntimeRegistry.get_act(current_act)
 	var world_mode := "grand_reserve" if current_act == "GRAND_RESERVE" else "workshop"
-	var body := screen_shell("%s — %s" % [text_for("CAMPAIGN"), friendly_act_title(current_act)], world_mode)
 	var stage_status := String(GameState.stage_run_state.get("status", "NOT_STARTED"))
 	var stage_scoped := stage_status in ["RUNNING", "CLEARED"]
+	var stage_definition := RuntimeRegistry.get_stage_definition(GameState.current_stage) if stage_scoped else {}
+	var campaign_title := "%s — %s" % [text_for("CAMPAIGN"), friendly_act_title(current_act)]
 	if stage_scoped:
-		var stage_definition := RuntimeRegistry.get_stage_definition(GameState.current_stage)
+		campaign_title = "%s %d — %s" % [bilingual("STAGE", "스테이지"), GameState.current_stage, compact_case_text(stage_definition.get("title", ""), 42)]
+	var body := screen_shell(campaign_title, world_mode)
+	if stage_scoped:
+		var story_breadcrumb := make_label("%s · %s" % [bilingual("STORY", "이야기"), friendly_act_title(current_act)], 13, Color("#8fa5aa"))
+		story_breadcrumb.name = "CampaignStoryBreadcrumb"
+		story_breadcrumb.max_lines_visible = 1
+		story_breadcrumb.autowrap_mode = TextServer.AUTOWRAP_OFF
+		body.add_child(story_breadcrumb)
 		var stage_summary := GameState.stage_public_summary()
 		var stage_case_ids: Array = GameState.get_current_stage_case_ids()
 		var completed_stage_cases := stage_case_ids.filter(func(case_id: String): return GameState.campaign_state.completedCases.has(case_id)).size()
@@ -4986,9 +5893,38 @@ func show_campaign() -> void:
 		var case_tile := make_case_tile("report", bilingual("CASES", "사건"), "%d / %d" % [completed_stage_cases, stage_case_ids.size()])
 		case_tile.name = "StageProgressCases"
 		stage_header.add_child(case_tile)
+		var focus_panel := PanelContainer.new()
+		focus_panel.name = "StageFocusBar"
+		focus_panel.custom_minimum_size = Vector2(0, 36)
+		focus_panel.add_theme_stylebox_override("panel", case_panel_style(Color("#18231fe8"), Color("#9fd6bd")))
+		var focus_row := HBoxContainer.new()
+		focus_row.add_theme_constant_override("separation", 8)
+		focus_panel.add_child(focus_row)
+		var focus_icon := TextureRect.new()
+		focus_icon.texture = case_icon("core_question")
+		focus_icon.custom_minimum_size = Vector2(24, 24)
+		focus_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		focus_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		focus_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		focus_row.add_child(focus_icon)
+		var focus_copy := localized_value(stage_definition.get("performance_target", {}).get("goal_label", {}))
+		var focus_label := make_label("%s · %s" % [bilingual("STAGE FOCUS", "이번 스테이지의 판단"), focus_copy], 13, Color("#d9d1bd"))
+		focus_label.name = "StageFocusText"
+		focus_label.max_lines_visible = 1
+		focus_label.autowrap_mode = TextServer.AUTOWRAP_OFF
+		focus_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		focus_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		focus_row.add_child(focus_label)
+		focus_panel.tooltip_text = focus_copy
+		body.add_child(focus_panel)
 	else:
 		body.add_child(make_label(text_format("CAMPAIGN_LOCATION", [friendly_location_label(String(act.get("location", ""))), GameState.campaign_state.completedCases.size(), RuntimeRegistry.campaign_cases.size()]), 17))
 	body.add_child(make_label(text_format("CAMPAIGN_STATS", [int(GameState.campaign_state.museumTrust), int(GameState.campaign_state.collectorNetwork), GameState.mastery_total(), int(GameState.campaign_state.historicalIntegrity)]), 16, Color("#a8b0ad")))
+	# The full Stage-clear card is the densest 720p campaign state. Keep the
+	# relationship summary on active campaign and postgame screens, but yield its
+	# row here so 116% text and both result actions stay above global navigation.
+	if not (stage_scoped and stage_status == "CLEARED" and GameState.stage_clear_pending()):
+		body.add_child(make_relationship_compass())
 	if current_act == "POSTGAME" or bool(GameState.campaign_state.get("postGame", false)):
 		show_postgame()
 		return
@@ -5003,12 +5939,12 @@ func show_campaign() -> void:
 		var replay_telemetry: Dictionary = GameState.stage_run_state.get("stageReplayTelemetrySnapshot", {}).duplicate(true)
 		body.add_child(make_stage_clear_card(GameState.stage_public_summary(), replay_feedback, replay_telemetry))
 		if GameState.current_stage == 10 and not String(GameState.campaign_state.get("currentEnding", "")).is_empty():
-			body.add_child(make_case_icon_button("support", bilingual("VIEW ENDING", "엔딩 보기"), view_stage_ending_from_ui, "StageClearViewEnding", Vector2(0, 58)))
+			body.add_child(mark_primary_action(make_case_icon_button("support", bilingual("VIEW ENDING", "엔딩 보기"), view_stage_ending_from_ui, "StageClearViewEnding", Vector2(0, 58))))
 		else:
 			var clear_actions := HBoxContainer.new()
 			clear_actions.name = "StageClearActions"
 			clear_actions.add_theme_constant_override("separation", 8)
-			var next_button := make_case_icon_button("support", bilingual("NEXT STAGE", "다음 스테이지"), acknowledge_stage_clear_then_start_next, "CampaignStageSelect", Vector2(0, 58))
+			var next_button := mark_primary_action(make_case_icon_button("support", bilingual("NEXT STAGE", "다음 스테이지"), acknowledge_stage_clear_then_start_next, "CampaignStageSelect", Vector2(0, 58)))
 			next_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 			next_button.tooltip_text = bilingual("A stage must be cleared before the next one becomes available.", "스테이지를 클리어해야 다음 스테이지로 진행할 수 있습니다.")
 			clear_actions.add_child(next_button)
@@ -5108,7 +6044,7 @@ func make_compact_status_badge(text_value: String, positive: bool, node_name: St
 		Color("#17231f") if positive else Color("#25231d"),
 		Color("#9fd6bd") if positive else Color("#d6b36a")
 	))
-	var label := make_label(text_value, 11, Color("#bfe4d2") if positive else Color("#e3c681"))
+	var label := make_label(text_value, 12, Color("#bfe4d2") if positive else Color("#e3c681"))
 	label.name = "%sLabel" % node_name
 	label.max_lines_visible = 1
 	label.autowrap_mode = TextServer.AUTOWRAP_OFF
@@ -5536,7 +6472,7 @@ func make_postgame_ending_card(ending_id: String, card_index: int, unlocked: boo
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	column.add_child(title)
-	var state := make_label(bilingual("UNLOCKED", "해금") if unlocked else bilingual("LOCKED", "잠김"), 11, Color("#9fd6bd") if unlocked else Color("#7e8588"))
+	var state := make_label(bilingual("UNLOCKED", "해금") if unlocked else bilingual("LOCKED", "잠김"), 12, Color("#9fd6bd") if unlocked else Color("#7e8588"))
 	state.name = "EndingCardState"
 	state.max_lines_visible = 1
 	state.autowrap_mode = TextServer.AUTOWRAP_OFF
@@ -5592,6 +6528,26 @@ func show_postgame() -> void:
 	progress.autowrap_mode = TextServer.AUTOWRAP_OFF
 	progress.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	body.add_child(progress)
+	var archive := GridContainer.new()
+	archive.name = "PostgameArchiveSummary"
+	archive.visible = not postgame_credits_visible
+	archive.columns = 3
+	archive.add_theme_constant_override("h_separation", 8)
+	body.add_child(archive)
+	var completed_cases: Dictionary = GameState.campaign_state.get("completedCases", {}) if GameState.campaign_state.get("completedCases", {}) is Dictionary else {}
+	var statistics: Dictionary = GameState.statistics
+	var case_archive := make_case_tile("briefing", bilingual("CASE FILES", "사건 기록"), "%d / %d" % [completed_cases.size(), RuntimeRegistry.campaign_cases.size()])
+	case_archive.name = "PostgameCaseArchive"
+	archive.add_child(case_archive)
+	var restoration_archive := make_case_tile("tool", bilingual("RESTORATIONS", "복원 기록"), "%d" % int(statistics.get("restorations", 0)))
+	restoration_archive.name = "PostgameRestorationArchive"
+	archive.add_child(restoration_archive)
+	var sale_archive := make_case_tile("report", bilingual("NEW KEEPERS", "새 소유자"), "%d" % int(statistics.get("sales", 0)))
+	sale_archive.name = "PostgameSaleArchive"
+	archive.add_child(sale_archive)
+	var relationship_compass := make_relationship_compass()
+	relationship_compass.visible = not postgame_credits_visible
+	body.add_child(relationship_compass)
 	var gallery := GridContainer.new()
 	gallery.name = "EndingGallery"
 	gallery.columns = 5

@@ -21,10 +21,10 @@
     },
     {
       "evidence": {
-        "evidenceId": "silent_radio:material",
+        "evidenceId": "src.silent_radio.artifact.serial_oxidation",
         "result": {
           "code": "EVIDENCE_NOT_DISCOVERED",
-          "evidenceId": "silent_radio:material",
+          "evidenceId": "src.silent_radio.artifact.serial_oxidation",
           "ok": false
         },
         "stateDelta": false
@@ -36,10 +36,10 @@
     },
     {
       "evidence": {
-        "evidenceId": "perfect_fake::MATERIAL",
+        "evidenceId": "src.perfect_fake.artifact.casting_serial_continuity",
         "result": {
           "code": "CROSS_CASE_EVIDENCE",
-          "evidenceId": "perfect_fake::MATERIAL",
+          "evidenceId": "src.perfect_fake.artifact.casting_serial_continuity",
           "ok": false
         },
         "stateDelta": false
@@ -51,115 +51,123 @@
     },
     {
       "evidence": {
+        "credibleResult": {
+          "citedEvidenceIds": [
+            "src.silent_radio.artifact.serial_oxidation",
+            "src.silent_radio.artifact.condenser_service_seam",
+            "src.silent_radio.document.intake_register"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+          "independentSourceCount": 3,
+          "netScore": 6,
+          "ok": true,
+          "outcome": "credible",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "PLAUSIBLE",
+          "supportScore": 6
+        },
         "discovery": [
           {
             "appliedRiskPenalty": 0.0,
             "code": "DISCOVERED",
-            "evidenceId": "silent_radio:material",
+            "evidenceId": "src.silent_radio.artifact.serial_oxidation",
             "ok": true,
             "riskLevel": "NONE",
-            "sourceId": "material"
+            "sourceId": "radio_manufacture_identity"
           },
           {
             "appliedRiskPenalty": 0.0,
             "code": "DISCOVERED",
-            "evidenceId": "silent_radio:serial_pattern",
+            "evidenceId": "src.silent_radio.document.service_bulletin",
             "ok": true,
             "riskLevel": "NONE",
-            "sourceId": "serial_pattern"
+            "sourceId": "radio_maker_practice"
+          },
+          {
+            "appliedRiskPenalty": 3.0,
+            "code": "DISCOVERED",
+            "evidenceId": "src.silent_radio.artifact.condenser_service_seam",
+            "ok": true,
+            "riskLevel": "HIGH",
+            "sourceId": "radio_period_service"
           },
           {
             "appliedRiskPenalty": 0.0,
             "code": "DISCOVERED",
-            "evidenceId": "silent_radio:construction_method",
+            "evidenceId": "src.silent_radio.document.intake_register",
             "ok": true,
             "riskLevel": "NONE",
-            "sourceId": "construction_method"
+            "sourceId": "radio_custody_record"
           },
           {
             "appliedRiskPenalty": 0.0,
             "code": "DISCOVERED",
-            "evidenceId": "silent_radio:provenance",
+            "evidenceId": "src.silent_radio.npc.mara_service_context",
             "ok": true,
             "riskLevel": "NONE",
-            "sourceId": "provenance"
+            "sourceId": "mara_radio_context"
           },
           {
             "appliedRiskPenalty": 0.0,
             "code": "DISCOVERED",
-            "evidenceId": "silent_radio:repair_trace",
+            "evidenceId": "src.silent_radio.reference.receiver_standard",
             "ok": true,
             "riskLevel": "NONE",
-            "sourceId": "repair_trace"
+            "sourceId": "independent_radio_standard"
           }
         ],
-        "independentResult": {
+        "duplicateResult": {
           "citedEvidenceIds": [
-            "silent_radio:material",
-            "silent_radio:serial_pattern"
+            "src.silent_radio.artifact.serial_oxidation"
           ],
           "code": "OK",
           "conclusionAccurate": true,
-          "hypothesisId": "GENUINE_WITH_PERIOD_REPAIR",
-          "independentSourceCount": 2,
+          "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+          "independentSourceCount": 1,
           "netScore": 2,
+          "ok": true,
+          "outcome": "reviewed_with_mentor",
+          "refuteScore": 0,
+          "requiredSourcesMet": false,
+          "substantiated": false,
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 2
+        },
+        "masterfulResult": {
+          "citedEvidenceIds": [
+            "src.silent_radio.artifact.serial_oxidation",
+            "src.silent_radio.artifact.condenser_service_seam",
+            "src.silent_radio.document.intake_register",
+            "src.silent_radio.reference.receiver_standard"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+          "independentSourceCount": 4,
+          "netScore": 8,
           "ok": true,
           "outcome": "masterful",
           "refuteScore": 0,
           "requiredSourcesMet": true,
           "substantiated": true,
           "substantiation": "STRONG",
-          "supportScore": 2
+          "supportScore": 8
         },
-        "pairs": {
-          "independent": [
-            "silent_radio:material",
-            "silent_radio:serial_pattern"
-          ],
-          "sameSource": [
-            "silent_radio:material",
-            "silent_radio:material"
-          ],
-          "sources": {
-            "construction_method": [
-              "silent_radio:construction_method"
-            ],
-            "material": [
-              "silent_radio:material"
-            ],
-            "provenance": [
-              "silent_radio:provenance"
-            ],
-            "repair_trace": [
-              "silent_radio:repair_trace"
-            ],
-            "serial_pattern": [
-              "silent_radio:serial_pattern"
-            ]
-          }
-        },
-        "sameSourceResult": {
-          "citedEvidenceIds": [
-            "silent_radio:material"
-          ],
-          "code": "OK",
-          "conclusionAccurate": true,
-          "hypothesisId": "GENUINE_WITH_PERIOD_REPAIR",
-          "independentSourceCount": 1,
-          "netScore": 1,
-          "ok": true,
-          "outcome": "credible",
-          "refuteScore": 0,
-          "requiredSourcesMet": true,
-          "substantiated": false,
-          "substantiation": "PLAUSIBLE",
-          "supportScore": 1
-        },
+        "requiredIds": [
+          "src.silent_radio.artifact.serial_oxidation",
+          "src.silent_radio.artifact.condenser_service_seam",
+          "src.silent_radio.document.intake_register",
+          "src.silent_radio.reference.receiver_standard"
+        ],
         "stateDelta": false
       },
       "executed": true,
       "id": "M1-EVIDENCE-03",
-      "name": "Two same-source citations do not substantiate while two independent sources do",
+      "name": "Authored citation thresholds dedupe duplicates and require three/four independent sources for credible/masterful",
       "passed": true
     },
     {
@@ -167,26 +175,28 @@
         "completed": true,
         "result": {
           "citedEvidenceIds": [
-            "silent_radio:material",
-            "silent_radio:serial_pattern"
+            "src.silent_radio.artifact.serial_oxidation",
+            "src.silent_radio.artifact.condenser_service_seam",
+            "src.silent_radio.document.intake_register",
+            "src.silent_radio.reference.receiver_standard"
           ],
           "code": "OK",
           "conclusionAccurate": true,
-          "hypothesisId": "GENUINE_WITH_PERIOD_REPAIR",
-          "independentSourceCount": 2,
-          "netScore": 2,
+          "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+          "independentSourceCount": 4,
+          "netScore": 8,
           "ok": true,
           "outcome": "masterful",
           "refuteScore": 0,
           "requiredSourcesMet": true,
           "substantiated": true,
           "substantiation": "STRONG",
-          "supportScore": 2
+          "supportScore": 8
         }
       },
       "executed": true,
       "id": "M1-CASE-V2-01",
-      "name": "Substantiated independent evidence resolves through the v2 contract",
+      "name": "Masterful authored evidence resolves through the v2 contract",
       "passed": true
     },
     {

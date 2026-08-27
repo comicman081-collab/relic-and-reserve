@@ -49,6 +49,11 @@ CASE_NPC_PORTRAITS = {
         "expression": "NEGATIVE",
         "features": {"navy-clock-bob", "pocket-watch", "auction-receipt"},
     },
+    "mara_venn_positive": {
+        "display_name": "Mara Venn",
+        "expression": "POSITIVE",
+        "features": {"navy-clock-bob", "pocket-watch", "auction-receipt"},
+    },
     "iris_bell_concerned": {
         "display_name": "Iris Bell",
         "expression": "NEGATIVE",

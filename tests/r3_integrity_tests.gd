@@ -6,6 +6,9 @@ extends SceneTree
 ## count/reachability tests do not cover. Missing v2 APIs are reported as ordinary
 ## failed assertions so the suite remains parseable and runnable during TDD.
 
+const SILENT_RADIO_CANONICAL := "hyp.silent_radio.genuine_with_period_condenser_repair"
+const PERFECT_FAKE_FOREIGN_EVIDENCE := "src.perfect_fake.artifact.casting_serial_continuity"
+
 var results: Array = []
 
 
@@ -187,7 +190,7 @@ func run() -> void:
 		undiscovered_id = String(initial_rows[0].get("id", undiscovered_id))
 	var evidence_before := payload_fingerprint(gs)
 	var undiscovered_result := call_dictionary(gs, "evaluate_case_submission", [
-		"silent_radio", "GENUINE_WITH_PERIOD_REPAIR", [undiscovered_id]
+		"silent_radio", SILENT_RADIO_CANONICAL, [undiscovered_id]
 	])
 	var evidence_after := payload_fingerprint(gs)
 	record(
@@ -197,10 +200,10 @@ func run() -> void:
 		{"evidenceId": undiscovered_id, "result": undiscovered_result, "stateDelta": evidence_before != evidence_after}
 	)
 
-	var cross_case_id := "perfect_fake::MATERIAL"
+	var cross_case_id := PERFECT_FAKE_FOREIGN_EVIDENCE
 	var cross_before := payload_fingerprint(gs)
 	var cross_result := call_dictionary(gs, "evaluate_case_submission", [
-		"silent_radio", "GENUINE_WITH_PERIOD_REPAIR", [cross_case_id]
+		"silent_radio", SILENT_RADIO_CANONICAL, [cross_case_id]
 	])
 	var cross_after := payload_fingerprint(gs)
 	record(
@@ -210,64 +213,79 @@ func run() -> void:
 		{"evidenceId": cross_case_id, "result": cross_result, "stateDelta": cross_before != cross_after}
 	)
 
-	# Discover every currently unlocked case evidence row through the public API,
-	# then derive same-source and independent-source pairs from public sourceId.
+	# Discover the authored dependency graph through public APIs, proving tool
+	# requirements instead of bypassing them. Duplicate citations must dedupe,
+	# three independent required sources are credible, and all four are masterful.
 	var discovery_results: Array = []
-	for row: Dictionary in initial_rows:
-		if not bool(row.get("unlocked", true)):
-			continue
-		var evidence_id: String = String(row.get("id", ""))
-		if evidence_id.is_empty():
-			continue
-		var discovery := call_dictionary(gs, "discover_case_evidence", ["silent_radio", evidence_id])
-		discovery_results.append(discovery)
+	for _pass in range(16):
+		var progressed := false
+		for row_value: Variant in call_dictionary(gs, "get_case_public_state", ["silent_radio"]).get("evidence", []):
+			if not row_value is Dictionary:
+				continue
+			var row: Dictionary = row_value
+			if bool(row.get("discovered", false)) or not bool(row.get("unlocked", false)):
+				continue
+			var required_tools: Array = row.get("requiredTools", [])
+			if not required_tools.is_empty():
+				gs.select_tool(String(required_tools[0]))
+			var evidence_id: String = String(row.get("id", ""))
+			var discovery := call_dictionary(gs, "discover_case_evidence", ["silent_radio", evidence_id])
+			discovery_results.append(discovery)
+			progressed = progressed or bool(discovery.get("ok", false))
+		if not progressed:
+			break
 	public_state = call_dictionary(gs, "get_case_public_state", ["silent_radio"])
 	var found_rows := discovered_rows(public_state)
-	var pairs := find_substantiation_pairs(found_rows)
-	var same_ids: Array = pairs.sameSource
-	var independent_ids: Array = pairs.independent
-	var same_result: Dictionary = {"ok": false, "code": "PAIR_NOT_AVAILABLE", "substantiated": false, "independentSourceCount": 0}
-	var independent_result: Dictionary = {"ok": false, "code": "PAIR_NOT_AVAILABLE", "substantiated": false, "independentSourceCount": 0}
+	var required_ids: Array = gs.case_definition("silent_radio").get("resolution", {}).get("required_source_refs", []).duplicate()
+	var duplicate_ids: Array = [required_ids[0], required_ids[0]] if not required_ids.is_empty() else []
+	var credible_ids: Array = required_ids.slice(0, 3)
+	var duplicate_result: Dictionary = {"ok": false, "code": "REQUIRED_NOT_AVAILABLE", "substantiated": false, "independentSourceCount": 0}
+	var credible_result: Dictionary = {"ok": false, "code": "REQUIRED_NOT_AVAILABLE", "substantiated": false, "independentSourceCount": 0}
+	var masterful_result: Dictionary = {"ok": false, "code": "REQUIRED_NOT_AVAILABLE", "substantiated": false, "independentSourceCount": 0}
 	var substantiation_before := payload_fingerprint(gs)
-	if same_ids.size() == 2:
-		same_result = call_dictionary(gs, "evaluate_case_submission", [
-			"silent_radio", "GENUINE_WITH_PERIOD_REPAIR", same_ids
-		])
-	if independent_ids.size() == 2:
-		independent_result = call_dictionary(gs, "evaluate_case_submission", [
-			"silent_radio", "GENUINE_WITH_PERIOD_REPAIR", independent_ids
-		])
+	if duplicate_ids.size() == 2:
+		duplicate_result = call_dictionary(gs, "evaluate_case_submission", ["silent_radio", SILENT_RADIO_CANONICAL, duplicate_ids])
+	if credible_ids.size() == 3:
+		credible_result = call_dictionary(gs, "evaluate_case_submission", ["silent_radio", SILENT_RADIO_CANONICAL, credible_ids])
+	if required_ids.size() == 4:
+		masterful_result = call_dictionary(gs, "evaluate_case_submission", ["silent_radio", SILENT_RADIO_CANONICAL, required_ids])
 	var substantiation_after := payload_fingerprint(gs)
 	record(
 		"M1-EVIDENCE-03",
-		"Two same-source citations do not substantiate while two independent sources do",
-		same_ids.size() == 2
-			and independent_ids.size() == 2
-			and not bool(same_result.get("substantiated", true))
-			and bool(independent_result.get("ok", false))
-			and bool(independent_result.get("substantiated", false))
-			and int(independent_result.get("independentSourceCount", 0)) > int(same_result.get("independentSourceCount", 0))
+		"Authored citation thresholds dedupe duplicates and require three/four independent sources for credible/masterful",
+		required_ids.size() == 4
+			and found_rows.size() == 6
+			and String(duplicate_result.get("outcome", "")) == "reviewed_with_mentor"
+			and duplicate_result.get("citedEvidenceIds", []).size() == 1
+			and String(credible_result.get("outcome", "")) == "credible"
+			and int(credible_result.get("independentSourceCount", 0)) == 3
+			and not bool(credible_result.get("substantiated", true))
+			and String(masterful_result.get("outcome", "")) == "masterful"
+			and int(masterful_result.get("independentSourceCount", 0)) == 4
+			and bool(masterful_result.get("substantiated", false))
 			and substantiation_before == substantiation_after,
 		{
 			"discovery": discovery_results,
-			"pairs": pairs,
-			"sameSourceResult": same_result,
-			"independentResult": independent_result,
+			"requiredIds": required_ids,
+			"duplicateResult": duplicate_result,
+			"credibleResult": credible_result,
+			"masterfulResult": masterful_result,
 			"stateDelta": substantiation_before != substantiation_after
 		}
 	)
 
 	var v2_before := payload_fingerprint(gs)
-	var v2_result: Dictionary = {"ok": false, "code": "PAIR_NOT_AVAILABLE"}
-	if independent_ids.size() == 2:
+	var v2_result: Dictionary = {"ok": false, "code": "REQUIRED_NOT_AVAILABLE"}
+	if required_ids.size() == 4:
 		v2_result = call_dictionary(gs, "resolve_case_v2", [
-			"silent_radio", "GENUINE_WITH_PERIOD_REPAIR", independent_ids
+			"silent_radio", SILENT_RADIO_CANONICAL, required_ids
 		])
 	record(
 		"M1-CASE-V2-01",
-		"Substantiated independent evidence resolves through the v2 contract",
-		independent_ids.size() == 2
+		"Masterful authored evidence resolves through the v2 contract",
+		required_ids.size() == 4
 			and bool(v2_result.get("ok", false))
+			and String(v2_result.get("outcome", "")) == "masterful"
 			and gs.campaign_state.completedCases.has("silent_radio")
 			and payload_fingerprint(gs) != v2_before,
 		{"result": v2_result, "completed": gs.campaign_state.completedCases.has("silent_radio")}

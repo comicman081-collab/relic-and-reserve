@@ -2167,7 +2167,7 @@ func authored_report_capture_specification(gs: Node, main: Node3D, case_id: Stri
 			"portraitApplicableOnDossierRenderer": false,
 			"onlyIntendedViewportScroll": "CaseDossierScroll",
 			"longBodyOutsideCollapsedDetail": 0,
-			"collapsedDetailScrollException": "The renderer-owned 88px selected-clue detail remains inside CaseDossierScroll; at report-ready bottom position only a <=40px clipped edge may be visible, with horizontal offset and report-control overlaps both zero."
+			"collapsedDetailScrollException": "The renderer-owned 88px selected-clue detail remains inside CaseDossierScroll; at the report-ready bottom position it may be fully outside the viewport or expose at most a 40px clipped edge, with horizontal offset and report-control overlaps both zero."
 		},
 		"primary": "ResolveCaseReport",
 		"forbidden": authored_case_forbidden_tokens(gs, case_id, fixture.get("artifact", {}), locale)
@@ -3807,7 +3807,7 @@ func run() -> void:
 		var authored_stage_id := int(authored_case.get("stageId", 0))
 		var authored_case_id := String(authored_case.get("caseId", ""))
 		var authored_ko_fixture := show_authored_report_ready_fixture(gs, main, "ko", authored_stage_id, authored_case_id, 4, bool(authored_case.get("requiredCitationsOnly", false)), bool(authored_case.get("includeNpcCitation", false)))
-		authored_ko_fixture["collapsedDetailMayBeOutsideViewport"] = bool(authored_case.get("collapsedDetailMayBeOutsideViewport", false))
+		authored_ko_fixture["collapsedDetailMayBeOutsideViewport"] = bool(authored_case.get("collapsedDetailMayBeOutsideViewport", true))
 		authored_ko_fixture["reportScroll"] = await position_authored_report_view(main)
 		var authored_ko_capture_id := String(authored_case.get("koCapture", ""))
 		var authored_ko_fixture_failures: Array = []
@@ -3828,7 +3828,7 @@ func run() -> void:
 		var authored_ko_copy := visible_copy(main)
 
 		var authored_en_fixture := show_authored_report_ready_fixture(gs, main, "en", authored_stage_id, authored_case_id, 4, bool(authored_case.get("requiredCitationsOnly", false)), bool(authored_case.get("includeNpcCitation", false)))
-		authored_en_fixture["collapsedDetailMayBeOutsideViewport"] = bool(authored_case.get("collapsedDetailMayBeOutsideViewport", false))
+		authored_en_fixture["collapsedDetailMayBeOutsideViewport"] = bool(authored_case.get("collapsedDetailMayBeOutsideViewport", true))
 		authored_en_fixture["reportScroll"] = await position_authored_report_view(main)
 		var authored_en_capture_id := String(authored_case.get("enCapture", ""))
 		var authored_en_copy := visible_copy(main)

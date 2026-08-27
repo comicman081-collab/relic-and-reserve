@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage1-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "perfect_fake",
+  "act_id": "ACT_1",
+  "title": {"en": "The Perfect Fake", "ko": "완벽한 가짜"},
+  "briefing": {
+    "en": "Auctioneer Elias Rowe rejects a Cindervale camera because its spotless bellows and rear leather look too perfect for the worn body. The serial casting and lens board appear older than the repair. Determine whether the camera is untouched, a genuine instrument with an openly documented modern conservation repair, or a complete later replica.",
+    "ko": "경매 진행자 엘리아스 로우는 신더베일 카메라의 주름막과 후면 가죽이 낡은 몸체에 비해 지나치게 완벽하다는 이유로 출품을 보류했다. 그러나 일련번호 주물과 렌즈 보드는 수리보다 오래되어 보인다. 출고 상태 그대로인지, 현대 보존 수리를 투명하게 기록한 진품인지, 완전한 후대 복제품인지 판별하라."
+  },
+  "central_question": {
+    "en": "Is the camera a perfect fake, or did a conspicuous modern repair preserve a genuine period body?",
+    "ko": "이 카메라는 완벽한 가짜인가, 아니면 눈에 띄는 현대 수리가 당대 진품 몸체를 보존한 것인가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, serials, invoices, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 일련번호, 영수증, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the disputed camera file from the Stage 1 desk.", "ko": "스테이지 1 책상에서 논쟁 중인 카메라 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "condition_new_bellows_before_uv_capture",
+        "source_ref": "src.perfect_fake.artifact.bellows_repair_boundary",
+        "warning": {
+          "en": "Conditioning the bellows before ultraviolet capture can blend the modern adhesive boundary into the older rear frame.",
+          "ko": "자외선 촬영 전에 주름막을 컨디셔닝하면 현대 접착제 경계가 오래된 후면 프레임과 섞여 보일 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "Elias accepts a mentor review for an unsupported report, but the case cannot earn a masterful result.",
+        "ko": "근거가 부족한 보고서는 엘리아스와 재검토하며 최고 판정은 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_003",
+    "legacy_story_artifact_id": "story_artifact_03",
+    "display_name": {"en": "Cindervale Folding Camera C-102", "ko": "신더베일 접이식 카메라 C-102"},
+    "authoring_truth_hypothesis_id": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+    "player_prompt": {
+      "en": "Separate the period body from the modern bellows repair before judging the camera as one object.",
+      "ko": "카메라 전체를 한꺼번에 판단하기 전에 당대 몸체와 현대 주름막 수리를 구분하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.perfect_fake.untouched_factory_original",
+      "label": {"en": "Untouched factory original", "ko": "출고 상태 그대로인 진품"},
+      "claim": {"en": "The body, bellows, leather, and fasteners all remain exactly as Cindervale supplied them.", "ko": "몸체와 주름막, 가죽, 체결부가 모두 신더베일 출고 당시 그대로다."}
+    },
+    {
+      "id": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+      "label": {"en": "Genuine camera with a modern conservation repair", "ko": "현대 보존 수리를 받은 진품 카메라"},
+      "claim": {"en": "The camera body is genuine, while a documented modern intervention replaced the failed bellows and rear leather without changing its identity.", "ko": "카메라 몸체는 진품이며 기록된 현대 개입에서 손상된 주름막과 후면 가죽을 교체했지만 정체성은 유지되었다."}
+    },
+    {
+      "id": "hyp.perfect_fake.complete_later_replica",
+      "label": {"en": "Complete later replica", "ko": "완전한 후대 복제품"},
+      "claim": {"en": "The period appearance was manufactured later and no historically continuous Cindervale body survives.", "ko": "당대 외형은 후대에 만들어졌으며 역사적으로 이어진 신더베일 몸체는 남아 있지 않다."}
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.perfect_fake.artifact.casting_serial_continuity",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_003",
+      "reliability": "HIGH",
+      "label": {"en": "Casting and serial continuity", "ko": "주물과 일련번호 연속성"},
+      "short_observation": {"en": "Aged lacquer continues through the C-102-611 casting stamp.", "ko": "오래된 래커가 C-102-611 주물 각인을 가로질러 이어진다."},
+      "text": {"en": "The C-102-611 mark was cast before the body was lacquered. Wear at the lens-board rails and tripod socket crosses the same aged finish, while the new rear leather stops cleanly at the original frame rebate.", "ko": "C-102-611 표식은 몸체에 래커를 바르기 전에 주조되었다. 렌즈 보드 레일과 삼각대 소켓의 마모는 같은 오래된 마감을 가로지르지만 새 후면 가죽은 원래 프레임 홈에서 깔끔하게 끝난다."},
+      "unlock": {"action": "scan_material", "target": "body_casting_and_serial", "requires": ["material_scanner"], "action_label": {"en": "Scan the body casting", "ko": "몸체 주물 스캔"}, "target_label": {"en": "Serial lacquer boundary", "ko": "일련번호 래커 경계"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "camera_body_identity", "depends_on": []},
+      "citation_id": "cite.perfect_fake.artifact.casting_serial_continuity"
+    },
+    {
+      "source_ref": "src.perfect_fake.artifact.bellows_repair_boundary",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_003",
+      "reliability": "HIGH",
+      "label": {"en": "Bellows repair boundary", "ko": "주름막 수리 경계"},
+      "short_observation": {"en": "Ultraviolet light separates modern adhesive from the period rear frame.", "ko": "자외선 아래에서 현대 접착제와 당대 후면 프레임이 구분된다."},
+      "text": {"en": "Ultraviolet fluorescence reveals a uniform modern adhesive beneath the bellows and rear leather. It ends at the original screw holes; no modern filler reaches the cast body or lens-board rails. The repair is extensive but bounded.", "ko": "자외선 형광에서 주름막과 후면 가죽 아래의 균일한 현대 접착제가 드러난다. 접착제는 원래 나사 구멍에서 끝나며 현대 충전재는 주물 몸체나 렌즈 보드 레일까지 닿지 않는다. 수리는 넓지만 경계가 분명하다."},
+      "unlock": {"action": "inspect_under_uv", "target": "bellows_and_rear_frame", "requires": ["src.perfect_fake.artifact.casting_serial_continuity", "uv_lamp"], "action_label": {"en": "Inspect the repair under ultraviolet light", "ko": "자외선으로 수리부 조사"}, "target_label": {"en": "Bellows adhesive boundary", "ko": "주름막 접착제 경계"}},
+      "risk": {"destroyed_by": ["condition_new_bellows_before_uv_capture"], "player_warning": {"en": "Capture the fluorescence boundary before applying conditioner.", "ko": "컨디셔너를 바르기 전에 형광 경계를 촬영하라."}},
+      "independence": {"group": "camera_modern_intervention", "depends_on": ["src.perfect_fake.artifact.casting_serial_continuity"]},
+      "citation_id": "cite.perfect_fake.artifact.bellows_repair_boundary"
+    },
+    {
+      "source_ref": "src.perfect_fake.document.estate_intake",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_05",
+      "document_id": "doc.perfect_fake.estate_intake",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Estate intake and conservation receipt", "ko": "유산 인수 및 보존 영수증"},
+      "short_observation": {"en": "A signed chain records the camera before and after the 2003 bellows repair.", "ko": "서명된 이력이 2003년 주름막 수리 전후의 카메라를 기록한다."},
+      "text": {"en": "Fictional Estate Record 05 identifies C-102-611 in a 1974 inventory photograph, then records transfer to a conservation bench in 2003. The signed return receipt lists replacement bellows and rear leather, with the body, lens board, and serial casting retained.", "ko": "가상 유산 기록 05는 1974년 목록 사진에서 C-102-611을 확인하고 2003년 보존 작업대로 이관한 사실을 기록한다. 서명된 반환 영수증에는 주름막과 후면 가죽 교체, 몸체와 렌즈 보드 및 일련번호 주물 보존이 적혀 있다."},
+      "unlock": {"action": "read_document", "target": "estate_intake_and_receipt", "requires": ["src.perfect_fake.artifact.casting_serial_continuity"], "action_label": {"en": "Read the estate record", "ko": "유산 기록 읽기"}, "target_label": {"en": "Signed conservation chain", "ko": "서명된 보존 이력"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "camera_custody_and_repair_record", "depends_on": []},
+      "citation_id": "cite.perfect_fake.document.estate_intake"
+    },
+    {
+      "source_ref": "src.perfect_fake.document.workshop_invoice",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_06",
+      "document_id": "doc.perfect_fake.workshop_invoice",
+      "reliability": "MEDIUM",
+      "label": {"en": "Conservation workshop invoice", "ko": "보존 공방 작업 명세서"},
+      "short_observation": {"en": "The invoice names modern materials and a deliberately limited intervention.", "ko": "작업 명세서가 현대 재료와 의도적으로 제한한 개입 범위를 밝힌다."},
+      "text": {"en": "The fictional invoice specifies synthetic bellows cloth, reversible adhesive, and vegetable-tanned rear leather. It explicitly excludes repainting, serial restamping, lens-board replacement, and distressing of new materials.", "ko": "가상의 작업 명세서는 합성 주름막 천, 가역성 접착제와 식물성 무두질 후면 가죽을 명시한다. 재도색과 일련번호 재각인, 렌즈 보드 교체, 새 재료의 인공 노화는 작업에서 제외했다."},
+      "unlock": {"action": "compare_document", "target": "conservation_invoice", "requires": [], "action_label": {"en": "Compare the workshop invoice", "ko": "공방 명세서 대조"}, "target_label": {"en": "Declared modern materials", "ko": "기재된 현대 재료"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "camera_conservation_method", "depends_on": []},
+      "citation_id": "cite.perfect_fake.document.workshop_invoice"
+    },
+    {
+      "source_ref": "src.perfect_fake.npc.elias_market_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "elias_rowe",
+      "npc_id": "elias_rowe",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Elias's market concern", "ko": "엘리아스의 시장 우려"},
+      "short_observation": {"en": "Elias explains why an honest modern repair can still alarm bidders.", "ko": "엘리아스가 정직한 현대 수리도 입찰자를 불안하게 하는 이유를 설명한다."},
+      "text": {"en": "Elias says the flawless bellows caused the rejection, not a private claim that the whole camera was false. He will accept it only if the modern intervention is disclosed beside evidence for the older body.", "ko": "엘리아스는 카메라 전체가 가짜라는 비공개 판단이 아니라 지나치게 깨끗한 주름막 때문에 출품을 보류했다고 말한다. 오래된 몸체의 근거와 현대 개입을 함께 공개해야만 받아들이겠다고 한다."},
+      "unlock": {"action": "ask_npc", "target": "elias_rowe", "requires": ["src.perfect_fake.document.estate_intake"], "action_label": {"en": "Ask Elias", "ko": "엘리아스에게 묻기"}, "target_label": {"en": "Elias Rowe", "ko": "엘리아스 로우"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "elias_market_context", "depends_on": ["src.perfect_fake.document.estate_intake"]},
+      "citation_id": "cite.perfect_fake.npc.elias_market_context"
+    },
+    {
+      "source_ref": "src.perfect_fake.reference.cindervale_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_05",
+      "reference_id": "ref.perfect_fake.cindervale_standard",
+      "reliability": "HIGH",
+      "label": {"en": "Cindervale C-102 construction standard", "ko": "신더베일 C-102 제작 기준"},
+      "short_observation": {"en": "The body casting and rails match the period C-102 standard.", "ko": "몸체 주물과 레일이 당대 C-102 기준에 맞는다."},
+      "text": {"en": "The fictional factory standard shows the C-102 casting depth, rail spacing, tripod socket, and lacquer order. The examined body matches all four features, while the bellows material is outside the period list and must be disclosed as later.", "ko": "가상의 공장 기준은 C-102 주물 깊이, 레일 간격, 삼각대 소켓과 래커 순서를 보여 준다. 조사한 몸체는 네 특징에 모두 맞지만 주름막 재료는 당대 목록에 없으므로 후대 개입으로 공개해야 한다."},
+      "unlock": {"action": "query_reference", "target": "reference_database", "requires": ["src.perfect_fake.artifact.bellows_repair_boundary", "reference_database"], "action_label": {"en": "Check the C-102 standard", "ko": "C-102 기준 확인"}, "target_label": {"en": "Period camera construction", "ko": "당대 카메라 제작법"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_camera_standard", "depends_on": ["src.perfect_fake.artifact.bellows_repair_boundary"]},
+      "citation_id": "cite.perfect_fake.reference.cindervale_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.perfect_fake.artifact.casting_serial_continuity", "source_ref": "src.perfect_fake.artifact.casting_serial_continuity", "label": {"en": "Casting and serial continuity", "ko": "주물과 일련번호 연속성"}, "locator": {"en": "Object record A-1, body and lens rails", "ko": "실물 기록 A-1, 몸체와 렌즈 레일"}},
+    {"id": "cite.perfect_fake.artifact.bellows_repair_boundary", "source_ref": "src.perfect_fake.artifact.bellows_repair_boundary", "label": {"en": "Bellows repair boundary", "ko": "주름막 수리 경계"}, "locator": {"en": "Ultraviolet record A-2, rear frame", "ko": "자외선 기록 A-2, 후면 프레임"}},
+    {"id": "cite.perfect_fake.document.estate_intake", "source_ref": "src.perfect_fake.document.estate_intake", "label": {"en": "Estate intake and conservation receipt", "ko": "유산 인수 및 보존 영수증"}, "locator": {"en": "Fictional estate record 05, leaves 3–4", "ko": "가상 유산 기록 05, 3~4장"}},
+    {"id": "cite.perfect_fake.document.workshop_invoice", "source_ref": "src.perfect_fake.document.workshop_invoice", "label": {"en": "Conservation workshop invoice", "ko": "보존 공방 작업 명세서"}, "locator": {"en": "Workshop invoice 06, treatment scope", "ko": "공방 명세서 06, 처리 범위"}},
+    {"id": "cite.perfect_fake.npc.elias_market_context", "source_ref": "src.perfect_fake.npc.elias_market_context", "label": {"en": "Interview with Elias Rowe", "ko": "엘리아스 로우 면담"}, "locator": {"en": "Auction interview N-3", "ko": "경매 면담 N-3"}},
+    {"id": "cite.perfect_fake.reference.cindervale_standard", "source_ref": "src.perfect_fake.reference.cindervale_standard", "label": {"en": "Cindervale C-102 standard", "ko": "신더베일 C-102 기준"}, "locator": {"en": "Fictional period reference 05, figures 2–5", "ko": "가상 시대 참고 05, 도판 2~5"}}
+  ],
+  "evidence_links": [
+    {"id": "link.perfect_fake.casting_supports_genuine_repair", "source_ref": "src.perfect_fake.artifact.casting_serial_continuity", "hypothesis_id": "hyp.perfect_fake.genuine_with_modern_conservation_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "camera_body_identity", "citation_id": "cite.perfect_fake.artifact.casting_serial_continuity"},
+    {"id": "link.perfect_fake.casting_refutes_replica", "source_ref": "src.perfect_fake.artifact.casting_serial_continuity", "hypothesis_id": "hyp.perfect_fake.complete_later_replica", "relation": "REFUTE", "weight": 0.95, "independence_group": "camera_body_identity", "citation_id": "cite.perfect_fake.artifact.casting_serial_continuity"},
+    {"id": "link.perfect_fake.boundary_refutes_untouched", "source_ref": "src.perfect_fake.artifact.bellows_repair_boundary", "hypothesis_id": "hyp.perfect_fake.untouched_factory_original", "relation": "REFUTE", "weight": 1.0, "independence_group": "camera_modern_intervention", "citation_id": "cite.perfect_fake.artifact.bellows_repair_boundary"},
+    {"id": "link.perfect_fake.boundary_supports_genuine_repair", "source_ref": "src.perfect_fake.artifact.bellows_repair_boundary", "hypothesis_id": "hyp.perfect_fake.genuine_with_modern_conservation_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "camera_modern_intervention", "citation_id": "cite.perfect_fake.artifact.bellows_repair_boundary"},
+    {"id": "link.perfect_fake.estate_supports_genuine_repair", "source_ref": "src.perfect_fake.document.estate_intake", "hypothesis_id": "hyp.perfect_fake.genuine_with_modern_conservation_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "camera_custody_and_repair_record", "citation_id": "cite.perfect_fake.document.estate_intake"},
+    {"id": "link.perfect_fake.invoice_supports_genuine_repair", "source_ref": "src.perfect_fake.document.workshop_invoice", "hypothesis_id": "hyp.perfect_fake.genuine_with_modern_conservation_repair", "relation": "SUPPORT", "weight": 0.85, "independence_group": "camera_conservation_method", "citation_id": "cite.perfect_fake.document.workshop_invoice"},
+    {"id": "link.perfect_fake.elias_supports_disclosed_repair", "source_ref": "src.perfect_fake.npc.elias_market_context", "hypothesis_id": "hyp.perfect_fake.genuine_with_modern_conservation_repair", "relation": "SUPPORT", "weight": 0.55, "independence_group": "elias_market_context", "citation_id": "cite.perfect_fake.npc.elias_market_context"},
+    {"id": "link.perfect_fake.standard_supports_genuine_repair", "source_ref": "src.perfect_fake.reference.cindervale_standard", "hypothesis_id": "hyp.perfect_fake.genuine_with_modern_conservation_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "independent_camera_standard", "citation_id": "cite.perfect_fake.reference.cindervale_standard"},
+    {"id": "link.perfect_fake.standard_refutes_replica", "source_ref": "src.perfect_fake.reference.cindervale_standard", "hypothesis_id": "hyp.perfect_fake.complete_later_replica", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_camera_standard", "citation_id": "cite.perfect_fake.reference.cindervale_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+    "required_source_refs": ["src.perfect_fake.artifact.casting_serial_continuity", "src.perfect_fake.artifact.bellows_repair_boundary", "src.perfect_fake.document.estate_intake", "src.perfect_fake.reference.cindervale_standard"],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {"en": "Choose one hypothesis and cite four findings from four independent groups. Separate the period body from the modern bellows and explain why the intervention must be disclosed.", "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 당대 몸체와 현대 주름막을 구분하고 개입을 공개해야 하는 이유를 설명하라."},
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": true, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

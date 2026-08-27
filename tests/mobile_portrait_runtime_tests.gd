@@ -17,14 +17,17 @@ func _check(condition: bool, message: String) -> void:
 		push_error("MOBILE_PORTRAIT_QA: " + message)
 
 
-func _inside_horizontal_bounds(control: Control, parent_width: float, label: String) -> void:
-	_check(control.position.x >= -1.0, label + " must not start left of the viewport")
-	_check(control.position.x + control.size.x <= parent_width + 1.0, label + " must not extend right of the viewport")
+func _inside_global_bounds(control: Control, parent: Control, label: String) -> void:
+	var control_rect := control.get_global_rect()
+	var parent_rect := parent.get_global_rect()
+	_check(control_rect.position.x >= parent_rect.position.x - 1.0, label + " must not start left of R3Interface")
+	_check(control_rect.end.x <= parent_rect.end.x + 1.0, label + " must not extend right of R3Interface")
+	_check(control_rect.position.y >= parent_rect.position.y - 1.0, label + " must not start above R3Interface")
+	_check(control_rect.end.y <= parent_rect.end.y + 1.0, label + " must not extend below R3Interface")
 
 
-func _inside_vertical_bounds(control: Control, parent_height: float, label: String) -> void:
-	_check(control.position.y >= -1.0, label + " must not start above the viewport")
-	_check(control.position.y + control.size.y <= parent_height + 1.0, label + " must not extend below the viewport")
+func _center_delta(control: Control, parent: Control) -> Vector2:
+	return control.get_global_rect().get_center() - parent.get_global_rect().get_center()
 
 
 func _run() -> void:
@@ -56,29 +59,38 @@ func _run() -> void:
 		quit(1)
 		return
 
-	print("MOBILE_PORTRAIT_QA physical=", DisplayServer.window_get_size(), " logical_ui=", ui.size)
+	print("MOBILE_PORTRAIT_QA physical=", DisplayServer.window_get_size(), " logical_ui=", ui.size, " ui_global=", ui.get_global_rect())
 	_check(bool(bridge.call("is_portrait_layout")), "390x700 must select portrait layout")
 	_check(ui.size.x >= 1200.0, "portrait logical width must preserve the 1280 design baseline")
 	_check(ui.size.y >= 1800.0, "portrait logical height must expand well beyond 720 instead of letterboxing")
 	_check(ui.size.y > ui.size.x * 1.45, "portrait logical canvas must be materially taller than wide")
 
+	var title_card := ui.find_child("TitleCard", true, false) as Control
 	var title_menu := ui.find_child("TitleMenu", true, false) as Control
+	_check(title_card != null, "portrait title card must exist")
 	_check(title_menu != null, "portrait title menu must exist")
+	if title_card != null:
+		print("MOBILE_PORTRAIT_QA card_local=", Rect2(title_card.position, title_card.size), " card_global=", title_card.get_global_rect(), " min=", title_card.get_combined_minimum_size(), " center_delta=", _center_delta(title_card, ui), " anchors=", Vector4(title_card.anchor_left, title_card.anchor_top, title_card.anchor_right, title_card.anchor_bottom))
+		_inside_global_bounds(title_card, ui, "TitleCard")
+		var card_center_delta := _center_delta(title_card, ui)
+		_check(absf(card_center_delta.x) <= 4.0 and absf(card_center_delta.y) <= 4.0, "TitleCard must be centered inside R3Interface")
+		_check(title_card.size.x >= ui.size.x * 0.70, "TitleCard must use a readable portrait width")
 	if title_menu != null:
-		print("MOBILE_PORTRAIT_QA title pos=", title_menu.position, " size=", title_menu.size, " min=", title_menu.get_combined_minimum_size(), " anchors=", Vector4(title_menu.anchor_left, title_menu.anchor_top, title_menu.anchor_right, title_menu.anchor_bottom), " offsets=", Vector4(title_menu.offset_left, title_menu.offset_top, title_menu.offset_right, title_menu.offset_bottom))
-		_inside_horizontal_bounds(title_menu, ui.size.x, "TitleMenu")
-		_inside_vertical_bounds(title_menu, ui.size.y, "TitleMenu")
-		var title_center_x := title_menu.position.x + title_menu.size.x * 0.5
-		_check(absf(title_center_x - ui.size.x * 0.5) <= 4.0, "TitleMenu must be horizontally centered in the actual viewport")
+		print("MOBILE_PORTRAIT_QA menu_global=", title_menu.get_global_rect(), " min=", title_menu.get_combined_minimum_size(), " center_delta=", _center_delta(title_menu, ui))
+		_inside_global_bounds(title_menu, ui, "TitleMenu")
+		_check(absf(_center_delta(title_menu, ui).x) <= 4.0, "TitleMenu must be horizontally centered in R3Interface")
 		_check(title_menu.size.x >= ui.size.x * 0.70, "TitleMenu must use a readable portrait width")
+		var title_logo := title_menu.find_child("TitleLogoText", true, false) as Label
+		_check(title_logo != null, "TitleLogoText must exist")
+		if title_logo != null:
+			_inside_global_bounds(title_logo, ui, "TitleLogoText")
+			var logo_font_size := title_logo.get_theme_font_size("font_size")
+			_check(logo_font_size >= 88 and logo_font_size <= 96, "portrait title logo must stay near the readable 2.0x scale")
 		for button_name in ["NewGameButton", "ContinueButton", "TitleLanguageButton"]:
 			var button := title_menu.find_child(button_name, true, false) as Control
 			_check(button != null, button_name + " must exist")
 			if button != null:
-				var absolute_left := title_menu.position.x + button.position.x
-				var absolute_right := absolute_left + button.size.x
-				_check(absolute_left >= -1.0, button_name + " must not be clipped on the left")
-				_check(absolute_right <= ui.size.x + 1.0, button_name + " must not be clipped on the right")
+				_inside_global_bounds(button, ui, button_name)
 				_check(button.size.y >= 140.0, button_name + " must have a large portrait touch target")
 
 	var cameras := scene.find_children("*", "Camera3D", true, false)
@@ -101,23 +113,19 @@ func _run() -> void:
 	_check(status != null, "portrait shell status region must exist")
 
 	if header != null:
-		_inside_horizontal_bounds(header, ui.size.x, "Header")
-		_inside_vertical_bounds(header, ui.size.y, "Header")
+		_inside_global_bounds(header, ui, "Header")
 		_check(header.position.y <= 45.0, "header must sit near the top of the usable viewport")
 		_check(header.size.x >= ui.size.x - 100.0, "header must use almost the full portrait width")
 	if content != null:
-		_inside_horizontal_bounds(content, ui.size.x, "ContentMargin")
-		_inside_vertical_bounds(content, ui.size.y, "ContentMargin")
+		_inside_global_bounds(content, ui, "ContentMargin")
 		_check(content.size.x >= ui.size.x - 100.0, "content must use almost the full portrait width")
 		_check(content.size.y >= 800.0, "content must consume the formerly empty lower portrait area")
 	if status != null:
-		_inside_horizontal_bounds(status, ui.size.x, "StatusMessage")
-		_inside_vertical_bounds(status, ui.size.y, "StatusMessage")
+		_inside_global_bounds(status, ui, "StatusMessage")
 	if status != null and navigation != null:
 		_check(status.position.y + status.size.y <= navigation.position.y + 2.0, "status must remain above bottom navigation")
 	if navigation != null:
-		_inside_horizontal_bounds(navigation, ui.size.x, "Navigation")
-		_inside_vertical_bounds(navigation, ui.size.y, "Navigation")
+		_inside_global_bounds(navigation, ui, "Navigation")
 		var bottom_gap := ui.size.y - (navigation.position.y + navigation.size.y)
 		print("MOBILE_PORTRAIT_QA nav=", navigation.position, " ", navigation.size, " bottom_gap=", bottom_gap)
 		_check(absf(bottom_gap - 34.0) <= 10.0, "3x3 navigation must anchor to the usable bottom edge")
@@ -125,8 +133,7 @@ func _run() -> void:
 		_check(navigation.get_child_count() >= 9, "normal shell must expose all nine navigation actions")
 		for child in navigation.get_children():
 			if child is Control:
-				_inside_horizontal_bounds(child, navigation.size.x, "Navigation child " + child.name)
-				_inside_vertical_bounds(child, navigation.size.y, "Navigation child " + child.name)
+				_inside_global_bounds(child, navigation, "Navigation child " + child.name)
 		if navigation.get_child_count() >= 9:
 			var first_button := navigation.get_child(0) as Control
 			var fourth_button := navigation.get_child(3) as Control

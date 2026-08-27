@@ -84,15 +84,15 @@
     {
       "evidence": {
         "buttons": 10,
-        "enabled": 2,
+        "enabled": 1,
         "first": "스테이지 1 · 클리어\n권장 55 · BEST 성장 중 0",
-        "second": "스테이지 2 · 선택 가능\n권장 56 · 첫 도전",
-        "tenth": "스테이지 10 · 잠김\n권장 64 · 첫 도전",
+        "second": "스테이지 2 · 본편 잠김\n권장 56 · 첫 도전",
+        "tenth": "스테이지 10 · 본편 잠김\n권장 64 · 첫 도전",
         "tooltipsValid": true
       },
       "executed": true,
       "id": "MVP-STAGE-UI-01",
-      "name": "New Game stage selector shows ten replay/lock cards with recommendation, first-try or localized best, and an advisory-only goal tooltip",
+      "name": "New Game stage selector enables cleared replays only, keeps future stages in the main journey, and shows advisory recommendations",
       "passed": true
     },
     {
@@ -142,7 +142,7 @@
         "above": {
           "advice": "재도전 팁 · 독립 근거를 더 인용해 보세요",
           "axes": 3,
-          "copy": "캠페인 — 지역 경매 순회\nDAY 1   ¤ 1335   REP 18   GRADE 1\n스테이지 2\n세월의 흔적과 약속\n성과\n현재 80 · 권장 56\n사건\n3 / 3\n박물관 신뢰 4 • 인맥 0 • 숙련도 6 • 온전성 50\nSTAGE CLEAR\n전문가 · 점수 80\n권장 목표 달성\n다음 스테이지 해금\n신기록 · BEST 80\n근거\n0\n보완 필요\n보존\n—\n기록 없음\n판매\n—\n기록 없음\n판단 기록 · 조사 기록 없음\n재도전 팁 · 독립 근거를 더 인용해 보세요\n\n다음 스테이지\n클리어 스테이지 재도전\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어\n",
+          "copy": "스테이지 2 — 세월의 흔적과 약속\n일차 1   ¤ 1335   평판 18   등급 1\n이야기 · 지역 경매 순회\n스테이지 2\n세월의 흔적과 약속\n성과\n현재 80 · 권장 56\n사건\n3 / 3\n이번 스테이지의 판단 · 주장을 검증하며 가치를 보존하세요.\n박물관 신뢰 4 • 인맥 0 • 숙련도 6 • 온전성 50\nSTAGE CLEAR\n전문가 · 점수 80\n권장 목표 달성\n다음 스테이지 해금\n신기록 · BEST 80\n근거\n0\n보완 필요\n보존\n—\n기록 없음\n판매\n—\n기록 없음\n판단 기록 · 조사 기록 없음\n재도전 팁 · 독립 근거를 더 인용해 보세요\n\n다음 스테이지\n클리어 스테이지 재도전\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\n설정\nEN / 한국어\n",
           "result": {
             "best": 80.0,
             "code": "OK",
@@ -173,7 +173,7 @@
         "below": {
           "advice": "재도전 팁 · 독립 근거를 더 인용해 보세요",
           "axes": 3,
-          "copy": "캠페인 — 지역 경매 순회\nDAY 1   ¤ 1335   REP 18   GRADE 1\n스테이지 2\n세월의 흔적과 약속\n성과\n현재 40 · 권장 56\n사건\n3 / 3\n박물관 신뢰 4 • 인맥 0 • 숙련도 6 • 온전성 50\nSTAGE CLEAR\n성장 중 · 점수 40\n권장 목표까지 16점\n다음 스테이지 해금\n신기록 · BEST 40\n근거\n0\n보완 필요\n보존\n—\n기록 없음\n판매\n—\n기록 없음\n판단 기록 · 조사 기록 없음\n재도전 팁 · 독립 근거를 더 인용해 보세요\n\n다음 스테이지\n클리어 스테이지 재도전\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\nEN / 한국어\n",
+          "copy": "스테이지 2 — 세월의 흔적과 약속\n일차 1   ¤ 1335   평판 18   등급 1\n이야기 · 지역 경매 순회\n스테이지 2\n세월의 흔적과 약속\n성과\n현재 40 · 권장 56\n사건\n3 / 3\n이번 스테이지의 판단 · 주장을 검증하며 가치를 보존하세요.\n박물관 신뢰 4 • 인맥 0 • 숙련도 6 • 온전성 50\nSTAGE CLEAR\n성장 중 · 점수 40\n권장 목표까지 16점\n다음 스테이지 해금\n신기록 · BEST 40\n근거\n0\n보완 필요\n보존\n—\n기록 없음\n판매\n—\n기록 없음\n판단 기록 · 조사 기록 없음\n재도전 팁 · 독립 근거를 더 인용해 보세요\n\n다음 스테이지\n클리어 스테이지 재도전\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\n설정\nEN / 한국어\n",
           "result": {
             "best": 40.0,
             "code": "OK",
@@ -282,7 +282,7 @@
       "evidence": {
         "aggregateReason": "RESERVE_TOO_HIGH",
         "dialogues": [
-          "이번에는 물러납니다.",
+          "지금 조건으로는 조화가 깨지겠어요.",
           "예약가에 닿지 못해 유찰입니다."
         ],
         "faceCentered": true,

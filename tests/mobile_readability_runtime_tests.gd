@@ -52,6 +52,8 @@ func _run() -> void:
 		return
 
 	game_state.set("persistence_enabled", false)
+	game_state.call("reset_game")
+	game_state.set("player_profile", game_state.call("default_player_profile"))
 	game_state.set("language", "ko")
 	var new_game_result: Variant = game_state.call("new_game", 1)
 	_check(new_game_result is Dictionary and bool((new_game_result as Dictionary).get("ok", false)), "Stage 1 new game must start")

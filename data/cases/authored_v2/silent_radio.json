@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage1-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "silent_radio",
+  "act_id": "ACT_1",
+  "title": {"en": "The Silent Radio", "ko": "침묵한 라디오"},
+  "briefing": {
+    "en": "Mara Venn receives a Dovetail table radio that no longer powers on. Its cabinet, serial plate, and cloth wiring look convincingly period, but one condenser bay carries a different solder hand. Establish whether this is an untouched original, a genuine receiver kept alive by a period repair, or a later reproduction built around old-looking parts.",
+    "ko": "마라 벤은 전원이 들어오지 않는 도브테일 탁상 라디오를 인수했다. 캐비닛과 일련번호판, 피복 배선은 당대 물건처럼 보이지만 축전기 구획 한 곳에는 다른 납땜 솜씨가 남아 있다. 출고 상태 그대로인 진품인지, 당대 수리로 수명을 이어 온 진품인지, 오래돼 보이는 부품으로 만든 후대 복제품인지 판별하라."
+  },
+  "central_question": {
+    "en": "Does the silent receiver preserve a genuine period radio with one documented condenser repair, or does the repair evidence reveal a different identity?",
+    "ko": "이 침묵한 수신기는 기록된 축전기 수리 한 번을 거친 당대 진품인가, 아니면 수리 흔적이 전혀 다른 정체를 드러내는가?"
+  },
+  "fiction_notice": {
+    "en": "All makers, serials, service records, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 제작사, 일련번호, 정비 기록, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the silent receiver file from the Stage 1 desk.", "ko": "스테이지 1 책상에서 침묵한 수신기 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "desolder_condenser_before_capture",
+        "source_ref": "src.silent_radio.artifact.condenser_service_seam",
+        "warning": {
+          "en": "Removing the condenser before mapping the joint can erase the solder sequence that dates the repair.",
+          "ko": "접합부를 기록하기 전에 축전기를 떼어 내면 수리 시기를 보여 주는 납땜 순서가 사라질 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "Mara reviews an unsupported conclusion with the player, but it cannot earn a masterful result.",
+        "ko": "근거가 부족한 결론은 마라와 함께 재검토하며 최고 판정은 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_004",
+    "legacy_story_artifact_id": "story_artifact_02",
+    "display_name": {"en": "Dovetail Table Radio D-103", "ko": "도브테일 탁상 라디오 D-103"},
+    "authoring_truth_hypothesis_id": "hyp.silent_radio.genuine_with_period_condenser_repair",
+    "player_prompt": {
+      "en": "Record the cabinet oxidation and condenser joint before cleaning, powering, or desoldering the receiver.",
+      "ko": "수신기를 세척하거나 전원을 넣거나 납땜을 제거하기 전에 캐비닛 산화와 축전기 접합부를 기록하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.silent_radio.untouched_factory_original",
+      "label": {"en": "Untouched factory original", "ko": "출고 상태 그대로인 진품"},
+      "claim": {"en": "The receiver and every electrical component remain exactly as Dovetail supplied them.", "ko": "수신기와 모든 전기 부품은 도브테일 출고 당시 그대로다."}
+    },
+    {
+      "id": "hyp.silent_radio.genuine_with_period_condenser_repair",
+      "label": {"en": "Genuine radio with a period condenser repair", "ko": "당대 축전기 수리를 받은 진품 라디오"},
+      "claim": {"en": "The radio is genuine, and a documented workshop repair replaced one failed condenser during its working life.", "ko": "라디오는 진품이며 사용 기간 중 기록된 공방 수리에서 고장 난 축전기 하나를 교체했다."}
+    },
+    {
+      "id": "hyp.silent_radio.later_reproduction",
+      "label": {"en": "Later reproduction with aged parts", "ko": "노화 부품을 쓴 후대 복제품"},
+      "claim": {"en": "A later builder assembled the receiver from aged and imitation parts, so the period identity is false.", "ko": "후대 제작자가 노화 부품과 모조 부품을 조립했으므로 당대 정체는 거짓이다."}
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.silent_radio.artifact.serial_oxidation",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_004",
+      "reliability": "HIGH",
+      "label": {"en": "Serial plate oxidation", "ko": "일련번호판 산화"},
+      "short_observation": {"en": "The plate and cabinet aged together around serial D-103-284.", "ko": "일련번호 D-103-284 주변의 번호판과 캐비닛이 함께 노화했다."},
+      "text": {"en": "The serial plate sits beneath an unbroken oxidation boundary that continues onto the cabinet screws. Its stamped depth, aged lacquer, and cloth-wire exits match one manufacturing event rather than a recently assembled shell.", "ko": "일련번호판 아래의 끊기지 않은 산화 경계가 캐비닛 나사까지 이어진다. 각인 깊이와 오래된 래커, 피복 배선 출구는 최근 조립한 껍데기가 아니라 한 번의 제작 과정을 가리킨다."},
+      "unlock": {"action": "inspect", "target": "serial_plate_and_cabinet", "requires": [], "action_label": {"en": "Inspect the serial plate", "ko": "일련번호판 조사"}, "target_label": {"en": "Cabinet oxidation boundary", "ko": "캐비닛 산화 경계"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "radio_manufacture_identity", "depends_on": []},
+      "citation_id": "cite.silent_radio.artifact.serial_oxidation"
+    },
+    {
+      "source_ref": "src.silent_radio.artifact.condenser_service_seam",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_004",
+      "reliability": "HIGH",
+      "label": {"en": "Condenser service seam", "ko": "축전기 정비 접합부"},
+      "short_observation": {"en": "One condenser joint uses an older workshop solder sequence.", "ko": "축전기 접합부 하나에 오래된 공방식 납땜 순서가 남아 있다."},
+      "text": {"en": "Behind the service cover, one wax condenser carries a hand-wrapped lead and rosin halo unlike the factory row. Dust bridges the replacement and adjacent coils continuously, while the solder alloy matches prewar service stock rather than modern tin-rich wire.", "ko": "정비 덮개 안쪽의 밀랍 축전기 하나에는 공장 배열과 다른 손감기 리드선과 송진 테두리가 있다. 교체품과 옆 코일 사이로 먼지가 끊기지 않고 이어지며, 납땜 합금은 현대의 주석 함량이 높은 선재가 아니라 전전 공방 재고와 맞는다."},
+      "unlock": {"action": "open_service_cover", "target": "condenser_bay", "requires": ["src.silent_radio.artifact.serial_oxidation", "precision_screwdriver"], "action_label": {"en": "Open the service cover", "ko": "정비 덮개 열기"}, "target_label": {"en": "Condenser solder sequence", "ko": "축전기 납땜 순서"}},
+      "risk": {"destroyed_by": ["desolder_condenser_before_capture"], "player_warning": {"en": "Map the lead wrap and solder halo before disturbing the joint.", "ko": "접합부를 건드리기 전에 리드선 감김과 납땜 테두리를 기록하라."}},
+      "independence": {"group": "radio_period_service", "depends_on": ["src.silent_radio.artifact.serial_oxidation"]},
+      "citation_id": "cite.silent_radio.artifact.condenser_service_seam"
+    },
+    {
+      "source_ref": "src.silent_radio.document.intake_register",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_03",
+      "document_id": "doc.silent_radio.intake_register",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Workshop intake register", "ko": "공방 인수 등록부"},
+      "short_observation": {"en": "A signed entry links D-103-284 to one condenser service.", "ko": "서명된 항목이 D-103-284와 한 번의 축전기 정비를 잇는다."},
+      "text": {"en": "Fictional Workshop Register 03 records receiver D-103-284 arriving from the Bellweather boarding house in 1938. The signed line notes a failed second condenser, retained cabinet finish, and return to the same owner.", "ko": "가상 공방 등록부 03은 수신기 D-103-284가 1938년 벨웨더 하숙집에서 들어왔다고 기록한다. 서명된 항목에는 두 번째 축전기 고장, 캐비닛 마감 보존, 같은 소유자에게 반환한 사실이 적혀 있다."},
+      "unlock": {"action": "read_document", "target": "workshop_intake_register", "requires": ["src.silent_radio.artifact.serial_oxidation"], "action_label": {"en": "Read the intake register", "ko": "인수 등록부 읽기"}, "target_label": {"en": "Signed receiver entry", "ko": "서명된 수신기 항목"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "radio_custody_record", "depends_on": []},
+      "citation_id": "cite.silent_radio.document.intake_register"
+    },
+    {
+      "source_ref": "src.silent_radio.document.service_bulletin",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_04",
+      "document_id": "doc.silent_radio.service_bulletin",
+      "reliability": "MEDIUM",
+      "label": {"en": "Dovetail condenser service bulletin", "ko": "도브테일 축전기 정비 지침"},
+      "short_observation": {"en": "The bulletin permits a field condenser replacement without changing identity.", "ko": "지침은 정체성을 유지한 현장 축전기 교체를 허용한다."},
+      "text": {"en": "The fictional Dovetail bulletin specifies a hand-wrapped replacement lead, rosin flux, and no cabinet refinishing for the D-103 series. It describes a repair practice, not the history of this individual receiver.", "ko": "가상의 도브테일 지침은 D-103 계열의 교체 리드를 손으로 감고 송진 플럭스를 쓰며 캐비닛은 재마감하지 말라고 명시한다. 이는 수리 관행을 설명할 뿐 이 개별 수신기의 이력 자체를 증명하지는 않는다."},
+      "unlock": {"action": "compare_document", "target": "condenser_service_bulletin", "requires": [], "action_label": {"en": "Compare the service bulletin", "ko": "정비 지침 대조"}, "target_label": {"en": "D-103 condenser practice", "ko": "D-103 축전기 정비법"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "radio_maker_practice", "depends_on": []},
+      "citation_id": "cite.silent_radio.document.service_bulletin"
+    },
+    {
+      "source_ref": "src.silent_radio.npc.mara_service_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "mara_venn",
+      "npc_id": "mara_venn",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Mara's service assessment", "ko": "마라의 정비 소견"},
+      "short_observation": {"en": "Mara recognizes the joint but limits her claim.", "ko": "마라는 접합 방식을 알아보지만 주장의 범위를 제한한다."},
+      "text": {"en": "Mara recognizes the lead wrap as a repair taught before her apprenticeship. She did not witness this radio being serviced and asks that the signed register and object carry more weight than her recollection.", "ko": "마라는 자신이 견습을 시작하기 전부터 쓰이던 수리식 리드 감기를 알아본다. 이 라디오의 정비를 직접 보지는 못했으므로 자신의 기억보다 서명된 등록부와 실물에 더 큰 비중을 두라고 말한다."},
+      "unlock": {"action": "ask_npc", "target": "mara_venn", "requires": ["src.silent_radio.document.intake_register"], "action_label": {"en": "Ask Mara", "ko": "마라에게 묻기"}, "target_label": {"en": "Mara Venn", "ko": "마라 벤"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "mara_radio_context", "depends_on": ["src.silent_radio.document.intake_register"]},
+      "citation_id": "cite.silent_radio.npc.mara_service_context"
+    },
+    {
+      "source_ref": "src.silent_radio.reference.receiver_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_03",
+      "reference_id": "ref.silent_radio.receiver_standard",
+      "reliability": "HIGH",
+      "label": {"en": "D-103 receiver construction standard", "ko": "D-103 수신기 제작 기준"},
+      "short_observation": {"en": "The standard matches the cabinet, chassis, and period repair alloy.", "ko": "기준이 캐비닛과 섀시, 당대 수리 합금에 맞는다."},
+      "text": {"en": "The fictional period standard lists the D-103 plate depth, cabinet screw spacing, cloth-wire exits, and accepted condenser service alloys. This receiver matches the factory body and the documented repair sequence.", "ko": "가상의 당대 기준은 D-103 번호판 깊이, 캐비닛 나사 간격, 피복 배선 출구와 허용된 축전기 수리 합금을 열거한다. 이 수신기는 공장 몸체와 기록된 수리 순서에 모두 맞는다."},
+      "unlock": {"action": "query_reference", "target": "reference_database", "requires": ["src.silent_radio.artifact.condenser_service_seam", "reference_database"], "action_label": {"en": "Check the receiver standard", "ko": "수신기 기준 확인"}, "target_label": {"en": "Period D-103 reference", "ko": "당대 D-103 참고자료"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_radio_standard", "depends_on": ["src.silent_radio.artifact.condenser_service_seam"]},
+      "citation_id": "cite.silent_radio.reference.receiver_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.silent_radio.artifact.serial_oxidation", "source_ref": "src.silent_radio.artifact.serial_oxidation", "label": {"en": "Serial plate oxidation", "ko": "일련번호판 산화"}, "locator": {"en": "Object record A-1, cabinet rear", "ko": "실물 기록 A-1, 캐비닛 후면"}},
+    {"id": "cite.silent_radio.artifact.condenser_service_seam", "source_ref": "src.silent_radio.artifact.condenser_service_seam", "label": {"en": "Condenser service seam", "ko": "축전기 정비 접합부"}, "locator": {"en": "Object record A-2, second condenser bay", "ko": "실물 기록 A-2, 두 번째 축전기 구획"}},
+    {"id": "cite.silent_radio.document.intake_register", "source_ref": "src.silent_radio.document.intake_register", "label": {"en": "Workshop intake register", "ko": "공방 인수 등록부"}, "locator": {"en": "Fictional register 03, signed line 18", "ko": "가상 등록부 03, 서명 항목 18"}},
+    {"id": "cite.silent_radio.document.service_bulletin", "source_ref": "src.silent_radio.document.service_bulletin", "label": {"en": "Dovetail service bulletin", "ko": "도브테일 정비 지침"}, "locator": {"en": "Service leaf 04, section 2", "ko": "정비 낱장 04, 2절"}},
+    {"id": "cite.silent_radio.npc.mara_service_context", "source_ref": "src.silent_radio.npc.mara_service_context", "label": {"en": "Interview with Mara Venn", "ko": "마라 벤 면담"}, "locator": {"en": "Workshop interview N-2", "ko": "공방 면담 N-2"}},
+    {"id": "cite.silent_radio.reference.receiver_standard", "source_ref": "src.silent_radio.reference.receiver_standard", "label": {"en": "D-103 construction standard", "ko": "D-103 제작 기준"}, "locator": {"en": "Fictional period reference 03, plate 7", "ko": "가상 시대 참고 03, 도판 7"}}
+  ],
+  "evidence_links": [
+    {"id": "link.silent_radio.serial_supports_period_repair", "source_ref": "src.silent_radio.artifact.serial_oxidation", "hypothesis_id": "hyp.silent_radio.genuine_with_period_condenser_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "radio_manufacture_identity", "citation_id": "cite.silent_radio.artifact.serial_oxidation"},
+    {"id": "link.silent_radio.serial_refutes_reproduction", "source_ref": "src.silent_radio.artifact.serial_oxidation", "hypothesis_id": "hyp.silent_radio.later_reproduction", "relation": "REFUTE", "weight": 0.9, "independence_group": "radio_manufacture_identity", "citation_id": "cite.silent_radio.artifact.serial_oxidation"},
+    {"id": "link.silent_radio.seam_refutes_untouched", "source_ref": "src.silent_radio.artifact.condenser_service_seam", "hypothesis_id": "hyp.silent_radio.untouched_factory_original", "relation": "REFUTE", "weight": 1.0, "independence_group": "radio_period_service", "citation_id": "cite.silent_radio.artifact.condenser_service_seam"},
+    {"id": "link.silent_radio.seam_supports_period_repair", "source_ref": "src.silent_radio.artifact.condenser_service_seam", "hypothesis_id": "hyp.silent_radio.genuine_with_period_condenser_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "radio_period_service", "citation_id": "cite.silent_radio.artifact.condenser_service_seam"},
+    {"id": "link.silent_radio.register_supports_period_repair", "source_ref": "src.silent_radio.document.intake_register", "hypothesis_id": "hyp.silent_radio.genuine_with_period_condenser_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "radio_custody_record", "citation_id": "cite.silent_radio.document.intake_register"},
+    {"id": "link.silent_radio.bulletin_supports_period_repair", "source_ref": "src.silent_radio.document.service_bulletin", "hypothesis_id": "hyp.silent_radio.genuine_with_period_condenser_repair", "relation": "SUPPORT", "weight": 0.75, "independence_group": "radio_maker_practice", "citation_id": "cite.silent_radio.document.service_bulletin"},
+    {"id": "link.silent_radio.mara_supports_period_context", "source_ref": "src.silent_radio.npc.mara_service_context", "hypothesis_id": "hyp.silent_radio.genuine_with_period_condenser_repair", "relation": "SUPPORT", "weight": 0.55, "independence_group": "mara_radio_context", "citation_id": "cite.silent_radio.npc.mara_service_context"},
+    {"id": "link.silent_radio.standard_supports_period_repair", "source_ref": "src.silent_radio.reference.receiver_standard", "hypothesis_id": "hyp.silent_radio.genuine_with_period_condenser_repair", "relation": "SUPPORT", "weight": 1.0, "independence_group": "independent_radio_standard", "citation_id": "cite.silent_radio.reference.receiver_standard"},
+    {"id": "link.silent_radio.standard_refutes_reproduction", "source_ref": "src.silent_radio.reference.receiver_standard", "hypothesis_id": "hyp.silent_radio.later_reproduction", "relation": "REFUTE", "weight": 0.8, "independence_group": "independent_radio_standard", "citation_id": "cite.silent_radio.reference.receiver_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.silent_radio.genuine_with_period_condenser_repair",
+    "required_source_refs": ["src.silent_radio.artifact.serial_oxidation", "src.silent_radio.artifact.condenser_service_seam", "src.silent_radio.document.intake_register", "src.silent_radio.reference.receiver_standard"],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {"en": "Choose one hypothesis and cite four findings from four independent groups. Explain the shared manufacture, condenser service seam, signed custody record, and period receiver standard.", "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 공통 제작 흔적, 축전기 정비 접합부, 서명된 소장 기록과 당대 수신기 기준을 설명하라."},
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": true, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

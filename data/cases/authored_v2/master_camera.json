@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "content_revision": "2.0.0-stage10-authored",
+  "source_kind": "AUTHORED_V2",
+  "active": true,
+  "case_id": "master_camera",
+  "act_id": "ACT_5",
+  "title": {"en": "Master Work: Prism Spectroscope", "ko": "장인 과제: 프리즘 분광기"},
+  "briefing": {
+    "en": "Lena Falk brings a compact prism spectroscope intended for the Grand Reserve. Its prism is optically coherent and the body follows a respected laboratory pattern, but the clamp carries two screwdriver widths and a disputed service label. Reconstruct the intervention sequence before deciding how the instrument should be authenticated and disclosed.",
+    "ko": "레나 팔크가 그랜드 리저브 출품을 목표로 소형 프리즘 분광기를 가져왔다. 프리즘의 광학 특성과 몸체는 명망 있는 실험실 형식에 맞지만 고정쇠에는 폭이 다른 두 드라이버 자국과 논쟁적인 정비표가 남아 있다. 진위와 공개 범위를 결정하기 전에 개입 순서를 재구성하라."
+  },
+  "central_question": {
+    "en": "Is this an untouched laboratory spectroscope, a genuine instrument with a traceable period clamp service, or a later composite assembled in an older style?",
+    "ko": "이 물건은 손대지 않은 실험실 분광기인가, 추적 가능한 당대 고정쇠 정비를 받은 진품인가, 아니면 오래된 양식으로 조립한 후대 복합품인가?"
+  },
+  "fiction_notice": {
+    "en": "All laboratories, makers, records, people, and dates in this case are fictional in-world material.",
+    "ko": "이 사건의 실험실, 제작사, 기록, 인물과 연대는 모두 게임 세계관을 위해 창작된 자료다."
+  },
+  "unlock": {
+    "op": "always",
+    "player_hint": {"en": "Open the spectroscope file from the Stage 10 master bench.", "ko": "스테이지 10 장인 작업대에서 분광기 서류를 연다."}
+  },
+  "risk": {
+    "retry_policy": "MENTOR_REVIEW",
+    "evidence_loss": [
+      {
+        "action_id": "reseat_prism_before_clamp_capture",
+        "source_ref": "src.master_camera.artifact.clamp_intervention_sequence",
+        "warning": {
+          "en": "Re-seating the prism before ultraviolet capture can overwrite the pressure and residue sequence beneath the clamp.",
+          "ko": "자외선 촬영 전에 프리즘을 재장착하면 고정쇠 아래의 압력 흔적과 잔류물 순서가 덮일 수 있다."
+        }
+      }
+    ],
+    "wrong_conclusion": {
+      "relationship_delta": -1,
+      "recovery_outcome": "reviewed_with_mentor",
+      "warning": {
+        "en": "A weak Grand Reserve report is returned for mentor review and cannot earn a masterful result.",
+        "ko": "근거가 약한 그랜드 리저브 보고서는 재검토되며 최고 판정은 받을 수 없다."
+      }
+    }
+  },
+  "artifact": {
+    "spec_id": "artifact_079",
+    "legacy_story_artifact_id": "story_artifact_25",
+    "display_name": {"en": "Aster Laboratory Prism Spectroscope PS-36", "ko": "애스터 실험실 프리즘 분광기 PS-36"},
+    "authoring_truth_hypothesis_id": "hyp.master_camera.genuine_with_period_clamp_service",
+    "player_prompt": {
+      "en": "Map the prism material and clamp sequence before any optical alignment or cosmetic treatment.",
+      "ko": "광학 정렬이나 외관 처리 전에 프리즘 재료와 고정쇠 개입 순서를 기록하라."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "hyp.master_camera.untouched_laboratory_original",
+      "label": {"en": "Untouched laboratory original", "ko": "손대지 않은 실험실 원형"},
+      "claim": {"en": "The prism, clamp, body, and every fastener remain in their factory configuration.", "ko": "프리즘과 고정쇠, 몸체와 모든 체결부가 공장 출고 상태 그대로다."}
+    },
+    {
+      "id": "hyp.master_camera.genuine_with_period_clamp_service",
+      "label": {"en": "Genuine spectroscope with period clamp service", "ko": "당대 고정쇠 정비를 받은 진품 분광기"},
+      "claim": {"en": "The instrument is genuine, and a documented period service removed and re-seated the original prism without replacing its body.", "ko": "기기는 진품이며 기록된 당대 정비에서 원래 프리즘을 분리해 재장착했지만 몸체는 교체하지 않았다."}
+    },
+    {
+      "id": "hyp.master_camera.later_composite_spectroscope",
+      "label": {"en": "Later composite spectroscope", "ko": "후대 복합 분광기"},
+      "claim": {"en": "An older-looking body, unrelated prism, and later clamp were assembled into a composite instrument.", "ko": "오래돼 보이는 몸체와 무관한 프리즘, 후대 고정쇠를 조립한 복합 기기다."}
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src.master_camera.artifact.prism_material_continuity",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_079",
+      "reliability": "HIGH",
+      "label": {"en": "Prism material continuity", "ko": "프리즘 재료 연속성"},
+      "short_observation": {"en": "The edge chip and refractive profile belong to the recorded period glass batch.", "ko": "모서리 깨짐과 굴절 특성이 기록된 당대 유리 배치에 속한다."},
+      "text": {"en": "A low-power material scan finds the same trace inclusions in the prism, spare reference chip, and residue trapped below the original clamp seat. The tiny edge chip remains outside the light path and predates the latest alignment marks.", "ko": "저출력 재료 스캔에서 프리즘과 기준용 여분 조각, 원래 고정쇠 자리 아래 잔류물에 같은 미량 내포물이 확인된다. 작은 모서리 깨짐은 광로 밖에 있으며 최근 정렬 자국보다 오래되었다."},
+      "unlock": {"action": "scan_material", "target": "prism_and_reference_chip", "requires": ["material_scanner"], "action_label": {"en": "Scan the prism glass", "ko": "프리즘 유리 스캔"}, "target_label": {"en": "Glass inclusions and edge chip", "ko": "유리 내포물과 모서리 깨짐"}},
+      "risk": {"destroyed_by": [], "player_warning": {"en": "Use one low-power pass; repeated scanning adds heat near the chipped edge.", "ko": "저출력으로 한 번만 확인하라. 반복 스캔은 깨진 모서리 주변에 열을 더한다."}},
+      "independence": {"group": "spectroscope_glass_identity", "depends_on": []},
+      "citation_id": "cite.master_camera.artifact.prism_material_continuity"
+    },
+    {
+      "source_ref": "src.master_camera.artifact.clamp_intervention_sequence",
+      "kind": "ARTIFACT_OBSERVATION",
+      "runtime_ref_id": "artifact_079",
+      "reliability": "HIGH",
+      "label": {"en": "Clamp intervention sequence", "ko": "고정쇠 개입 순서"},
+      "short_observation": {"en": "Ultraviolet residue places both screwdriver widths within one period service.", "ko": "자외선 잔류물이 두 드라이버 폭을 한 번의 당대 정비 안에 배치한다."},
+      "text": {"en": "Under ultraviolet light, the wider tool mark lies beneath aged shellac while the narrow finishing mark crosses only the same service layer. Both sit above the original clamp impression, proving removal and re-seating rather than a modern replacement clamp.", "ko": "자외선 아래에서 넓은 도구 자국은 오래된 셸락 아래에 있고 좁은 마무리 자국은 같은 정비층만 가로지른다. 두 자국 모두 원래 고정쇠 눌림 위에 있어 현대 고정쇠 교체가 아니라 분리와 재장착을 보여 준다."},
+      "unlock": {"action": "inspect_under_uv", "target": "prism_clamp", "requires": ["src.master_camera.artifact.prism_material_continuity", "uv_lamp"], "action_label": {"en": "Map the clamp under ultraviolet light", "ko": "자외선으로 고정쇠 기록"}, "target_label": {"en": "Layered tool marks and residue", "ko": "겹친 도구 자국과 잔류물"}},
+      "risk": {"destroyed_by": ["reseat_prism_before_clamp_capture"], "player_warning": {"en": "Record both pressure marks before loosening the clamp.", "ko": "고정쇠를 풀기 전에 두 압력 자국을 기록하라."}},
+      "independence": {"group": "spectroscope_period_service", "depends_on": ["src.master_camera.artifact.prism_material_continuity"]},
+      "citation_id": "cite.master_camera.artifact.clamp_intervention_sequence"
+    },
+    {
+      "source_ref": "src.master_camera.document.laboratory_transfer_ledger",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_19",
+      "document_id": "doc.master_camera.laboratory_transfer_ledger",
+      "public_clue_id": "PROVENANCE",
+      "reliability": "HIGH",
+      "label": {"en": "Laboratory transfer ledger", "ko": "실험실 이관 장부"},
+      "short_observation": {"en": "A signed ledger follows PS-36 through service and transfer to Lena.", "ko": "서명된 장부가 PS-36의 정비와 레나에게 이관된 과정을 잇는다."},
+      "text": {"en": "Fictional Archive Record 19 lists PS-36 in the Aster laboratory inventory, records a 1938 prism re-seating after a bench fall, and follows the instrument through a sealed university transfer to Lena Falk's consignment.", "ko": "가상 보관 기록 19는 PS-36을 애스터 실험실 목록에 싣고 1938년 작업대 낙하 뒤 프리즘 재장착을 기록하며, 봉인된 대학 이관을 거쳐 레나 팔크의 위탁품이 된 과정을 잇는다."},
+      "unlock": {"action": "read_document", "target": "laboratory_transfer_ledger", "requires": [], "action_label": {"en": "Read the transfer ledger", "ko": "이관 장부 읽기"}, "target_label": {"en": "Signed PS-36 entries", "ko": "서명된 PS-36 항목"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "spectroscope_custody_record", "depends_on": []},
+      "citation_id": "cite.master_camera.document.laboratory_transfer_ledger"
+    },
+    {
+      "source_ref": "src.master_camera.document.optical_bench_card",
+      "kind": "DOCUMENT",
+      "runtime_ref_id": "document_20",
+      "document_id": "doc.master_camera.optical_bench_card",
+      "reliability": "MEDIUM",
+      "label": {"en": "Optical bench service card", "ko": "광학 작업대 정비표"},
+      "short_observation": {"en": "The card records two tool widths used in the same re-seating sequence.", "ko": "정비표가 같은 재장착 과정에서 쓴 두 도구 폭을 기록한다."},
+      "text": {"en": "The fictional bench card instructs the technician to release the seized clamp with a wide driver, center the original prism, then finish with a narrow torque driver. It records no replacement prism or clamp.", "ko": "가상의 작업대 정비표는 고착된 고정쇠를 넓은 드라이버로 풀고 원래 프리즘을 중앙에 맞춘 뒤 좁은 토크 드라이버로 마무리하라고 지시한다. 프리즘이나 고정쇠 교체 기록은 없다."},
+      "unlock": {"action": "compare_document", "target": "optical_bench_card", "requires": [], "action_label": {"en": "Compare the bench card", "ko": "작업대 정비표 대조"}, "target_label": {"en": "Two-driver service sequence", "ko": "두 드라이버 정비 순서"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "spectroscope_service_document", "depends_on": []},
+      "citation_id": "cite.master_camera.document.optical_bench_card"
+    },
+    {
+      "source_ref": "src.master_camera.npc.lena_consignment_context",
+      "kind": "NPC_STATEMENT",
+      "runtime_ref_id": "lena_falk",
+      "npc_id": "lena_falk",
+      "expression": "concerned",
+      "reliability": "MEDIUM",
+      "label": {"en": "Lena's consignment account", "ko": "레나의 위탁품 설명"},
+      "short_observation": {"en": "Lena separates a known service dispute from a composite-object claim.", "ko": "레나는 알려진 정비 논쟁과 복합품 주장을 구분한다."},
+      "text": {"en": "Lena says the university warned her about the two clamp marks and supplied the sealed ledger. She never opened the optical body and asks for the repair to be stated plainly rather than marketed as untouched.", "ko": "레나는 대학 측이 두 고정쇠 자국을 미리 알리고 봉인 장부를 건넸다고 말한다. 자신은 광학 몸체를 열지 않았으며 손대지 않은 물건처럼 홍보하지 말고 수리를 분명히 밝히라고 요구한다."},
+      "unlock": {"action": "ask_npc", "target": "lena_falk", "requires": ["src.master_camera.document.laboratory_transfer_ledger"], "action_label": {"en": "Ask Lena", "ko": "레나에게 묻기"}, "target_label": {"en": "Lena Falk", "ko": "레나 팔크"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "lena_spectroscope_account", "depends_on": ["src.master_camera.document.laboratory_transfer_ledger"]},
+      "citation_id": "cite.master_camera.npc.lena_consignment_context"
+    },
+    {
+      "source_ref": "src.master_camera.reference.spectroscope_standard",
+      "kind": "REFERENCE",
+      "runtime_ref_id": "period_ref_19",
+      "reference_id": "ref.master_camera.spectroscope_standard",
+      "reliability": "HIGH",
+      "label": {"en": "Period compact spectroscope standard", "ko": "당대 소형 분광기 기준"},
+      "short_observation": {"en": "The standard matches the body, prism glass, and serviceable clamp geometry.", "ko": "기준이 몸체와 프리즘 유리, 정비 가능한 고정쇠 형상에 맞는다."},
+      "text": {"en": "The fictional period standard specifies the Aster body dimensions, glass dispersion range, clamp seat, and approved re-centering procedure. PS-36 matches the factory body and the documented service path, not a later composite.", "ko": "가상의 당대 기준은 애스터 몸체 치수, 유리 분산 범위, 고정쇠 자리와 허용된 재중앙 조정 절차를 명시한다. PS-36은 후대 복합품이 아니라 공장 몸체와 기록된 정비 경로에 맞는다."},
+      "unlock": {"action": "query_reference", "target": "reference_database", "requires": ["src.master_camera.artifact.clamp_intervention_sequence", "reference_database"], "action_label": {"en": "Check the spectroscope standard", "ko": "분광기 기준 확인"}, "target_label": {"en": "Period optical benchmark", "ko": "당대 광학 기준"}},
+      "risk": {"destroyed_by": []},
+      "independence": {"group": "independent_spectroscope_standard", "depends_on": ["src.master_camera.artifact.clamp_intervention_sequence"]},
+      "citation_id": "cite.master_camera.reference.spectroscope_standard"
+    }
+  ],
+  "citations": [
+    {"id": "cite.master_camera.artifact.prism_material_continuity", "source_ref": "src.master_camera.artifact.prism_material_continuity", "label": {"en": "Prism material continuity", "ko": "프리즘 재료 연속성"}, "locator": {"en": "Object record A-1, prism and reference chip", "ko": "실물 기록 A-1, 프리즘과 기준 조각"}},
+    {"id": "cite.master_camera.artifact.clamp_intervention_sequence", "source_ref": "src.master_camera.artifact.clamp_intervention_sequence", "label": {"en": "Clamp intervention sequence", "ko": "고정쇠 개입 순서"}, "locator": {"en": "Ultraviolet record A-2, prism clamp", "ko": "자외선 기록 A-2, 프리즘 고정쇠"}},
+    {"id": "cite.master_camera.document.laboratory_transfer_ledger", "source_ref": "src.master_camera.document.laboratory_transfer_ledger", "label": {"en": "Laboratory transfer ledger", "ko": "실험실 이관 장부"}, "locator": {"en": "Fictional archive record 19, PS-36 entries", "ko": "가상 보관 기록 19, PS-36 항목"}},
+    {"id": "cite.master_camera.document.optical_bench_card", "source_ref": "src.master_camera.document.optical_bench_card", "label": {"en": "Optical bench service card", "ko": "광학 작업대 정비표"}, "locator": {"en": "Bench card 20, clamp procedure", "ko": "작업대 정비표 20, 고정쇠 절차"}},
+    {"id": "cite.master_camera.npc.lena_consignment_context", "source_ref": "src.master_camera.npc.lena_consignment_context", "label": {"en": "Interview with Lena Falk", "ko": "레나 팔크 면담"}, "locator": {"en": "Dealer interview N-25", "ko": "딜러 면담 N-25"}},
+    {"id": "cite.master_camera.reference.spectroscope_standard", "source_ref": "src.master_camera.reference.spectroscope_standard", "label": {"en": "Compact spectroscope standard", "ko": "소형 분광기 기준"}, "locator": {"en": "Fictional period reference 19, plate 8", "ko": "가상 시대 참고 19, 도판 8"}}
+  ],
+  "evidence_links": [
+    {"id": "link.master_camera.prism_supports_service", "source_ref": "src.master_camera.artifact.prism_material_continuity", "hypothesis_id": "hyp.master_camera.genuine_with_period_clamp_service", "relation": "SUPPORT", "weight": 1.0, "independence_group": "spectroscope_glass_identity", "citation_id": "cite.master_camera.artifact.prism_material_continuity"},
+    {"id": "link.master_camera.prism_refutes_composite", "source_ref": "src.master_camera.artifact.prism_material_continuity", "hypothesis_id": "hyp.master_camera.later_composite_spectroscope", "relation": "REFUTE", "weight": 0.9, "independence_group": "spectroscope_glass_identity", "citation_id": "cite.master_camera.artifact.prism_material_continuity"},
+    {"id": "link.master_camera.clamp_refutes_untouched", "source_ref": "src.master_camera.artifact.clamp_intervention_sequence", "hypothesis_id": "hyp.master_camera.untouched_laboratory_original", "relation": "REFUTE", "weight": 1.0, "independence_group": "spectroscope_period_service", "citation_id": "cite.master_camera.artifact.clamp_intervention_sequence"},
+    {"id": "link.master_camera.clamp_supports_service", "source_ref": "src.master_camera.artifact.clamp_intervention_sequence", "hypothesis_id": "hyp.master_camera.genuine_with_period_clamp_service", "relation": "SUPPORT", "weight": 1.0, "independence_group": "spectroscope_period_service", "citation_id": "cite.master_camera.artifact.clamp_intervention_sequence"},
+    {"id": "link.master_camera.ledger_supports_service", "source_ref": "src.master_camera.document.laboratory_transfer_ledger", "hypothesis_id": "hyp.master_camera.genuine_with_period_clamp_service", "relation": "SUPPORT", "weight": 1.0, "independence_group": "spectroscope_custody_record", "citation_id": "cite.master_camera.document.laboratory_transfer_ledger"},
+    {"id": "link.master_camera.card_supports_service", "source_ref": "src.master_camera.document.optical_bench_card", "hypothesis_id": "hyp.master_camera.genuine_with_period_clamp_service", "relation": "SUPPORT", "weight": 0.85, "independence_group": "spectroscope_service_document", "citation_id": "cite.master_camera.document.optical_bench_card"},
+    {"id": "link.master_camera.lena_supports_disclosure", "source_ref": "src.master_camera.npc.lena_consignment_context", "hypothesis_id": "hyp.master_camera.genuine_with_period_clamp_service", "relation": "SUPPORT", "weight": 0.55, "independence_group": "lena_spectroscope_account", "citation_id": "cite.master_camera.npc.lena_consignment_context"},
+    {"id": "link.master_camera.standard_supports_service", "source_ref": "src.master_camera.reference.spectroscope_standard", "hypothesis_id": "hyp.master_camera.genuine_with_period_clamp_service", "relation": "SUPPORT", "weight": 1.0, "independence_group": "independent_spectroscope_standard", "citation_id": "cite.master_camera.reference.spectroscope_standard"},
+    {"id": "link.master_camera.standard_refutes_composite", "source_ref": "src.master_camera.reference.spectroscope_standard", "hypothesis_id": "hyp.master_camera.later_composite_spectroscope", "relation": "REFUTE", "weight": 0.9, "independence_group": "independent_spectroscope_standard", "citation_id": "cite.master_camera.reference.spectroscope_standard"}
+  ],
+  "resolution": {
+    "winning_hypothesis_id": "hyp.master_camera.genuine_with_period_clamp_service",
+    "required_source_refs": ["src.master_camera.artifact.prism_material_continuity", "src.master_camera.artifact.clamp_intervention_sequence", "src.master_camera.document.laboratory_transfer_ledger", "src.master_camera.reference.spectroscope_standard"],
+    "minimum_independent_groups": 4,
+    "minimum_citations": 4,
+    "report_prompt": {"en": "Choose one hypothesis and cite four findings from four independent groups. Explain the prism glass, clamp sequence, signed transfer, and period optical standard.", "ko": "가설 하나를 선택하고 서로 독립된 네 집단에서 네 가지 근거를 인용하라. 프리즘 유리, 고정쇠 순서, 서명된 이관 기록과 당대 광학 기준을 설명하라."},
+    "outcome_rules": [
+      {"outcome": "masterful", "requires_correct_hypothesis": true, "requires_all_required_sources": true, "minimum_independent_groups": 4, "minimum_citations": 4, "minimum_net_support": 4},
+      {"outcome": "credible", "requires_correct_hypothesis": true, "requires_all_required_sources": false, "minimum_independent_groups": 3, "minimum_citations": 3, "minimum_net_support": 3},
+      {"outcome": "mistaken", "requires_correct_hypothesis": false, "requires_all_required_sources": false, "minimum_independent_groups": 0, "minimum_citations": 2, "minimum_net_support": 0},
+      {"outcome": "reviewed_with_mentor", "fallback": true}
+    ]
+  }
+}

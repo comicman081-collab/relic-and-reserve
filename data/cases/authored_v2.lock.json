@@ -112,6 +112,26 @@
       "path": "data/cases/authored_v2/master_gauge.json",
       "case_id": "master_gauge",
       "sha256": "e60877979752b6cdb9d245f2d7551e3f92658c3ab73eab59cdd389ec375f32ee"
+    },
+    {
+      "path": "data/cases/authored_v2/silent_radio.json",
+      "case_id": "silent_radio",
+      "sha256": "f4e73924caebc3cadd7878c74cb03e255600ad40bb5c818d9a695cfa537ceaac"
+    },
+    {
+      "path": "data/cases/authored_v2/perfect_fake.json",
+      "case_id": "perfect_fake",
+      "sha256": "c592c9e16fdefc478053e17821093663e6bd585a2cf6e58dc9803dd568951aab"
+    },
+    {
+      "path": "data/cases/authored_v2/master_camera.json",
+      "case_id": "master_camera",
+      "sha256": "a41190cf226e0b8d84f715024db4aa664ff8d0b200308860cff2196c9a869990"
+    },
+    {
+      "path": "data/cases/authored_v2/master_mechanism.json",
+      "case_id": "master_mechanism",
+      "sha256": "c5cd6ce59599646eb81fd1146e1f9d9d6e9d15ce21efa3c90c4a380797117485"
     }
   ]
 }

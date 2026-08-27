@@ -224,6 +224,7 @@ func _show_page() -> void:
 	var pages := onboarding_pages()
 	page_index = clampi(page_index, 0, pages.size() - 1)
 	var page: Dictionary = pages[page_index]
+	var portrait := interface.size.y > interface.size.x * 1.05
 
 	var overlay := Control.new()
 	overlay.name = OVERLAY_NAME
@@ -242,10 +243,19 @@ func _show_page() -> void:
 
 	var panel_width := minf(1020.0, maxf(620.0, interface.size.x - 96.0))
 	var panel_height := minf(1380.0, maxf(760.0, interface.size.y * 0.60))
+	var panel_y := maxf(110.0, (interface.size.y - panel_height) * 0.40)
+	if not portrait:
+		# Desktop Web needs a fixed skip lane above the guide and a safe bottom
+		# margin. Keeping this branch separate preserves the established tall
+		# 390x700 composition while preventing the 1280x720 panel from extending
+		# below the viewport.
+		panel_width = minf(1020.0, maxf(320.0, interface.size.x - 96.0))
+		panel_y = minf(76.0, maxf(12.0, interface.size.y * 0.15))
+		panel_height = maxf(1.0, interface.size.y - panel_y - 24.0)
 	var panel := PanelContainer.new()
 	panel.name = "OpeningNarrationPanel"
 	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	panel.position = Vector2((interface.size.x - panel_width) * 0.5, maxf(110.0, (interface.size.y - panel_height) * 0.40))
+	panel.position = Vector2((interface.size.x - panel_width) * 0.5, panel_y)
 	panel.size = Vector2(panel_width, panel_height)
 	panel.add_theme_stylebox_override("panel", _panel_style(Color("#10171cfb"), Color("#e3c681"), 4))
 	overlay.add_child(panel)
@@ -265,15 +275,26 @@ func _show_page() -> void:
 	column.add_child(title)
 
 	var scroll := ScrollContainer.new()
+	scroll.name = "OpeningNarrationScroll"
 	scroll.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	column.add_child(scroll)
-	var content := VBoxContainer.new()
+	var content: Container
+	if str(page.get("phase", "")) == "TABS" and not portrait:
+		var grid := GridContainer.new()
+		grid.columns = 3
+		grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		grid.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		grid.add_theme_constant_override("h_separation", 12)
+		content = grid
+	else:
+		var stack := VBoxContainer.new()
+		stack.add_theme_constant_override("separation", 18)
+		content = stack
 	content.name = "OpeningNarrationContent"
 	content.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	content.add_theme_constant_override("separation", 18)
 	scroll.add_child(content)
 
 	if str(page.get("phase", "")) == "OPENING":
@@ -290,6 +311,8 @@ func _show_page() -> void:
 			card.name = "OpeningTabCard_%d" % (tab_index + 1)
 			card.mouse_filter = Control.MOUSE_FILTER_IGNORE
 			card.custom_minimum_size.y = 210.0
+			card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			card.size_flags_vertical = Control.SIZE_EXPAND_FILL
 			card.add_theme_stylebox_override("panel", _panel_style(Color("#172126f4"), Color("#657579"), 2))
 			content.add_child(card)
 			var card_column := VBoxContainer.new()
@@ -316,11 +339,24 @@ func _show_page() -> void:
 	var skip := Button.new()
 	skip.name = "OpeningExpertSkip"
 	skip.text = _copy("I ALREADY KNOW THE GAME AND MENUS — SKIP ALL TUTORIAL", "게임과 메뉴 구성을 이미 아는 경우에만 · 전체 튜토리얼 건너뛰기")
-	skip.custom_minimum_size = Vector2(0, 72)
-	skip.add_theme_font_size_override("font_size", 16)
+	skip.focus_mode = Control.FOCUS_ALL
+	skip.mouse_filter = Control.MOUSE_FILTER_STOP
 	skip.modulate = Color(0.78, 0.82, 0.82, 0.85)
 	skip.pressed.connect(_skip_all_tutorial)
-	column.add_child(skip)
+	if portrait:
+		skip.custom_minimum_size = Vector2(0, 72)
+		skip.add_theme_font_size_override("font_size", 16)
+		column.add_child(skip)
+	else:
+		# The compact desktop control is always visible in the requested
+		# top-right position, independent of scrollable narration content.
+		skip.text = _copy("SKIP TUTORIAL", "튜토리얼 건너뛰기")
+		skip.tooltip_text = _copy("Skip the complete story and hands-on tutorial", "오프닝과 조작 튜토리얼 전체를 건너뜁니다")
+		skip.position = Vector2(interface.size.x - 324.0, 16.0)
+		skip.size = Vector2(300.0, 44.0)
+		skip.custom_minimum_size = skip.size
+		skip.add_theme_font_size_override("font_size", 14)
+		overlay.add_child(skip)
 
 
 func _on_advance_input(event: InputEvent) -> void:

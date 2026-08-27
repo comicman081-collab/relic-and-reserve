@@ -1,0 +1,1107 @@
+{
+  "executed": 6,
+  "expectedCount": 6,
+  "failed": 0,
+  "passed": 6,
+  "suite": "R3 Authored Bookend Cases",
+  "tests": [
+    {
+      "evidence": {
+        "authored": 26,
+        "campaign": 26,
+        "cases": {
+          "master_camera": {
+            "evidence": 6,
+            "kinds": [
+              "ARTIFACT",
+              "ARTIFACT",
+              "DOCUMENT",
+              "DOCUMENT",
+              "NPC",
+              "REFERENCE"
+            ],
+            "ok": true,
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "provenance": 1,
+            "risk": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "riskByIdOk": true
+          },
+          "master_mechanism": {
+            "evidence": 6,
+            "kinds": [
+              "ARTIFACT",
+              "ARTIFACT",
+              "DOCUMENT",
+              "DOCUMENT",
+              "NPC",
+              "REFERENCE"
+            ],
+            "ok": true,
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "provenance": 1,
+            "risk": {
+              "HIGH": 1,
+              "LOW": 1,
+              "NONE": 4
+            },
+            "riskByIdOk": true
+          },
+          "perfect_fake": {
+            "evidence": 6,
+            "kinds": [
+              "ARTIFACT",
+              "ARTIFACT",
+              "DOCUMENT",
+              "DOCUMENT",
+              "NPC",
+              "REFERENCE"
+            ],
+            "ok": true,
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "provenance": 1,
+            "risk": {
+              "HIGH": 1,
+              "LOW": 0,
+              "NONE": 5
+            },
+            "riskByIdOk": true
+          },
+          "silent_radio": {
+            "evidence": 6,
+            "kinds": [
+              "ARTIFACT",
+              "ARTIFACT",
+              "DOCUMENT",
+              "DOCUMENT",
+              "NPC",
+              "REFERENCE"
+            ],
+            "ok": true,
+            "outcomes": [
+              "masterful",
+              "credible",
+              "mistaken",
+              "reviewed_with_mentor"
+            ],
+            "provenance": 1,
+            "risk": {
+              "HIGH": 1,
+              "LOW": 0,
+              "NONE": 5
+            },
+            "riskByIdOk": true
+          }
+        }
+      },
+      "executed": true,
+      "id": "BOOKEND-DATA-01",
+      "name": "Every campaign case is authored-v2 and the four bookends preserve exact stage-calibrated six-source risk topology",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_camera": {
+          "ok": true,
+          "repeatSame": true,
+          "spec": "artifact_079",
+          "stage": 10,
+          "started": {
+            "code": "OK",
+            "difficultyMultiplier": 1.83845921242015,
+            "ok": true,
+            "prerequisiteOk": true,
+            "stage": 10
+          },
+          "story": "story_artifact_25",
+          "truth": "hyp.master_camera.genuine_with_period_clamp_service",
+          "uid": "case_master_camera",
+          "uidCount": 1
+        },
+        "master_mechanism": {
+          "ok": true,
+          "repeatSame": true,
+          "spec": "artifact_080",
+          "stage": 10,
+          "started": {
+            "code": "OK",
+            "difficultyMultiplier": 1.83845921242015,
+            "ok": true,
+            "prerequisiteOk": true,
+            "stage": 10
+          },
+          "story": "story_artifact_26",
+          "truth": "hyp.master_mechanism.genuine_observatory_regulator",
+          "uid": "case_master_mechanism",
+          "uidCount": 1
+        },
+        "perfect_fake": {
+          "ok": true,
+          "repeatSame": true,
+          "spec": "artifact_003",
+          "stage": 1,
+          "started": {
+            "code": "OK",
+            "difficultyMultiplier": 1.0,
+            "ok": true,
+            "prerequisiteOk": true,
+            "stage": 1
+          },
+          "story": "story_artifact_03",
+          "truth": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+          "uid": "case_perfect_fake",
+          "uidCount": 1
+        },
+        "silent_radio": {
+          "ok": true,
+          "repeatSame": true,
+          "spec": "artifact_004",
+          "stage": 1,
+          "started": {
+            "code": "OK",
+            "difficultyMultiplier": 1.0,
+            "ok": true,
+            "prerequisiteOk": true,
+            "stage": 1
+          },
+          "story": "story_artifact_02",
+          "truth": "hyp.silent_radio.genuine_with_period_condenser_repair",
+          "uid": "case_silent_radio",
+          "uidCount": 1
+        }
+      },
+      "executed": true,
+      "id": "BOOKEND-ISSUE-02",
+      "name": "Stage 1 and Stage 10 issue one stable authoritative artifact per new authored case",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_camera": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.master_camera.artifact.prism_material_continuity",
+              "src.master_camera.artifact.clamp_intervention_sequence",
+              "src.master_camera.document.laboratory_transfer_ledger"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_camera.genuine_with_period_clamp_service",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovery": {
+            "ids": [
+              "src.master_camera.artifact.prism_material_continuity",
+              "src.master_camera.document.laboratory_transfer_ledger",
+              "src.master_camera.document.optical_bench_card",
+              "src.master_camera.artifact.clamp_intervention_sequence",
+              "src.master_camera.npc.lena_consignment_context",
+              "src.master_camera.reference.spectroscope_standard"
+            ],
+            "toolGateAttempts": 3,
+            "wrongToolZero": true
+          },
+          "discoveryOk": true,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.master_camera.artifact.prism_material_continuity",
+              "src.master_camera.artifact.clamp_intervention_sequence",
+              "src.master_camera.document.laboratory_transfer_ledger",
+              "src.master_camera.reference.spectroscope_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_camera.genuine_with_period_clamp_service",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.master_camera.artifact.prism_material_continuity"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_camera.genuine_with_period_clamp_service",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.master_camera.artifact.prism_material_continuity",
+              "src.master_camera.artifact.clamp_intervention_sequence",
+              "src.master_camera.document.laboratory_transfer_ledger",
+              "src.master_camera.reference.spectroscope_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.master_camera.untouched_laboratory_original",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "outcomeOk": true
+        },
+        "master_mechanism": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.master_mechanism.artifact.patina_zero_line",
+              "src.master_mechanism.artifact.escapement_jewel_sequence",
+              "src.master_mechanism.document.observatory_inventory"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_mechanism.genuine_observatory_regulator",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovery": {
+            "ids": [
+              "src.master_mechanism.artifact.patina_zero_line",
+              "src.master_mechanism.document.observatory_inventory",
+              "src.master_mechanism.document.jewel_service_log",
+              "src.master_mechanism.artifact.escapement_jewel_sequence",
+              "src.master_mechanism.npc.dorian_reserve_context",
+              "src.master_mechanism.reference.observatory_regulator_standard"
+            ],
+            "toolGateAttempts": 3,
+            "wrongToolZero": true
+          },
+          "discoveryOk": true,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.master_mechanism.artifact.patina_zero_line",
+              "src.master_mechanism.artifact.escapement_jewel_sequence",
+              "src.master_mechanism.document.observatory_inventory",
+              "src.master_mechanism.reference.observatory_regulator_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_mechanism.genuine_observatory_regulator",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.master_mechanism.artifact.patina_zero_line"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_mechanism.genuine_observatory_regulator",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.master_mechanism.artifact.patina_zero_line",
+              "src.master_mechanism.artifact.escapement_jewel_sequence",
+              "src.master_mechanism.document.observatory_inventory",
+              "src.master_mechanism.reference.observatory_regulator_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.master_mechanism.genuine_body_with_later_rebuild",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "outcomeOk": true
+        },
+        "perfect_fake": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.perfect_fake.artifact.casting_serial_continuity",
+              "src.perfect_fake.artifact.bellows_repair_boundary",
+              "src.perfect_fake.document.estate_intake"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovery": {
+            "ids": [
+              "src.perfect_fake.artifact.casting_serial_continuity",
+              "src.perfect_fake.document.workshop_invoice",
+              "src.perfect_fake.artifact.bellows_repair_boundary",
+              "src.perfect_fake.document.estate_intake",
+              "src.perfect_fake.npc.elias_market_context",
+              "src.perfect_fake.reference.cindervale_standard"
+            ],
+            "toolGateAttempts": 3,
+            "wrongToolZero": true
+          },
+          "discoveryOk": true,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.perfect_fake.artifact.casting_serial_continuity",
+              "src.perfect_fake.artifact.bellows_repair_boundary",
+              "src.perfect_fake.document.estate_intake",
+              "src.perfect_fake.reference.cindervale_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.perfect_fake.artifact.casting_serial_continuity"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.perfect_fake.artifact.casting_serial_continuity",
+              "src.perfect_fake.artifact.bellows_repair_boundary",
+              "src.perfect_fake.document.estate_intake",
+              "src.perfect_fake.reference.cindervale_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.perfect_fake.untouched_factory_original",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "outcomeOk": true
+        },
+        "silent_radio": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.silent_radio.artifact.serial_oxidation",
+              "src.silent_radio.artifact.condenser_service_seam",
+              "src.silent_radio.document.intake_register"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovery": {
+            "ids": [
+              "src.silent_radio.artifact.serial_oxidation",
+              "src.silent_radio.document.service_bulletin",
+              "src.silent_radio.artifact.condenser_service_seam",
+              "src.silent_radio.document.intake_register",
+              "src.silent_radio.npc.mara_service_context",
+              "src.silent_radio.reference.receiver_standard"
+            ],
+            "toolGateAttempts": 2,
+            "wrongToolZero": true
+          },
+          "discoveryOk": true,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.silent_radio.artifact.serial_oxidation",
+              "src.silent_radio.artifact.condenser_service_seam",
+              "src.silent_radio.document.intake_register",
+              "src.silent_radio.reference.receiver_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.silent_radio.artifact.serial_oxidation"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.silent_radio.artifact.serial_oxidation",
+              "src.silent_radio.artifact.condenser_service_seam",
+              "src.silent_radio.document.intake_register",
+              "src.silent_radio.reference.receiver_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.silent_radio.untouched_factory_original",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "outcomeOk": true
+        }
+      },
+      "executed": true,
+      "id": "BOOKEND-DISCOVERY-03",
+      "name": "All 24 authored findings unlock through dependencies and wrong-tool attempts mutate no authority",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_camera": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.master_camera.artifact.prism_material_continuity",
+              "src.master_camera.artifact.clamp_intervention_sequence",
+              "src.master_camera.document.laboratory_transfer_ledger"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_camera.genuine_with_period_clamp_service",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovery": {
+            "ids": [
+              "src.master_camera.artifact.prism_material_continuity",
+              "src.master_camera.document.laboratory_transfer_ledger",
+              "src.master_camera.document.optical_bench_card",
+              "src.master_camera.artifact.clamp_intervention_sequence",
+              "src.master_camera.npc.lena_consignment_context",
+              "src.master_camera.reference.spectroscope_standard"
+            ],
+            "toolGateAttempts": 3,
+            "wrongToolZero": true
+          },
+          "discoveryOk": true,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.master_camera.artifact.prism_material_continuity",
+              "src.master_camera.artifact.clamp_intervention_sequence",
+              "src.master_camera.document.laboratory_transfer_ledger",
+              "src.master_camera.reference.spectroscope_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_camera.genuine_with_period_clamp_service",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.master_camera.artifact.prism_material_continuity"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_camera.genuine_with_period_clamp_service",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.master_camera.artifact.prism_material_continuity",
+              "src.master_camera.artifact.clamp_intervention_sequence",
+              "src.master_camera.document.laboratory_transfer_ledger",
+              "src.master_camera.reference.spectroscope_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.master_camera.untouched_laboratory_original",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "outcomeOk": true
+        },
+        "master_mechanism": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.master_mechanism.artifact.patina_zero_line",
+              "src.master_mechanism.artifact.escapement_jewel_sequence",
+              "src.master_mechanism.document.observatory_inventory"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_mechanism.genuine_observatory_regulator",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovery": {
+            "ids": [
+              "src.master_mechanism.artifact.patina_zero_line",
+              "src.master_mechanism.document.observatory_inventory",
+              "src.master_mechanism.document.jewel_service_log",
+              "src.master_mechanism.artifact.escapement_jewel_sequence",
+              "src.master_mechanism.npc.dorian_reserve_context",
+              "src.master_mechanism.reference.observatory_regulator_standard"
+            ],
+            "toolGateAttempts": 3,
+            "wrongToolZero": true
+          },
+          "discoveryOk": true,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.master_mechanism.artifact.patina_zero_line",
+              "src.master_mechanism.artifact.escapement_jewel_sequence",
+              "src.master_mechanism.document.observatory_inventory",
+              "src.master_mechanism.reference.observatory_regulator_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_mechanism.genuine_observatory_regulator",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.master_mechanism.artifact.patina_zero_line"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.master_mechanism.genuine_observatory_regulator",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.master_mechanism.artifact.patina_zero_line",
+              "src.master_mechanism.artifact.escapement_jewel_sequence",
+              "src.master_mechanism.document.observatory_inventory",
+              "src.master_mechanism.reference.observatory_regulator_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.master_mechanism.genuine_body_with_later_rebuild",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "outcomeOk": true
+        },
+        "perfect_fake": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.perfect_fake.artifact.casting_serial_continuity",
+              "src.perfect_fake.artifact.bellows_repair_boundary",
+              "src.perfect_fake.document.estate_intake"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovery": {
+            "ids": [
+              "src.perfect_fake.artifact.casting_serial_continuity",
+              "src.perfect_fake.document.workshop_invoice",
+              "src.perfect_fake.artifact.bellows_repair_boundary",
+              "src.perfect_fake.document.estate_intake",
+              "src.perfect_fake.npc.elias_market_context",
+              "src.perfect_fake.reference.cindervale_standard"
+            ],
+            "toolGateAttempts": 3,
+            "wrongToolZero": true
+          },
+          "discoveryOk": true,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.perfect_fake.artifact.casting_serial_continuity",
+              "src.perfect_fake.artifact.bellows_repair_boundary",
+              "src.perfect_fake.document.estate_intake",
+              "src.perfect_fake.reference.cindervale_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.perfect_fake.artifact.casting_serial_continuity"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.perfect_fake.artifact.casting_serial_continuity",
+              "src.perfect_fake.artifact.bellows_repair_boundary",
+              "src.perfect_fake.document.estate_intake",
+              "src.perfect_fake.reference.cindervale_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.perfect_fake.untouched_factory_original",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "outcomeOk": true
+        },
+        "silent_radio": {
+          "credible": {
+            "citedEvidenceIds": [
+              "src.silent_radio.artifact.serial_oxidation",
+              "src.silent_radio.artifact.condenser_service_seam",
+              "src.silent_radio.document.intake_register"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+            "independentSourceCount": 3,
+            "netScore": 6,
+            "ok": true,
+            "outcome": "credible",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "PLAUSIBLE",
+            "supportScore": 6
+          },
+          "discovery": {
+            "ids": [
+              "src.silent_radio.artifact.serial_oxidation",
+              "src.silent_radio.document.service_bulletin",
+              "src.silent_radio.artifact.condenser_service_seam",
+              "src.silent_radio.document.intake_register",
+              "src.silent_radio.npc.mara_service_context",
+              "src.silent_radio.reference.receiver_standard"
+            ],
+            "toolGateAttempts": 2,
+            "wrongToolZero": true
+          },
+          "discoveryOk": true,
+          "empty": {
+            "code": "CITATION_REQUIRED",
+            "ok": false
+          },
+          "masterful": {
+            "citedEvidenceIds": [
+              "src.silent_radio.artifact.serial_oxidation",
+              "src.silent_radio.artifact.condenser_service_seam",
+              "src.silent_radio.document.intake_register",
+              "src.silent_radio.reference.receiver_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+            "independentSourceCount": 4,
+            "netScore": 8,
+            "ok": true,
+            "outcome": "masterful",
+            "refuteScore": 0,
+            "requiredSourcesMet": true,
+            "substantiated": true,
+            "substantiation": "STRONG",
+            "supportScore": 8
+          },
+          "mentor": {
+            "citedEvidenceIds": [
+              "src.silent_radio.artifact.serial_oxidation"
+            ],
+            "code": "OK",
+            "conclusionAccurate": true,
+            "hypothesisId": "hyp.silent_radio.genuine_with_period_condenser_repair",
+            "independentSourceCount": 1,
+            "netScore": 2,
+            "ok": true,
+            "outcome": "reviewed_with_mentor",
+            "refuteScore": 0,
+            "requiredSourcesMet": false,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 2
+          },
+          "mistaken": {
+            "citedEvidenceIds": [
+              "src.silent_radio.artifact.serial_oxidation",
+              "src.silent_radio.artifact.condenser_service_seam",
+              "src.silent_radio.document.intake_register",
+              "src.silent_radio.reference.receiver_standard"
+            ],
+            "code": "OK",
+            "conclusionAccurate": false,
+            "hypothesisId": "hyp.silent_radio.untouched_factory_original",
+            "independentSourceCount": 0,
+            "netScore": -2,
+            "ok": true,
+            "outcome": "mistaken",
+            "refuteScore": 2,
+            "requiredSourcesMet": true,
+            "substantiated": false,
+            "substantiation": "INCONCLUSIVE",
+            "supportScore": 0
+          },
+          "outcomeOk": true
+        }
+      },
+      "executed": true,
+      "id": "BOOKEND-OUTCOME-04",
+      "name": "All four ordered rule sets fail closed and distinguish mentor, credible, masterful and mistaken reports",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "master_camera": {
+          "artifactId": "",
+          "keys": [
+            "ok",
+            "code",
+            "caseId",
+            "title",
+            "artifactDisplayName",
+            "briefing",
+            "centralQuestion",
+            "fictionNotice",
+            "reportPrompt",
+            "success",
+            "failure",
+            "hypotheses",
+            "evidence",
+            "availableEvidence",
+            "discoveredEvidence",
+            "selectedHypothesisId",
+            "citedEvidenceIds",
+            "resolved",
+            "resolutionResult",
+            "artifactId"
+          ],
+          "leaks": []
+        },
+        "master_mechanism": {
+          "artifactId": "case_master_mechanism",
+          "keys": [
+            "ok",
+            "code",
+            "caseId",
+            "title",
+            "artifactDisplayName",
+            "briefing",
+            "centralQuestion",
+            "fictionNotice",
+            "reportPrompt",
+            "success",
+            "failure",
+            "hypotheses",
+            "evidence",
+            "availableEvidence",
+            "discoveredEvidence",
+            "selectedHypothesisId",
+            "citedEvidenceIds",
+            "resolved",
+            "resolutionResult",
+            "artifactId"
+          ],
+          "leaks": []
+        },
+        "perfect_fake": {
+          "artifactId": "",
+          "keys": [
+            "ok",
+            "code",
+            "caseId",
+            "title",
+            "artifactDisplayName",
+            "briefing",
+            "centralQuestion",
+            "fictionNotice",
+            "reportPrompt",
+            "success",
+            "failure",
+            "hypotheses",
+            "evidence",
+            "availableEvidence",
+            "discoveredEvidence",
+            "selectedHypothesisId",
+            "citedEvidenceIds",
+            "resolved",
+            "resolutionResult",
+            "artifactId"
+          ],
+          "leaks": []
+        },
+        "silent_radio": {
+          "artifactId": "",
+          "keys": [
+            "ok",
+            "code",
+            "caseId",
+            "title",
+            "artifactDisplayName",
+            "briefing",
+            "centralQuestion",
+            "fictionNotice",
+            "reportPrompt",
+            "success",
+            "failure",
+            "hypotheses",
+            "evidence",
+            "availableEvidence",
+            "discoveredEvidence",
+            "selectedHypothesisId",
+            "citedEvidenceIds",
+            "resolved",
+            "resolutionResult",
+            "artifactId"
+          ],
+          "leaks": []
+        }
+      },
+      "executed": true,
+      "id": "BOOKEND-PUBLIC-05",
+      "name": "Bookend public dossiers exclude canonical truth and private authoring rules",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "lockIds": [
+          "silent_radio",
+          "perfect_fake",
+          "master_camera",
+          "master_mechanism"
+        ]
+      },
+      "executed": true,
+      "id": "BOOKEND-LOCK-06",
+      "name": "All four authored case files are protected by the immutable hash manifest",
+      "passed": true
+    }
+  ]
+}

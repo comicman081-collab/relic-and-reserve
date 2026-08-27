@@ -27,6 +27,18 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate committed Web runtime against source
+        run: >-
+          python tools/validators/validate_web_release.py
+          --project-root .
+          --export-dir docs
+          --require-manifest
+
       - name: Setup Godot 4.7.1 with export templates
         uses: chickensoft-games/setup-godot@v2
         with:
@@ -259,10 +271,11 @@ jobs:
           fi
 
           capture_pass=0
+          CHROME_PROFILE="/tmp/relic-chrome-web-smoke"
+          rm -rf "$CHROME_PROFILE"
           for attempt in 1 2 3; do
             echo "Web portrait capture attempt ${attempt}/3"
             rm -f qa-web/mobile-390x700.png
-            rm -rf "/tmp/relic-chrome-${attempt}"
 
             set +e
             timeout 200s "$CHROME" \
@@ -276,7 +289,7 @@ jobs:
               --force-device-scale-factor=1 \
               --window-size=390,700 \
               --virtual-time-budget=150000 \
-              --user-data-dir="/tmp/relic-chrome-${attempt}" \
+              --user-data-dir="$CHROME_PROFILE" \
               --screenshot=qa-web/mobile-390x700.png \
               "http://127.0.0.1:8765/?qa=${GITHUB_SHA}-${attempt}"
             chrome_status=$?

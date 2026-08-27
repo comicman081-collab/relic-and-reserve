@@ -1,5 +1,5 @@
 {
-  "authoredCases": 22,
+  "authoredCases": 26,
   "executed": 11,
   "expectedCount": 11,
   "failed": 0,
@@ -31,7 +31,11 @@
           "master_chronometer",
           "master_optical",
           "master_recorder",
-          "master_gauge"
+          "master_gauge",
+          "silent_radio",
+          "perfect_fake",
+          "master_camera",
+          "master_mechanism"
         ],
         "missing": [],
         "registryErrors": []
@@ -43,11 +47,11 @@
     },
     {
       "evidence": {
-        "expectedDifferences": 88,
-        "expectedSources": 125,
+        "expectedDifferences": 97,
+        "expectedSources": 149,
         "failures": [],
-        "sourceCitationDifferences": 88,
-        "sources": 125
+        "sourceCitationDifferences": 97,
+        "sources": 149
       },
       "executed": true,
       "id": "PRESENTATION-SOURCE-02",
@@ -131,12 +135,12 @@
     },
     {
       "evidence": {
-        "approvedPortraits": 18,
+        "approvedPortraits": 20,
         "discovered": 5,
-        "expectedPortraits": 18,
+        "expectedPortraits": 20,
         "failures": [],
         "genericIcon": false,
-        "npcSources": 22
+        "npcSources": 26
       },
       "executed": true,
       "id": "PRESENTATION-NPC-06",
@@ -157,11 +161,11 @@
     {
       "evidence": {
         "failures": [],
-        "screensChecked": 44
+        "screensChecked": 52
       },
       "executed": true,
       "id": "PRESENTATION-UI-08",
-      "name": "All thirteen authored dossiers render artifact/source presentation in Korean and English with zero raw case, spec, source, registry or target ids",
+      "name": "All locked authored dossiers render artifact/source presentation in Korean and English with zero raw case, spec, source, registry or target ids",
       "passed": true
     },
     {
@@ -208,7 +212,7 @@
       },
       "executed": true,
       "id": "PRESENTATION-LEGACY-11",
-      "name": "Definitions without authored presentation fields retain the existing citation-label UI fallback",
+      "name": "An isolated definition without authored presentation fields retains the citation-label UI fallback",
       "passed": true
     }
   ]

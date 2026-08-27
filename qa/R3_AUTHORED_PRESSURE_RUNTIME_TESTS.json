@@ -65,21 +65,36 @@
     },
     {
       "evidence": {
-        "appliedPenalty": 1.83845921242015,
-        "caseId": "master_camera",
-        "duplicateCode": "ALREADY_DISCOVERED",
-        "evidenceId": "master_camera:construction_method",
-        "expectedPenalty": 1.83845921242015,
-        "integrityDelta": 1.83845921242016,
-        "passed": true,
-        "publicSafe": true,
-        "riskLevel": "LOW",
-        "telemetryDelta": 1.83845921242015,
-        "warningLocalized": true
+        "high": {
+          "appliedPenalty": 5.51537763726046,
+          "caseId": "master_camera",
+          "duplicateCode": "ALREADY_DISCOVERED",
+          "evidenceId": "src.master_camera.artifact.clamp_intervention_sequence",
+          "expectedPenalty": 5.51537763726046,
+          "integrityDelta": 5.51537763726047,
+          "passed": true,
+          "publicSafe": true,
+          "riskLevel": "HIGH",
+          "telemetryDelta": 5.51537763726046,
+          "warningLocalized": true
+        },
+        "low": {
+          "appliedPenalty": 1.83845921242015,
+          "caseId": "master_camera",
+          "duplicateCode": "ALREADY_DISCOVERED",
+          "evidenceId": "src.master_camera.artifact.prism_material_continuity",
+          "expectedPenalty": 1.83845921242015,
+          "integrityDelta": 1.83845921242016,
+          "passed": true,
+          "publicSafe": true,
+          "riskLevel": "LOW",
+          "telemetryDelta": 1.83845921242015,
+          "warningLocalized": true
+        }
       },
       "executed": true,
       "id": "AUTHORED-PRESSURE-STAGE10-01",
-      "name": "Prototype Camera construction discloses LOW risk and consumes the Stage 10 multiplier once",
+      "name": "Prism spectroscope exposes distinct LOW scan and HIGH clamp risks with exactly-once Stage 10 pressure",
       "passed": true
     },
     {
@@ -88,20 +103,20 @@
           "appliedPenalty": 1.83845921242015,
           "caseId": "master_mechanism",
           "duplicateCode": "ALREADY_DISCOVERED",
-          "evidenceId": "master_mechanism:material",
+          "evidenceId": "src.master_mechanism.artifact.patina_zero_line",
           "expectedPenalty": 1.83845921242015,
           "integrityDelta": 1.83845921242016,
           "passed": true,
           "publicSafe": true,
           "riskLevel": "LOW",
-          "telemetryDelta": 1.83845921242015,
+          "telemetryDelta": 1.83845921242016,
           "warningLocalized": true
         },
         "mechanism": {
           "appliedPenalty": 5.51537763726046,
           "caseId": "master_mechanism",
           "duplicateCode": "ALREADY_DISCOVERED",
-          "evidenceId": "master_mechanism:mechanism",
+          "evidenceId": "src.master_mechanism.artifact.escapement_jewel_sequence",
           "expectedPenalty": 5.51537763726046,
           "integrityDelta": 5.51537763726047,
           "passed": true,
@@ -113,16 +128,16 @@
       },
       "executed": true,
       "id": "AUTHORED-PRESSURE-STAGE10-02",
-      "name": "Decorative Mechanism exposes one LOW and one HIGH choice while each consequence and telemetry event commits once",
+      "name": "Astronomical regulator exposes one LOW and one HIGH choice while each consequence and telemetry event commits once",
       "passed": true
     },
     {
       "evidence": {
         "stage10Intersection": [],
         "stage10Risk": {
-          "HIGH": 1,
+          "HIGH": 2,
           "LOW": 2,
-          "NONE": 5
+          "NONE": 8
         },
         "stage5Intersection": [],
         "stage5Risk": {

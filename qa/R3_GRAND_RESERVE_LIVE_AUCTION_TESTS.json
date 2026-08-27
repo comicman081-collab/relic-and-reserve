@@ -4732,13 +4732,13 @@
         "current": {
           "after": {
             "exists": true,
-            "modifiedTime": 1787661880,
+            "modifiedTime": 1787837213,
             "sha256": "440179547988f7bc65b78f2b1b6b021ed550f72b23a85082a37fe68210a7a375",
             "size": 128
           },
           "before": {
             "exists": true,
-            "modifiedTime": 1787661880,
+            "modifiedTime": 1787837213,
             "sha256": "440179547988f7bc65b78f2b1b6b021ed550f72b23a85082a37fe68210a7a375",
             "size": 128
           },
@@ -6069,7 +6069,7 @@
                 "present": true,
                 "rect": [
                   42.0,
-                  433.0,
+                  511.0,
                   1196.0,
                   58.0
                 ]

@@ -11,6 +11,11 @@ const SAVE_TEMP_SUFFIX := ".tmp"
 const SAVE_BACKUP_SUFFIX := ".bak"
 const PROFILE_SCHEMA_VERSION := 1
 const STAGE_TELEMETRY_STRATEGIES := ["FAST", "BALANCED", "HIGH", "AUTO_GRAND_RESERVE", "CUSTOM", "LEGACY_UNKNOWN"]
+const PUBLIC_INTERACTION_SCREENS := [
+	"title", "stage_select", "workshop", "market", "inventory", "inspection",
+	"authentication", "case_dossier", "event", "appraisal", "auction", "upgrades",
+	"commissions", "campaign", "final_selection", "grand_reserve", "ending", "postgame"
+]
 const SAVE_CRASH_TEST_POINTS := [
 	"A_TMP_WRITE_INTERRUPTION",
 	"B_TMP_COMPLETE_BEFORE_VALIDATION",
@@ -4631,6 +4636,75 @@ func find_inventory_instance(instance_id: String) -> Dictionary:
 	return {}
 
 
+func workflow_public_facts(instance_id: String = "") -> Dictionary:
+	# Read-only projection for the player-facing six-step journey rail. Keep this
+	# whitelist deliberately narrower than an artifact or pending-auction record:
+	# canonical truth, hidden value, bidder tuning and RNG state never cross into
+	# presentation through this helper.
+	var pending := pending_auction_public_state()
+	var pending_ok := bool(pending.get("ok", false))
+	var pending_status := String(pending.get("status", "NONE")) if pending_ok else "NONE"
+	var candidate_id := instance_id
+	if candidate_id.is_empty():
+		candidate_id = String(active_workpiece.get("uniqueId", ""))
+	# A live transaction locks the rest of the game and therefore owns the rail.
+	# A durable COMMITTED receipt does not: once the player selects a new lot it
+	# must never keep the previous sale pinned as the current workflow.
+	if candidate_id.is_empty() and pending_status == "PENDING":
+		candidate_id = String(pending.get("artifactId", ""))
+	if candidate_id.is_empty():
+		var active_case_id := String(campaign_state.get("activeCaseId", ""))
+		if not active_case_id.is_empty():
+			var ledger_value: Variant = campaign_state.get("caseArtifactLedger", {})
+			var ledger: Dictionary = ledger_value if ledger_value is Dictionary else {}
+			var case_ledger: Dictionary = ledger.get(active_case_id, {}) if ledger.get(active_case_id, {}) is Dictionary else {}
+			candidate_id = String(case_ledger.get("artifactUid", ""))
+	if candidate_id.is_empty() and inventory.size() == 1:
+		candidate_id = String(inventory[0].get("uniqueId", ""))
+
+	var artifact := find_inventory_instance(candidate_id) if not candidate_id.is_empty() else {}
+	var case_id := String(artifact.get("caseId", ""))
+	var case_states_value: Variant = campaign_state.get("caseStates", {})
+	var case_states: Dictionary = case_states_value if case_states_value is Dictionary else {}
+	var case_state: Dictionary = case_states.get(case_id, {}) if case_states.get(case_id, {}) is Dictionary else {}
+	var known_clues: Array = artifact.get("knownClues", []) if artifact.get("knownClues", []) is Array else []
+	var discovered: Array = case_state.get("discoveredEvidenceIds", []) if case_state.get("discoveredEvidenceIds", []) is Array else []
+	var investigated := bool(artifact.get("inspected", false)) or not known_clues.is_empty() or not discovered.is_empty()
+	var selected_hypothesis := String(case_state.get("selectedHypothesisId", "")) if not case_state.is_empty() else String(artifact.get("playerHypothesis", "UNKNOWN"))
+	var hypothesis_prepared := not selected_hypothesis.is_empty() and selected_hypothesis != "UNKNOWN"
+	var repairable := repairable_damage_types(artifact) if not artifact.is_empty() else []
+	var damage_instances: Array = artifact.get("damageInstances", []) if artifact.get("damageInstances", []) is Array else []
+	var repair_required := false
+	for damage_value: Variant in damage_instances:
+		if repairable.has(String(damage_value)):
+			repair_required = true
+			break
+	var listing: Dictionary = artifact.get("listing", {}) if artifact.get("listing", {}) is Dictionary else {}
+	var listed := listing.has("publicAppraisal")
+	var pending_matches_candidate := pending_ok and String(pending.get("artifactId", "")) == candidate_id
+	if pending_matches_candidate:
+		var decisions: Dictionary = pending.get("decisions", {}) if pending.get("decisions", {}) is Dictionary else {}
+		listed = listed or decisions.has("publicAppraisal")
+	var auction_status := pending_status if pending_matches_candidate else "NONE"
+	var receipt: Dictionary = pending.get("receipt", {}) if pending_ok and pending.get("receipt", {}) is Dictionary else {}
+	var sold := bool(artifact.get("sold", false)) or (auction_status == "COMMITTED" and String(receipt.get("sale_status", receipt.get("status", ""))) == "SOLD")
+	return {
+		"artifactPresent": not artifact.is_empty() or pending_matches_candidate,
+		"investigated": investigated,
+		"caseBound": not case_id.is_empty(),
+		"caseResolved": bool(case_state.get("resolved", artifact.get("caseResolved", false))),
+		"hypothesisPrepared": hypothesis_prepared,
+		"repairRequired": repair_required,
+		# Completion describes the workpiece now, not whether any repair happened
+		# earlier. A later repairable fault must return the journey to PRESERVE.
+		"repairCompleted": not repair_required,
+		"listed": listed,
+		"sold": sold,
+		"auctionStatus": auction_status,
+		"transactionId": String(pending.get("transactionId", "")) if auction_status != "NONE" else ""
+	}
+
+
 func calculate_grand_reserve_score(results: Array) -> Dictionary:
 	var revenue := 0
 	var sold_count := 0
@@ -5156,6 +5230,72 @@ func rename_save_file(from_path: String, to_path: String) -> bool:
 	return DirAccess.rename_absolute(ProjectSettings.globalize_path(from_path), ProjectSettings.globalize_path(to_path)) == OK
 
 
+## Validates the small, public-only presentation mirror used to resume a market,
+## event or pending-auction screen. It is deliberately separate from gameplay
+## authority: no hidden truth, bidder thresholds or RNG state is accepted here.
+func public_interaction_shape_valid(value: Variant) -> bool:
+	if not value is Dictionary:
+		return false
+	var interaction: Dictionary = value
+	var allowed_keys := ["schemaVersion", "screen", "focusName"]
+	var schema_value: Variant = interaction.get("schemaVersion", null)
+	if (not schema_value is int and not schema_value is float) or int(schema_value) != 1:
+		return false
+	var screen_value: Variant = interaction.get("screen", null)
+	if not screen_value is String or not String(screen_value) in PUBLIC_INTERACTION_SCREENS:
+		return false
+	if not interaction.get("focusName", null) is String:
+		return false
+	var public_screen := String(screen_value)
+	match public_screen:
+		"market":
+			allowed_keys.append("market")
+			var market_value: Variant = interaction.get("market", null)
+			if not market_value is Dictionary:
+				return false
+			var market: Dictionary = market_value
+			if not market.get("state", null) is String \
+				or not String(market.get("state", "")) in ["WELCOME", "OFFER", "PURCHASE_OK", "PURCHASE_FAIL"] \
+				or not market.get("lotId", null) is String:
+				return false
+			for key_value: Variant in market.keys():
+				if not String(key_value) in ["state", "lotId"]:
+					return false
+		"event":
+			allowed_keys.append("event")
+			var event_value: Variant = interaction.get("event", null)
+			if not event_value is Dictionary:
+				return false
+			var event: Dictionary = event_value
+			if not event.get("state", null) is String \
+				or not String(event.get("state", "")) in ["REQUEST", "REACTION_POS", "REACTION_NEG"] \
+				or not event.get("eventId", null) is String:
+				return false
+			for key_value: Variant in event.keys():
+				if not String(key_value) in ["state", "eventId"]:
+					return false
+		"auction":
+			allowed_keys.append("auction")
+			var auction_value: Variant = interaction.get("auction", null)
+			if not auction_value is Dictionary:
+				return false
+			var auction: Dictionary = auction_value
+			var cue_value: Variant = auction.get("cueIndex", null)
+			if not auction.get("artifactId", null) is String \
+				or (not cue_value is int and not cue_value is float) \
+				or not is_finite(float(cue_value)) \
+				or float(cue_value) != floorf(float(cue_value)) \
+				or int(cue_value) < 0:
+				return false
+			for key_value: Variant in auction.keys():
+				if not String(key_value) in ["artifactId", "cueIndex"]:
+					return false
+	for key_value: Variant in interaction.keys():
+		if not String(key_value) in allowed_keys:
+			return false
+	return true
+
+
 func validate_save_payload(data: Dictionary) -> Dictionary:
 	if data.is_empty():
 		return {"ok": false, "code": "EMPTY_OR_INVALID_JSON"}
@@ -5197,6 +5337,8 @@ func validate_save_payload(data: Dictionary) -> Dictionary:
 	if version >= 3 and not data.get("campaign", {}) is Dictionary:
 		return {"ok": false, "code": "INVALID_CAMPAIGN"}
 	var campaign: Dictionary = data.get("campaign", {})
+	if campaign.has("publicInteraction") and not public_interaction_shape_valid(campaign.get("publicInteraction")):
+		return {"ok": false, "code": "INVALID_PUBLIC_INTERACTION"}
 	if version >= 4:
 		if not campaign.get("caseStates", {}) is Dictionary or not campaign.get("caseArtifactLedger", {}) is Dictionary:
 			return {"ok": false, "code": "INVALID_CASE_STATE"}

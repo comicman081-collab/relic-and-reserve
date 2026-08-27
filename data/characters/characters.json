@@ -64,6 +64,12 @@
       "accessibilityLabel": {"ko": "버건디 코트와 단안경, 카메오 상자를 든 개인 수집가", "en": "Private collector in burgundy with a monocle and cameo case"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_01.svg",
       "personality": {"ko": "희귀한 사연에 마음이 움직이는 낭만가", "en": "A romantic drawn to rare stories"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "사연이 보이는 유물인지 살펴볼게요.", "en": "Let me see whether its story still speaks."},
+        "BID": {"ko": "이 사연이라면 제 소장품에 어울리겠어요.", "en": "This story belongs in my collection."},
+        "DROPOUT": {"ko": "아쉽지만 이야기에 비해 조건이 무겁군요.", "en": "A lovely story, but the terms weigh too much."},
+        "WON": {"ko": "이 유물의 다음 장은 제가 지키겠습니다.", "en": "I will keep the next chapter of this relic."}
+      },
       "basePalette": ["#691F3A", "#9B3651", "#D9A85F"],
       "signatureAccessory": {"key": "cameo_case", "ko": "카메오 상자", "en": "cameo case"},
       "visualSignature": {"faceShape": "heart_taper", "hairShape": "high_wave", "torsoSilhouette": "double_breasted_coat", "signatureProp": "monocle_cameo"},
@@ -87,6 +93,12 @@
       "accessibilityLabel": {"ko": "에메랄드 라펠과 장부, 연필을 든 전문 딜러", "en": "Professional dealer with emerald lapels, ledger and pencil"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_02.svg",
       "personality": {"ko": "숫자와 회전율을 빠르게 계산하는 실무가", "en": "A practical trader who calculates turnover quickly"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "상태와 회전 가능성을 계산 중입니다.", "en": "I am calculating condition and turnover."},
+        "BID": {"ko": "이 가격이면 거래가 성립합니다.", "en": "The numbers work at this price."},
+        "DROPOUT": {"ko": "이 선을 넘으면 수지가 맞지 않아요.", "en": "Past this line, the margin disappears."},
+        "WON": {"ko": "좋습니다. 장부에도 맞는 거래군요.", "en": "Good. The ledger agrees with this deal."}
+      },
       "basePalette": ["#263B39", "#277D61", "#F0C34E"],
       "signatureAccessory": {"key": "ledger_pencil", "ko": "장부와 연필", "en": "ledger and pencil"},
       "visualSignature": {"faceShape": "long_diamond", "hairShape": "sleek_bob", "torsoSilhouette": "narrow_lapel_suit", "signatureProp": "open_ledger"},
@@ -110,6 +122,12 @@
       "accessibilityLabel": {"ko": "남색 정장과 박물관 기둥 핀, 전시 폴더를 든 구매 담당자", "en": "Museum buyer in navy with a column pin and exhibit folder"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_03.svg",
       "personality": {"ko": "공공 가치와 출처를 우선하는 신중한 구매자", "en": "A careful buyer prioritizing provenance and public value"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "출처와 공개 근거부터 확인하겠습니다.", "en": "I will begin with provenance and public evidence."},
+        "BID": {"ko": "공공 소장품으로 검토할 근거가 충분합니다.", "en": "There is enough support for a public collection."},
+        "DROPOUT": {"ko": "위원회에 설명하기엔 근거가 부족합니다.", "en": "The committee would need clearer support."},
+        "WON": {"ko": "관람객에게 이 근거까지 함께 전하겠습니다.", "en": "We will present the evidence with the relic."}
+      },
       "basePalette": ["#203B61", "#315986", "#E8C461"],
       "signatureAccessory": {"key": "column_pin_folder", "ko": "기둥 핀과 전시 폴더", "en": "column pin and exhibit folder"},
       "visualSignature": {"faceShape": "square_softened", "hairShape": "tidy_crop", "torsoSilhouette": "formal_navy_suit", "signatureProp": "museum_folder"},
@@ -133,6 +151,12 @@
       "accessibilityLabel": {"ko": "라일락 스카프와 색상 견본을 든 각진 머리의 장식가", "en": "Angular-haired decorator with a lilac scarf and color swatches"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_04.svg",
       "personality": {"ko": "색과 실루엣의 조화를 먼저 보는 감각파", "en": "A visual thinker led by color and silhouette"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "빛 아래 실루엣과 표면을 볼게요.", "en": "Let me read the silhouette and surface in this light."},
+        "BID": {"ko": "공간의 중심이 될 형태예요.", "en": "That form can anchor an entire room."},
+        "DROPOUT": {"ko": "지금 조건으로는 조화가 깨지겠어요.", "en": "At these terms, the composition falls apart."},
+        "WON": {"ko": "이제 어울리는 자리를 찾아주죠.", "en": "Now I can find it the right setting."}
+      },
       "basePalette": ["#553E68", "#A873BC", "#54B6A5"],
       "signatureAccessory": {"key": "color_swatches", "ko": "부채꼴 색상 견본", "en": "fan of color swatches"},
       "visualSignature": {"faceShape": "heart_point", "hairShape": "angular_asymmetry", "torsoSilhouette": "scarf_drape", "signatureProp": "swatch_fan"},
@@ -156,6 +180,12 @@
       "accessibilityLabel": {"ko": "황동 고글과 렌치, 걷어 올린 소매를 한 기계 애호가", "en": "Mechanical enthusiast with brass goggles, wrench and rolled sleeves"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_05.svg",
       "personality": {"ko": "움직이는 부품 앞에서 눈이 반짝이는 수리광", "en": "A tinkerer delighted by moving parts"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "움직이는 부품과 마모부터 보겠습니다.", "en": "I want to see the moving parts and wear first."},
+        "BID": {"ko": "이 기구는 다시 살아날 가능성이 있어요.", "en": "This mechanism still has life in it."},
+        "DROPOUT": {"ko": "수리 부담까지 더하면 한계를 넘습니다.", "en": "The repair burden pushes it past my limit."},
+        "WON": {"ko": "좋아요, 구조를 해치지 않고 돌려보죠.", "en": "Good. I will wake it without harming the structure."}
+      },
       "basePalette": ["#3D6170", "#5D8390", "#E5B754"],
       "signatureAccessory": {"key": "goggles_wrench", "ko": "황동 고글과 렌치", "en": "brass goggles and wrench"},
       "visualSignature": {"faceShape": "broad_round_square", "hairShape": "gear_spikes", "torsoSilhouette": "rolled_work_sleeves", "signatureProp": "open_wrench"},
@@ -179,6 +209,12 @@
       "accessibilityLabel": {"ko": "날카로운 앞머리와 숯빛 재킷, 동전 핀을 단 투기상", "en": "Sharp-fringed speculator in charcoal with a coin pin"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_06.svg",
       "personality": {"ko": "시세의 틈을 빠르게 포착하는 승부사", "en": "A risk-taker quick to spot market gaps"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "시세보다 먼저 움직일 틈이 있군요.", "en": "There may be room to move before the market does."},
+        "BID": {"ko": "지금이 들어갈 순간입니다.", "en": "This is the moment to step in."},
+        "DROPOUT": {"ko": "틈이 닫혔네요. 다음 기회를 보죠.", "en": "The gap has closed. I will wait for the next one."},
+        "WON": {"ko": "좋은 타이밍이었습니다.", "en": "That was the right timing."}
+      },
       "basePalette": ["#303039", "#52515B", "#E6B84E"],
       "signatureAccessory": {"key": "coin_pin", "ko": "동전 핀과 튕기는 동전", "en": "coin pin and flipping coin"},
       "visualSignature": {"faceShape": "sharp_chin", "hairShape": "blade_fringe", "torsoSilhouette": "charcoal_v_jacket", "signatureProp": "flipping_coin"},
@@ -202,6 +238,12 @@
       "accessibilityLabel": {"ko": "부드러운 곱슬머리와 세피아 가디건, 두루마리 넥타이를 한 역사가", "en": "Historian with soft curls, sepia cardigan and scroll tie"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_07.svg",
       "personality": {"ko": "작은 흔적에서도 시대의 맥락을 찾는 이야기꾼", "en": "A storyteller finding context in tiny traces"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "작은 흔적이 어느 시대를 말하는지 보죠.", "en": "Let us hear what era the small traces describe."},
+        "BID": {"ko": "이 맥락은 오래 기억될 가치가 있습니다.", "en": "This context deserves to be remembered."},
+        "DROPOUT": {"ko": "맥락이 끊긴 채로는 더 갈 수 없겠군요.", "en": "I cannot go further while the context is broken."},
+        "WON": {"ko": "흔적과 이야기를 함께 보존하겠습니다.", "en": "I will preserve both the traces and their story."}
+      },
       "basePalette": ["#71533B", "#9A7752", "#C98F4A"],
       "signatureAccessory": {"key": "scroll_tie", "ko": "두루마리 넥타이와 필사본", "en": "scroll tie and manuscript"},
       "visualSignature": {"faceShape": "soft_round", "hairShape": "cloud_curls", "torsoSilhouette": "buttoned_cardigan", "signatureProp": "rolled_manuscript"},
@@ -225,6 +267,12 @@
       "accessibilityLabel": {"ko": "상투머리와 청록 앞치마, 보존용 붓을 든 복원품 수집가", "en": "Restoration collector with a bun, teal apron and conservation brush"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_08.svg",
       "personality": {"ko": "정성스러운 손길과 되살릴 가능성을 높이 사는 수집가", "en": "A collector valuing careful restoration potential"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "얼마나 조심스럽게 다뤘는지 보이네요.", "en": "I can see how carefully it has been handled."},
+        "BID": {"ko": "이 정도 보존이라면 계속 돌볼 수 있어요.", "en": "With this preservation, I can continue the care."},
+        "DROPOUT": {"ko": "추가 개입이 너무 커질 것 같아요.", "en": "It may demand more intervention than I can justify."},
+        "WON": {"ko": "천천히, 필요한 만큼만 돌보겠습니다.", "en": "I will care for it slowly and only as needed."}
+      },
       "basePalette": ["#376E69", "#79C1B5", "#E8C05D"],
       "signatureAccessory": {"key": "conservation_brush", "ko": "보존용 붓", "en": "conservation brush"},
       "visualSignature": {"faceShape": "rounded_trapezoid", "hairShape": "high_bun_swoop", "torsoSilhouette": "conservation_apron", "signatureProp": "fine_brush"},
@@ -248,6 +296,12 @@
       "accessibilityLabel": {"ko": "둥근 안경과 올리브색 조끼, 기록 리본을 지닌 보존관", "en": "Archive curator with round glasses, olive vest and archive ribbon"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_09.svg",
       "personality": {"ko": "목록과 보관 이력을 빈틈없이 확인하는 기록가", "en": "A record keeper who verifies every catalog trail"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "목록 번호와 보관 이력을 대조하겠습니다.", "en": "I am cross-checking the catalog and custody trail."},
+        "BID": {"ko": "기록이 서로 맞습니다. 참여하죠.", "en": "The records agree. I will participate."},
+        "DROPOUT": {"ko": "기록 공백을 감수할 수는 없습니다.", "en": "I cannot accept that gap in the record."},
+        "WON": {"ko": "새 소장 이력도 빈틈없이 남기겠습니다.", "en": "I will record its new custody without a gap."}
+      },
       "basePalette": ["#5C6840", "#7F8A55", "#A8584A"],
       "signatureAccessory": {"key": "archive_ribbon", "ko": "기록 리본과 카드", "en": "archive ribbon and card"},
       "visualSignature": {"faceShape": "compact_oval", "hairShape": "blunt_archive_bob", "torsoSilhouette": "olive_waistcoat", "signatureProp": "ribboned_archive_card"},
@@ -271,6 +325,12 @@
       "accessibilityLabel": {"ko": "옆가르마와 녹슨 주황 코트, 열쇠 고리를 든 유산 중개인", "en": "Estate broker with side-parted hair, rust coat and key ring"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_10.svg",
       "personality": {"ko": "가문의 물건과 거래 조건에 능숙한 중개자", "en": "A broker fluent in estates and transaction terms"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "소유 이력과 거래 조건을 함께 보죠.", "en": "I am reading the ownership trail with the terms."},
+        "BID": {"ko": "이 조건이면 의뢰인에게 제안할 수 있습니다.", "en": "These terms are suitable for my client."},
+        "DROPOUT": {"ko": "의뢰 범위를 벗어났습니다.", "en": "That moves beyond my client's brief."},
+        "WON": {"ko": "좋습니다. 다음 소유자에게 정확히 인계하죠.", "en": "Good. I will hand it over with precise terms."}
+      },
       "basePalette": ["#87442E", "#B45F3E", "#E8C45E"],
       "signatureAccessory": {"key": "key_ring", "ko": "유산 열쇠 고리", "en": "estate key ring"},
       "visualSignature": {"faceShape": "clean_oval", "hairShape": "precise_side_part", "torsoSilhouette": "rust_overcoat", "signatureProp": "ring_of_keys"},
@@ -294,6 +354,12 @@
       "accessibilityLabel": {"ko": "비대칭 안경과 남색 칼라, 기하 브로치를 단 디자인 연구자", "en": "Design scholar with asymmetric glasses, indigo collar and geometry brooch"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_11.svg",
       "personality": {"ko": "형태의 원리와 시대별 미감을 분석하는 연구자", "en": "A scholar analyzing form and period aesthetics"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "형태와 제작 시기의 문법을 비교 중입니다.", "en": "I am comparing its form with the period's grammar."},
+        "BID": {"ko": "연구할 만한 조형적 근거가 충분합니다.", "en": "There is enough formal evidence to study."},
+        "DROPOUT": {"ko": "형태와 주장 사이의 간격이 큽니다.", "en": "The gap between form and claim is too wide."},
+        "WON": {"ko": "이제 형태의 계보를 더 깊이 살펴보죠.", "en": "Now I can study its design lineage more closely."}
+      },
       "basePalette": ["#34365F", "#555A96", "#E2B958"],
       "signatureAccessory": {"key": "geometry_brooch", "ko": "기하 브로치", "en": "geometry brooch"},
       "visualSignature": {"faceShape": "asymmetric_diamond", "hairShape": "split_crop", "torsoSilhouette": "indigo_geometric_collar", "signatureProp": "shape_sampler"},
@@ -317,6 +383,12 @@
       "accessibilityLabel": {"ko": "말린 콧수염과 파란 작업복, 톱니 확대경을 지닌 시계공", "en": "Clockmaker with curled moustache, blue work coat and gear loupe"},
       "portraitAssetId": "res://assets/ui/portraits/bidder_12.svg",
       "personality": {"ko": "정밀한 구조와 오래된 기계음을 사랑하는 장인", "en": "An artisan devoted to precise mechanisms"},
+      "auctionDialogue": {
+        "WATCH": {"ko": "유격과 태엽의 리듬을 확인하겠습니다.", "en": "I am checking the play and rhythm of the mechanism."},
+        "BID": {"ko": "정밀도가 남아 있군요. 입찰하겠습니다.", "en": "Its precision remains. I will bid."},
+        "DROPOUT": {"ko": "오차를 바로잡을 여지가 부족합니다.", "en": "There is too little room to correct the error."},
+        "WON": {"ko": "원래 리듬을 잃지 않게 조정하겠습니다.", "en": "I will tune it without losing its original rhythm."}
+      },
       "basePalette": ["#345D7D", "#4F82A6", "#D6A342"],
       "signatureAccessory": {"key": "gear_loupe", "ko": "톱니 확대경", "en": "gear loupe"},
       "visualSignature": {"faceShape": "rounded_rectangle", "hairShape": "three_clock_curls", "torsoSilhouette": "blue_work_coat", "signatureProp": "brass_gear_loupe"},

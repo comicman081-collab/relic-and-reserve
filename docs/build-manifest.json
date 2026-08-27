@@ -1,0 +1,72 @@
+{
+  "base_path": "./",
+  "deployment": {
+    ".github/workflows/pages.yml": "d512e8539f58aca923d3532a77133095b9ccb732d11c0c6c7fc36041cebb70b1",
+    "export_presets.cfg": "2eb3a1e0ecccc5ba6f18a670dc59a49651438f47c16e95627863268dddf861ec",
+    "tools/validators/validate_web_release.py": "124300628bb8a641021fe876095873cac38662f2a9358a22b0728cf06d560652"
+  },
+  "product": "RELIC & RESERVE R3 MVP",
+  "runtime": [
+    {
+      "bytes": 0,
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 11944,
+      "path": "index.apple-touch-icon.png",
+      "sha256": "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
+    },
+    {
+      "bytes": 2973,
+      "path": "index.audio.position.worklet.js",
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    {
+      "bytes": 7298,
+      "path": "index.audio.worklet.js",
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    {
+      "bytes": 5447,
+      "path": "index.html",
+      "sha256": "33f3c54385d21f99f1e95d3544fabaf106d5e9ae470f7bf937fc032560932217"
+    },
+    {
+      "bytes": 5700,
+      "path": "index.icon.png",
+      "sha256": "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5"
+    },
+    {
+      "bytes": 279815,
+      "path": "index.js",
+      "sha256": "68586d6daafc93c6e697b3fb258976874aa7459b8931165ebb1dc3c9614cc42c"
+    },
+    {
+      "bytes": 45846192,
+      "path": "index.pck",
+      "sha256": "a0fdff3049fe042b8e8d1faddd8c2a88a9298cb61aef01502daae077222c5b07"
+    },
+    {
+      "bytes": 21443,
+      "path": "index.png",
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    {
+      "bytes": 39513091,
+      "path": "index.wasm",
+      "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277"
+    }
+  ],
+  "schema": 1,
+  "source": {
+    "file_count": 432,
+    "tree_sha256": "d8f63b531ed1465553a4f4e4632d14dc59478b4221449ad644c39408de7c1a82"
+  },
+  "target": "GitHub Pages",
+  "web": {
+    "preset": "Web",
+    "subpath_compatible": true,
+    "threads_enabled": false
+  }
+}

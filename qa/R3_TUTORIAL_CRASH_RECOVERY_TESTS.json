@@ -905,10 +905,10 @@
         "discovered": {
           "appliedRiskPenalty": 0.0,
           "code": "DISCOVERED",
-          "evidenceId": "perfect_fake:material",
+          "evidenceId": "src.perfect_fake.document.workshop_invoice",
           "ok": true,
           "riskLevel": "NONE",
-          "sourceId": "material"
+          "sourceId": "camera_conservation_method"
         },
         "reload": {
           "applied": true,
@@ -940,20 +940,20 @@
         },
         "resolved": {
           "citedEvidenceIds": [
-            "perfect_fake:material"
+            "src.perfect_fake.document.workshop_invoice"
           ],
           "code": "OK",
           "conclusionAccurate": true,
-          "hypothesisId": "GENUINE_WITH_MODERN_REPAIR",
+          "hypothesisId": "hyp.perfect_fake.genuine_with_modern_conservation_repair",
           "independentSourceCount": 1,
-          "netScore": 1,
+          "netScore": 2,
           "ok": true,
-          "outcome": "credible",
+          "outcome": "reviewed_with_mentor",
           "refuteScore": 0,
-          "requiredSourcesMet": true,
+          "requiredSourcesMet": false,
           "substantiated": false,
-          "substantiation": "PLAUSIBLE",
-          "supportScore": 1
+          "substantiation": "INCONCLUSIVE",
+          "supportScore": 2
         },
         "status": "CLEARED"
       },
