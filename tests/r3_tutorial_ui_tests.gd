@@ -48,12 +48,25 @@ func tutorial_target_layout(main: Node) -> Dictionary:
 	var rail_rect := rail.get_global_rect()
 	var nav_rect := nav.get_global_rect()
 	var status_rect := status.get_global_rect()
+	var target_scroll: ScrollContainer = null
+	var ancestor: Node = target.get_parent()
+	while ancestor != null and ancestor != main:
+		if ancestor is ScrollContainer:
+			target_scroll = ancestor as ScrollContainer
+			break
+		ancestor = ancestor.get_parent()
+	var scroll_rect := target_scroll.get_global_rect() if target_scroll != null else Rect2()
+	var inside_scroll_view := target_scroll == null or (target_rect.position.y >= scroll_rect.position.y and target_rect.end.y <= scroll_rect.end.y)
 	var within_content := target_rect.position.x >= 34.0 and target_rect.position.y >= 82.0 and target_rect.end.x <= 1246.0 and target_rect.end.y <= 608.0
 	var separated := not target_rect.intersects(rail_rect) and not target_rect.intersects(nav_rect) and not target_rect.intersects(status_rect)
 	return {
-		"ok": within_content and separated and outline.get_global_rect().intersects(target_rect),
+		"ok": within_content and inside_scroll_view and separated and outline.get_global_rect().intersects(target_rect),
 		"target": tutorial_target_name(main),
 		"targetRect": [target_rect.position.x, target_rect.position.y, target_rect.size.x, target_rect.size.y],
+		"railRect": [rail_rect.position.x, rail_rect.position.y, rail_rect.size.x, rail_rect.size.y],
+		"scrollRect": [scroll_rect.position.x, scroll_rect.position.y, scroll_rect.size.x, scroll_rect.size.y] if target_scroll != null else [],
+		"scrollVertical": target_scroll.scroll_vertical if target_scroll != null else -1,
+		"insideScrollView": inside_scroll_view,
 		"withinContent": within_content,
 		"separated": separated,
 		"accented": outline.get_global_rect().intersects(target_rect)

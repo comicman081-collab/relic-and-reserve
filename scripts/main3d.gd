@@ -1955,6 +1955,14 @@ func stabilize_tutorial_target_scroll(target: Control, scroll: ScrollContainer, 
 	# The dossier is intentionally vertical-only.  ensure_control_visible may
 	# still alter a hidden horizontal scrollbar, so pin it to the public layout.
 	scroll.scroll_horizontal = 0
+	# Godot applies ensure_control_visible during the following container-layout
+	# pass. Measuring sooner can see the pre-scroll rect, then the deferred ensure
+	# overrides our correction and leaves a citation button clipped behind the
+	# tutorial rail. Let that one authoritative ensure settle before enforcing
+	# the visible viewport bounds.
+	await get_tree().process_frame
+	if render_serial != tutorial_render_serial or target == null or scroll == null or not is_instance_valid(target) or not is_instance_valid(scroll):
+		return
 	var target_rect := target.get_global_rect()
 	var visible_rect := scroll.get_global_rect()
 	if target_rect.position.y < visible_rect.position.y:

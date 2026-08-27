@@ -415,7 +415,10 @@ func _build_target_spotlight(state: Dictionary, target: Control) -> void:
 	skip.pressed.connect(_skip_tutorial)
 	column.add_child(skip)
 
-	if target.focus_mode != Control.FOCUS_NONE:
+	# Audit and off-screen harnesses can construct the production UI without
+	# attaching its root to a SceneTree. Focus is presentation-only, so skip it
+	# until the target is actually live instead of emitting a runtime error.
+	if target.focus_mode != Control.FOCUS_NONE and target.is_inside_tree():
 		target.grab_focus()
 
 

@@ -47,6 +47,8 @@ func _run() -> void:
 		return
 
 	gs.set("persistence_enabled", false)
+	gs.call("reset_game")
+	gs.set("player_profile", gs.call("default_player_profile"))
 	gs.set("language", "ko")
 	var start_result: Dictionary = gs.call("new_game", 1)
 	_check(bool(start_result.get("ok", false)), "fresh Stage 1 must start")

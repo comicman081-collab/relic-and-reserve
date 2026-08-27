@@ -130,18 +130,18 @@
   "backgroundOnly": true,
   "captureHashes": {
     "01_stage_select_ko": "94560ab01ddf5c77df39dace9f29fb49f617c9fab8516f915dc3d683a0d6dd72",
-    "02_stage1_investigation_tutorial_ko": "1b5d98cf817b3913712792b5145f22b0ea1d328f83e6c5bc5ef12010d51b9ca0",
+    "02_stage1_investigation_tutorial_ko": "f2d6b5b9fb2fa3d3c4278308c0af2b2808e14ac37ed0ddf934f64c2989234cdb",
     "03_listing_price_ko": "a674fd8bec3bf577c2e4894de34c7acfd8555b096425b8024bff23497b24dc10",
     "04_listing_disclosure_ko": "18ea0f350fec546da70ba0bb8fec582b8ab566d1e1a4aa21b02b18169b38927e",
     "05_auction_sold_reasons_ko": "cd8521224b61f622465ffaf816bcfb053ca838c7ffce20c071a13b11a77f7102",
     "06_stage_clear_ko": "c08b2aa2c0aa6fea3503ca7952e3769f9a57627cebd66ad7f4c40de9689e2283",
-    "07_stage1_investigation_tutorial_en": "359d899d262380c11f0b4b1bb314df0e973f627b9afaaa1dd3c4a019b4703688",
+    "07_stage1_investigation_tutorial_en": "f4a20e26cb6551cf9df495c346f21ec9017cbfc97ea00eec8ff93081b08e9872",
     "08_listing_disclosure_en": "5963d0836c8cc22c88793b155fde46856a567de609e71d6be270367018936343",
     "09_auction_sold_reasons_en": "ca155751d4f245deed9d1a584bd6fb877fc26cc3a32a429d603af3056b115c1c",
-    "10_stage1_report_ready_ko": "ecfa66d2c1e76422fc1e37dec01935fb9be7b8863e21cd6d83cf1c1be9d2d62e",
-    "11_stage1_report_ready_en": "92d1bc177195a3904d55ecf7de4ea2876be11795d46f2eecbe381d798f16b1b2",
-    "12_stage1_repair_ready_ko": "8418cc911433603e5fcd939c38a5d51fc001cabfd6760e296aac118f84a8e7fe",
-    "13_stage1_repair_ready_en": "b479a47ae97e6f8fb5d4cd4a46fb80fef96d5935c976e6b1f6066d4b735a501c",
+    "10_stage1_report_ready_ko": "52d54da336fa8c75b9faaba34a8900196c79fa7ed7c624a517c4646a764697dd",
+    "11_stage1_report_ready_en": "0885adb8055c1db325a3dfc4fbb6c62cff193412d3a83c0e5f8f44e656719fa2",
+    "12_stage1_repair_ready_ko": "34a22999e9b3a235c6a917c6bff6dcb1de0096612b19afa26ca45220b3a58c83",
+    "13_stage1_repair_ready_en": "2b030b4e743fe178664ba58480277b8491131472191d131811b9f2a4f78523ed",
     "14_market_shopkeeper_offer_ko": "aa306eaac020c4d8b3bf3126bc1ce5f3500a5a0eb05927f7366d392f4f801114",
     "15_event_npc_result_ko": "c4ae170bd1bd5c2d6c4d16bcf0b67ad9d85ed0c96a3740c4e30b4840d5a86cab",
     "16_stage_clear_replay_en": "8e3f428710c3a2c481823e8f2f68746eec5cb30f81df07e40ea910ea28d5a7ed",
@@ -160,51 +160,51 @@
     "29_authentication_en": "b7f7587c2deddc66438185f1fd76654ccd138452f118232668f2da19e8b98e09",
     "30_upgrades_ko": "f20198ca1a5e8b054f1335d1aaf36c2f537bee02c49fa15b10e3923fe72c43ff",
     "31_upgrades_en": "4f17b2b6d919de40a41b3a80e10409a1ed7ecee44311f144d5f4bd94625332a6",
-    "32_stage2_leave_patina_report_ready_ko": "5558c87859ebc8ea632f0ec5b274d2ac6a5f19e387b8d87bcb5a44090ffc691b",
-    "33_stage2_leave_patina_report_ready_en": "6d2bc092251c4b737a35110573e7e22c8a07ea12fdc018657183d504866ab93c",
-    "34_stage2_estate_compass_report_ready_ko": "5c5dcfecb8f0e88481ab14e2d52b4016a14c7a5ab0f5c209562a5890b4d9f9d6",
-    "35_stage2_estate_compass_report_ready_en": "c7762335c2d5ae5c55028dc2e9b091fbc492388c0d90f2bf8c7d7616bacdf0e2",
-    "36_stage2_pawn_watch_report_ready_ko": "d4fe1c2bea20aceafa2ca22a49cb32b10e03d1ebfbdba18ee7d41249f7786571",
-    "37_stage2_pawn_watch_report_ready_en": "339856bc1fa1a58d9321fb80a769dcf8c64c0206e81614df3827ed9dbd3dfa18",
-    "38_stage3_garage_lamp_report_ready_ko": "f00274f8ed9d45041b266d059a776877f2b0c5fce4cabe6ff7b1b03b97497392",
-    "39_stage3_garage_lamp_report_ready_en": "29677e55f9833ac64d8139be47b00dc9e23ebc1c205919788006e8fabadf7dde",
-    "40_stage3_telephone_trace_report_ready_ko": "e987a6642490d04251edf826d3e2b54baf978d91ce889fea8f6c46ab2c08e6ee",
-    "41_stage3_telephone_trace_report_ready_en": "aa95f115fcd7dc93e3e6b9f60a28a87431b1e507a1f2f468a70007d258296a99",
-    "42_stage3_early_camera_report_ready_ko": "c02f538cbfb39bc59569b9f8391b6a909dcc5a6d5570da8075973154bef69292",
-    "43_stage3_early_camera_report_ready_en": "77f31c226fe948d272090815a9c38458dcdef7a219956d81bc77295f14702e02",
-    "44_stage4_mislabelled_collection_report_ready_ko": "78293d2039da5c0789686405dd29eda29835d89697877a9ca78e038230e8e93c",
-    "45_stage4_mislabelled_collection_report_ready_en": "8c90b8d3602f7cdc23b602ff9a8cdf1269cc89ce55717cb342455f0ce6d4fa8f",
-    "46_stage4_observatory_instrument_report_ready_ko": "0fede34fb208e82d9bb6e11b6ad89d806d232a1cd63b8d03d79ac2bd3d21e036",
-    "47_stage4_observatory_instrument_report_ready_en": "19a0702e7268547dcb89dec7127f0df2fe6b9a615d9c59990ffd78d6fadc1eac",
-    "48_stage5_collector_promise_report_ready_ko": "fac1991fe1ebb597afc6f4933b8767213f3d35803c85e7ef08874c9c4efefed4",
-    "49_stage5_collector_promise_report_ready_en": "76b4f2ba57aaff89817e76d3da8b8383014c3a5c3d029cae2afc70dcef71016d",
-    "50_stage5_three_cameras_report_ready_ko": "38fc2b9c4409da08933cd188a495d7085c6e61e5ac4761a6be5cd02a4b46d5a4",
-    "51_stage5_three_cameras_report_ready_en": "31442175e3496a06ed2a17a1e263891dc73f6468a93fc957f4af05c72b129ff6",
-    "52_stage5_victor_hale_npc_detail_ko": "4c3646d32238c75d47d722bb6be2eb44860bbf7c1ab8146a5734afddc0b30a1f",
-    "53_stage5_lena_falk_npc_detail_ko": "6d85add124ddfe51e5ba3266e9fb907c01d9cc99fe827889ef0924cdf937ecbe",
+    "32_stage2_leave_patina_report_ready_ko": "5a555a6ee73e6d09b404e86abdc02f315cc41ab7d01ae5a3bbecb82abaa2ce96",
+    "33_stage2_leave_patina_report_ready_en": "42da37fdc75a6fe0f1e57c39b8f073823a04e3f3351ae349e85d8350eb8ab9f4",
+    "34_stage2_estate_compass_report_ready_ko": "380b731f4d9dacfe04d05b90ff231133c40c8b3392678ab68cecd480dee35aa9",
+    "35_stage2_estate_compass_report_ready_en": "c8bffb1033972f7f9a7352c8979196fcaa42cb318ccf5d43564ac198b9b867c4",
+    "36_stage2_pawn_watch_report_ready_ko": "b02e006c9eb074ab42d2e5c37a950fb014628f900b474c2c726be1f16c0133cd",
+    "37_stage2_pawn_watch_report_ready_en": "3cdb75ae399c57a507e8d06916ac03a66461a1e97fbfb5b571dc39c9ab8c098a",
+    "38_stage3_garage_lamp_report_ready_ko": "5b4523790c38af963e73a2a0605e3fa9626f255f217dcc1699b0e8c1cbe12718",
+    "39_stage3_garage_lamp_report_ready_en": "7fbfa9ccbe732d4d1d5d008bea5f77403896345bd2603b1541c0aae90d615a16",
+    "40_stage3_telephone_trace_report_ready_ko": "a8ee2534726e80193c577809a0294e8bc9a42fa99203cc291bf7d7a523b25b1b",
+    "41_stage3_telephone_trace_report_ready_en": "873398077e86687836dc71c2ecdfa4540f63c7eff24ce87af25d295856d287ee",
+    "42_stage3_early_camera_report_ready_ko": "087d3bca421aacc0d732c73fb6006a562e3aaf78976f030d48252d64985291e6",
+    "43_stage3_early_camera_report_ready_en": "63abcf0e5a7e2ff230702a9ff8ee8712e18911f73b883a473e9b8cc4469fe7c7",
+    "44_stage4_mislabelled_collection_report_ready_ko": "098b25da6f32ba4029a9e2f3fd020d73f3dea4dc60eed940fa6f8cb5cae668c2",
+    "45_stage4_mislabelled_collection_report_ready_en": "683ff8cd1a8578c3bd581c9a3a82ad1880388e9f20b32dcb2fbfcd9bd9ba55a9",
+    "46_stage4_observatory_instrument_report_ready_ko": "07dfd6ea9642c2809489a79f992545ba1f68b9fc473ca359998a61a07a57dbec",
+    "47_stage4_observatory_instrument_report_ready_en": "ac42b5db04b6bbfc5f9adca24daf48d5de2c84d24eb0011fa93d4afb24a340cb",
+    "48_stage5_collector_promise_report_ready_ko": "0310438f2b660b9c7301979483f91dc3857b1a02904b740b22c830dc0d2a5eb4",
+    "49_stage5_collector_promise_report_ready_en": "4fc521135dce25e0afa758fbd84e383df73650f60317aff669318c444bfc6da9",
+    "50_stage5_three_cameras_report_ready_ko": "5a32629fc96910b9ed5a609a387e7ef04dc8dbffbe4b52ad3400d4ced45a6684",
+    "51_stage5_three_cameras_report_ready_en": "62724a06b533b627b05846d3cd9e572bc81ccd500e320e8bdc20ce4cdae442be",
+    "52_stage5_victor_hale_npc_detail_ko": "baa3d49796c2c47bed8df4d14728e49c708bececcb365da332042b9bf2bd232e",
+    "53_stage5_lena_falk_npc_detail_ko": "58b3cc749a92e62a3b5abad07735ff637af9d99624062305de769f28e0e3ad38",
     "54_stage5_case_npc_portraits_2up": "9dac812303c2093dc8e2f844f1ca41e2bc9d1e57000ff6e2d0ed498efe60ccff",
     "55_artifact_069_typewriter_cipher_visual": "0cb49c3e3ff4da1d14f3c93828ca649fe743a107743a784cda6275d02882b1f6",
     "56_artifact_070_sextant_visual": "627ba69b6a3d9ef21118bc6b29c394a68c94a8c09bbe7549ce51a0256951a64d",
     "57_artifact_specs_01_40_contact_sheet": "5ea3e9916696b45298b7e84fe54a28e711a4947916b656f0204097c8d56b2753",
     "58_artifact_specs_41_80_contact_sheet": "1f4927ab75309fab037b2bf265c018c0d6eff8aa86e0915cb510fa51f7744d7e",
-    "59_stage6_shadow_gauge_report_ready_ko": "3bc1dc32d33ea6d1843e4c93560a7a10acd7c68fddd0c5775c36e69db325d451",
-    "60_stage6_shadow_gauge_report_ready_en": "962a6188788b9ab5531b4f506a7c9d70d892e1f41a9ec1e118b6f79ad2cc4b70",
-    "61_stage6_shadow_clock_report_ready_ko": "1dc084b017dcfae0864c8946b4725987aadc0b256822d0943b36213ddf3b3d43",
-    "62_stage6_shadow_clock_report_ready_en": "5cc3440bf95f5479a16f35fdc375f1900942f399022b0c1e203a28c56467d451",
-    "63_stage6_shadow_music_box_report_ready_ko": "ed495fb24c4dee8c7b3677589247d70b5c3711f41eeec0be5c22cae446791d70",
-    "64_stage6_shadow_music_box_report_ready_en": "65383cda153257f45d934ef5cf78934d08d7b43e951ff74a8f08fbed5b04e5aa",
-    "65_stage6_hana_mire_npc_detail_ko": "4db05505ffab637173a2f2123271cc0d07dbff1da67b3eff84001aaf301a84f5",
-    "66_stage6_mara_venn_npc_detail_ko": "045e3d640ec6617e68da402dd4c46c9970ef073d716ca2ca475351b096369202",
-    "67_stage6_iris_bell_npc_detail_ko": "94fb1cd424baa175858b3a55cd76f8a62a533e012418184d2b2163a66536b5b0",
+    "59_stage6_shadow_gauge_report_ready_ko": "cf5ceb3a5355b10e2f0c241dbbf97c31d51b9d7fe00111f2c254bec6684f3228",
+    "60_stage6_shadow_gauge_report_ready_en": "e13eec55423300b0583c86bd973329301aa12d04deaebc66a3c8f891664d5637",
+    "61_stage6_shadow_clock_report_ready_ko": "fdfd713e18536d4668c89b05baf93f66d5c58bf8af6cd03afe8b89b035a656e6",
+    "62_stage6_shadow_clock_report_ready_en": "94aa7efc63ffc07e3f1eac25ad08c1b6fa809efa6d135f62e2fcbe646c0755ac",
+    "63_stage6_shadow_music_box_report_ready_ko": "efc204fb8516ada1463a6527af4eaf80c978053b308e220496a50d63deaea71a",
+    "64_stage6_shadow_music_box_report_ready_en": "f30dae4e4d65e95734e45d70825574169ef82288fb4c0b5075b1627a9da3ec20",
+    "65_stage6_hana_mire_npc_detail_ko": "31c203e1095ff3446d11388b03c45ddeda8dd37ca24cc8f401d4b97479ddd536",
+    "66_stage6_mara_venn_npc_detail_ko": "ef26c3f6920d5a16d3e932b82446d6796619d3a7d0df475020aef655a60a432b",
+    "67_stage6_iris_bell_npc_detail_ko": "d136913ff3d40ce2ef49ee3831051ad122f420dc1110993d13d10b7591924ae5",
     "68_stage6_case_npc_portraits_3up": "213dd89217d14401e914ee35ebeece9eb8806b77e9431e4b0f81aef8abcb2526",
     "69_story_artifact_16_artifact_050_gauge_visual": "607fff5c52345690fcc6276f78e402c4341ba1aefd3fe4df63ed2c0cc7e4c6dd",
     "70_story_artifact_18_artifact_035_music_box_visual": "c26555d1da1f5f34e007ae8665fe3eb5521ef2e04333f086084d76b06631fc41",
-    "71_stage7_shadow_optic_report_ready_ko": "ebc617e9e0cd2e57d4b6296c9a020171425bedf7b33fd2ecdf8519a8b00db68c",
-    "72_stage7_shadow_optic_report_ready_en": "596a689d7349b997a3570259c0e3b44f39797b1f1a80a2162c22da0d675ccb73",
-    "73_stage7_composite_prototype_report_ready_ko": "68cc020ad41ca128efbf12537fcafae977a348e317a263c9c0af417ffae5e2b6",
-    "74_stage7_composite_prototype_report_ready_en": "3117c2db93670cc7eb21223788ff2e5e53f8a5c5a5ba181626ad541eb03b1401",
-    "75_stage7_victor_hale_neutral_npc_detail_ko": "705d2d5e10a014bd15627c90f25d622930813297ca9b009467962c199b34c20a",
-    "76_stage7_noah_stern_concerned_npc_detail_ko": "f01b4a67ca73b5b3c35753b4e439fa2cf7bb8e964a3e1339eb278a8c78b72087",
+    "71_stage7_shadow_optic_report_ready_ko": "fbe75bb0ef1d3b795de2dbf019c833c703742a8af50ac287fea1b1e490560a9c",
+    "72_stage7_shadow_optic_report_ready_en": "a5a749d86420f1e7c994376b13995438f735cfc3c581acedf34e9defba5a725a",
+    "73_stage7_composite_prototype_report_ready_ko": "e3145a51d26bec0b45005ce23ac3c5bab39c90b7a28a8461856e7d1af351027e",
+    "74_stage7_composite_prototype_report_ready_en": "98b835537a166bc5a0ab3d692500e0bf4c5e10a043163036eb405b243ee763bd",
+    "75_stage7_victor_hale_neutral_npc_detail_ko": "5817355685f9cc366f2864f5fb4f039745d27fd2bb2a4600bee313ead2e521c5",
+    "76_stage7_noah_stern_concerned_npc_detail_ko": "e4464b7fcae4fa2e86ce0212fe7d6d685e6a1f6a00547f30fbdaa6aedbe2f2f3",
     "77_stage7_victor_noah_case_npc_portraits_2up": "fcc9610c5ed3234a63dae0780a9adfb70c825078def6da864bf283047494c571",
     "78_story_artifact_19_artifact_057_optic_visual": "9c42bf44d21a82286f97b1190560d9bf11388570545f1254f8e595b37fc8eade",
     "79_story_artifact_20_artifact_059_composite_visual": "76063259c344832d3300f5fb0c51f5ace1f6725eecc18c864c6bb131f2388892"
@@ -321,7 +321,7 @@
         "primary": "CaseEvidence_src_prologue_artifact_backplate_screws",
         "primaryRect": [
           810.0,
-          503.0,
+          552.0,
           410.0,
           48.0
         ],
@@ -352,7 +352,7 @@
           ],
           "TutorialTargetOutline": [
             806.0,
-            499.0,
+            548.0,
             418.0,
             56.0
           ]
@@ -381,16 +381,33 @@
               1196.0,
               443.0
             ],
-            "vertical": 0,
+            "vertical": 111,
             "visibleRect": [
               42.0,
               157.0,
               1196.0,
               443.0
             ]
+          },
+          {
+            "horizontal": 0,
+            "name": "@ScrollContainer@65",
+            "rect": [
+              202.0,
+              170.0,
+              876.0,
+              254.0
+            ],
+            "vertical": 0,
+            "visibleRect": [
+              202.0,
+              170.0,
+              876.0,
+              254.0
+            ]
           }
         ],
-        "visibleScrollCount": 1
+        "visibleScrollCount": 2
       },
       "framebufferCaptured": true,
       "id": "02_stage1_investigation_tutorial_ko",
@@ -719,121 +736,121 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionCuePanel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionCuePanel": [
               52.0,
               249.0,
               672.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionCuePanel/@HBoxContainer@298/AuctionCuePhase": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionCuePanel/@HBoxContainer@302/AuctionCuePhase": [
               62.0,
               257.0,
               621.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionCuePanel/@HBoxContainer@298/AuctionCueProgress": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionCuePanel/@HBoxContainer@302/AuctionCueProgress": [
               687.0,
               258.0,
               27.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionPrimaryAction": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionPrimaryAction": [
               52.0,
               200.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionPrimaryAction/HammerButton": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionPrimaryAction/HammerButton": [
               52.0,
               200.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionPrimaryState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionPrimaryState": [
               52.0,
               135.0,
               672.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionPrimaryState/AuctionPrimaryText": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionPrimaryState/AuctionPrimaryText": [
               62.0,
               145.0,
               652.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionResultFact": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionResultFact": [
               52.0,
               509.0,
               672.0,
               24.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn": [
               746.0,
               90.0,
               260.0,
               510.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/AuctionReasonChips": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/AuctionReasonChips": [
               746.0,
               501.0,
               260.0,
               34.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10": [
               746.0,
               90.0,
               260.0,
               381.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/CharacterDialogue": [
               756.0,
               395.0,
               240.0,
               45.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/CharacterFactLabel": [
               756.0,
               444.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/CharacterSemanticState": [
               756.0,
               372.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/PortraitStack": [
               756.0,
               98.0,
               240.0,
               220.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer": [
               1018.0,
               90.0,
               220.0,
               510.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/CharacterDialogue": [
               1028.0,
               395.0,
               200.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/CharacterFactLabel": [
               1028.0,
               420.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/CharacterSemanticState": [
               1028.0,
               372.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/PortraitStack": [
               1028.0,
               98.0,
               200.0,
@@ -859,121 +876,121 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionCuePanel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionCuePanel": [
               52.0,
               249.0,
               672.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionCuePanel/@HBoxContainer@298/AuctionCuePhase": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionCuePanel/@HBoxContainer@302/AuctionCuePhase": [
               62.0,
               257.0,
               621.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionCuePanel/@HBoxContainer@298/AuctionCueProgress": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionCuePanel/@HBoxContainer@302/AuctionCueProgress": [
               687.0,
               258.0,
               27.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionPrimaryAction": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionPrimaryAction": [
               52.0,
               200.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionPrimaryAction/HammerButton": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionPrimaryAction/HammerButton": [
               52.0,
               200.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionPrimaryState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionPrimaryState": [
               52.0,
               135.0,
               672.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionPrimaryState/AuctionPrimaryText": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionPrimaryState/AuctionPrimaryText": [
               62.0,
               145.0,
               652.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/@PanelContainer@295/@VBoxContainer@296/AuctionResultFact": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/@PanelContainer@299/@VBoxContainer@300/AuctionResultFact": [
               52.0,
               509.0,
               672.0,
               24.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn": [
               746.0,
               90.0,
               260.0,
               510.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/AuctionReasonChips": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/AuctionReasonChips": [
               746.0,
               501.0,
               260.0,
               34.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10": [
               746.0,
               90.0,
               260.0,
               381.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/CharacterDialogue": [
               756.0,
               395.0,
               240.0,
               45.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/CharacterFactLabel": [
               756.0,
               444.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/CharacterSemanticState": [
               756.0,
               372.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/PortraitStack": [
               756.0,
               98.0,
               240.0,
               220.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer": [
               1018.0,
               90.0,
               220.0,
               510.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/CharacterDialogue": [
               1028.0,
               395.0,
               200.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/CharacterFactLabel": [
               1028.0,
               420.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/CharacterSemanticState": [
               1028.0,
               372.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/PortraitStack": [
               1028.0,
               98.0,
               200.0,
@@ -1089,7 +1106,7 @@
         "passed": true,
         "portraitReaction": {
           "after": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -1119,7 +1136,7 @@
                 1.0
               ]
             },
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -1151,7 +1168,7 @@
             }
           },
           "before": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@332/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@336/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -1181,7 +1198,7 @@
                 0.959999978542328
               ]
             },
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@292/PortraitDialoguePanel_auctioneer/@VBoxContainer@293/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@296/PortraitDialoguePanel_auctioneer/@VBoxContainer@297/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -1985,7 +2002,7 @@
         "primary": "CaseEvidence_src_prologue_artifact_backplate_screws",
         "primaryRect": [
           810.0,
-          518.0,
+          552.0,
           410.0,
           48.0
         ],
@@ -2016,7 +2033,7 @@
           ],
           "TutorialTargetOutline": [
             806.0,
-            514.0,
+            548.0,
             418.0,
             56.0
           ]
@@ -2045,16 +2062,33 @@
               1196.0,
               444.0
             ],
-            "vertical": 0,
+            "vertical": 129,
             "visibleRect": [
               42.0,
               156.0,
               1196.0,
               444.0
             ]
+          },
+          {
+            "horizontal": 0,
+            "name": "@ScrollContainer@414",
+            "rect": [
+              202.0,
+              170.0,
+              876.0,
+              254.0
+            ],
+            "vertical": 0,
+            "visibleRect": [
+              202.0,
+              170.0,
+              876.0,
+              254.0
+            ]
           }
         ],
-        "visibleScrollCount": 1
+        "visibleScrollCount": 2
       },
       "framebufferCaptured": true,
       "id": "07_stage1_investigation_tutorial_en",
@@ -2275,121 +2309,121 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionCuePanel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionCuePanel": [
               52.0,
               249.0,
               672.0,
               36.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionCuePanel/@HBoxContainer@628/AuctionCuePhase": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionCuePanel/@HBoxContainer@636/AuctionCuePhase": [
               62.0,
               257.0,
               621.0,
               20.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionCuePanel/@HBoxContainer@628/AuctionCueProgress": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionCuePanel/@HBoxContainer@636/AuctionCueProgress": [
               687.0,
               258.0,
               27.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionPrimaryAction": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionPrimaryAction": [
               52.0,
               200.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionPrimaryAction/HammerButton": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionPrimaryAction/HammerButton": [
               52.0,
               200.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionPrimaryState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionPrimaryState": [
               52.0,
               135.0,
               672.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionPrimaryState/AuctionPrimaryText": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionPrimaryState/AuctionPrimaryText": [
               62.0,
               146.0,
               652.0,
               36.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionResultFact": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionResultFact": [
               52.0,
               509.0,
               672.0,
               24.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn": [
               746.0,
               90.0,
               260.0,
               510.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/AuctionReasonChips": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/AuctionReasonChips": [
               746.0,
               495.0,
               260.0,
               33.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10": [
               746.0,
               90.0,
               260.0,
               376.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/CharacterDialogue": [
               756.0,
               393.0,
               240.0,
               43.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/CharacterFactLabel": [
               756.0,
               440.0,
               240.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/CharacterSemanticState": [
               756.0,
               371.0,
               240.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/PortraitStack": [
               756.0,
               98.0,
               240.0,
               220.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer": [
               1018.0,
               90.0,
               220.0,
               510.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/CharacterDialogue": [
               1028.0,
               393.0,
               200.0,
               20.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/CharacterFactLabel": [
               1028.0,
               417.0,
               200.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/CharacterSemanticState": [
               1028.0,
               371.0,
               200.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/PortraitStack": [
               1028.0,
               98.0,
               200.0,
@@ -2415,121 +2449,121 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionCuePanel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionCuePanel": [
               52.0,
               249.0,
               672.0,
               36.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionCuePanel/@HBoxContainer@628/AuctionCuePhase": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionCuePanel/@HBoxContainer@636/AuctionCuePhase": [
               62.0,
               257.0,
               621.0,
               20.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionCuePanel/@HBoxContainer@628/AuctionCueProgress": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionCuePanel/@HBoxContainer@636/AuctionCueProgress": [
               687.0,
               258.0,
               27.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionPrimaryAction": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionPrimaryAction": [
               52.0,
               200.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionPrimaryAction/HammerButton": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionPrimaryAction/HammerButton": [
               52.0,
               200.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionPrimaryState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionPrimaryState": [
               52.0,
               135.0,
               672.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionPrimaryState/AuctionPrimaryText": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionPrimaryState/AuctionPrimaryText": [
               62.0,
               146.0,
               652.0,
               36.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/@PanelContainer@625/@VBoxContainer@626/AuctionResultFact": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/@PanelContainer@633/@VBoxContainer@634/AuctionResultFact": [
               52.0,
               509.0,
               672.0,
               24.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn": [
               746.0,
               90.0,
               260.0,
               510.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/AuctionReasonChips": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/AuctionReasonChips": [
               746.0,
               495.0,
               260.0,
               33.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10": [
               746.0,
               90.0,
               260.0,
               376.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/CharacterDialogue": [
               756.0,
               393.0,
               240.0,
               43.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/CharacterFactLabel": [
               756.0,
               440.0,
               240.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/CharacterSemanticState": [
               756.0,
               371.0,
               240.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/PortraitStack": [
               756.0,
               98.0,
               240.0,
               220.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer": [
               1018.0,
               90.0,
               220.0,
               510.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/CharacterDialogue": [
               1028.0,
               393.0,
               200.0,
               20.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/CharacterFactLabel": [
               1028.0,
               417.0,
               200.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/CharacterSemanticState": [
               1028.0,
               371.0,
               200.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/PortraitStack": [
               1028.0,
               98.0,
               200.0,
@@ -2645,7 +2679,7 @@
         "passed": true,
         "portraitReaction": {
           "after": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -2675,7 +2709,7 @@
                 1.0
               ]
             },
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -2707,7 +2741,7 @@
             }
           },
           "before": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@662/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/AuctionBidderColumn/PortraitDialoguePanel_bidder_10/@VBoxContainer@670/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -2737,7 +2771,7 @@
                 0.959999978542328
               ]
             },
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@622/PortraitDialoguePanel_auctioneer/@VBoxContainer@623/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@630/PortraitDialoguePanel_auctioneer/@VBoxContainer@631/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -3261,16 +3295,16 @@
         "primary": "ResolveCaseReport",
         "primaryRect": [
           52.0,
-          540.0,
+          548.0,
           1168.0,
           52.0
         ],
         "requiredRects": {
           "CaseDossierRows": [
             42.0,
-            -228.0,
+            -577.0,
             1188.0,
-            828.0
+            1185.0
           ],
           "CaseDossierScroll": [
             42.0,
@@ -3279,26 +3313,26 @@
             443.0
           ],
           "CaseHypothesis_hyp_period_repair": [
-            421.0,
-            338.0,
+            42.0,
+            284.0,
             375.0,
             58.0
           ],
           "CaseReportPrompt": [
             52.0,
-            466.0,
+            474.0,
             1168.0,
             19.0
           ],
           "ReportCitationRemove_src_prologue_artifact_backplate_screws": [
             52.0,
-            491.0,
+            499.0,
             360.0,
             43.0
           ],
           "ResolveCaseReport": [
             52.0,
-            540.0,
+            548.0,
             1168.0,
             52.0
           ],
@@ -3333,7 +3367,7 @@
               1196.0,
               443.0
             ],
-            "vertical": 385,
+            "vertical": 734,
             "visibleRect": [
               42.0,
               157.0,
@@ -3381,16 +3415,16 @@
         "primary": "ResolveCaseReport",
         "primaryRect": [
           52.0,
-          540.0,
+          548.0,
           1168.0,
           52.0
         ],
         "requiredRects": {
           "CaseDossierRows": [
             42.0,
-            -221.0,
+            -575.0,
             1188.0,
-            821.0
+            1183.0
           ],
           "CaseDossierScroll": [
             42.0,
@@ -3399,26 +3433,26 @@
             444.0
           ],
           "CaseHypothesis_hyp_period_repair": [
-            421.0,
-            339.0,
+            42.0,
+            285.0,
             375.0,
             58.0
           ],
           "CaseReportPrompt": [
             52.0,
-            467.0,
+            475.0,
             1168.0,
             18.0
           ],
           "ReportCitationRemove_src_prologue_artifact_backplate_screws": [
             52.0,
-            491.0,
+            499.0,
             360.0,
             43.0
           ],
           "ResolveCaseReport": [
             52.0,
-            540.0,
+            548.0,
             1168.0,
             52.0
           ],
@@ -3453,16 +3487,33 @@
               1196.0,
               444.0
             ],
-            "vertical": 377,
+            "vertical": 731,
             "visibleRect": [
               42.0,
               156.0,
               1196.0,
               444.0
             ]
+          },
+          {
+            "horizontal": 0,
+            "name": "@ScrollContainer@793",
+            "rect": [
+              208.0,
+              221.0,
+              856.0,
+              159.0
+            ],
+            "vertical": 0,
+            "visibleRect": [
+              208.0,
+              221.0,
+              856.0,
+              159.0
+            ]
           }
         ],
-        "visibleScrollCount": 2
+        "visibleScrollCount": 3
       },
       "framebufferCaptured": true,
       "id": "11_stage1_report_ready_en",
@@ -3596,8 +3647,26 @@
           1280,
           720
         ],
-        "viewportVisibleScrolls": [],
-        "visibleScrollCount": 0
+        "viewportVisibleScrolls": [
+          {
+            "horizontal": 0,
+            "name": "@ScrollContainer@871",
+            "rect": [
+              366.0,
+              237.0,
+              856.0,
+              159.0
+            ],
+            "vertical": 0,
+            "visibleRect": [
+              366.0,
+              237.0,
+              856.0,
+              159.0
+            ]
+          }
+        ],
+        "visibleScrollCount": 1
       },
       "framebufferCaptured": true,
       "id": "12_stage1_repair_ready_ko",
@@ -3731,8 +3800,26 @@
           1280,
           720
         ],
-        "viewportVisibleScrolls": [],
-        "visibleScrollCount": 0
+        "viewportVisibleScrolls": [
+          {
+            "horizontal": 0,
+            "name": "@ScrollContainer@946",
+            "rect": [
+              366.0,
+              230.0,
+              856.0,
+              160.0
+            ],
+            "vertical": 0,
+            "visibleRect": [
+              366.0,
+              230.0,
+              856.0,
+              160.0
+            ]
+          }
+        ],
+        "visibleScrollCount": 1
       },
       "framebufferCaptured": true,
       "id": "13_stage1_repair_ready_en",
@@ -3754,91 +3841,91 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@977/MarketLot_0": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1002/MarketLot_0": [
               1146.0,
               180.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@977/MarketOffer_0": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1002/MarketOffer_0": [
               1060.0,
               180.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@979/MarketLot_1": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1004/MarketLot_1": [
               1146.0,
               246.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@979/MarketOffer_1": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1004/MarketOffer_1": [
               1060.0,
               246.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@981/MarketLot_2": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1006/MarketLot_2": [
               1146.0,
               312.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@981/MarketOffer_2": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1006/MarketOffer_2": [
               1060.0,
               312.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@983/MarketLot_3": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1008/MarketLot_3": [
               1146.0,
               378.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@983/MarketOffer_3": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1008/MarketOffer_3": [
               1060.0,
               378.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@985/MarketLot_4": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1010/MarketLot_4": [
               1146.0,
               444.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@985/MarketOffer_4": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1010/MarketOffer_4": [
               1060.0,
               444.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper": [
               42.0,
               152.0,
               250.0,
               448.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/CharacterDialogue": [
               52.0,
               515.0,
               230.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/CharacterFactLabel": [
               52.0,
               540.0,
               230.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/CharacterSemanticState": [
               52.0,
               492.0,
               230.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/PortraitStack": [
               52.0,
               160.0,
               230.0,
@@ -3864,91 +3951,91 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@977/MarketLot_0": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1002/MarketLot_0": [
               1146.0,
               180.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@977/MarketOffer_0": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1002/MarketOffer_0": [
               1060.0,
               180.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@979/MarketLot_1": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1004/MarketLot_1": [
               1146.0,
               246.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@979/MarketOffer_1": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1004/MarketOffer_1": [
               1060.0,
               246.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@981/MarketLot_2": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1006/MarketLot_2": [
               1146.0,
               312.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@981/MarketOffer_2": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1006/MarketOffer_2": [
               1060.0,
               312.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@983/MarketLot_3": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1008/MarketLot_3": [
               1146.0,
               378.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@983/MarketOffer_3": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1008/MarketOffer_3": [
               1060.0,
               378.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@985/MarketLot_4": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1010/MarketLot_4": [
               1146.0,
               444.0,
               92.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/@VBoxContainer@970/@ScrollContainer@974/@VBoxContainer@975/@HBoxContainer@985/MarketOffer_4": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/@VBoxContainer@995/@ScrollContainer@999/@VBoxContainer@1000/@HBoxContainer@1010/MarketOffer_4": [
               1060.0,
               444.0,
               82.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper": [
               42.0,
               152.0,
               250.0,
               448.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/CharacterDialogue": [
               52.0,
               515.0,
               230.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/CharacterFactLabel": [
               52.0,
               540.0,
               230.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/CharacterSemanticState": [
               52.0,
               492.0,
               230.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/PortraitStack": [
               52.0,
               160.0,
               230.0,
@@ -4021,7 +4108,7 @@
         "passed": true,
         "portraitReaction": {
           "after": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 120,
                 "finalTransform": {
@@ -4053,7 +4140,7 @@
             }
           },
           "before": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@967/PortraitDialoguePanel_shopkeeper/@VBoxContainer@968/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@992/PortraitDialoguePanel_shopkeeper/@VBoxContainer@993/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 120,
                 "finalTransform": {
@@ -4150,7 +4237,7 @@
         "viewportVisibleScrolls": [
           {
             "horizontal": 0,
-            "name": "@ScrollContainer@974",
+            "name": "@ScrollContainer@999",
             "rect": [
               304.0,
               180.0,
@@ -4188,37 +4275,37 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/@PanelContainer@1029/@VBoxContainer@1030/EventContinueMarket": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/@PanelContainer@1054/@VBoxContainer@1055/EventContinueMarket": [
               366.0,
               371.0,
               862.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter": [
               42.0,
               152.0,
               300.0,
               448.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/CharacterDialogue": [
               52.0,
               532.0,
               280.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/CharacterFactLabel": [
               52.0,
               557.0,
               280.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/CharacterSemanticState": [
               52.0,
               509.0,
               280.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/PortraitStack": [
               52.0,
               160.0,
               280.0,
@@ -4244,37 +4331,37 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/@PanelContainer@1029/@VBoxContainer@1030/EventContinueMarket": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/@PanelContainer@1054/@VBoxContainer@1055/EventContinueMarket": [
               366.0,
               371.0,
               862.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter": [
               42.0,
               152.0,
               300.0,
               448.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/CharacterDialogue": [
               52.0,
               532.0,
               280.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/CharacterFactLabel": [
               52.0,
               557.0,
               280.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/CharacterSemanticState": [
               52.0,
               509.0,
               280.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/PortraitStack": [
               52.0,
               160.0,
               280.0,
@@ -4340,7 +4427,7 @@
         "passed": true,
         "portraitReaction": {
           "after": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -4372,7 +4459,7 @@
             }
           },
           "before": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1026/PortraitDialoguePanel_event_reporter/@VBoxContainer@1027/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1051/PortraitDialoguePanel_event_reporter/@VBoxContainer@1052/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -5333,121 +5420,121 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionCuePanel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionCuePanel": [
               52.0,
               281.0,
               672.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionCuePanel/@HBoxContainer@1409/AuctionCuePhase": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionCuePanel/@HBoxContainer@1434/AuctionCuePhase": [
               62.0,
               289.0,
               621.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionCuePanel/@HBoxContainer@1409/AuctionCueProgress": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionCuePanel/@HBoxContainer@1434/AuctionCueProgress": [
               687.0,
               290.0,
               27.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionPrimaryAction": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionPrimaryAction": [
               52.0,
               232.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionPrimaryAction/HammerButton": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionPrimaryAction/HammerButton": [
               52.0,
               232.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionPrimaryState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionPrimaryState": [
               52.0,
               167.0,
               672.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionPrimaryState/AuctionPrimaryText": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionPrimaryState/AuctionPrimaryText": [
               62.0,
               177.0,
               652.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionResultFact": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionResultFact": [
               52.0,
               509.0,
               672.0,
               24.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn": [
               746.0,
               122.0,
               260.0,
               478.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/AuctionReasonChips": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/AuctionReasonChips": [
               746.0,
               533.0,
               260.0,
               34.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12": [
               746.0,
               122.0,
               260.0,
               381.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/CharacterDialogue": [
               756.0,
               427.0,
               240.0,
               45.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/CharacterFactLabel": [
               756.0,
               476.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/CharacterSemanticState": [
               756.0,
               404.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/PortraitStack": [
               756.0,
               130.0,
               240.0,
               220.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer": [
               1018.0,
               122.0,
               220.0,
               478.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/CharacterDialogue": [
               1028.0,
               427.0,
               200.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/CharacterFactLabel": [
               1028.0,
               452.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/CharacterSemanticState": [
               1028.0,
               404.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/PortraitStack": [
               1028.0,
               130.0,
               200.0,
@@ -5479,121 +5566,121 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionCuePanel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionCuePanel": [
               52.0,
               281.0,
               672.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionCuePanel/@HBoxContainer@1409/AuctionCuePhase": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionCuePanel/@HBoxContainer@1434/AuctionCuePhase": [
               62.0,
               289.0,
               621.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionCuePanel/@HBoxContainer@1409/AuctionCueProgress": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionCuePanel/@HBoxContainer@1434/AuctionCueProgress": [
               687.0,
               290.0,
               27.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionPrimaryAction": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionPrimaryAction": [
               52.0,
               232.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionPrimaryAction/HammerButton": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionPrimaryAction/HammerButton": [
               52.0,
               232.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionPrimaryState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionPrimaryState": [
               52.0,
               167.0,
               672.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionPrimaryState/AuctionPrimaryText": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionPrimaryState/AuctionPrimaryText": [
               62.0,
               177.0,
               652.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/@PanelContainer@1406/@VBoxContainer@1407/AuctionResultFact": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/@PanelContainer@1431/@VBoxContainer@1432/AuctionResultFact": [
               52.0,
               509.0,
               672.0,
               24.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn": [
               746.0,
               122.0,
               260.0,
               478.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/AuctionReasonChips": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/AuctionReasonChips": [
               746.0,
               533.0,
               260.0,
               34.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12": [
               746.0,
               122.0,
               260.0,
               381.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/CharacterDialogue": [
               756.0,
               427.0,
               240.0,
               45.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/CharacterFactLabel": [
               756.0,
               476.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/CharacterSemanticState": [
               756.0,
               404.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/PortraitStack": [
               756.0,
               130.0,
               240.0,
               220.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer": [
               1018.0,
               122.0,
               220.0,
               478.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/CharacterDialogue": [
               1028.0,
               427.0,
               200.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/CharacterFactLabel": [
               1028.0,
               452.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/CharacterSemanticState": [
               1028.0,
               404.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/PortraitStack": [
               1028.0,
               130.0,
               200.0,
@@ -5728,7 +5815,7 @@
         "passed": true,
         "portraitReaction": {
           "after": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -5758,7 +5845,7 @@
                 1.0
               ]
             },
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -5790,7 +5877,7 @@
             }
           },
           "before": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1443/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1468/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -5820,7 +5907,7 @@
                 0.959999978542328
               ]
             },
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1403/PortraitDialoguePanel_auctioneer/@VBoxContainer@1404/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1428/PortraitDialoguePanel_auctioneer/@VBoxContainer@1429/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -6657,121 +6744,121 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionCuePanel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionCuePanel": [
               52.0,
               281.0,
               672.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionCuePanel/@HBoxContainer@1452/AuctionCuePhase": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionCuePanel/@HBoxContainer@1477/AuctionCuePhase": [
               62.0,
               289.0,
               621.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionCuePanel/@HBoxContainer@1452/AuctionCueProgress": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionCuePanel/@HBoxContainer@1477/AuctionCueProgress": [
               687.0,
               290.0,
               27.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionPrimaryAction": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionPrimaryAction": [
               52.0,
               232.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionPrimaryAction/GrandReserveNextLot": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionPrimaryAction/GrandReserveNextLot": [
               52.0,
               232.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionPrimaryState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionPrimaryState": [
               52.0,
               167.0,
               672.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionPrimaryState/AuctionPrimaryText": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionPrimaryState/AuctionPrimaryText": [
               62.0,
               177.0,
               652.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionResultFact": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionResultFact": [
               52.0,
               509.0,
               672.0,
               24.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn": [
               746.0,
               122.0,
               260.0,
               478.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/AuctionReasonChips": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/AuctionReasonChips": [
               746.0,
               533.0,
               260.0,
               34.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12": [
               746.0,
               122.0,
               260.0,
               381.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/CharacterDialogue": [
               756.0,
               427.0,
               240.0,
               45.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/CharacterFactLabel": [
               756.0,
               476.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/CharacterSemanticState": [
               756.0,
               404.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/PortraitStack": [
               756.0,
               130.0,
               240.0,
               220.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer": [
               1018.0,
               122.0,
               220.0,
               478.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/CharacterDialogue": [
               1028.0,
               427.0,
               200.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/CharacterFactLabel": [
               1028.0,
               452.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/CharacterSemanticState": [
               1028.0,
               404.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/PortraitStack": [
               1028.0,
               130.0,
               200.0,
@@ -6803,121 +6890,121 @@
               1212.0,
               526.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionCuePanel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionCuePanel": [
               52.0,
               281.0,
               672.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionCuePanel/@HBoxContainer@1452/AuctionCuePhase": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionCuePanel/@HBoxContainer@1477/AuctionCuePhase": [
               62.0,
               289.0,
               621.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionCuePanel/@HBoxContainer@1452/AuctionCueProgress": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionCuePanel/@HBoxContainer@1477/AuctionCueProgress": [
               687.0,
               290.0,
               27.0,
               18.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionPrimaryAction": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionPrimaryAction": [
               52.0,
               232.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionPrimaryAction/GrandReserveNextLot": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionPrimaryAction/GrandReserveNextLot": [
               52.0,
               232.0,
               672.0,
               42.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionPrimaryState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionPrimaryState": [
               52.0,
               167.0,
               672.0,
               58.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionPrimaryState/AuctionPrimaryText": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionPrimaryState/AuctionPrimaryText": [
               62.0,
               177.0,
               652.0,
               37.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/@PanelContainer@1449/@VBoxContainer@1450/AuctionResultFact": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/@PanelContainer@1474/@VBoxContainer@1475/AuctionResultFact": [
               52.0,
               509.0,
               672.0,
               24.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn": [
               746.0,
               122.0,
               260.0,
               478.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/AuctionReasonChips": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/AuctionReasonChips": [
               746.0,
               533.0,
               260.0,
               34.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12": [
               746.0,
               122.0,
               260.0,
               381.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/CharacterDialogue": [
               756.0,
               427.0,
               240.0,
               45.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/CharacterFactLabel": [
               756.0,
               476.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/CharacterSemanticState": [
               756.0,
               404.0,
               240.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/PortraitStack": [
               756.0,
               130.0,
               240.0,
               220.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer": [
               1018.0,
               122.0,
               220.0,
               478.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/CharacterDialogue": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/CharacterDialogue": [
               1028.0,
               427.0,
               200.0,
               21.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/CharacterFactLabel": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/CharacterFactLabel": [
               1028.0,
               452.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/CharacterSemanticState": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/CharacterSemanticState": [
               1028.0,
               404.0,
               200.0,
               19.0
             ],
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/PortraitStack": [
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/PortraitStack": [
               1028.0,
               130.0,
               200.0,
@@ -7052,7 +7139,7 @@
         "passed": true,
         "portraitReaction": {
           "after": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -7082,7 +7169,7 @@
                 1.0
               ]
             },
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -7114,7 +7201,7 @@
             }
           },
           "before": {
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1486/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/AuctionBidderColumn/PortraitDialoguePanel_bidder_12/@VBoxContainer@1511/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -7144,7 +7231,7 @@
                 0.959999978542328
               ]
             },
-            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1446/PortraitDialoguePanel_auctioneer/@VBoxContainer@1447/PortraitStack/PortraitReactionAnchor": {
+            "@CanvasLayer@6/R3Interface/ContentMargin/ScreenContent/@HBoxContainer@1471/PortraitDialoguePanel_auctioneer/@VBoxContainer@1472/PortraitStack/PortraitReactionAnchor": {
               "contract": {
                 "durationMs": 160,
                 "finalTransform": {
@@ -14496,10 +14583,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 398,
+            "maximumVertical": 785,
             "submitVisible": true,
             "valid": true,
-            "vertical": 398
+            "vertical": 785
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -14516,7 +14603,7 @@
           ],
           "CaseHypothesis_hyp_leave_patina_natural_patina": [
             42.0,
-            290.0,
+            166.0,
             375.0,
             58.0
           ],
@@ -14574,7 +14661,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 398,
+            "maximumVertical": 785,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -14632,7 +14719,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 398,
+            "vertical": 785,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -14664,7 +14751,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 398,
+            "vertical": 785,
             "visibleRect": [
               42.0,
               152.0,
@@ -15058,10 +15145,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 390,
+            "maximumVertical": 783,
             "submitVisible": true,
             "valid": true,
-            "vertical": 390
+            "vertical": 783
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -15078,7 +15165,7 @@
           ],
           "CaseHypothesis_hyp_leave_patina_natural_patina": [
             42.0,
-            291.0,
+            167.0,
             375.0,
             58.0
           ],
@@ -15136,7 +15223,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 390,
+            "maximumVertical": 783,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -15194,7 +15281,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 390,
+            "vertical": 783,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -15226,7 +15313,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 390,
+            "vertical": 783,
             "visibleRect": [
               42.0,
               152.0,
@@ -15620,10 +15707,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 398,
+            "maximumVertical": 785,
             "submitVisible": true,
             "valid": true,
-            "vertical": 398
+            "vertical": 785
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -15639,8 +15726,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_estate_compass_misdated_provenance": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -15698,7 +15785,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 398,
+            "maximumVertical": 785,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -15756,7 +15843,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 398,
+            "vertical": 785,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -15788,7 +15875,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 398,
+            "vertical": 785,
             "visibleRect": [
               42.0,
               152.0,
@@ -16182,10 +16269,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 391,
+            "maximumVertical": 783,
             "submitVisible": true,
             "valid": true,
-            "vertical": 391
+            "vertical": 783
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -16201,8 +16288,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_estate_compass_misdated_provenance": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -16260,7 +16347,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 391,
+            "maximumVertical": 783,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -16318,7 +16405,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 391,
+            "vertical": 783,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -16350,7 +16437,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 391,
+            "vertical": 783,
             "visibleRect": [
               42.0,
               152.0,
@@ -16755,10 +16842,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 398,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 398
+            "vertical": 859
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -16774,8 +16861,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_pawn_watch_period_repair": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -16833,7 +16920,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 398,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -16891,7 +16978,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 398,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -16923,7 +17010,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 398,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -17328,10 +17415,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 390,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 390
+            "vertical": 857
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -17347,8 +17434,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_pawn_watch_period_repair": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -17406,7 +17493,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 390,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -17464,7 +17551,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 390,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -17496,7 +17583,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 390,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -17890,10 +17977,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 785,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 785
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -17909,8 +17996,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_garage_lamp_genuine_period_repair": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -17968,7 +18055,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 785,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -18026,7 +18113,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 785,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -18058,7 +18145,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 785,
             "visibleRect": [
               42.0,
               152.0,
@@ -18452,10 +18539,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 466,
+            "maximumVertical": 783,
             "submitVisible": true,
             "valid": true,
-            "vertical": 466
+            "vertical": 783
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -18471,8 +18558,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_garage_lamp_genuine_period_repair": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -18530,7 +18617,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 466,
+            "maximumVertical": 783,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -18588,7 +18675,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 466,
+            "vertical": 783,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -18620,7 +18707,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 466,
+            "vertical": 783,
             "visibleRect": [
               42.0,
               152.0,
@@ -19084,10 +19171,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 859
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -19103,8 +19190,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_telephone_trace_genuine_modern_safety_repair": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -19168,7 +19255,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -19232,7 +19319,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -19264,7 +19351,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -19728,10 +19815,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 480,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 480
+            "vertical": 857
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -19747,8 +19834,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_telephone_trace_genuine_modern_safety_repair": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -19812,7 +19899,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 480,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -19876,7 +19963,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 480,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -19908,7 +19995,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 480,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -20302,10 +20389,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 785,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 785
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -20321,7 +20408,7 @@
             448.0
           ],
           "CaseHypothesis_hyp_early_camera_later_display_reproduction": [
-            800.0,
+            42.0,
             290.0,
             375.0,
             58.0
@@ -20380,7 +20467,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 785,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -20438,7 +20525,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 785,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -20470,7 +20557,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 785,
             "visibleRect": [
               42.0,
               152.0,
@@ -20864,10 +20951,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 466,
+            "maximumVertical": 783,
             "submitVisible": true,
             "valid": true,
-            "vertical": 466
+            "vertical": 783
           },
           "requiredCitationsOnly": false,
           "requiredSourcesMet": true,
@@ -20883,7 +20970,7 @@
             448.0
           ],
           "CaseHypothesis_hyp_early_camera_later_display_reproduction": [
-            800.0,
+            42.0,
             291.0,
             375.0,
             58.0
@@ -20942,7 +21029,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 466,
+            "maximumVertical": 783,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -21000,7 +21087,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 466,
+            "vertical": 783,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -21032,7 +21119,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 466,
+            "vertical": 783,
             "visibleRect": [
               42.0,
               152.0,
@@ -21437,10 +21524,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 859
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -21456,8 +21543,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_mislabelled_collection_genuine_projector_swapped_accession_label": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -21515,7 +21602,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -21573,7 +21660,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -21605,7 +21692,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -22010,10 +22097,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 466,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 466
+            "vertical": 857
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -22029,8 +22116,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_mislabelled_collection_genuine_projector_swapped_accession_label": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -22088,7 +22175,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 466,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -22146,7 +22233,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 466,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -22178,7 +22265,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 466,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -22583,10 +22670,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 859
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -22602,8 +22689,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_observatory_instrument_genuine_period_pivot_repair": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -22661,7 +22748,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -22719,7 +22806,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -22751,7 +22838,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -23156,10 +23243,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 390,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 390
+            "vertical": 857
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -23175,8 +23262,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_observatory_instrument_genuine_period_pivot_repair": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -23234,7 +23321,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 390,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -23292,7 +23379,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 390,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -23324,7 +23411,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 390,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -23718,10 +23805,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 785,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 785
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -23737,8 +23824,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_collector_promise_genuine_barometer_modern_capsule_repair": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -23796,7 +23883,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 785,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -23854,7 +23941,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 785,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -23886,7 +23973,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 785,
             "visibleRect": [
               42.0,
               152.0,
@@ -24280,10 +24367,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 524,
+            "maximumVertical": 812,
             "submitVisible": true,
             "valid": true,
-            "vertical": 524
+            "vertical": 812
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -24299,8 +24386,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_collector_promise_genuine_barometer_modern_capsule_repair": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -24358,7 +24445,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 524,
+            "maximumVertical": 812,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -24416,7 +24503,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 524,
+            "vertical": 812,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -24448,7 +24535,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 524,
+            "vertical": 812,
             "visibleRect": [
               42.0,
               152.0,
@@ -24842,10 +24929,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 785,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 785
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -24861,8 +24948,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_three_cameras_modern_reproduction_copied_from_reference_pair": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -24920,7 +25007,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 785,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -24978,7 +25065,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 785,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -25010,7 +25097,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 785,
             "visibleRect": [
               42.0,
               152.0,
@@ -25404,10 +25491,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 524,
+            "maximumVertical": 812,
             "submitVisible": true,
             "valid": true,
-            "vertical": 524
+            "vertical": 812
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -25423,8 +25510,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_three_cameras_modern_reproduction_copied_from_reference_pair": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -25482,7 +25569,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 524,
+            "maximumVertical": 812,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -25540,7 +25627,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 524,
+            "vertical": 812,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -25572,7 +25659,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 524,
+            "vertical": 812,
             "visibleRect": [
               42.0,
               152.0,
@@ -25649,7 +25736,7 @@
           "portraitPath": "res://assets/portraits/victor_hale_neutral.svg",
           "portraitPosition": {
             "horizontal": 0,
-            "maximumVertical": 431,
+            "maximumVertical": 715,
             "portraitRect": [
               810.0,
               244.0,
@@ -25663,7 +25750,7 @@
               120.0
             ],
             "valid": true,
-            "vertical": 145
+            "vertical": 305
           },
           "unlocked": true
         },
@@ -25704,7 +25791,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 431,
+            "maximumVertical": 715,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -25732,7 +25819,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -25764,7 +25851,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "visibleRect": [
               42.0,
               152.0,
@@ -25774,7 +25861,7 @@
           },
           {
             "horizontal": 0,
-            "name": "@ScrollContainer@3619",
+            "name": "@ScrollContainer@3644",
             "rect": [
               810.0,
               369.0,
@@ -25858,7 +25945,7 @@
           "portraitPath": "res://assets/portraits/lena_falk_concerned.svg",
           "portraitPosition": {
             "horizontal": 0,
-            "maximumVertical": 431,
+            "maximumVertical": 787,
             "portraitRect": [
               810.0,
               244.0,
@@ -25872,7 +25959,7 @@
               120.0
             ],
             "valid": true,
-            "vertical": 145
+            "vertical": 305
           },
           "unlocked": true
         },
@@ -25913,7 +26000,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 431,
+            "maximumVertical": 787,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -25941,7 +26028,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -25973,7 +26060,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "visibleRect": [
               42.0,
               152.0,
@@ -25983,7 +26070,7 @@
           },
           {
             "horizontal": 0,
-            "name": "@ScrollContainer@3687",
+            "name": "@ScrollContainer@3712",
             "rect": [
               810.0,
               369.0,
@@ -26671,10 +26758,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 424,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 424
+            "vertical": 859
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -26691,7 +26778,7 @@
           ],
           "CaseHypothesis_hyp_shadow_gauge_genuine_juniper_precision_gauge": [
             42.0,
-            290.0,
+            166.0,
             375.0,
             58.0
           ],
@@ -26749,7 +26836,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 424,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -26807,7 +26894,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 424,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -26839,7 +26926,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 424,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -27244,10 +27331,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 466,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 466
+            "vertical": 857
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -27264,7 +27351,7 @@
           ],
           "CaseHypothesis_hyp_shadow_gauge_genuine_juniper_precision_gauge": [
             42.0,
-            291.0,
+            167.0,
             375.0,
             58.0
           ],
@@ -27322,7 +27409,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 466,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -27380,7 +27467,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 466,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -27412,7 +27499,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 466,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -27817,10 +27904,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 454,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 454
+            "vertical": 859
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -27836,8 +27923,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_shadow_clock_genuine_kestrel_clock_period_escapement_repair": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -27895,7 +27982,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 454,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -27953,7 +28040,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 454,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -27985,7 +28072,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 454,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -28390,10 +28477,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 480,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 480
+            "vertical": 857
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -28409,8 +28496,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_shadow_clock_genuine_kestrel_clock_period_escapement_repair": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -28468,7 +28555,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 480,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -28526,7 +28613,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 480,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -28558,7 +28645,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 480,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -28963,10 +29050,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 454,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 454
+            "vertical": 859
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -28982,8 +29069,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_shadow_music_box_genuine_orchard_music_box_modern_governor_repair": [
-            421.0,
-            290.0,
+            42.0,
+            228.0,
             375.0,
             58.0
           ],
@@ -29041,7 +29128,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 454,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -29099,7 +29186,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 454,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -29131,7 +29218,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 454,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -29536,10 +29623,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 480,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 480
+            "vertical": 857
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -29555,8 +29642,8 @@
             448.0
           ],
           "CaseHypothesis_hyp_shadow_music_box_genuine_orchard_music_box_modern_governor_repair": [
-            421.0,
-            291.0,
+            42.0,
+            229.0,
             375.0,
             58.0
           ],
@@ -29614,7 +29701,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 480,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -29672,7 +29759,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 480,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -29704,7 +29791,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 480,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -29781,7 +29868,7 @@
           "portraitPath": "res://assets/portraits/hana_mire_concerned.svg",
           "portraitPosition": {
             "horizontal": 0,
-            "maximumVertical": 401,
+            "maximumVertical": 787,
             "portraitRect": [
               810.0,
               244.0,
@@ -29795,7 +29882,7 @@
               120.0
             ],
             "valid": true,
-            "vertical": 145
+            "vertical": 305
           },
           "unlocked": true
         },
@@ -29836,7 +29923,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 401,
+            "maximumVertical": 787,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -29864,7 +29951,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -29896,7 +29983,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "visibleRect": [
               42.0,
               152.0,
@@ -29906,7 +29993,7 @@
           },
           {
             "horizontal": 0,
-            "name": "@ScrollContainer@4219",
+            "name": "@ScrollContainer@4244",
             "rect": [
               810.0,
               369.0,
@@ -29990,7 +30077,7 @@
           "portraitPath": "res://assets/portraits/mara_venn_concerned.svg",
           "portraitPosition": {
             "horizontal": 0,
-            "maximumVertical": 401,
+            "maximumVertical": 787,
             "portraitRect": [
               810.0,
               244.0,
@@ -30004,7 +30091,7 @@
               120.0
             ],
             "valid": true,
-            "vertical": 145
+            "vertical": 305
           },
           "unlocked": true
         },
@@ -30045,7 +30132,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 401,
+            "maximumVertical": 787,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -30073,7 +30160,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -30105,7 +30192,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "visibleRect": [
               42.0,
               152.0,
@@ -30115,7 +30202,7 @@
           },
           {
             "horizontal": 0,
-            "name": "@ScrollContainer@4284",
+            "name": "@ScrollContainer@4309",
             "rect": [
               810.0,
               369.0,
@@ -30199,7 +30286,7 @@
           "portraitPath": "res://assets/portraits/iris_bell_concerned.svg",
           "portraitPosition": {
             "horizontal": 0,
-            "maximumVertical": 401,
+            "maximumVertical": 787,
             "portraitRect": [
               810.0,
               244.0,
@@ -30213,7 +30300,7 @@
               120.0
             ],
             "valid": true,
-            "vertical": 145
+            "vertical": 305
           },
           "unlocked": true
         },
@@ -30254,7 +30341,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 401,
+            "maximumVertical": 787,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -30282,7 +30369,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -30314,7 +30401,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "visibleRect": [
               42.0,
               152.0,
@@ -30324,7 +30411,7 @@
           },
           {
             "horizontal": 0,
-            "name": "@ScrollContainer@4349",
+            "name": "@ScrollContainer@4374",
             "rect": [
               810.0,
               369.0,
@@ -30926,10 +31013,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 859
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -30945,7 +31032,7 @@
             448.0
           ],
           "CaseHypothesis_hyp_shadow_optic_later_reproduction_using_period_style": [
-            800.0,
+            42.0,
             290.0,
             375.0,
             58.0
@@ -31004,7 +31091,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -31062,7 +31149,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -31094,7 +31181,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -31499,10 +31586,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 420,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 420
+            "vertical": 857
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -31518,7 +31605,7 @@
             448.0
           ],
           "CaseHypothesis_hyp_shadow_optic_later_reproduction_using_period_style": [
-            800.0,
+            42.0,
             291.0,
             375.0,
             58.0
@@ -31577,7 +31664,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 420,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -31635,7 +31722,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 420,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -31667,7 +31754,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 420,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -32072,10 +32159,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "submitVisible": true,
             "valid": true,
-            "vertical": 428
+            "vertical": 859
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -32091,7 +32178,7 @@
             448.0
           ],
           "CaseHypothesis_hyp_composite_prototype_composite_forgery_from_mixed_parts": [
-            800.0,
+            42.0,
             290.0,
             375.0,
             58.0
@@ -32150,7 +32237,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 428,
+            "maximumVertical": 859,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -32208,7 +32295,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -32240,7 +32327,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 428,
+            "vertical": 859,
             "visibleRect": [
               42.0,
               152.0,
@@ -32645,10 +32732,10 @@
           "portraitApplicableOnDossierRenderer": false,
           "reportScroll": {
             "horizontal": 0,
-            "maximumVertical": 434,
+            "maximumVertical": 857,
             "submitVisible": true,
             "valid": true,
-            "vertical": 434
+            "vertical": 857
           },
           "requiredCitationsOnly": true,
           "requiredSourcesMet": true,
@@ -32664,7 +32751,7 @@
             448.0
           ],
           "CaseHypothesis_hyp_composite_prototype_composite_forgery_from_mixed_parts": [
-            800.0,
+            42.0,
             291.0,
             375.0,
             58.0
@@ -32723,7 +32810,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 434,
+            "maximumVertical": 857,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -32781,7 +32868,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 434,
+            "vertical": 857,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -32813,7 +32900,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 434,
+            "vertical": 857,
             "visibleRect": [
               42.0,
               152.0,
@@ -32890,7 +32977,7 @@
           "portraitPath": "res://assets/portraits/victor_hale_neutral.svg",
           "portraitPosition": {
             "horizontal": 0,
-            "maximumVertical": 371,
+            "maximumVertical": 787,
             "portraitRect": [
               810.0,
               244.0,
@@ -32904,7 +32991,7 @@
               120.0
             ],
             "valid": true,
-            "vertical": 145
+            "vertical": 305
           },
           "unlocked": true
         },
@@ -32945,7 +33032,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 371,
+            "maximumVertical": 787,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -32973,7 +33060,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -33005,7 +33092,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "visibleRect": [
               42.0,
               152.0,
@@ -33015,7 +33102,7 @@
           },
           {
             "horizontal": 0,
-            "name": "@ScrollContainer@5009",
+            "name": "@ScrollContainer@5034",
             "rect": [
               810.0,
               369.0,
@@ -33099,7 +33186,7 @@
           "portraitPath": "res://assets/portraits/noah_stern_concerned.svg",
           "portraitPosition": {
             "horizontal": 0,
-            "maximumVertical": 371,
+            "maximumVertical": 787,
             "portraitRect": [
               810.0,
               244.0,
@@ -33113,7 +33200,7 @@
               120.0
             ],
             "valid": true,
-            "vertical": 145
+            "vertical": 305
           },
           "unlocked": true
         },
@@ -33154,7 +33241,7 @@
               8.0
             ],
             "horizontalBarVisible": false,
-            "maximumVertical": 371,
+            "maximumVertical": 787,
             "name": "CaseDossierScroll",
             "protectedOverlaps": [
               {
@@ -33182,7 +33269,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "verticalBarRect": [
               1230.0,
               152.0,
@@ -33214,7 +33301,7 @@
               1196.0,
               448.0
             ],
-            "vertical": 145,
+            "vertical": 305,
             "visibleRect": [
               42.0,
               152.0,
@@ -33224,7 +33311,7 @@
           },
           {
             "horizontal": 0,
-            "name": "@ScrollContainer@5070",
+            "name": "@ScrollContainer@5095",
             "rect": [
               810.0,
               369.0,

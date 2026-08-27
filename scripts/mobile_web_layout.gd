@@ -8,6 +8,7 @@ extends Node
 
 const PORTRAIT_LABEL_SCALE := 2.40
 const PORTRAIT_BUTTON_FONT_SCALE := 3.00
+const PORTRAIT_TITLE_LOGO_SCALE := 2.00
 const PORTRAIT_ICON_SCALE := 1.30
 const PORTRAIT_SIDE_PAD := 36.0
 const PORTRAIT_TOP_PAD := 28.0
@@ -96,7 +97,7 @@ func _apply_layout_deferred() -> void:
 	interface.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var portrait := is_portrait_layout()
 	_apply_responsive_style(interface, portrait)
-	_layout_title_menu(portrait)
+	_layout_title_card(portrait)
 	_layout_screen_shell(portrait)
 	_layout_camera_for_portrait(portrait)
 	_layout_title_background(portrait)
@@ -147,7 +148,8 @@ func _style_control(control: Control, portrait: bool) -> void:
 		if not control.has_meta(META_BASE_FONT):
 			control.set_meta(META_BASE_FONT, control.get_theme_font_size("font_size"))
 		var base_label_font := int(control.get_meta(META_BASE_FONT))
-		control.add_theme_font_size_override("font_size", maxi(1, roundi(float(base_label_font) * (PORTRAIT_LABEL_SCALE if portrait else 1.0))))
+		var portrait_scale := PORTRAIT_TITLE_LOGO_SCALE if control.name == "TitleLogoText" else PORTRAIT_LABEL_SCALE
+		control.add_theme_font_size_override("font_size", maxi(1, roundi(float(base_label_font) * (portrait_scale if portrait else 1.0))))
 	elif control is Button:
 		if not control.has_meta(META_BASE_FONT):
 			control.set_meta(META_BASE_FONT, control.get_theme_font_size("font_size"))
@@ -227,37 +229,52 @@ func _restore_separation(container: BoxContainer) -> void:
 		container.add_theme_constant_override("separation", int(container.get_meta(META_BASE_SEPARATION)))
 
 
-func _layout_title_menu(portrait: bool) -> void:
+func _layout_title_card(portrait: bool) -> void:
 	if interface == null:
 		return
-	var candidate := interface.find_child("TitleMenu", true, false)
-	if not candidate is VBoxContainer:
+	var card_candidate := interface.find_child("TitleCard", true, false)
+	var menu_candidate := interface.find_child("TitleMenu", true, false)
+	if not card_candidate is PanelContainer or not menu_candidate is VBoxContainer:
 		return
-	var menu := candidate as VBoxContainer
+	var card := card_candidate as PanelContainer
+	var menu := menu_candidate as VBoxContainer
+	_remember_rect(card)
+	_remember_anchors(card)
 	_remember_rect(menu)
 	_remember_anchors(menu)
 	_remember_separation(menu)
 	if not portrait:
+		_restore_anchors(card)
+		_restore_rect(card)
 		_restore_anchors(menu)
 		_restore_rect(menu)
 		_restore_separation(menu)
 		return
 
-	menu.anchor_left = 0.0
-	menu.anchor_top = 0.0
-	menu.anchor_right = 0.0
-	menu.anchor_bottom = 0.0
-
-	var menu_width := maxf(280.0, minf(interface.size.x - 96.0, 1040.0))
-	var menu_height := minf(790.0, maxf(620.0, interface.size.y * 0.34))
-	var menu_x := maxf(24.0, (interface.size.x - menu_width) * 0.5)
-	var menu_y := maxf(48.0, minf(interface.size.y * 0.10, 260.0))
-	menu.offset_left = menu_x
-	menu.offset_top = menu_y
-	menu.offset_right = menu_x + menu_width
-	menu.offset_bottom = menu_y + menu_height
+	# TitleMenu is owned by TitleCard's Container layout. Repositioning the
+	# nested menu leaves the outer card at its desktop anchors and lets the
+	# card's minimum-size pass overwrite those offsets. Move the outer card and
+	# let it lay out its child instead.
+	_restore_anchors(menu)
+	_restore_rect(menu)
 	menu.alignment = BoxContainer.ALIGNMENT_CENTER
 	menu.add_theme_constant_override("separation", 30)
+	card.anchor_left = 0.0
+	card.anchor_top = 0.0
+	card.anchor_right = 0.0
+	card.anchor_bottom = 0.0
+
+	var safe_size := Vector2(maxf(280.0, interface.size.x - 48.0), maxf(620.0, interface.size.y - 96.0))
+	var minimum := card.get_combined_minimum_size()
+	var card_size := Vector2(
+		minf(safe_size.x, maxf(1040.0, minimum.x)),
+		minf(safe_size.y, maxf(790.0, minimum.y))
+	)
+	card.size = card_size
+	# PRESET_CENTER leaves both grow directions centered, so assign the final
+	# size before the final position; the reverse order shifts the card by half
+	# of its size delta.
+	card.position = (interface.size - card_size) * 0.5
 
 
 func _layout_screen_shell(portrait: bool) -> void:

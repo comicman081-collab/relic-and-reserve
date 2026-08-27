@@ -28,12 +28,26 @@
         "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
         "targetLayout": {
           "accented": true,
+          "insideScrollView": true,
           "ok": true,
+          "railRect": [
+            42.0,
+            90.0,
+            1196.0,
+            57.0
+          ],
+          "scrollRect": [
+            42.0,
+            157.0,
+            1196.0,
+            443.0
+          ],
+          "scrollVertical": 111,
           "separated": true,
           "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
           "targetRect": [
             810.0,
-            503.0,
+            552.0,
             410.0,
             48.0
           ],
@@ -67,12 +81,26 @@
         "layouts": {
           "step1": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [
+              42.0,
+              157.0,
+              1196.0,
+              443.0
+            ],
+            "scrollVertical": 111,
             "separated": true,
             "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
             "targetRect": [
               810.0,
-              503.0,
+              552.0,
               410.0,
               48.0
             ],
@@ -80,12 +108,26 @@
           },
           "step2": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [
+              42.0,
+              157.0,
+              1196.0,
+              443.0
+            ],
+            "scrollVertical": 466,
             "separated": true,
             "target": "CaseCitation_src_prologue_artifact_backplate_screws",
             "targetRect": [
               810.0,
-              481.0,
+              321.0,
               410.0,
               46.0
             ],
@@ -93,12 +135,26 @@
           },
           "step3_disabled": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [
+              42.0,
+              157.0,
+              1196.0,
+              443.0
+            ],
+            "scrollVertical": 414,
             "separated": true,
             "target": "CaseHypothesis_hyp_untouched_original",
             "targetRect": [
               42.0,
-              361.0,
+              542.0,
               375.0,
               58.0
             ],
@@ -106,12 +162,26 @@
           },
           "step3_ready": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [
+              42.0,
+              157.0,
+              1196.0,
+              443.0
+            ],
+            "scrollVertical": 734,
             "separated": true,
             "target": "ResolveCaseReport",
             "targetRect": [
               52.0,
-              540.0,
+              548.0,
               1168.0,
               52.0
             ],
@@ -119,12 +189,26 @@
           },
           "step4_case": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [
+              42.0,
+              157.0,
+              1196.0,
+              443.0
+            ],
+            "scrollVertical": 9,
             "separated": true,
             "target": "CaseContinue",
             "targetRect": [
               1010.0,
-              370.0,
+              521.0,
               210.0,
               79.0
             ],
@@ -168,7 +252,16 @@
           },
           "step4_inventory": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "InspectLot_0",
             "targetRect": [
@@ -181,7 +274,16 @@
           },
           "step4_tool_needed": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "RepairTool_precision_screwdriver",
             "targetRect": [
@@ -194,7 +296,16 @@
           },
           "step4_tool_ready": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "Tool_repair",
             "targetRect": [
@@ -207,7 +318,16 @@
           },
           "step5_authentication": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "AcceptHypothesisButton",
             "targetRect": [
@@ -220,7 +340,16 @@
           },
           "step5_confirm": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "ListingConfirmButton",
             "targetRect": [
@@ -233,7 +362,16 @@
           },
           "step5_disclosure": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "ListingDisclosure_CERTAIN",
             "targetRect": [
@@ -246,7 +384,16 @@
           },
           "step5_inspection": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "AuthenticateButton",
             "targetRect": [
@@ -259,7 +406,16 @@
           },
           "step5_price": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "ListingPrice_FAST",
             "targetRect": [
@@ -272,7 +428,16 @@
           },
           "step6": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "AuctionCueNext",
             "targetRect": [
@@ -285,7 +450,16 @@
           },
           "step6_final": {
             "accented": true,
+            "insideScrollView": true,
             "ok": true,
+            "railRect": [
+              42.0,
+              90.0,
+              1196.0,
+              57.0
+            ],
+            "scrollRect": [],
+            "scrollVertical": -1,
             "separated": true,
             "target": "HammerButton",
             "targetRect": [
@@ -393,12 +567,26 @@
         "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
         "targetLayout": {
           "accented": true,
+          "insideScrollView": true,
           "ok": true,
+          "railRect": [
+            42.0,
+            90.0,
+            1196.0,
+            56.0
+          ],
+          "scrollRect": [
+            42.0,
+            156.0,
+            1196.0,
+            444.0
+          ],
+          "scrollVertical": 129,
           "separated": true,
           "target": "CaseEvidence_src_prologue_artifact_backplate_screws",
           "targetRect": [
             810.0,
-            518.0,
+            552.0,
             410.0,
             48.0
           ],
