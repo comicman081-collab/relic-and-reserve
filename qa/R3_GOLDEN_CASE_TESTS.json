@@ -654,6 +654,7 @@
           "Nav_CAMPAIGN",
           "Nav_END_DAY",
           "Nav_SAVE",
+          "Nav_SETTINGS",
           "Nav_LANGUAGE"
         ],
         "evidenceButton": true,

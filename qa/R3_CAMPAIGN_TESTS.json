@@ -106,18 +106,18 @@
         "outcome": "mistaken",
         "result": {
           "citedEvidenceIds": [
-            "silent_radio:material",
-            "silent_radio:serial_pattern"
+            "src.silent_radio.artifact.serial_oxidation",
+            "src.silent_radio.artifact.condenser_service_seam"
           ],
           "code": "OK",
           "conclusionAccurate": false,
-          "hypothesisId": "REPRODUCTION",
+          "hypothesisId": "hyp.silent_radio.later_reproduction",
           "independentSourceCount": 0,
-          "netScore": 0,
+          "netScore": -2,
           "ok": true,
           "outcome": "mistaken",
-          "refuteScore": 0,
-          "requiredSourcesMet": true,
+          "refuteScore": 2,
+          "requiredSourcesMet": false,
           "substantiated": false,
           "substantiation": "INCONCLUSIVE",
           "supportScore": 0
@@ -207,14 +207,14 @@
                 "bids": [
                   {
                     "amount": 111,
+                    "bidderId": "bidder_03"
+                  },
+                  {
+                    "amount": 127,
                     "bidderId": "bidder_04"
                   }
                 ],
                 "dropouts": [
-                  {
-                    "bidderId": "bidder_03",
-                    "reason": "VALUE"
-                  },
                   {
                     "bidderId": "bidder_05",
                     "reason": "VALUE"
@@ -238,11 +238,15 @@
                   {
                     "bidderId": "bidder_10",
                     "reason": "VALUE"
+                  },
+                  {
+                    "bidderId": "bidder_03",
+                    "reason": "VALUE"
                   }
                 ],
-                "fee": 0,
-                "hammer": 111,
-                "net": 0,
+                "fee": 15,
+                "hammer": 127,
+                "net": 112,
                 "opening": 96,
                 "participants": [
                   {
@@ -271,21 +275,10 @@
                   }
                 ],
                 "publicFingerprint": "AUC-1834749378",
-                "reasonTags": [
-                  {
-                    "category": "PRICE",
-                    "code": "RESERVE_TOO_HIGH",
-                    "polarity": "NEGATIVE"
-                  },
-                  {
-                    "category": "PROVENANCE",
-                    "code": "PROVENANCE_UNCERTAIN",
-                    "polarity": "NEGATIVE"
-                  }
-                ],
+                "reasonTags": [],
                 "reserve": 116,
-                "reserve_met": false,
-                "sale_status": "NO_SALE",
+                "reserve_met": true,
+                "sale_status": "SOLD",
                 "transactionId": "auction_1_715798209_19",
                 "winnerId": "bidder_04"
               }
@@ -506,13 +499,13 @@
           "score": {
             "authentication": 96.1538461538462,
             "authenticationAccuracy": 0.961538461538462,
-            "balancedScore": 88.9807081807082,
+            "balancedScore": 90.174358974359,
             "collectionQuality": 100.0,
             "collectorReputation": 100.0,
-            "collectorTrust": 49,
-            "ethics": 80,
-            "financial": 51.7111111111111,
-            "grandReserveRevenue": 1967,
+            "collectorTrust": 41,
+            "ethics": 72,
+            "financial": 60.0666666666667,
+            "grandReserveRevenue": 1983,
             "integrity": 75.0,
             "museumTrust": 100.0,
             "restoration": 100.0
@@ -560,13 +553,13 @@
       "evidence": {
         "authentication": 96.1538461538462,
         "authenticationAccuracy": 0.961538461538462,
-        "balancedScore": 88.9807081807082,
+        "balancedScore": 90.174358974359,
         "collectionQuality": 100.0,
         "collectorReputation": 100.0,
-        "collectorTrust": 49,
-        "ethics": 80,
-        "financial": 51.7111111111111,
-        "grandReserveRevenue": 1967,
+        "collectorTrust": 41,
+        "ethics": 72,
+        "financial": 60.0666666666667,
+        "grandReserveRevenue": 1983,
         "integrity": 75.0,
         "museumTrust": 100.0,
         "restoration": 100.0

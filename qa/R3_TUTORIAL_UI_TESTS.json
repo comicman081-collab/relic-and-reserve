@@ -123,7 +123,7 @@
             "separated": true,
             "target": "CaseContinue",
             "targetRect": [
-              1018.0,
+              1010.0,
               370.0,
               210.0,
               79.0
@@ -364,9 +364,9 @@
         "skipLayout": true,
         "skipRect": [
           1058.0,
-          22.0,
+          18.0,
           188.0,
-          42.0
+          52.0
         ]
       },
       "executed": true,

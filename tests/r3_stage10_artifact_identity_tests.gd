@@ -6,8 +6,8 @@ extends SceneTree
 
 const REPORT_PATH := "res://qa/R3_STAGE10_ARTIFACT_IDENTITY_TESTS.json"
 const EXPECTED := {
-	"master_camera": {"spec": "artifact_079", "story": "story_artifact_25", "truth": "GENUINE_WITH_PERIOD_REPAIR", "recipe": "SPECTROSCOPE", "mesh": "res://assets/artifacts/model_05.obj", "legacy": "artifact_056"},
-	"master_mechanism": {"spec": "artifact_080", "story": "story_artifact_26", "truth": "GENUINE", "recipe": "ASTRONOMICAL_REGULATOR", "mesh": "res://assets/artifacts/watch.obj", "legacy": "artifact_060"}
+	"master_camera": {"spec": "artifact_079", "story": "story_artifact_25", "truth": "hyp.master_camera.genuine_with_period_clamp_service", "recipe": "SPECTROSCOPE", "mesh": "res://assets/artifacts/model_05.obj", "legacy": "artifact_056"},
+	"master_mechanism": {"spec": "artifact_080", "story": "story_artifact_26", "truth": "hyp.master_mechanism.genuine_observatory_regulator", "recipe": "ASTRONOMICAL_REGULATOR", "mesh": "res://assets/artifacts/watch.obj", "legacy": "artifact_060"}
 }
 const CASE_IDS := ["master_camera", "master_mechanism"]
 var results: Array = []
@@ -71,12 +71,12 @@ func run() -> void:
 				risk_counts[level] = int(risk_counts.get(level, 0)) + 1
 		var public: Dictionary = gs.get_case_public_state(case_id)
 		var surface := JSON.stringify(public)
-		var leaks: Array = ["artifact_079", "artifact_080", "authenticityTruth"].filter(func(token: String): return surface.contains(token))
-		var expected_counts := {"NONE": 3, "LOW": 1, "HIGH": 0} if case_id == "master_camera" else {"NONE": 2, "LOW": 1, "HIGH": 1}
-		var row_ok: bool = definition.get("evidence", []).size() == 4 and risk_counts == expected_counts and leaks.is_empty()
+		var leaks: Array = ["story_artifact_25", "story_artifact_26", "authenticityTruth", "canonical_hypothesis_id", "authoring_truth_hypothesis_id", "trueMarketBaseline"].filter(func(token: String): return surface.contains(token))
+		var expected_counts := {"NONE": 4, "LOW": 1, "HIGH": 1}
+		var row_ok: bool = definition.get("evidence", []).size() == 6 and risk_counts == expected_counts and leaks.is_empty()
 		evidence_ok = evidence_ok and row_ok
 		evidence_rows[case_id] = {"evidence": definition.get("evidence", []).size(), "risk": risk_counts, "leaks": leaks, "ok": row_ok}
-	record("S10-CASE-02", "Fresh Stage 10 case conditions expose the intended low/high risk pressure without hidden story/spec identifiers", evidence_ok, evidence_rows)
+	record("S10-CASE-02", "Fresh Stage 10 case conditions expose authored low/high pressure without hidden story or truth identifiers", evidence_ok, evidence_rows)
 
 	var visual_rows: Dictionary = {}
 	var visual_ok := true

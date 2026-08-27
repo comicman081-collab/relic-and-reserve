@@ -10,13 +10,13 @@ extends SceneTree
 const REPORT_PATH := "res://qa/R3_AUTHORED_PRESENTATION_METADATA_TESTS.json"
 const EXPECTED_TEST_COUNT := 11
 const AUTHORED_CASE_IDS := [
-	"prologue_clock", "leave_patina", "estate_compass", "pawn_watch",
+	"prologue_clock", "silent_radio", "perfect_fake", "leave_patina", "estate_compass", "pawn_watch",
 	"garage_lamp", "telephone_trace", "early_camera",
 	"false_invoice", "mislabelled_collection", "observatory_instrument",
 	"collector_promise", "three_cameras",
 	"shadow_camera", "shadow_gauge", "shadow_clock", "shadow_music_box",
 	"shadow_optic", "composite_prototype", "master_chronometer", "master_optical",
-	"master_recorder", "master_gauge"
+	"master_recorder", "master_gauge", "master_camera", "master_mechanism"
 ]
 
 var results: Array = []
@@ -421,7 +421,7 @@ func run() -> void:
 				locale_failures.append({"case": case_id, "locale": locale, "artifact": artifact_name, "leaks": leaks})
 	record(
 		"PRESENTATION-UI-08",
-		"All thirteen authored dossiers render artifact/source presentation in Korean and English with zero raw case, spec, source, registry or target ids",
+		"All locked authored dossiers render artifact/source presentation in Korean and English with zero raw case, spec, source, registry or target ids",
 		locale_failures.is_empty(),
 		{"screensChecked": AUTHORED_CASE_IDS.size() * 2, "failures": locale_failures}
 	)
@@ -484,19 +484,21 @@ func run() -> void:
 		{"authorityExact": authority_before == authority_after, "definitionExact": definition_before == definition_after, "rng": int(gs.rng.state)}
 	)
 
-	var legacy_case_id := ""
-	for story_case_value: Variant in registry.campaign.get("cases", []):
-		if story_case_value is Dictionary and not registry.has_authored_case_v2(String(story_case_value.get("id", ""))):
-			legacy_case_id = String(story_case_value.get("id", ""))
-			break
+	# All 26 production cases are authored now. Exercise the still-supported
+	# legacy presentation path with an isolated in-memory registry fixture, then
+	# restore the authored definition byte-for-byte before recording the result.
+	var legacy_case_id := "silent_radio"
+	var authored_snapshot: Dictionary = registry.get_case_v2(legacy_case_id).duplicate(true)
+	registry.authored_cases_v2.erase(legacy_case_id)
 	var legacy_definition: Dictionary = gs.case_definition(legacy_case_id)
 	var legacy_public: Dictionary = gs.get_case_public_state(legacy_case_id)
 	var legacy_expected: Variant = legacy_definition.get("evidence", [])[0].get("citation", {}).get("label", {}) if not legacy_definition.get("evidence", []).is_empty() else {}
 	var legacy_row: Dictionary = legacy_public.get("evidence", [])[0] if not legacy_public.get("evidence", []).is_empty() else {}
+	registry.authored_cases_v2[legacy_case_id] = authored_snapshot
 	record(
 		"PRESENTATION-LEGACY-11",
-		"Definitions without authored presentation fields retain the existing citation-label UI fallback",
-		not legacy_case_id.is_empty() and not legacy_row.is_empty() \
+		"An isolated definition without authored presentation fields retains the citation-label UI fallback",
+		not authored_snapshot.is_empty() and registry.get_case_v2(legacy_case_id) == authored_snapshot and not legacy_row.is_empty() \
 			and legacy_row.get("sourceDisplayName", {}) == legacy_expected \
 			and legacy_row.get("text", {}) == legacy_expected,
 		{"caseId": legacy_case_id, "expected": legacy_expected, "public": {"sourceDisplayName": legacy_row.get("sourceDisplayName", {}), "text": legacy_row.get("text", {})}}

@@ -282,12 +282,15 @@ func run() -> void:
 	for localization_key: String in registry.localization.en.keys():
 		localization_keys_match = localization_keys_match and registry.localization.ko.has(localization_key) and not String(registry.localization.ko[localization_key]).is_empty()
 	record("R3-LOC-02", "data", "All EN and KO localization keys have non-empty counterparts", localization_keys_match and registry.localization.en.size() >= 100, {"en": registry.localization.en.size(), "ko": registry.localization.ko.size()})
-	var localized_header: Label = main.find_child("Header", true, false).get_child(0)
-	var korean_market_rendered := localized_header.text.contains("시장") and localized_header.text.contains("시드 기반")
+	# Header uses a named HBox so title width can yield safely to stats/tutorial
+	# controls. Verify the semantic nodes, never positional child indices.
+	var localized_header: Label = main.find_child("HeaderTitle", true, false) as Label
+	var korean_market_rendered := localized_header.text.contains(main.text_for("MARKET")) \
+		and localized_header.text.contains(main.text_for("SEEDED_DAILY_LOTS"))
 	record("R3-LOC-03", "ui", "Current core screen renders localized Korean title and subtitle", korean_market_rendered, localized_header.text)
 	var header: Control = main.find_child("Header", true, false)
 	var navigation: Control = main.find_child("Navigation", true, false)
-	var header_stats: Label = header.get_child(1)
+	var header_stats: Label = header.find_child("HeaderStats", true, false) as Label
 	var language_control: Button = navigation.find_child("Nav_LANGUAGE", false, false)
 	var ui_bounds_ok := header_stats.get_global_rect().end.x <= 1280.0 and language_control.get_global_rect().end.x <= 1280.0 and language_control.is_visible_in_tree()
 	record("R3-LOC-04", "ui", "Long Korean copy keeps header stats and every navigation control on screen", ui_bounds_ok, {"header_stats": header_stats.get_global_rect(), "language": language_control.get_global_rect()})
@@ -321,8 +324,14 @@ func run() -> void:
 	var output := FileAccess.open("res://qa/R3_TEST_REPORT.json", FileAccess.WRITE)
 	output.store_string(JSON.stringify(report, "  "))
 	output.close()
+	output = null
 	print(JSON.stringify(report))
 	main.queue_free()
+	await process_frame
+	await process_frame
+	await process_frame
+	main = null
+	await process_frame
 	quit(0 if passed == executed else 1)
 
 

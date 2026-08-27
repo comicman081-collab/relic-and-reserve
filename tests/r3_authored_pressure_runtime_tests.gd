@@ -146,22 +146,27 @@ func run() -> void:
 
 	var started_ten := start_stage(gs, 10)
 	var camera_artifact: Dictionary = gs.begin_case("master_camera")
-	var master_camera := exercise_evidence(gs, "master_camera", "master_camera:construction_method", "LOW", pow(1.07, 9))
+	gs.select_tool("material_scanner")
+	var master_camera_low := exercise_evidence(gs, "master_camera", "src.master_camera.artifact.prism_material_continuity", "LOW", pow(1.07, 9))
+	gs.select_tool("uv_lamp")
+	var master_camera_high := exercise_evidence(gs, "master_camera", "src.master_camera.artifact.clamp_intervention_sequence", "HIGH", 3.0 * pow(1.07, 9))
 	record(
 		"AUTHORED-PRESSURE-STAGE10-01",
-		"Prototype Camera construction discloses LOW risk and consumes the Stage 10 multiplier once",
-		bool(started_ten.get("ok", false)) and not camera_artifact.is_empty() and bool(master_camera.get("passed", false)),
-		master_camera
+		"Prism spectroscope exposes distinct LOW scan and HIGH clamp risks with exactly-once Stage 10 pressure",
+		bool(started_ten.get("ok", false)) and not camera_artifact.is_empty() and bool(master_camera_low.get("passed", false)) and bool(master_camera_high.get("passed", false)),
+		{"low": master_camera_low, "high": master_camera_high}
 	)
 
 	started_ten = start_stage(gs, 10)
 	var prior_ten_complete: bool = bool(gs.prepare_case_for_test("master_camera"))
 	var mechanism_artifact: Dictionary = gs.begin_case("master_mechanism")
-	var material := exercise_evidence(gs, "master_mechanism", "master_mechanism:material", "LOW", pow(1.07, 9))
-	var mechanism := exercise_evidence(gs, "master_mechanism", "master_mechanism:mechanism", "HIGH", 3.0 * pow(1.07, 9))
+	gs.select_tool("material_scanner")
+	var material := exercise_evidence(gs, "master_mechanism", "src.master_mechanism.artifact.patina_zero_line", "LOW", pow(1.07, 9))
+	gs.select_tool("precision_screwdriver")
+	var mechanism := exercise_evidence(gs, "master_mechanism", "src.master_mechanism.artifact.escapement_jewel_sequence", "HIGH", 3.0 * pow(1.07, 9))
 	record(
 		"AUTHORED-PRESSURE-STAGE10-02",
-		"Decorative Mechanism exposes one LOW and one HIGH choice while each consequence and telemetry event commits once",
+		"Astronomical regulator exposes one LOW and one HIGH choice while each consequence and telemetry event commits once",
 		bool(started_ten.get("ok", false)) and prior_ten_complete and not mechanism_artifact.is_empty() and bool(material.get("passed", false)) and bool(mechanism.get("passed", false)),
 		{"material": material, "mechanism": mechanism}
 	)
@@ -187,7 +192,7 @@ func run() -> void:
 	var stage5_intersection: Array = tool_routes.artifact_069.filter(func(tool_id: Variant): return tool_routes.artifact_070.has(tool_id))
 	var stage10_intersection: Array = tool_routes.artifact_079.filter(func(tool_id: Variant): return tool_routes.artifact_080.has(tool_id))
 	var contract_exact: bool = stage5_counts == {"NONE": 8, "LOW": 2, "HIGH": 0} \
-		and stage10_counts == {"NONE": 5, "LOW": 2, "HIGH": 1} \
+		and stage10_counts == {"NONE": 8, "LOW": 2, "HIGH": 2} \
 		and tool_routes.artifact_069 == ["precision_screwdriver", "reference_database"] \
 		and tool_routes.artifact_070 == ["cleaning_cloth", "precision_scale", "repair_toolkit"] \
 		and tool_routes.artifact_079 == ["material_scanner", "uv_lamp"] \

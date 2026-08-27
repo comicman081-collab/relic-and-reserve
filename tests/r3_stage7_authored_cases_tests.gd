@@ -498,7 +498,7 @@ func run() -> void:
 				and FileAccess.get_sha256(resource_path) == String(entry.get("sha256", ""))
 	var data_ready: bool = missing_methods.is_empty() and fallback_count == 0
 	var data_ok: bool = data_ready and registry.authored_case_errors.is_empty() \
-		and registry.stage_definition_errors.is_empty() and registry.authored_cases_v2.size() == 22 \
+		and registry.stage_definition_errors.is_empty() and registry.authored_cases_v2.size() == 26 \
 		and stage_definition.get("case_ids", []) == CASE_IDS \
 		and stage_definition.get("introduced_artifact_ids", []) == ["artifact_073", "artifact_074"] \
 		and is_equal_approx(float(registry.stage_difficulty_multiplier(7)), STAGE_MULTIPLIER) \

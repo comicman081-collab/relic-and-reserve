@@ -19,7 +19,42 @@ $env:LOCALAPPDATA = $TestUserHome
 try {
 & (Join-Path $ProjectRoot 'RUN_R3_IMPORT.ps1')
 
-$PythonLauncher = (Get-Command 'py.exe' -ErrorAction Stop).Source
+function Resolve-PythonInvocation {
+    $DirectCandidates = @(
+        (Get-Command 'python.exe' -ErrorAction SilentlyContinue),
+        (Get-Command 'python3.exe' -ErrorAction SilentlyContinue)
+    ) | Where-Object { $null -ne $_ }
+    foreach ($Candidate in $DirectCandidates) {
+        & $Candidate.Source --version *> $null
+        if ($LASTEXITCODE -eq 0) {
+            return @{ Exe = $Candidate.Source; PrefixArgs = @() }
+        }
+    }
+
+    $PyLauncher = Get-Command 'py.exe' -ErrorAction SilentlyContinue
+    if ($null -ne $PyLauncher) {
+        & $PyLauncher.Source -3 --version *> $null
+        if ($LASTEXITCODE -eq 0) {
+            return @{ Exe = $PyLauncher.Source; PrefixArgs = @('-3') }
+        }
+    }
+
+    # Codex Desktop includes a private Python runtime that is intentionally not
+    # added to PATH. Use it only as a validated local fallback; ordinary clones
+    # continue to prefer their system Python above.
+    $BundledPython = Join-Path $env:USERPROFILE '.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
+    if (Test-Path -LiteralPath $BundledPython -PathType Leaf) {
+        & $BundledPython --version *> $null
+        if ($LASTEXITCODE -eq 0) {
+            return @{ Exe = $BundledPython; PrefixArgs = @() }
+        }
+    }
+    throw 'Python 3 is required for the R3 static validators, but no working local interpreter was found.'
+}
+
+$PythonInvocation = Resolve-PythonInvocation
+$PythonLauncher = [string]$PythonInvocation.Exe
+$PythonPrefixArgs = @($PythonInvocation.PrefixArgs)
 $Validators = @(
     'tools\validators\validate_stage_mvp.py',
     'tools\validators\validate_character_portraits.py',
@@ -100,7 +135,7 @@ function Assert-EconomyReport {
 }
 
 foreach ($Validator in $Validators) {
-    & $PythonLauncher -3 (Join-Path $ProjectRoot $Validator)
+    & $PythonLauncher @PythonPrefixArgs (Join-Path $ProjectRoot $Validator)
     if ($LASTEXITCODE -ne 0) {
         throw "R3 validator failed: $Validator"
     }
@@ -112,7 +147,7 @@ foreach ($Validator in $Validators) {
 $HumanHarness = Join-Path $ProjectRoot 'tools\audit\human_session_harness.py'
 $HumanHarnessFixture = Join-Path $ProjectRoot 'qa\human_sessions\fixture_public_schema.jsonl'
 $HumanHarnessReport = Join-Path $ProjectRoot 'qa\human_sessions\fixture_public_schema.report.json'
-& $PythonLauncher -3 $HumanHarness --input $HumanHarnessFixture --output $HumanHarnessReport
+& $PythonLauncher @PythonPrefixArgs $HumanHarness --input $HumanHarnessFixture --output $HumanHarnessReport
 if ($LASTEXITCODE -ne 0) {
     throw "Audit-only human-session harness fixture failed: $HumanHarness"
 }
@@ -138,6 +173,7 @@ $Suites = @(
     @{ Script = 'res://tests/r3_stage_replay_feedback_tests.gd'; Log = 'qa\R3_STAGE_REPLAY_FEEDBACK_TESTS.log'; Report = 'qa\R3_STAGE_REPLAY_FEEDBACK_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_stage_replay_ui_tests.gd'; Log = 'qa\R3_STAGE_REPLAY_UI_TESTS.log'; Report = 'qa\R3_STAGE_REPLAY_UI_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_stage10_handoff_tests.gd'; Log = 'qa\R3_STAGE10_HANDOFF_TESTS.log'; Report = 'qa\R3_STAGE10_HANDOFF_TESTS.json'; Mode = 'Counts' },
+    @{ Script = 'res://tests/r3_stage10_artifact_identity_tests.gd'; Log = 'qa\R3_STAGE10_ARTIFACT_IDENTITY_TESTS.log'; Report = 'qa\R3_STAGE10_ARTIFACT_IDENTITY_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_stage2_authored_cases_tests.gd'; Log = 'qa\R3_STAGE2_AUTHORED_CASES_TESTS.log'; Report = 'qa\R3_STAGE2_AUTHORED_CASES_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_stage3_authored_cases_tests.gd'; Log = 'qa\R3_STAGE3_AUTHORED_CASES_TESTS.log'; Report = 'qa\R3_STAGE3_AUTHORED_CASES_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_stage4_authored_cases_tests.gd'; Log = 'qa\R3_STAGE4_AUTHORED_CASES_TESTS.log'; Report = 'qa\R3_STAGE4_AUTHORED_CASES_TESTS.json'; Mode = 'Counts' },
@@ -152,6 +188,7 @@ $Suites = @(
     @{ Script = 'res://tests/r3_authored_outcome_rules_tests.gd'; Log = 'qa\R3_AUTHORED_OUTCOME_RULES_TESTS.log'; Report = 'qa\R3_AUTHORED_OUTCOME_RULES_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_authored_presentation_metadata_tests.gd'; Log = 'qa\R3_AUTHORED_PRESENTATION_METADATA_TESTS.log'; Report = 'qa\R3_AUTHORED_PRESENTATION_METADATA_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_authored_case_state_migration_tests.gd'; Log = 'qa\R3_AUTHORED_CASE_STATE_MIGRATION_TESTS.log'; Report = 'qa\R3_AUTHORED_CASE_STATE_MIGRATION_TESTS.json'; Mode = 'Counts' },
+    @{ Script = 'res://tests/r3_authored_bookend_cases_tests.gd'; Log = 'qa\R3_AUTHORED_BOOKEND_CASES_TESTS.log'; Report = 'qa\R3_AUTHORED_BOOKEND_CASES_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_final_journey_ui_tests.gd'; Log = 'qa\R3_FINAL_JOURNEY_UI_TESTS.log'; Report = 'qa\R3_FINAL_JOURNEY_UI_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_repeated_core_ui_tests.gd'; Log = 'qa\R3_REPEATED_CORE_UI_TESTS.log'; Report = 'qa\R3_REPEATED_CORE_UI_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_grand_reserve_live_auction_tests.gd'; Log = 'qa\R3_GRAND_RESERVE_LIVE_AUCTION_TESTS.log'; Report = 'qa\R3_GRAND_RESERVE_LIVE_AUCTION_TESTS.json'; Mode = 'Counts' },
@@ -169,6 +206,7 @@ $Suites = @(
     @{ Script = 'res://tests/r3_auction_balance_tests.gd'; Log = 'qa\R3_AUCTION_BALANCE_TESTS.log'; Report = 'qa\R3_AUCTION_BALANCE_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_stage_pressure_baseline.gd'; Log = 'qa\R3_STAGE_PRESSURE_BASELINE.log'; Report = 'qa\R3_STAGE_PRESSURE_BASELINE.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_tutorial_ui_tests.gd'; Log = 'qa\R3_TUTORIAL_UI_TESTS.log'; Report = 'qa\R3_TUTORIAL_UI_TESTS.json'; Mode = 'Counts' },
+    @{ Script = 'res://tests/r3_product_direction_ui_tests.gd'; Log = 'qa\R3_PRODUCT_DIRECTION_UI_TESTS.log'; Report = 'qa\R3_PRODUCT_DIRECTION_UI_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/capture_latest_runtime_viewport.gd'; Log = 'qa\R3_VIEWPORT_DENSITY_TESTS.log'; Report = 'qa\R3_VIEWPORT_DENSITY_TESTS.json'; Mode = 'Counts' },
     @{ Script = 'res://tests/r3_economy_simulation.gd'; Log = 'qa\R3_ECONOMY_SIMULATION.log'; Report = 'qa\R3_ECONOMY_SIMULATION.json'; Mode = 'Economy' }
 )

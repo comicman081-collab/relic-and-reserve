@@ -77,9 +77,14 @@ func run() -> void:
 	record("CAMP-PROLOGUE-01", "Prologue completes through inspect/auth/list/live sale APIs", prologue_complete and gs.campaign_state.completedCases.has("prologue_clock") and gs.campaign_state.currentAct == "ACT_1" and int(gs.statistics.sales) >= 1, {"act": gs.campaign_state.currentAct, "sales": gs.statistics.sales})
 
 	var recovery_artifact: Dictionary = gs.begin_case("silent_radio")
-	gs.discover_case_evidence("silent_radio", "silent_radio:material")
-	gs.discover_case_evidence("silent_radio", "silent_radio:serial_pattern")
-	var recovery_result: Dictionary = gs.resolve_case_v2("silent_radio", "REPRODUCTION", ["silent_radio:material", "silent_radio:serial_pattern"])
+	var recovery_citations := [
+		"src.silent_radio.artifact.serial_oxidation",
+		"src.silent_radio.artifact.condenser_service_seam"
+	]
+	gs.discover_case_evidence("silent_radio", recovery_citations[0])
+	gs.select_tool("precision_screwdriver")
+	gs.discover_case_evidence("silent_radio", recovery_citations[1])
+	var recovery_result: Dictionary = gs.resolve_case_v2("silent_radio", "hyp.silent_radio.later_reproduction", recovery_citations)
 	var recovery_complete: bool = bool(recovery_result.get("ok", false))
 	record("CAMP-RECOVERY-01", "Bad/reviewed case outcome retains progression route", recovery_complete and gs.campaign_state.completedCases.has("silent_radio") and gs.campaign_state.caseOutcomes.get("silent_radio") == "mistaken", {"outcome": gs.campaign_state.caseOutcomes.get("silent_radio"), "result": recovery_result})
 
@@ -88,7 +93,7 @@ func run() -> void:
 	var act2_complete: bool = prepare_act(gs, "ACT_2")
 	record("CAMP-ACT2-01", "Provenance cases unlock Act 3", act2_complete and gs.campaign_state.currentAct == "ACT_3" and gs.campaign_state.completedCases.has("observatory_instrument"), gs.campaign_state.currentAct)
 
-	var boundary_path := "res://qa/r3_campaign_boundary_save.json"
+	var boundary_path := "user://r3_campaign_boundary_save.json"
 	var boundary_before: Dictionary = gs.save_payload()
 	var boundary_saved: bool = gs.save_game(boundary_path)
 	gs.campaign_state.currentAct = "BROKEN"
@@ -122,7 +127,7 @@ func run() -> void:
 	record("CAMP-GR-03", "Final score stores every required component", missing_score_keys.is_empty(), score)
 	record("CAMP-END-01", "Ending, epilogue acknowledgement, and postgame are connected", not gs.campaign_state.currentEnding.is_empty() and gs.campaign_state.epilogueSeen and gs.campaign_state.postGame and gs.campaign_state.endingUnlocked.has(gs.campaign_state.currentEnding), {"ending": gs.campaign_state.currentEnding, "postgame": gs.campaign_state.postGame})
 
-	var postgame_path := "res://qa/r3_campaign_postgame_save.json"
+	var postgame_path := "user://r3_campaign_postgame_save.json"
 	var selected_before: Array = gs.campaign_state.grandReserve.selectedLotIds.duplicate()
 	var ending_before: String = gs.campaign_state.currentEnding
 	var post_saved: bool = gs.save_game(postgame_path)
@@ -155,16 +160,18 @@ func run() -> void:
 			passed += 1
 	var report := {"suite": "R3 campaign", "executed": results.size(), "passed": passed, "failed": results.size() - passed, "skipped": 0, "tests": results}
 	var output := FileAccess.open("res://qa/R3_CAMPAIGN_TESTS.json", FileAccess.WRITE)
-	output.store_string(JSON.stringify(report, "  "))
-	output.close()
+	if output != null:
+		output.store_string(JSON.stringify(report, "  "))
+		output.close()
 	var ending_passed := 0
 	for ending_test: Dictionary in ending_results:
 		if ending_test.passed:
 			ending_passed += 1
 	var ending_report := {"suite": "R3 endings", "executed": ending_results.size(), "passed": ending_passed, "failed": ending_results.size() - ending_passed, "skipped": 0, "tests": ending_results}
 	var ending_output := FileAccess.open("res://qa/R3_ENDING_TESTS.json", FileAccess.WRITE)
-	ending_output.store_string(JSON.stringify(ending_report, "  "))
-	ending_output.close()
+	if ending_output != null:
+		ending_output.store_string(JSON.stringify(ending_report, "  "))
+		ending_output.close()
 	print(JSON.stringify(report))
 	print(JSON.stringify(ending_report))
 	main.queue_free()

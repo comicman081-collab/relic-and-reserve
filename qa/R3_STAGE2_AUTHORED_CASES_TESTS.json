@@ -8,7 +8,7 @@
   "tests": [
     {
       "evidence": {
-        "authoredCount": 22,
+        "authoredCount": 26,
         "caseOrder": [
           "leave_patina",
           "estate_compass",
@@ -1263,9 +1263,9 @@
         "estate_compass": {
           "copyChanged": true,
           "copyComplete": true,
-          "enCharacters": 1077,
+          "enCharacters": 1125,
           "enLeaks": [],
-          "koCharacters": 697,
+          "koCharacters": 717,
           "koLeaks": [],
           "ok": true,
           "publicPrivateHidden": true,
@@ -1276,9 +1276,9 @@
         "leave_patina": {
           "copyChanged": true,
           "copyComplete": true,
-          "enCharacters": 1071,
+          "enCharacters": 1119,
           "enLeaks": [],
-          "koCharacters": 662,
+          "koCharacters": 682,
           "koLeaks": [],
           "ok": true,
           "publicPrivateHidden": true,
@@ -1289,9 +1289,9 @@
         "pawn_watch": {
           "copyChanged": true,
           "copyComplete": true,
-          "enCharacters": 1131,
+          "enCharacters": 1179,
           "enLeaks": [],
-          "koCharacters": 716,
+          "koCharacters": 736,
           "koLeaks": [],
           "ok": true,
           "publicPrivateHidden": true,

@@ -56,8 +56,8 @@
   "needsTuning": false,
   "passed": 5,
   "riskProgressionInputs": {
-    "stage1": 0.466667,
-    "stage10": 1.149037,
+    "stage1": 0.764706,
+    "stage10": 1.225639,
     "stage5": 0.819248
   },
   "schemaVersion": 1,
@@ -281,7 +281,40 @@
             "baseWeight": 0.0,
             "caseId": "silent_radio",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "silent_radio:material",
+            "evidenceId": "src.silent_radio.artifact.serial_oxidation",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 3.0,
+            "caseId": "silent_radio",
+            "difficultyAppliedWeight": 3.0,
+            "evidenceId": "src.silent_radio.artifact.condenser_service_seam",
+            "requiredTools": [
+              "precision_screwdriver"
+            ],
+            "requiresEvidence": [
+              "src.silent_radio.artifact.serial_oxidation"
+            ],
+            "riskLevel": "HIGH"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "silent_radio",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.silent_radio.document.intake_register",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.silent_radio.artifact.serial_oxidation"
+            ],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "silent_radio",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.silent_radio.document.service_bulletin",
             "requiredTools": [],
             "requiresEvidence": [],
             "riskLevel": "NONE"
@@ -290,34 +323,66 @@
             "baseWeight": 0.0,
             "caseId": "silent_radio",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "silent_radio:serial_pattern",
+            "evidenceId": "src.silent_radio.npc.mara_service_context",
             "requiredTools": [],
-            "requiresEvidence": [],
+            "requiresEvidence": [
+              "src.silent_radio.document.intake_register"
+            ],
             "riskLevel": "NONE"
           },
           {
             "baseWeight": 0.0,
             "caseId": "silent_radio",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "silent_radio:construction_method",
-            "requiredTools": [],
-            "requiresEvidence": [],
+            "evidenceId": "src.silent_radio.reference.receiver_standard",
+            "requiredTools": [
+              "reference_database"
+            ],
+            "requiresEvidence": [
+              "src.silent_radio.artifact.condenser_service_seam"
+            ],
             "riskLevel": "NONE"
           },
           {
             "baseWeight": 0.0,
-            "caseId": "silent_radio",
+            "caseId": "perfect_fake",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "silent_radio:provenance",
-            "requiredTools": [],
+            "evidenceId": "src.perfect_fake.artifact.casting_serial_continuity",
+            "requiredTools": [
+              "material_scanner"
+            ],
             "requiresEvidence": [],
             "riskLevel": "NONE"
           },
           {
+            "baseWeight": 3.0,
+            "caseId": "perfect_fake",
+            "difficultyAppliedWeight": 3.0,
+            "evidenceId": "src.perfect_fake.artifact.bellows_repair_boundary",
+            "requiredTools": [
+              "uv_lamp"
+            ],
+            "requiresEvidence": [
+              "src.perfect_fake.artifact.casting_serial_continuity"
+            ],
+            "riskLevel": "HIGH"
+          },
+          {
             "baseWeight": 0.0,
-            "caseId": "silent_radio",
+            "caseId": "perfect_fake",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "silent_radio:repair_trace",
+            "evidenceId": "src.perfect_fake.document.estate_intake",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.perfect_fake.artifact.casting_serial_continuity"
+            ],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "perfect_fake",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.perfect_fake.document.workshop_invoice",
             "requiredTools": [],
             "requiresEvidence": [],
             "riskLevel": "NONE"
@@ -326,45 +391,24 @@
             "baseWeight": 0.0,
             "caseId": "perfect_fake",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "perfect_fake:material",
+            "evidenceId": "src.perfect_fake.npc.elias_market_context",
             "requiredTools": [],
-            "requiresEvidence": [],
+            "requiresEvidence": [
+              "src.perfect_fake.document.estate_intake"
+            ],
             "riskLevel": "NONE"
           },
           {
             "baseWeight": 0.0,
             "caseId": "perfect_fake",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "perfect_fake:serial_pattern",
-            "requiredTools": [],
-            "requiresEvidence": [],
-            "riskLevel": "NONE"
-          },
-          {
-            "baseWeight": 0.0,
-            "caseId": "perfect_fake",
-            "difficultyAppliedWeight": 0.0,
-            "evidenceId": "perfect_fake:construction_method",
-            "requiredTools": [],
-            "requiresEvidence": [],
-            "riskLevel": "NONE"
-          },
-          {
-            "baseWeight": 0.0,
-            "caseId": "perfect_fake",
-            "difficultyAppliedWeight": 0.0,
-            "evidenceId": "perfect_fake:provenance",
-            "requiredTools": [],
-            "requiresEvidence": [],
-            "riskLevel": "NONE"
-          },
-          {
-            "baseWeight": 0.0,
-            "caseId": "perfect_fake",
-            "difficultyAppliedWeight": 0.0,
-            "evidenceId": "perfect_fake:repair_trace",
-            "requiredTools": [],
-            "requiresEvidence": [],
+            "evidenceId": "src.perfect_fake.reference.cindervale_standard",
+            "requiredTools": [
+              "reference_database"
+            ],
+            "requiresEvidence": [
+              "src.perfect_fake.artifact.bellows_repair_boundary"
+            ],
             "riskLevel": "NONE"
           }
         ],
@@ -392,24 +436,24 @@
           },
           {
             "caseId": "silent_radio",
-            "evidenceActions": 5,
+            "evidenceActions": 6,
             "opportunitiesByRisk": {
-              "HIGH": 0,
+              "HIGH": 1,
               "LOW": 0,
               "NONE": 5
             },
-            "schemaVersion": 1,
+            "schemaVersion": 2,
             "title": "The Silent Radio"
           },
           {
             "caseId": "perfect_fake",
-            "evidenceActions": 5,
+            "evidenceActions": 6,
             "opportunitiesByRisk": {
-              "HIGH": 0,
+              "HIGH": 1,
               "LOW": 0,
               "NONE": 5
             },
-            "schemaVersion": 1,
+            "schemaVersion": 2,
             "title": "The Perfect Fake"
           }
         ],
@@ -419,23 +463,23 @@
           "NONE": 0.0
         },
         "difficultyAppliedWeightByRisk": {
-          "HIGH": 3.0,
+          "HIGH": 9.0,
           "LOW": 4.0,
           "NONE": 0.0
         },
         "difficultyMultiplier": 1.0,
-        "evidenceActions": 15,
+        "evidenceActions": 17,
         "invalidRiskLevels": [],
         "opportunitiesByRisk": {
-          "HIGH": 1,
+          "HIGH": 3,
           "LOW": 4,
           "NONE": 10
         },
-        "riskBearingActions": 5,
+        "riskBearingActions": 7,
         "safeActions": 10,
-        "weightedRiskPerEvidenceAction": 0.466667,
-        "weightedRiskPerRiskOpportunity": 1.4,
-        "weightedRiskTotal": 7.0
+        "weightedRiskPerEvidenceAction": 0.764706,
+        "weightedRiskPerRiskOpportunity": 1.857143,
+        "weightedRiskTotal": 13.0
       },
       "gates": {
         "atLeastTwoViableStrategies": true,
@@ -655,47 +699,79 @@
       "evidencePressure": {
         "actions": [
           {
-            "baseWeight": 0.0,
-            "caseId": "master_camera",
-            "difficultyAppliedWeight": 0.0,
-            "evidenceId": "master_camera:material",
-            "requiredTools": [],
-            "requiresEvidence": [],
-            "riskLevel": "NONE"
-          },
-          {
-            "baseWeight": 0.0,
-            "caseId": "master_camera",
-            "difficultyAppliedWeight": 0.0,
-            "evidenceId": "master_camera:mechanism",
-            "requiredTools": [],
-            "requiresEvidence": [],
-            "riskLevel": "NONE"
-          },
-          {
-            "baseWeight": 0.0,
-            "caseId": "master_camera",
-            "difficultyAppliedWeight": 0.0,
-            "evidenceId": "master_camera:tool_mark",
-            "requiredTools": [],
-            "requiresEvidence": [],
-            "riskLevel": "NONE"
-          },
-          {
             "baseWeight": 1.0,
             "caseId": "master_camera",
             "difficultyAppliedWeight": 1.838459,
-            "evidenceId": "master_camera:construction_method",
-            "requiredTools": [],
+            "evidenceId": "src.master_camera.artifact.prism_material_continuity",
+            "requiredTools": [
+              "material_scanner"
+            ],
             "requiresEvidence": [],
             "riskLevel": "LOW"
+          },
+          {
+            "baseWeight": 3.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 5.515378,
+            "evidenceId": "src.master_camera.artifact.clamp_intervention_sequence",
+            "requiredTools": [
+              "uv_lamp"
+            ],
+            "requiresEvidence": [
+              "src.master_camera.artifact.prism_material_continuity"
+            ],
+            "riskLevel": "HIGH"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.master_camera.document.laboratory_transfer_ledger",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.master_camera.document.optical_bench_card",
+            "requiredTools": [],
+            "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.master_camera.npc.lena_consignment_context",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.master_camera.document.laboratory_transfer_ledger"
+            ],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_camera",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.master_camera.reference.spectroscope_standard",
+            "requiredTools": [
+              "reference_database"
+            ],
+            "requiresEvidence": [
+              "src.master_camera.artifact.clamp_intervention_sequence"
+            ],
+            "riskLevel": "NONE"
           },
           {
             "baseWeight": 1.0,
             "caseId": "master_mechanism",
             "difficultyAppliedWeight": 1.838459,
-            "evidenceId": "master_mechanism:material",
-            "requiredTools": [],
+            "evidenceId": "src.master_mechanism.artifact.patina_zero_line",
+            "requiredTools": [
+              "material_scanner"
+            ],
             "requiresEvidence": [],
             "riskLevel": "LOW"
           },
@@ -703,16 +779,21 @@
             "baseWeight": 3.0,
             "caseId": "master_mechanism",
             "difficultyAppliedWeight": 5.515378,
-            "evidenceId": "master_mechanism:mechanism",
-            "requiredTools": [],
-            "requiresEvidence": [],
+            "evidenceId": "src.master_mechanism.artifact.escapement_jewel_sequence",
+            "requiredTools": [
+              "precision_screwdriver",
+              "precision_scale"
+            ],
+            "requiresEvidence": [
+              "src.master_mechanism.artifact.patina_zero_line"
+            ],
             "riskLevel": "HIGH"
           },
           {
             "baseWeight": 0.0,
             "caseId": "master_mechanism",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "master_mechanism:wear_pattern",
+            "evidenceId": "src.master_mechanism.document.observatory_inventory",
             "requiredTools": [],
             "requiresEvidence": [],
             "riskLevel": "NONE"
@@ -721,9 +802,33 @@
             "baseWeight": 0.0,
             "caseId": "master_mechanism",
             "difficultyAppliedWeight": 0.0,
-            "evidenceId": "master_mechanism:provenance",
+            "evidenceId": "src.master_mechanism.document.jewel_service_log",
             "requiredTools": [],
             "requiresEvidence": [],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_mechanism",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.master_mechanism.npc.dorian_reserve_context",
+            "requiredTools": [],
+            "requiresEvidence": [
+              "src.master_mechanism.document.observatory_inventory"
+            ],
+            "riskLevel": "NONE"
+          },
+          {
+            "baseWeight": 0.0,
+            "caseId": "master_mechanism",
+            "difficultyAppliedWeight": 0.0,
+            "evidenceId": "src.master_mechanism.reference.observatory_regulator_standard",
+            "requiredTools": [
+              "reference_database"
+            ],
+            "requiresEvidence": [
+              "src.master_mechanism.artifact.escapement_jewel_sequence"
+            ],
             "riskLevel": "NONE"
           }
         ],
@@ -739,24 +844,24 @@
         "cases": [
           {
             "caseId": "master_camera",
-            "evidenceActions": 4,
+            "evidenceActions": 6,
             "opportunitiesByRisk": {
-              "HIGH": 0,
+              "HIGH": 1,
               "LOW": 1,
-              "NONE": 3
+              "NONE": 4
             },
-            "schemaVersion": 1,
+            "schemaVersion": 2,
             "title": "Master Work: Prism Spectroscope"
           },
           {
             "caseId": "master_mechanism",
-            "evidenceActions": 4,
+            "evidenceActions": 6,
             "opportunitiesByRisk": {
               "HIGH": 1,
               "LOW": 1,
-              "NONE": 2
+              "NONE": 4
             },
-            "schemaVersion": 1,
+            "schemaVersion": 2,
             "title": "Master Work: Astronomical Regulator"
           }
         ],
@@ -766,23 +871,23 @@
           "NONE": 0.0
         },
         "difficultyAppliedWeightByRisk": {
-          "HIGH": 5.515378,
+          "HIGH": 11.030755,
           "LOW": 3.676918,
           "NONE": 0.0
         },
         "difficultyMultiplier": 1.838459,
-        "evidenceActions": 8,
+        "evidenceActions": 12,
         "invalidRiskLevels": [],
         "opportunitiesByRisk": {
-          "HIGH": 1,
+          "HIGH": 2,
           "LOW": 2,
-          "NONE": 5
+          "NONE": 8
         },
-        "riskBearingActions": 3,
-        "safeActions": 5,
-        "weightedRiskPerEvidenceAction": 1.149037,
-        "weightedRiskPerRiskOpportunity": 3.064099,
-        "weightedRiskTotal": 9.192296
+        "riskBearingActions": 4,
+        "safeActions": 8,
+        "weightedRiskPerEvidenceAction": 1.225639,
+        "weightedRiskPerRiskOpportunity": 3.676918,
+        "weightedRiskTotal": 14.707674
       },
       "gates": {
         "atLeastTwoViableStrategies": true,

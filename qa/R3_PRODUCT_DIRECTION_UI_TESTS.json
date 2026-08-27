@@ -1,0 +1,4781 @@
+{
+  "executed": 19,
+  "failed": 0,
+  "passed": 19,
+  "skipped": 0,
+  "suite": "R3 Product Direction UI",
+  "tests": [
+    {
+      "evidence": {
+        "expected": [
+          "artifactPresent",
+          "auctionStatus",
+          "caseBound",
+          "caseResolved",
+          "hypothesisPrepared",
+          "investigated",
+          "listed",
+          "repairCompleted",
+          "repairRequired",
+          "sold",
+          "transactionId"
+        ],
+        "forbidden": [
+          "authenticityTruth",
+          "trueRarity",
+          "trueHistoricalSignificance",
+          "trueMarketBaseline",
+          "seed",
+          "masterSeed",
+          "rng",
+          "bidders",
+          "maxBid",
+          "winnerId",
+          "estimatedValue"
+        ],
+        "keys": [
+          "artifactPresent",
+          "auctionStatus",
+          "caseBound",
+          "caseResolved",
+          "hypothesisPrepared",
+          "investigated",
+          "listed",
+          "repairCompleted",
+          "repairRequired",
+          "sold",
+          "transactionId"
+        ],
+        "readOnly": {
+          "authorityUnchanged": true,
+          "gameRngAfter": "-3378380881708314866",
+          "gameRngBefore": "-3378380881708314866",
+          "globalRngActual": [
+            802395314,
+            888291561
+          ],
+          "globalRngExpected": [
+            802395314,
+            888291561
+          ],
+          "ok": true,
+          "schemaUnchanged": true,
+          "value": {
+            "artifactPresent": false,
+            "auctionStatus": "NONE",
+            "caseBound": false,
+            "caseResolved": false,
+            "hypothesisPrepared": false,
+            "investigated": false,
+            "listed": false,
+            "repairCompleted": true,
+            "repairRequired": false,
+            "sold": false,
+            "transactionId": ""
+          }
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-01",
+      "name": "The journey projection has an exact public whitelist and consumes no save, schema, game RNG or global RNG state",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "expected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "readOnly": true,
+        "rows": [
+          {
+            "phase": 0,
+            "state": "no artifact"
+          },
+          {
+            "phase": 1,
+            "state": "found"
+          },
+          {
+            "phase": 2,
+            "state": "investigated"
+          },
+          {
+            "phase": 3,
+            "state": "decision"
+          },
+          {
+            "phase": 4,
+            "state": "preserved"
+          },
+          {
+            "phase": 5,
+            "state": "listed"
+          }
+        ]
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-02",
+      "name": "The six-step journey advances from authoritative public facts rather than the current screen name",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "active": {
+          "journey": 0,
+          "tutorial": 1
+        },
+        "completed": {
+          "journey": 1,
+          "tutorial": 0
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-03",
+      "name": "Tutorial guidance and the persistent journey rail are mutually exclusive in both active and completed guidance states",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "copy": "플레이 설정\n일차 1   ¤ 1200   평판 12   등급 1\n소리와 읽기 편의를 조정합니다. 캠페인 진행과 경매 선택은 그대로 유지됩니다.\n전체 음량\n게임 전체 소리\n배경 음악\n타이틀·공방·엔딩 음악\n효과음\n버튼·도구·경매 효과음\n글자 크기\n라벨과 대화 글자 크기\n초상화 움직임\n장식 동작 효과 줄이기\n화면\n현재 화면 모드 전환\n\n끄기\n작게\n보통\n크게\n끄기\n작게\n보통\n크게\n끄기\n작게\n보통\n크게\n100%\n108%\n116%\n기본\n줄임\n전체 화면\n뒤로\n공방\n시장\n보관함\n업그레이드\n의뢰\n캠페인\n하루 마치기\n저장\n설정\nEN / 한국어",
+        "geometry": {
+          "back": {
+            "ok": true,
+            "rect": [
+              42.0,
+              554.0,
+              1196.0,
+              46.0
+            ]
+          },
+          "grid": {
+            "ok": true,
+            "rect": [
+              42.0,
+              121.0,
+              1196.0,
+              423.0
+            ]
+          },
+          "ok": true,
+          "panelCount": 6,
+          "panels": {
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  121.0,
+                  593.0,
+                  111.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  645.0,
+                  121.0,
+                  593.0,
+                  111.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  242.0,
+                  593.0,
+                  111.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  645.0,
+                  242.0,
+                  593.0,
+                  111.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  363.0,
+                  593.0,
+                  111.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  645.0,
+                  363.0,
+                  593.0,
+                  111.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "required": {
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "ok": true,
+                "rect": [
+                  52.0,
+                  182.0,
+                  139.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  944.0,
+                  182.0,
+                  139.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  485.0,
+                  303.0,
+                  140.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  1040.0,
+                  303.0,
+                  188.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  341.0,
+                  424.0,
+                  284.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  655.0,
+                  424.0,
+                  573.0,
+                  42.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "requiredCount": 6
+        },
+        "primary": [
+          "SettingsBack"
+        ]
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-04",
+      "name": "Korean Settings exposes Master, music, effects, text and reduced-motion controls within 1280x720",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "copy": "PLAYER SETTINGS\nDAY 1   ¤ 1200   REP 12   GRADE 1\nTune sound and readability. Your campaign progress and auction choices stay unchanged.\nMASTER\nOverall game volume\nMUSIC\nTitle, workshop and ending music\nEFFECTS\nButtons, tools and auction cues\nTEXT SIZE\nReadable labels and dialogue\nPORTRAIT MOTION\nReduce decorative reactions\nDISPLAY\nSwitch the current window mode\n\nOFF\nLOW\nNORMAL\nHIGH\nOFF\nLOW\nNORMAL\nHIGH\nOFF\nLOW\nNORMAL\nHIGH\n100%\n108%\n116%\nSTANDARD\nREDUCED\nFULLSCREEN\nBACK\nWORKSHOP\nMARKET\nINVENTORY\nUPGRADES\nJOBS\nCAMPAIGN\nEND DAY\nSAVE\nSETTINGS\nEN / 한국어",
+        "geometry": {
+          "back": {
+            "ok": true,
+            "rect": [
+              42.0,
+              554.0,
+              1196.0,
+              46.0
+            ]
+          },
+          "grid": {
+            "ok": true,
+            "rect": [
+              42.0,
+              123.0,
+              1196.0,
+              421.0
+            ]
+          },
+          "ok": true,
+          "panelCount": 6,
+          "panels": {
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  123.0,
+                  593.0,
+                  117.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  645.0,
+                  123.0,
+                  593.0,
+                  117.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  250.0,
+                  593.0,
+                  117.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  645.0,
+                  250.0,
+                  593.0,
+                  117.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  377.0,
+                  593.0,
+                  117.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  645.0,
+                  377.0,
+                  593.0,
+                  117.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "required": {
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "ok": true,
+                "rect": [
+                  52.0,
+                  190.0,
+                  139.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  944.0,
+                  190.0,
+                  139.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  485.0,
+                  317.0,
+                  140.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  1040.0,
+                  317.0,
+                  188.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  341.0,
+                  444.0,
+                  284.0,
+                  42.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  655.0,
+                  444.0,
+                  573.0,
+                  42.0
+                ]
+              }
+            ],
+            "separate": true
+          },
+          "requiredCount": 6
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-05",
+      "name": "English Settings remains inside 1280x720 at the maximum 116 percent text size",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "audioRoutes": true,
+        "authorityUnchanged": true,
+        "configContract": true,
+        "configLoad": 0,
+        "profileDiskUnchanged": true,
+        "rngAfter": "-3378380881708314866",
+        "rngBefore": "-3378380881708314866",
+        "runDiskUnchanged": true,
+        "schemaUnchanged": true
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-06",
+      "name": "Player settings persist in a separate ConfigFile while run/profile files, save schema and RNG remain untouched",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cleared": [
+          1
+        ],
+        "enabledStages": [
+          1
+        ],
+        "highestUnlocked": 3,
+        "rows": [
+          {
+            "copy": "스테이지 1 · 클리어\n권장 55 · BEST Expert 72",
+            "disabled": false,
+            "present": true,
+            "stage": 1
+          },
+          {
+            "copy": "스테이지 2 · 본편 잠김\n권장 56 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 2
+          },
+          {
+            "copy": "스테이지 3 · 본편 잠김\n권장 57 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 3
+          },
+          {
+            "copy": "스테이지 4 · 본편 잠김\n권장 58 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 4
+          },
+          {
+            "copy": "스테이지 5 · 본편 잠김\n권장 59 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 5
+          },
+          {
+            "copy": "스테이지 6 · 본편 잠김\n권장 60 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 6
+          },
+          {
+            "copy": "스테이지 7 · 본편 잠김\n권장 61 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 7
+          },
+          {
+            "copy": "스테이지 8 · 본편 잠김\n권장 62 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 8
+          },
+          {
+            "copy": "스테이지 9 · 본편 잠김\n권장 63 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 9
+          },
+          {
+            "copy": "스테이지 10 · 본편 잠김\n권장 64 · 첫 도전",
+            "disabled": true,
+            "present": true,
+            "stage": 10
+          }
+        ]
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-07",
+      "name": "Stage Select enables cleared replay only and keeps the highest unlocked uncleared Stage on the main-story route",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "entryPhase": "ENTRY",
+        "entryTileNodes": [
+          {
+            "name": "CaseTile_objective",
+            "text": "",
+            "type": "PanelContainer",
+            "visible": true
+          },
+          {
+            "name": "CaseTileSummary_objective",
+            "text": "¤1",
+            "type": "Label",
+            "visible": true
+          },
+          {
+            "name": "CaseTile_risk",
+            "text": "",
+            "type": "PanelContainer",
+            "visible": true
+          },
+          {
+            "name": "CaseTileSummary_risk",
+            "text": "¤5",
+            "type": "Label",
+            "visible": true
+          },
+          {
+            "name": "CaseTile_report",
+            "text": "",
+            "type": "PanelContainer",
+            "visible": true
+          },
+          {
+            "name": "CaseTileSummary_report",
+            "text": "0",
+            "type": "Label",
+            "visible": true
+          }
+        ],
+        "frozenResultBidCount": 10,
+        "phases": [
+          "ENTRY",
+          "CALL",
+          "BID",
+          "BID",
+          "BID",
+          "DROPOUT",
+          "SOLD"
+        ],
+        "preterminalRecap": false,
+        "primaryEntry": [
+          "AuctionCueNext"
+        ],
+        "primaryTerminal": [
+          "HammerButton"
+        ],
+        "readOnly": {
+          "authorityUnchanged": true,
+          "gameRngAfter": "-3378380881708314866",
+          "gameRngBefore": "-3378380881708314866",
+          "globalRngActual": [
+            802395314,
+            888291561
+          ],
+          "globalRngExpected": [
+            802395314,
+            888291561
+          ],
+          "ok": true,
+          "schemaUnchanged": true,
+          "value": {
+            "choice": "CUSTOM TERMS · Definite claim",
+            "reaction": "Provenance strong",
+            "result": "SOLD · NET ¤123",
+            "sold": true
+          }
+        },
+        "renderedBidCount": "0",
+        "terminalChildren": 3,
+        "terminalData": {
+          "choice": "CUSTOM TERMS · Definite claim",
+          "reaction": "Provenance strong",
+          "result": "SOLD · NET ¤123",
+          "sold": true
+        },
+        "visibleBidCount": 0
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-08",
+      "name": "Before the terminal cue the recap is hidden and bid count equals visibleBids; terminal state adds one read-only three-link causal recap",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "asset": "res://assets/portraits/mara_venn_positive.svg",
+        "en": "Mara Venn · GROWING\nTrust grew through careful evidence.\nRELATIONSHIP RESPONSE",
+        "ko": "마라 벤 · 신뢰 형성\n꼼꼼한 근거로 신뢰가 깊어졌습니다.\n관계 반응",
+        "minimumSize": [
+          96.0,
+          120.0
+        ],
+        "npcId": "mara_venn",
+        "portraitApproved": true,
+        "readOnly": true,
+        "resolution": {
+          "citedEvidenceIds": [
+            "src.prologue.artifact.backplate_screws",
+            "src.prologue.artifact.bridge_stamp",
+            "src.prologue.document.service_card",
+            "src.prologue.npc.mara_statement",
+            "src.prologue.reference.factory_plate"
+          ],
+          "code": "OK",
+          "conclusionAccurate": true,
+          "hypothesisId": "hyp.period_repair",
+          "independentSourceCount": 5,
+          "netScore": 7,
+          "ok": true,
+          "outcome": "masterful",
+          "refuteScore": 0,
+          "requiredSourcesMet": true,
+          "substantiated": true,
+          "substantiation": "STRONG",
+          "supportScore": 7
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-09",
+      "name": "A resolved authored case renders an approved face-legible 96x120 relationship portrait and localized semantic response without mutating authority",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "act": "Provenance",
+        "breadcrumb": "STORY · Provenance",
+        "header": "STAGE 4 — Paper Trails",
+        "primaryRoles": {
+          "auctionEntry": [
+            "AuctionCueNext"
+          ],
+          "auctionTerminal": [
+            "HammerButton"
+          ],
+          "settings": [
+            "SettingsBack"
+          ],
+          "title": [
+            "NewGameButton"
+          ]
+        },
+        "stageStarted": {
+          "code": "OK",
+          "difficultyMultiplier": 1.225043,
+          "ok": true,
+          "stage": 4
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-10",
+      "name": "Campaign keeps Stage title and Act breadcrumb separate while representative screens mark exactly one authoritative primary action",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "commit": {
+          "bids": [
+            {
+              "amount": 13,
+              "bidderId": "bidder_11"
+            },
+            {
+              "amount": 25,
+              "bidderId": "bidder_12"
+            },
+            {
+              "amount": 37,
+              "bidderId": "bidder_01"
+            },
+            {
+              "amount": 50,
+              "bidderId": "bidder_02"
+            },
+            {
+              "amount": 63,
+              "bidderId": "bidder_03"
+            },
+            {
+              "amount": 77,
+              "bidderId": "bidder_04"
+            },
+            {
+              "amount": 92,
+              "bidderId": "bidder_11"
+            },
+            {
+              "amount": 107,
+              "bidderId": "bidder_12"
+            },
+            {
+              "amount": 123,
+              "bidderId": "bidder_03"
+            },
+            {
+              "amount": 139,
+              "bidderId": "bidder_04"
+            }
+          ],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_01",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_11",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_12",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_03",
+              "reason": "VALUE"
+            }
+          ],
+          "fee": 16,
+          "hammer": 139,
+          "idempotent": false,
+          "net": 123,
+          "ok": true,
+          "opening": 1,
+          "participants": [
+            {
+              "id": "bidder_11"
+            },
+            {
+              "id": "bidder_12"
+            },
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            },
+            {
+              "id": "bidder_04"
+            }
+          ],
+          "publicFingerprint": "AUC-83508635",
+          "reasonTags": [
+            {
+              "category": "PROVENANCE",
+              "code": "PROVENANCE_STRONG",
+              "polarity": "POSITIVE"
+            },
+            {
+              "category": "CONDITION",
+              "code": "CONDITION_GOOD",
+              "polarity": "POSITIVE"
+            }
+          ],
+          "reserve": 1,
+          "reserve_met": true,
+          "sale_status": "SOLD",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1184214817_0",
+          "winnerId": "bidder_04"
+        },
+        "durablePending": {
+          "artifactId": "product_direction_committed_a",
+          "code": "OK",
+          "createdDay": 1,
+          "cueIndex": 6,
+          "cueQueue": [
+            {
+              "bidderId": "bidder_11",
+              "phase": "ENTRY",
+              "reasonTags": [],
+              "visibleBids": []
+            },
+            {
+              "amount": 1,
+              "bidderId": "bidder_11",
+              "phase": "CALL",
+              "reasonTags": [],
+              "visibleBids": []
+            },
+            {
+              "amount": 107,
+              "bidderId": "bidder_12",
+              "phase": "BID",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 107,
+                  "bidderId": "bidder_12"
+                }
+              ]
+            },
+            {
+              "amount": 123,
+              "bidderId": "bidder_03",
+              "phase": "BID",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 107,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_03"
+                }
+              ]
+            },
+            {
+              "amount": 139,
+              "bidderId": "bidder_04",
+              "phase": "BID",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 107,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_03"
+                },
+                {
+                  "amount": 139,
+                  "bidderId": "bidder_04"
+                }
+              ]
+            },
+            {
+              "bidderId": "bidder_03",
+              "dropoutReason": "VALUE",
+              "phase": "DROPOUT",
+              "reasonTags": [],
+              "visibleBids": [
+                {
+                  "amount": 107,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_03"
+                },
+                {
+                  "amount": 139,
+                  "bidderId": "bidder_04"
+                }
+              ]
+            },
+            {
+              "amount": 139,
+              "bidderId": "bidder_04",
+              "dropoutReason": "VALUE",
+              "phase": "SOLD",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "visibleBids": [
+                {
+                  "amount": 92,
+                  "bidderId": "bidder_11"
+                },
+                {
+                  "amount": 107,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_03"
+                },
+                {
+                  "amount": 139,
+                  "bidderId": "bidder_04"
+                }
+              ]
+            }
+          ],
+          "decisions": {
+            "activeModifiers": {
+              "appraisalPrecision": 0,
+              "auctionFeeReduction": 0,
+              "bidderReach": 0,
+              "displayBonus": 0,
+              "listingBonus": 0,
+              "marketAll": 0,
+              "marketCategory": 10,
+              "stageDifficulty": 1.07
+            },
+            "condition": {
+              "cleanliness": 100,
+              "mechanical": 100,
+              "surface": 100
+            },
+            "day": 1,
+            "disclosure": "CERTAIN",
+            "grandReserve": false,
+            "listingUid": "product_direction_committed_a",
+            "provenanceKnown": true,
+            "publicAppraisal": 92,
+            "reportedConfidence": 0.94,
+            "reserve": 1,
+            "reserveRatio": 0.0109,
+            "specId": "artifact_001",
+            "stage": 2,
+            "starting": 1,
+            "startingRatio": 0.0109,
+            "substantiation": "NO_CASE"
+          },
+          "grandReserve": false,
+          "ok": true,
+          "publicFingerprint": "AUC-83508635",
+          "receipt": {
+            "bids": [
+              {
+                "amount": 13,
+                "bidderId": "bidder_11"
+              },
+              {
+                "amount": 25,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 37,
+                "bidderId": "bidder_01"
+              },
+              {
+                "amount": 50,
+                "bidderId": "bidder_02"
+              },
+              {
+                "amount": 63,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 77,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 92,
+                "bidderId": "bidder_11"
+              },
+              {
+                "amount": 107,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 123,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 139,
+                "bidderId": "bidder_04"
+              }
+            ],
+            "dropouts": [
+              {
+                "bidderId": "bidder_01",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_02",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_11",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_12",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_03",
+                "reason": "VALUE"
+              }
+            ],
+            "fee": 16,
+            "hammer": 139,
+            "net": 123,
+            "opening": 1,
+            "participants": [
+              {
+                "id": "bidder_11"
+              },
+              {
+                "id": "bidder_12"
+              },
+              {
+                "id": "bidder_01"
+              },
+              {
+                "id": "bidder_02"
+              },
+              {
+                "id": "bidder_03"
+              },
+              {
+                "id": "bidder_04"
+              }
+            ],
+            "publicFingerprint": "AUC-83508635",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_GOOD",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "reserve": 1,
+            "reserve_met": true,
+            "sale_status": "SOLD",
+            "transactionId": "auction_1_1184214817_0",
+            "winnerId": "bidder_04"
+          },
+          "result": {
+            "bids": [
+              {
+                "amount": 13,
+                "bidderId": "bidder_11"
+              },
+              {
+                "amount": 25,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 37,
+                "bidderId": "bidder_01"
+              },
+              {
+                "amount": 50,
+                "bidderId": "bidder_02"
+              },
+              {
+                "amount": 63,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 77,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 92,
+                "bidderId": "bidder_11"
+              },
+              {
+                "amount": 107,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 123,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 139,
+                "bidderId": "bidder_04"
+              }
+            ],
+            "dropouts": [
+              {
+                "bidderId": "bidder_01",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_02",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_11",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_12",
+                "reason": "VALUE"
+              },
+              {
+                "bidderId": "bidder_03",
+                "reason": "VALUE"
+              }
+            ],
+            "fee": 16,
+            "hammer": 139,
+            "net": 123,
+            "opening": 1,
+            "participants": [
+              {
+                "id": "bidder_11"
+              },
+              {
+                "id": "bidder_12"
+              },
+              {
+                "id": "bidder_01"
+              },
+              {
+                "id": "bidder_02"
+              },
+              {
+                "id": "bidder_03"
+              },
+              {
+                "id": "bidder_04"
+              }
+            ],
+            "publicFingerprint": "AUC-83508635",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              },
+              {
+                "category": "CONDITION",
+                "code": "CONDITION_GOOD",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "reserve": 1,
+            "reserve_met": true,
+            "sale_status": "SOLD",
+            "transactionId": "auction_1_1184214817_0",
+            "winnerId": "bidder_04"
+          },
+          "status": "COMMITTED",
+          "transactionId": "auction_1_1184214817_0"
+        },
+        "factsReadOnly": {
+          "authorityUnchanged": true,
+          "gameRngAfter": "-3378380881708314866",
+          "gameRngBefore": "-3378380881708314866",
+          "globalRngActual": [
+            802395314,
+            888291561
+          ],
+          "globalRngExpected": [
+            802395314,
+            888291561
+          ],
+          "ok": true,
+          "schemaUnchanged": true,
+          "value": {
+            "artifactPresent": true,
+            "auctionStatus": "NONE",
+            "caseBound": false,
+            "caseResolved": false,
+            "hypothesisPrepared": false,
+            "investigated": false,
+            "listed": false,
+            "repairCompleted": true,
+            "repairRequired": false,
+            "sold": false,
+            "transactionId": ""
+          }
+        },
+        "phase": 1,
+        "phaseReadOnly": {
+          "authorityUnchanged": true,
+          "gameRngAfter": "-3378380881708314866",
+          "gameRngBefore": "-3378380881708314866",
+          "globalRngActual": [
+            802395314,
+            888291561
+          ],
+          "globalRngExpected": [
+            802395314,
+            888291561
+          ],
+          "ok": true,
+          "schemaUnchanged": true,
+          "value": 1
+        },
+        "selectedB": {
+          "artifactPresent": true,
+          "auctionStatus": "NONE",
+          "caseBound": false,
+          "caseResolved": false,
+          "hypothesisPrepared": false,
+          "investigated": false,
+          "listed": false,
+          "repairCompleted": true,
+          "repairRequired": false,
+          "sold": false,
+          "transactionId": ""
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-11",
+      "name": "A COMMITTED sale receipt cannot pin newly selected relic B to A's AUCTION journey phase",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "allRowsZero": true,
+        "compass": "STRONGEST CONNECTION · No recurring contact yet   |   ETHICS 60   |   MUSEUM 0",
+        "projectionReadOnly": {
+          "authorityUnchanged": true,
+          "gameRngAfter": "-3378380881708314866",
+          "gameRngBefore": "-3378380881708314866",
+          "globalRngActual": [
+            802395314,
+            888291561
+          ],
+          "globalRngExpected": [
+            802395314,
+            888291561
+          ],
+          "ok": true,
+          "schemaUnchanged": true,
+          "value": {
+            "npcId": "",
+            "relationship": 0,
+            "trust": 0
+          }
+        },
+        "strongest": {
+          "npcId": "",
+          "relationship": 0,
+          "trust": 0
+        },
+        "uiReadOnly": true
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-12",
+      "name": "A fresh profile has no strongest NPC and its relationship compass says that no recurring contact exists",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authorityUnchanged": true,
+        "gameRngAfter": "-3378380881708314866",
+        "gameRngBefore": "-3378380881708314866",
+        "globalRngActual": [
+          4059023663,
+          4245850514
+        ],
+        "globalRngExpected": [
+          4059023663,
+          4245850514
+        ],
+        "lotId": "day_1_lot_00",
+        "origin": {
+          "focusName": "MarketOffer_0",
+          "market": {
+            "lotId": "day_1_lot_00",
+            "state": "OFFER"
+          },
+          "schemaVersion": 1,
+          "screen": "market"
+        },
+        "overlayMirror": {
+          "focusName": "MarketOffer_0",
+          "market": {
+            "lotId": "day_1_lot_00",
+            "state": "OFFER"
+          },
+          "schemaVersion": 1,
+          "screen": "market"
+        },
+        "payloadMirror": {
+          "focusName": "MarketOffer_0",
+          "market": {
+            "lotId": "day_1_lot_00",
+            "state": "OFFER"
+          },
+          "schemaVersion": 1,
+          "screen": "market"
+        },
+        "restoredMirror": {
+          "focusName": "MarketOffer_0",
+          "market": {
+            "lotId": "day_1_lot_00",
+            "state": "OFFER"
+          },
+          "schemaVersion": 1,
+          "screen": "market"
+        },
+        "restoredScreen": "market",
+        "schemaUnchanged": true
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-13",
+      "name": "Settings and locale refresh preserve a market OFFER publicInteraction mirror without save, schema or RNG drift",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "containment": {
+          "actions": {
+            "container": [
+              34.0,
+              82.0,
+              1212.0,
+              526.0
+            ],
+            "control": [
+              42.0,
+              504.0,
+              1196.0,
+              48.0
+            ],
+            "ok": true
+          },
+          "credits": {
+            "container": [
+              34.0,
+              82.0,
+              1212.0,
+              526.0
+            ],
+            "control": [
+              42.0,
+              562.0,
+              1196.0,
+              38.0
+            ],
+            "ok": true
+          },
+          "gallery": {
+            "container": [
+              34.0,
+              82.0,
+              1212.0,
+              526.0
+            ],
+            "control": [
+              42.0,
+              223.0,
+              1196.0,
+              271.0
+            ],
+            "ok": true
+          },
+          "navigation": {
+            "ok": true,
+            "rect": [
+              28.0,
+              620.0,
+              1224.0,
+              46.0
+            ]
+          }
+        },
+        "ending": "ENDING_D",
+        "nonOverlap": {
+          "inside": true,
+          "ok": true,
+          "rects": [
+            {
+              "ok": true,
+              "rect": [
+                42.0,
+                223.0,
+                1196.0,
+                271.0
+              ]
+            },
+            {
+              "ok": true,
+              "rect": [
+                42.0,
+                504.0,
+                1196.0,
+                48.0
+              ]
+            },
+            {
+              "ok": true,
+              "rect": [
+                42.0,
+                562.0,
+                1196.0,
+                38.0
+              ]
+            },
+            {
+              "ok": true,
+              "rect": [
+                28.0,
+                620.0,
+                1224.0,
+                46.0
+              ]
+            }
+          ],
+          "separate": true
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-14",
+      "name": "Postgame credits, ending gallery, actions and navigation remain bounded and non-overlapping at 116 percent text size",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "containment": [
+          {
+            "container": [
+              34.0,
+              82.0,
+              1212.0,
+              526.0
+            ],
+            "control": [
+              42.0,
+              90.0,
+              1196.0,
+              22.0
+            ],
+            "ok": true
+          },
+          {
+            "container": [
+              34.0,
+              82.0,
+              1212.0,
+              526.0
+            ],
+            "control": [
+              443.0,
+              122.0,
+              393.0,
+              78.0
+            ],
+            "ok": true
+          },
+          {
+            "container": [
+              34.0,
+              82.0,
+              1212.0,
+              526.0
+            ],
+            "control": [
+              42.0,
+              210.0,
+              1196.0,
+              40.0
+            ],
+            "ok": true
+          },
+          {
+            "container": [
+              34.0,
+              82.0,
+              1212.0,
+              526.0
+            ],
+            "control": [
+              42.0,
+              297.0,
+              1196.0,
+              222.0
+            ],
+            "ok": true
+          },
+          {
+            "container": [
+              34.0,
+              82.0,
+              1212.0,
+              526.0
+            ],
+            "control": [
+              42.0,
+              529.0,
+              1196.0,
+              58.0
+            ],
+            "ok": true
+          }
+        ],
+        "navigation": {
+          "ok": true,
+          "rect": [
+            28.0,
+            620.0,
+            1224.0,
+            46.0
+          ]
+        },
+        "nonOverlap": {
+          "inside": true,
+          "ok": true,
+          "rects": [
+            {
+              "ok": true,
+              "rect": [
+                42.0,
+                90.0,
+                1196.0,
+                22.0
+              ]
+            },
+            {
+              "ok": true,
+              "rect": [
+                443.0,
+                122.0,
+                393.0,
+                78.0
+              ]
+            },
+            {
+              "ok": true,
+              "rect": [
+                42.0,
+                210.0,
+                1196.0,
+                40.0
+              ]
+            },
+            {
+              "ok": true,
+              "rect": [
+                42.0,
+                297.0,
+                1196.0,
+                222.0
+              ]
+            },
+            {
+              "ok": true,
+              "rect": [
+                42.0,
+                529.0,
+                1196.0,
+                58.0
+              ]
+            },
+            {
+              "ok": true,
+              "rect": [
+                28.0,
+                620.0,
+                1224.0,
+                46.0
+              ]
+            }
+          ],
+          "separate": true
+        },
+        "readOnly": true,
+        "relationshipHidden": true
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-15",
+      "name": "A populated Stage Clear Campaign remains bounded and vertically non-overlapping at 116 percent text size",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "authorityUnchanged": true,
+        "invalid": [
+          {
+            "failedClosed": true,
+            "fixture": "string",
+            "result": {
+              "code": "INVALID_PUBLIC_INTERACTION",
+              "ok": false
+            }
+          },
+          {
+            "failedClosed": true,
+            "fixture": "array",
+            "result": {
+              "code": "INVALID_PUBLIC_INTERACTION",
+              "ok": false
+            }
+          },
+          {
+            "failedClosed": true,
+            "fixture": "unknown screen",
+            "result": {
+              "code": "INVALID_PUBLIC_INTERACTION",
+              "ok": false
+            }
+          },
+          {
+            "failedClosed": true,
+            "fixture": "invalid market state",
+            "result": {
+              "code": "INVALID_PUBLIC_INTERACTION",
+              "ok": false
+            }
+          },
+          {
+            "failedClosed": true,
+            "fixture": "negative auction cue",
+            "result": {
+              "code": "INVALID_PUBLIC_INTERACTION",
+              "ok": false
+            }
+          },
+          {
+            "failedClosed": true,
+            "fixture": "nonnumeric auction cue",
+            "result": {
+              "code": "INVALID_PUBLIC_INTERACTION",
+              "ok": false
+            }
+          }
+        ],
+        "profileDiskUnchanged": true,
+        "rngAfter": "-3378380881708314866",
+        "rngBefore": "-3378380881708314866",
+        "runDiskUnchanged": true,
+        "schemaUnchanged": true,
+        "settingsDiskUnchanged": true,
+        "valid": {
+          "code": "OK",
+          "ok": true
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-16",
+      "name": "Save validation accepts a shaped public interaction and rejects malformed mirrors with one fail-closed code",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cleared": {
+          "facts": {
+            "artifactPresent": true,
+            "auctionStatus": "NONE",
+            "caseBound": false,
+            "caseResolved": false,
+            "hypothesisPrepared": true,
+            "investigated": true,
+            "listed": false,
+            "repairCompleted": true,
+            "repairRequired": false,
+            "sold": false,
+            "transactionId": ""
+          },
+          "factsReadOnly": {
+            "authorityUnchanged": true,
+            "gameRngAfter": "-3378380881708314866",
+            "gameRngBefore": "-3378380881708314866",
+            "globalRngActual": [
+              802395314,
+              888291561
+            ],
+            "globalRngExpected": [
+              802395314,
+              888291561
+            ],
+            "ok": true,
+            "schemaUnchanged": true,
+            "value": {
+              "artifactPresent": true,
+              "auctionStatus": "NONE",
+              "caseBound": false,
+              "caseResolved": false,
+              "hypothesisPrepared": true,
+              "investigated": true,
+              "listed": false,
+              "repairCompleted": true,
+              "repairRequired": false,
+              "sold": false,
+              "transactionId": ""
+            }
+          },
+          "phase": 4,
+          "phaseReadOnly": {
+            "authorityUnchanged": true,
+            "gameRngAfter": "-3378380881708314866",
+            "gameRngBefore": "-3378380881708314866",
+            "globalRngActual": [
+              802395314,
+              888291561
+            ],
+            "globalRngExpected": [
+              802395314,
+              888291561
+            ],
+            "ok": true,
+            "schemaUnchanged": true,
+            "value": 4
+          }
+        },
+        "damaged": {
+          "facts": {
+            "artifactPresent": true,
+            "auctionStatus": "NONE",
+            "caseBound": false,
+            "caseResolved": false,
+            "hypothesisPrepared": true,
+            "investigated": true,
+            "listed": false,
+            "repairCompleted": false,
+            "repairRequired": true,
+            "sold": false,
+            "transactionId": ""
+          },
+          "factsReadOnly": {
+            "authorityUnchanged": true,
+            "gameRngAfter": "-3378380881708314866",
+            "gameRngBefore": "-3378380881708314866",
+            "globalRngActual": [
+              802395314,
+              888291561
+            ],
+            "globalRngExpected": [
+              802395314,
+              888291561
+            ],
+            "ok": true,
+            "schemaUnchanged": true,
+            "value": {
+              "artifactPresent": true,
+              "auctionStatus": "NONE",
+              "caseBound": false,
+              "caseResolved": false,
+              "hypothesisPrepared": true,
+              "investigated": true,
+              "listed": false,
+              "repairCompleted": false,
+              "repairRequired": true,
+              "sold": false,
+              "transactionId": ""
+            }
+          },
+          "phase": 3,
+          "phaseReadOnly": {
+            "authorityUnchanged": true,
+            "gameRngAfter": "-3378380881708314866",
+            "gameRngBefore": "-3378380881708314866",
+            "globalRngActual": [
+              802395314,
+              888291561
+            ],
+            "globalRngExpected": [
+              802395314,
+              888291561
+            ],
+            "ok": true,
+            "schemaUnchanged": true,
+            "value": 3
+          }
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-17",
+      "name": "Current repairable damage overrides stale repaired metadata until preservation is actually complete",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "en": {
+          "cardCount": 8,
+          "cards": [
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "control": [
+                42.0,
+                201.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "control": [
+                634.0,
+                201.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "control": [
+                42.0,
+                265.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "control": [
+                634.0,
+                265.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "control": [
+                42.0,
+                329.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "control": [
+                634.0,
+                329.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "control": [
+                42.0,
+                393.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "control": [
+                634.0,
+                393.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            }
+          ],
+          "containment": [
+            {
+              "container": [
+                34.0,
+                82.0,
+                1212.0,
+                526.0
+              ],
+              "control": [
+                42.0,
+                90.0,
+                1196.0,
+                52.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                34.0,
+                82.0,
+                1212.0,
+                526.0
+              ],
+              "control": [
+                42.0,
+                158.0,
+                844.0,
+                27.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                34.0,
+                82.0,
+                1212.0,
+                526.0
+              ],
+              "control": [
+                42.0,
+                201.0,
+                1196.0,
+                313.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                34.0,
+                82.0,
+                1212.0,
+                526.0
+              ],
+              "control": [
+                42.0,
+                524.0,
+                1196.0,
+                76.0
+              ],
+              "ok": true
+            }
+          ],
+          "inspectInDetail": {
+            "container": [
+              42.0,
+              524.0,
+              1196.0,
+              76.0
+            ],
+            "control": [
+              978.0,
+              529.0,
+              250.0,
+              66.0
+            ],
+            "ok": true
+          },
+          "journeySuppressed": true,
+          "navigation": {
+            "ok": true,
+            "rect": [
+              28.0,
+              620.0,
+              1224.0,
+              46.0
+            ]
+          },
+          "ok": true,
+          "receiptChildren": 3,
+          "receiptHeadingSuppressed": true,
+          "sequence": {
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  90.0,
+                  1196.0,
+                  52.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  158.0,
+                  844.0,
+                  27.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  201.0,
+                  1196.0,
+                  313.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  524.0,
+                  1196.0,
+                  76.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  28.0,
+                  620.0,
+                  1224.0,
+                  46.0
+                ]
+              }
+            ],
+            "separate": true
+          }
+        },
+        "inventoryCount": 8,
+        "ko": {
+          "cardCount": 8,
+          "cards": [
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "control": [
+                42.0,
+                201.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "control": [
+                634.0,
+                201.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "control": [
+                42.0,
+                265.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "control": [
+                634.0,
+                265.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "control": [
+                42.0,
+                329.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "control": [
+                634.0,
+                329.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "control": [
+                42.0,
+                393.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "control": [
+                634.0,
+                393.0,
+                584.0,
+                58.0
+              ],
+              "ok": true
+            }
+          ],
+          "containment": [
+            {
+              "container": [
+                34.0,
+                82.0,
+                1212.0,
+                526.0
+              ],
+              "control": [
+                42.0,
+                90.0,
+                1196.0,
+                52.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                34.0,
+                82.0,
+                1212.0,
+                526.0
+              ],
+              "control": [
+                42.0,
+                158.0,
+                844.0,
+                27.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                34.0,
+                82.0,
+                1212.0,
+                526.0
+              ],
+              "control": [
+                42.0,
+                201.0,
+                1196.0,
+                311.0
+              ],
+              "ok": true
+            },
+            {
+              "container": [
+                34.0,
+                82.0,
+                1212.0,
+                526.0
+              ],
+              "control": [
+                42.0,
+                522.0,
+                1196.0,
+                78.0
+              ],
+              "ok": true
+            }
+          ],
+          "inspectInDetail": {
+            "container": [
+              42.0,
+              522.0,
+              1196.0,
+              78.0
+            ],
+            "control": [
+              978.0,
+              527.0,
+              250.0,
+              68.0
+            ],
+            "ok": true
+          },
+          "journeySuppressed": true,
+          "navigation": {
+            "ok": true,
+            "rect": [
+              28.0,
+              620.0,
+              1224.0,
+              46.0
+            ]
+          },
+          "ok": true,
+          "receiptChildren": 3,
+          "receiptHeadingSuppressed": true,
+          "sequence": {
+            "inside": true,
+            "ok": true,
+            "rects": [
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  90.0,
+                  1196.0,
+                  52.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  158.0,
+                  844.0,
+                  27.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  201.0,
+                  1196.0,
+                  311.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  42.0,
+                  522.0,
+                  1196.0,
+                  78.0
+                ]
+              },
+              {
+                "ok": true,
+                "rect": [
+                  28.0,
+                  620.0,
+                  1224.0,
+                  46.0
+                ]
+              }
+            ],
+            "separate": true
+          }
+        },
+        "readOnly": true,
+        "receipt": {
+          "bids": [
+            {
+              "amount": 13,
+              "bidderId": "bidder_12"
+            },
+            {
+              "amount": 25,
+              "bidderId": "bidder_01"
+            },
+            {
+              "amount": 37,
+              "bidderId": "bidder_02"
+            },
+            {
+              "amount": 50,
+              "bidderId": "bidder_03"
+            },
+            {
+              "amount": 63,
+              "bidderId": "bidder_04"
+            },
+            {
+              "amount": 77,
+              "bidderId": "bidder_05"
+            },
+            {
+              "amount": 92,
+              "bidderId": "bidder_12"
+            },
+            {
+              "amount": 107,
+              "bidderId": "bidder_01"
+            },
+            {
+              "amount": 122,
+              "bidderId": "bidder_02"
+            },
+            {
+              "amount": 138,
+              "bidderId": "bidder_04"
+            },
+            {
+              "amount": 155,
+              "bidderId": "bidder_05"
+            }
+          ],
+          "code": "OK",
+          "dropouts": [
+            {
+              "bidderId": "bidder_03",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_12",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_01",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_02",
+              "reason": "VALUE"
+            },
+            {
+              "bidderId": "bidder_04",
+              "reason": "VALUE"
+            }
+          ],
+          "fee": 0,
+          "hammer": 155,
+          "idempotent": false,
+          "net": 0,
+          "ok": true,
+          "opening": 1,
+          "participants": [
+            {
+              "id": "bidder_12"
+            },
+            {
+              "id": "bidder_01"
+            },
+            {
+              "id": "bidder_02"
+            },
+            {
+              "id": "bidder_03"
+            },
+            {
+              "id": "bidder_04"
+            },
+            {
+              "id": "bidder_05"
+            }
+          ],
+          "publicFingerprint": "AUC-1493656642",
+          "reasonTags": [
+            {
+              "category": "PRICE",
+              "code": "RESERVE_TOO_HIGH",
+              "polarity": "NEGATIVE"
+            }
+          ],
+          "reserve": 1000000,
+          "reserve_met": false,
+          "sale_status": "NO_SALE",
+          "status": "COMMITTED",
+          "transactionId": "auction_1_2007301145_0",
+          "winnerId": "bidder_05"
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-18",
+      "name": "An eight-card inventory with a committed NO SALE receipt stays bounded and vertically disjoint in KO and EN at 116 percent",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "grandReserve": {
+          "begin": {
+            "activeArtifact": {
+              "artifactSpecId": "artifact_077",
+              "category": "railway_signaling",
+              "damageInstances": [
+                "CRACK",
+                "RUST",
+                "DUST"
+              ],
+              "displayName": "Enamel Railway Signal Lantern",
+              "instanceId": "stage_10_checkpoint_01",
+              "partStates": {},
+              "specId": "artifact_077",
+              "uniqueId": "stage_10_checkpoint_01",
+              "visualSignature": {}
+            },
+            "activeTransactionId": "auction_1_1196573125_0",
+            "code": "OK",
+            "currentLotIndex": 0,
+            "finalizationReceiptId": "",
+            "lotUids": [
+              "stage_10_checkpoint_01",
+              "stage_10_checkpoint_02",
+              "stage_10_checkpoint_03"
+            ],
+            "ok": true,
+            "pending": {
+              "artifactId": "stage_10_checkpoint_01",
+              "code": "OK",
+              "createdDay": 1,
+              "cueIndex": 0,
+              "cueQueue": [
+                {
+                  "bidderId": "bidder_12",
+                  "phase": "ENTRY",
+                  "reasonTags": [],
+                  "visibleBids": []
+                },
+                {
+                  "amount": 1,
+                  "bidderId": "bidder_12",
+                  "phase": "CALL",
+                  "reasonTags": [],
+                  "visibleBids": []
+                },
+                {
+                  "amount": 1254,
+                  "bidderId": "bidder_12",
+                  "phase": "BID",
+                  "reasonTags": [
+                    {
+                      "category": "PROVENANCE",
+                      "code": "PROVENANCE_STRONG",
+                      "polarity": "POSITIVE"
+                    }
+                  ],
+                  "visibleBids": [
+                    {
+                      "amount": 1254,
+                      "bidderId": "bidder_12"
+                    }
+                  ]
+                },
+                {
+                  "amount": 1309,
+                  "bidderId": "bidder_07",
+                  "phase": "BID",
+                  "reasonTags": [
+                    {
+                      "category": "PROVENANCE",
+                      "code": "PROVENANCE_STRONG",
+                      "polarity": "POSITIVE"
+                    }
+                  ],
+                  "visibleBids": [
+                    {
+                      "amount": 1254,
+                      "bidderId": "bidder_12"
+                    },
+                    {
+                      "amount": 1309,
+                      "bidderId": "bidder_07"
+                    }
+                  ]
+                },
+                {
+                  "amount": 1377,
+                  "bidderId": "bidder_12",
+                  "phase": "BID",
+                  "reasonTags": [
+                    {
+                      "category": "PROVENANCE",
+                      "code": "PROVENANCE_STRONG",
+                      "polarity": "POSITIVE"
+                    }
+                  ],
+                  "visibleBids": [
+                    {
+                      "amount": 1254,
+                      "bidderId": "bidder_12"
+                    },
+                    {
+                      "amount": 1309,
+                      "bidderId": "bidder_07"
+                    },
+                    {
+                      "amount": 1377,
+                      "bidderId": "bidder_12"
+                    }
+                  ]
+                },
+                {
+                  "bidderId": "bidder_07",
+                  "dropoutReason": "BUDGET",
+                  "phase": "DROPOUT",
+                  "reasonTags": [
+                    {
+                      "category": "CONDITION",
+                      "code": "CONDITION_RISK",
+                      "polarity": "NEGATIVE"
+                    },
+                    {
+                      "category": "DISCLOSURE",
+                      "code": "DISCLOSURE_UNCLEAR",
+                      "polarity": "NEGATIVE"
+                    }
+                  ],
+                  "visibleBids": [
+                    {
+                      "amount": 1254,
+                      "bidderId": "bidder_12"
+                    },
+                    {
+                      "amount": 1309,
+                      "bidderId": "bidder_07"
+                    },
+                    {
+                      "amount": 1377,
+                      "bidderId": "bidder_12"
+                    }
+                  ]
+                },
+                {
+                  "amount": 1377,
+                  "bidderId": "bidder_12",
+                  "dropoutReason": "BUDGET",
+                  "phase": "SOLD",
+                  "reasonTags": [
+                    {
+                      "category": "PROVENANCE",
+                      "code": "PROVENANCE_STRONG",
+                      "polarity": "POSITIVE"
+                    }
+                  ],
+                  "visibleBids": [
+                    {
+                      "amount": 1191,
+                      "bidderId": "bidder_07"
+                    },
+                    {
+                      "amount": 1254,
+                      "bidderId": "bidder_12"
+                    },
+                    {
+                      "amount": 1309,
+                      "bidderId": "bidder_07"
+                    },
+                    {
+                      "amount": 1377,
+                      "bidderId": "bidder_12"
+                    }
+                  ]
+                }
+              ],
+              "decisions": {
+                "activeModifiers": {
+                  "appraisalPrecision": 0,
+                  "auctionFeeReduction": 0,
+                  "bidderReach": 0,
+                  "displayBonus": 0,
+                  "listingBonus": 0,
+                  "marketAll": 0,
+                  "marketCategory": 0,
+                  "stageDifficulty": 1.838459
+                },
+                "condition": {
+                  "cleanliness": 18,
+                  "mechanical": 42,
+                  "surface": 55
+                },
+                "day": 1,
+                "disclosure": "CERTAIN",
+                "grandReserve": true,
+                "listingUid": "stage_10_checkpoint_01",
+                "provenanceKnown": true,
+                "publicAppraisal": 2569,
+                "reportedConfidence": 0.9,
+                "reserve": 1,
+                "reserveRatio": 0.0004,
+                "specId": "artifact_077",
+                "stage": 10,
+                "starting": 1,
+                "startingRatio": 0.0004,
+                "substantiation": "NO_CASE"
+              },
+              "grandReserve": true,
+              "ok": true,
+              "publicFingerprint": "AUC-916699545",
+              "receipt": {},
+              "result": {
+                "bids": [
+                  {
+                    "amount": 13,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 25,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 37,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 50,
+                    "bidderId": "bidder_03"
+                  },
+                  {
+                    "amount": 63,
+                    "bidderId": "bidder_04"
+                  },
+                  {
+                    "amount": 77,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 92,
+                    "bidderId": "bidder_06"
+                  },
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_07"
+                  },
+                  {
+                    "amount": 123,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 139,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 156,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 173,
+                    "bidderId": "bidder_03"
+                  },
+                  {
+                    "amount": 191,
+                    "bidderId": "bidder_04"
+                  },
+                  {
+                    "amount": 210,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 231,
+                    "bidderId": "bidder_06"
+                  },
+                  {
+                    "amount": 251,
+                    "bidderId": "bidder_07"
+                  },
+                  {
+                    "amount": 273,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 294,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 316,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 340,
+                    "bidderId": "bidder_03"
+                  },
+                  {
+                    "amount": 365,
+                    "bidderId": "bidder_04"
+                  },
+                  {
+                    "amount": 392,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 420,
+                    "bidderId": "bidder_06"
+                  },
+                  {
+                    "amount": 446,
+                    "bidderId": "bidder_07"
+                  },
+                  {
+                    "amount": 477,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 505,
+                    "bidderId": "bidder_01"
+                  },
+                  {
+                    "amount": 535,
+                    "bidderId": "bidder_02"
+                  },
+                  {
+                    "amount": 567,
+                    "bidderId": "bidder_03"
+                  },
+                  {
+                    "amount": 601,
+                    "bidderId": "bidder_04"
+                  },
+                  {
+                    "amount": 637,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 676,
+                    "bidderId": "bidder_06"
+                  },
+                  {
+                    "amount": 711,
+                    "bidderId": "bidder_07"
+                  },
+                  {
+                    "amount": 753,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 793,
+                    "bidderId": "bidder_03"
+                  },
+                  {
+                    "amount": 836,
+                    "bidderId": "bidder_04"
+                  },
+                  {
+                    "amount": 882,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 931,
+                    "bidderId": "bidder_06"
+                  },
+                  {
+                    "amount": 975,
+                    "bidderId": "bidder_07"
+                  },
+                  {
+                    "amount": 1028,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 1082,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 1140,
+                    "bidderId": "bidder_06"
+                  },
+                  {
+                    "amount": 1191,
+                    "bidderId": "bidder_07"
+                  },
+                  {
+                    "amount": 1254,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 1309,
+                    "bidderId": "bidder_07"
+                  },
+                  {
+                    "amount": 1377,
+                    "bidderId": "bidder_12"
+                  }
+                ],
+                "dropouts": [
+                  {
+                    "bidderId": "bidder_01",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_02",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_03",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_04",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_05",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_06",
+                    "reason": "BUDGET"
+                  },
+                  {
+                    "bidderId": "bidder_07",
+                    "reason": "BUDGET"
+                  }
+                ],
+                "fee": 165,
+                "hammer": 1377,
+                "net": 1212,
+                "opening": 1,
+                "participants": [
+                  {
+                    "id": "bidder_12"
+                  },
+                  {
+                    "id": "bidder_01"
+                  },
+                  {
+                    "id": "bidder_02"
+                  },
+                  {
+                    "id": "bidder_03"
+                  },
+                  {
+                    "id": "bidder_04"
+                  },
+                  {
+                    "id": "bidder_05"
+                  },
+                  {
+                    "id": "bidder_06"
+                  },
+                  {
+                    "id": "bidder_07"
+                  }
+                ],
+                "publicFingerprint": "AUC-916699545",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "reserve": 1,
+                "reserve_met": true,
+                "sale_status": "SOLD",
+                "transactionId": "auction_1_1196573125_0",
+                "winnerId": "bidder_12"
+              },
+              "status": "PENDING",
+              "transactionId": "auction_1_1196573125_0"
+            },
+            "phase": "AUCTION_PENDING",
+            "receipts": [],
+            "reserveRunId": "grand_reserve_10_1_1647592183",
+            "schemaVersion": 1
+          },
+          "betweenGeometry": {
+            "containment": [
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  173.0,
+                  672.0,
+                  58.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  238.0,
+                  672.0,
+                  42.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  287.0,
+                  672.0,
+                  39.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  333.0,
+                  672.0,
+                  52.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  746.0,
+                  555.0,
+                  260.0,
+                  37.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  505.0,
+                  672.0,
+                  28.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  540.0,
+                  672.0,
+                  52.0
+                ],
+                "ok": true
+              }
+            ],
+            "cta": "GrandReserveNextLot",
+            "ctaContainment": {
+              "container": [
+                52.0,
+                238.0,
+                672.0,
+                42.0
+              ],
+              "control": [
+                52.0,
+                238.0,
+                672.0,
+                42.0
+              ],
+              "ok": true
+            },
+            "journeySuppressed": true,
+            "navigation": {
+              "ok": true,
+              "rect": [
+                28.0,
+                620.0,
+                1224.0,
+                46.0
+              ]
+            },
+            "nonOverlap": {
+              "inside": true,
+              "ok": true,
+              "rects": [
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    173.0,
+                    672.0,
+                    58.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    238.0,
+                    672.0,
+                    42.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    287.0,
+                    672.0,
+                    39.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    333.0,
+                    672.0,
+                    52.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    746.0,
+                    555.0,
+                    260.0,
+                    37.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    505.0,
+                    672.0,
+                    28.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    540.0,
+                    672.0,
+                    52.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    28.0,
+                    620.0,
+                    1224.0,
+                    46.0
+                  ]
+                }
+              ],
+              "separate": true
+            },
+            "ok": true,
+            "phase": "SOLD",
+            "primaryCopy": "판매 완료 · ¤1377",
+            "recapChildren": 3,
+            "visibleBidCount": 4
+          },
+          "betweenReadOnly": true,
+          "caseFailures": [],
+          "commit": {
+            "bids": [
+              {
+                "amount": 13,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 25,
+                "bidderId": "bidder_01"
+              },
+              {
+                "amount": 37,
+                "bidderId": "bidder_02"
+              },
+              {
+                "amount": 50,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 63,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 77,
+                "bidderId": "bidder_05"
+              },
+              {
+                "amount": 92,
+                "bidderId": "bidder_06"
+              },
+              {
+                "amount": 107,
+                "bidderId": "bidder_07"
+              },
+              {
+                "amount": 123,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 139,
+                "bidderId": "bidder_01"
+              },
+              {
+                "amount": 156,
+                "bidderId": "bidder_02"
+              },
+              {
+                "amount": 173,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 191,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 210,
+                "bidderId": "bidder_05"
+              },
+              {
+                "amount": 231,
+                "bidderId": "bidder_06"
+              },
+              {
+                "amount": 251,
+                "bidderId": "bidder_07"
+              },
+              {
+                "amount": 273,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 294,
+                "bidderId": "bidder_01"
+              },
+              {
+                "amount": 316,
+                "bidderId": "bidder_02"
+              },
+              {
+                "amount": 340,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 365,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 392,
+                "bidderId": "bidder_05"
+              },
+              {
+                "amount": 420,
+                "bidderId": "bidder_06"
+              },
+              {
+                "amount": 446,
+                "bidderId": "bidder_07"
+              },
+              {
+                "amount": 477,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 505,
+                "bidderId": "bidder_01"
+              },
+              {
+                "amount": 535,
+                "bidderId": "bidder_02"
+              },
+              {
+                "amount": 567,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 601,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 637,
+                "bidderId": "bidder_05"
+              },
+              {
+                "amount": 676,
+                "bidderId": "bidder_06"
+              },
+              {
+                "amount": 711,
+                "bidderId": "bidder_07"
+              },
+              {
+                "amount": 753,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 793,
+                "bidderId": "bidder_03"
+              },
+              {
+                "amount": 836,
+                "bidderId": "bidder_04"
+              },
+              {
+                "amount": 882,
+                "bidderId": "bidder_05"
+              },
+              {
+                "amount": 931,
+                "bidderId": "bidder_06"
+              },
+              {
+                "amount": 975,
+                "bidderId": "bidder_07"
+              },
+              {
+                "amount": 1028,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 1082,
+                "bidderId": "bidder_05"
+              },
+              {
+                "amount": 1140,
+                "bidderId": "bidder_06"
+              },
+              {
+                "amount": 1191,
+                "bidderId": "bidder_07"
+              },
+              {
+                "amount": 1254,
+                "bidderId": "bidder_12"
+              },
+              {
+                "amount": 1309,
+                "bidderId": "bidder_07"
+              },
+              {
+                "amount": 1377,
+                "bidderId": "bidder_12"
+              }
+            ],
+            "code": "OK",
+            "dropouts": [
+              {
+                "bidderId": "bidder_01",
+                "reason": "BUDGET"
+              },
+              {
+                "bidderId": "bidder_02",
+                "reason": "BUDGET"
+              },
+              {
+                "bidderId": "bidder_03",
+                "reason": "BUDGET"
+              },
+              {
+                "bidderId": "bidder_04",
+                "reason": "BUDGET"
+              },
+              {
+                "bidderId": "bidder_05",
+                "reason": "BUDGET"
+              },
+              {
+                "bidderId": "bidder_06",
+                "reason": "BUDGET"
+              },
+              {
+                "bidderId": "bidder_07",
+                "reason": "BUDGET"
+              }
+            ],
+            "fee": 165,
+            "grandReservePhase": "BETWEEN_LOTS",
+            "hammer": 1377,
+            "idempotent": false,
+            "net": 1212,
+            "ok": true,
+            "opening": 1,
+            "participants": [
+              {
+                "id": "bidder_12"
+              },
+              {
+                "id": "bidder_01"
+              },
+              {
+                "id": "bidder_02"
+              },
+              {
+                "id": "bidder_03"
+              },
+              {
+                "id": "bidder_04"
+              },
+              {
+                "id": "bidder_05"
+              },
+              {
+                "id": "bidder_06"
+              },
+              {
+                "id": "bidder_07"
+              }
+            ],
+            "publicFingerprint": "AUC-916699545",
+            "reasonTags": [
+              {
+                "category": "PROVENANCE",
+                "code": "PROVENANCE_STRONG",
+                "polarity": "POSITIVE"
+              }
+            ],
+            "reserve": 1,
+            "reserve_met": true,
+            "sale_status": "SOLD",
+            "status": "COMMITTED",
+            "transactionId": "auction_1_1196573125_0",
+            "winnerId": "bidder_12"
+          },
+          "lotUids": [
+            "stage_10_checkpoint_01",
+            "stage_10_checkpoint_02",
+            "stage_10_checkpoint_03"
+          ],
+          "started": {
+            "code": "OK",
+            "difficultyMultiplier": 1.83845921242015,
+            "ok": true,
+            "stage": 10
+          },
+          "terminalGeometry": {
+            "containment": [
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  173.0,
+                  672.0,
+                  58.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  238.0,
+                  672.0,
+                  42.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  287.0,
+                  672.0,
+                  39.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  333.0,
+                  672.0,
+                  52.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  746.0,
+                  555.0,
+                  260.0,
+                  37.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  505.0,
+                  672.0,
+                  28.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  540.0,
+                  672.0,
+                  52.0
+                ],
+                "ok": true
+              }
+            ],
+            "cta": "HammerButton",
+            "ctaContainment": {
+              "container": [
+                52.0,
+                238.0,
+                672.0,
+                42.0
+              ],
+              "control": [
+                52.0,
+                238.0,
+                672.0,
+                42.0
+              ],
+              "ok": true
+            },
+            "journeySuppressed": true,
+            "navigation": {
+              "ok": true,
+              "rect": [
+                28.0,
+                620.0,
+                1224.0,
+                46.0
+              ]
+            },
+            "nonOverlap": {
+              "inside": true,
+              "ok": true,
+              "rects": [
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    173.0,
+                    672.0,
+                    58.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    238.0,
+                    672.0,
+                    42.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    287.0,
+                    672.0,
+                    39.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    333.0,
+                    672.0,
+                    52.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    746.0,
+                    555.0,
+                    260.0,
+                    37.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    505.0,
+                    672.0,
+                    28.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    540.0,
+                    672.0,
+                    52.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    28.0,
+                    620.0,
+                    1224.0,
+                    46.0
+                  ]
+                }
+              ],
+              "separate": true
+            },
+            "ok": true,
+            "phase": "SOLD",
+            "primaryCopy": "판매 완료 · ¤1377",
+            "recapChildren": 3,
+            "visibleBidCount": 4
+          },
+          "terminalPhases": [
+            "ENTRY",
+            "CALL",
+            "BID",
+            "BID",
+            "BID",
+            "DROPOUT",
+            "SOLD"
+          ],
+          "terminalReadOnly": true
+        },
+        "ordinaryNoSale": {
+          "geometry": {
+            "containment": [
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  139.0,
+                  672.0,
+                  58.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  204.0,
+                  672.0,
+                  42.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  253.0,
+                  672.0,
+                  39.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  299.0,
+                  672.0,
+                  52.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  746.0,
+                  495.0,
+                  260.0,
+                  37.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  505.0,
+                  672.0,
+                  28.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  540.0,
+                  672.0,
+                  52.0
+                ],
+                "ok": true
+              }
+            ],
+            "cta": "HammerButton",
+            "ctaContainment": {
+              "container": [
+                52.0,
+                204.0,
+                672.0,
+                42.0
+              ],
+              "control": [
+                52.0,
+                204.0,
+                672.0,
+                42.0
+              ],
+              "ok": true
+            },
+            "journeySuppressed": true,
+            "navigation": {
+              "ok": true,
+              "rect": [
+                28.0,
+                620.0,
+                1224.0,
+                46.0
+              ]
+            },
+            "nonOverlap": {
+              "inside": true,
+              "ok": true,
+              "rects": [
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    139.0,
+                    672.0,
+                    58.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    204.0,
+                    672.0,
+                    42.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    253.0,
+                    672.0,
+                    39.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    299.0,
+                    672.0,
+                    52.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    746.0,
+                    495.0,
+                    260.0,
+                    37.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    505.0,
+                    672.0,
+                    28.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    540.0,
+                    672.0,
+                    52.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    28.0,
+                    620.0,
+                    1224.0,
+                    46.0
+                  ]
+                }
+              ],
+              "separate": true
+            },
+            "ok": true,
+            "phase": "NO_SALE",
+            "primaryCopy": "최저가 미달 / 유찰 · 최고 ¤123",
+            "recapChildren": 3,
+            "visibleBidCount": 4
+          },
+          "pending": {
+            "artifactId": "product_direction_terminal_no_sale",
+            "code": "OK",
+            "createdDay": 1,
+            "cueIndex": 0,
+            "cueQueue": [
+              {
+                "bidderId": "bidder_05",
+                "phase": "ENTRY",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 1,
+                "bidderId": "bidder_05",
+                "phase": "CALL",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 92,
+                "bidderId": "bidder_05",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 92,
+                    "bidderId": "bidder_05"
+                  }
+                ]
+              },
+              {
+                "amount": 107,
+                "bidderId": "bidder_08",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 92,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_08"
+                  }
+                ]
+              },
+              {
+                "amount": 123,
+                "bidderId": "bidder_10",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 92,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_08"
+                  },
+                  {
+                    "amount": 123,
+                    "bidderId": "bidder_10"
+                  }
+                ]
+              },
+              {
+                "bidderId": "bidder_08",
+                "dropoutReason": "VALUE",
+                "phase": "DROPOUT",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 92,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_08"
+                  },
+                  {
+                    "amount": 123,
+                    "bidderId": "bidder_10"
+                  }
+                ]
+              },
+              {
+                "amount": 123,
+                "bidderId": "bidder_10",
+                "dropoutReason": "VALUE",
+                "phase": "NO_SALE",
+                "reasonTags": [
+                  {
+                    "category": "PRICE",
+                    "code": "RESERVE_TOO_HIGH",
+                    "polarity": "NEGATIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 77,
+                    "bidderId": "bidder_10"
+                  },
+                  {
+                    "amount": 92,
+                    "bidderId": "bidder_05"
+                  },
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_08"
+                  },
+                  {
+                    "amount": 123,
+                    "bidderId": "bidder_10"
+                  }
+                ]
+              }
+            ],
+            "decisions": {
+              "activeModifiers": {
+                "appraisalPrecision": 0,
+                "auctionFeeReduction": 0,
+                "bidderReach": 0,
+                "displayBonus": 0,
+                "listingBonus": 0,
+                "marketAll": 0,
+                "marketCategory": 10,
+                "stageDifficulty": 1.07
+              },
+              "condition": {
+                "cleanliness": 100,
+                "mechanical": 100,
+                "surface": 100
+              },
+              "day": 1,
+              "disclosure": "CERTAIN",
+              "grandReserve": false,
+              "listingUid": "product_direction_terminal_no_sale",
+              "provenanceKnown": true,
+              "publicAppraisal": 92,
+              "reportedConfidence": 0.94,
+              "reserve": 1000000,
+              "reserveRatio": 10869.5652,
+              "specId": "artifact_001",
+              "stage": 2,
+              "starting": 1,
+              "startingRatio": 0.0109,
+              "substantiation": "NO_CASE"
+            },
+            "grandReserve": false,
+            "ok": true,
+            "publicFingerprint": "AUC-24200057",
+            "receipt": {},
+            "result": {
+              "bids": [
+                {
+                  "amount": 13,
+                  "bidderId": "bidder_05"
+                },
+                {
+                  "amount": 25,
+                  "bidderId": "bidder_06"
+                },
+                {
+                  "amount": 37,
+                  "bidderId": "bidder_07"
+                },
+                {
+                  "amount": 50,
+                  "bidderId": "bidder_08"
+                },
+                {
+                  "amount": 63,
+                  "bidderId": "bidder_09"
+                },
+                {
+                  "amount": 77,
+                  "bidderId": "bidder_10"
+                },
+                {
+                  "amount": 92,
+                  "bidderId": "bidder_05"
+                },
+                {
+                  "amount": 107,
+                  "bidderId": "bidder_08"
+                },
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_10"
+                }
+              ],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_06",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_07",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_09",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_05",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_08",
+                  "reason": "VALUE"
+                }
+              ],
+              "fee": 0,
+              "hammer": 123,
+              "net": 0,
+              "opening": 1,
+              "participants": [
+                {
+                  "id": "bidder_05"
+                },
+                {
+                  "id": "bidder_06"
+                },
+                {
+                  "id": "bidder_07"
+                },
+                {
+                  "id": "bidder_08"
+                },
+                {
+                  "id": "bidder_09"
+                },
+                {
+                  "id": "bidder_10"
+                }
+              ],
+              "publicFingerprint": "AUC-24200057",
+              "reasonTags": [
+                {
+                  "category": "PRICE",
+                  "code": "RESERVE_TOO_HIGH",
+                  "polarity": "NEGATIVE"
+                }
+              ],
+              "reserve": 1000000,
+              "reserve_met": false,
+              "sale_status": "NO_SALE",
+              "transactionId": "auction_1_369313143_0",
+              "winnerId": "bidder_10"
+            },
+            "status": "PENDING",
+            "transactionId": "auction_1_369313143_0"
+          },
+          "phases": [
+            "ENTRY",
+            "CALL",
+            "BID",
+            "BID",
+            "BID",
+            "DROPOUT",
+            "NO_SALE"
+          ],
+          "readOnly": true
+        },
+        "ordinarySold": {
+          "geometry": {
+            "containment": [
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  139.0,
+                  672.0,
+                  58.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  204.0,
+                  672.0,
+                  42.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  253.0,
+                  672.0,
+                  39.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  299.0,
+                  672.0,
+                  52.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  746.0,
+                  521.0,
+                  260.0,
+                  37.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  505.0,
+                  672.0,
+                  28.0
+                ],
+                "ok": true
+              },
+              {
+                "container": [
+                  34.0,
+                  82.0,
+                  1212.0,
+                  526.0
+                ],
+                "control": [
+                  52.0,
+                  540.0,
+                  672.0,
+                  52.0
+                ],
+                "ok": true
+              }
+            ],
+            "cta": "HammerButton",
+            "ctaContainment": {
+              "container": [
+                52.0,
+                204.0,
+                672.0,
+                42.0
+              ],
+              "control": [
+                52.0,
+                204.0,
+                672.0,
+                42.0
+              ],
+              "ok": true
+            },
+            "journeySuppressed": true,
+            "navigation": {
+              "ok": true,
+              "rect": [
+                28.0,
+                620.0,
+                1224.0,
+                46.0
+              ]
+            },
+            "nonOverlap": {
+              "inside": true,
+              "ok": true,
+              "rects": [
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    139.0,
+                    672.0,
+                    58.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    204.0,
+                    672.0,
+                    42.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    253.0,
+                    672.0,
+                    39.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    299.0,
+                    672.0,
+                    52.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    746.0,
+                    521.0,
+                    260.0,
+                    37.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    505.0,
+                    672.0,
+                    28.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    52.0,
+                    540.0,
+                    672.0,
+                    52.0
+                  ]
+                },
+                {
+                  "ok": true,
+                  "rect": [
+                    28.0,
+                    620.0,
+                    1224.0,
+                    46.0
+                  ]
+                }
+              ],
+              "separate": true
+            },
+            "ok": true,
+            "phase": "SOLD",
+            "primaryCopy": "판매 완료 · ¤139",
+            "recapChildren": 3,
+            "visibleBidCount": 4
+          },
+          "pending": {
+            "artifactId": "product_direction_terminal_sold",
+            "code": "OK",
+            "createdDay": 1,
+            "cueIndex": 0,
+            "cueQueue": [
+              {
+                "bidderId": "bidder_08",
+                "phase": "ENTRY",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 1,
+                "bidderId": "bidder_08",
+                "phase": "CALL",
+                "reasonTags": [],
+                "visibleBids": []
+              },
+              {
+                "amount": 107,
+                "bidderId": "bidder_10",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_10"
+                  }
+                ]
+              },
+              {
+                "amount": 123,
+                "bidderId": "bidder_12",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_10"
+                  },
+                  {
+                    "amount": 123,
+                    "bidderId": "bidder_12"
+                  }
+                ]
+              },
+              {
+                "amount": 139,
+                "bidderId": "bidder_10",
+                "phase": "BID",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_10"
+                  },
+                  {
+                    "amount": 123,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 139,
+                    "bidderId": "bidder_10"
+                  }
+                ]
+              },
+              {
+                "bidderId": "bidder_12",
+                "dropoutReason": "VALUE",
+                "phase": "DROPOUT",
+                "reasonTags": [],
+                "visibleBids": [
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_10"
+                  },
+                  {
+                    "amount": 123,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 139,
+                    "bidderId": "bidder_10"
+                  }
+                ]
+              },
+              {
+                "amount": 139,
+                "bidderId": "bidder_10",
+                "dropoutReason": "VALUE",
+                "phase": "SOLD",
+                "reasonTags": [
+                  {
+                    "category": "PROVENANCE",
+                    "code": "PROVENANCE_STRONG",
+                    "polarity": "POSITIVE"
+                  },
+                  {
+                    "category": "CONDITION",
+                    "code": "CONDITION_GOOD",
+                    "polarity": "POSITIVE"
+                  }
+                ],
+                "visibleBids": [
+                  {
+                    "amount": 92,
+                    "bidderId": "bidder_08"
+                  },
+                  {
+                    "amount": 107,
+                    "bidderId": "bidder_10"
+                  },
+                  {
+                    "amount": 123,
+                    "bidderId": "bidder_12"
+                  },
+                  {
+                    "amount": 139,
+                    "bidderId": "bidder_10"
+                  }
+                ]
+              }
+            ],
+            "decisions": {
+              "activeModifiers": {
+                "appraisalPrecision": 0,
+                "auctionFeeReduction": 0,
+                "bidderReach": 0,
+                "displayBonus": 0,
+                "listingBonus": 0,
+                "marketAll": 0,
+                "marketCategory": 10,
+                "stageDifficulty": 1.07
+              },
+              "condition": {
+                "cleanliness": 100,
+                "mechanical": 100,
+                "surface": 100
+              },
+              "day": 1,
+              "disclosure": "CERTAIN",
+              "grandReserve": false,
+              "listingUid": "product_direction_terminal_sold",
+              "provenanceKnown": true,
+              "publicAppraisal": 92,
+              "reportedConfidence": 0.94,
+              "reserve": 1,
+              "reserveRatio": 0.0109,
+              "specId": "artifact_001",
+              "stage": 2,
+              "starting": 1,
+              "startingRatio": 0.0109,
+              "substantiation": "NO_CASE"
+            },
+            "grandReserve": false,
+            "ok": true,
+            "publicFingerprint": "AUC-1413316228",
+            "receipt": {},
+            "result": {
+              "bids": [
+                {
+                  "amount": 13,
+                  "bidderId": "bidder_08"
+                },
+                {
+                  "amount": 25,
+                  "bidderId": "bidder_09"
+                },
+                {
+                  "amount": 37,
+                  "bidderId": "bidder_10"
+                },
+                {
+                  "amount": 50,
+                  "bidderId": "bidder_11"
+                },
+                {
+                  "amount": 64,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 78,
+                  "bidderId": "bidder_01"
+                },
+                {
+                  "amount": 92,
+                  "bidderId": "bidder_08"
+                },
+                {
+                  "amount": 107,
+                  "bidderId": "bidder_10"
+                },
+                {
+                  "amount": 123,
+                  "bidderId": "bidder_12"
+                },
+                {
+                  "amount": 139,
+                  "bidderId": "bidder_10"
+                }
+              ],
+              "dropouts": [
+                {
+                  "bidderId": "bidder_09",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_11",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_01",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_08",
+                  "reason": "VALUE"
+                },
+                {
+                  "bidderId": "bidder_12",
+                  "reason": "VALUE"
+                }
+              ],
+              "fee": 16,
+              "hammer": 139,
+              "net": 123,
+              "opening": 1,
+              "participants": [
+                {
+                  "id": "bidder_08"
+                },
+                {
+                  "id": "bidder_09"
+                },
+                {
+                  "id": "bidder_10"
+                },
+                {
+                  "id": "bidder_11"
+                },
+                {
+                  "id": "bidder_12"
+                },
+                {
+                  "id": "bidder_01"
+                }
+              ],
+              "publicFingerprint": "AUC-1413316228",
+              "reasonTags": [
+                {
+                  "category": "PROVENANCE",
+                  "code": "PROVENANCE_STRONG",
+                  "polarity": "POSITIVE"
+                },
+                {
+                  "category": "CONDITION",
+                  "code": "CONDITION_GOOD",
+                  "polarity": "POSITIVE"
+                }
+              ],
+              "reserve": 1,
+              "reserve_met": true,
+              "sale_status": "SOLD",
+              "transactionId": "auction_1_55694712_0",
+              "winnerId": "bidder_10"
+            },
+            "status": "PENDING",
+            "transactionId": "auction_1_55694712_0"
+          },
+          "phases": [
+            "ENTRY",
+            "CALL",
+            "BID",
+            "BID",
+            "BID",
+            "DROPOUT",
+            "SOLD"
+          ],
+          "readOnly": true
+        }
+      },
+      "executed": true,
+      "id": "PRODUCT-DIRECTION-19",
+      "name": "Ordinary SOLD and NO SALE plus Grand Reserve terminal and BETWEEN auction hierarchies remain bounded at 116 percent",
+      "passed": true
+    }
+  ]
+}

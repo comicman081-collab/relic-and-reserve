@@ -455,7 +455,7 @@
                   "mode": "optical_benchmark"
                 }
               },
-              "authenticityTruth": "GENUINE_WITH_PERIOD_REPAIR",
+              "authenticityTruth": "hyp.master_camera.genuine_with_period_clamp_service",
               "baseModel": "model_05.obj",
               "baseValue": 3130,
               "caseId": "master_camera",
@@ -475,7 +475,7 @@
                 "SCRATCH",
                 "MISSING_PART"
               ],
-              "confidence": 0.56,
+              "confidence": 0.78,
               "damageInstances": [
                 "DUST",
                 "CRACK",
@@ -485,57 +485,36 @@
               "estimatedValue": 3130,
               "evidence": [
                 {
-                  "clueType": "master_camera:material",
+                  "clueType": "src.master_camera.artifact.prism_material_continuity",
                   "confidenceWeight": 0.12,
                   "contradicts": [],
                   "observation": {
-                    "en": "Material inspection recorded for the case file.",
-                    "ko": "Material 조사 결과를 사건 기록에 남겼습니다."
+                    "en": "A low-power material scan finds the same trace inclusions in the prism, spare reference chip, and residue trapped below the original clamp seat. The tiny edge chip remains outside the light path and predates the latest alignment marks.",
+                    "ko": "저출력 재료 스캔에서 프리즘과 기준용 여분 조각, 원래 고정쇠 자리 아래 잔류물에 같은 미량 내포물이 확인된다. 작은 모서리 깨짐은 광로 밖에 있으며 최근 정렬 자국보다 오래되었다."
                   },
                   "supports": []
                 },
                 {
-                  "clueType": "master_camera:mechanism",
+                  "clueType": "src.master_camera.artifact.clamp_intervention_sequence",
                   "confidenceWeight": 0.12,
                   "contradicts": [],
                   "observation": {
-                    "en": "Mechanism inspection recorded for the case file.",
-                    "ko": "Mechanism 조사 결과를 사건 기록에 남겼습니다."
-                  },
-                  "supports": []
-                },
-                {
-                  "clueType": "master_camera:tool_mark",
-                  "confidenceWeight": 0.12,
-                  "contradicts": [],
-                  "observation": {
-                    "en": "Tool Mark inspection recorded for the case file.",
-                    "ko": "Tool Mark 조사 결과를 사건 기록에 남겼습니다."
-                  },
-                  "supports": []
-                },
-                {
-                  "clueType": "master_camera:construction_method",
-                  "confidenceWeight": 0.12,
-                  "contradicts": [],
-                  "observation": {
-                    "en": "Construction Method inspection recorded for the case file.",
-                    "ko": "Construction Method 조사 결과를 사건 기록에 남겼습니다."
+                    "en": "Under ultraviolet light, the wider tool mark lies beneath aged shellac while the narrow finishing mark crosses only the same service layer. Both sit above the original clamp impression, proving removal and re-seating rather than a modern replacement clamp.",
+                    "ko": "자외선 아래에서 넓은 도구 자국은 오래된 셸락 아래에 있고 좁은 마무리 자국은 같은 정비층만 가로지른다. 두 자국 모두 원래 고정쇠 눌림 위에 있어 현대 고정쇠 교체가 아니라 분리와 재장착을 보여 준다."
                   },
                   "supports": []
                 }
               ],
-              "historicalIntegrity": 76.1615407875798,
+              "historicalIntegrity": 70.6461631503194,
               "inspected": false,
               "inspectionObservable": {
                 "en": "A tiny edge chip sits outside the light path, while the prism clamp bears two incompatible screwdriver widths.",
                 "ko": "작은 모서리 깨짐은 광로 밖에 있고 프리즘 고정쇠에는 폭이 다른 두 종류의 드라이버 자국이 남아 있다."
               },
               "knownClues": [
-                "MATERIAL",
-                "MECHANISM",
-                "TOOL_MARK",
-                "CONSTRUCTION_METHOD"
+                "src.master_camera.artifact.prism_material_continuity",
+                "PROVENANCE",
+                "src.master_camera.artifact.clamp_intervention_sequence"
               ],
               "listing": {
                 "confidence": 0.0,
@@ -553,7 +532,7 @@
               "modelName": "GPS Laboratory Compact",
               "originalParts": 3,
               "partStates": {},
-              "playerHypothesis": "GENUINE_WITH_PERIOD_REPAIR",
+              "playerHypothesis": "hyp.master_camera.genuine_with_period_clamp_service",
               "possibleClues": [
                 "MATERIAL",
                 "MECHANISM",
@@ -624,7 +603,7 @@
                   "mode": "grand_reserve_tier"
                 }
               },
-              "authenticityTruth": "GENUINE",
+              "authenticityTruth": "hyp.master_mechanism.genuine_observatory_regulator",
               "baseModel": "watch.obj",
               "baseValue": 3280,
               "caseId": "master_mechanism",
@@ -645,7 +624,7 @@
                 "BROKEN_PART",
                 "MISSING_PART"
               ],
-              "confidence": 0.56,
+              "confidence": 0.78,
               "damageInstances": [
                 "DUST",
                 "CORROSION",
@@ -655,42 +634,22 @@
               "estimatedValue": 3280,
               "evidence": [
                 {
-                  "clueType": "master_mechanism:material",
+                  "clueType": "src.master_mechanism.artifact.patina_zero_line",
                   "confidenceWeight": 0.12,
                   "contradicts": [],
                   "observation": {
-                    "en": "Material inspection recorded for the case file.",
-                    "ko": "Material 조사 결과를 사건 기록에 남겼습니다."
+                    "en": "Material mapping shows the OR-118 stamp and mercury-compensation zero line beneath the earliest lacquer. A second period lacquer was brushed around, but not beneath, the jewel access. The boundary records intervention without a replaced case.",
+                    "ko": "재료 매핑에서 OR-118 각인과 수은 보정 영점선이 가장 이른 옻칠 아래에 확인된다. 두 번째 당대 옻칠은 보석 접근부 주변에는 발렸지만 그 아래에는 없다. 이 경계는 케이스 교체가 아닌 개입을 기록한다."
                   },
                   "supports": []
                 },
                 {
-                  "clueType": "master_mechanism:mechanism",
+                  "clueType": "src.master_mechanism.artifact.escapement_jewel_sequence",
                   "confidenceWeight": 0.12,
                   "contradicts": [],
                   "observation": {
-                    "en": "Mechanism inspection recorded for the case file.",
-                    "ko": "Mechanism 조사 결과를 사건 기록에 남겼습니다."
-                  },
-                  "supports": []
-                },
-                {
-                  "clueType": "master_mechanism:wear_pattern",
-                  "confidenceWeight": 0.12,
-                  "contradicts": [],
-                  "observation": {
-                    "en": "Wear Pattern inspection recorded for the case file.",
-                    "ko": "Wear Pattern 조사 결과를 사건 기록에 남겼습니다."
-                  },
-                  "supports": []
-                },
-                {
-                  "clueType": "master_mechanism:provenance",
-                  "confidenceWeight": 0.12,
-                  "contradicts": [],
-                  "observation": {
-                    "en": "Provenance inspection recorded for the case file.",
-                    "ko": "Provenance 조사 결과를 사건 기록에 남겼습니다."
+                    "en": "With the escapement immobilized, magnification shows tooth-face polish stopping at one historical correction and continuing evenly afterward. The jewel seat tool marks carry the same embedded observatory dust as the adjacent bridge, placing the service within working life rather than a recent rebuild.",
+                    "ko": "탈진기를 고정하고 확대하면 톱니 면 연마가 한 번의 역사적 수정 지점에서 끊겼다가 이후 고르게 이어진다. 보석 받침 도구 자국에는 옆 브리지와 같은 천문대 먼지가 박혀 있어 최근 재조립이 아니라 운용 기간 중 정비였음을 보여 준다."
                   },
                   "supports": []
                 }
@@ -702,10 +661,9 @@
                 "ko": "수은 보정 눈금은 온전하지만 영점선은 후대 옻칠 아래에 있고 기록에 없는 보석 받침과 맞닿아 있다."
               },
               "knownClues": [
-                "MATERIAL",
-                "MECHANISM",
-                "WEAR_PATTERN",
-                "PROVENANCE"
+                "src.master_mechanism.artifact.patina_zero_line",
+                "PROVENANCE",
+                "src.master_mechanism.artifact.escapement_jewel_sequence"
               ],
               "listing": {
                 "confidence": 0.0,
@@ -724,7 +682,7 @@
               "modelName": "GRAR Observatory Standard",
               "originalParts": 1,
               "partStates": {},
-              "playerHypothesis": "GENUINE",
+              "playerHypothesis": "hyp.master_mechanism.genuine_observatory_regulator",
               "possibleClues": [
                 "MATERIAL",
                 "MECHANISM",
@@ -1214,7 +1172,7 @@
             "preservation": {
               "available": true,
               "statusCode": "STEADY",
-              "value": 67.1958371131506
+              "value": 65.4033393810409
             },
             "sale": {
               "available": true,
@@ -1238,12 +1196,12 @@
         "liveChanged": true,
         "renderedAfterMutation": [
           "100",
-          "67",
+          "65",
           "41"
         ],
         "renderedBefore": [
           "100",
-          "67",
+          "65",
           "41"
         ],
         "secondLocaleOk": true,

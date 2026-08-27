@@ -14,7 +14,7 @@
             "repeatSame": true,
             "spec": "artifact_079",
             "story": "story_artifact_25",
-            "truth": "GENUINE_WITH_PERIOD_REPAIR",
+            "truth": "hyp.master_camera.genuine_with_period_clamp_service",
             "uid": "case_master_camera"
           },
           "master_mechanism": {
@@ -23,7 +23,7 @@
             "repeatSame": true,
             "spec": "artifact_080",
             "story": "story_artifact_26",
-            "truth": "GENUINE",
+            "truth": "hyp.master_mechanism.genuine_observatory_regulator",
             "uid": "case_master_mechanism"
           }
         },
@@ -42,29 +42,29 @@
     {
       "evidence": {
         "master_camera": {
-          "evidence": 4,
-          "leaks": [],
-          "ok": true,
-          "risk": {
-            "HIGH": 0,
-            "LOW": 1,
-            "NONE": 3
-          }
-        },
-        "master_mechanism": {
-          "evidence": 4,
+          "evidence": 6,
           "leaks": [],
           "ok": true,
           "risk": {
             "HIGH": 1,
             "LOW": 1,
-            "NONE": 2
+            "NONE": 4
+          }
+        },
+        "master_mechanism": {
+          "evidence": 6,
+          "leaks": [],
+          "ok": true,
+          "risk": {
+            "HIGH": 1,
+            "LOW": 1,
+            "NONE": 4
           }
         }
       },
       "executed": true,
       "id": "S10-CASE-02",
-      "name": "Fresh Stage 10 case conditions expose the intended low/high risk pressure without hidden story/spec identifiers",
+      "name": "Fresh Stage 10 case conditions expose authored low/high pressure without hidden story or truth identifiers",
       "passed": true
     },
     {

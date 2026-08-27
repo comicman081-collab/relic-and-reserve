@@ -121,8 +121,8 @@ func run() -> void:
 	var stage_tooltips_valid := stage_buttons.all(func(button: Button): return button.tooltip_text.contains("권장 기준이며 클리어·해금을 막지 않습니다.") and not button.tooltip_text.contains("public_stage_score"))
 	record(
 		"MVP-STAGE-UI-01",
-		"New Game stage selector shows ten replay/lock cards with recommendation, first-try or localized best, and an advisory-only goal tooltip",
-		stage_buttons.size() == 10 and enabled_stages == 2 and stage_buttons[0].text.contains("스테이지 1 · 클리어") and stage_buttons[0].text.contains("권장 55 · BEST 성장 중 0") and stage_buttons[1].text.contains("스테이지 2 · 선택 가능") and stage_buttons[1].text.contains("권장 56 · 첫 도전") and stage_buttons[9].text.contains("스테이지 10 · 잠김") and stage_buttons[9].text.contains("권장 64 · 첫 도전") and stage_tooltips_valid,
+		"New Game stage selector enables cleared replays only, keeps future stages in the main journey, and shows advisory recommendations",
+		stage_buttons.size() == 10 and enabled_stages == 1 and stage_buttons[0].text.contains("스테이지 1 · 클리어") and stage_buttons[0].text.contains("권장 55 · BEST 성장 중 0") and stage_buttons[1].text.contains("스테이지 2 · 본편 잠김") and stage_buttons[1].text.contains("권장 56 · 첫 도전") and stage_buttons[9].text.contains("스테이지 10 · 본편 잠김") and stage_buttons[9].text.contains("권장 64 · 첫 도전") and stage_tooltips_valid,
 		{"buttons": stage_buttons.size(), "enabled": enabled_stages, "first": stage_buttons[0].text, "second": stage_buttons[1].text, "tenth": stage_buttons[9].text, "tooltipsValid": stage_tooltips_valid}
 	)
 
