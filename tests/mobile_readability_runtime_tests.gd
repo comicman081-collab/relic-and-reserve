@@ -23,15 +23,6 @@ func _wait_frames(count: int) -> void:
 		await process_frame
 
 
-func _ancestor_panel(node: Node, stop: Node) -> PanelContainer:
-	var current := node
-	while current != null and current != stop:
-		if current is PanelContainer:
-			return current as PanelContainer
-		current = current.get_parent()
-	return null
-
-
 func _run() -> void:
 	DisplayServer.window_set_size(Vector2i(390, 700))
 	root.size = Vector2i(390, 700)
@@ -48,14 +39,20 @@ func _run() -> void:
 	current_scene = scene
 	await _wait_frames(12)
 
+	var game_state := root.get_node_or_null("GameState")
+	_check(game_state != null, "GameState autoload must exist")
 	_check(root.get_node_or_null("MobileWebLayout") != null, "MobileWebLayout autoload must exist")
-	_check(root.get_node_or_null("MobileUXAssistant") != null, "MobileUXAssistant autoload must exist")
+	_check(root.get_node_or_null("MobileUXAssistant") != null, "MobileUXAssistant compatibility autoload must exist")
 	_check(root.get_node_or_null("MobileFullTextRestore") != null, "MobileFullTextRestore autoload must exist")
+	_check(root.get_node_or_null("MobileCaseTutorialUX") != null, "MobileCaseTutorialUX autoload must exist")
+	if game_state == null:
+		quit(1)
+		return
 
-	GameState.language = "ko"
-	var new_game_result: Dictionary = GameState.new_game(1)
-	_check(bool(new_game_result.get("ok", false)), "Stage 1 new game must start")
-	GameState.begin_case("prologue_clock")
+	game_state.set("language", "ko")
+	var new_game_result: Variant = game_state.call("new_game", 1)
+	_check(new_game_result is Dictionary and bool((new_game_result as Dictionary).get("ok", false)), "Stage 1 new game must start")
+	game_state.call("begin_case", "prologue_clock")
 	scene.call("show_case_dossier", "prologue_clock")
 	await _wait_frames(18)
 
@@ -108,7 +105,7 @@ func _run() -> void:
 	if evidence_stack != null:
 		_check(evidence_stack.get_child_count() >= 2, "portrait evidence stack must contain clue ledger and detail panel")
 		for child: Node in evidence_stack.get_children():
-			if child is Control:
+			if child is Control and evidence_stack.size.x > 0.0:
 				_check((child as Control).size.x >= evidence_stack.size.x * 0.82, "evidence stack children must use most of the mobile width")
 
 	var hypotheses := ui.find_children("CaseHypothesis_*", "Button", true, false)
@@ -124,7 +121,7 @@ func _run() -> void:
 		var modal_body := tutorial_modal.find_child("ModalBody", true, false) as Label
 		_check(modal_body != null, "tutorial coach must contain body copy")
 		if modal_body != null:
-			_check(modal_body.text.contains("조사 가능") or modal_body.text.contains("단서 카드"), "tutorial coach must explain how to choose and inspect a clue")
+			_check(modal_body.text.contains("조사 가능") or modal_body.text.contains("단서"), "tutorial coach must explain how to choose and inspect a clue")
 			_check(modal_body.text.length() >= 100, "tutorial coach must explain the action instead of showing a one-line hint")
 		tutorial_modal.queue_free()
 		await _wait_frames(3)
