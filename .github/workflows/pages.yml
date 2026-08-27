@@ -75,6 +75,7 @@ jobs:
           grep -Fq 'MobileWebLayout="*res://scripts/mobile_web_layout.gd"' project.godot
           grep -Fq 'window/stretch/mode="canvas_items"' project.godot
           grep -Fq 'window/stretch/aspect="expand"' project.godot
+          grep -Fq 'interface.resized' scripts/mobile_web_layout.gd
           test -s scripts/mobile_web_layout.gd
           test -s audio/ui_click.wav
           test -s audio/title/relic_reserve_title/01_first_bell_sunshine.mp3
@@ -102,8 +103,25 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          godot --headless --path . --import
-          godot --headless --path . --resolution 390x700 --script tests/mobile_portrait_runtime_tests.gd
+          godot --headless --path . --import > /tmp/relic-import.log 2>&1 || {
+            cat /tmp/relic-import.log
+            exit 1
+          }
+
+          set +e
+          godot --headless --path . --resolution 390x700 --script tests/mobile_portrait_runtime_tests.gd 2>&1 | tee /tmp/relic-mobile-runtime.log
+          runtime_status=${PIPESTATUS[0]}
+          set -e
+
+          if [ "$runtime_status" -ne 0 ]; then
+            echo "Portrait runtime exited with status ${runtime_status}."
+            exit "$runtime_status"
+          fi
+          if grep -Eq 'SCRIPT ERROR:|Invalid access to property or key' /tmp/relic-mobile-runtime.log; then
+            echo "Portrait runtime emitted a GDScript error; refusing a false PASS."
+            exit 1
+          fi
+          grep -Fq 'MOBILE_PORTRAIT_RUNTIME_QA: PASS' /tmp/relic-mobile-runtime.log
 
       - name: Import resources and export Web
         shell: bash
@@ -145,6 +163,56 @@ jobs:
           test ! -e web-build/index.pck
           test ! -e web-build/index.wasm
           echo "Web export contains Korean font support, responsive portrait settings, audio assets, and commit-versioned Godot assets."
+
+      - name: Capture real 390x700 Web portrait smoke
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p qa-web
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)"
+          if [ -z "$CHROME" ]; then
+            echo "No Chromium-compatible browser is available on the runner."
+            exit 1
+          fi
+
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory web-build > /tmp/relic-web-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" >/dev/null 2>&1 || true' EXIT
+
+          ready=0
+          for _attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8765/index.html >/dev/null; then
+              ready=1
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" -ne 1 ]; then
+            cat /tmp/relic-web-server.log
+            exit 1
+          fi
+
+          timeout 70s "$CHROME" \
+            --headless=new \
+            --no-sandbox \
+            --disable-gpu \
+            --hide-scrollbars \
+            --force-device-scale-factor=1 \
+            --window-size=390,700 \
+            --virtual-time-budget=30000 \
+            --screenshot=qa-web/mobile-390x700.png \
+            "http://127.0.0.1:8765/?qa=${GITHUB_SHA}"
+
+          test -s qa-web/mobile-390x700.png
+          file qa-web/mobile-390x700.png
+
+      - name: Upload portrait Web smoke evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: mobile-portrait-web-smoke-${{ github.sha }}
+          path: qa-web/mobile-390x700.png
+          if-no-files-found: error
+          retention-days: 2
 
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
