@@ -25,6 +25,7 @@ TutorialSpotlightDirector="*res://scripts/tutorial_spotlight_director.gd"
 TutorialSpotlightLayoutGuard="*res://scripts/tutorial_spotlight_layout_guard.gd"
 OpeningNarrationDirector="*res://scripts/opening_narration_director.gd"
 OpeningNarrationOverlayGuard="*res://scripts/opening_narration_overlay_guard.gd"
+OpeningNarrationMobileWidthGuard="*res://scripts/opening_narration_mobile_width_guard.gd"
 TutorialReplayLauncher="*res://scripts/tutorial_replay_launcher.gd"
 
 [display]
