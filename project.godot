@@ -4,7 +4,6 @@
 ;
 ; Format:
 ;   [section] ; section goes between []
-;   param=value
 
 config_version=5
 
@@ -21,6 +20,7 @@ GameState="*res://scripts/game_state.gd"
 MobileWebLayout="*res://scripts/mobile_web_layout.gd"
 MobileUXAssistant="*res://scripts/mobile_ux_assistant.gd"
 MobileFullTextRestore="*res://scripts/mobile_full_text_restore.gd"
+MobileCaseTutorialUX="*res://scripts/mobile_case_tutorial_ux.gd"
 
 [display]
 
