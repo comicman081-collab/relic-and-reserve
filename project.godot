@@ -24,6 +24,7 @@ MobileCaseTutorialUX="*res://scripts/mobile_case_tutorial_ux.gd"
 TutorialSpotlightDirector="*res://scripts/tutorial_spotlight_director.gd"
 TutorialSpotlightLayoutGuard="*res://scripts/tutorial_spotlight_layout_guard.gd"
 OpeningNarrationDirector="*res://scripts/opening_narration_director.gd"
+OpeningNarrationOverlayGuard="*res://scripts/opening_narration_overlay_guard.gd"
 
 [display]
 
