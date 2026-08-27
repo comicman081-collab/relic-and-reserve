@@ -22,7 +22,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -52,7 +52,6 @@ jobs:
           project = Path("project.godot")
           text = project.read_text(encoding="utf-8")
           setting = 'theme/custom_font="res://assets/fonts/NanumGothic-Regular.ttf"'
-
           if setting not in text:
               if "[gui]" in text:
                   text = text.replace("[gui]\n", f"[gui]\n\n{setting}\n", 1)
@@ -77,6 +76,8 @@ jobs:
           grep -Fq 'window/stretch/aspect="expand"' project.godot
           grep -Fq 'interface.resized' scripts/mobile_web_layout.gd
           test -s scripts/mobile_web_layout.gd
+          test -s tests/mobile_portrait_runtime_tests.gd
+          test -s tests/verify_mobile_web_screenshot.py
           test -s audio/ui_click.wav
           test -s audio/title/relic_reserve_title/01_first_bell_sunshine.mp3
           for track in \
@@ -97,7 +98,7 @@ jobs:
             06_the_sky_is_still_blue.mp3; do
             test -s "audio/endings/relic_reserve_endings/${track}"
           done
-          echo "Portrait stretch settings, mobile layout bridge, click SFX, screen BGM, and ending BGM assets are present."
+          echo "Portrait layout, QA scripts, Korean font, click SFX, screen BGM, and ending BGM assets are present."
 
       - name: Verify 390x700 portrait runtime geometry
         shell: bash
@@ -136,12 +137,8 @@ jobs:
           godot --headless --path . --import
           godot --headless --path . --export-release "Web" "web-build/${WEB_BASE}.html"
 
-          # Keep the public entry point stable while every heavy Godot asset gets
-          # a commit-specific filename. Mobile browsers therefore cannot reuse an
-          # older cached .pck/.wasm after a new deployment.
           cp "web-build/${WEB_BASE}.html" web-build/index.html
           rm "web-build/${WEB_BASE}.html"
-
           touch web-build/.nojekyll
           cp assets/fonts/NanumGothic-OFL.txt web-build/NanumGothic-OFL.txt
 
@@ -174,6 +171,7 @@ jobs:
             echo "No Chromium-compatible browser is available on the runner."
             exit 1
           fi
+          "$CHROME" --version
 
           python3 -m http.server 8765 --bind 127.0.0.1 --directory web-build > /tmp/relic-web-server.log 2>&1 &
           SERVER_PID=$!
@@ -192,116 +190,50 @@ jobs:
             exit 1
           fi
 
-          # Give the large Godot package more time than the previous 120s budget.
-          # The screenshot is validated below, so a loader image cannot pass just
-          # because Chrome produced a PNG file.
-          timeout 280s "$CHROME" \
-            --headless=new \
-            --no-sandbox \
-            --disable-gpu \
-            --hide-scrollbars \
-            --force-device-scale-factor=1 \
-            --window-size=390,700 \
-            --virtual-time-budget=240000 \
-            --screenshot=qa-web/mobile-390x700.png \
-            "http://127.0.0.1:8765/?qa=${GITHUB_SHA}"
+          capture_pass=0
+          for attempt in 1 2 3; do
+            echo "Web portrait capture attempt ${attempt}/3"
+            rm -f qa-web/mobile-390x700.png
+            rm -rf "/tmp/relic-chrome-${attempt}"
 
-          test -s qa-web/mobile-390x700.png
-          file qa-web/mobile-390x700.png
+            set +e
+            timeout 200s "$CHROME" \
+              --headless=new \
+              --no-sandbox \
+              --disable-dev-shm-usage \
+              --enable-unsafe-swiftshader \
+              --use-gl=angle \
+              --use-angle=swiftshader \
+              --hide-scrollbars \
+              --force-device-scale-factor=1 \
+              --window-size=390,700 \
+              --virtual-time-budget=150000 \
+              --user-data-dir="/tmp/relic-chrome-${attempt}" \
+              --screenshot=qa-web/mobile-390x700.png \
+              "http://127.0.0.1:8765/?qa=${GITHUB_SHA}-${attempt}"
+            chrome_status=$?
+            set -e
 
-          # Decode the PNG with the Python standard library only. A real title
-          # screen contains the gold RELIC & RESERVE title and no large Godot-blue
-          # progress bar. The old false-positive loader screenshot had 0 gold
-          # pixels and thousands of blue progress-bar pixels.
-          python3 - <<'PY'
-          from pathlib import Path
-          import struct
-          import zlib
+            if [ "$chrome_status" -ne 0 ]; then
+              echo "Chrome capture attempt ${attempt} exited with status ${chrome_status}."
+            fi
 
-          path = Path("qa-web/mobile-390x700.png")
-          data = path.read_bytes()
-          signature = b"\x89PNG\r\n\x1a\n"
-          if not data.startswith(signature):
-              raise SystemExit("Web smoke screenshot is not a PNG")
+            if test -s qa-web/mobile-390x700.png; then
+              file qa-web/mobile-390x700.png
+              if python3 tests/verify_mobile_web_screenshot.py qa-web/mobile-390x700.png; then
+                capture_pass=1
+                break
+              fi
+            else
+              echo "Capture attempt ${attempt} produced no screenshot."
+            fi
+            sleep 3
+          done
 
-          pos = len(signature)
-          width = height = bit_depth = color_type = interlace = None
-          compressed = bytearray()
-          while pos + 12 <= len(data):
-              length = struct.unpack(">I", data[pos:pos + 4])[0]
-              kind = data[pos + 4:pos + 8]
-              payload = data[pos + 8:pos + 8 + length]
-              pos += 12 + length
-              if kind == b"IHDR":
-                  width, height, bit_depth, color_type, _comp, _filter, interlace = struct.unpack(">IIBBBBB", payload)
-              elif kind == b"IDAT":
-                  compressed.extend(payload)
-              elif kind == b"IEND":
-                  break
-
-          if (width, height) != (390, 700):
-              raise SystemExit(f"Unexpected Web smoke size: {width}x{height}")
-          if bit_depth != 8 or color_type not in (2, 6) or interlace != 0:
-              raise SystemExit(f"Unsupported PNG format bit_depth={bit_depth} color_type={color_type} interlace={interlace}")
-
-          channels = 3 if color_type == 2 else 4
-          stride = width * channels
-          raw = zlib.decompress(bytes(compressed))
-          expected = height * (stride + 1)
-          if len(raw) != expected:
-              raise SystemExit(f"Unexpected decompressed PNG size: {len(raw)} != {expected}")
-
-          def paeth(a, b, c):
-              p = a + b - c
-              pa = abs(p - a)
-              pb = abs(p - b)
-              pc = abs(p - c)
-              if pa <= pb and pa <= pc:
-                  return a
-              if pb <= pc:
-                  return b
-              return c
-
-          previous = bytearray(stride)
-          gold = 0
-          loader_blue = 0
-          offset = 0
-          for _y in range(height):
-              filter_type = raw[offset]
-              offset += 1
-              scan = bytearray(raw[offset:offset + stride])
-              offset += stride
-              for i in range(stride):
-                  left = scan[i - channels] if i >= channels else 0
-                  up = previous[i]
-                  up_left = previous[i - channels] if i >= channels else 0
-                  if filter_type == 1:
-                      scan[i] = (scan[i] + left) & 0xFF
-                  elif filter_type == 2:
-                      scan[i] = (scan[i] + up) & 0xFF
-                  elif filter_type == 3:
-                      scan[i] = (scan[i] + ((left + up) >> 1)) & 0xFF
-                  elif filter_type == 4:
-                      scan[i] = (scan[i] + paeth(left, up, up_left)) & 0xFF
-                  elif filter_type != 0:
-                      raise SystemExit(f"Unsupported PNG filter {filter_type}")
-
-              for x in range(width):
-                  base = x * channels
-                  r, g, b = scan[base], scan[base + 1], scan[base + 2]
-                  if r >= 150 and 105 <= g <= 220 and b <= 140 and r >= int(g * 0.9):
-                      gold += 1
-                  if b >= 150 and g >= 70 and r <= 120 and b >= int(r * 1.5):
-                      loader_blue += 1
-              previous = scan
-
-          print(f"WEB_PORTRAIT_PIXEL_QA gold={gold} loader_blue={loader_blue}")
-          if gold < 500:
-              raise SystemExit("Real title screen not detected: insufficient gold title pixels")
-          if loader_blue > 1500:
-              raise SystemExit("Godot loader/progress bar still dominates the screenshot")
-          print("WEB_PORTRAIT_PIXEL_QA: PASS")
-          PY
+          if [ "$capture_pass" -ne 1 ]; then
+            echo "No verified real title screenshot after 3 attempts."
+            exit 1
+          fi
 
       - name: Upload portrait Web smoke evidence
         uses: actions/upload-artifact@v4
@@ -327,7 +259,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
