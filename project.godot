@@ -22,6 +22,7 @@ MobileUXAssistant="*res://scripts/mobile_ux_assistant.gd"
 MobileFullTextRestore="*res://scripts/mobile_full_text_restore.gd"
 MobileCaseTutorialUX="*res://scripts/mobile_case_tutorial_ux.gd"
 TutorialSpotlightDirector="*res://scripts/tutorial_spotlight_director.gd"
+TutorialSpotlightLayoutGuard="*res://scripts/tutorial_spotlight_layout_guard.gd"
 
 [display]
 
