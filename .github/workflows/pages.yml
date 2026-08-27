@@ -72,11 +72,16 @@ jobs:
         run: |
           set -euo pipefail
           grep -Fq 'MobileWebLayout="*res://scripts/mobile_web_layout.gd"' project.godot
+          grep -Fq 'MobileUXAssistant="*res://scripts/mobile_ux_assistant.gd"' project.godot
+          grep -Fq 'MobileFullTextRestore="*res://scripts/mobile_full_text_restore.gd"' project.godot
           grep -Fq 'window/stretch/mode="canvas_items"' project.godot
           grep -Fq 'window/stretch/aspect="expand"' project.godot
           grep -Fq 'interface.resized' scripts/mobile_web_layout.gd
           test -s scripts/mobile_web_layout.gd
+          test -s scripts/mobile_ux_assistant.gd
+          test -s scripts/mobile_full_text_restore.gd
           test -s tests/mobile_portrait_runtime_tests.gd
+          test -s tests/mobile_readability_runtime_tests.gd
           test -s tests/verify_mobile_web_screenshot.py
           test -s audio/ui_click.wav
           test -s audio/title/relic_reserve_title/01_first_bell_sunshine.mp3
@@ -98,7 +103,7 @@ jobs:
             06_the_sky_is_still_blue.mp3; do
             test -s "audio/endings/relic_reserve_endings/${track}"
           done
-          echo "Portrait layout, QA scripts, Korean font, click SFX, screen BGM, and ending BGM assets are present."
+          echo "Portrait layout, readable tutorial UX, full-text touch details, Korean font, click SFX, screen BGM, and ending BGM assets are present."
 
       - name: Verify 390x700 portrait runtime geometry
         shell: bash
@@ -123,6 +128,25 @@ jobs:
             exit 1
           fi
           grep -Fq 'MOBILE_PORTRAIT_RUNTIME_QA: PASS' /tmp/relic-mobile-runtime.log
+
+      - name: Verify readable mobile tutorial UX
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          godot --headless --path . --resolution 390x700 --script tests/mobile_readability_runtime_tests.gd 2>&1 | tee /tmp/relic-mobile-readability.log
+          readability_status=${PIPESTATUS[0]}
+          set -e
+
+          if [ "$readability_status" -ne 0 ]; then
+            echo "Mobile readability runtime exited with status ${readability_status}."
+            exit "$readability_status"
+          fi
+          if grep -Eq 'SCRIPT ERROR:|Invalid access to property or key' /tmp/relic-mobile-readability.log; then
+            echo "Mobile readability runtime emitted a GDScript error; refusing deployment."
+            exit 1
+          fi
+          grep -Fq 'MOBILE_READABILITY_RUNTIME_QA: PASS' /tmp/relic-mobile-readability.log
 
       - name: Import resources and export Web
         shell: bash
@@ -159,7 +183,7 @@ jobs:
           grep -Fq "\"${WEB_BASE}.wasm\"" web-build/index.html
           test ! -e web-build/index.pck
           test ! -e web-build/index.wasm
-          echo "Web export contains Korean font support, responsive portrait settings, audio assets, and commit-versioned Godot assets."
+          echo "Web export contains Korean font support, responsive portrait settings, readable tutorial UX, audio assets, and commit-versioned Godot assets."
 
       - name: Capture and verify real 390x700 Web portrait
         shell: bash
