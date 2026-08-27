@@ -2,7 +2,7 @@ extends SceneTree
 
 # Regression gate for the real Android portrait failure mode: authored case copy
 # must be readable without hover tooltips, the dossier must become a one-column
-# touch flow, and the tutorial must explain the next gameplay action in full.
+# touch flow, and beginner tutorial teaching must remain readable.
 
 var failures: Array[String] = []
 
@@ -45,16 +45,19 @@ func _run() -> void:
 	_check(root.get_node_or_null("MobileUXAssistant") != null, "MobileUXAssistant compatibility autoload must exist")
 	_check(root.get_node_or_null("MobileFullTextRestore") != null, "MobileFullTextRestore autoload must exist")
 	_check(root.get_node_or_null("MobileCaseTutorialUX") != null, "MobileCaseTutorialUX autoload must exist")
+	_check(root.get_node_or_null("TutorialSpotlightDirector") != null, "TutorialSpotlightDirector autoload must exist")
+	_check(root.get_node_or_null("TutorialSpotlightLayoutGuard") != null, "TutorialSpotlightLayoutGuard autoload must exist")
 	if game_state == null:
 		quit(1)
 		return
 
+	game_state.set("persistence_enabled", false)
 	game_state.set("language", "ko")
 	var new_game_result: Variant = game_state.call("new_game", 1)
 	_check(new_game_result is Dictionary and bool((new_game_result as Dictionary).get("ok", false)), "Stage 1 new game must start")
 	game_state.call("begin_case", "prologue_clock")
 	scene.call("show_case_dossier", "prologue_clock")
-	await _wait_frames(18)
+	await _wait_frames(24)
 
 	var ui := scene.find_child("R3Interface", true, false) as Control
 	_check(ui != null, "R3Interface must exist")
@@ -115,16 +118,15 @@ func _run() -> void:
 		_check(first_hypothesis.get_parent() is GridContainer and (first_hypothesis.get_parent() as GridContainer).columns == 1, "portrait hypotheses must use one column")
 		_check(not first_hypothesis.clip_text, "portrait hypothesis label must not be clipped")
 
-	var tutorial_modal := ui.find_child("MobileUXModal", true, false) as Control
-	_check(tutorial_modal != null, "tutorial must open a large coach panel when its real target is visible")
-	if tutorial_modal != null:
-		var modal_body := tutorial_modal.find_child("ModalBody", true, false) as Label
-		_check(modal_body != null, "tutorial coach must contain body copy")
-		if modal_body != null:
-			_check(modal_body.text.contains("조사 가능") or modal_body.text.contains("단서"), "tutorial coach must explain how to choose and inspect a clue")
-			_check(modal_body.text.length() >= 100, "tutorial coach must explain the action instead of showing a one-line hint")
-		tutorial_modal.queue_free()
-		await _wait_frames(3)
+	# The beginner tutorial now starts with a teaching intro instead of the old
+	# blocking generic coach modal. Its full copy must be readable before input.
+	var tutorial_overlay := ui.find_child("TutorialSpotlightOverlay", true, false) as Control
+	var intro_body := ui.find_child("TutorialIntroBody", true, false) as Label
+	_check(tutorial_overlay != null, "fresh Stage 1 must expose the spotlight tutorial layer")
+	_check(intro_body != null, "spotlight tutorial must expose readable beginner teaching copy")
+	if intro_body != null:
+		_check(intro_body.text.contains("단서 조사") and intro_body.text.contains("경매"), "tutorial introduction must explain the game loop")
+		_check(intro_body.text.length() >= 140, "tutorial introduction must explain the game, not show a one-line hint")
 
 	# A clue-card tap must rebuild the selected detail and then open a touch
 	# modal containing the full readable detail plus the actual next action.
