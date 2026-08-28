@@ -216,16 +216,23 @@ func run() -> void:
 	route_targets.step4_tool_needed = tutorial_target_name(main)
 	route_layouts.step4_tool_needed = tutorial_target_layout(main)
 	var required_tools: Array = gs.repair_requirements(artifact).get("requiredTools", [])
-	var recommended_selected: bool = not required_tools.is_empty() and bool(gs.select_tool(String(required_tools[0])))
-	main.show_inspection()
+	var recommended_tool_id := String(required_tools[0]) if not required_tools.is_empty() else ""
+	var recommended_tool_button := main.find_child("RepairTool_%s" % recommended_tool_id, true, false) as Button
+	var recommended_selected := recommended_tool_button != null and recommended_tool_button.is_visible_in_tree() and not recommended_tool_button.disabled
+	if recommended_selected:
+		recommended_tool_button.pressed.emit()
 	await settle_ui()
 	route_targets.step4_tool_ready = tutorial_target_name(main)
 	route_layouts.step4_tool_ready = tutorial_target_layout(main)
 	route_layouts.step4_dossier_route = visible_control_layout(main, "OpenCaseDossier")
 	route_layouts.step4_inspection_columns = inspection_columns_layout(main)
-	var repaired: String = String(gs.repair(artifact))
-	main.show_inspection()
+	var repair_button := main.find_child("Tool_repair", true, false) as Button
+	var repair_action_available := repair_button != null and repair_button.is_visible_in_tree() and not repair_button.disabled
+	if repair_action_available:
+		repair_button.pressed.emit()
 	await settle_ui()
+	var repaired := bool(artifact.get("repaired", false))
+	var repair_advanced := int(gs.tutorial_public_state().get("step", 0)) == 5
 	route_targets.step5_inspection = tutorial_target_name(main)
 	route_layouts.step5_inspection = tutorial_target_layout(main)
 	gs.authenticate(artifact)
@@ -263,7 +270,9 @@ func run() -> void:
 		and hypothesis_selected \
 		and bool(resolved.get("ok", false)) \
 		and recommended_selected \
-		and not repaired.is_empty() \
+		and repair_action_available \
+		and repaired \
+		and repair_advanced \
 		and String(route_targets.step2).begins_with("CaseCitation_") \
 		and String(route_targets.step3_disabled).begins_with("CaseHypothesis_") \
 		and route_targets.step3_ready == "ResolveCaseReport" \
@@ -283,7 +292,7 @@ func run() -> void:
 		"MVP-TUTORIAL-UI-02",
 		"All six authored routes resolve to the nearest visible enabled control; repair, authentication and dossier actions remain above navigation",
 		route_ok,
-		{"targets": route_targets, "layouts": route_layouts, "allLayoutsClear": all_route_layouts_clear, "discovery": discovery, "resolved": resolved, "requiredTools": required_tools, "repair": repaired, "completed": gs.player_profile.get("tutorialCompletedSteps", [])}
+		{"targets": route_targets, "layouts": route_layouts, "allLayoutsClear": all_route_layouts_clear, "discovery": discovery, "resolved": resolved, "requiredTools": required_tools, "repairButton": repair_action_available, "repaired": repaired, "repairAdvanced": repair_advanced, "completed": gs.player_profile.get("tutorialCompletedSteps", [])}
 	)
 
 	main.finalize_sale_from_ui()
