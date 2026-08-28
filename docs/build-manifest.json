@@ -3,7 +3,7 @@
   "deployment": {
     ".github/workflows/pages.yml": "d512e8539f58aca923d3532a77133095b9ccb732d11c0c6c7fc36041cebb70b1",
     "export_presets.cfg": "2eb3a1e0ecccc5ba6f18a670dc59a49651438f47c16e95627863268dddf861ec",
-    "tools/validators/validate_web_release.py": "124300628bb8a641021fe876095873cac38662f2a9358a22b0728cf06d560652"
+    "tools/validators/validate_web_release.py": "430076165fce6062ab271e55797c7d5581f97303a5ace357448be1af7654e313"
   },
   "product": "RELIC & RESERVE R3 MVP",
   "runtime": [
@@ -61,7 +61,7 @@
   "schema": 1,
   "source": {
     "file_count": 432,
-    "tree_sha256": "fc0048e601048ca58ec12f1155f36b9b9bcdee5fa4946eb7cac323a81de547f3"
+    "tree_sha256": "581a1c4294063e7a626ef0517285b19dcf20366c8127a997abe94e11c2e93b96"
   },
   "target": "GitHub Pages",
   "web": {
