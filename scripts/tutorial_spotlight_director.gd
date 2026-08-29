@@ -545,13 +545,13 @@ func _spotlight_explanation(step: int, target: Control) -> String:
 	match step:
 		1:
 			return _copy(
-				"A clue is a source, not an answer. Check its source, trust and risk, then investigate it to record the finding.",
-				"단서는 정답이 아니라 정보의 출처입니다. 출처·신뢰도·위험을 확인한 뒤 조사해서 발견을 기록하세요."
+				"A clue is a source, not an answer. Check its source, trust and damage risk, then investigate it to record the finding.",
+				"단서는 정답이 아니라 정보의 출처입니다. 출처·신뢰도·손상 위험을 확인한 뒤 조사해서 발견을 기록하세요."
 			)
 		2:
 			return _copy(
-				"Discovering a clue is not the same as citing it. Cite only clues that support or test your hypothesis; independent sources make a stronger report.",
-				"단서를 발견했다고 자동으로 인용되지는 않습니다. 가설을 지지하거나 검증하는 단서만 인용하세요. 서로 다른 출처면 더 강합니다."
+				"Discovering a clue is not the same as citing it. Cite only clues that support or test your hypothesis in the report; independent sources make stronger evidence.",
+				"단서를 발견했다고 자동으로 인용되지는 않습니다. 가설을 지지하거나 검증하는 단서만 인용해 보고서에 담으세요. 서로 다른 출처면 더 강한 근거가 됩니다."
 			)
 		3:
 			if target_name.begins_with("CaseHypothesis_"):
