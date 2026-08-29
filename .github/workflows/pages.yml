@@ -1,6 +1,10 @@
 name: Build and Deploy Godot Web to GitHub Pages
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.deploy/REQUEST'
   workflow_dispatch:
 
 permissions:
@@ -19,6 +23,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    timeout-minutes: 45
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -337,6 +342,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
