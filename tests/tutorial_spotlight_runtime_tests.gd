@@ -126,6 +126,18 @@ func _run() -> void:
 		var target_rect := first_case.get_global_rect()
 		var outline_rect := outline.get_global_rect()
 		_check(outline_rect.intersects(target_rect), "spotlight outline must overlap the actual first-case target")
+		var bubble_rect := bubble.get_global_rect() if bubble != null else Rect2()
+		_check(not bubble_rect.intersects(target_rect.grow(4.0)), "tutorial speech bubble must never cover the highlighted first-case button")
+
+	# Regression geometry for the reported 1280x720 lower-right case action.
+	# This is evaluated against explicit desktop bounds so a portrait-only run
+	# cannot accidentally mask a landscape collision.
+	var desktop_target := Rect2(1005.0, 500.0, 160.0, 42.0)
+	var desktop_bubble: Rect2 = director.call("_tutorial_bubble_rect", desktop_target.grow(14.0), Vector2(1280.0, 720.0))
+	_check(not desktop_bubble.intersects(desktop_target.grow(8.0)), "desktop lower-right tutorial target must keep a clear click area")
+	var desktop_repair_target := Rect2(768.0, 564.0, 120.0, 42.0)
+	var desktop_repair_bubble: Rect2 = director.call("_tutorial_bubble_rect", desktop_repair_target.grow(14.0), Vector2(1280.0, 720.0))
+	_check(not desktop_repair_bubble.intersects(desktop_repair_target.grow(8.0)), "desktop repair tutorial target must keep a clear click area")
 
 	# The highlighted real action should remain usable through the cutout.
 	if first_case != null:

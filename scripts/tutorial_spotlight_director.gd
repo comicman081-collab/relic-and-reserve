@@ -340,14 +340,12 @@ func _build_target_spotlight(state: Dictionary, target: Control) -> void:
 	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	interface.add_child(overlay)
 
-	var interface_rect := interface.get_global_rect()
-	var target_rect := target.get_global_rect()
-	var local_rect := Rect2(target_rect.position - interface_rect.position, target_rect.size)
-	var hole := local_rect.grow(14.0)
-	hole.position.x = clampf(hole.position.x, 4.0, interface.size.x - 8.0)
-	hole.position.y = clampf(hole.position.y, 4.0, interface.size.y - 8.0)
-	hole.size.x = minf(hole.size.x, interface.size.x - hole.position.x - 4.0)
-	hole.size.y = minf(hole.size.y, interface.size.y - hole.position.y - 4.0)
+	# get_global_rect() is expressed in the stretched canvas. The tutorial
+	# overlay itself is laid out in R3Interface's local coordinates, so convert
+	# through its inverse transform instead of subtracting two scaled positions.
+	# Mixing those spaces was what let the bubble sit over the highlighted button
+	# on browser/desktop canvas scales.
+	var hole := _tutorial_hole_for_target(target)
 
 	_add_dim_rect(overlay, "TutorialDimTop", Rect2(0, 0, interface.size.x, maxf(0.0, hole.position.y)))
 	_add_dim_rect(overlay, "TutorialDimBottom", Rect2(0, hole.end.y, interface.size.x, maxf(0.0, interface.size.y - hole.end.y)))
@@ -363,22 +361,25 @@ func _build_target_spotlight(state: Dictionary, target: Control) -> void:
 	outline.add_theme_stylebox_override("panel", _outline_style())
 	overlay.add_child(outline)
 
-	var bubble_width := minf(900.0, maxf(520.0, interface.size.x - 96.0))
-	var bubble_height := 390.0 if interface.size.y < 1100.0 else 470.0
-	var bubble_x := clampf(hole.position.x + hole.size.x * 0.5 - bubble_width * 0.5, 36.0, interface.size.x - bubble_width - 36.0)
-	var below_y := hole.end.y + 26.0
-	var above_y := hole.position.y - bubble_height - 26.0
-	var bubble_y := below_y if below_y + bubble_height <= interface.size.y - 30.0 else above_y
-	bubble_y = clampf(bubble_y, 30.0, maxf(30.0, interface.size.y - bubble_height - 30.0))
+	# A teaching bubble must explain the next action without becoming a second
+	# hit target over it. The older centered/above fallback could be clamped back
+	# onto a lower-right case button when the viewport had no vertical room.
+	# Choose a compact, fully in-bounds side first and only use a smaller fallback
+	# when a very small viewport makes the preferred card impossible.
+	var bubble_rect := _tutorial_bubble_rect(hole)
 
 	var bubble := PanelContainer.new()
 	bubble.name = BUBBLE_NAME
-	bubble.position = Vector2(bubble_x, bubble_y)
-	bubble.size = Vector2(bubble_width, bubble_height)
+	bubble.position = bubble_rect.position
+	bubble.size = bubble_rect.size
 	bubble.mouse_filter = Control.MOUSE_FILTER_STOP
 	bubble.z_index = 1803
 	bubble.add_theme_stylebox_override("panel", _panel_style(Color("#11191dfb"), Color("#e3c681"), 4))
 	overlay.add_child(bubble)
+	# Portrait layout intentionally enlarges tutorial text and buttons after this
+	# panel is created. Re-place it after that responsive pass using its final
+	# size, otherwise a valid initial placement can grow across the target.
+	bubble.resized.connect(func() -> void: _queue_bubble_reposition(bubble, target))
 
 	var column := VBoxContainer.new()
 	column.add_theme_constant_override("separation", 12)
@@ -397,10 +398,10 @@ func _build_target_spotlight(state: Dictionary, target: Control) -> void:
 	column.add_child(body_scroll)
 	var body := _label(_spotlight_explanation(step, target), 19, Color("#f2e8cf"))
 	body.name = "TutorialSpotlightBody"
-	body.custom_minimum_size.x = bubble_width - 70.0
+	body.custom_minimum_size.x = bubble_rect.size.x - 70.0
 	body_scroll.add_child(body)
 	var action_hint := _label(
-		_copy("NOW TAP ONLY THE HIGHLIGHTED CONTROL ABOVE/BELOW.", "지금은 노란 테두리로 강조된 곳만 누르세요."),
+		_copy("NOW TAP ONLY THE HIGHLIGHTED CONTROL.", "지금은 노란 테두리로 강조된 곳만 누르세요."),
 		18,
 		Color("#9fd6bd")
 	)
@@ -420,6 +421,104 @@ func _build_target_spotlight(state: Dictionary, target: Control) -> void:
 	# until the target is actually live instead of emitting a runtime error.
 	if target.focus_mode != Control.FOCUS_NONE and target.is_inside_tree():
 		target.grab_focus()
+	_queue_bubble_reposition(bubble, target)
+
+
+func _tutorial_hole_for_target(target: Control) -> Rect2:
+	var local_rect := _control_rect_in_interface_space(target)
+	var hole := local_rect.grow(14.0)
+	hole.position.x = clampf(hole.position.x, 4.0, interface.size.x - 8.0)
+	hole.position.y = clampf(hole.position.y, 4.0, interface.size.y - 8.0)
+	hole.size.x = minf(hole.size.x, interface.size.x - hole.position.x - 4.0)
+	hole.size.y = minf(hole.size.y, interface.size.y - hole.position.y - 4.0)
+	return hole
+
+
+func _queue_bubble_reposition(bubble: PanelContainer, target: Control) -> void:
+	_reposition_bubble_after_layout.call_deferred(bubble, target)
+
+
+func _reposition_bubble_after_layout(bubble: PanelContainer, target: Control) -> void:
+	await get_tree().process_frame
+	await get_tree().process_frame
+	if interface == null or not is_instance_valid(interface) or bubble == null or not is_instance_valid(bubble) or target == null or not is_instance_valid(target) or not target.is_visible_in_tree():
+		return
+	bubble.position = _tutorial_bubble_rect(_tutorial_hole_for_target(target), Vector2.ZERO, bubble.size).position
+
+
+func _tutorial_bubble_rect(hole: Rect2, bounds: Vector2 = Vector2.ZERO, requested_size: Vector2 = Vector2.ZERO) -> Rect2:
+	var viewport := bounds if bounds.x > 0.0 and bounds.y > 0.0 else interface.size
+	var margin := 28.0
+	var gap := 18.0
+	var usable_width := maxf(220.0, viewport.x - margin * 2.0)
+	var usable_height := maxf(190.0, viewport.y - margin * 2.0)
+	var preferred_size := requested_size if requested_size.x > 0.0 and requested_size.y > 0.0 else Vector2(
+		minf(640.0, usable_width),
+		minf(330.0, maxf(240.0, viewport.y * 0.44))
+	)
+	preferred_size.x = minf(preferred_size.x, usable_width)
+	preferred_size.y = minf(preferred_size.y, usable_height)
+	var protected_hole := hole.grow(gap)
+	# Try the conventional vertical relationship first, then move beside the
+	# target. A lower-right primary button therefore gets a left-side explanation
+	# instead of a panel that is force-clamped across it.
+	for scale_value: float in [1.0, 0.82, 0.66, 0.5]:
+		var size := Vector2(
+			maxf(minf(260.0, usable_width), preferred_size.x * scale_value),
+			maxf(minf(190.0, usable_height), preferred_size.y * scale_value)
+		)
+		var centered_x := hole.get_center().x - size.x * 0.5
+		var centered_y := hole.get_center().y - size.y * 0.5
+		var candidates: Array[Rect2] = [
+			Rect2(Vector2(centered_x, hole.end.y + gap), size),
+			Rect2(Vector2(centered_x, hole.position.y - size.y - gap), size),
+			Rect2(Vector2(hole.position.x - size.x - gap, centered_y), size),
+			Rect2(Vector2(hole.end.x + gap, centered_y), size)
+		]
+		for candidate: Rect2 in candidates:
+			if _tutorial_bubble_fits(candidate, protected_hole, viewport, margin):
+				return candidate
+
+	# Targets are ordinary compact controls, so one of the candidates above is
+	# expected. Keep an explicit final fallback for unusual custom layouts and
+	# bias it toward the least-overlapping corner rather than silently covering a
+	# button.
+	var fallback_size := Vector2(minf(preferred_size.x, usable_width), minf(preferred_size.y, usable_height))
+	var fallback_candidates: Array[Rect2] = [
+		Rect2(Vector2(margin, margin), fallback_size),
+		Rect2(Vector2(viewport.x - margin - fallback_size.x, margin), fallback_size),
+		Rect2(Vector2(margin, viewport.y - margin - fallback_size.y), fallback_size),
+		Rect2(Vector2(viewport.x - margin - fallback_size.x, viewport.y - margin - fallback_size.y), fallback_size)
+	]
+	var best := fallback_candidates[0]
+	var least_overlap := INF
+	for candidate: Rect2 in fallback_candidates:
+		var overlap := _tutorial_rect_overlap_area(candidate, protected_hole)
+		if overlap < least_overlap:
+			least_overlap = overlap
+			best = candidate
+	return best
+
+
+func _control_rect_in_interface_space(control: Control) -> Rect2:
+	var global_rect := control.get_global_rect()
+	var inverse_transform := interface.get_global_transform().affine_inverse()
+	var local_start := inverse_transform * global_rect.position
+	var local_end := inverse_transform * global_rect.end
+	return Rect2(local_start, local_end - local_start)
+
+
+func _tutorial_bubble_fits(candidate: Rect2, protected_hole: Rect2, viewport: Vector2, margin: float) -> bool:
+	return candidate.position.x >= margin \
+		and candidate.position.y >= margin \
+		and candidate.end.x <= viewport.x - margin \
+		and candidate.end.y <= viewport.y - margin \
+		and not candidate.intersects(protected_hole)
+
+
+func _tutorial_rect_overlap_area(first: Rect2, second: Rect2) -> float:
+	var overlap := first.intersection(second)
+	return maxf(0.0, overlap.size.x) * maxf(0.0, overlap.size.y)
 
 
 func _spotlight_explanation(step: int, target: Control) -> String:

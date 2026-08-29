@@ -113,6 +113,7 @@ TEXT_SUFFIXES = {
     ".tscn",
     ".tsv",
     ".txt",
+    ".uid",
     ".xml",
     ".yaml",
     ".yml",

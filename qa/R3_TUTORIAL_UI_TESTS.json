@@ -471,7 +471,9 @@
             "withinContent": true
           }
         },
-        "repair": "Mechanism repaired.",
+        "repairAdvanced": true,
+        "repairButton": true,
+        "repaired": true,
         "requiredTools": [
           "precision_screwdriver"
         ],
