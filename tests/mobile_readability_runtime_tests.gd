@@ -123,12 +123,35 @@ func _run() -> void:
 	# The beginner tutorial now starts with a teaching intro instead of the old
 	# blocking generic coach modal. Its full copy must be readable before input.
 	var tutorial_overlay := ui.find_child("TutorialSpotlightOverlay", true, false) as Control
+	var intro_panel := ui.find_child("TutorialIntroPanel", true, false) as PanelContainer
 	var intro_body := ui.find_child("TutorialIntroBody", true, false) as Label
+	var intro_scroll := ui.find_child("TutorialIntroScroll", true, false) as ScrollContainer
+	var intro_next := ui.find_child("TutorialIntroNext", true, false) as Button
+	var intro_skip := ui.find_child("TutorialExpertSkip", true, false) as Button
 	_check(tutorial_overlay != null, "fresh Stage 1 must expose the spotlight tutorial layer")
 	_check(intro_body != null, "spotlight tutorial must expose readable beginner teaching copy")
 	if intro_body != null:
 		_check(intro_body.text.contains("단서 조사") and intro_body.text.contains("경매"), "tutorial introduction must explain the game loop")
-		_check(intro_body.text.length() >= 140, "tutorial introduction must explain the game, not show a one-line hint")
+		_check(intro_body.text.length() >= 70 and intro_body.text.length() <= 180, "tutorial introduction must explain the loop concisely instead of becoming a reading wall")
+	if intro_panel != null and intro_scroll != null and intro_body != null and intro_next != null and intro_skip != null:
+		_check(not intro_scroll.get_global_rect().intersects(intro_next.get_global_rect()), "portrait onboarding body must not sit behind the Next button")
+		_check(not intro_next.get_global_rect().intersects(intro_skip.get_global_rect()), "portrait onboarding actions must not overlap")
+		_check(intro_panel.get_global_rect().end.y <= ui.get_global_rect().end.y + 1.0, "portrait onboarding panel must remain inside the viewport")
+
+	var header_row := ui.find_child("HeaderRow", true, false) as HBoxContainer
+	var mobile_header_title := ui.find_child("MobileHeaderTitle", true, false) as Label
+	var mobile_header_stats := ui.find_child("MobileHeaderStats", true, false) as Label
+	var content_margin := ui.find_child("ContentMargin", true, false) as Control
+	_check(mobile_header_title != null and mobile_header_title.is_visible_in_tree(), "portrait header must render a dedicated full-width title")
+	_check(mobile_header_stats != null and mobile_header_stats.is_visible_in_tree(), "portrait header must retain public day, money, reputation and grade")
+	_check(header_row != null and not header_row.visible, "desktop one-line header must not compete with the portrait header")
+	if mobile_header_title != null:
+		_check(mobile_header_title.text.length() > 0 and mobile_header_title.max_lines_visible >= 1, "portrait header title must remain readable instead of an empty ellipsis")
+	if mobile_header_stats != null and content_margin != null:
+		_check(mobile_header_stats.get_global_rect().end.y <= content_margin.get_global_rect().position.y + 1.0, "portrait header stats must not overlap screen content")
+
+	var navigation := ui.find_child("Navigation", true, false) as Control
+	_check(navigation != null and navigation.z_index >= 120, "portrait navigation must stay above selected-item detail panels")
 
 	# A clue-card tap must rebuild the selected detail and then open a touch
 	# modal containing the full readable detail plus the actual next action.

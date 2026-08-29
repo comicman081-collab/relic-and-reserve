@@ -58,11 +58,17 @@ INTERNAL_PRESENTATION_PREFIXES = (
 
 
 def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for block in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
+    """Hash authored JSON in its repository text form, not checkout line endings.
+
+    The lock records the LF bytes committed to Git.  On Windows a checkout with
+    ``core.autocrlf=true`` may present the same JSON as CRLF bytes, which must
+    not be reported as an editorial alteration.  Canonicalizing only line
+    endings preserves the lock's content-integrity role while making the
+    validator deterministic across supported checkout platforms.
+    """
+    contents = path.read_bytes()
+    canonical = contents.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(canonical).hexdigest()
 
 
 def load_json(path: Path, errors: List[str]) -> Any:

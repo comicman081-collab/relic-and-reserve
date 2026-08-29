@@ -6,6 +6,8 @@ A data-driven artifact investigation, restoration, and auction game built with G
 
 Web: https://comicman081-collab.github.io/relic-and-reserve/
 
+Windows: download the latest [R3 MVP release](https://github.com/comicman081-collab/relic-and-reserve/releases/tag/r3-mvp) and run `RelicAndReserve.exe` after extracting the ZIP.
+
 Start **New Game** to enter the tutorial and the next uncleared Stage. The guide can be skipped from the upper-right corner. Clearing a Stage unlocks the next one; cleared Stages remain available for replay.
 
 ## Local source

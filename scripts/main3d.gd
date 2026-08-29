@@ -126,6 +126,24 @@ func build_world() -> void:
 	fill_light.omni_range = 11
 	fill_light.light_energy = 4.0
 	add_child(fill_light)
+	# The playable artifact is the visual hero of the investigation screens.
+	# Keep a warm key and a cool rim independent of the workshop props, so an
+	# uncluttered inspection still reads as a carefully lit display rather than a
+	# flat model against the background.
+	var artifact_key_light := OmniLight3D.new()
+	artifact_key_light.name = "ArtifactKeyLight"
+	artifact_key_light.position = Vector3(-1.8, 3.4, 3.6)
+	artifact_key_light.light_color = Color("#ffe4b5")
+	artifact_key_light.omni_range = 8.0
+	artifact_key_light.light_energy = 2.5
+	add_child(artifact_key_light)
+	var artifact_rim_light := OmniLight3D.new()
+	artifact_rim_light.name = "ArtifactRimLight"
+	artifact_rim_light.position = Vector3(2.6, 2.5, -1.8)
+	artifact_rim_light.light_color = Color("#9cced3")
+	artifact_rim_light.omni_range = 7.0
+	artifact_rim_light.light_energy = 1.8
+	add_child(artifact_rim_light)
 
 	camera = Camera3D.new()
 	camera.position = Vector3(0, 2.3, distance)
@@ -226,6 +244,9 @@ func make_material(color: Color, metallic: float = 0.2, roughness: float = 0.55)
 	material.albedo_color = color
 	material.metallic = metallic
 	material.roughness = roughness
+	# A controlled specular response keeps brass, glass and painted-metal trim
+	# legible at thumbnail size without turning every relic into chrome.
+	material.metallic_specular = clampf(0.44 + metallic * 0.34, 0.44, 0.78)
 	return material
 
 
@@ -400,6 +421,8 @@ func add_artifact_render_recipe(render_dto: Dictionary) -> void:
 func add_variant_trim(render_dto: Dictionary) -> void:
 	var trim_value: Variant = render_dto.get("trim", {})
 	var trim_data: Dictionary = trim_value if trim_value is Dictionary else {}
+	var palette_value: Variant = render_dto.get("palette", {})
+	var palette: Dictionary = palette_value if palette_value is Dictionary else {}
 	var trim := MeshInstance3D.new()
 	trim.name = "VariantTrim_%s" % trim_data.get("shape", "band")
 	var shape: String = trim_data.get("shape", "band")
@@ -421,6 +444,130 @@ func add_variant_trim(render_dto: Dictionary) -> void:
 	trim.material_override = make_material(Color(trim_data.get("color", "#d0a14d")), 0.35, 0.42)
 	workpiece_root.add_child(trim)
 	trim_nodes.append(trim)
+	# Stage-expansion data already supplies a one-of-a-kind trim and motif for
+	# every artifact. The old renderer reduced most of them to the same box. Keep
+	# the authored primary trim as the contract node, then consume its shape as a
+	# compact, readable front-facing detail set.
+	add_variant_trim_details(shape, palette, Color(trim_data.get("color", "#d0a14d")))
+
+
+func variant_box(size_value: Vector3) -> BoxMesh:
+	var mesh := BoxMesh.new()
+	mesh.size = size_value
+	return mesh
+
+
+func variant_cylinder(radius: float, height: float) -> CylinderMesh:
+	var mesh := CylinderMesh.new()
+	mesh.top_radius = radius
+	mesh.bottom_radius = radius
+	mesh.height = height
+	mesh.radial_segments = 24
+	return mesh
+
+
+func variant_sphere(radius: float) -> SphereMesh:
+	var mesh := SphereMesh.new()
+	mesh.radius = radius
+	mesh.height = radius * 2.0
+	mesh.radial_segments = 24
+	mesh.rings = 12
+	return mesh
+
+
+func add_variant_detail_mesh(node_name: String, mesh_value: Mesh, position_value: Vector3, rotation_value: Vector3, color: Color, metallic: float = 0.34, roughness: float = 0.38) -> MeshInstance3D:
+	return add_recipe_mesh("VariantDetail_%s" % node_name, mesh_value, position_value, rotation_value, color, metallic, roughness)
+
+
+func add_variant_trim_details(shape: String, palette: Dictionary, trim_color: Color) -> void:
+	var primary := Color(palette.get("primary", "#b8893f"))
+	var secondary := Color(palette.get("secondary", "#705038"))
+	var accent := Color(palette.get("accent", trim_color.to_html()))
+	match shape:
+		"salt_bezel":
+			var bezel := TorusMesh.new()
+			bezel.inner_radius = 0.52
+			bezel.outer_radius = 0.64
+			add_variant_detail_mesh("SaltBezel", bezel, Vector3(0, 1.23, 0.86), Vector3(90, 0, 0), accent, 0.62, 0.25)
+			for nick_index in range(4):
+				add_variant_detail_mesh("SaltNick_%02d" % nick_index, variant_box(Vector3(0.1, 0.07, 0.06)), Vector3(-0.46 + nick_index * 0.31, 1.72, 0.91), Vector3(0, 0, nick_index * 9.0), secondary, 0.22, 0.58)
+		"folded_corner":
+			add_variant_detail_mesh("BellowsEdgeLeft", variant_box(Vector3(0.58, 0.07, 0.08)), Vector3(-0.53, 1.26, 0.88), Vector3(0, 0, -38), trim_color, 0.18, 0.48)
+			add_variant_detail_mesh("BellowsEdgeRight", variant_box(Vector3(0.58, 0.07, 0.08)), Vector3(0.53, 1.26, 0.88), Vector3(0, 0, 38), trim_color, 0.18, 0.48)
+			add_variant_detail_mesh("VellumStitch", variant_box(Vector3(0.72, 0.045, 0.05)), Vector3(0, 1.55, 0.91), Vector3.ZERO, accent, 0.22, 0.46)
+		"relay_rail":
+			add_variant_detail_mesh("RelayRail", variant_box(Vector3(1.35, 0.09, 0.11)), Vector3(0, 1.19, 0.86), Vector3.ZERO, accent, 0.56, 0.28)
+			for coil_index in range(2):
+				add_variant_detail_mesh("Coil_%02d" % coil_index, variant_cylinder(0.14, 0.34), Vector3(-0.38 + coil_index * 0.76, 1.41, 0.88), Vector3(90, 0, 0), secondary, 0.6, 0.3)
+		"orbit_ring":
+			var orbit := TorusMesh.new()
+			orbit.inner_radius = 0.68
+			orbit.outer_radius = 0.73
+			add_variant_detail_mesh("OrbitRing", orbit, Vector3(0, 1.26, 0.84), Vector3(90, 0, 0), accent, 0.66, 0.24)
+			add_variant_detail_mesh("OrbitPlanet", variant_sphere(0.105), Vector3(0.53, 1.62, 0.91), Vector3.ZERO, secondary, 0.3, 0.34)
+		"mandrel_band":
+			add_variant_detail_mesh("Mandrel", variant_cylinder(0.17, 1.28), Vector3(0, 1.35, 0.86), Vector3(0, 0, 90), accent, 0.58, 0.28)
+			for rib_index in range(4):
+				add_variant_detail_mesh("CylinderRib_%02d" % rib_index, variant_box(Vector3(0.05, 0.32, 0.07)), Vector3(-0.42 + rib_index * 0.28, 1.35, 0.93), Vector3.ZERO, secondary, 0.35, 0.38)
+		"tripod_yoke":
+			add_variant_detail_mesh("YokeCrossbar", variant_box(Vector3(1.08, 0.09, 0.11)), Vector3(0, 1.44, 0.87), Vector3.ZERO, trim_color, 0.58, 0.3)
+			add_variant_detail_mesh("YokeLeft", variant_box(Vector3(0.08, 0.62, 0.1)), Vector3(-0.43, 1.12, 0.88), Vector3(0, 0, -22), secondary, 0.54, 0.34)
+			add_variant_detail_mesh("YokeRight", variant_box(Vector3(0.08, 0.62, 0.1)), Vector3(0.43, 1.12, 0.88), Vector3(0, 0, 22), secondary, 0.54, 0.34)
+			add_variant_detail_mesh("LevelVial", variant_cylinder(0.08, 0.44), Vector3(0, 1.64, 0.94), Vector3(0, 0, 90), Color("#8fd8c8"), 0.12, 0.16)
+		"marquetry_bead":
+			add_variant_detail_mesh("MarquetryInlay", variant_box(Vector3(1.0, 0.18, 0.07)), Vector3(0, 1.37, 0.88), Vector3.ZERO, accent, 0.28, 0.46)
+			for bead_index in range(5):
+				add_variant_detail_mesh("MarquetryBead_%02d" % bead_index, variant_sphere(0.052), Vector3(-0.38 + bead_index * 0.19, 1.48, 0.94), Vector3.ZERO, secondary, 0.4, 0.35)
+		"balance_foot":
+			add_variant_detail_mesh("BalanceBeam", variant_box(Vector3(1.26, 0.08, 0.1)), Vector3(0, 1.48, 0.86), Vector3.ZERO, trim_color, 0.62, 0.26)
+			add_variant_detail_mesh("BalanceFootLeft", variant_box(Vector3(0.22, 0.15, 0.14)), Vector3(-0.48, 1.08, 0.88), Vector3.ZERO, secondary, 0.44, 0.4)
+			add_variant_detail_mesh("BalanceFootRight", variant_box(Vector3(0.22, 0.15, 0.14)), Vector3(0.48, 1.08, 0.88), Vector3.ZERO, secondary, 0.44, 0.4)
+			for mark_index in range(3):
+				add_variant_detail_mesh("DosageMark_%02d" % mark_index, variant_box(Vector3(0.05, 0.2, 0.04)), Vector3(-0.22 + mark_index * 0.22, 1.35, 0.94), Vector3.ZERO, Color("#35658b"), 0.28, 0.4)
+		"viewing_slots":
+			for slot_index in range(4):
+				add_variant_detail_mesh("ViewingSlot_%02d" % slot_index, variant_box(Vector3(0.17, 0.08, 0.07)), Vector3(-0.42 + slot_index * 0.28, 1.36, 0.91), Vector3.ZERO, trim_color, 0.48, 0.32)
+			add_variant_detail_mesh("FoxDrum", variant_cylinder(0.12, 0.92), Vector3(0, 1.16, 0.84), Vector3(0, 0, 90), primary, 0.3, 0.4)
+		"terminal_coil":
+			var coil := TorusMesh.new()
+			coil.inner_radius = 0.26
+			coil.outer_radius = 0.33
+			add_variant_detail_mesh("TerminalCoil", coil, Vector3(0, 1.34, 0.88), Vector3(90, 0, 0), trim_color, 0.6, 0.25)
+			for division_index in range(5):
+				add_variant_detail_mesh("ZeroDivision_%02d" % division_index, variant_box(Vector3(0.045, 0.16, 0.04)), Vector3(-0.32 + division_index * 0.16, 1.6, 0.94), Vector3.ZERO, accent, 0.38, 0.34)
+		"crystal_dial":
+			add_variant_detail_mesh("CrystalDial", variant_cylinder(0.42, 0.075), Vector3(0, 1.33, 0.88), Vector3(90, 0, 0), Color("#b7d9de"), 0.08, 0.16)
+			add_variant_detail_mesh("StationNeedle", variant_box(Vector3(0.42, 0.055, 0.04)), Vector3(0.13, 1.34, 0.94), Vector3(0, 0, -24), accent, 0.42, 0.28)
+		"tracing_arm":
+			add_variant_detail_mesh("TracingArm", variant_box(Vector3(0.96, 0.075, 0.1)), Vector3(0.03, 1.37, 0.88), Vector3(0, 0, -14), trim_color, 0.62, 0.27)
+			add_variant_detail_mesh("CountingWheel", variant_cylinder(0.18, 0.08), Vector3(-0.42, 1.36, 0.94), Vector3(90, 0, 0), secondary, 0.56, 0.26)
+		"objective_turret":
+			for lens_index in range(2):
+				add_variant_detail_mesh("Objective_%02d" % lens_index, variant_cylinder(0.18, 0.3), Vector3(-0.25 + lens_index * 0.5, 1.38, 0.88), Vector3(0, 0, 90), trim_color, 0.66, 0.23)
+			add_variant_detail_mesh("WingScale", variant_box(Vector3(0.72, 0.06, 0.05)), Vector3(0, 1.64, 0.94), Vector3.ZERO, secondary, 0.3, 0.48)
+		"chart_grille":
+			add_variant_detail_mesh("ChartFrame", variant_box(Vector3(1.08, 0.42, 0.06)), Vector3(0, 1.32, 0.88), Vector3.ZERO, trim_color, 0.4, 0.42)
+			for grid_index in range(4):
+				add_variant_detail_mesh("ChartGrid_%02d" % grid_index, variant_box(Vector3(0.045, 0.32, 0.05)), Vector3(-0.33 + grid_index * 0.22, 1.32, 0.94), Vector3.ZERO, secondary, 0.34, 0.42)
+		"vented_crown":
+			add_variant_detail_mesh("VentedCrown", variant_box(Vector3(0.86, 0.15, 0.1)), Vector3(0, 1.72, 0.86), Vector3.ZERO, trim_color, 0.48, 0.3)
+			add_variant_detail_mesh("SignalLensRed", variant_cylinder(0.12, 0.07), Vector3(-0.2, 1.38, 0.94), Vector3(90, 0, 0), Color("#d85b4d"), 0.2, 0.2)
+			add_variant_detail_mesh("SignalLensGreen", variant_cylinder(0.12, 0.07), Vector3(0.2, 1.38, 0.94), Vector3(90, 0, 0), Color("#67b7a1"), 0.2, 0.2)
+		"reel_guard":
+			var reel := TorusMesh.new()
+			reel.inner_radius = 0.3
+			reel.outer_radius = 0.36
+			add_variant_detail_mesh("ReelGuard", reel, Vector3(-0.24, 1.35, 0.88), Vector3(90, 0, 0), secondary, 0.58, 0.28)
+			add_variant_detail_mesh("SpiralWire", variant_cylinder(0.05, 0.82), Vector3(0.32, 1.35, 0.9), Vector3(0, 0, 90), accent, 0.54, 0.26)
+		"prism_cradle":
+			add_variant_detail_mesh("PrismChamber", variant_box(Vector3(0.76, 0.38, 0.12)), Vector3(0, 1.35, 0.86), Vector3.ZERO, Color("#82c9d1"), 0.1, 0.18)
+			add_variant_detail_mesh("PrismClampLeft", variant_box(Vector3(0.08, 0.48, 0.11)), Vector3(-0.42, 1.35, 0.92), Vector3(0, 0, -18), trim_color, 0.6, 0.28)
+			add_variant_detail_mesh("PrismClampRight", variant_box(Vector3(0.08, 0.48, 0.11)), Vector3(0.42, 1.35, 0.92), Vector3(0, 0, 18), trim_color, 0.6, 0.28)
+		"mercury_pendulum":
+			add_variant_detail_mesh("PendulumRod", variant_cylinder(0.055, 1.1), Vector3(0, 1.31, 0.86), Vector3.ZERO, trim_color, 0.62, 0.25)
+			add_variant_detail_mesh("MercuryBob", variant_sphere(0.18), Vector3(0, 0.82, 0.9), Vector3.ZERO, Color("#c4d6d8"), 0.7, 0.18)
+			for star_index in range(3):
+				add_variant_detail_mesh("StarGrid_%02d" % star_index, variant_sphere(0.04), Vector3(-0.28 + star_index * 0.28, 1.67, 0.95), Vector3.ZERO, accent, 0.5, 0.24)
 
 
 func add_recipe_mesh(node_name: String, mesh_value: Mesh, position_value: Vector3, rotation_value: Vector3, color: Color, metallic: float = 0.28, roughness: float = 0.42) -> MeshInstance3D:

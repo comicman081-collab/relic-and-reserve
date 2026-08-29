@@ -20,6 +20,7 @@ const PORTRAIT_NAV_COLUMNS := 3
 const PORTRAIT_NAV_BUTTON_HEIGHT := 156.0
 const PORTRAIT_NAV_GAP := 12.0
 const PORTRAIT_TITLE_HIDDEN_PROPS := ["Shelf", "Cabinet", "Lamp"]
+const MOBILE_HEADER_STACK_NAME := "MobileHeaderStack"
 
 const META_BASE_FONT := &"mobile_base_font_size"
 const META_BASE_MIN := &"mobile_base_minimum_size"
@@ -299,6 +300,8 @@ func _layout_screen_shell(portrait: bool) -> void:
 			_remember_rect(child)
 
 	if not portrait:
+		_restore_landscape_header(header)
+		navigation.z_index = 0
 		_restore_rect(header)
 		_restore_rect(margin)
 		_restore_rect(navigation)
@@ -326,6 +329,10 @@ func _layout_screen_shell(portrait: bool) -> void:
 
 	navigation.position = Vector2(PORTRAIT_SIDE_PAD, nav_y)
 	navigation.size = Vector2(available_width, nav_height)
+	# Inventory/detail screens can render their selected-item action bar late in
+	# the tree. Keep the persistent mobile routes above those presentation cards
+	# so a player never loses the way back to another game area.
+	navigation.z_index = 120
 	_layout_portrait_navigation(navigation)
 
 	status_message.position = Vector2(PORTRAIT_SIDE_PAD + 4.0, status_y)
@@ -337,28 +344,74 @@ func _layout_screen_shell(portrait: bool) -> void:
 
 
 func _layout_portrait_header(header: Control) -> void:
-	var labels: Array = []
-	var skip_button: Control
-	for child in header.get_children():
-		if child is Label:
-			labels.append(child)
-		elif child is BaseButton and child.name == "TutorialSkipButton":
-			skip_button = child
-	if labels.size() > 0:
-		var title_label := labels[0] as Label
-		title_label.position = Vector2.ZERO
-		title_label.size = Vector2(header.size.x, 88.0)
-		title_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	if labels.size() > 1:
-		var stats_label := labels[1] as Label
-		var skip_width := 330.0 if skip_button != null else 0.0
-		stats_label.position = Vector2(0.0, 98.0)
-		stats_label.size = Vector2(maxf(250.0, header.size.x - skip_width - (18.0 if skip_button != null else 0.0)), 78.0)
-		stats_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-		stats_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	if skip_button != null:
-		skip_button.position = Vector2(header.size.x - 330.0, 98.0)
-		skip_button.size = Vector2(330.0, 78.0)
+	# The desktop header uses one HBox row. Merely moving Header's direct
+	# children missed that nested row, leaving the title and all stats competing
+	# for one tiny portrait line. Mirror the same public labels into a compact
+	# vertical header on phone-sized viewports; controls remain untouched and the
+	# original row returns verbatim in landscape.
+	var row := header.find_child("HeaderRow", true, false) as HBoxContainer
+	if row == null:
+		return
+	var source_title := row.find_child("HeaderTitle", true, false) as Label
+	var source_stats := row.find_child("HeaderStats", true, false) as Label
+	if source_title == null:
+		return
+	row.visible = false
+	var stack := header.find_child(MOBILE_HEADER_STACK_NAME, false, false) as VBoxContainer
+	if stack == null:
+		stack = VBoxContainer.new()
+		stack.name = MOBILE_HEADER_STACK_NAME
+		stack.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		stack.add_theme_constant_override("separation", 0)
+		header.add_child(stack)
+	var title := stack.find_child("MobileHeaderTitle", false, false) as Label
+	if title == null:
+		title = Label.new()
+		title.name = "MobileHeaderTitle"
+		# These labels are created after the first responsive pass. Seed their
+		# unscaled metadata so a later pass produces the same phone font size as
+		# the authored controls instead of multiplying an already mobile-sized
+		# override a second time.
+		title.set_meta(META_BASE_FONT, 22)
+		title.add_theme_font_size_override("font_size", 22)
+		title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		title.max_lines_visible = 2
+		title.text_overrun_behavior = TextServer.OVERRUN_NO_TRIMMING
+		title.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		stack.add_child(title)
+	title.text = source_title.text
+	title.tooltip_text = source_title.tooltip_text
+	title.add_theme_color_override("font_color", source_title.get_theme_color("font_color"))
+	title.custom_minimum_size = Vector2(0.0, 112.0)
+	var stats := stack.find_child("MobileHeaderStats", false, false) as Label
+	if stats == null:
+		stats = Label.new()
+		stats.name = "MobileHeaderStats"
+		stats.set_meta(META_BASE_FONT, 14)
+		stats.add_theme_font_size_override("font_size", 14)
+		stats.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		stats.max_lines_visible = 1
+		stats.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		stats.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		stats.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		stack.add_child(stats)
+	if source_stats != null:
+		stats.text = source_stats.text
+		stats.tooltip_text = source_stats.tooltip_text
+		stats.add_theme_color_override("font_color", source_stats.get_theme_color("font_color"))
+	stats.custom_minimum_size = Vector2(0.0, 58.0)
+	stack.position = Vector2.ZERO
+	stack.size = header.size
+
+
+func _restore_landscape_header(header: Control) -> void:
+	var row := header.find_child("HeaderRow", true, false) as HBoxContainer
+	if row != null:
+		row.visible = true
+	var stack := header.find_child(MOBILE_HEADER_STACK_NAME, false, false)
+	if stack != null:
+		stack.queue_free()
 
 
 func _layout_portrait_navigation(navigation: Control) -> void:

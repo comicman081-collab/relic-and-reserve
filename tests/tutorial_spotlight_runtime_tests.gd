@@ -82,7 +82,7 @@ func _run() -> void:
 	_check(intro != null, "fresh Stage 1 must open the game-introduction tutorial")
 	_check(intro_title != null and intro_title.text.contains("무엇을 하는 게임"), "intro must explain what kind of game this is")
 	_check(intro_body != null and intro_body.text.contains("단서 조사") and intro_body.text.contains("경매"), "visible intro must teach the whole investigation-to-auction loop")
-	_check(intro_body != null and intro_body.text.length() >= 140, "intro must contain real teaching copy, not a label-only hint")
+	_check(intro_body != null and intro_body.text.length() >= 70 and intro_body.text.length() <= 180, "intro must teach the loop concisely without becoming a reading wall")
 	_check(expert_skip != null and expert_skip.text.contains("이미 아는"), "skip must be explicitly framed for players who already know the game")
 	var old_skip := ui.find_child("TutorialSkipButton", true, false) as BaseButton
 	_check(old_skip == null or not old_skip.visible, "the old prominent skip button must be hidden during teaching")
@@ -108,7 +108,7 @@ func _run() -> void:
 	_check(overlay != null and overlay.mouse_filter == Control.MOUSE_FILTER_IGNORE, "spotlight root must leave only its cutout target clickable")
 	_check(bubble != null, "spotlight must include a speech bubble")
 	_check(outline != null, "spotlight must draw a visible target outline")
-	_check(bubble_body != null and bubble_body.text.length() >= 90, "speech bubble must explain what and why, not only name the button")
+	_check(bubble_body != null and bubble_body.text.length() >= 42 and bubble_body.text.length() <= 180, "speech bubble must explain what and why without becoming a scrolling reading wall")
 	_check(action_hint != null and action_hint.text.contains("강조된 곳만"), "speech bubble must explicitly tell the player to use only the highlighted control")
 
 	var dim_count := 0
