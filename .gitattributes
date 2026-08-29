@@ -1,0 +1,3 @@
+# The committed Godot Web runtime is byte-hashed by the Pages manifest.
+# Keep the exported HTML in its generator's LF form on every checkout.
+docs/index.html text eol=lf
